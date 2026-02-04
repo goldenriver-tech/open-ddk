@@ -1,0 +1,40 @@
+# jiri's own, at the root of its workspace, which this repository is,
+# and the projects it checks out in it (manifest/)
+/.jiri_manifest
+/.jiri_root/
+/build/
+/buildtools/
+/garnet/
+/gen_rootfs/
+/linux-6.6/
+/scripts/
+/third_party/benchmark/
+/third_party/boringssl/src/
+/third_party/busybox/
+/third_party/dropbear/
+/third_party/gflags/
+/third_party/go/
+/third_party/golang/crypto/
+/third_party/golibs/github.com/flynn/go-tuf/
+/third_party/golibs/github.com/tent/canonical-json-go/
+/third_party/googletest/
+/third_party/grpc/
+/third_party/gtest/
+/third_party/hee-trusty/
+/third_party/iperf-vsock/
+/third_party/mako/
+/third_party/openssl/
+/third_party/protobuf/
+/third_party/qemu/
+/third_party/rapidjson/
+/third_party/ree-trusty/
+/third_party/soc_term/
+/third_party/socat/
+/third_party/vboot_reference/
+/third_party/zlib/
+/trusted-firmware-a/
+# open-ddk/fetch-assets.sh's (zircon: the prebuilt one, or its source) and
+# what the builds make
+/zircon/
+/out/
+/.assets/
