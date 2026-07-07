@@ -62,6 +62,7 @@ if [ ! -d tmp ]; then
     mkdir -p tmp/
     ln -s "../" "tmp/garnet"
     echo "====tar -xzf build_env.tar.gz======"
+    cat build_env.tar.gz.part-* > build_env.tar.gz
     tar -xzf build_env.tar.gz -C tmp/
     echo "====tar -xJf headers.tar.xz======"
     tar -xJf headers.tar.xz -C tmp/
