@@ -1,0 +1,5 @@
+{
+    "packages": {
+        "linux-guest": "//garnet/bin/guest/linux-guest"
+    }
+}

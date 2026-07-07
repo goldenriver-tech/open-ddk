@@ -1,0 +1,5 @@
+{
+    "packages": {
+        "pmd_tests": "//garnet/go/src/pmd:pmd_tests"
+    }
+}

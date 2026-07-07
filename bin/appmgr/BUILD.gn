@@ -1,0 +1,119 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/nebula.gni")
+import("//build/package.gni")
+
+source_set("lib") {
+  visibility = [ ":*" ]
+
+  sources = [
+    "application_controller_impl.cc",
+    "application_controller_impl.h",
+    "application_environment_controller_impl.cc",
+    "application_environment_controller_impl.h",
+    "application_namespace.cc",
+    "application_namespace.h",
+    "application_runner_holder.cc",
+    "application_runner_holder.h",
+    "dynamic_library_loader.cc",
+    "dynamic_library_loader.h",
+    "job_holder.cc",
+    "job_holder.h",
+    "namespace_builder.cc",
+    "namespace_builder.h",
+    "root_application_loader.cc",
+    "root_application_loader.h",
+    "runtime_metadata.cc",
+    "runtime_metadata.h",
+    "sandbox_metadata.cc",
+    "sandbox_metadata.h",
+    "url_resolver.cc",
+    "url_resolver.h",
+    "nbl/grt_trusty_helper.cc",
+    "nbl/trusty_syscall.S",
+    "nbl/otrp_vfs_proxy.cc",
+    "nbl/nbl_application_controller_impl.cc"
+  ]
+
+  public_deps = [
+    "//garnet/lib/farfs",
+    "//garnet/public/lib/app/cpp",
+    "//garnet/public/lib/app/fidl",
+    "//garnet/public/lib/fxl",
+    "//garnet/public/lib/svc/cpp",
+    "//third_party/rapidjson",
+    "//zircon/public/lib/fs",
+    "//zircon/public/lib/launchpad",
+    "//zircon/public/lib/loader-service",
+    "//zircon/public/lib/zx",
+    "//zircon/trusty/lib/lib/libc-trusty"
+  ]
+
+  defines = [
+    "_ALL_SOURCE=1"
+  ]
+
+  if (enable_tracer) {
+    defines += [
+      "ENABLE_TRACER=1"
+    ]
+  }
+}
+
+executable("bin") {
+  output_name = "appmgr"
+
+  sources = [
+    "main.cc",
+  ]
+
+  deps = [
+    ":lib",
+  ]
+}
+
+executable("tests") {
+  testonly = true
+
+  output_name = "appmgr_unittests"
+
+  sources = [
+    "namespace_builder_unittest.cc",
+    "runtime_metadata_unittest.cc",
+    "sandbox_metadata_unittest.cc",
+  ]
+
+  deps = [
+    ":lib",
+    "//garnet/public/lib/fxl/test:gtest_main",
+  ]
+}
+
+package("appmgr") {
+  system_image = true
+
+  deps = [
+    ":bin",
+  ]
+  binaries = [
+    {
+      name = "appmgr"
+    },
+  ]
+}
+
+package("appmgr_tests") {
+  testonly = true
+  system_image = true
+
+  deps = [
+    ":tests",
+  ]
+  tests = [
+    {
+      name = "appmgr_unittests"
+    },
+  ]
+}

@@ -1,0 +1,44 @@
+# Copyright 2018 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//garnet/bin/guest/guest.gni")
+
+tbox_dtb_image = "$target_out_dir/qemu/tbox_dtb"
+
+action("gen_qemu_tbox_dtb") {
+  visibility = [ ":*" ]
+
+  script = "//garnet/bin/guest/sos/qemu/gen_dtb.sh"
+
+  sources = [ "//garnet/bin/guest/sos/qemu/tbox_dts" ]
+  args = [
+    rebase_path("$tbox_dtb_image"),
+  ]
+  outputs = [
+    tbox_dtb_image,
+  ]
+}
+
+package("sos") {
+  deps = [
+    "//garnet/bin/guest:bin_sos",
+    ":gen_qemu_tbox_dtb",
+  ]
+
+  binary = "guest_sos"
+
+  meta = [
+    {
+      path = rebase_path("//garnet/bin/guest/meta/sandbox")
+      dest = "sandbox"
+    },
+  ]
+
+  resources = [
+    {
+      path = rebase_path("$tbox_dtb_image")
+      dest = "tbox_dtb"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+// Copyright 2016 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+library component;
+
+using mem;
+
+// Information given to applications at startup.
+//
+// For ELF binaries, this information is provided in the initialization message
+// given to libc by launchpad.
+struct ApplicationStartupInfo {
+  // The application launch info for the application to start.
+  ApplicationLaunchInfo launch_info;
+
+  // The namespace in which to run the application.
+  FlatNamespace flat_namespace;
+
+  // TODO(abarth): Add more fields to this struct relating to application and
+  // environment identity.
+};
+
+
+// uuid
+struct ApplicationUUID {
+  uint32 time_low;
+  uint16 time_mid;
+  uint16 time_hi_and_version;
+  array<uint8>:8 clock_seq_and_node;
+};
+
+// A binary representation of an application.
+//
+// Typically provided to |ApplicationRunner.StartApplication| when starting an
+// application.
+struct ApplicationPackage {
+  // A read-only binary representation of the application. For example, if the
+  // application is intended to run in the Dart virtual machine, this data might
+  // contain a dartx package.
+  mem.Buffer? data;
+
+  // A directory containing the contents of the package. For example, if the
+  // application is stored in pkgfs, this directory will be the pkgfs directory
+  // containing the package.
+  handle<channel>? directory;
+
+  // Resolved URL of the application. This is the url specified in startup_info
+  // after following redirects and resolving relative paths.
+  string resolved_url;
+  // uuid
+  ApplicationUUID? uuid;
+  // MMIO info
+  vector<uint32>? mmio_infos;
+  // heap size
+  uint32 heap_size;
+  // irq number
+  int32 irq;
+  // version
+  uint32 version;
+  // trusty flags
+  uint32 trusty_flags;
+  // loading error
+  int32 err;
+};
+
+// An interface for running applications.
+//
+// Typically exposed by applications that provide execution environments for
+// particular classes of programs. For example, the Dart virtual machine exposes
+// this interface to run Dart programs.
+[ServiceName="component.ApplicationRunner"]
+interface ApplicationRunner {
+  // Execute the given application.
+  //
+  // Upon startup, the application is to be given the information in
+  // |startup_info|, but the mechanism by which the application receives that
+  // information is up to the application runner.
+  //
+  // The |controller| interface request typically originates from the
+  // |ApplicationLauncher.CreateApplication| message that caused this
+  // application to be started.
+  1: StartApplication(ApplicationPackage application,
+                     ApplicationStartupInfo startup_info,
+                     request<ApplicationController>? controller);
+};

@@ -1,0 +1,7 @@
+{
+    "comment": ["include crypto and ssl of boringssl."],
+    "imports": [
+        "garnet/packages/prod/boringssl_libssl",
+        "garnet/packages/prod/boringssl_libcrypto"
+    ]
+}

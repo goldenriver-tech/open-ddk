@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+// option optimize_for = LITE_RUNTIME;
+package nbl_vmm;
+
+enum RequestType {
+  DUMP_VM = 0;
+  MAP_PHYSICAL_MEMORY = 2;
+  UNMAP_PHYSICAL_MEMORY = 3;
+  TRACE = 4;
+};
+
+message None {};
+
+message MapPhysicalMemory {
+  uint64 gpaddr = 1;
+  repeated uint64 page_list = 2;
+  bool writeable = 3;
+};
+
+message UnmapPhysicalMemory {
+  uint64 gpaddr = 1;
+  uint64 length = 2;
+};
+
+message Request {
+  RequestType type = 1;
+  oneof payload {
+    None none = 2;
+    MapPhysicalMemory map_phys_mem = 4;
+    UnmapPhysicalMemory unmap_phys_mem = 5;
+  }
+};
+
+message Response {
+  oneof payload {
+    None none = 1;
+    GuestDumpState guest_state = 2;
+  }
+}
+
+message VcpuDumpState {
+  repeated uint64 regs = 1;
+  uint64 pc = 2;
+  uint64 lr = 3;
+  uint32 cpsr = 4;
+  uint64 cntvoff_el2 = 5;
+  uint64 sp_el1 = 6;
+  uint64 sp_el0 = 7;
+  uint64 sctlr_el1 = 8;
+  uint64 tcr_el1 = 9;
+  uint64 ttbr0_el1 = 10;
+  uint64 ttbr1_el1 = 11;
+};
+
+message GuestDumpState {
+  repeated VcpuDumpState vcpus = 1;
+};

@@ -1,0 +1,6 @@
+{
+    "packages": {
+        "guest_tests": "//garnet/bin/guest:guest_tests",
+        "machina_tests": "//garnet/lib/machina:machina_tests"
+    }
+}

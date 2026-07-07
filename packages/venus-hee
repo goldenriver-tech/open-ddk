@@ -1,0 +1,11 @@
+{
+    "languages": [
+        "cpp"
+    ],
+    "imports": [
+        "garnet/packages/nebula/prod/nbl_hypervisor",
+        "garnet/packages/nebula/prod/filesystems",
+        "garnet/packages/prod/suspend",
+        "garnet/packages/nebula/prod/drivers"
+    ]
+}

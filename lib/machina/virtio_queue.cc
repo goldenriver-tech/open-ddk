@@ -1,0 +1,456 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+// Copyright 2017 The Fuchsia Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#include "garnet/lib/machina/virtio_queue.h"
+
+#include <stdio.h>
+#include <string.h>
+
+#include <fbl/unique_ptr.h>
+#include <virtio/virtio_ring.h>
+
+#include "garnet/lib/machina/virtio_device.h"
+#include "lib/fxl/logging.h"
+
+#define dmb(opt)    __asm__ volatile("dmb " #opt : : : "memory")
+// Convert guest-physical addresses to usable virtual addresses.
+#define guest_paddr_to_host_vaddr(device, guest_paddr) \
+  (static_cast<zx_vaddr_t>(((device)->phys_mem().addr()) + ((guest_paddr) - (device)->phys_mem().phys_base())))
+
+namespace machina {
+
+VirtioQueue::VirtioQueue() {
+  FXL_CHECK(zx::event::create(0, &event_) == ZX_OK);
+}
+
+static bool validate_queue_range(VirtioDevice* device,
+                                 zx_vaddr_t addr,
+                                 size_t size) {
+  uintptr_t mem_addr = device->phys_mem().addr();
+  size_t mem_size = device->phys_mem().size();
+  zx_vaddr_t range_end = addr + size;
+  zx_vaddr_t mem_end = mem_addr + mem_size;
+
+  return addr >= mem_addr && range_end <= mem_end;
+}
+
+template <typename T>
+static void queue_set_segment_addr(VirtioQueue* queue,
+                                   uint64_t guest_paddr,
+                                   size_t size,
+                                   T** ptr) {
+  VirtioDevice* device = queue->device();
+  zx_vaddr_t host_vaddr = guest_paddr_to_host_vaddr(device, guest_paddr);
+
+  *ptr = validate_queue_range(device, host_vaddr, size)
+             ? reinterpret_cast<T*>(host_vaddr)
+             : nullptr;
+}
+
+uint16_t VirtioQueue::size() const {
+  fbl::AutoLock lock(&mutex_);
+  return ring_.size;
+}
+
+void VirtioQueue::set_size(uint16_t size) {
+  fbl::AutoLock lock(&mutex_);
+  ring_.size = size;
+}
+
+uint16_t VirtioQueue::avail_event_num() {
+  fbl::AutoLock lock(&mutex_);
+  return avail_event_num_;
+}
+
+void VirtioQueue::set_avail_event_num(uint16_t num) {
+  fbl::AutoLock lock(&mutex_);
+  avail_event_num_ = num;
+}
+
+void VirtioQueue::set_desc_addr(uint64_t desc_paddr) {
+  fbl::AutoLock lock(&mutex_);
+  ring_.addr.desc = desc_paddr;
+  uintptr_t desc_size = ring_.size * sizeof(ring_.desc[0]);
+  queue_set_segment_addr(this, desc_paddr, desc_size, &ring_.desc);
+}
+
+uint64_t VirtioQueue::desc_addr() const {
+  fbl::AutoLock lock(&mutex_);
+  return ring_.addr.desc;
+}
+
+void VirtioQueue::set_avail_addr(uint64_t avail_paddr) {
+  fbl::AutoLock lock(&mutex_);
+  ring_.addr.avail = avail_paddr;
+  uintptr_t avail_size =
+      sizeof(*ring_.avail) + (ring_.size * sizeof(ring_.avail->ring[0]));
+  queue_set_segment_addr(this, avail_paddr, avail_size, &ring_.avail);
+
+  uintptr_t used_event_paddr = avail_paddr + avail_size;
+  uintptr_t used_event_size = sizeof(*ring_.used_event);
+  queue_set_segment_addr(this, used_event_paddr, used_event_size,
+                         &ring_.used_event);
+}
+
+void VirtioQueue::set_ring_idx() {
+  fbl::AutoLock lock(&mutex_);
+  if (ring_.avail)
+    ring_.index = ring_.avail->idx;
+}
+
+uint64_t VirtioQueue::avail_addr() const {
+  fbl::AutoLock lock(&mutex_);
+  return ring_.addr.avail;
+}
+
+void VirtioQueue::set_used_addr(uint64_t used_paddr) {
+  fbl::AutoLock lock(&mutex_);
+  ring_.addr.used = used_paddr;
+  uintptr_t used_size =
+      sizeof(*ring_.used) + (ring_.size * sizeof(ring_.used->ring[0]));
+  queue_set_segment_addr(this, used_paddr, used_size, &ring_.used);
+
+  uintptr_t avail_event_paddr = used_paddr + used_size;
+  uintptr_t avail_event_size = sizeof(*ring_.avail_event);
+  queue_set_segment_addr(this, avail_event_paddr, avail_event_size,
+                         &ring_.avail_event);
+}
+
+uint64_t VirtioQueue::used_addr() const {
+  fbl::AutoLock lock(&mutex_);
+  return ring_.addr.used;
+}
+
+zx_status_t VirtioQueue::Signal() {
+  fbl::AutoLock lock(&mutex_);
+  if (HasAvailLocked()) {
+    return event_.signal(0, SIGNAL_QUEUE_AVAIL);
+  }
+  return ZX_OK;
+}
+
+zx_status_t VirtioQueue::NextAvailLocked(uint16_t* index) {
+  if (!HasAvailLocked()) {
+    return ZX_ERR_SHOULD_WAIT;
+  }
+
+  dmb(ishld);
+  *index = ring_.avail->ring[RingIndexLocked(ring_.index)];
+  if (*index >= ring_.size) {
+    FXL_LOG(ERROR) << "avail index(" << *index << ") exceed the ring size(" << ring_.size << ")";
+    return ZX_ERR_OUT_OF_RANGE;
+  }
+
+  ring_.index++;
+
+  // If we have event indicies enabled, update the avail-event to notify us
+  // when we have sufficient descriptors available.
+  if (device()->has_enabled_features(1u << VIRTIO_F_RING_EVENT_IDX) &&
+      ring_.avail_event) {
+    *ring_.avail_event = ring_.index + avail_event_num_ - 1;
+    dmb(ish);
+  }
+
+  if (!HasAvailLocked()) {
+    return event_.signal(SIGNAL_QUEUE_AVAIL, 0);
+  }
+  return ZX_OK;
+}
+
+zx_status_t VirtioQueue::NextAvail(uint16_t* index) {
+  fbl::AutoLock lock(&mutex_);
+  return NextAvailLocked(index);
+}
+
+bool VirtioQueue::HasAvailLocked() const {
+  if (ring_.avail == nullptr) {
+    return false;
+  }
+  return ring_.avail->idx != ring_.index;
+}
+
+uint32_t VirtioQueue::RingIndexLocked(uint32_t index) const {
+  return index & (ring_.size - 1);
+}
+
+bool VirtioQueue::valid() {
+  fbl::AutoLock lock(&mutex_);
+  return ready_ && ring_.size > 0 && ring_.desc != nullptr && ring_.avail != nullptr &&
+         ring_.used != nullptr;
+}
+
+zx_status_t VirtioQueue::Wait(uint16_t* index) {
+  zx_status_t status;
+  while ((status = NextAvail(index)) == ZX_ERR_SHOULD_WAIT) {
+    zx_signals_t pending = 0;
+    zx_status_t wait_status = event_.wait_one(
+        SIGNAL_QUEUE_AVAIL | SIGNAL_QUEUE_STOP, zx::time::infinite(), &pending);
+
+    if (wait_status == ZX_OK && (pending & SIGNAL_QUEUE_STOP)) {
+      return ZX_ERR_STOP;
+    }
+    if (wait_status == ZX_ERR_CANCELED) {
+      return ZX_ERR_CANCELED;
+    }
+  }
+  return status;
+}
+
+zx_status_t VirtioQueue::TryDequeueBatch(uint16_t* indices, uint16_t max_count,
+                                         uint16_t* count) {
+  *count = 0;
+  while (*count < max_count) {
+    uint16_t idx;
+    zx_status_t status = NextAvail(&idx);
+    if (status == ZX_OK) {
+      indices[*count] = idx;
+      (*count)++;
+    } else if (status == ZX_ERR_SHOULD_WAIT) {
+      break;
+    } else {
+      return status;
+    }
+  }
+  return ZX_OK;
+}
+
+void VirtioQueue::Terminate() {
+  event_.signal(0, SIGNAL_QUEUE_STOP);
+}
+
+zx_status_t VirtioQueue::Join() {
+  if (poll_thread_ != 0) {
+    int res;
+    thrd_join(poll_thread_, &res);
+    poll_thread_ = 0;
+  }
+  return ZX_OK;
+}
+
+struct poll_task_args_t {
+  VirtioQueue* queue;
+  virtio_queue_poll_fn_t handler;
+  std::string name;
+  void* ctx;
+};
+
+static int virtio_queue_poll_task(void* ctx) {
+  zx_status_t result = ZX_OK;
+  fbl::unique_ptr<poll_task_args_t> args(static_cast<poll_task_args_t*>(ctx));
+  while (true) {
+    uint16_t descriptor;
+    if (args->queue->Wait(&descriptor) != ZX_OK) {
+      break;
+    }
+
+    uint32_t used = 0;
+    zx_status_t status =
+        args->handler(args->queue, descriptor, &used, args->ctx);
+    result = args->queue->Return(descriptor, used);
+    if (result != ZX_OK) {
+      FXL_LOG(ERROR) << "Failed to return descriptor to queue " << result;
+      break;
+    }
+
+    if (status == ZX_ERR_STOP) {
+      break;
+    }
+    if (status != ZX_OK) {
+      FXL_LOG(ERROR) << "Error " << status
+                     << " while handling queue buffer for queue " << args->name;
+      result = status;
+      break;
+    }
+  }
+
+  return result;
+}
+
+zx_status_t VirtioQueue::Poll(virtio_queue_poll_fn_t handler,
+                              void* ctx,
+                              std::string name) {
+  auto args = new poll_task_args_t{this, handler, std::move(name), ctx};
+
+  int ret = thrd_create_with_name(&poll_thread_, virtio_queue_poll_task, args,
+                                  args->name.c_str());
+  if (ret != thrd_success) {
+    delete args;
+    FXL_LOG(ERROR) << "Failed to create queue thread " << ret;
+    return ZX_ERR_INTERNAL;
+  }
+
+  return ZX_OK;
+}
+
+zx_status_t VirtioQueue::PollAsync(async_t* async,
+                                   async::Wait* wait,
+                                   virtio_queue_poll_fn_t handler,
+                                   void* ctx) {
+  wait->set_object(event_.get());
+  wait->set_trigger(SIGNAL_QUEUE_AVAIL);
+  wait->set_handler([this, handler, ctx](async_t* async, zx_status_t status,
+                                         const zx_packet_signal_t* signal) {
+    if (status != ZX_OK) {
+      return ASYNC_WAIT_FINISHED;
+    }
+    return InvokeAsyncHandler(handler, ctx);
+  });
+  return wait->Begin(async);
+}
+
+async_wait_result_t VirtioQueue::InvokeAsyncHandler(
+    virtio_queue_poll_fn_t handler,
+    void* ctx) {
+  uint16_t head;
+  uint32_t used = 0;
+  zx_status_t status;
+  while (true) {
+    status = NextAvail(&head);
+
+    if (status == ZX_ERR_SHOULD_WAIT) {
+      return ASYNC_WAIT_AGAIN;
+    }
+    if (status == ZX_OK) {
+      status = handler(this, head, &used, ctx);
+      // Try to return the buffer to the queue, even if the handler has failed
+      // so we don't leak the descriptor.
+      zx_status_t return_status = Return(head, used);
+      if (status == ZX_OK) {
+        status = return_status;
+      }
+    }
+  }
+  return status == ZX_OK ? ASYNC_WAIT_AGAIN : ASYNC_WAIT_FINISHED;
+}
+
+zx_status_t VirtioQueue::ReadDesc(uint16_t desc_index, virtio_desc_t* out, struct phys_range *prange) {
+  fbl::AutoLock lock(&mutex_);
+  auto const *desc = &ring_.desc[desc_index];
+  size_t mem_size = device_->phys_mem().size();
+  auto phys_base = device_->phys_mem().phys_base();
+  const uint64_t end = desc->addr + desc->len;
+  if (end < desc->addr || end > (phys_base + mem_size)) {
+    return ZX_ERR_OUT_OF_RANGE;
+  }
+
+  if (prange) {
+	prange->paddr = desc->addr;
+	prange->len = desc->len;
+  }
+
+  out->addr = reinterpret_cast<void*>(guest_paddr_to_host_vaddr
+				(device_, desc->addr));
+  out->len = desc->len;
+  out->has_next = desc->flags & VRING_DESC_F_NEXT;
+  out->writable = desc->flags & VRING_DESC_F_WRITE;
+  out->next = desc->next;
+  out->indirect = !!(desc->flags & VRING_DESC_F_INDIRECT);
+  return ZX_OK;
+}
+
+zx_status_t VirtioQueue::Return(uint16_t index,
+                                uint32_t len,
+                                InterruptAction action) {
+  bool needs_interrupt = false;
+  bool use_event_index =
+      device()->has_enabled_features(1u << VIRTIO_F_RING_EVENT_IDX);
+  {
+    fbl::AutoLock lock(&mutex_);
+    volatile struct vring_used_elem* used =
+        &ring_.used->ring[RingIndexLocked(ring_.used->idx)];
+
+    used->id = index;
+    used->len = len;
+    dmb(ishst);
+    ring_.used->idx++;
+
+    // Virtio 1.0 Section 2.4.7.2: Virtqueue Interrupt Suppression
+    if (!use_event_index) {
+      // If the VIRTIO_F_EVENT_IDX feature bit is not negotiated:
+      //  - The device MUST ignore the used_event value.
+      //  - After the device writes a descriptor index into the used ring:
+      //    - If flags is 1, the device SHOULD NOT send an interrupt.
+      //    - If flags is 0, the device MUST send an interrupt.
+      needs_interrupt = ring_.used->flags == 0;
+    } else {
+      // Otherwise, if the VIRTIO_F_EVENT_IDX feature bit is negotiated:
+      //
+      //  - The device MUST ignore the lower bit of flags.
+      //  - After the device writes a descriptor index into the used ring:
+      //    - If the idx field in the used ring (which determined where that
+      //      descriptor index was placed) was equal to used_event, the device
+      //      MUST send an interrupt.
+      //    - Otherwise the device SHOULD NOT send an interrupt.
+      if (ring_.used_event) {
+        dmb(ish);
+        needs_interrupt = ring_.used->idx == (uint16_t)(*ring_.used_event + 1);
+      }
+    }
+  }
+
+  if (needs_interrupt) {
+    // Set the queue bit in the device ISR so that the driver knows to check
+    // the queues on the next interrupt.
+    device()->add_isr_flags(VirtioDevice::VIRTIO_ISR_QUEUE);
+    if (action == InterruptAction::SEND_INTERRUPT) {
+      return device()->NotifyGuest(index_);
+    }
+  }
+  return ZX_OK;
+}
+
+zx_status_t VirtioQueue::HandleDescriptor(virtio_queue_fn_t handler,
+                                          void* ctx) {
+  uint16_t head;
+  uint32_t used_len = 0;
+  uintptr_t mem_addr = device()->phys_mem().addr();
+  size_t mem_size = device()->phys_mem().size();
+
+  // Get the next descriptor from the available ring. If none are available
+  // we can just no-op.
+  zx_status_t status = NextAvail(&head);
+  if (status == ZX_ERR_SHOULD_WAIT) {
+    return ZX_OK;
+  }
+  if (status != ZX_OK) {
+    return status;
+  }
+
+  status = ZX_OK;
+  uint16_t desc_index = head;
+  volatile const struct vring_desc* desc;
+  do {
+    if (desc_index >= size()) {
+      return ZX_ERR_OUT_OF_RANGE;
+    }
+    {
+      fbl::AutoLock lock(&mutex_);
+      desc = &ring_.desc[desc_index];
+    }
+
+    const uint64_t end = desc->addr + desc->len;
+    if (end < desc->addr || end > mem_size) {
+      return ZX_ERR_OUT_OF_RANGE;
+    }
+
+    void* addr = reinterpret_cast<void*>(mem_addr + desc->addr);
+    status = handler(addr, desc->len, desc->flags, &used_len, ctx);
+    if (status != ZX_OK) {
+      return status;
+    }
+
+    desc_index = desc->next;
+  } while (desc->flags & VRING_DESC_F_NEXT);
+
+  status = Return(head, used_len);
+  if (status != ZX_OK) {
+    return status;
+  }
+  fbl::AutoLock lock(&mutex_);
+  return HasAvailLocked() ? ZX_ERR_NEXT : ZX_OK;
+}
+
+}  // namespace machina

@@ -1,0 +1,90 @@
+import("//build/package.gni")
+
+declare_args() {
+  vendor_driver_dir = ""
+}
+
+template("vendor_driver_package") {
+  _package_name = target_name
+  _driver_name = invoker.driver_name
+
+  assert(vendor_driver_dir != "",
+         "vendor_driver_dir must be set for vendor prebuilt driver packages")
+
+  _copy_target = "copy_${_package_name}"
+  copy(_copy_target) {
+    sources = [ "${vendor_driver_dir}/${_driver_name}" ]
+    outputs = [ "$root_out_dir/${_driver_name}" ]
+  }
+
+  package(_package_name) {
+    system_image = true
+
+    deps = [ ":${_copy_target}" ]
+
+    drivers = [
+      {
+        name = _driver_name
+      },
+    ]
+  }
+}
+
+vendor_driver_package("mt8668") {
+  driver_name = "mt8668.so"
+}
+
+vendor_driver_package("mt8668_spi") {
+  driver_name = "mt8668_spi.so"
+}
+
+vendor_driver_package("mt8668_i2c") {
+  driver_name = "mt8668_i2c.so"
+}
+
+vendor_driver_package("watchdog") {
+  driver_name = "watchdog.so"
+}
+
+copy("copy_mt8676_gpio") {
+  sources = [ "${vendor_driver_dir}/mt8676_gpio.so" ]
+  outputs = [ "$root_out_dir/mt8676_gpio.so" ]
+}
+
+copy("copy_gpio_demo") {
+  sources = [ "${vendor_driver_dir}/gpio_demo" ]
+  outputs = [ "$root_out_dir/gpio_demo" ]
+}
+
+package("mt8676_gpio") {
+  system_image = true
+
+  deps = [
+    ":copy_gpio_demo",
+    ":copy_mt8676_gpio",
+  ]
+
+  binaries = [
+    {
+      name = "gpio_demo"
+    },
+  ]
+
+  drivers = [
+    {
+      name = "mt8676_gpio.so"
+    },
+  ]
+}
+
+vendor_driver_package("mtk_eint") {
+  driver_name = "mtk_eint.so"
+}
+
+vendor_driver_package("mt8668_rtc") {
+  driver_name = "mt8668_rtc.so"
+}
+
+vendor_driver_package("ufs") {
+  driver_name = "mt8668_ufs.so"
+}

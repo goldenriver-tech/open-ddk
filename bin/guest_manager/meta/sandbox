@@ -1,0 +1,7 @@
+{
+  "dev": [
+    "sys/platform/00:00:f",
+    "misc"
+  ],
+  "system": [ "data" ]
+}

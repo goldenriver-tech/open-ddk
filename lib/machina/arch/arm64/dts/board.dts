@@ -1,0 +1,108 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+// Copyright 2018 GoldenRiver Technology Co., Ltd. All rights reserved.
+// Copyright 2017 The Fuchsia Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// See: https://elinux.org/Device_Tree_Usage
+/dts-v1/;
+
+/ {
+  model = "Machina";
+  interrupt-parent = <&gic>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+
+  chosen {
+    // Will be populated at run-time.
+  };
+
+  cpus {
+    #address-cells = <1>;
+    #size-cells = <0>;
+    // CPU list will be populated at run-time.
+  };
+
+  memory@0 {
+    device_type = "memory";
+    reg = <0x00000000 0x10000000>;
+  };
+
+  psci {
+    compatible = "arm,psci";
+    method = "smc";
+    cpu_on = <0xc4000003>;
+  };
+
+  timer {
+    compatible = "arm,armv8-timer";
+    always-on;
+    interrupts = <1 13 4>, // PHYS-SECURE-PPI     29 HIGH/CPU-0
+                 <1 14 4>, // PHYS-NON-SECURE-PPI 30 HIGH/CPU-0
+                 <1 11 4>, // VIRT-PPI            27 HIGH/CPU-0
+                 <1 10 4>; // HYP-PPI             26 HIGH/CPU-0
+  };
+
+  pclk: clock {
+    compatible = "fixed-clock";
+    clock-frequency = <0x16e3600>;
+    clock-output-names = "clk24mhz";
+    #clock-cells = <0>;
+  };
+
+  rtc@fff33000 {
+    compatible = "arm,pl031", "arm,primecell";
+    arm,primecell-periphid = <0x00041031>;
+    reg = <0xfff33000 0x1000>;
+  };
+
+  serial@fff32000 {
+    compatible = "arm,pl011", "arm,primecell";
+    arm,primecell-periphid = <0x00341011>;
+    reg = <0xfff32000 0x1000>;
+    clock-names = "apb_pclk";
+    clocks = <&pclk>;
+    interrupts = <0 79 4>; // SPI 111 HIGH/CPU-0
+  };
+
+  gic: interrupt-controller@e8000000 {
+    compatible = "arm,gic-v3";
+    #address-cells = <0>;
+    #size-cells = <2>;
+    #interrupt-cells = <3>;
+    interrupt-controller;
+    reg = <0xe8000000 0x10000>, // GICD
+          <0xe80a0000 0x80000>; // GICR
+  };
+
+  pci@10000000 {
+    device_type = "pci";
+    compatible = "pci-host-ecam-generic";
+    reg = <0xdf000000 0x1000000>;
+    bus-range = <0 0>;
+    ranges = <0x2000000 0 0xb0001000 0xb0001000 0 0xfff000>;
+    interrupt-map-mask = <0xf800 0 0 1>;
+    interrupt-map = <0x0000 0 0 1 &gic 0 0 4>,  // HIGH MID LOW WIRE GIC SPI 32 HIGH/CPU-0
+                    <0x0800 0 0 1 &gic 0 1 4>,  // HIGH MID LOW WIRE GIC SPI 33 HIGH/CPU-0
+                    <0x1000 0 0 1 &gic 0 2 4>,  // HIGH MID LOW WIRE GIC SPI 34 HIGH/CPU-0
+                    <0x1800 0 0 1 &gic 0 3 4>,  // HIGH MID LOW WIRE GIC SPI 35 HIGH/CPU-0
+                    <0x2000 0 0 1 &gic 0 4 4>,  // HIGH MID LOW WIRE GIC SPI 36 HIGH/CPU-0
+                    <0x2800 0 0 1 &gic 0 5 4>,  // HIGH MID LOW WIRE GIC SPI 37 HIGH/CPU-0
+                    <0x3000 0 0 1 &gic 0 6 4>,  // HIGH MID LOW WIRE GIC SPI 38 HIGH/CPU-0
+                    <0x3800 0 0 1 &gic 0 7 4>,  // HIGH MID LOW WIRE GIC SPI 39 HIGH/CPU-0
+                    <0x4000 0 0 1 &gic 0 8 4>,  // HIGH MID LOW WIRE GIC SPI 40 HIGH/CPU-0
+                    <0x4800 0 0 1 &gic 0 9 4>,  // HIGH MID LOW WIRE GIC SPI 41 HIGH/CPU-0
+                    <0x5000 0 0 1 &gic 0 10 4>, // HIGH MID LOW WIRE GIC SPI 42 HIGH/CPU-0
+                    <0x5800 0 0 1 &gic 0 11 4>; // HIGH MID LOW WIRE GIC SPI 43 HIGH/CPU-0
+    #address-cells = <3>;
+    #size-cells = <2>;
+    #interrupt-cells = <1>;
+  };
+
+  /*IPI: interrupt-controller {
+    compatible = "android,CustomIPI";
+    #interrupt-cells = <1>;
+    interrupt-controller;
+  };*/
+};

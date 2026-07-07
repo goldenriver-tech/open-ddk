@@ -1,0 +1,51 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/nebula/nbl_sdk_library.gni")
+
+config("pic") {
+  cflags = [ "-fPIC" ]
+}
+
+static_library("cpp") {
+  sources = [
+    "application_context.cc",
+    "application_context.h",
+    "connect.h",
+    "environment_services.cc",
+    "environment_services.h",
+    "service_provider_impl.cc",
+    "service_provider_impl.h",
+  ]
+
+  public_deps = [
+    "//garnet/public/lib/app/fidl",
+    "//garnet/public/lib/fidl/cpp",
+    "//garnet/public/lib/fxl",
+    "//garnet/public/lib/svc/cpp",
+  ]
+
+  configs += [ ":pic" ]
+  configs -= [ "//build/config:symbol_visibility_hidden" ]
+}
+
+nbl_sdk_library("app_cpp_sdk") {
+  name = "app"
+  category = "hee"
+
+  hdr_dirs = [
+    {
+      source = "."
+      dest = "lib/app/cpp"
+    }
+  ]
+
+  libs = [
+    "libcpp.a",
+  ]
+
+  deps = [
+    ":cpp",
+  ]
+}

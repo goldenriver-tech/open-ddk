@@ -1,0 +1,5 @@
+{
+    "packages": {
+        "zircon-guest": "//garnet/bin/guest/zircon-guest"
+    }
+}

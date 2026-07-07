@@ -1,0 +1,72 @@
+# Copyright 2018 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//garnet/public/lib/fidl/build/fidl/fidl.gni")
+
+template("fidl_example") {
+  not_needed(invoker, "*")
+  fidl(target_name) {
+    forward_variables_from(invoker, [ "name" ])
+
+    sources = [
+      "//zircon/system/host/fidl/examples/${target_name}.fidl"
+    ]
+  }
+}
+
+fidl_example("alignment") {}
+fidl_example("enums") {}
+fidl_example("example-0") { name = "example_0" }
+fidl_example("example-1") { name = "example_1" }
+fidl_example("example-2") { name = "example_2" }
+fidl_example("example-3") { name = "example_3" }
+fidl_example("example-4") { name = "example_4" }
+fidl_example("example-5") { name = "example_5" }
+fidl_example("example-6") { name = "example_6" }
+fidl_example("example-7") { name = "example_7" }
+fidl_example("example-8") { name = "example_8" }
+fidl_example("example-9") { name = "example_9" }
+fidl_example("interface-ordinals") { name = "interface_ordinals" }
+fidl_example("tables") {}
+fidl_example("test") {}
+fidl_example("types") {}
+
+fidl("point") {
+  sources = [
+    "//zircon/system/host/fidl/examples/library-a/point.fidl"
+  ]
+}
+
+fidl("view") {
+  sources = [
+    "//zircon/system/host/fidl/examples/library-b/view.fidl"
+  ]
+
+  deps = [
+    ":point",
+  ]
+}
+
+group("examples") {
+  deps = [
+    ":alignment",
+    ":enums",
+    ":example-0",
+    ":example-1",
+    ":example-2",
+    ":example-3",
+    ":example-4",
+    ":example-5",
+    ":example-6",
+    ":example-7",
+    ":example-8",
+    ":example-9",
+    ":interface-ordinals",
+    ":tables",
+    ":test",
+    ":types",
+    ":point",
+    ":view",
+  ]
+}
