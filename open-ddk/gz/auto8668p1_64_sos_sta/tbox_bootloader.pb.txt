@@ -1,0 +1,7 @@
+protocol: "lk2"
+payload {
+    name: "lk2",
+    partition_name: "bl2-uos_a";
+    offset: 0x10202000,
+    header_size: 0x1300,
+}

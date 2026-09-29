@@ -1,0 +1,567 @@
+# Copyright 2018 GoldenRiver Technology Co., Ltd.
+# Copyright 2017 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+import("//build/sdk/sdk_atom.gni")
+import("//build/package.gni")
+
+config("omp_config") {
+  include_dirs = [ "include" ]
+  defines = [
+  ]
+}
+
+static_library("omp") {
+  sources = [
+    "src/syscall_wrapper.c",
+  ]
+
+  lib_dirs = [
+    "prebuild"
+  ]
+
+  libs = [
+    "iomp5",
+    "zircon",
+  ]
+
+  public_configs = [ ":omp_config" ]
+}
+
+config("test_config") {
+  include_dirs = [
+    "test",
+    "test/ompt",
+  ]
+  cflags = [
+    "-Wno-unused-variable",
+    "-Wno-sign-compare",
+    "-Wno-missing-braces",
+    "-Wno-format",
+    "-Wno-implicit-function-declaration",
+    "-Wno-integer-overflow",
+    "-Wno-empty-body",
+    "-Wno-return-type",
+    "-Wno-#warnings",
+    "-fopenmp",
+    "-g"
+  ]
+  defines = [
+    "__linux",
+    "__aarch64__",
+    "CODE",
+    "TOOL",
+  ]
+}
+
+executable("misc_bugs_cancellation_for_sections"){output_name="misc_bugs_cancellation_for_sections" testonly=true sources=["test/misc_bugs/cancellation_for_sections.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_bugs_many-microtask-args"){output_name="misc_bugs_many-microtask-args" testonly=true sources=["test/misc_bugs/many-microtask-args.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_bugs_teams-reduction"){output_name="misc_bugs_teams-reduction" testonly=true sources=["test/misc_bugs/teams-reduction.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_bugs_omp_foreign_thread_team_reuse"){output_name="misc_bugs_omp_foreign_thread_team_reuse" testonly=true sources=["test/misc_bugs/omp_foreign_thread_team_reuse.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_bugs_teams-no-par"){output_name="misc_bugs_teams-no-par" testonly=true sources=["test/misc_bugs/teams-no-par.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("env_kmp_aff_disable_hwloc"){output_name="env_kmp_aff_disable_hwloc" testonly=true sources=["test/env/kmp_aff_disable_hwloc.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("env_kmp_set_dispatch_buf"){output_name="env_kmp_set_dispatch_buf" testonly=true sources=["test/env/kmp_set_dispatch_buf.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("env_omp_thread_limit"){output_name="env_omp_thread_limit" testonly=true sources=["test/env/omp_thread_limit.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("env_omp_wait_policy"){output_name="env_omp_wait_policy" testonly=true sources=["test/env/omp_wait_policy.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("flush_omp_flush"){output_name="flush_omp_flush" testonly=true sources=["test/flush/omp_flush.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("critical_omp_critical"){output_name="critical_omp_critical" testonly=true sources=["test/critical/omp_critical.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("atomic_omp_atomic"){output_name="atomic_omp_atomic" testonly=true sources=["test/atomic/omp_atomic.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_omp_get_num_threads"){output_name="api_omp_get_num_threads" testonly=true sources=["test/api/omp_get_num_threads.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_has_openmp"){output_name="api_has_openmp" testonly=true sources=["test/api/has_openmp.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_omp_get_wtick"){output_name="api_omp_get_wtick" testonly=true sources=["test/api/omp_get_wtick.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_omp_in_parallel"){output_name="api_omp_in_parallel" testonly=true sources=["test/api/omp_in_parallel.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_omp_get_wtime"){output_name="api_omp_get_wtime" testonly=true sources=["test/api/omp_get_wtime.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_kmp_set_defaults_lock_bug"){output_name="api_kmp_set_defaults_lock_bug" testonly=true sources=["test/api/kmp_set_defaults_lock_bug.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("api_kmp_aligned_malloc"){output_name="api_kmp_aligned_malloc" testonly=true sources=["test/api/kmp_aligned_malloc.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("lock_omp_init_lock"){output_name="lock_omp_init_lock" testonly=true sources=["test/lock/omp_init_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("lock_omp_test_lock"){output_name="lock_omp_test_lock" testonly=true sources=["test/lock/omp_test_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("lock_omp_test_nest_lock"){output_name="lock_omp_test_nest_lock" testonly=true sources=["test/lock/omp_test_nest_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("lock_omp_nest_lock"){output_name="lock_omp_nest_lock" testonly=true sources=["test/lock/omp_nest_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("lock_omp_lock"){output_name="lock_omp_lock" testonly=true sources=["test/lock/omp_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_private"){output_name="parallel_omp_parallel_private" testonly=true sources=["test/parallel/omp_parallel_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_shared"){output_name="parallel_omp_parallel_shared" testonly=true sources=["test/parallel/omp_parallel_shared.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_reduction"){output_name="parallel_omp_parallel_reduction" testonly=true sources=["test/parallel/omp_parallel_reduction.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_copyin"){output_name="parallel_omp_parallel_copyin" testonly=true sources=["test/parallel/omp_parallel_copyin.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_num_threads"){output_name="parallel_omp_parallel_num_threads" testonly=true sources=["test/parallel/omp_parallel_num_threads.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_if"){output_name="parallel_omp_parallel_if" testonly=true sources=["test/parallel/omp_parallel_if.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_nested"){output_name="parallel_omp_nested" testonly=true sources=["test/parallel/omp_nested.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_firstprivate"){output_name="parallel_omp_parallel_firstprivate" testonly=true sources=["test/parallel/omp_parallel_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_omp_parallel_default"){output_name="parallel_omp_parallel_default" testonly=true sources=["test/parallel/omp_parallel_default.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("master_omp_master"){output_name="master_omp_master" testonly=true sources=["test/master/omp_master.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("master_omp_master_3"){output_name="master_omp_master_3" testonly=true sources=["test/master/omp_master_3.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_parallel_sections_lastprivate"){output_name="sections_omp_parallel_sections_lastprivate" testonly=true sources=["test/worksharing/sections/omp_parallel_sections_lastprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_parallel_sections_reduction"){output_name="sections_omp_parallel_sections_reduction" testonly=true sources=["test/worksharing/sections/omp_parallel_sections_reduction.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_parallel_sections_firstprivate"){output_name="sections_omp_parallel_sections_firstprivate" testonly=true sources=["test/worksharing/sections/omp_parallel_sections_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_section_firstprivate"){output_name="sections_omp_section_firstprivate" testonly=true sources=["test/worksharing/sections/omp_section_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_parallel_sections_private"){output_name="sections_omp_parallel_sections_private" testonly=true sources=["test/worksharing/sections/omp_parallel_sections_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_section_lastprivate"){output_name="sections_omp_section_lastprivate" testonly=true sources=["test/worksharing/sections/omp_section_lastprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_sections_reduction"){output_name="sections_omp_sections_reduction" testonly=true sources=["test/worksharing/sections/omp_sections_reduction.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_section_private"){output_name="sections_omp_section_private" testonly=true sources=["test/worksharing/sections/omp_section_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("sections_omp_sections_nowait"){output_name="sections_omp_sections_nowait" testonly=true sources=["test/worksharing/sections/omp_sections_nowait.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_schedule_dynamic"){output_name="for_omp_for_schedule_dynamic" testonly=true sources=["test/worksharing/for/omp_for_schedule_dynamic.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_parallel_for_private"){output_name="for_omp_parallel_for_private" testonly=true sources=["test/worksharing/for/omp_parallel_for_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_reduction"){output_name="for_omp_for_reduction" testonly=true sources=["test/worksharing/for/omp_for_reduction.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_parallel_for_firstprivate"){output_name="for_omp_parallel_for_firstprivate" testonly=true sources=["test/worksharing/for/omp_parallel_for_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_parallel_for_reduction"){output_name="for_omp_parallel_for_reduction" testonly=true sources=["test/worksharing/for/omp_parallel_for_reduction.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_kmp_sch_simd_runtime_api"){output_name="for_kmp_sch_simd_runtime_api" testonly=true sources=["test/worksharing/for/kmp_sch_simd_runtime_api.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_ordered"){output_name="for_omp_for_ordered" testonly=true sources=["test/worksharing/for/omp_for_ordered.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_kmp_doacross_check"){output_name="for_kmp_doacross_check" testonly=true sources=["test/worksharing/for/kmp_doacross_check.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_nowait"){output_name="for_omp_for_nowait" testonly=true sources=["test/worksharing/for/omp_for_nowait.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_bug_set_schedule_0"){output_name="for_bug_set_schedule_0" testonly=true sources=["test/worksharing/for/bug_set_schedule_0.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_schedule_guided"){output_name="for_omp_for_schedule_guided" testonly=true sources=["test/worksharing/for/omp_for_schedule_guided.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_kmp_set_dispatch_buf"){output_name="for_kmp_set_dispatch_buf" testonly=true sources=["test/worksharing/for/kmp_set_dispatch_buf.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_parallel_for_lastprivate"){output_name="for_omp_parallel_for_lastprivate" testonly=true sources=["test/worksharing/for/omp_parallel_for_lastprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_parallel_for_if"){output_name="for_omp_parallel_for_if" testonly=true sources=["test/worksharing/for/omp_parallel_for_if.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_schedule_static"){output_name="for_omp_for_schedule_static" testonly=true sources=["test/worksharing/for/omp_for_schedule_static.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_parallel_for_ordered"){output_name="for_omp_parallel_for_ordered" testonly=true sources=["test/worksharing/for/omp_parallel_for_ordered.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_lastprivate"){output_name="for_omp_for_lastprivate" testonly=true sources=["test/worksharing/for/omp_for_lastprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_kmp_sch_simd_guided"){output_name="for_kmp_sch_simd_guided" testonly=true sources=["test/worksharing/for/kmp_sch_simd_guided.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_collapse"){output_name="for_omp_for_collapse" testonly=true sources=["test/worksharing/for/omp_for_collapse.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_schedule_static_3"){output_name="for_omp_for_schedule_static_3" testonly=true sources=["test/worksharing/for/omp_for_schedule_static_3.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_private"){output_name="for_omp_for_private" testonly=true sources=["test/worksharing/for/omp_for_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_bigbounds"){output_name="for_omp_for_bigbounds" testonly=true sources=["test/worksharing/for/omp_for_bigbounds.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_kmp_sch_simd_runtime_static"){output_name="for_kmp_sch_simd_runtime_static" testonly=true sources=["test/worksharing/for/kmp_sch_simd_runtime_static.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_schedule_auto"){output_name="for_omp_for_schedule_auto" testonly=true sources=["test/worksharing/for/omp_for_schedule_auto.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_schedule_runtime"){output_name="for_omp_for_schedule_runtime" testonly=true sources=["test/worksharing/for/omp_for_schedule_runtime.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_omp_for_firstprivate"){output_name="for_omp_for_firstprivate" testonly=true sources=["test/worksharing/for/omp_for_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_kmp_sch_simd_runtime_guided"){output_name="for_kmp_sch_simd_runtime_guided" testonly=true sources=["test/worksharing/for/kmp_sch_simd_runtime_guided.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("single_omp_single_nowait"){output_name="single_omp_single_nowait" testonly=true sources=["test/worksharing/single/omp_single_nowait.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("single_omp_single_private"){output_name="single_omp_single_private" testonly=true sources=["test/worksharing/single/omp_single_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("single_omp_single_copyprivate"){output_name="single_omp_single_copyprivate" testonly=true sources=["test/worksharing/single/omp_single_copyprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("single_omp_single"){output_name="single_omp_single" testonly=true sources=["test/worksharing/single/omp_single.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_omp_barrier"){output_name="barrier_omp_barrier" testonly=true sources=["test/barrier/omp_barrier.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_priority"){output_name="tasking_omp_task_priority" testonly=true sources=["test/tasking/omp_task_priority.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_private"){output_name="tasking_omp_task_private" testonly=true sources=["test/tasking/omp_task_private.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task"){output_name="tasking_omp_task" testonly=true sources=["test/tasking/omp_task.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_bug_nested_proxy_task"){output_name="tasking_bug_nested_proxy_task" testonly=true sources=["test/tasking/bug_nested_proxy_task.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_bug_proxy_task_dep_waiting"){output_name="tasking_bug_proxy_task_dep_waiting" testonly=true sources=["test/tasking/bug_proxy_task_dep_waiting.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_taskwait"){output_name="tasking_omp_taskwait" testonly=true sources=["test/tasking/omp_taskwait.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_imp_firstprivate"){output_name="tasking_omp_task_imp_firstprivate" testonly=true sources=["test/tasking/omp_task_imp_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_taskyield"){output_name="tasking_omp_taskyield" testonly=true sources=["test/tasking/omp_taskyield.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_nested_parallel_tasking"){output_name="tasking_nested_parallel_tasking" testonly=true sources=["test/tasking/nested_parallel_tasking.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_kmp_taskloop"){output_name="tasking_kmp_taskloop" testonly=true sources=["test/tasking/kmp_taskloop.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_if"){output_name="tasking_omp_task_if" testonly=true sources=["test/tasking/omp_task_if.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_firstprivate"){output_name="tasking_omp_task_firstprivate" testonly=true sources=["test/tasking/omp_task_firstprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_nested_task_creation"){output_name="tasking_nested_task_creation" testonly=true sources=["test/tasking/nested_task_creation.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_taskloop_num_tasks"){output_name="tasking_omp_taskloop_num_tasks" testonly=true sources=["test/tasking/omp_taskloop_num_tasks.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_bug_serial_taskgroup"){output_name="tasking_bug_serial_taskgroup" testonly=true sources=["test/tasking/bug_serial_taskgroup.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_final"){output_name="tasking_omp_task_final" testonly=true sources=["test/tasking/omp_task_final.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_taskloop_grainsize"){output_name="tasking_omp_taskloop_grainsize" testonly=true sources=["test/tasking/omp_taskloop_grainsize.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasking_omp_task_shared"){output_name="tasking_omp_task_shared" testonly=true sources=["test/tasking/omp_task_shared.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("threadprivate_omp_threadprivate"){output_name="threadprivate_omp_threadprivate" testonly=true sources=["test/threadprivate/omp_threadprivate.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("threadprivate_omp_threadprivate_for"){output_name="threadprivate_omp_threadprivate_for" testonly=true sources=["test/threadprivate/omp_threadprivate_for.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("loadtool_tool_available"){output_name="loadtool_tool_available" testonly=true sources=["test/ompt/loadtool/tool_available.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_ordered"){output_name="synchronization_ordered" testonly=true sources=["test/ompt/synchronization/ordered.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_critical"){output_name="synchronization_critical" testonly=true sources=["test/ompt/synchronization/critical.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_test_nest_lock_parallel"){output_name="synchronization_test_nest_lock_parallel" testonly=true sources=["test/ompt/synchronization/test_nest_lock_parallel.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_test_lock"){output_name="synchronization_test_lock" testonly=true sources=["test/ompt/synchronization/test_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_taskwait"){output_name="synchronization_taskwait" testonly=true sources=["test/ompt/synchronization/taskwait.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_lock"){output_name="synchronization_lock" testonly=true sources=["test/ompt/synchronization/lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_master"){output_name="synchronization_master" testonly=true sources=["test/ompt/synchronization/master.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_test_nest_lock"){output_name="synchronization_test_nest_lock" testonly=true sources=["test/ompt/synchronization/test_nest_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_taskgroup"){output_name="synchronization_taskgroup" testonly=true sources=["test/ompt/synchronization/taskgroup.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_flush"){output_name="synchronization_flush" testonly=true sources=["test/ompt/synchronization/flush.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("synchronization_nest_lock"){output_name="synchronization_nest_lock" testonly=true sources=["test/ompt/synchronization/nest_lock.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_explicit"){output_name="barrier_explicit" testonly=true sources=["test/ompt/synchronization/barrier/explicit.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_for_simd"){output_name="barrier_for_simd" testonly=true sources=["test/ompt/synchronization/barrier/for_simd.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_parallel_region"){output_name="barrier_parallel_region" testonly=true sources=["test/ompt/synchronization/barrier/parallel_region.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_sections"){output_name="barrier_sections" testonly=true sources=["test/ompt/synchronization/barrier/sections.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_for_loop"){output_name="barrier_for_loop" testonly=true sources=["test/ompt/synchronization/barrier/for_loop.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("barrier_single"){output_name="barrier_single" testonly=true sources=["test/ompt/synchronization/barrier/single.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_dynamic_enough_threads"){output_name="parallel_dynamic_enough_threads" testonly=true sources=["test/ompt/parallel/dynamic_enough_threads.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_nested_serialized"){output_name="parallel_nested_serialized" testonly=true sources=["test/ompt/parallel/nested_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_nested"){output_name="parallel_nested" testonly=true sources=["test/ompt/parallel/nested.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_dynamic_not_enough_threads"){output_name="parallel_dynamic_not_enough_threads" testonly=true sources=["test/ompt/parallel/dynamic_not_enough_threads.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_max_active_levels_serialized"){output_name="parallel_max_active_levels_serialized" testonly=true sources=["test/ompt/parallel/max_active_levels_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_serialized"){output_name="parallel_serialized" testonly=true sources=["test/ompt/parallel/serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_no_thread_num_clause"){output_name="parallel_no_thread_num_clause" testonly=true sources=["test/ompt/parallel/no_thread_num_clause.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_parallel_if0"){output_name="parallel_parallel_if0" testonly=true sources=["test/ompt/parallel/parallel_if0.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_not_enough_threads"){output_name="parallel_not_enough_threads" testonly=true sources=["test/ompt/parallel/not_enough_threads.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_normal"){output_name="parallel_normal" testonly=true sources=["test/ompt/parallel/normal.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("parallel_nested_lwt"){output_name="parallel_nested_lwt" testonly=true sources=["test/ompt/parallel/nested_lwt.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_task_types_serialized"){output_name="tasks_task_types_serialized" testonly=true sources=["test/ompt/tasks/task_types_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_task_in_joinbarrier"){output_name="tasks_task_in_joinbarrier" testonly=true sources=["test/ompt/tasks/task_in_joinbarrier.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_explicit_task"){output_name="tasks_explicit_task" testonly=true sources=["test/ompt/tasks/explicit_task.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_untied_task"){output_name="tasks_untied_task" testonly=true sources=["test/ompt/tasks/untied_task.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_serialized"){output_name="tasks_serialized" testonly=true sources=["test/ompt/tasks/serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_taskyield"){output_name="tasks_taskyield" testonly=true sources=["test/ompt/tasks/taskyield.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_dependences"){output_name="tasks_dependences" testonly=true sources=["test/ompt/tasks/dependences.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("tasks_task_types"){output_name="tasks_task_types" testonly=true sources=["test/ompt/tasks/task_types.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("worksharing_sections"){output_name="worksharing_sections" testonly=true sources=["test/ompt/worksharing/sections.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("worksharing_single"){output_name="worksharing_single" testonly=true sources=["test/ompt/worksharing/single.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_static_split"){output_name="for_static_split" testonly=true sources=["test/ompt/worksharing/for/static_split.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_guided_split"){output_name="for_guided_split" testonly=true sources=["test/ompt/worksharing/for/guided_split.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_auto_serialized"){output_name="for_auto_serialized" testonly=true sources=["test/ompt/worksharing/for/auto_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_guided_serialized"){output_name="for_guided_serialized" testonly=true sources=["test/ompt/worksharing/for/guided_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_dynamic_split"){output_name="for_dynamic_split" testonly=true sources=["test/ompt/worksharing/for/dynamic_split.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_runtime_serialized"){output_name="for_runtime_serialized" testonly=true sources=["test/ompt/worksharing/for/runtime_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_static"){output_name="for_static" testonly=true sources=["test/ompt/worksharing/for/static.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_dynamic"){output_name="for_dynamic" testonly=true sources=["test/ompt/worksharing/for/dynamic.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_auto"){output_name="for_auto" testonly=true sources=["test/ompt/worksharing/for/auto.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_runtime_split"){output_name="for_runtime_split" testonly=true sources=["test/ompt/worksharing/for/runtime_split.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_guided"){output_name="for_guided" testonly=true sources=["test/ompt/worksharing/for/guided.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_runtime"){output_name="for_runtime" testonly=true sources=["test/ompt/worksharing/for/runtime.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_dynamic_serialized"){output_name="for_dynamic_serialized" testonly=true sources=["test/ompt/worksharing/for/dynamic_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_auto_split"){output_name="for_auto_split" testonly=true sources=["test/ompt/worksharing/for/auto_split.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("for_static_serialized"){output_name="for_static_serialized" testonly=true sources=["test/ompt/worksharing/for/static_serialized.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("cancel_cancel_worksharing"){output_name="cancel_cancel_worksharing" testonly=true sources=["test/ompt/cancel/cancel_worksharing.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("cancel_cancel_parallel"){output_name="cancel_cancel_parallel" testonly=true sources=["test/ompt/cancel/cancel_parallel.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("cancel_cancel_taskgroup"){output_name="cancel_cancel_taskgroup" testonly=true sources=["test/ompt/cancel/cancel_taskgroup.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_control_tool_no_ompt_support"){output_name="misc_control_tool_no_ompt_support" testonly=true sources=["test/ompt/misc/control_tool_no_ompt_support.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_idle"){output_name="misc_idle" testonly=true sources=["test/ompt/misc/idle.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_api_calls"){output_name="misc_api_calls" testonly=true sources=["test/ompt/misc/api_calls.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_control_tool"){output_name="misc_control_tool" testonly=true sources=["test/ompt/misc/control_tool.c"] deps=[":omp"] configs+=[":test_config"]}
+executable("misc_unset_callback"){output_name="misc_unset_callback" testonly=true sources=["test/ompt/misc/unset_callback.c"] deps=[":omp"] configs+=[":test_config"]}
+
+package("omp-tests") {
+  system_image = true
+  testonly = true
+  deps = [
+    ":misc_bugs_many-microtask-args",
+    ":misc_bugs_teams-reduction",
+    ":misc_bugs_omp_foreign_thread_team_reuse",
+    ":misc_bugs_teams-no-par",
+    ":env_kmp_aff_disable_hwloc",
+    ":env_kmp_set_dispatch_buf",
+    ":flush_omp_flush",
+    ":critical_omp_critical",
+    ":atomic_omp_atomic",
+    ":api_omp_get_num_threads",
+    ":api_has_openmp",
+    ":api_omp_get_wtick",
+    ":api_omp_in_parallel",
+    ":api_omp_get_wtime",
+    ":api_kmp_set_defaults_lock_bug",
+    ":api_kmp_aligned_malloc",
+    ":lock_omp_init_lock",
+    ":lock_omp_test_lock",
+    ":lock_omp_test_nest_lock",
+    ":lock_omp_nest_lock",
+    ":lock_omp_lock",
+    ":parallel_omp_parallel_private",
+    ":parallel_omp_parallel_shared",
+    ":parallel_omp_parallel_reduction",
+    ":parallel_omp_parallel_copyin",
+    ":parallel_omp_parallel_num_threads",
+    ":parallel_omp_parallel_if",
+    ":parallel_omp_nested",
+    ":parallel_omp_parallel_firstprivate",
+    ":parallel_omp_parallel_default",
+    ":master_omp_master",
+    ":master_omp_master_3",
+    ":sections_omp_parallel_sections_lastprivate",
+    ":sections_omp_parallel_sections_reduction",
+    ":sections_omp_parallel_sections_firstprivate",
+    ":sections_omp_section_firstprivate",
+    ":sections_omp_parallel_sections_private",
+    ":sections_omp_section_lastprivate",
+    ":sections_omp_sections_reduction",
+    ":sections_omp_section_private",
+    ":sections_omp_sections_nowait",
+    ":for_omp_for_schedule_dynamic",
+    ":for_omp_parallel_for_private",
+    ":for_omp_for_reduction",
+    ":for_omp_parallel_for_firstprivate",
+    ":for_omp_parallel_for_reduction",
+    ":for_kmp_sch_simd_runtime_api",
+    ":for_omp_for_ordered",
+    ":for_kmp_doacross_check",
+    ":for_omp_for_nowait",
+    ":for_bug_set_schedule_0",
+    ":for_omp_for_schedule_guided",
+    ":for_omp_parallel_for_lastprivate",
+    ":for_omp_parallel_for_if",
+    ":for_omp_for_schedule_static",
+    ":for_omp_parallel_for_ordered",
+    ":for_omp_for_lastprivate",
+    ":for_kmp_sch_simd_guided",
+    ":for_omp_for_collapse",
+    ":for_omp_for_schedule_static_3",
+    ":for_omp_for_private",
+    ":for_kmp_sch_simd_runtime_static",
+    ":for_omp_for_schedule_auto",
+    ":for_omp_for_firstprivate",
+    ":for_kmp_sch_simd_runtime_guided",
+    ":single_omp_single_nowait",
+    ":single_omp_single_private",
+    ":single_omp_single_copyprivate",
+    ":single_omp_single",
+    ":barrier_omp_barrier",
+    ":tasking_omp_task_private",
+    ":tasking_omp_task",
+    ":tasking_bug_nested_proxy_task",
+    ":tasking_bug_proxy_task_dep_waiting",
+    ":tasking_omp_taskwait",
+    ":tasking_omp_task_imp_firstprivate",
+    ":tasking_omp_taskyield",
+    ":tasking_nested_parallel_tasking",
+    ":tasking_kmp_taskloop",
+    ":tasking_omp_task_if",
+    ":tasking_omp_task_firstprivate",
+    ":tasking_nested_task_creation",
+    ":tasking_omp_taskloop_num_tasks",
+    ":tasking_bug_serial_taskgroup",
+    ":tasking_omp_task_final",
+    ":tasking_omp_taskloop_grainsize",
+    ":tasking_omp_task_shared",
+    ":threadprivate_omp_threadprivate",
+    ":threadprivate_omp_threadprivate_for",
+    ":loadtool_tool_available",
+    ":synchronization_ordered",
+    ":synchronization_critical",
+    ":synchronization_test_nest_lock_parallel",
+    ":synchronization_test_lock",
+    ":synchronization_taskwait",
+    ":synchronization_lock",
+    ":synchronization_master",
+    ":synchronization_test_nest_lock",
+    ":synchronization_taskgroup",
+    ":synchronization_flush",
+    ":synchronization_nest_lock",
+    ":barrier_explicit",
+    ":barrier_for_simd",
+    ":barrier_parallel_region",
+    ":barrier_sections",
+    ":barrier_for_loop",
+    ":barrier_single",
+    ":parallel_dynamic_enough_threads",
+    ":parallel_nested_serialized",
+    ":parallel_nested",
+    ":parallel_dynamic_not_enough_threads",
+    ":parallel_max_active_levels_serialized",
+    ":parallel_serialized",
+    ":parallel_no_thread_num_clause",
+    ":parallel_parallel_if0",
+    ":parallel_not_enough_threads",
+    ":parallel_normal",
+    ":parallel_nested_lwt",
+    ":tasks_task_types_serialized",
+    ":tasks_task_in_joinbarrier",
+    ":tasks_explicit_task",
+    ":tasks_untied_task",
+    ":tasks_serialized",
+    ":tasks_taskyield",
+    ":tasks_dependences",
+    ":tasks_task_types",
+    ":worksharing_sections",
+    ":worksharing_single",
+    ":for_static_split",
+    ":for_guided_split",
+    ":for_auto_serialized",
+    ":for_guided_serialized",
+    ":for_dynamic_split",
+    ":for_runtime_serialized",
+    ":for_static",
+    ":for_dynamic",
+    ":for_auto",
+    ":for_runtime_split",
+    ":for_guided",
+    ":for_runtime",
+    ":for_dynamic_serialized",
+    ":for_auto_split",
+    ":for_static_serialized",
+    ":cancel_cancel_worksharing",
+    ":cancel_cancel_parallel",
+    ":cancel_cancel_taskgroup",
+    ":misc_control_tool_no_ompt_support",
+    ":misc_idle",
+    ":misc_api_calls",
+    ":misc_control_tool",
+    ":misc_unset_callback",
+  ]
+  tests = [
+    {destdir="iomp5" name="misc_bugs_many-microtask-args"},
+    {destdir="iomp5" name="misc_bugs_teams-reduction"},
+    {destdir="iomp5" name="misc_bugs_omp_foreign_thread_team_reuse"},
+    {destdir="iomp5" name="misc_bugs_teams-no-par"},
+    {destdir="iomp5" name="env_kmp_aff_disable_hwloc"},
+    {destdir="iomp5" name="env_kmp_set_dispatch_buf"},
+    {destdir="iomp5" name="flush_omp_flush"},
+    {destdir="iomp5" name="critical_omp_critical"},
+    {destdir="iomp5" name="atomic_omp_atomic"},
+    {destdir="iomp5" name="api_omp_get_num_threads"},
+    {destdir="iomp5" name="api_has_openmp"},
+    {destdir="iomp5" name="api_omp_get_wtick"},
+    {destdir="iomp5" name="api_omp_in_parallel"},
+    {destdir="iomp5" name="api_omp_get_wtime"},
+    {destdir="iomp5" name="api_kmp_set_defaults_lock_bug"},
+    {destdir="iomp5" name="api_kmp_aligned_malloc"},
+    {destdir="iomp5" name="lock_omp_init_lock"},
+    {destdir="iomp5" name="lock_omp_test_lock"},
+    {destdir="iomp5" name="lock_omp_test_nest_lock"},
+    {destdir="iomp5" name="lock_omp_nest_lock"},
+    {destdir="iomp5" name="lock_omp_lock"},
+    {destdir="iomp5" name="parallel_omp_parallel_private"},
+    {destdir="iomp5" name="parallel_omp_parallel_shared"},
+    {destdir="iomp5" name="parallel_omp_parallel_reduction"},
+    {destdir="iomp5" name="parallel_omp_parallel_copyin"},
+    {destdir="iomp5" name="parallel_omp_parallel_num_threads"},
+    {destdir="iomp5" name="parallel_omp_parallel_if"},
+    {destdir="iomp5" name="parallel_omp_nested"},
+    {destdir="iomp5" name="parallel_omp_parallel_firstprivate"},
+    {destdir="iomp5" name="parallel_omp_parallel_default"},
+    {destdir="iomp5" name="master_omp_master"},
+    {destdir="iomp5" name="master_omp_master_3"},
+    {destdir="iomp5" name="sections_omp_parallel_sections_lastprivate"},
+    {destdir="iomp5" name="sections_omp_parallel_sections_reduction"},
+    {destdir="iomp5" name="sections_omp_parallel_sections_firstprivate"},
+    {destdir="iomp5" name="sections_omp_section_firstprivate"},
+    {destdir="iomp5" name="sections_omp_parallel_sections_private"},
+    {destdir="iomp5" name="sections_omp_section_lastprivate"},
+    {destdir="iomp5" name="sections_omp_sections_reduction"},
+    {destdir="iomp5" name="sections_omp_section_private"},
+    {destdir="iomp5" name="sections_omp_sections_nowait"},
+    {destdir="iomp5" name="for_omp_for_schedule_dynamic"},
+    {destdir="iomp5" name="for_omp_parallel_for_private"},
+    {destdir="iomp5" name="for_omp_for_reduction"},
+    {destdir="iomp5" name="for_omp_parallel_for_firstprivate"},
+    {destdir="iomp5" name="for_omp_parallel_for_reduction"},
+    {destdir="iomp5" name="for_kmp_sch_simd_runtime_api"},
+    {destdir="iomp5" name="for_omp_for_ordered"},
+    {destdir="iomp5" name="for_kmp_doacross_check"},
+    {destdir="iomp5" name="for_omp_for_nowait"},
+    {destdir="iomp5" name="for_bug_set_schedule_0"},
+    {destdir="iomp5" name="for_omp_for_schedule_guided"},
+    {destdir="iomp5" name="for_omp_parallel_for_lastprivate"},
+    {destdir="iomp5" name="for_omp_parallel_for_if"},
+    {destdir="iomp5" name="for_omp_for_schedule_static"},
+    {destdir="iomp5" name="for_omp_parallel_for_ordered"},
+    {destdir="iomp5" name="for_omp_for_lastprivate"},
+    {destdir="iomp5" name="for_kmp_sch_simd_guided"},
+    {destdir="iomp5" name="for_omp_for_collapse"},
+    {destdir="iomp5" name="for_omp_for_schedule_static_3"},
+    {destdir="iomp5" name="for_omp_for_private"},
+    {destdir="iomp5" name="for_kmp_sch_simd_runtime_static"},
+    {destdir="iomp5" name="for_omp_for_schedule_auto"},
+    {destdir="iomp5" name="for_omp_for_firstprivate"},
+    {destdir="iomp5" name="for_kmp_sch_simd_runtime_guided"},
+    {destdir="iomp5" name="single_omp_single_nowait"},
+    {destdir="iomp5" name="single_omp_single_private"},
+    {destdir="iomp5" name="single_omp_single_copyprivate"},
+    {destdir="iomp5" name="single_omp_single"},
+    {destdir="iomp5" name="barrier_omp_barrier"},
+    {destdir="iomp5" name="tasking_omp_task_private"},
+    {destdir="iomp5" name="tasking_omp_task"},
+    {destdir="iomp5" name="tasking_bug_nested_proxy_task"},
+    {destdir="iomp5" name="tasking_bug_proxy_task_dep_waiting"},
+    {destdir="iomp5" name="tasking_omp_taskwait"},
+    {destdir="iomp5" name="tasking_omp_task_imp_firstprivate"},
+    {destdir="iomp5" name="tasking_omp_taskyield"},
+    {destdir="iomp5" name="tasking_nested_parallel_tasking"},
+    {destdir="iomp5" name="tasking_kmp_taskloop"},
+    {destdir="iomp5" name="tasking_omp_task_if"},
+    {destdir="iomp5" name="tasking_omp_task_firstprivate"},
+    {destdir="iomp5" name="tasking_nested_task_creation"},
+    {destdir="iomp5" name="tasking_omp_taskloop_num_tasks"},
+    {destdir="iomp5" name="tasking_bug_serial_taskgroup"},
+    {destdir="iomp5" name="tasking_omp_task_final"},
+    {destdir="iomp5" name="tasking_omp_taskloop_grainsize"},
+    {destdir="iomp5" name="tasking_omp_task_shared"},
+    {destdir="iomp5" name="threadprivate_omp_threadprivate"},
+    {destdir="iomp5" name="threadprivate_omp_threadprivate_for"},
+    {destdir="iomp5" name="loadtool_tool_available"},
+    {destdir="iomp5" name="synchronization_ordered"},
+    {destdir="iomp5" name="synchronization_critical"},
+    {destdir="iomp5" name="synchronization_test_nest_lock_parallel"},
+    {destdir="iomp5" name="synchronization_test_lock"},
+    {destdir="iomp5" name="synchronization_taskwait"},
+    {destdir="iomp5" name="synchronization_lock"},
+    {destdir="iomp5" name="synchronization_master"},
+    {destdir="iomp5" name="synchronization_test_nest_lock"},
+    {destdir="iomp5" name="synchronization_taskgroup"},
+    {destdir="iomp5" name="synchronization_flush"},
+    {destdir="iomp5" name="synchronization_nest_lock"},
+    {destdir="iomp5" name="barrier_explicit"},
+    {destdir="iomp5" name="barrier_for_simd"},
+    {destdir="iomp5" name="barrier_parallel_region"},
+    {destdir="iomp5" name="barrier_sections"},
+    {destdir="iomp5" name="barrier_for_loop"},
+    {destdir="iomp5" name="barrier_single"},
+    {destdir="iomp5" name="parallel_dynamic_enough_threads"},
+    {destdir="iomp5" name="parallel_nested_serialized"},
+    {destdir="iomp5" name="parallel_nested"},
+    {destdir="iomp5" name="parallel_dynamic_not_enough_threads"},
+    {destdir="iomp5" name="parallel_max_active_levels_serialized"},
+    {destdir="iomp5" name="parallel_serialized"},
+    {destdir="iomp5" name="parallel_no_thread_num_clause"},
+    {destdir="iomp5" name="parallel_parallel_if0"},
+    {destdir="iomp5" name="parallel_not_enough_threads"},
+    {destdir="iomp5" name="parallel_normal"},
+    {destdir="iomp5" name="parallel_nested_lwt"},
+    {destdir="iomp5" name="tasks_task_types_serialized"},
+    {destdir="iomp5" name="tasks_task_in_joinbarrier"},
+    {destdir="iomp5" name="tasks_explicit_task"},
+    {destdir="iomp5" name="tasks_untied_task"},
+    {destdir="iomp5" name="tasks_serialized"},
+    {destdir="iomp5" name="tasks_taskyield"},
+    {destdir="iomp5" name="tasks_dependences"},
+    {destdir="iomp5" name="tasks_task_types"},
+    {destdir="iomp5" name="worksharing_sections"},
+    {destdir="iomp5" name="worksharing_single"},
+    {destdir="iomp5" name="for_static_split"},
+    {destdir="iomp5" name="for_guided_split"},
+    {destdir="iomp5" name="for_auto_serialized"},
+    {destdir="iomp5" name="for_guided_serialized"},
+    {destdir="iomp5" name="for_dynamic_split"},
+    {destdir="iomp5" name="for_runtime_serialized"},
+    {destdir="iomp5" name="for_static"},
+    {destdir="iomp5" name="for_dynamic"},
+    {destdir="iomp5" name="for_auto"},
+    {destdir="iomp5" name="for_runtime_split"},
+    {destdir="iomp5" name="for_guided"},
+    {destdir="iomp5" name="for_runtime"},
+    {destdir="iomp5" name="for_dynamic_serialized"},
+    {destdir="iomp5" name="for_auto_split"},
+    {destdir="iomp5" name="for_static_serialized"},
+    {destdir="iomp5" name="cancel_cancel_worksharing"},
+    {destdir="iomp5" name="cancel_cancel_parallel"},
+    {destdir="iomp5" name="cancel_cancel_taskgroup"},
+    {destdir="iomp5" name="misc_control_tool_no_ompt_support"},
+    {destdir="iomp5" name="misc_idle"},
+    {destdir="iomp5" name="misc_api_calls"},
+    {destdir="iomp5" name="misc_control_tool"},
+    {destdir="iomp5" name="misc_unset_callback"},
+  ]
+}
+
+###########################################################
+## SDK
+
+sdk_atom("omp_sdk") {
+  domain = "cpp"
+  name = "omp"
+
+  tags = [
+    "type:compiled_shared",
+    "arch:target"
+  ]
+
+  output_category = "hee/omp"
+
+  files = []
+
+  # copy all head files into sdk.
+  all_files = exec_script("//build/sdk/list_files.sh", [rebase_path("include", root_build_dir)], "list lines")
+  foreach(f, all_files) {
+    files += [ {
+      source = "include/$f"
+      dest = "include/$f" } ]
+  }
+
+  # copy static libraries.
+  files += [
+    {
+      source = "//third_party/iomp5/prebuild/libiomp5.a"
+      dest = "lib/libiomp5.a"
+    },
+    {
+      #//out/arm64/obj/third_party/iomp5/libomp.a
+      source = "$target_out_dir/libomp.a"
+      dest = "lib/libomp.a"
+    }
+  ]
+
+  non_sdk_deps = [
+    ":omp",
+  ]
+}

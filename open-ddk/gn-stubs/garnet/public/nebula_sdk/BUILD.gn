@@ -1,0 +1,16 @@
+# Copyright 2026 GoldenRiver Technology. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# open-ddk does not carry the nebula SDK (garnet/public/nebula_sdk). What its
+# builds load of it resolves to nothing: //build/bootfs's nbl_tsm_server
+# (TEE-era, not built) depends on nebula_export, and the product's package
+# lists name sdk (left out of the build). prepare.sh puts this file where GN
+# looks when the SDK's own BUILD.gn is not there (build/secondary/); a
+# checkout with the SDK uses its own.
+
+group("nebula_export") {
+}
+
+group("sdk") {
+}

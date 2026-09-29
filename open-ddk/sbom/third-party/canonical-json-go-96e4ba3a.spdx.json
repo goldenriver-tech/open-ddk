@@ -1,0 +1,93 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/canonical-json-go-96e4ba3a-96e4ba3a7613a1216cbd1badca4efe382adea337",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-canonical-json-go-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aec6652f73ff0e6ccc5927db101ed38423c12872"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-canonical-json-go-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7f7a12bcfc16fab2522aa1a562fd3d2aee429d3b"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-canonical-json-go-upstream-fa1a2249561f965f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9451cad95f31d298740a532dbae5cdc62c3cd35f"
+    }
+   ],
+   "fileName": "./encode.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-canonical-json-go-upstream-81812d46b595c562",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba86d351792c6884a6bc41ff925f26e692926e1b"
+    }
+   ],
+   "fileName": "./encode_test.go"
+  }
+ ],
+ "name": "canonical-json-go-96e4ba3a",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-canonical-json-go-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/golibs/github.com/tent/canonical-json-go); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/tent/canonical-json-go@96e4ba3a7613a1216cbd1badca4efe382adea337",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/tent/canonical-json-go@96e4ba3a7613a1216cbd1badca4efe382adea337",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-canonical-json-go-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-canonical-json-go-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-canonical-json-go-upstream-fa1a2249561f965f",
+    "SPDXRef-File-canonical-json-go-upstream-81812d46b595c562"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "canonical-json-go",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "0f4703d5547856e105885e26bd6336c32aefea47"
+   },
+   "supplier": "Organization: tent",
+   "versionInfo": "96e4ba3a"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-canonical-json-go-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

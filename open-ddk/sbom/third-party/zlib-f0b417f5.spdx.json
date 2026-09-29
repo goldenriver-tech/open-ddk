@@ -1,0 +1,5958 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/zlib-f0b417f5-f0b417f596815c67d7fbdf48faa2ce39dde0f672",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a88a65565cde16be7f2291f647c4a94704ada92"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6e666f5f53c8464045170c21ad1aeb0949b84f8d"
+    }
+   ],
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ade23b9417a586a0974e48fda589491fceb85c16"
+    }
+   ],
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-00fe7828d56d7a3e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e59e031b1a8b9f128fefde07c9d596db4a4c50e8"
+    }
+   ],
+   "fileName": "./ChangeLog"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-03688ba6aa340b87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "832bb73adff252fa426a141ee4756daa9b8a4db4"
+    }
+   ],
+   "fileName": "./FAQ"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2704c1d8c3fc215c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "74611a0f2bcc004caa1fa07bdeb4c44b01f0a5d6"
+    }
+   ],
+   "fileName": "./INDEX"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-836efb6e25a091dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b04f62dd1002b9ca07068c90651432dec60029f3"
+    }
+   ],
+   "fileName": "./Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4faecea6d9857941",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "023e127b48d292316614f604c1bacda043ba3bb5"
+    }
+   ],
+   "fileName": "./Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1e1b075ae4ad6d628468e7dd40d9ec512ff9d10"
+    }
+   ],
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-fe8dbbeeacec3919",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "54142b046f0d1336ee83346142d90ab5f5152314"
+    }
+   ],
+   "fileName": "./README.fuchsia"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-50d177be0782a9a8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c1114794db137af50f9b060aaade1a1a35ed784"
+    }
+   ],
+   "fileName": "./adler32.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a7519b33a3f4f2c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "79461cdcf8eda434edca3c32781982d2082af5fe"
+    }
+   ],
+   "fileName": "./amiga/Makefile.pup"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4c0f2275b2710511",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64787face2d527df6c78ba8754eb54c53dda6ac2"
+    }
+   ],
+   "fileName": "./amiga/Makefile.sas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-150c159b696c4d26",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bd40f3ba8567a21560dc307d99c810de6f2d0533"
+    }
+   ],
+   "fileName": "./compress.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-09be8533ff0a6ee5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bdc2fac491ea3431c733cf8be5b8c17ff60207ab"
+    }
+   ],
+   "fileName": "./configure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-231db6c1fb792d67",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b6a2a76495304808f5e13df25face2089124fe6"
+    }
+   ],
+   "fileName": "./contrib/README.contrib"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6433931ca5495f7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d8fba99362b0973535a759097f7893d4551c4e7"
+    }
+   ],
+   "fileName": "./contrib/ada/buffer_demo.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-8c21e8608dc39139",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f1c968146ba1a8f07c7070a2af72ab8a84c82e3d"
+    }
+   ],
+   "fileName": "./contrib/ada/mtest.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6bb2d6cea9ca59b3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5a6682ef169a7429d9bf9f8acbda6ffb756fec4"
+    }
+   ],
+   "fileName": "./contrib/ada/read.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d8d36254bbe60ffc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1fd4ae8ee39ef80117dca454e1951ecaf0d1d290"
+    }
+   ],
+   "fileName": "./contrib/ada/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-36f1ea8bc852f648",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5eebe86bd398dade5340cc4af24685bf02df671f"
+    }
+   ],
+   "fileName": "./contrib/ada/test.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-af62413d3a5c8acf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70f5981b0c3c5de023ea3485ea7e81231a42ce7f"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib-streams.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1a8adc89ead6c390",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fadb4623dc2469cc4fd571a9fac302798735c40b"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib-streams.ads"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-65aafec93a54468e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "43c7e58eb582ce078f6ff76aa4f4eb09892ff92b"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib-thin.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-510ce0ea049dd77a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "faf47e35174e1e76edb85ea602779084e535df69"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib-thin.ads"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-fa08b96648d5db70",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3961008f51def7ffcd692453df7b0f1d8b680645"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a8511d4fb16579ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0245a91806d804bf9f0907a3a001a141e9adb61b"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib.ads"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-50457ca05ead5240",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c36c2cf069e930eb81ee0c89bfe70c20c8d0511a"
+    }
+   ],
+   "fileName": "./contrib/ada/zlib.gpr"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-60b20279b046cadf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ac2676fb0393520f0d051965529c39139e7de8c"
+    }
+   ],
+   "fileName": "./contrib/amd64/amd64-match.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d76fe4a4210f3132",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac08681935257d53b3fd1793788a1406a781ee22"
+    }
+   ],
+   "fileName": "./contrib/asm686/README.686"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d132f0c309dee311",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f1023ae9dab5691291f42b180551bae164086492"
+    }
+   ],
+   "fileName": "./contrib/asm686/match.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4f0159020bb8f1e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c18cae8b163b2fc351bc59b8efad7a190d1ead78"
+    }
+   ],
+   "fileName": "./contrib/blast/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-fe19834f3eb7753e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "69a33e70f88cc1f3520e2154ed38d3f690ee26e5"
+    }
+   ],
+   "fileName": "./contrib/blast/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1839839dbbed2eec",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "809a3404b6e9e1bc120ff0313c31c4bd2b776823"
+    }
+   ],
+   "fileName": "./contrib/blast/blast.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e38344110982c86f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b20eb7c03966462cafbf896c97263632004bd867"
+    }
+   ],
+   "fileName": "./contrib/blast/blast.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d04ac554d0c83915",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "00d07b4c71bad842d7e04210f966e55977efd9c3"
+    }
+   ],
+   "fileName": "./contrib/blast/test.pk"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-463269988b01d91f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aed9b9fc86b2b47a4c46053df53feb544ecf31ce"
+    }
+   ],
+   "fileName": "./contrib/blast/test.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-bcac26f988b7f37f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25133131cac8eeed1962e7a9072b06591481a520"
+    }
+   ],
+   "fileName": "./contrib/delphi/ZLib.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9d4f7bed850da64f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0ff4d3c14a4dcdbf170692ce0fec86939b500d0"
+    }
+   ],
+   "fileName": "./contrib/delphi/ZLibConst.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9d67a1df333bc3e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "366e08eaa227cd3d09810c45639aedf4879b7ecf"
+    }
+   ],
+   "fileName": "./contrib/delphi/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-3ca01f39ca8c315e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ddf83b34d4c7d41ace39f96b5cb13fb390c8d2eb"
+    }
+   ],
+   "fileName": "./contrib/delphi/zlibd32.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-da7fcaa6cbee9c55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6f87ba12d786feca35738d0e9ce1f0f03f292881"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib.build"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-00558bc9f8a2151c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1245c21c7e918fa2919fd10bbe5604fc81faf49"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib.chm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f0b0080de3666b49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4946bdb71b79bff62f9217802b7524010c669408"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c64be2b353b5bba4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f1db1177b2e9a014f72bb3cd80be17133e06d16"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/AssemblyInfo.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c780584950c76e71",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3807a0e24a57b92ea301559cab7307b8eab52c51"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/ChecksumImpl.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b5a536427eafd302",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e646570737b175729a916da13b23fe88fcbd0e8"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/CircularBuffer.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-53b2c0481f0bab06",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2106c80ed4607f10400ceed9aa8f635efdea9345"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/CodecBase.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-cbd140c09e719c75",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "11f6bf695e4b8ddac0d8553640ef303d9b7cab72"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/Deflater.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7872ade997848d55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9c7c49791d38b49a39aab76f593b2ea229fa940"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/DotZLib.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ad1c72f7dce0329b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99238c2ad633a641687d722e8c80aaa0a8c8bdd2"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/DotZLib.csproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7de50e03979f08ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "731206b5721b9a7be5a1cbc98e3cc969bd176b4b"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/GZipStream.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5f3e91fac5e83d52",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25f788ff0015c08fcd74d6e4552e01792c559350"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/Inflater.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-8d05575c3f1cdc84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d35d4a5b28e472f5618185c295d1964c1459d07"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/DotZLib/UnitTests.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2bf6bbf165567cdc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "892b34f7865d90a6f949f50d95e49625a10bc7f0"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/LICENSE_1_0.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-049d81ed142a67da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1229b826f0096808628474538cea8fec2922a9b"
+    }
+   ],
+   "fileName": "./contrib/dotzlib/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5a0a33c692796b0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "742603cba1af98a1432cc02efb019b1a5760adf2"
+    }
+   ],
+   "fileName": "./contrib/gcc_gvmat64/gvmat64.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-28a25ceb7f99e252",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3905a8a31f7c61114b5fa6e203682b250e029d6"
+    }
+   ],
+   "fileName": "./contrib/infback9/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5c55a664358320d5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17fb362c03755b12f2dda5b12a68cf38162674bd"
+    }
+   ],
+   "fileName": "./contrib/infback9/infback9.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d8561f37083a11db",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d0486a32b558dcaceded5f0746fad62e680a4734"
+    }
+   ],
+   "fileName": "./contrib/infback9/infback9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-986b4e6c605d6e28",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7a57a5901d920d1d3fcf4f8d6bedf8c9c68b41a7"
+    }
+   ],
+   "fileName": "./contrib/infback9/inffix9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2fe6fdc28d161fda",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7541490d97f70268010ae1baeb98a10302f3df8"
+    }
+   ],
+   "fileName": "./contrib/infback9/inflate9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6e0e38bddbbfb89f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2729fd3758fb3eb6e84ec51d1c118bd5888ee874"
+    }
+   ],
+   "fileName": "./contrib/infback9/inftree9.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-dea67634729fc99f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cfb5d10e9b79029c758cf0428875f9cffa9d6cdf"
+    }
+   ],
+   "fileName": "./contrib/infback9/inftree9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b93f389672476f04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d9dfc1538fb2bf1daef2fec42e68472ede564abc"
+    }
+   ],
+   "fileName": "./contrib/inflate86/inffas86.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-220e131177747e2a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5c30f2fc07023d7024571c9882383236d2a1cb0"
+    }
+   ],
+   "fileName": "./contrib/inflate86/inffast.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5d8a73516e7e6546",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0074186cc98585f48eb8d18c2be887955238b741"
+    }
+   ],
+   "fileName": "./contrib/iostream/test.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9a774b14e2d07fa2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8f677a8e32a4923a8a57c61e60ecb899eca5cab"
+    }
+   ],
+   "fileName": "./contrib/iostream/zfstream.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-beff8cf547ec9611",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "57f03c37ca952cec5e58c827995365c18c728285"
+    }
+   ],
+   "fileName": "./contrib/iostream/zfstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c4b06d888658ecbc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fca4540d490fff36bb90fd801cf9cd8fc695bb17"
+    }
+   ],
+   "fileName": "./contrib/iostream2/zstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-caedc646916aa3c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e18a6d55cbbd8b832f8d795530553467e5c74fcf"
+    }
+   ],
+   "fileName": "./contrib/iostream2/zstream_test.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5a5b377afc8f79a4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4a3dfd7a48721d6e7d12da226855bab19f6e8c1"
+    }
+   ],
+   "fileName": "./contrib/iostream3/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0008dbeb8a96254a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c40d91b8e4051c4fac646e0213dee173e207bcee"
+    }
+   ],
+   "fileName": "./contrib/iostream3/TODO"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c34068f1c5ad790f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b81342fb774937c210f5718ad5783f1eed13f7a7"
+    }
+   ],
+   "fileName": "./contrib/iostream3/test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-102e494632122b9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "19b83e921e89a638ebf978ca2beea7aefd78f9c2"
+    }
+   ],
+   "fileName": "./contrib/iostream3/zfstream.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6fe3521589a88e60",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "351a3f5bfb93196701cc86b27db866a18ca54105"
+    }
+   ],
+   "fileName": "./contrib/iostream3/zfstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-3d34b63e3c688304",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d723acf46ecfb6e16922ea55309cee9c77b9d49"
+    }
+   ],
+   "fileName": "./contrib/masmx64/bld_ml64.bat"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-129f9c90fe40b4ae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c72c7b7f6c82e72b25a700eebccd0a987e7ba7b"
+    }
+   ],
+   "fileName": "./contrib/masmx64/gvmat64.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-26ef9d8b44783c91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a179f3e1a04b5db58eaf6fcc473567794e0391f8"
+    }
+   ],
+   "fileName": "./contrib/masmx64/inffas8664.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a4fc2cd5c2f813d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "249b0329964e35481e8e6217220f474e3076d35a"
+    }
+   ],
+   "fileName": "./contrib/masmx64/inffasx64.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-55cc4866dea6ba85",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f2e049fdd6fc4c914a0d9a099dfe735cd0e3b86"
+    }
+   ],
+   "fileName": "./contrib/masmx64/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5f4e47a6e5a1d2d8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d2bcdd2fcb5e43ee260f510c25cf2b98318e9b0c"
+    }
+   ],
+   "fileName": "./contrib/masmx86/bld_ml32.bat"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2ae98ab52fa7e9dd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6f42ac182d48c31346bb6dc04ab74f85157eb0b9"
+    }
+   ],
+   "fileName": "./contrib/masmx86/inffas32.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-995d6e6542d230f4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "34529073d91211b48f2d8d6cad58202f50cb2047"
+    }
+   ],
+   "fileName": "./contrib/masmx86/match686.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ae1b4be16c091deb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "287dd9febd8dc4b56b07ca84e4cfcf90d21dc09d"
+    }
+   ],
+   "fileName": "./contrib/masmx86/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ca9531560c4c90e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1b85a0f99bf296c58326a80bc0bf220080778cd"
+    }
+   ],
+   "fileName": "./contrib/minizip/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4d360e684569a204",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f978d26b0069ef66a560bcba8fd204ed70026f2a"
+    }
+   ],
+   "fileName": "./contrib/minizip/Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c0819f99dc570735",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cb10d2af06d59532c6d462ab0dbd2b79c55a5834"
+    }
+   ],
+   "fileName": "./contrib/minizip/MiniZip64_Changes.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-98112e3998a72379",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1f5511bbdf9715bb2f18e4d24924cca3275fb24"
+    }
+   ],
+   "fileName": "./contrib/minizip/MiniZip64_info.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-75d5d1b9e384d311",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f3a1689b5b848b0b21035783601b97155a0a691"
+    }
+   ],
+   "fileName": "./contrib/minizip/configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-40e8ec2297e9cc4b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "94f289e1b0403b01289b10c6b32ed7d1471fa0ca"
+    }
+   ],
+   "fileName": "./contrib/minizip/crypt.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f2296ef23fb4ab0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2846a21ba725da90aa3a67024d8107daa793f5f7"
+    }
+   ],
+   "fileName": "./contrib/minizip/ioapi.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7acaba27d94f6399",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e71518ae9f172eab44a2d8f52b3f80b0552070d5"
+    }
+   ],
+   "fileName": "./contrib/minizip/ioapi.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1c54e87648fe3e50",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca25851a0d1dfc989aceb2461dd2d5ec88649b8d"
+    }
+   ],
+   "fileName": "./contrib/minizip/iowin32.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-527a2bd3db3a88be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fedf239afafc20e420c5fec678dba91c1dd0074"
+    }
+   ],
+   "fileName": "./contrib/minizip/iowin32.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-93154bd1325410d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "79d9e7c5d124fbcf79bff4509b51c09600b33a34"
+    }
+   ],
+   "fileName": "./contrib/minizip/make_vms.com"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4a3e3d5cfcf18fee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "54e7b5392ee6600c91c9c423561941a571aaf715"
+    }
+   ],
+   "fileName": "./contrib/minizip/miniunz.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-3c92e28e57d9bad1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e925714d46251f192d3266ef4a4cb64d292eb787"
+    }
+   ],
+   "fileName": "./contrib/minizip/miniunzip.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5888d690d925afef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17a13c717cd030c037a407f59d0d14d2c25e4e05"
+    }
+   ],
+   "fileName": "./contrib/minizip/minizip.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a48db9bf0188c731",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f47c6866b347bfff1a54c680b6c393d7c02e1d8d"
+    }
+   ],
+   "fileName": "./contrib/minizip/minizip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b31e6ddaed7bb9b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6a19e706e976d4e7b300d7ae294973fa8278ab14"
+    }
+   ],
+   "fileName": "./contrib/minizip/minizip.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-8743c0d6a3b3a1bf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f6dad6443b0f347ac6b17563014f50c7b4fd17f"
+    }
+   ],
+   "fileName": "./contrib/minizip/mztools.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7e57452500c829ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "907243f7cea46d38ad12f6a6d6e01adb4d74f1b3"
+    }
+   ],
+   "fileName": "./contrib/minizip/mztools.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-446d74fed8915dbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "279d344d1b214a74bc98409dffb69047e6887220"
+    }
+   ],
+   "fileName": "./contrib/minizip/unzip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ba0a290cd94b273b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4236476513b299f00f9637f7ad3e3631ebdec2b9"
+    }
+   ],
+   "fileName": "./contrib/minizip/unzip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-3a6430925a520041",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "885d9e822859c3b6a6f0656e3d0c8c97af6f6fe7"
+    }
+   ],
+   "fileName": "./contrib/minizip/zip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-51aba99a4750a1b3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8cef828db4766401b91bec9b47ca56a3118705fc"
+    }
+   ],
+   "fileName": "./contrib/minizip/zip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-20edbced7cc200a0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "51c42c32667ef6fc0b4b51867afac971fe11c15c"
+    }
+   ],
+   "fileName": "./contrib/pascal/example.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2ceca2349fd833c6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c47cc3ccdb450bd0d3d1d0e6f52746a2c0ca8541"
+    }
+   ],
+   "fileName": "./contrib/pascal/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-653b1b173ecc4b9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ddf83b34d4c7d41ace39f96b5cb13fb390c8d2eb"
+    }
+   ],
+   "fileName": "./contrib/pascal/zlibd32.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-54342e2786d50561",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6366310dff32cfb18b9e950f8c530304a9fd83fa"
+    }
+   ],
+   "fileName": "./contrib/pascal/zlibpas.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-11c92aa096ac03aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c9c12d0e19be923abf86e2584a23a781d81cb06"
+    }
+   ],
+   "fileName": "./contrib/puff/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b889583aa15e94ea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f68ce02019463af0813a0db20c98bfc8e3c2ef7"
+    }
+   ],
+   "fileName": "./contrib/puff/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b76b1507380fd190",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c31e70c07929fabd5b3454ad8da39e8492633f6"
+    }
+   ],
+   "fileName": "./contrib/puff/puff.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-89ee6d374e444ef7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce8b988a404446fc8558b198d3cfeabcad6d16c5"
+    }
+   ],
+   "fileName": "./contrib/puff/puff.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e9169a434a0031b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e2318f2de8c7355385dca2c9d9422500f4927fc8"
+    }
+   ],
+   "fileName": "./contrib/puff/pufftest.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2298d6568e1d060c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2477f0a2d20cfc6272b91fa36d45c90dcda386ab"
+    }
+   ],
+   "fileName": "./contrib/puff/zeros.raw"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6452b72e27fe62b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6833222dcd2b5ee1c7241f00efa6edfde4991ffa"
+    }
+   ],
+   "fileName": "./contrib/testzlib/testzlib.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-267f967c37b22251",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89f8964acc535861273f1f156a24ed2ac4cfa37a"
+    }
+   ],
+   "fileName": "./contrib/testzlib/testzlib.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-3d203df23e988b83",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b31cf680ad6e873da3c897c6b123a5fde4cd5151"
+    }
+   ],
+   "fileName": "./contrib/untgz/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5eb26f7bcfba1ea7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d3a312c38dd7e3316ddb553e894734f42d28205"
+    }
+   ],
+   "fileName": "./contrib/untgz/Makefile.msc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-450cd7a30222720f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "260f16a4110f43071b376af97c4119f5ecf902af"
+    }
+   ],
+   "fileName": "./contrib/untgz/untgz.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-bd0802aa856544f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "066affe7fd1e8a9e54ef08d63abee644bb821c03"
+    }
+   ],
+   "fileName": "./contrib/vstudio/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a5e5fbd52d988f2f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70048ae1ef9a404d49ae943878fd30ddee54c121"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b270803c73e320f6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "320d0a38475bbfe13314956d0ac7927cb7d1f975"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/miniunz.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-cfdd29fbe488d5d5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "530a1f4869bfa4cedf0f878fff4480535bd5b1bf"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-78b88c50b01e6fdf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21845c87ed7730c73605e936de851eaa23222f30"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/minizip.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6feb3d88a83d04a9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da5c9e1922fa655c534811676563df7c31fb36a7"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-297d75ec31a79a32",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76e2f85e212116be3a0142703c2d68b09b9b79d3"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/testzlib.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-213fd58f30bb8846",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d3a849fce0bca235516932604c5c9bcbd2fce125"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-368e5afa2de56651",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d14872425639811364dc265fce04045bcdb11ead"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/testzlibdll.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9268b1d25bd8ac5a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67b5d0e28bda140346388d087b2c13cf7680a1f"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-72ed8ab43b2e366c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2dfa4c3f4422c58c7e8d142c7fc9c4c11191f705"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a146e90e45e683f3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9fa98820edf15ae1eedc2101f30c3cef2d935e8"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlibstat.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6763d1ab7a3137e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-65d5f6d0b2106908",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4f2ed833f8ff01bdfb27c65d88de1957aea598d3"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1da72cc2777f7421",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae00729a7c8f1041498b6fe354aff1713c7fe325"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-89a67bf1ae4870d4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "79d4ef79d8a67a831264e1542d13070619c6eade"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc10/zlibvc.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a8830ef300d332ee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b465b8db5b2651282cc0da57a27f76801a05cbc"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-5eb9549c80112ded",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eafb9f2fa4f89d876f3819e756799b69cb9b2e1a"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b7dc838277b80ad2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24acf8bef08c985c250f0eb555ad94f7e2f04846"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c6d8a2af7de12012",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c4618693842092678ae885ff0a44139c1f6a4ac"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2cc6d4ffc49732b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67b5d0e28bda140346388d087b2c13cf7680a1f"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-bf05a284eb56d316",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "223df1a7f2b79131c10230eb98d2112c93b9f977"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-af31e2bbcd190576",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-477c483a76d7e8af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fface057a73d5ad706203d3f6f1e37b59bce3b4"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d765e0feeff80bbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "947f29a61b08c158a960687a75b548769a5e1d32"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc11/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4f705cd43d5b8311",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "78d7b8fa17322e2be5d6e36a6b09515e489ba97e"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7d9141591923ffc6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "701b614bbab070519b0837758c69aa0443804eb7"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9b4e169f43380b2f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fec99dd6b063416ef0a48662adad3a421c1a049a"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e23286d96244bd33",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0e1bb13edb71d4e1857aa02e1075742fa726490a"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0f27f4d09fe56d6c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d3f0ee9f7cc18feff62eb78f064f4b4f45415d9"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e5179478047311b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "38e7d39967856e2a95661f9b5758d93085178d3d"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-894dd04078ffe1e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e8db3be249a70d2a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17e1c07bb0a9d02fc3b1a1ec9c4b1d6c5f2ac0a4"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-97eafdb4e0408e92",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eca6032321210ba1df7f8743f9fc41c0ccaa1a02"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc12/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6605ed2895cdaa99",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "453b68e1108b382b4d755c9b08a5af37f538d3ba"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6f88b7d3c8e43d45",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f55c663c7ecaea0aa8c53523f887f680388c2cd1"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7a8104032590e590",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c61f30ff4ef922fd1c14484bb31c8e52e9b9305"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9eab4700f1f6658c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "63b622b44827ded02a631bec50e4d1f772f4b799"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e81019f92ec1a7c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d3f0ee9f7cc18feff62eb78f064f4b4f45415d9"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ee6f93c36115cf5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20ee6f367909b5b555c0d76476049b21ec46c2f5"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d0159f0b3d521a31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1ae4d4982da35bb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a492dc0bb0a953753f6cff5dd005b3f17f8ad95"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-bca757d5f2388c6a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89afb166f7b1e1c5b1f97c495f27e2167b5cc0da"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc14/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-fa9d175d450b8f11",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "40de34c1a26fe1fa14efb992d217c84bacea7ef1"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/miniunz.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ee49b6f329add8a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88d892514b4afba218dec574ea241904d263e29e"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/minizip.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0a0de031e5472dc0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42b4b89271adf184abb594d092bf4ae4c2431ac9"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/testzlib.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6116d93f0df5ed71",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "086ea8214cfcb33f3512a847f3dfde6154a7137d"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/testzlibdll.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b304180e82b5bfd8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67b5d0e28bda140346388d087b2c13cf7680a1f"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-50b7b74964db7e42",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "235725a6f6285f12aa3ecc248b0afbcaeaa3367c"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/zlibstat.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4806fe2d3458e37f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-cc1d047387561086",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b46b3778372dbb718fd0f00ff1ee55266b18892"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e282147c4ee9fe73",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "82379594550bf43deb4a5114d938ad8ca06fd763"
+    }
+   ],
+   "fileName": "./contrib/vstudio/vc9/zlibvc.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f5ddba20c2e76b08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88ea76a1b42bfc247680dd50b450923858f945fe"
+    }
+   ],
+   "fileName": "./crc32.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c7b3538725149fe8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db9e88b8332953972c9120c73389fa2ce03dd8f8"
+    }
+   ],
+   "fileName": "./crc32.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-aa54e0ee82d54bd2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "436dc72ccb798bf1ac3e30cd9b580799f8bbb441"
+    }
+   ],
+   "fileName": "./deflate.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-2b118532abcea455",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d54ac3369732bc45463c254851809a0062382b3d"
+    }
+   ],
+   "fileName": "./deflate.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7cbe5fca448b17cd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f58cd212772b622c71345ca5d7dd93648b8ab94"
+    }
+   ],
+   "fileName": "./doc/algorithm.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-63daef2e58facd25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58f11c3e7778ca30e9c9330ab248107371429dd8"
+    }
+   ],
+   "fileName": "./doc/rfc1950.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a4b01b53ce8d5db7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b13d37ad6b3855f3a2eaf6c325eddaa7815355b0"
+    }
+   ],
+   "fileName": "./doc/rfc1951.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-03bce9225ed55fb4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b2346a9c1e9cd011370595a292154ca83eff4ddb"
+    }
+   ],
+   "fileName": "./doc/rfc1952.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-24b0a2bb0493ed7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b5f765b6151da46d356493278fd873e4c99ce80"
+    }
+   ],
+   "fileName": "./doc/txtvsbin.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-38e0ba5746d995bc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f793f7b378233d7e644754e603695966487576b5"
+    }
+   ],
+   "fileName": "./examples/README.examples"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-206ad87c07210ed4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1bcc3f9743bcfdfb77fb6736ece06c666dd1787e"
+    }
+   ],
+   "fileName": "./examples/enough.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f4f5ae6189864a9f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b69d9b6eeadd680fe37ab8ba54d781f46fe80420"
+    }
+   ],
+   "fileName": "./examples/fitblk.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b628d1e482bb435d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66c4ce6e2e4cc86dbe346a7cc1bc921002335929"
+    }
+   ],
+   "fileName": "./examples/gun.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a4d00ae03708a6bf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a22e75fe1bb392ce8516794d6e810fd0dfcf8dca"
+    }
+   ],
+   "fileName": "./examples/gzappend.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-abfbc5eaff33c0ac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c34287cf18b05b761daf6457fc5efbf501358d2"
+    }
+   ],
+   "fileName": "./examples/gzjoin.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0925ca012b2804b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32d9e430fe8725def0a036f86a526e7b3214eaf0"
+    }
+   ],
+   "fileName": "./examples/gzlog.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7b66d0f5845ea764",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "deab1fb6de11e3145dfea71254d0c363a3415e04"
+    }
+   ],
+   "fileName": "./examples/gzlog.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-73c704902a43a513",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35f85759bc23add6a8507c76d05f73131823a9b3"
+    }
+   ],
+   "fileName": "./examples/zlib_how.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9a0a95e009e0a888",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b59f2d5676cc135ac0af040d90c3e7b366fcce93"
+    }
+   ],
+   "fileName": "./examples/zpipe.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-46bdd369a6e78692",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db2e8f8daa77cf6536bf516f194c422f5db8310d"
+    }
+   ],
+   "fileName": "./examples/zran.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1a10eae9e3003b30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4698124c166f59728db9ae229f8467459b458ef3"
+    }
+   ],
+   "fileName": "./gzclose.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7d7357627b5e2a2d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "637240f7e6ac7249e161083b450fb9f4e1f2b088"
+    }
+   ],
+   "fileName": "./gzguts.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-08a99aef50c23dac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4bd4f2745936d396899a7ba09290d6b17fab4a3c"
+    }
+   ],
+   "fileName": "./gzlib.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-25d99bf8234485f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dfbd4eef919b6eded7e59ae420642ddf8bc848b8"
+    }
+   ],
+   "fileName": "./gzread.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ba9e2c4ee6c19359",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d2e11857ffe5e792f5d89b927bb47ed726b65031"
+    }
+   ],
+   "fileName": "./gzwrite.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6d522c1b95b64289",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b7d6a93d4429068f1af3c10a11de42ece950edd"
+    }
+   ],
+   "fileName": "./infback.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-50495d8a2841f875",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fe2fdfb8f51d9f84881cc453ba64f60e3d7c9cbc"
+    }
+   ],
+   "fileName": "./inffast.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-dac893f07593e81b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fc803c43a562b2b92a97e22300754ddfe44c603"
+    }
+   ],
+   "fileName": "./inffast.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ac337e4ab3a85df1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8770ab43c9050b824c646f6e6cee8b3c0628cbda"
+    }
+   ],
+   "fileName": "./inffixed.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-72fbb1d3dbd8b148",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5cfffd5a037697867a78566d583e73f6d0f91b9"
+    }
+   ],
+   "fileName": "./inflate.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c4c45471b42b3cae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "628d8395fc7f67e6d7a9a6cecba64f6594d64eb9"
+    }
+   ],
+   "fileName": "./inflate.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e38a829ed0bdba7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a152b76b78f9245ca67db2729de72d51ecc234b0"
+    }
+   ],
+   "fileName": "./inftrees.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b05ce0baa27fc8f7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c63a7707d83991f3e074391c047b3136ff3e558"
+    }
+   ],
+   "fileName": "./inftrees.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9756bb457c5b2f32",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dc817ba3a5335de14bde5b81b1a3365734757625"
+    }
+   ],
+   "fileName": "./make_vms.com"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6c9f724267c5443c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85d42a140e556d3b659f7e26c834b5574ea51754"
+    }
+   ],
+   "fileName": "./msdos/Makefile.bor"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7d036ba0dd25d53f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "815d082068e07e22195e446ea8a880a1b03e425a"
+    }
+   ],
+   "fileName": "./msdos/Makefile.dj2"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f9bcafc9552d4b6e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2cf0c4a2b98fc59c63bc5daee5d26e26dc15c81e"
+    }
+   ],
+   "fileName": "./msdos/Makefile.emx"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-93496b9d50bee0d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39f6df7982b02e1c8b72298c6cc58bf02d9d9f77"
+    }
+   ],
+   "fileName": "./msdos/Makefile.msc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-136d70dceaf70b26",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "98e97dcbaf0e7da0531f7a0367b052adc382fb29"
+    }
+   ],
+   "fileName": "./msdos/Makefile.tc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a31e6d47a44ae092",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b2d315c399a4db63f6380e9172d93ad0f500edf"
+    }
+   ],
+   "fileName": "./nintendods/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b885c59ae6c32b80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f585a53f8a8d0415cbd7166f8c44a11a802ee39c"
+    }
+   ],
+   "fileName": "./nintendods/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d7523f1bc7357964",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "821cd8913362531cfd915b4c2bcb0777aa7d2f11"
+    }
+   ],
+   "fileName": "./old/Makefile.emx"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-07a8b853ea856759",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a3285389419eb244671143cc8c6333c7cbfdd2c"
+    }
+   ],
+   "fileName": "./old/Makefile.riscos"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-586921063b4f2dc1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6967642b887ba82a9041bddce73254c42000d4d9"
+    }
+   ],
+   "fileName": "./old/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-e853734df1384f50",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "940475beeeb76576feb22c2d8b7b97d493ab3d79"
+    }
+   ],
+   "fileName": "./old/descrip.mms"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-35e2d6abd12daa30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4127401d329a7e421112ae14ec4e7dd995ea6e30"
+    }
+   ],
+   "fileName": "./old/os2/Makefile.os2"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-eedc4225d539c631",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "108527bad780aecce1c75efa9210f4b1173f4139"
+    }
+   ],
+   "fileName": "./old/os2/zlib.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-ab21696aecc57189",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1cf5886f7fcee4019ef529f8f19dd8000be01229"
+    }
+   ],
+   "fileName": "./old/visual-basic.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b19c749f3cf7701a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "51d77ab7eeaa1d92a57a2a405b6ff985373bdaaa"
+    }
+   ],
+   "fileName": "./os400/README400"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6ea7f19e5643ee42",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b47a80813ee6c9afcad0defe645efa3b5998aa0"
+    }
+   ],
+   "fileName": "./os400/bndsrc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-4d67745cad9648da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c5baf22e2de7d01ca1fea649e832f9d827cf6064"
+    }
+   ],
+   "fileName": "./os400/make.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-78b78ea3f06f879c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a911b361a568f6d0e07024149eaa17e9815c8fef"
+    }
+   ],
+   "fileName": "./os400/zlib.inc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-cd818094716ae731",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f3e8a85343976d3f6115797f7ac9e379a97bf67"
+    }
+   ],
+   "fileName": "./qnx/package.qpg"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a4c2048d374a41c6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bde9391a495a7b962cc63aaf8288b02159a5f68a"
+    }
+   ],
+   "fileName": "./test/example.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-bded49ad7f0bfc86",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9ced1a5ecc8badd5bc14cd96ef859cc346ec3dd"
+    }
+   ],
+   "fileName": "./test/infcover.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c8631813fb284c87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2ff91a2d1d191233dea5741a1aee5095f577a93e"
+    }
+   ],
+   "fileName": "./test/minigzip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-c7f47028f8f4fd14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bdcfc455f66ef2b108b0a10c6dbe7837f54f59b3"
+    }
+   ],
+   "fileName": "./treebuild.xml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d5f6731cd2baf5d2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ab030a33e399e7284b9ddf9bba64d0dd2730b417"
+    }
+   ],
+   "fileName": "./trees.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0af2aac51dfd6c12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5d8a9c42f902d2418a7e63b539c0f319373e9400"
+    }
+   ],
+   "fileName": "./trees.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9a30f309df8cbd9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "90f92698d7de79341e85bd3ca411a6b165c58848"
+    }
+   ],
+   "fileName": "./uncompr.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-dfd166ad29fbbb54",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a6af1350f3ffbbff44273a7b661563f095b3234"
+    }
+   ],
+   "fileName": "./watcom/watcom_f.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6ec56989b198ac98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1deb6874b6162d2607dff14c2fccb7a37ce97b0"
+    }
+   ],
+   "fileName": "./watcom/watcom_l.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-b964599075b1619f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "743c9da800bb73a7a30e7c5ce76b5bafd1256ba8"
+    }
+   ],
+   "fileName": "./win32/DLL_FAQ.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a8736fa3c61a8f51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "23262888e43719d398dea043e2bd09c23a9ba5da"
+    }
+   ],
+   "fileName": "./win32/Makefile.bor"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f3129e0dddec60f6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea8204bc36bb1d25c28e0176eb777d1174965fc6"
+    }
+   ],
+   "fileName": "./win32/Makefile.gcc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-6d7a843622dce5ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03ac9a052f553e99d5c122a9adb9cf61c1059cda"
+    }
+   ],
+   "fileName": "./win32/Makefile.msc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-d4faf1bea077fa80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fec4ff7048956a2c556c199ac4989b9372250b7"
+    }
+   ],
+   "fileName": "./win32/README-WIN32.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-77676f24e46d8add",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba666fb015a257ab0182f10bc20409a2ec61169f"
+    }
+   ],
+   "fileName": "./win32/VisualC.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1e8bfe5d0e51fa84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "756d27ffaa18b488fca960ff0797bcbc2ffc811f"
+    }
+   ],
+   "fileName": "./win32/zlib.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-f7f6794bc3c5965f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c21721e51d162fcc8880290001d9e150d3511dd6"
+    }
+   ],
+   "fileName": "./win32/zlib1.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-044206bbacc43118",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ef05b0d12bf2cfbbf1aa84cff0e8dcf4fc5b731"
+    }
+   ],
+   "fileName": "./zconf.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0f07e498133da6ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cbd5ddffb39904669e115e270b23138106bb0ac2"
+    }
+   ],
+   "fileName": "./zconf.h.cmakein"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-9b3a487267bfb9cf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ef05b0d12bf2cfbbf1aa84cff0e8dcf4fc5b731"
+    }
+   ],
+   "fileName": "./zconf.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-69086a2d0eeb6633",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b7c3c050d8cfdd1e8455c98a4767bf98752cb74"
+    }
+   ],
+   "fileName": "./zlib.3"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-7fd778ab039d0ecd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c3040d78eb9dd1bdc83d687f5b601465ff22583"
+    }
+   ],
+   "fileName": "./zlib.3.pdf"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-a45703bbcb5ee044",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "473b29ab06e2be461fe4aa74952fcb9bd08d9fa0"
+    }
+   ],
+   "fileName": "./zlib.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-df503d93cc7e4a41",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "513816d1574deea0e966ad82ed0d304959a5ad17"
+    }
+   ],
+   "fileName": "./zlib.map"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-47e412d1e61bb59d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c80d6efe2a2991a1836ee797f75b12c9d60b6783"
+    }
+   ],
+   "fileName": "./zlib.pc.cmakein"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-89aa3e93a4c04f88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3ebc107b34d82b134e9f5933c2a569eb6e952ce4"
+    }
+   ],
+   "fileName": "./zlib.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-1a4e30007254a580",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9859eecf47ae66280573d73969c061989615134"
+    }
+   ],
+   "fileName": "./zlib2ansi"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-171b35e41a3a79b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2f1fcc93488ac84acf984415b6ea0bd63c72aa49"
+    }
+   ],
+   "fileName": "./zutil.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-upstream-0b2e14c4a24f109b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f32dab3880d47eca1b71c308cf6542b32941b23c"
+    }
+   ],
+   "fileName": "./zutil.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a88a65565cde16be7f2291f647c4a94704ada92"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e39f5a4ae0f0d1f33c45c34dcc2bc8cfd14f0eaa"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork zlib",
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ade23b9417a586a0974e48fda589491fceb85c16"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-00fe7828d56d7a3e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e59e031b1a8b9f128fefde07c9d596db4a4c50e8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ChangeLog"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-03688ba6aa340b87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "832bb73adff252fa426a141ee4756daa9b8a4db4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./FAQ"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2704c1d8c3fc215c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "74611a0f2bcc004caa1fa07bdeb4c44b01f0a5d6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./INDEX"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-836efb6e25a091dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b04f62dd1002b9ca07068c90651432dec60029f3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4faecea6d9857941",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "023e127b48d292316614f604c1bacda043ba3bb5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1e1b075ae4ad6d628468e7dd40d9ec512ff9d10"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-fe8dbbeeacec3919",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "54142b046f0d1336ee83346142d90ab5f5152314"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.fuchsia"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-50d177be0782a9a8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c1114794db137af50f9b060aaade1a1a35ed784"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./adler32.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a7519b33a3f4f2c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "79461cdcf8eda434edca3c32781982d2082af5fe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./amiga/Makefile.pup"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4c0f2275b2710511",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64787face2d527df6c78ba8754eb54c53dda6ac2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./amiga/Makefile.sas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-150c159b696c4d26",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bd40f3ba8567a21560dc307d99c810de6f2d0533"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./compress.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-09be8533ff0a6ee5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bdc2fac491ea3431c733cf8be5b8c17ff60207ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./configure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-231db6c1fb792d67",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b6a2a76495304808f5e13df25face2089124fe6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/README.contrib"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6433931ca5495f7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d8fba99362b0973535a759097f7893d4551c4e7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/buffer_demo.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-8c21e8608dc39139",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f1c968146ba1a8f07c7070a2af72ab8a84c82e3d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/mtest.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6bb2d6cea9ca59b3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5a6682ef169a7429d9bf9f8acbda6ffb756fec4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/read.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d8d36254bbe60ffc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1fd4ae8ee39ef80117dca454e1951ecaf0d1d290"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-36f1ea8bc852f648",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5eebe86bd398dade5340cc4af24685bf02df671f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/test.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-af62413d3a5c8acf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70f5981b0c3c5de023ea3485ea7e81231a42ce7f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib-streams.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1a8adc89ead6c390",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fadb4623dc2469cc4fd571a9fac302798735c40b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib-streams.ads"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-65aafec93a54468e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "43c7e58eb582ce078f6ff76aa4f4eb09892ff92b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib-thin.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-510ce0ea049dd77a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "faf47e35174e1e76edb85ea602779084e535df69"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib-thin.ads"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-fa08b96648d5db70",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3961008f51def7ffcd692453df7b0f1d8b680645"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib.adb"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a8511d4fb16579ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0245a91806d804bf9f0907a3a001a141e9adb61b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib.ads"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-50457ca05ead5240",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c36c2cf069e930eb81ee0c89bfe70c20c8d0511a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/ada/zlib.gpr"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-60b20279b046cadf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ac2676fb0393520f0d051965529c39139e7de8c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/amd64/amd64-match.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d76fe4a4210f3132",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac08681935257d53b3fd1793788a1406a781ee22"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/asm686/README.686"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d132f0c309dee311",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f1023ae9dab5691291f42b180551bae164086492"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/asm686/match.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4f0159020bb8f1e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c18cae8b163b2fc351bc59b8efad7a190d1ead78"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/blast/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-fe19834f3eb7753e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "69a33e70f88cc1f3520e2154ed38d3f690ee26e5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/blast/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1839839dbbed2eec",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "809a3404b6e9e1bc120ff0313c31c4bd2b776823"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/blast/blast.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e38344110982c86f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b20eb7c03966462cafbf896c97263632004bd867"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/blast/blast.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d04ac554d0c83915",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "00d07b4c71bad842d7e04210f966e55977efd9c3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/blast/test.pk"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-463269988b01d91f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aed9b9fc86b2b47a4c46053df53feb544ecf31ce"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/blast/test.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-bcac26f988b7f37f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25133131cac8eeed1962e7a9072b06591481a520"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/delphi/ZLib.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9d4f7bed850da64f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0ff4d3c14a4dcdbf170692ce0fec86939b500d0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/delphi/ZLibConst.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9d67a1df333bc3e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "366e08eaa227cd3d09810c45639aedf4879b7ecf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/delphi/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-3ca01f39ca8c315e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ddf83b34d4c7d41ace39f96b5cb13fb390c8d2eb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/delphi/zlibd32.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-da7fcaa6cbee9c55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6f87ba12d786feca35738d0e9ce1f0f03f292881"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib.build"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-00558bc9f8a2151c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1245c21c7e918fa2919fd10bbe5604fc81faf49"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib.chm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f0b0080de3666b49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4946bdb71b79bff62f9217802b7524010c669408"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c64be2b353b5bba4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f1db1177b2e9a014f72bb3cd80be17133e06d16"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/AssemblyInfo.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c780584950c76e71",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3807a0e24a57b92ea301559cab7307b8eab52c51"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/ChecksumImpl.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b5a536427eafd302",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e646570737b175729a916da13b23fe88fcbd0e8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/CircularBuffer.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-53b2c0481f0bab06",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2106c80ed4607f10400ceed9aa8f635efdea9345"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/CodecBase.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-cbd140c09e719c75",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "11f6bf695e4b8ddac0d8553640ef303d9b7cab72"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/Deflater.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7872ade997848d55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9c7c49791d38b49a39aab76f593b2ea229fa940"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/DotZLib.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ad1c72f7dce0329b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99238c2ad633a641687d722e8c80aaa0a8c8bdd2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/DotZLib.csproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7de50e03979f08ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "731206b5721b9a7be5a1cbc98e3cc969bd176b4b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/GZipStream.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5f3e91fac5e83d52",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25f788ff0015c08fcd74d6e4552e01792c559350"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/Inflater.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-8d05575c3f1cdc84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d35d4a5b28e472f5618185c295d1964c1459d07"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/DotZLib/UnitTests.cs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2bf6bbf165567cdc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "892b34f7865d90a6f949f50d95e49625a10bc7f0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/LICENSE_1_0.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-049d81ed142a67da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1229b826f0096808628474538cea8fec2922a9b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/dotzlib/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5a0a33c692796b0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "742603cba1af98a1432cc02efb019b1a5760adf2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/gcc_gvmat64/gvmat64.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-28a25ceb7f99e252",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3905a8a31f7c61114b5fa6e203682b250e029d6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5c55a664358320d5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17fb362c03755b12f2dda5b12a68cf38162674bd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/infback9.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d8561f37083a11db",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d0486a32b558dcaceded5f0746fad62e680a4734"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/infback9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-986b4e6c605d6e28",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7a57a5901d920d1d3fcf4f8d6bedf8c9c68b41a7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/inffix9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2fe6fdc28d161fda",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7541490d97f70268010ae1baeb98a10302f3df8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/inflate9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6e0e38bddbbfb89f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2729fd3758fb3eb6e84ec51d1c118bd5888ee874"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/inftree9.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-dea67634729fc99f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cfb5d10e9b79029c758cf0428875f9cffa9d6cdf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/infback9/inftree9.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b93f389672476f04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d9dfc1538fb2bf1daef2fec42e68472ede564abc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/inflate86/inffas86.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-220e131177747e2a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5c30f2fc07023d7024571c9882383236d2a1cb0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/inflate86/inffast.S"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5d8a73516e7e6546",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0074186cc98585f48eb8d18c2be887955238b741"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream/test.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9a774b14e2d07fa2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8f677a8e32a4923a8a57c61e60ecb899eca5cab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream/zfstream.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-beff8cf547ec9611",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "57f03c37ca952cec5e58c827995365c18c728285"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream/zfstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c4b06d888658ecbc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fca4540d490fff36bb90fd801cf9cd8fc695bb17"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream2/zstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-caedc646916aa3c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e18a6d55cbbd8b832f8d795530553467e5c74fcf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream2/zstream_test.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5a5b377afc8f79a4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4a3dfd7a48721d6e7d12da226855bab19f6e8c1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream3/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0008dbeb8a96254a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c40d91b8e4051c4fac646e0213dee173e207bcee"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream3/TODO"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c34068f1c5ad790f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b81342fb774937c210f5718ad5783f1eed13f7a7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream3/test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-102e494632122b9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "19b83e921e89a638ebf978ca2beea7aefd78f9c2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream3/zfstream.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6fe3521589a88e60",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "351a3f5bfb93196701cc86b27db866a18ca54105"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iostream3/zfstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-3d34b63e3c688304",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d723acf46ecfb6e16922ea55309cee9c77b9d49"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx64/bld_ml64.bat"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-129f9c90fe40b4ae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c72c7b7f6c82e72b25a700eebccd0a987e7ba7b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx64/gvmat64.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-26ef9d8b44783c91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a179f3e1a04b5db58eaf6fcc473567794e0391f8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx64/inffas8664.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a4fc2cd5c2f813d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "249b0329964e35481e8e6217220f474e3076d35a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx64/inffasx64.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-55cc4866dea6ba85",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f2e049fdd6fc4c914a0d9a099dfe735cd0e3b86"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx64/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5f4e47a6e5a1d2d8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d2bcdd2fcb5e43ee260f510c25cf2b98318e9b0c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx86/bld_ml32.bat"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2ae98ab52fa7e9dd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6f42ac182d48c31346bb6dc04ab74f85157eb0b9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx86/inffas32.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-995d6e6542d230f4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "34529073d91211b48f2d8d6cad58202f50cb2047"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx86/match686.asm"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ae1b4be16c091deb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "287dd9febd8dc4b56b07ca84e4cfcf90d21dc09d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/masmx86/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ca9531560c4c90e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1b85a0f99bf296c58326a80bc0bf220080778cd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4d360e684569a204",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f978d26b0069ef66a560bcba8fd204ed70026f2a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c0819f99dc570735",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cb10d2af06d59532c6d462ab0dbd2b79c55a5834"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/MiniZip64_Changes.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-98112e3998a72379",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1f5511bbdf9715bb2f18e4d24924cca3275fb24"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/MiniZip64_info.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-75d5d1b9e384d311",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f3a1689b5b848b0b21035783601b97155a0a691"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-40e8ec2297e9cc4b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "94f289e1b0403b01289b10c6b32ed7d1471fa0ca"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/crypt.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f2296ef23fb4ab0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2846a21ba725da90aa3a67024d8107daa793f5f7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/ioapi.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7acaba27d94f6399",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e71518ae9f172eab44a2d8f52b3f80b0552070d5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/ioapi.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1c54e87648fe3e50",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca25851a0d1dfc989aceb2461dd2d5ec88649b8d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/iowin32.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-527a2bd3db3a88be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fedf239afafc20e420c5fec678dba91c1dd0074"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/iowin32.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-93154bd1325410d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "79d9e7c5d124fbcf79bff4509b51c09600b33a34"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/make_vms.com"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4a3e3d5cfcf18fee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "54e7b5392ee6600c91c9c423561941a571aaf715"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/miniunz.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-3c92e28e57d9bad1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e925714d46251f192d3266ef4a4cb64d292eb787"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/miniunzip.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5888d690d925afef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17a13c717cd030c037a407f59d0d14d2c25e4e05"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/minizip.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a48db9bf0188c731",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f47c6866b347bfff1a54c680b6c393d7c02e1d8d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/minizip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b31e6ddaed7bb9b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6a19e706e976d4e7b300d7ae294973fa8278ab14"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/minizip.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-8743c0d6a3b3a1bf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f6dad6443b0f347ac6b17563014f50c7b4fd17f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/mztools.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7e57452500c829ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "907243f7cea46d38ad12f6a6d6e01adb4d74f1b3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/mztools.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-446d74fed8915dbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "279d344d1b214a74bc98409dffb69047e6887220"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/unzip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ba0a290cd94b273b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4236476513b299f00f9637f7ad3e3631ebdec2b9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/unzip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-3a6430925a520041",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "885d9e822859c3b6a6f0656e3d0c8c97af6f6fe7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/zip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-51aba99a4750a1b3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8cef828db4766401b91bec9b47ca56a3118705fc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/minizip/zip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-20edbced7cc200a0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "51c42c32667ef6fc0b4b51867afac971fe11c15c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/pascal/example.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2ceca2349fd833c6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c47cc3ccdb450bd0d3d1d0e6f52746a2c0ca8541"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/pascal/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-653b1b173ecc4b9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ddf83b34d4c7d41ace39f96b5cb13fb390c8d2eb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/pascal/zlibd32.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-54342e2786d50561",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6366310dff32cfb18b9e950f8c530304a9fd83fa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/pascal/zlibpas.pas"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-11c92aa096ac03aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c9c12d0e19be923abf86e2584a23a781d81cb06"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/puff/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b889583aa15e94ea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f68ce02019463af0813a0db20c98bfc8e3c2ef7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/puff/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b76b1507380fd190",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c31e70c07929fabd5b3454ad8da39e8492633f6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/puff/puff.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-89ee6d374e444ef7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce8b988a404446fc8558b198d3cfeabcad6d16c5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/puff/puff.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e9169a434a0031b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e2318f2de8c7355385dca2c9d9422500f4927fc8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/puff/pufftest.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2298d6568e1d060c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2477f0a2d20cfc6272b91fa36d45c90dcda386ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/puff/zeros.raw"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6452b72e27fe62b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6833222dcd2b5ee1c7241f00efa6edfde4991ffa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/testzlib/testzlib.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-267f967c37b22251",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89f8964acc535861273f1f156a24ed2ac4cfa37a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/testzlib/testzlib.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-3d203df23e988b83",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b31cf680ad6e873da3c897c6b123a5fde4cd5151"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/untgz/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5eb26f7bcfba1ea7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d3a312c38dd7e3316ddb553e894734f42d28205"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/untgz/Makefile.msc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-450cd7a30222720f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "260f16a4110f43071b376af97c4119f5ecf902af"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/untgz/untgz.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-bd0802aa856544f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "066affe7fd1e8a9e54ef08d63abee644bb821c03"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/readme.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a5e5fbd52d988f2f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70048ae1ef9a404d49ae943878fd30ddee54c121"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b270803c73e320f6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "320d0a38475bbfe13314956d0ac7927cb7d1f975"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/miniunz.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-cfdd29fbe488d5d5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "530a1f4869bfa4cedf0f878fff4480535bd5b1bf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-78b88c50b01e6fdf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21845c87ed7730c73605e936de851eaa23222f30"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/minizip.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6feb3d88a83d04a9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da5c9e1922fa655c534811676563df7c31fb36a7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-297d75ec31a79a32",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76e2f85e212116be3a0142703c2d68b09b9b79d3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/testzlib.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-213fd58f30bb8846",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d3a849fce0bca235516932604c5c9bcbd2fce125"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-368e5afa2de56651",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d14872425639811364dc265fce04045bcdb11ead"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/testzlibdll.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9268b1d25bd8ac5a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67b5d0e28bda140346388d087b2c13cf7680a1f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-72ed8ab43b2e366c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2dfa4c3f4422c58c7e8d142c7fc9c4c11191f705"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a146e90e45e683f3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9fa98820edf15ae1eedc2101f30c3cef2d935e8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlibstat.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6763d1ab7a3137e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-65d5f6d0b2106908",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4f2ed833f8ff01bdfb27c65d88de1957aea598d3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1da72cc2777f7421",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae00729a7c8f1041498b6fe354aff1713c7fe325"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-89a67bf1ae4870d4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "79d4ef79d8a67a831264e1542d13070619c6eade"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc10/zlibvc.vcxproj.filters"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a8830ef300d332ee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b465b8db5b2651282cc0da57a27f76801a05cbc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-5eb9549c80112ded",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eafb9f2fa4f89d876f3819e756799b69cb9b2e1a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b7dc838277b80ad2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24acf8bef08c985c250f0eb555ad94f7e2f04846"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c6d8a2af7de12012",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c4618693842092678ae885ff0a44139c1f6a4ac"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2cc6d4ffc49732b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67b5d0e28bda140346388d087b2c13cf7680a1f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-bf05a284eb56d316",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "223df1a7f2b79131c10230eb98d2112c93b9f977"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-af31e2bbcd190576",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-477c483a76d7e8af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fface057a73d5ad706203d3f6f1e37b59bce3b4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d765e0feeff80bbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "947f29a61b08c158a960687a75b548769a5e1d32"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc11/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4f705cd43d5b8311",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "78d7b8fa17322e2be5d6e36a6b09515e489ba97e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7d9141591923ffc6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "701b614bbab070519b0837758c69aa0443804eb7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9b4e169f43380b2f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fec99dd6b063416ef0a48662adad3a421c1a049a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e23286d96244bd33",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0e1bb13edb71d4e1857aa02e1075742fa726490a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0f27f4d09fe56d6c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d3f0ee9f7cc18feff62eb78f064f4b4f45415d9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e5179478047311b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "38e7d39967856e2a95661f9b5758d93085178d3d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-894dd04078ffe1e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e8db3be249a70d2a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17e1c07bb0a9d02fc3b1a1ec9c4b1d6c5f2ac0a4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-97eafdb4e0408e92",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eca6032321210ba1df7f8743f9fc41c0ccaa1a02"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc12/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6605ed2895cdaa99",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "453b68e1108b382b4d755c9b08a5af37f538d3ba"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/miniunz.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6f88b7d3c8e43d45",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f55c663c7ecaea0aa8c53523f887f680388c2cd1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/minizip.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7a8104032590e590",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c61f30ff4ef922fd1c14484bb31c8e52e9b9305"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/testzlib.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9eab4700f1f6658c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "63b622b44827ded02a631bec50e4d1f772f4b799"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/testzlibdll.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e81019f92ec1a7c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d3f0ee9f7cc18feff62eb78f064f4b4f45415d9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ee6f93c36115cf5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20ee6f367909b5b555c0d76476049b21ec46c2f5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/zlibstat.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d0159f0b3d521a31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1ae4d4982da35bb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a492dc0bb0a953753f6cff5dd005b3f17f8ad95"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-bca757d5f2388c6a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89afb166f7b1e1c5b1f97c495f27e2167b5cc0da"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc14/zlibvc.vcxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-fa9d175d450b8f11",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "40de34c1a26fe1fa14efb992d217c84bacea7ef1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/miniunz.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ee49b6f329add8a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88d892514b4afba218dec574ea241904d263e29e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/minizip.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0a0de031e5472dc0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42b4b89271adf184abb594d092bf4ae4c2431ac9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/testzlib.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6116d93f0df5ed71",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "086ea8214cfcb33f3512a847f3dfde6154a7137d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/testzlibdll.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b304180e82b5bfd8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67b5d0e28bda140346388d087b2c13cf7680a1f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/zlib.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-50b7b74964db7e42",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "235725a6f6285f12aa3ecc248b0afbcaeaa3367c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/zlibstat.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4806fe2d3458e37f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e869e83b39cc26f7323352081f777b3e72a53c93"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/zlibvc.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-cc1d047387561086",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b46b3778372dbb718fd0f00ff1ee55266b18892"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/zlibvc.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e282147c4ee9fe73",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "82379594550bf43deb4a5114d938ad8ca06fd763"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/vstudio/vc9/zlibvc.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f5ddba20c2e76b08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88ea76a1b42bfc247680dd50b450923858f945fe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./crc32.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c7b3538725149fe8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db9e88b8332953972c9120c73389fa2ce03dd8f8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./crc32.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-aa54e0ee82d54bd2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "436dc72ccb798bf1ac3e30cd9b580799f8bbb441"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./deflate.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-2b118532abcea455",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d54ac3369732bc45463c254851809a0062382b3d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./deflate.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7cbe5fca448b17cd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f58cd212772b622c71345ca5d7dd93648b8ab94"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/algorithm.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-63daef2e58facd25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58f11c3e7778ca30e9c9330ab248107371429dd8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/rfc1950.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a4b01b53ce8d5db7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b13d37ad6b3855f3a2eaf6c325eddaa7815355b0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/rfc1951.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-03bce9225ed55fb4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b2346a9c1e9cd011370595a292154ca83eff4ddb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/rfc1952.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-24b0a2bb0493ed7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b5f765b6151da46d356493278fd873e4c99ce80"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/txtvsbin.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-38e0ba5746d995bc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f793f7b378233d7e644754e603695966487576b5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/README.examples"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-206ad87c07210ed4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1bcc3f9743bcfdfb77fb6736ece06c666dd1787e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/enough.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f4f5ae6189864a9f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b69d9b6eeadd680fe37ab8ba54d781f46fe80420"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/fitblk.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b628d1e482bb435d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66c4ce6e2e4cc86dbe346a7cc1bc921002335929"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/gun.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a4d00ae03708a6bf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a22e75fe1bb392ce8516794d6e810fd0dfcf8dca"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/gzappend.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-abfbc5eaff33c0ac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c34287cf18b05b761daf6457fc5efbf501358d2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/gzjoin.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0925ca012b2804b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32d9e430fe8725def0a036f86a526e7b3214eaf0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/gzlog.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7b66d0f5845ea764",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "deab1fb6de11e3145dfea71254d0c363a3415e04"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/gzlog.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-73c704902a43a513",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35f85759bc23add6a8507c76d05f73131823a9b3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/zlib_how.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9a0a95e009e0a888",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b59f2d5676cc135ac0af040d90c3e7b366fcce93"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/zpipe.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-46bdd369a6e78692",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db2e8f8daa77cf6536bf516f194c422f5db8310d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/zran.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1a10eae9e3003b30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4698124c166f59728db9ae229f8467459b458ef3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./gzclose.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7d7357627b5e2a2d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "637240f7e6ac7249e161083b450fb9f4e1f2b088"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./gzguts.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-08a99aef50c23dac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4bd4f2745936d396899a7ba09290d6b17fab4a3c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./gzlib.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-25d99bf8234485f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dfbd4eef919b6eded7e59ae420642ddf8bc848b8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./gzread.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ba9e2c4ee6c19359",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d2e11857ffe5e792f5d89b927bb47ed726b65031"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./gzwrite.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6d522c1b95b64289",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b7d6a93d4429068f1af3c10a11de42ece950edd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./infback.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-50495d8a2841f875",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fe2fdfb8f51d9f84881cc453ba64f60e3d7c9cbc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inffast.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-dac893f07593e81b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fc803c43a562b2b92a97e22300754ddfe44c603"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inffast.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ac337e4ab3a85df1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8770ab43c9050b824c646f6e6cee8b3c0628cbda"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inffixed.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-72fbb1d3dbd8b148",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5cfffd5a037697867a78566d583e73f6d0f91b9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inflate.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c4c45471b42b3cae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "628d8395fc7f67e6d7a9a6cecba64f6594d64eb9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inflate.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e38a829ed0bdba7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a152b76b78f9245ca67db2729de72d51ecc234b0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inftrees.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b05ce0baa27fc8f7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c63a7707d83991f3e074391c047b3136ff3e558"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./inftrees.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9756bb457c5b2f32",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dc817ba3a5335de14bde5b81b1a3365734757625"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./make_vms.com"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6c9f724267c5443c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85d42a140e556d3b659f7e26c834b5574ea51754"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./msdos/Makefile.bor"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7d036ba0dd25d53f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "815d082068e07e22195e446ea8a880a1b03e425a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./msdos/Makefile.dj2"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f9bcafc9552d4b6e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2cf0c4a2b98fc59c63bc5daee5d26e26dc15c81e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./msdos/Makefile.emx"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-93496b9d50bee0d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39f6df7982b02e1c8b72298c6cc58bf02d9d9f77"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./msdos/Makefile.msc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-136d70dceaf70b26",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "98e97dcbaf0e7da0531f7a0367b052adc382fb29"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./msdos/Makefile.tc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a31e6d47a44ae092",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b2d315c399a4db63f6380e9172d93ad0f500edf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./nintendods/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b885c59ae6c32b80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f585a53f8a8d0415cbd7166f8c44a11a802ee39c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./nintendods/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d7523f1bc7357964",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "821cd8913362531cfd915b4c2bcb0777aa7d2f11"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/Makefile.emx"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-07a8b853ea856759",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a3285389419eb244671143cc8c6333c7cbfdd2c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/Makefile.riscos"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-586921063b4f2dc1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6967642b887ba82a9041bddce73254c42000d4d9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-e853734df1384f50",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "940475beeeb76576feb22c2d8b7b97d493ab3d79"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/descrip.mms"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-35e2d6abd12daa30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4127401d329a7e421112ae14ec4e7dd995ea6e30"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/os2/Makefile.os2"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-eedc4225d539c631",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "108527bad780aecce1c75efa9210f4b1173f4139"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/os2/zlib.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-ab21696aecc57189",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1cf5886f7fcee4019ef529f8f19dd8000be01229"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./old/visual-basic.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b19c749f3cf7701a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "51d77ab7eeaa1d92a57a2a405b6ff985373bdaaa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./os400/README400"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6ea7f19e5643ee42",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b47a80813ee6c9afcad0defe645efa3b5998aa0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./os400/bndsrc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-4d67745cad9648da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c5baf22e2de7d01ca1fea649e832f9d827cf6064"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./os400/make.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-78b78ea3f06f879c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a911b361a568f6d0e07024149eaa17e9815c8fef"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./os400/zlib.inc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-cd818094716ae731",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f3e8a85343976d3f6115797f7ac9e379a97bf67"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./qnx/package.qpg"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a4c2048d374a41c6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bde9391a495a7b962cc63aaf8288b02159a5f68a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/example.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-bded49ad7f0bfc86",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9ced1a5ecc8badd5bc14cd96ef859cc346ec3dd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/infcover.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c8631813fb284c87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2ff91a2d1d191233dea5741a1aee5095f577a93e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/minigzip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-c7f47028f8f4fd14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bdcfc455f66ef2b108b0a10c6dbe7837f54f59b3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./treebuild.xml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d5f6731cd2baf5d2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ab030a33e399e7284b9ddf9bba64d0dd2730b417"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./trees.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0af2aac51dfd6c12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5d8a9c42f902d2418a7e63b539c0f319373e9400"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./trees.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9a30f309df8cbd9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "90f92698d7de79341e85bd3ca411a6b165c58848"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./uncompr.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-dfd166ad29fbbb54",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a6af1350f3ffbbff44273a7b661563f095b3234"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./watcom/watcom_f.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6ec56989b198ac98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1deb6874b6162d2607dff14c2fccb7a37ce97b0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./watcom/watcom_l.mak"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-b964599075b1619f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "743c9da800bb73a7a30e7c5ce76b5bafd1256ba8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/DLL_FAQ.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a8736fa3c61a8f51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "23262888e43719d398dea043e2bd09c23a9ba5da"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/Makefile.bor"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f3129e0dddec60f6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea8204bc36bb1d25c28e0176eb777d1174965fc6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/Makefile.gcc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-6d7a843622dce5ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03ac9a052f553e99d5c122a9adb9cf61c1059cda"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/Makefile.msc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-d4faf1bea077fa80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fec4ff7048956a2c556c199ac4989b9372250b7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/README-WIN32.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-77676f24e46d8add",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba666fb015a257ab0182f10bc20409a2ec61169f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/VisualC.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1e8bfe5d0e51fa84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "756d27ffaa18b488fca960ff0797bcbc2ffc811f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/zlib.def"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-f7f6794bc3c5965f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c21721e51d162fcc8880290001d9e150d3511dd6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./win32/zlib1.rc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-044206bbacc43118",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ef05b0d12bf2cfbbf1aa84cff0e8dcf4fc5b731"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zconf.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0f07e498133da6ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cbd5ddffb39904669e115e270b23138106bb0ac2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zconf.h.cmakein"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-9b3a487267bfb9cf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ef05b0d12bf2cfbbf1aa84cff0e8dcf4fc5b731"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zconf.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-69086a2d0eeb6633",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b7c3c050d8cfdd1e8455c98a4767bf98752cb74"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib.3"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-7fd778ab039d0ecd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c3040d78eb9dd1bdc83d687f5b601465ff22583"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib.3.pdf"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-a45703bbcb5ee044",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "473b29ab06e2be461fe4aa74952fcb9bd08d9fa0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-df503d93cc7e4a41",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "513816d1574deea0e966ad82ed0d304959a5ad17"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib.map"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-47e412d1e61bb59d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c80d6efe2a2991a1836ee797f75b12c9d60b6783"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib.pc.cmakein"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-89aa3e93a4c04f88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3ebc107b34d82b134e9f5933c2a569eb6e952ce4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-1a4e30007254a580",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9859eecf47ae66280573d73969c061989615134"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zlib2ansi"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-171b35e41a3a79b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2f1fcc93488ac84acf984415b6ea0bd63c72aa49"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zutil.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-zlib-open-ddk-0b2e14c4a24f109b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f32dab3880d47eca1b71c308cf6542b32941b23c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./zutil.h"
+  }
+ ],
+ "name": "zlib-f0b417f5",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-zlib-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/zlib); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://fuchsia.googlesource.com/third_party/zlib@f0b417f596815c67d7fbdf48faa2ce39dde0f672",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-zlib-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-zlib-upstream-f1f3ef82935a010e",
+    "SPDXRef-File-zlib-upstream-9a2aa4db38d3115e",
+    "SPDXRef-File-zlib-upstream-00fe7828d56d7a3e",
+    "SPDXRef-File-zlib-upstream-03688ba6aa340b87",
+    "SPDXRef-File-zlib-upstream-2704c1d8c3fc215c",
+    "SPDXRef-File-zlib-upstream-836efb6e25a091dc",
+    "SPDXRef-File-zlib-upstream-4faecea6d9857941",
+    "SPDXRef-File-zlib-upstream-69e27356ef629022",
+    "SPDXRef-File-zlib-upstream-fe8dbbeeacec3919",
+    "SPDXRef-File-zlib-upstream-50d177be0782a9a8",
+    "SPDXRef-File-zlib-upstream-a7519b33a3f4f2c8",
+    "SPDXRef-File-zlib-upstream-4c0f2275b2710511",
+    "SPDXRef-File-zlib-upstream-150c159b696c4d26",
+    "SPDXRef-File-zlib-upstream-09be8533ff0a6ee5",
+    "SPDXRef-File-zlib-upstream-231db6c1fb792d67",
+    "SPDXRef-File-zlib-upstream-6433931ca5495f7f",
+    "SPDXRef-File-zlib-upstream-8c21e8608dc39139",
+    "SPDXRef-File-zlib-upstream-6bb2d6cea9ca59b3",
+    "SPDXRef-File-zlib-upstream-d8d36254bbe60ffc",
+    "SPDXRef-File-zlib-upstream-36f1ea8bc852f648",
+    "SPDXRef-File-zlib-upstream-af62413d3a5c8acf",
+    "SPDXRef-File-zlib-upstream-1a8adc89ead6c390",
+    "SPDXRef-File-zlib-upstream-65aafec93a54468e",
+    "SPDXRef-File-zlib-upstream-510ce0ea049dd77a",
+    "SPDXRef-File-zlib-upstream-fa08b96648d5db70",
+    "SPDXRef-File-zlib-upstream-a8511d4fb16579ba",
+    "SPDXRef-File-zlib-upstream-50457ca05ead5240",
+    "SPDXRef-File-zlib-upstream-60b20279b046cadf",
+    "SPDXRef-File-zlib-upstream-d76fe4a4210f3132",
+    "SPDXRef-File-zlib-upstream-d132f0c309dee311",
+    "SPDXRef-File-zlib-upstream-4f0159020bb8f1e6",
+    "SPDXRef-File-zlib-upstream-fe19834f3eb7753e",
+    "SPDXRef-File-zlib-upstream-1839839dbbed2eec",
+    "SPDXRef-File-zlib-upstream-e38344110982c86f",
+    "SPDXRef-File-zlib-upstream-d04ac554d0c83915",
+    "SPDXRef-File-zlib-upstream-463269988b01d91f",
+    "SPDXRef-File-zlib-upstream-bcac26f988b7f37f",
+    "SPDXRef-File-zlib-upstream-9d4f7bed850da64f",
+    "SPDXRef-File-zlib-upstream-9d67a1df333bc3e3",
+    "SPDXRef-File-zlib-upstream-3ca01f39ca8c315e",
+    "SPDXRef-File-zlib-upstream-da7fcaa6cbee9c55",
+    "SPDXRef-File-zlib-upstream-00558bc9f8a2151c",
+    "SPDXRef-File-zlib-upstream-f0b0080de3666b49",
+    "SPDXRef-File-zlib-upstream-c64be2b353b5bba4",
+    "SPDXRef-File-zlib-upstream-c780584950c76e71",
+    "SPDXRef-File-zlib-upstream-b5a536427eafd302",
+    "SPDXRef-File-zlib-upstream-53b2c0481f0bab06",
+    "SPDXRef-File-zlib-upstream-cbd140c09e719c75",
+    "SPDXRef-File-zlib-upstream-7872ade997848d55",
+    "SPDXRef-File-zlib-upstream-ad1c72f7dce0329b",
+    "SPDXRef-File-zlib-upstream-7de50e03979f08ba",
+    "SPDXRef-File-zlib-upstream-5f3e91fac5e83d52",
+    "SPDXRef-File-zlib-upstream-8d05575c3f1cdc84",
+    "SPDXRef-File-zlib-upstream-2bf6bbf165567cdc",
+    "SPDXRef-File-zlib-upstream-049d81ed142a67da",
+    "SPDXRef-File-zlib-upstream-5a0a33c692796b0f",
+    "SPDXRef-File-zlib-upstream-28a25ceb7f99e252",
+    "SPDXRef-File-zlib-upstream-5c55a664358320d5",
+    "SPDXRef-File-zlib-upstream-d8561f37083a11db",
+    "SPDXRef-File-zlib-upstream-986b4e6c605d6e28",
+    "SPDXRef-File-zlib-upstream-2fe6fdc28d161fda",
+    "SPDXRef-File-zlib-upstream-6e0e38bddbbfb89f",
+    "SPDXRef-File-zlib-upstream-dea67634729fc99f",
+    "SPDXRef-File-zlib-upstream-b93f389672476f04",
+    "SPDXRef-File-zlib-upstream-220e131177747e2a",
+    "SPDXRef-File-zlib-upstream-5d8a73516e7e6546",
+    "SPDXRef-File-zlib-upstream-9a774b14e2d07fa2",
+    "SPDXRef-File-zlib-upstream-beff8cf547ec9611",
+    "SPDXRef-File-zlib-upstream-c4b06d888658ecbc",
+    "SPDXRef-File-zlib-upstream-caedc646916aa3c4",
+    "SPDXRef-File-zlib-upstream-5a5b377afc8f79a4",
+    "SPDXRef-File-zlib-upstream-0008dbeb8a96254a",
+    "SPDXRef-File-zlib-upstream-c34068f1c5ad790f",
+    "SPDXRef-File-zlib-upstream-102e494632122b9e",
+    "SPDXRef-File-zlib-upstream-6fe3521589a88e60",
+    "SPDXRef-File-zlib-upstream-3d34b63e3c688304",
+    "SPDXRef-File-zlib-upstream-129f9c90fe40b4ae",
+    "SPDXRef-File-zlib-upstream-26ef9d8b44783c91",
+    "SPDXRef-File-zlib-upstream-a4fc2cd5c2f813d1",
+    "SPDXRef-File-zlib-upstream-55cc4866dea6ba85",
+    "SPDXRef-File-zlib-upstream-5f4e47a6e5a1d2d8",
+    "SPDXRef-File-zlib-upstream-2ae98ab52fa7e9dd",
+    "SPDXRef-File-zlib-upstream-995d6e6542d230f4",
+    "SPDXRef-File-zlib-upstream-ae1b4be16c091deb",
+    "SPDXRef-File-zlib-upstream-ca9531560c4c90e8",
+    "SPDXRef-File-zlib-upstream-4d360e684569a204",
+    "SPDXRef-File-zlib-upstream-c0819f99dc570735",
+    "SPDXRef-File-zlib-upstream-98112e3998a72379",
+    "SPDXRef-File-zlib-upstream-75d5d1b9e384d311",
+    "SPDXRef-File-zlib-upstream-40e8ec2297e9cc4b",
+    "SPDXRef-File-zlib-upstream-f2296ef23fb4ab0f",
+    "SPDXRef-File-zlib-upstream-7acaba27d94f6399",
+    "SPDXRef-File-zlib-upstream-1c54e87648fe3e50",
+    "SPDXRef-File-zlib-upstream-527a2bd3db3a88be",
+    "SPDXRef-File-zlib-upstream-93154bd1325410d6",
+    "SPDXRef-File-zlib-upstream-4a3e3d5cfcf18fee",
+    "SPDXRef-File-zlib-upstream-3c92e28e57d9bad1",
+    "SPDXRef-File-zlib-upstream-5888d690d925afef",
+    "SPDXRef-File-zlib-upstream-a48db9bf0188c731",
+    "SPDXRef-File-zlib-upstream-b31e6ddaed7bb9b5",
+    "SPDXRef-File-zlib-upstream-8743c0d6a3b3a1bf",
+    "SPDXRef-File-zlib-upstream-7e57452500c829ca",
+    "SPDXRef-File-zlib-upstream-446d74fed8915dbb",
+    "SPDXRef-File-zlib-upstream-ba0a290cd94b273b",
+    "SPDXRef-File-zlib-upstream-3a6430925a520041",
+    "SPDXRef-File-zlib-upstream-51aba99a4750a1b3",
+    "SPDXRef-File-zlib-upstream-20edbced7cc200a0",
+    "SPDXRef-File-zlib-upstream-2ceca2349fd833c6",
+    "SPDXRef-File-zlib-upstream-653b1b173ecc4b9e",
+    "SPDXRef-File-zlib-upstream-54342e2786d50561",
+    "SPDXRef-File-zlib-upstream-11c92aa096ac03aa",
+    "SPDXRef-File-zlib-upstream-b889583aa15e94ea",
+    "SPDXRef-File-zlib-upstream-b76b1507380fd190",
+    "SPDXRef-File-zlib-upstream-89ee6d374e444ef7",
+    "SPDXRef-File-zlib-upstream-e9169a434a0031b5",
+    "SPDXRef-File-zlib-upstream-2298d6568e1d060c",
+    "SPDXRef-File-zlib-upstream-6452b72e27fe62b5",
+    "SPDXRef-File-zlib-upstream-267f967c37b22251",
+    "SPDXRef-File-zlib-upstream-3d203df23e988b83",
+    "SPDXRef-File-zlib-upstream-5eb26f7bcfba1ea7",
+    "SPDXRef-File-zlib-upstream-450cd7a30222720f",
+    "SPDXRef-File-zlib-upstream-bd0802aa856544f9",
+    "SPDXRef-File-zlib-upstream-a5e5fbd52d988f2f",
+    "SPDXRef-File-zlib-upstream-b270803c73e320f6",
+    "SPDXRef-File-zlib-upstream-cfdd29fbe488d5d5",
+    "SPDXRef-File-zlib-upstream-78b88c50b01e6fdf",
+    "SPDXRef-File-zlib-upstream-6feb3d88a83d04a9",
+    "SPDXRef-File-zlib-upstream-297d75ec31a79a32",
+    "SPDXRef-File-zlib-upstream-213fd58f30bb8846",
+    "SPDXRef-File-zlib-upstream-368e5afa2de56651",
+    "SPDXRef-File-zlib-upstream-9268b1d25bd8ac5a",
+    "SPDXRef-File-zlib-upstream-72ed8ab43b2e366c",
+    "SPDXRef-File-zlib-upstream-a146e90e45e683f3",
+    "SPDXRef-File-zlib-upstream-6763d1ab7a3137e0",
+    "SPDXRef-File-zlib-upstream-65d5f6d0b2106908",
+    "SPDXRef-File-zlib-upstream-1da72cc2777f7421",
+    "SPDXRef-File-zlib-upstream-89a67bf1ae4870d4",
+    "SPDXRef-File-zlib-upstream-a8830ef300d332ee",
+    "SPDXRef-File-zlib-upstream-5eb9549c80112ded",
+    "SPDXRef-File-zlib-upstream-b7dc838277b80ad2",
+    "SPDXRef-File-zlib-upstream-c6d8a2af7de12012",
+    "SPDXRef-File-zlib-upstream-2cc6d4ffc49732b5",
+    "SPDXRef-File-zlib-upstream-bf05a284eb56d316",
+    "SPDXRef-File-zlib-upstream-af31e2bbcd190576",
+    "SPDXRef-File-zlib-upstream-477c483a76d7e8af",
+    "SPDXRef-File-zlib-upstream-d765e0feeff80bbb",
+    "SPDXRef-File-zlib-upstream-4f705cd43d5b8311",
+    "SPDXRef-File-zlib-upstream-7d9141591923ffc6",
+    "SPDXRef-File-zlib-upstream-9b4e169f43380b2f",
+    "SPDXRef-File-zlib-upstream-e23286d96244bd33",
+    "SPDXRef-File-zlib-upstream-0f27f4d09fe56d6c",
+    "SPDXRef-File-zlib-upstream-e5179478047311b9",
+    "SPDXRef-File-zlib-upstream-894dd04078ffe1e0",
+    "SPDXRef-File-zlib-upstream-e8db3be249a70d2a",
+    "SPDXRef-File-zlib-upstream-97eafdb4e0408e92",
+    "SPDXRef-File-zlib-upstream-6605ed2895cdaa99",
+    "SPDXRef-File-zlib-upstream-6f88b7d3c8e43d45",
+    "SPDXRef-File-zlib-upstream-7a8104032590e590",
+    "SPDXRef-File-zlib-upstream-9eab4700f1f6658c",
+    "SPDXRef-File-zlib-upstream-e81019f92ec1a7c2",
+    "SPDXRef-File-zlib-upstream-ee6f93c36115cf5e",
+    "SPDXRef-File-zlib-upstream-d0159f0b3d521a31",
+    "SPDXRef-File-zlib-upstream-1ae4d4982da35bb0",
+    "SPDXRef-File-zlib-upstream-bca757d5f2388c6a",
+    "SPDXRef-File-zlib-upstream-fa9d175d450b8f11",
+    "SPDXRef-File-zlib-upstream-ee49b6f329add8a7",
+    "SPDXRef-File-zlib-upstream-0a0de031e5472dc0",
+    "SPDXRef-File-zlib-upstream-6116d93f0df5ed71",
+    "SPDXRef-File-zlib-upstream-b304180e82b5bfd8",
+    "SPDXRef-File-zlib-upstream-50b7b74964db7e42",
+    "SPDXRef-File-zlib-upstream-4806fe2d3458e37f",
+    "SPDXRef-File-zlib-upstream-cc1d047387561086",
+    "SPDXRef-File-zlib-upstream-e282147c4ee9fe73",
+    "SPDXRef-File-zlib-upstream-f5ddba20c2e76b08",
+    "SPDXRef-File-zlib-upstream-c7b3538725149fe8",
+    "SPDXRef-File-zlib-upstream-aa54e0ee82d54bd2",
+    "SPDXRef-File-zlib-upstream-2b118532abcea455",
+    "SPDXRef-File-zlib-upstream-7cbe5fca448b17cd",
+    "SPDXRef-File-zlib-upstream-63daef2e58facd25",
+    "SPDXRef-File-zlib-upstream-a4b01b53ce8d5db7",
+    "SPDXRef-File-zlib-upstream-03bce9225ed55fb4",
+    "SPDXRef-File-zlib-upstream-24b0a2bb0493ed7f",
+    "SPDXRef-File-zlib-upstream-38e0ba5746d995bc",
+    "SPDXRef-File-zlib-upstream-206ad87c07210ed4",
+    "SPDXRef-File-zlib-upstream-f4f5ae6189864a9f",
+    "SPDXRef-File-zlib-upstream-b628d1e482bb435d",
+    "SPDXRef-File-zlib-upstream-a4d00ae03708a6bf",
+    "SPDXRef-File-zlib-upstream-abfbc5eaff33c0ac",
+    "SPDXRef-File-zlib-upstream-0925ca012b2804b9",
+    "SPDXRef-File-zlib-upstream-7b66d0f5845ea764",
+    "SPDXRef-File-zlib-upstream-73c704902a43a513",
+    "SPDXRef-File-zlib-upstream-9a0a95e009e0a888",
+    "SPDXRef-File-zlib-upstream-46bdd369a6e78692",
+    "SPDXRef-File-zlib-upstream-1a10eae9e3003b30",
+    "SPDXRef-File-zlib-upstream-7d7357627b5e2a2d",
+    "SPDXRef-File-zlib-upstream-08a99aef50c23dac",
+    "SPDXRef-File-zlib-upstream-25d99bf8234485f9",
+    "SPDXRef-File-zlib-upstream-ba9e2c4ee6c19359",
+    "SPDXRef-File-zlib-upstream-6d522c1b95b64289",
+    "SPDXRef-File-zlib-upstream-50495d8a2841f875",
+    "SPDXRef-File-zlib-upstream-dac893f07593e81b",
+    "SPDXRef-File-zlib-upstream-ac337e4ab3a85df1",
+    "SPDXRef-File-zlib-upstream-72fbb1d3dbd8b148",
+    "SPDXRef-File-zlib-upstream-c4c45471b42b3cae",
+    "SPDXRef-File-zlib-upstream-e38a829ed0bdba7d",
+    "SPDXRef-File-zlib-upstream-b05ce0baa27fc8f7",
+    "SPDXRef-File-zlib-upstream-9756bb457c5b2f32",
+    "SPDXRef-File-zlib-upstream-6c9f724267c5443c",
+    "SPDXRef-File-zlib-upstream-7d036ba0dd25d53f",
+    "SPDXRef-File-zlib-upstream-f9bcafc9552d4b6e",
+    "SPDXRef-File-zlib-upstream-93496b9d50bee0d3",
+    "SPDXRef-File-zlib-upstream-136d70dceaf70b26",
+    "SPDXRef-File-zlib-upstream-a31e6d47a44ae092",
+    "SPDXRef-File-zlib-upstream-b885c59ae6c32b80",
+    "SPDXRef-File-zlib-upstream-d7523f1bc7357964",
+    "SPDXRef-File-zlib-upstream-07a8b853ea856759",
+    "SPDXRef-File-zlib-upstream-586921063b4f2dc1",
+    "SPDXRef-File-zlib-upstream-e853734df1384f50",
+    "SPDXRef-File-zlib-upstream-35e2d6abd12daa30",
+    "SPDXRef-File-zlib-upstream-eedc4225d539c631",
+    "SPDXRef-File-zlib-upstream-ab21696aecc57189",
+    "SPDXRef-File-zlib-upstream-b19c749f3cf7701a",
+    "SPDXRef-File-zlib-upstream-6ea7f19e5643ee42",
+    "SPDXRef-File-zlib-upstream-4d67745cad9648da",
+    "SPDXRef-File-zlib-upstream-78b78ea3f06f879c",
+    "SPDXRef-File-zlib-upstream-cd818094716ae731",
+    "SPDXRef-File-zlib-upstream-a4c2048d374a41c6",
+    "SPDXRef-File-zlib-upstream-bded49ad7f0bfc86",
+    "SPDXRef-File-zlib-upstream-c8631813fb284c87",
+    "SPDXRef-File-zlib-upstream-c7f47028f8f4fd14",
+    "SPDXRef-File-zlib-upstream-d5f6731cd2baf5d2",
+    "SPDXRef-File-zlib-upstream-0af2aac51dfd6c12",
+    "SPDXRef-File-zlib-upstream-9a30f309df8cbd9e",
+    "SPDXRef-File-zlib-upstream-dfd166ad29fbbb54",
+    "SPDXRef-File-zlib-upstream-6ec56989b198ac98",
+    "SPDXRef-File-zlib-upstream-b964599075b1619f",
+    "SPDXRef-File-zlib-upstream-a8736fa3c61a8f51",
+    "SPDXRef-File-zlib-upstream-f3129e0dddec60f6",
+    "SPDXRef-File-zlib-upstream-6d7a843622dce5ba",
+    "SPDXRef-File-zlib-upstream-d4faf1bea077fa80",
+    "SPDXRef-File-zlib-upstream-77676f24e46d8add",
+    "SPDXRef-File-zlib-upstream-1e8bfe5d0e51fa84",
+    "SPDXRef-File-zlib-upstream-f7f6794bc3c5965f",
+    "SPDXRef-File-zlib-upstream-044206bbacc43118",
+    "SPDXRef-File-zlib-upstream-0f07e498133da6ef",
+    "SPDXRef-File-zlib-upstream-9b3a487267bfb9cf",
+    "SPDXRef-File-zlib-upstream-69086a2d0eeb6633",
+    "SPDXRef-File-zlib-upstream-7fd778ab039d0ecd",
+    "SPDXRef-File-zlib-upstream-a45703bbcb5ee044",
+    "SPDXRef-File-zlib-upstream-df503d93cc7e4a41",
+    "SPDXRef-File-zlib-upstream-47e412d1e61bb59d",
+    "SPDXRef-File-zlib-upstream-89aa3e93a4c04f88",
+    "SPDXRef-File-zlib-upstream-1a4e30007254a580",
+    "SPDXRef-File-zlib-upstream-171b35e41a3a79b9",
+    "SPDXRef-File-zlib-upstream-0b2e14c4a24f109b"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "Zlib",
+   "name": "zlib",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "3ba9fb48e7a4d4feb522e320d174b56264c01456"
+   },
+   "supplier": "Organization: fuchsia.googlesource.com",
+   "versionInfo": "f0b417f5"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-zlib-open-ddk",
+   "comment": "As open-ddk ships it at third_party/zlib. the fork zlib (beside open-ddk; its submodule), branch nebula at fe44c0467787d2752abd8669e7fb910355fcb1fa: upstream f0b417f596815c67d7fbdf48faa2ce39dde0f672 and GRT's 2 commit(s), which add, change or remove 1 file(s): BUILD.gn",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-zlib-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-zlib-open-ddk-f1f3ef82935a010e",
+    "SPDXRef-File-zlib-open-ddk-9a2aa4db38d3115e",
+    "SPDXRef-File-zlib-open-ddk-00fe7828d56d7a3e",
+    "SPDXRef-File-zlib-open-ddk-03688ba6aa340b87",
+    "SPDXRef-File-zlib-open-ddk-2704c1d8c3fc215c",
+    "SPDXRef-File-zlib-open-ddk-836efb6e25a091dc",
+    "SPDXRef-File-zlib-open-ddk-4faecea6d9857941",
+    "SPDXRef-File-zlib-open-ddk-69e27356ef629022",
+    "SPDXRef-File-zlib-open-ddk-fe8dbbeeacec3919",
+    "SPDXRef-File-zlib-open-ddk-50d177be0782a9a8",
+    "SPDXRef-File-zlib-open-ddk-a7519b33a3f4f2c8",
+    "SPDXRef-File-zlib-open-ddk-4c0f2275b2710511",
+    "SPDXRef-File-zlib-open-ddk-150c159b696c4d26",
+    "SPDXRef-File-zlib-open-ddk-09be8533ff0a6ee5",
+    "SPDXRef-File-zlib-open-ddk-231db6c1fb792d67",
+    "SPDXRef-File-zlib-open-ddk-6433931ca5495f7f",
+    "SPDXRef-File-zlib-open-ddk-8c21e8608dc39139",
+    "SPDXRef-File-zlib-open-ddk-6bb2d6cea9ca59b3",
+    "SPDXRef-File-zlib-open-ddk-d8d36254bbe60ffc",
+    "SPDXRef-File-zlib-open-ddk-36f1ea8bc852f648",
+    "SPDXRef-File-zlib-open-ddk-af62413d3a5c8acf",
+    "SPDXRef-File-zlib-open-ddk-1a8adc89ead6c390",
+    "SPDXRef-File-zlib-open-ddk-65aafec93a54468e",
+    "SPDXRef-File-zlib-open-ddk-510ce0ea049dd77a",
+    "SPDXRef-File-zlib-open-ddk-fa08b96648d5db70",
+    "SPDXRef-File-zlib-open-ddk-a8511d4fb16579ba",
+    "SPDXRef-File-zlib-open-ddk-50457ca05ead5240",
+    "SPDXRef-File-zlib-open-ddk-60b20279b046cadf",
+    "SPDXRef-File-zlib-open-ddk-d76fe4a4210f3132",
+    "SPDXRef-File-zlib-open-ddk-d132f0c309dee311",
+    "SPDXRef-File-zlib-open-ddk-4f0159020bb8f1e6",
+    "SPDXRef-File-zlib-open-ddk-fe19834f3eb7753e",
+    "SPDXRef-File-zlib-open-ddk-1839839dbbed2eec",
+    "SPDXRef-File-zlib-open-ddk-e38344110982c86f",
+    "SPDXRef-File-zlib-open-ddk-d04ac554d0c83915",
+    "SPDXRef-File-zlib-open-ddk-463269988b01d91f",
+    "SPDXRef-File-zlib-open-ddk-bcac26f988b7f37f",
+    "SPDXRef-File-zlib-open-ddk-9d4f7bed850da64f",
+    "SPDXRef-File-zlib-open-ddk-9d67a1df333bc3e3",
+    "SPDXRef-File-zlib-open-ddk-3ca01f39ca8c315e",
+    "SPDXRef-File-zlib-open-ddk-da7fcaa6cbee9c55",
+    "SPDXRef-File-zlib-open-ddk-00558bc9f8a2151c",
+    "SPDXRef-File-zlib-open-ddk-f0b0080de3666b49",
+    "SPDXRef-File-zlib-open-ddk-c64be2b353b5bba4",
+    "SPDXRef-File-zlib-open-ddk-c780584950c76e71",
+    "SPDXRef-File-zlib-open-ddk-b5a536427eafd302",
+    "SPDXRef-File-zlib-open-ddk-53b2c0481f0bab06",
+    "SPDXRef-File-zlib-open-ddk-cbd140c09e719c75",
+    "SPDXRef-File-zlib-open-ddk-7872ade997848d55",
+    "SPDXRef-File-zlib-open-ddk-ad1c72f7dce0329b",
+    "SPDXRef-File-zlib-open-ddk-7de50e03979f08ba",
+    "SPDXRef-File-zlib-open-ddk-5f3e91fac5e83d52",
+    "SPDXRef-File-zlib-open-ddk-8d05575c3f1cdc84",
+    "SPDXRef-File-zlib-open-ddk-2bf6bbf165567cdc",
+    "SPDXRef-File-zlib-open-ddk-049d81ed142a67da",
+    "SPDXRef-File-zlib-open-ddk-5a0a33c692796b0f",
+    "SPDXRef-File-zlib-open-ddk-28a25ceb7f99e252",
+    "SPDXRef-File-zlib-open-ddk-5c55a664358320d5",
+    "SPDXRef-File-zlib-open-ddk-d8561f37083a11db",
+    "SPDXRef-File-zlib-open-ddk-986b4e6c605d6e28",
+    "SPDXRef-File-zlib-open-ddk-2fe6fdc28d161fda",
+    "SPDXRef-File-zlib-open-ddk-6e0e38bddbbfb89f",
+    "SPDXRef-File-zlib-open-ddk-dea67634729fc99f",
+    "SPDXRef-File-zlib-open-ddk-b93f389672476f04",
+    "SPDXRef-File-zlib-open-ddk-220e131177747e2a",
+    "SPDXRef-File-zlib-open-ddk-5d8a73516e7e6546",
+    "SPDXRef-File-zlib-open-ddk-9a774b14e2d07fa2",
+    "SPDXRef-File-zlib-open-ddk-beff8cf547ec9611",
+    "SPDXRef-File-zlib-open-ddk-c4b06d888658ecbc",
+    "SPDXRef-File-zlib-open-ddk-caedc646916aa3c4",
+    "SPDXRef-File-zlib-open-ddk-5a5b377afc8f79a4",
+    "SPDXRef-File-zlib-open-ddk-0008dbeb8a96254a",
+    "SPDXRef-File-zlib-open-ddk-c34068f1c5ad790f",
+    "SPDXRef-File-zlib-open-ddk-102e494632122b9e",
+    "SPDXRef-File-zlib-open-ddk-6fe3521589a88e60",
+    "SPDXRef-File-zlib-open-ddk-3d34b63e3c688304",
+    "SPDXRef-File-zlib-open-ddk-129f9c90fe40b4ae",
+    "SPDXRef-File-zlib-open-ddk-26ef9d8b44783c91",
+    "SPDXRef-File-zlib-open-ddk-a4fc2cd5c2f813d1",
+    "SPDXRef-File-zlib-open-ddk-55cc4866dea6ba85",
+    "SPDXRef-File-zlib-open-ddk-5f4e47a6e5a1d2d8",
+    "SPDXRef-File-zlib-open-ddk-2ae98ab52fa7e9dd",
+    "SPDXRef-File-zlib-open-ddk-995d6e6542d230f4",
+    "SPDXRef-File-zlib-open-ddk-ae1b4be16c091deb",
+    "SPDXRef-File-zlib-open-ddk-ca9531560c4c90e8",
+    "SPDXRef-File-zlib-open-ddk-4d360e684569a204",
+    "SPDXRef-File-zlib-open-ddk-c0819f99dc570735",
+    "SPDXRef-File-zlib-open-ddk-98112e3998a72379",
+    "SPDXRef-File-zlib-open-ddk-75d5d1b9e384d311",
+    "SPDXRef-File-zlib-open-ddk-40e8ec2297e9cc4b",
+    "SPDXRef-File-zlib-open-ddk-f2296ef23fb4ab0f",
+    "SPDXRef-File-zlib-open-ddk-7acaba27d94f6399",
+    "SPDXRef-File-zlib-open-ddk-1c54e87648fe3e50",
+    "SPDXRef-File-zlib-open-ddk-527a2bd3db3a88be",
+    "SPDXRef-File-zlib-open-ddk-93154bd1325410d6",
+    "SPDXRef-File-zlib-open-ddk-4a3e3d5cfcf18fee",
+    "SPDXRef-File-zlib-open-ddk-3c92e28e57d9bad1",
+    "SPDXRef-File-zlib-open-ddk-5888d690d925afef",
+    "SPDXRef-File-zlib-open-ddk-a48db9bf0188c731",
+    "SPDXRef-File-zlib-open-ddk-b31e6ddaed7bb9b5",
+    "SPDXRef-File-zlib-open-ddk-8743c0d6a3b3a1bf",
+    "SPDXRef-File-zlib-open-ddk-7e57452500c829ca",
+    "SPDXRef-File-zlib-open-ddk-446d74fed8915dbb",
+    "SPDXRef-File-zlib-open-ddk-ba0a290cd94b273b",
+    "SPDXRef-File-zlib-open-ddk-3a6430925a520041",
+    "SPDXRef-File-zlib-open-ddk-51aba99a4750a1b3",
+    "SPDXRef-File-zlib-open-ddk-20edbced7cc200a0",
+    "SPDXRef-File-zlib-open-ddk-2ceca2349fd833c6",
+    "SPDXRef-File-zlib-open-ddk-653b1b173ecc4b9e",
+    "SPDXRef-File-zlib-open-ddk-54342e2786d50561",
+    "SPDXRef-File-zlib-open-ddk-11c92aa096ac03aa",
+    "SPDXRef-File-zlib-open-ddk-b889583aa15e94ea",
+    "SPDXRef-File-zlib-open-ddk-b76b1507380fd190",
+    "SPDXRef-File-zlib-open-ddk-89ee6d374e444ef7",
+    "SPDXRef-File-zlib-open-ddk-e9169a434a0031b5",
+    "SPDXRef-File-zlib-open-ddk-2298d6568e1d060c",
+    "SPDXRef-File-zlib-open-ddk-6452b72e27fe62b5",
+    "SPDXRef-File-zlib-open-ddk-267f967c37b22251",
+    "SPDXRef-File-zlib-open-ddk-3d203df23e988b83",
+    "SPDXRef-File-zlib-open-ddk-5eb26f7bcfba1ea7",
+    "SPDXRef-File-zlib-open-ddk-450cd7a30222720f",
+    "SPDXRef-File-zlib-open-ddk-bd0802aa856544f9",
+    "SPDXRef-File-zlib-open-ddk-a5e5fbd52d988f2f",
+    "SPDXRef-File-zlib-open-ddk-b270803c73e320f6",
+    "SPDXRef-File-zlib-open-ddk-cfdd29fbe488d5d5",
+    "SPDXRef-File-zlib-open-ddk-78b88c50b01e6fdf",
+    "SPDXRef-File-zlib-open-ddk-6feb3d88a83d04a9",
+    "SPDXRef-File-zlib-open-ddk-297d75ec31a79a32",
+    "SPDXRef-File-zlib-open-ddk-213fd58f30bb8846",
+    "SPDXRef-File-zlib-open-ddk-368e5afa2de56651",
+    "SPDXRef-File-zlib-open-ddk-9268b1d25bd8ac5a",
+    "SPDXRef-File-zlib-open-ddk-72ed8ab43b2e366c",
+    "SPDXRef-File-zlib-open-ddk-a146e90e45e683f3",
+    "SPDXRef-File-zlib-open-ddk-6763d1ab7a3137e0",
+    "SPDXRef-File-zlib-open-ddk-65d5f6d0b2106908",
+    "SPDXRef-File-zlib-open-ddk-1da72cc2777f7421",
+    "SPDXRef-File-zlib-open-ddk-89a67bf1ae4870d4",
+    "SPDXRef-File-zlib-open-ddk-a8830ef300d332ee",
+    "SPDXRef-File-zlib-open-ddk-5eb9549c80112ded",
+    "SPDXRef-File-zlib-open-ddk-b7dc838277b80ad2",
+    "SPDXRef-File-zlib-open-ddk-c6d8a2af7de12012",
+    "SPDXRef-File-zlib-open-ddk-2cc6d4ffc49732b5",
+    "SPDXRef-File-zlib-open-ddk-bf05a284eb56d316",
+    "SPDXRef-File-zlib-open-ddk-af31e2bbcd190576",
+    "SPDXRef-File-zlib-open-ddk-477c483a76d7e8af",
+    "SPDXRef-File-zlib-open-ddk-d765e0feeff80bbb",
+    "SPDXRef-File-zlib-open-ddk-4f705cd43d5b8311",
+    "SPDXRef-File-zlib-open-ddk-7d9141591923ffc6",
+    "SPDXRef-File-zlib-open-ddk-9b4e169f43380b2f",
+    "SPDXRef-File-zlib-open-ddk-e23286d96244bd33",
+    "SPDXRef-File-zlib-open-ddk-0f27f4d09fe56d6c",
+    "SPDXRef-File-zlib-open-ddk-e5179478047311b9",
+    "SPDXRef-File-zlib-open-ddk-894dd04078ffe1e0",
+    "SPDXRef-File-zlib-open-ddk-e8db3be249a70d2a",
+    "SPDXRef-File-zlib-open-ddk-97eafdb4e0408e92",
+    "SPDXRef-File-zlib-open-ddk-6605ed2895cdaa99",
+    "SPDXRef-File-zlib-open-ddk-6f88b7d3c8e43d45",
+    "SPDXRef-File-zlib-open-ddk-7a8104032590e590",
+    "SPDXRef-File-zlib-open-ddk-9eab4700f1f6658c",
+    "SPDXRef-File-zlib-open-ddk-e81019f92ec1a7c2",
+    "SPDXRef-File-zlib-open-ddk-ee6f93c36115cf5e",
+    "SPDXRef-File-zlib-open-ddk-d0159f0b3d521a31",
+    "SPDXRef-File-zlib-open-ddk-1ae4d4982da35bb0",
+    "SPDXRef-File-zlib-open-ddk-bca757d5f2388c6a",
+    "SPDXRef-File-zlib-open-ddk-fa9d175d450b8f11",
+    "SPDXRef-File-zlib-open-ddk-ee49b6f329add8a7",
+    "SPDXRef-File-zlib-open-ddk-0a0de031e5472dc0",
+    "SPDXRef-File-zlib-open-ddk-6116d93f0df5ed71",
+    "SPDXRef-File-zlib-open-ddk-b304180e82b5bfd8",
+    "SPDXRef-File-zlib-open-ddk-50b7b74964db7e42",
+    "SPDXRef-File-zlib-open-ddk-4806fe2d3458e37f",
+    "SPDXRef-File-zlib-open-ddk-cc1d047387561086",
+    "SPDXRef-File-zlib-open-ddk-e282147c4ee9fe73",
+    "SPDXRef-File-zlib-open-ddk-f5ddba20c2e76b08",
+    "SPDXRef-File-zlib-open-ddk-c7b3538725149fe8",
+    "SPDXRef-File-zlib-open-ddk-aa54e0ee82d54bd2",
+    "SPDXRef-File-zlib-open-ddk-2b118532abcea455",
+    "SPDXRef-File-zlib-open-ddk-7cbe5fca448b17cd",
+    "SPDXRef-File-zlib-open-ddk-63daef2e58facd25",
+    "SPDXRef-File-zlib-open-ddk-a4b01b53ce8d5db7",
+    "SPDXRef-File-zlib-open-ddk-03bce9225ed55fb4",
+    "SPDXRef-File-zlib-open-ddk-24b0a2bb0493ed7f",
+    "SPDXRef-File-zlib-open-ddk-38e0ba5746d995bc",
+    "SPDXRef-File-zlib-open-ddk-206ad87c07210ed4",
+    "SPDXRef-File-zlib-open-ddk-f4f5ae6189864a9f",
+    "SPDXRef-File-zlib-open-ddk-b628d1e482bb435d",
+    "SPDXRef-File-zlib-open-ddk-a4d00ae03708a6bf",
+    "SPDXRef-File-zlib-open-ddk-abfbc5eaff33c0ac",
+    "SPDXRef-File-zlib-open-ddk-0925ca012b2804b9",
+    "SPDXRef-File-zlib-open-ddk-7b66d0f5845ea764",
+    "SPDXRef-File-zlib-open-ddk-73c704902a43a513",
+    "SPDXRef-File-zlib-open-ddk-9a0a95e009e0a888",
+    "SPDXRef-File-zlib-open-ddk-46bdd369a6e78692",
+    "SPDXRef-File-zlib-open-ddk-1a10eae9e3003b30",
+    "SPDXRef-File-zlib-open-ddk-7d7357627b5e2a2d",
+    "SPDXRef-File-zlib-open-ddk-08a99aef50c23dac",
+    "SPDXRef-File-zlib-open-ddk-25d99bf8234485f9",
+    "SPDXRef-File-zlib-open-ddk-ba9e2c4ee6c19359",
+    "SPDXRef-File-zlib-open-ddk-6d522c1b95b64289",
+    "SPDXRef-File-zlib-open-ddk-50495d8a2841f875",
+    "SPDXRef-File-zlib-open-ddk-dac893f07593e81b",
+    "SPDXRef-File-zlib-open-ddk-ac337e4ab3a85df1",
+    "SPDXRef-File-zlib-open-ddk-72fbb1d3dbd8b148",
+    "SPDXRef-File-zlib-open-ddk-c4c45471b42b3cae",
+    "SPDXRef-File-zlib-open-ddk-e38a829ed0bdba7d",
+    "SPDXRef-File-zlib-open-ddk-b05ce0baa27fc8f7",
+    "SPDXRef-File-zlib-open-ddk-9756bb457c5b2f32",
+    "SPDXRef-File-zlib-open-ddk-6c9f724267c5443c",
+    "SPDXRef-File-zlib-open-ddk-7d036ba0dd25d53f",
+    "SPDXRef-File-zlib-open-ddk-f9bcafc9552d4b6e",
+    "SPDXRef-File-zlib-open-ddk-93496b9d50bee0d3",
+    "SPDXRef-File-zlib-open-ddk-136d70dceaf70b26",
+    "SPDXRef-File-zlib-open-ddk-a31e6d47a44ae092",
+    "SPDXRef-File-zlib-open-ddk-b885c59ae6c32b80",
+    "SPDXRef-File-zlib-open-ddk-d7523f1bc7357964",
+    "SPDXRef-File-zlib-open-ddk-07a8b853ea856759",
+    "SPDXRef-File-zlib-open-ddk-586921063b4f2dc1",
+    "SPDXRef-File-zlib-open-ddk-e853734df1384f50",
+    "SPDXRef-File-zlib-open-ddk-35e2d6abd12daa30",
+    "SPDXRef-File-zlib-open-ddk-eedc4225d539c631",
+    "SPDXRef-File-zlib-open-ddk-ab21696aecc57189",
+    "SPDXRef-File-zlib-open-ddk-b19c749f3cf7701a",
+    "SPDXRef-File-zlib-open-ddk-6ea7f19e5643ee42",
+    "SPDXRef-File-zlib-open-ddk-4d67745cad9648da",
+    "SPDXRef-File-zlib-open-ddk-78b78ea3f06f879c",
+    "SPDXRef-File-zlib-open-ddk-cd818094716ae731",
+    "SPDXRef-File-zlib-open-ddk-a4c2048d374a41c6",
+    "SPDXRef-File-zlib-open-ddk-bded49ad7f0bfc86",
+    "SPDXRef-File-zlib-open-ddk-c8631813fb284c87",
+    "SPDXRef-File-zlib-open-ddk-c7f47028f8f4fd14",
+    "SPDXRef-File-zlib-open-ddk-d5f6731cd2baf5d2",
+    "SPDXRef-File-zlib-open-ddk-0af2aac51dfd6c12",
+    "SPDXRef-File-zlib-open-ddk-9a30f309df8cbd9e",
+    "SPDXRef-File-zlib-open-ddk-dfd166ad29fbbb54",
+    "SPDXRef-File-zlib-open-ddk-6ec56989b198ac98",
+    "SPDXRef-File-zlib-open-ddk-b964599075b1619f",
+    "SPDXRef-File-zlib-open-ddk-a8736fa3c61a8f51",
+    "SPDXRef-File-zlib-open-ddk-f3129e0dddec60f6",
+    "SPDXRef-File-zlib-open-ddk-6d7a843622dce5ba",
+    "SPDXRef-File-zlib-open-ddk-d4faf1bea077fa80",
+    "SPDXRef-File-zlib-open-ddk-77676f24e46d8add",
+    "SPDXRef-File-zlib-open-ddk-1e8bfe5d0e51fa84",
+    "SPDXRef-File-zlib-open-ddk-f7f6794bc3c5965f",
+    "SPDXRef-File-zlib-open-ddk-044206bbacc43118",
+    "SPDXRef-File-zlib-open-ddk-0f07e498133da6ef",
+    "SPDXRef-File-zlib-open-ddk-9b3a487267bfb9cf",
+    "SPDXRef-File-zlib-open-ddk-69086a2d0eeb6633",
+    "SPDXRef-File-zlib-open-ddk-7fd778ab039d0ecd",
+    "SPDXRef-File-zlib-open-ddk-a45703bbcb5ee044",
+    "SPDXRef-File-zlib-open-ddk-df503d93cc7e4a41",
+    "SPDXRef-File-zlib-open-ddk-47e412d1e61bb59d",
+    "SPDXRef-File-zlib-open-ddk-89aa3e93a4c04f88",
+    "SPDXRef-File-zlib-open-ddk-1a4e30007254a580",
+    "SPDXRef-File-zlib-open-ddk-171b35e41a3a79b9",
+    "SPDXRef-File-zlib-open-ddk-0b2e14c4a24f109b"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "Zlib",
+   "name": "zlib (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "b0beaa0d3b6ce1629aeb793897b12deac5c87ce9"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "f0b417f5+fe44c0467787"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-zlib-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-zlib-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-zlib-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-zlib-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

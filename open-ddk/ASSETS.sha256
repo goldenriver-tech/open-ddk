@@ -1,0 +1,9 @@
+# ASSETS_RELEASE=v2.0.0
+d4cabb3cc7476b92d22772b21c226ae5bc628c6de8cc7ad82e59b7b0fae2bfb6  open-ddk-bazel-0930.tar.xz
+0dddd8e5fa1a8f0de8ed51e2e68113f3b42ed9590ed53c280ae479ad143a4bfc  open-ddk-buildtools-linux-x64-0930.tar.xz
+0949ae5024adbb2d8d2491dc7f8a9323c156a020bcd21ce96608b6875e498a5f  open-ddk-gcc-linaro-0930.tar.xz
+b98f0c104c7f4c03d4f365130ecc24e2a4ad08c7383ed6687b56da161e092914  open-ddk-prebuilt-out-0930.tar.xz
+14d65ac9abff5570192fab8b73859cf29a3404edda7c818ab61fa7786095a738  open-ddk-qemu-subprojects-0930.tar.xz
+ef0533aeff5b221f756e25f86b2673cd0ef5106a2bd79b7cd44314fa42c98d72  open-ddk-toolchain-clang-gcc-0930.tar.xz
+ca5fd29dbcd1ca307cc0939e1a21d8d6c2ec84111b2b864ad38a35fcd0b7df3f  open-ddk-toolchain-clang-gcc-full-0930.tar.xz
+9925844b78647b69ffc7f3acab54c97492db36e712f7fe24d4e4cece433a5be6  open-ddk-zircon-0930.tar.xz

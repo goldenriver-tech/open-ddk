@@ -1,0 +1,59 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/linux-nebula-d7ec982179df2206de37eee40cb129c82748eaad",
+ "files": [],
+ "name": "linux-nebula",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-linux-upstream",
+   "comment": "The upstream repository at the commit GRT's commits start from, which the fork linux (open-ddk's submodule linux-6.6) has as it is; anyone can recompute this package from upstream alone. Its 82170 files are not listed here. PackageVerificationCode: cbe1ba0fa7ff3fcd79e5eef71fef24f594554450.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://android.googlesource.com/kernel/common@d7ec982179df2206de37eee40cb129c82748eaad",
+   "externalRefs": [],
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "GPL-2.0-only WITH Linux-syscall-note",
+   "name": "linux",
+   "supplier": "Organization: android.googlesource.com",
+   "versionInfo": "nebula"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-linux-open-ddk",
+   "comment": "As open-ddk ships it at linux-6.6. the fork linux (beside open-ddk; its submodule), branch nebula at 47d5d230724c9215a51a3b12120d401e551df48f: upstream d7ec982179df2206de37eee40cb129c82748eaad and GRT's 63 commit(s), which add, change or remove 169 file(s): .clang-format, arch/arm64/configs/defconfig, arch/arm64/configs/gki_defconfig, arch/arm64/kernel/vmlinux.lds.S, drivers/Kconfig, drivers/Makefile, drivers/firmware/Kconfig, drivers/firmware/Makefile, drivers/firmware/ffa_v11/Kconfig, drivers/firmware/ffa_v11/Makefile, drivers/firmware/ffa_v11/bus.c, drivers/firmware/ffa_v11/common.h, drivers/firmware/ffa_v11/driver.c, drivers/firmware/ffa_v11/smccc.c, drivers/media/test-drivers/vicodec/Kconfig, drivers/media/test-drivers/vicodec/vicodec-core.c, drivers/media/v4l2-core/v4l2-ctrls-defs.c, drivers/misc/Makefile, drivers/misc/irq_generator.c, drivers/misc/simple_fake_irq.c .... Its 82441 files are in FILES.tsv (project linux-6.6). PackageVerificationCode: faf55ff222d33d853b5b5d7b6327dc498edab65b.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "GPL-2.0-only WITH Linux-syscall-note",
+   "name": "linux (open-ddk)",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "nebula+47d5d230724c"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-linux-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-linux-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-linux-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-linux-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

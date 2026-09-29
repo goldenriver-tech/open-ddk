@@ -1,0 +1,206 @@
+// SPDX-License-Identifier: NebulaProprietary
+/*
+* Copyright (c) 2025 MediaTek Inc.
+* Copyright 2025 GoldenRiver Technologies Co., Ltd. All rights reserved.
+*/
+/* auto8668p1_64_sos_sta.dts */
+/dts-v1/;
+
+/include/ "mt8668.dtsi"
+/include/ "features.dtsi"
+
+/ {
+    model = "grt,mt8668";
+    compatible = "grt,nebula-config";
+};
+
+&uart {
+    workmode = <2>; /*1: POLL 2:IRQ*/
+    uart_log = <1>; /*0: OFF  1: ON*/
+    status = "okay";
+};
+
+&feat_wdt_sink {
+    status = "okay";
+};
+
+&ufshci {
+    status = "okay";
+};
+
+&eint {
+    status = "okay";
+};
+
+&rtc {
+    status = "okay";
+};
+
+&watchdog {
+    status = "okay";
+};
+
+&guest_allocator {
+    status = "okay";
+};
+
+&spi0 {
+    status = "okay";
+};
+
+&spi1 {
+    status = "okay";
+};
+
+&spi2 {
+    status = "okay";
+};
+
+&spi3 {
+    status = "okay";
+};
+
+&spi4 {
+    status = "okay";
+};
+
+&spi5 {
+    status = "okay";
+};
+
+&spi6 {
+    status = "okay";
+};
+
+&spi7 {
+    status = "okay";
+};
+
+&i2c0 {
+    status = "okay";
+};
+
+&i2c1 {
+    status = "okay";
+};
+
+&i2c2 {
+    status = "okay";
+};
+
+&i2c3 {
+    status = "okay";
+};
+
+&i2c4 {
+    status = "okay";
+};
+
+&i2c5 {
+    status = "okay";
+};
+
+&i2c6 {
+    status = "okay";
+};
+
+&i2c7 {
+    status = "okay";
+};
+
+&i2c8 {
+    status = "okay";
+};
+
+&i2c9 {
+    status = "okay";
+};
+
+&i2c10 {
+    status = "okay";
+};
+
+&i2c11 {
+    status = "okay";
+};
+
+&i2c12 {
+    status = "okay";
+};
+
+&feat_root {
+    status = "okay";
+};
+
+&feat_nebulalog {
+    status = "okay";
+};
+
+&feat_vmlog {
+    status = "okay";
+};
+
+&feat_virtio_console {
+    status = "okay";
+};
+
+&feat_mmio_bus {
+    status = "okay";
+};
+
+&feat_pvblk {
+    status = "okay";
+};
+
+&feat_mmio_virtio_block {
+    status = "okay";
+};
+
+&feat_pci_bus {
+    status = "okay";
+};
+
+&feat_pci_virtio_block {
+    status = "okay";
+};
+
+&feat_virtio_cluster {
+    status = "okay";
+};
+
+&feat_virtio_spi {
+    status = "okay";
+};
+
+&feat_virtio_i2c {
+    status = "okay";
+};
+
+&feat_virtio_eint {
+    status = "okay";
+};
+
+&feat_virtio_vsock {
+    status = "okay";
+};
+
+&feat_gzfs {
+    status = "okay";
+};
+
+&feat_ufs {
+    status = "okay";
+};
+
+&feat_smc {
+    status = "okay";
+};
+
+&feat_cvm_lock {
+    status = "okay";
+};
+
+&feat_virtio_rtc {
+    status = "disabled";
+};
+

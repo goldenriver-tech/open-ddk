@@ -1,0 +1,42 @@
+From eaa9acde21009cc4d6b56ef938612dbe049c44eb Mon Sep 17 00:00:00 2001
+From: tao.jiang <tao.jiang@goldenrivertek.com>
+Date: Tue, 8 Sep 2026 00:40:26 +0000
+Subject: [PATCH] [build][zircon] Preserve PATH for Zircon make
+
+Zircon package generation invokes recursive make while preparing the
+GN rules, with an environment that only carried PATH on Darwin. GNU
+Make 4.3 uses posix_spawn() and performs its own PATH search rather
+than letting glibc execvp() fall back to the /bin:/usr/bin default,
+so on Linux hosts make resolved "make" to the zircon/make directory
+and stopped with "make: make: Permission denied" and exit code 127.
+
+Keep PATH in the helper environment whenever the caller has one, and
+leave the rest of that environment minimal as before.
+
+Test: fx set-venus venus-hee --tee none
+Test: fx full-build
+
+---
+ zircon/create_gn_rules.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/zircon/create_gn_rules.py b/zircon/create_gn_rules.py
+index 2ebd4e7..e3cc7c2 100755
+--- a/zircon/create_gn_rules.py
++++ b/zircon/create_gn_rules.py
+@@ -349,9 +349,9 @@ def main():
+     ]
+ 
+     env = {}
+-    if sys.platform == 'darwin':
+-        # The Darwin bash does not know the path to its built-in commands in an
+-        # empty environment. Thus, we always pass the PATH.
++    if 'PATH' in os.environ:
++        # The Zircon makefiles invoke recursive make through PATH. Preserve it
++        # while still keeping the rest of the GN helper environment minimal.
+         env['PATH'] = os.environ['PATH']
+     if not debug:
+         env['QUIET'] = '1'
+-- 
+2.34.1
+

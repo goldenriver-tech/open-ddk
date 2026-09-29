@@ -1,0 +1,168 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/soc_term-5493a6e7-5493a6e7c264536f5ca63fe7511e5eed991e4f20",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-soc-term-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "056e78f20afb3b9f8acedf9da05035586df22cad"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a5b388e3785ac6f05ae269479c8d80cbdd07e8c"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-upstream-836efb6e25a091dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba4937b4f8c3525dfd03456cf223a2dc31f69473"
+    }
+   ],
+   "fileName": "./Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-upstream-fd927c50611d0cc4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "16c0ea634831f5fd225d63b6aceb97e409f3c64d"
+    }
+   ],
+   "fileName": "./soc_term.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "056e78f20afb3b9f8acedf9da05035586df22cad"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-open-ddk-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a5b388e3785ac6f05ae269479c8d80cbdd07e8c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-open-ddk-836efb6e25a091dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba4937b4f8c3525dfd03456cf223a2dc31f69473"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-soc-term-open-ddk-fd927c50611d0cc4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f29de137b2e5d191ff7d6688068614fe57cf513c"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork soc_term",
+   "fileName": "./soc_term.c"
+  }
+ ],
+ "name": "soc_term-5493a6e7",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-soc-term-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/soc_term); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/linaro-swg/soc_term@5493a6e7c264536f5ca63fe7511e5eed991e4f20",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/linaro-swg/soc_term@5493a6e7c264536f5ca63fe7511e5eed991e4f20",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-soc-term-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-soc-term-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-soc-term-upstream-836efb6e25a091dc",
+    "SPDXRef-File-soc-term-upstream-fd927c50611d0cc4"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-2-Clause",
+   "name": "soc_term",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "f2f3701ee32f6b0c60ea7694a9a0ba69d9b85a50"
+   },
+   "supplier": "Organization: linaro-swg",
+   "versionInfo": "5493a6e7"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-soc-term-open-ddk",
+   "comment": "As open-ddk ships it at third_party/soc_term. the fork soc_term (beside open-ddk; its submodule), branch nebula at ead4c53e7346d24f92c13ae7a249f75e7e2ba2ac: upstream 5493a6e7c264536f5ca63fe7511e5eed991e4f20 and GRT's 1 commit(s), which add, change or remove 1 file(s): soc_term.c",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-soc-term-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-soc-term-open-ddk-0398ccd0f49298b1",
+    "SPDXRef-File-soc-term-open-ddk-836efb6e25a091dc",
+    "SPDXRef-File-soc-term-open-ddk-fd927c50611d0cc4"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-2-Clause",
+   "name": "soc_term (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "5d9739c4baf1a757a9365231ed042d4a26e2f3f2"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "5493a6e7+ead4c53e7346"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-soc-term-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-soc-term-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-soc-term-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-soc-term-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

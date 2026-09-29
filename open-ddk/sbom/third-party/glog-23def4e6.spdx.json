@@ -1,0 +1,104 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/glog-23def4e6-23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-glog-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "172ca3bbafe312a1cf09cfff26953db2f425c28e"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-glog-upstream-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3abdc11d64a600f87df086f8f74deb8b6def21f7"
+    }
+   ],
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-glog-upstream-ffa188d93460aee2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f0d91b3bec1af9a9ae34811cc92ec2bd73d437a9"
+    }
+   ],
+   "fileName": "./glog.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-glog-upstream-508eb1d0169e0a37",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e275bed67e70624b2156d135b31ba3081259dac2"
+    }
+   ],
+   "fileName": "./glog_file.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-glog-upstream-7f6dddc296967c12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ced5c8907f15bea7baa3af25c5724dce7da1976"
+    }
+   ],
+   "fileName": "./glog_test.go"
+  }
+ ],
+ "name": "glog-23def4e6",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-glog-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (garnet/go/src/thinfs/vendor/github.com/golang/glog); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/golang/glog@23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/golang/glog@23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-glog-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-glog-upstream-69e27356ef629022",
+    "SPDXRef-File-glog-upstream-ffa188d93460aee2",
+    "SPDXRef-File-glog-upstream-508eb1d0169e0a37",
+    "SPDXRef-File-glog-upstream-7f6dddc296967c12"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "Apache-2.0",
+   "name": "glog",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "576ac2316d01c4817172f589890c74471d1a6707"
+   },
+   "supplier": "Organization: golang",
+   "versionInfo": "23def4e6"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-glog-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

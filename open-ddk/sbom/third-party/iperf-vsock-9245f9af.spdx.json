@@ -1,0 +1,2698 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/iperf-vsock-9245f9af-9245f9af6d215166943b8c1e26769bf6800f2787",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-ae5630a05ddad489",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3249936c7af2fa0af3089802960bef6a1ba96792"
+    }
+   ],
+   "fileName": "./.github/CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-e92266778ac0ab35",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c38990c6be8e7534a00b30a4daa04f144dd130fd"
+    }
+   ],
+   "fileName": "./.github/ISSUE_TEMPLATE.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b8baf23d7ed7f2b7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea672bc0205e5fb09695d590052b223f64979eb6"
+    }
+   ],
+   "fileName": "./.github/PULL_REQUEST_TEMPLATE.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "34366ed3521b4fb6cc08d985861624d9d2769363"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-587d266bb27a4dc3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b8e2a6128fefa51bb3c46e7210f853f869f7e96"
+    }
+   ],
+   "fileName": "./.gitlab-ci.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02498bbc8a317f6d029cda286697c067f11861ac"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-c335a27a082cc8d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c3bc8bbc7ddbb72747871ec63b1ad15ba32867a"
+    }
+   ],
+   "fileName": "./INSTALL"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea22fb20c843b0caee62cf13f88237d270022e30"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-d5b4de16d947214e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "653963c71837eaa4fa700406ae36ccbf9cc315d7"
+    }
+   ],
+   "fileName": "./Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-4faecea6d9857941",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7fedf179e187554f9c0344d8fda60f52a1960c3"
+    }
+   ],
+   "fileName": "./Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f214249786bdf194aabe9e12848df366cde4f415"
+    }
+   ],
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-f77670399eb713d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e5bd444a09baa95fa98d30294b7558f5b29e0b2"
+    }
+   ],
+   "fileName": "./RELNOTES.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9ab3868b23ed5d5a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d34ac0f689fa0fcb27170e131d6b21085ec7e279"
+    }
+   ],
+   "fileName": "./aclocal.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-f201da200aae3ddf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1f96d0f78c35fc278b542b818d9af30f7d02eec"
+    }
+   ],
+   "fileName": "./bootstrap.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-cf37cc74df80b837",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fb66cd0954b4e4dbd6258f17a839955850a3573b"
+    }
+   ],
+   "fileName": "./config/ax_check_openssl.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-a4c78c9e2cc7673c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c4f01c6c960bb0c07d1a0836e8c2bd5503aee864"
+    }
+   ],
+   "fileName": "./config/compile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-871cae2023dd0d57",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5e7859a1f79e6ea39193b3409c2f9a32628567b7"
+    }
+   ],
+   "fileName": "./config/config.guess"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-cb251188d100caa6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "acb5dfe011a26adbf9e43e0279166dd412f2a830"
+    }
+   ],
+   "fileName": "./config/config.sub"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-6db9a72753961d9a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "81388f72975aa969aae12bb81472ade0d5f62c10"
+    }
+   ],
+   "fileName": "./config/depcomp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-dd08bac4d7621f3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45053d3e25fb26a5b3c4a00a23d6b572086a2445"
+    }
+   ],
+   "fileName": "./config/install-sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-16b573e93021dbf1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f730c9e301975a04123d559c4847cd36a51f728"
+    }
+   ],
+   "fileName": "./config/iperf_config_static_bin.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-28786a4e4fcc9c3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "031f7e2297cd59a8861bf9854bfadf81dc3d6d8b"
+    }
+   ],
+   "fileName": "./config/ltmain.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-ffa1f8d95f9de026",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a6426d9e929cca194849950ea621b497ddcd0c07"
+    }
+   ],
+   "fileName": "./config/missing"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-221ff0aa55928f04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "436f47fd921117e5d52f421e71850e5f402c591c"
+    }
+   ],
+   "fileName": "./config/mkinstalldirs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-6123df23913640b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35563c59ef9bfd3c4402e232c1a0354e098384dc"
+    }
+   ],
+   "fileName": "./config/test-driver"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-09be8533ff0a6ee5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15007bea8008e5e76d2dcda7d0db678c8e2a8073"
+    }
+   ],
+   "fileName": "./configure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-87db583be5c13c1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8b9a81b3d22e66fd46f992e72ce5a96713489a3"
+    }
+   ],
+   "fileName": "./configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b18b177b9798b6a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8cdc4dfbbdb863ba3707a6f17b00d154ffa334f0"
+    }
+   ],
+   "fileName": "./contrib/Dockerfile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-13e8c2d7429a2832",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "951ad773683eaad0de2522daaeba85370960d5b8"
+    }
+   ],
+   "fileName": "./contrib/README.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-3d7f9efc5b586316",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a4cd5187d26189f5b01d86495f0c44c211bb7424"
+    }
+   ],
+   "fileName": "./contrib/iperf3.gp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-13607ec314069507",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c78bdb2088d233c23d0d06469b72ca7fe5558ebd"
+    }
+   ],
+   "fileName": "./contrib/iperf3.service"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-1bc6cfc606aa11a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7312034dba751c81a41b91a98c930591aea432e"
+    }
+   ],
+   "fileName": "./contrib/iperf3_to_gnuplot.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-df87a4ee3bab887d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7018983fb6fb968bfd4d7d9fe59f4e780d8c7826"
+    }
+   ],
+   "fileName": "./docs/2017-04-27.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-f16d2da0ae910fe8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39bc5e95e4d3855e717c47f6e352f0c813b94884"
+    }
+   ],
+   "fileName": "./docs/2017-06-06.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-3f4c1daa84110ac0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c61084ca089ba424ff8e786f7d3936d3f43e06a"
+    }
+   ],
+   "fileName": "./docs/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-96d678e87d72d516",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2710606f6db128e7cf24e84572811bbf177a4ce9"
+    }
+   ],
+   "fileName": "./docs/_esnet/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-43ca77ee4aa0214e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2f4d14dccb170b5216d93e425febd0a8ee95943c"
+    }
+   ],
+   "fileName": "./docs/_esnet/README.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-ad7458841f8df549",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42077a455d937ee9290afb9a4757bfac79361ada"
+    }
+   ],
+   "fileName": "./docs/_esnet/deploy.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9e23a922d1202e0c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "647f6ec1972dcb283a69bbd30a319c45ab4a2aa8"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/ESnet_Final_Logos_All_Blue_Circle_Stamp_RGB.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-26d2010694ed0697",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c330c76b61dec8d2025d548231e70f33eda48d28"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/esnet.css"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b5fe4fe862c575dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8fc51ca0999e0c29ca5fcec35a098a5a8890d2d6"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/favicon.ico"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b0ac812780d31849",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e60484807a1992794c27e02ed41fe064bfea7dd"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/icon-github.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-c4aa9c66e7954540",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67197deed0f2de15b1b881443bb8fc96ad33acf"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/logo-esnet-ball-sm.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9a48b1e26ad38d9b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67197deed0f2de15b1b881443bb8fc96ad33acf"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/logo-esnet-ball.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-f5a04cfa55416633",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6316c789c4c7b0aebdae712eb7fb7768f8b8fbaf"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/logo-esnet-name.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-c2674727f544bf31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88324d7cbcfed04206be7ae02e7838a5a483d9dc"
+    }
+   ],
+   "fileName": "./docs/_esnet/static/logo-esnet.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-2be76c9fc8848b94",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5f3e463ea041359ac2abab56b1af563615a56d6c"
+    }
+   ],
+   "fileName": "./docs/_esnet/templates/layout.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-aaff391e2c630d80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "acbbdc8d2eb7eb87cd95c795eb3ca0599cf70441"
+    }
+   ],
+   "fileName": "./docs/_esnet/templates/navbar.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-6b840e46f3f4d450",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed74f1c00084465000eab083e942b00f7d08176a"
+    }
+   ],
+   "fileName": "./docs/_esnet/templates/relations.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-efbdecd2f8b9e271",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "485caf204801b847fa5aefdd447078297970569f"
+    }
+   ],
+   "fileName": "./docs/building.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-254a2da7a740675e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e7f939ae2aaf596b8a37c72fa72853feca840e69"
+    }
+   ],
+   "fileName": "./docs/conf.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-55552bb531c37e5c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eefcd5260db891255df3d3e1f9d3c8a6aad815ca"
+    }
+   ],
+   "fileName": "./docs/dev.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-2663e0a9930b92c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ba4427ab60fc25705c07a852fb4de30330923e9"
+    }
+   ],
+   "fileName": "./docs/faq.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-d0153cac95479af9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3acef500be5e555e4f512ff8e1d3a4633dafbac"
+    }
+   ],
+   "fileName": "./docs/index.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-115762e7154e8da3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "69181d91e2c2c9472b03cea018ed02e223578ec3"
+    }
+   ],
+   "fileName": "./docs/invoking.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-f279823869b3dd2c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58a7dd72637a22ab7daab68d2fadfadd090bdc64"
+    }
+   ],
+   "fileName": "./docs/news.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-3fcebac97b5d1079",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6806eba8002d643e9b15aafcccdec4b49ca8a535"
+    }
+   ],
+   "fileName": "./docs/obtaining.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-ae17d03698490f51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f85abf56f3d58ceffe08af2ab5e75bfd830e647"
+    }
+   ],
+   "fileName": "./examples/Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-c910d1786bfa887e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a702b34da719f60ceb08df0af8a02cd45d33f15"
+    }
+   ],
+   "fileName": "./examples/Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-fafd66d97c678e2d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "56956fe36894cb34bad9264d55eee4214fd57424"
+    }
+   ],
+   "fileName": "./examples/mic.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-47d5954f54e5a9b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8201ffab90d935703b4d722ff545dfc59b95eae6"
+    }
+   ],
+   "fileName": "./examples/mis.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-bc2944f12efc8d2c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "410ebfad84ab0eda3a55405f5aad7fe21f6cdc88"
+    }
+   ],
+   "fileName": "./iperf3.spec.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-46681bd74dc27366",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2674e8afc70aafd16bed34c899a4454053e33106"
+    }
+   ],
+   "fileName": "./make_release"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-67e794015a01b881",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5419e67c5b70ef990b9bb2ed772abcde5616fc4d"
+    }
+   ],
+   "fileName": "./src/Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-49df23e069b78a53",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "daefc3af124f55aa563b980b04b92a498bb82e90"
+    }
+   ],
+   "fileName": "./src/Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-54c4c311d1206fce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f2b0561e3a9703dd7affee3c5b3e38569f209dae"
+    }
+   ],
+   "fileName": "./src/cjson.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-7a4bce74d4690566",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e02fc127626895f0bc174657d5f27675c6c6bf5e"
+    }
+   ],
+   "fileName": "./src/cjson.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-dc573788b0474cf2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0c3466d574c9c358ffb863b02298ff587cf9c6ce"
+    }
+   ],
+   "fileName": "./src/dscp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-534568362d23185f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db10a9098851498dd390699348091f26567175ed"
+    }
+   ],
+   "fileName": "./src/flowlabel.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-4603f6dc02c76258",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e219a7e5335fae2a6e9a1a818f0acebba1c90c0"
+    }
+   ],
+   "fileName": "./src/iperf.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-cd88189591717f08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e28ad7f59e2c06076962916d24b5a80eda039ae6"
+    }
+   ],
+   "fileName": "./src/iperf3.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-079707b3f23b5fba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bb71314cad93a25088663862e605e864fd902902"
+    }
+   ],
+   "fileName": "./src/iperf_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-1f9447ca20b5371a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dce17cb2158f65fbf9470ac220a47381c9deef3b"
+    }
+   ],
+   "fileName": "./src/iperf_api.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b27982f50e1663cc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1803e95139bdc1318c1eabe706e1aa14197eb23"
+    }
+   ],
+   "fileName": "./src/iperf_auth.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9349f243f228329c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4338e6bded1865c658738a8ac4135a61eb249bb"
+    }
+   ],
+   "fileName": "./src/iperf_auth.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-c6bdcd778dd580e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8fd42bb509b445c09c9d889a504d80db8756b891"
+    }
+   ],
+   "fileName": "./src/iperf_client_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-12563a585d0c917e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e84462b5ab69f9d7df8d71df305030e71e04a317"
+    }
+   ],
+   "fileName": "./src/iperf_config.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-d164144339e42745",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eab0e5ca87b691d11621f3d9673db98edaf33e27"
+    }
+   ],
+   "fileName": "./src/iperf_error.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-15d2e0c112d7a32b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8fa77eb15461218ec29a8cd15ad8da47a2fc245e"
+    }
+   ],
+   "fileName": "./src/iperf_locale.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-4e2962079a79e825",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6eacdbff289ee2678b7a017f770bcc95d43e3c30"
+    }
+   ],
+   "fileName": "./src/iperf_locale.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-726516d4cc316655",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc868a440c4d32173cbf37a60dcd842f400a534c"
+    }
+   ],
+   "fileName": "./src/iperf_sctp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-c0abdf7a4d2fe1f4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc2ab540b3609c67c1ed96bf787a27ff7d3b01ba"
+    }
+   ],
+   "fileName": "./src/iperf_sctp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-08e5c4e710dad978",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25bfb0a98e4d89652f58a997d40e3dc671a015ed"
+    }
+   ],
+   "fileName": "./src/iperf_server_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-adff9af45f073e09",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32e832369488f6417a23f029f0f04304cbb72050"
+    }
+   ],
+   "fileName": "./src/iperf_tcp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-e1296af421201569",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4a03143433aabc3411e5824e956ef9f741abc99"
+    }
+   ],
+   "fileName": "./src/iperf_tcp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-57bbd563361c0296",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8045d14eaf7c900902f569279726685019ad11b7"
+    }
+   ],
+   "fileName": "./src/iperf_time.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-7160e462e7cf4ad6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "07626fcb2dd8d752e265b13d737fa0a61c3759bd"
+    }
+   ],
+   "fileName": "./src/iperf_time.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-22efa630271604e7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b9fb62fa24e916a50adcb3aaf854a31acc5139d"
+    }
+   ],
+   "fileName": "./src/iperf_udp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b97542ecbed2c6ee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bcf27ffc16cafdf425936daca912920c782759e0"
+    }
+   ],
+   "fileName": "./src/iperf_udp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-dfafd49530c9e6c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c4bb2bf5bbeeb7e1f90a5c8e5a976e56f750454"
+    }
+   ],
+   "fileName": "./src/iperf_util.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-a5fd8083f3b4f60e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "34fe697f39bd14acedb8a16fdbc3d4aa88b8627d"
+    }
+   ],
+   "fileName": "./src/iperf_util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9db1efa2fdda266d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "735875d8494df1e20a6c6b16088ad85dc037332a"
+    }
+   ],
+   "fileName": "./src/iperf_vsock.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-69515817fec5bd93",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d385c7f9ee0b5095e1cd7f9f43acc9e288e52737"
+    }
+   ],
+   "fileName": "./src/iperf_vsock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-134ae9e89e4ed3c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b14bc54226419fd68eefb3193f44903d9887133"
+    }
+   ],
+   "fileName": "./src/libiperf.3"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-3a576e09615c0e19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d2738cdece1d35176bdf5d0566f38ae065cbab2"
+    }
+   ],
+   "fileName": "./src/main.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-52802b963a36d516",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c830013ea20dfd8209e612d07c5474eda3f723ef"
+    }
+   ],
+   "fileName": "./src/net.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-059bb21560b58f84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4291cd621c637a8ec24efbf70fb2628970bec9b8"
+    }
+   ],
+   "fileName": "./src/net.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-026d8b6556043167",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f90eeb75ca1004ae68f7ac4546c7c5eb9e70b7ae"
+    }
+   ],
+   "fileName": "./src/portable_endian.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-b47ab61a9e17373c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b487c5b8a65dc01a3497598cda03dd9835b7aeca"
+    }
+   ],
+   "fileName": "./src/private.pem"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-cde73156de4e25fc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fdb96a6176f204f32e2197cad05d43580d57e88"
+    }
+   ],
+   "fileName": "./src/public.pem"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-cc4e2384c7265f55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1add5d11dde5ea10b9dc287f9d37092a25e2dd8"
+    }
+   ],
+   "fileName": "./src/queue.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-158aadcab5225f14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cabdc1f49215a517215c24fb5b47eca23e82a877"
+    }
+   ],
+   "fileName": "./src/t_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-df984f6db7e18ce7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "68a2fc70259048fdfc09c7826dff7bcfb1100132"
+    }
+   ],
+   "fileName": "./src/t_auth.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-25f9a24c1f11e286",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9e70c6f6e108f22147270c3cb60c93bec3b7751"
+    }
+   ],
+   "fileName": "./src/t_timer.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-10dffdccc7721b7a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bb38066a7b2436fcbd3980e2f65d81e61aa7e839"
+    }
+   ],
+   "fileName": "./src/t_units.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9f1fe17a606ae0c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fc792b6f24c19b0706a35a4c6eecb0da4ff222dc"
+    }
+   ],
+   "fileName": "./src/t_uuid.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-a955d0ca80d1e034",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fafa51668d73e125992405315f5cf0941809b799"
+    }
+   ],
+   "fileName": "./src/tcp_info.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-ce1e63c947884eee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "188066a8c48c274f7a0b536e407e131fb89030e3"
+    }
+   ],
+   "fileName": "./src/timer.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-9c7e807db0ed0c7c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17cf3be33fdb69b355363b9c842fd4adf104edb5"
+    }
+   ],
+   "fileName": "./src/timer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-2e3074c221406064",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aea3fb09333c101b16d84d64289d5214ce507dc7"
+    }
+   ],
+   "fileName": "./src/units.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-603cdcab48d71d73",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4f15ff19d0bec8cd7234dcdb13a295ddb3c7011d"
+    }
+   ],
+   "fileName": "./src/units.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-0abc253f11359dad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fc71f24e3f96cbc3f605917be59cd119976c519"
+    }
+   ],
+   "fileName": "./src/version.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-cbdd0e0694dfb651",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53f412868a9850adcb3079b57b3f115e8d51e1e7"
+    }
+   ],
+   "fileName": "./src/vsock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-upstream-f632b2728721605c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b40fd976013338386db60222bfdf9b4ea875939"
+    }
+   ],
+   "fileName": "./test_commands.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-ae5630a05ddad489",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3249936c7af2fa0af3089802960bef6a1ba96792"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-e92266778ac0ab35",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c38990c6be8e7534a00b30a4daa04f144dd130fd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/ISSUE_TEMPLATE.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b8baf23d7ed7f2b7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea672bc0205e5fb09695d590052b223f64979eb6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/PULL_REQUEST_TEMPLATE.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "34366ed3521b4fb6cc08d985861624d9d2769363"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-587d266bb27a4dc3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b8e2a6128fefa51bb3c46e7210f853f869f7e96"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.gitlab-ci.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02498bbc8a317f6d029cda286697c067f11861ac"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-c335a27a082cc8d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c3bc8bbc7ddbb72747871ec63b1ad15ba32867a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./INSTALL"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea22fb20c843b0caee62cf13f88237d270022e30"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-d5b4de16d947214e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "653963c71837eaa4fa700406ae36ccbf9cc315d7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-4faecea6d9857941",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7fedf179e187554f9c0344d8fda60f52a1960c3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f214249786bdf194aabe9e12848df366cde4f415"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-f77670399eb713d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e5bd444a09baa95fa98d30294b7558f5b29e0b2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./RELNOTES.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9ab3868b23ed5d5a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d34ac0f689fa0fcb27170e131d6b21085ec7e279"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./aclocal.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-f201da200aae3ddf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1f96d0f78c35fc278b542b818d9af30f7d02eec"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bootstrap.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-cf37cc74df80b837",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fb66cd0954b4e4dbd6258f17a839955850a3573b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/ax_check_openssl.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-a4c78c9e2cc7673c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c4f01c6c960bb0c07d1a0836e8c2bd5503aee864"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/compile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-871cae2023dd0d57",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5e7859a1f79e6ea39193b3409c2f9a32628567b7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/config.guess"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-cb251188d100caa6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "acb5dfe011a26adbf9e43e0279166dd412f2a830"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/config.sub"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-6db9a72753961d9a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "81388f72975aa969aae12bb81472ade0d5f62c10"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/depcomp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-dd08bac4d7621f3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45053d3e25fb26a5b3c4a00a23d6b572086a2445"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/install-sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-16b573e93021dbf1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f730c9e301975a04123d559c4847cd36a51f728"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/iperf_config_static_bin.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-28786a4e4fcc9c3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "031f7e2297cd59a8861bf9854bfadf81dc3d6d8b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/ltmain.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-ffa1f8d95f9de026",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a6426d9e929cca194849950ea621b497ddcd0c07"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/missing"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-221ff0aa55928f04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "436f47fd921117e5d52f421e71850e5f402c591c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/mkinstalldirs"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-6123df23913640b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35563c59ef9bfd3c4402e232c1a0354e098384dc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config/test-driver"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-09be8533ff0a6ee5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15007bea8008e5e76d2dcda7d0db678c8e2a8073"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./configure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-87db583be5c13c1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8b9a81b3d22e66fd46f992e72ce5a96713489a3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b18b177b9798b6a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8cdc4dfbbdb863ba3707a6f17b00d154ffa334f0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/Dockerfile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-13e8c2d7429a2832",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "951ad773683eaad0de2522daaeba85370960d5b8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/README.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-3d7f9efc5b586316",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a4cd5187d26189f5b01d86495f0c44c211bb7424"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iperf3.gp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-13607ec314069507",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c78bdb2088d233c23d0d06469b72ca7fe5558ebd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iperf3.service"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-1bc6cfc606aa11a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7312034dba751c81a41b91a98c930591aea432e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./contrib/iperf3_to_gnuplot.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-df87a4ee3bab887d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7018983fb6fb968bfd4d7d9fe59f4e780d8c7826"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/2017-04-27.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-f16d2da0ae910fe8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39bc5e95e4d3855e717c47f6e352f0c813b94884"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/2017-06-06.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-3f4c1daa84110ac0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c61084ca089ba424ff8e786f7d3936d3f43e06a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-96d678e87d72d516",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2710606f6db128e7cf24e84572811bbf177a4ce9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-43ca77ee4aa0214e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2f4d14dccb170b5216d93e425febd0a8ee95943c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/README.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-ad7458841f8df549",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42077a455d937ee9290afb9a4757bfac79361ada"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/deploy.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9e23a922d1202e0c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "647f6ec1972dcb283a69bbd30a319c45ab4a2aa8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/ESnet_Final_Logos_All_Blue_Circle_Stamp_RGB.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-26d2010694ed0697",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c330c76b61dec8d2025d548231e70f33eda48d28"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/esnet.css"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b5fe4fe862c575dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8fc51ca0999e0c29ca5fcec35a098a5a8890d2d6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/favicon.ico"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b0ac812780d31849",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e60484807a1992794c27e02ed41fe064bfea7dd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/icon-github.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-c4aa9c66e7954540",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67197deed0f2de15b1b881443bb8fc96ad33acf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/logo-esnet-ball-sm.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9a48b1e26ad38d9b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e67197deed0f2de15b1b881443bb8fc96ad33acf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/logo-esnet-ball.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-f5a04cfa55416633",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6316c789c4c7b0aebdae712eb7fb7768f8b8fbaf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/logo-esnet-name.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-c2674727f544bf31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88324d7cbcfed04206be7ae02e7838a5a483d9dc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/static/logo-esnet.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-2be76c9fc8848b94",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5f3e463ea041359ac2abab56b1af563615a56d6c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/templates/layout.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-aaff391e2c630d80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "acbbdc8d2eb7eb87cd95c795eb3ca0599cf70441"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/templates/navbar.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-6b840e46f3f4d450",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed74f1c00084465000eab083e942b00f7d08176a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_esnet/templates/relations.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-efbdecd2f8b9e271",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "485caf204801b847fa5aefdd447078297970569f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/building.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-254a2da7a740675e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e7f939ae2aaf596b8a37c72fa72853feca840e69"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/conf.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-55552bb531c37e5c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eefcd5260db891255df3d3e1f9d3c8a6aad815ca"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/dev.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-2663e0a9930b92c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ba4427ab60fc25705c07a852fb4de30330923e9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/faq.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-d0153cac95479af9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3acef500be5e555e4f512ff8e1d3a4633dafbac"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/index.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-115762e7154e8da3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "69181d91e2c2c9472b03cea018ed02e223578ec3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/invoking.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-f279823869b3dd2c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58a7dd72637a22ab7daab68d2fadfadd090bdc64"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/news.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-3fcebac97b5d1079",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6806eba8002d643e9b15aafcccdec4b49ca8a535"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/obtaining.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-ae17d03698490f51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f85abf56f3d58ceffe08af2ab5e75bfd830e647"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-c910d1786bfa887e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a702b34da719f60ceb08df0af8a02cd45d33f15"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-fafd66d97c678e2d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "56956fe36894cb34bad9264d55eee4214fd57424"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/mic.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-47d5954f54e5a9b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8201ffab90d935703b4d722ff545dfc59b95eae6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./examples/mis.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-bc2944f12efc8d2c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "410ebfad84ab0eda3a55405f5aad7fe21f6cdc88"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./iperf3.spec.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-46681bd74dc27366",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2674e8afc70aafd16bed34c899a4454053e33106"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./make_release"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-67e794015a01b881",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5419e67c5b70ef990b9bb2ed772abcde5616fc4d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-49df23e069b78a53",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "daefc3af124f55aa563b980b04b92a498bb82e90"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-54c4c311d1206fce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f2b0561e3a9703dd7affee3c5b3e38569f209dae"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/cjson.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-7a4bce74d4690566",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e02fc127626895f0bc174657d5f27675c6c6bf5e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/cjson.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-dc573788b0474cf2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0c3466d574c9c358ffb863b02298ff587cf9c6ce"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/dscp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-534568362d23185f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db10a9098851498dd390699348091f26567175ed"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/flowlabel.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-4603f6dc02c76258",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e219a7e5335fae2a6e9a1a818f0acebba1c90c0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-cd88189591717f08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e28ad7f59e2c06076962916d24b5a80eda039ae6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf3.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-079707b3f23b5fba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f44805bae6b299dfd633b9e0c17f963e5adecb70"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/iperf_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-1f9447ca20b5371a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b143c597a753307ab238870c35ef20b93019e78"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/iperf_api.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b27982f50e1663cc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1803e95139bdc1318c1eabe706e1aa14197eb23"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_auth.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9349f243f228329c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4338e6bded1865c658738a8ac4135a61eb249bb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_auth.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-c6bdcd778dd580e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8fd42bb509b445c09c9d889a504d80db8756b891"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_client_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-12563a585d0c917e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e84462b5ab69f9d7df8d71df305030e71e04a317"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_config.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-d164144339e42745",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eab0e5ca87b691d11621f3d9673db98edaf33e27"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_error.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-15d2e0c112d7a32b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "33df0dd3b061d80912a17f7b4ce7390d660c8c77"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/iperf_locale.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-4e2962079a79e825",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6eacdbff289ee2678b7a017f770bcc95d43e3c30"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_locale.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-726516d4cc316655",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc868a440c4d32173cbf37a60dcd842f400a534c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_sctp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-c0abdf7a4d2fe1f4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc2ab540b3609c67c1ed96bf787a27ff7d3b01ba"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_sctp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-08e5c4e710dad978",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25bfb0a98e4d89652f58a997d40e3dc671a015ed"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_server_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-adff9af45f073e09",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32e832369488f6417a23f029f0f04304cbb72050"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_tcp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-e1296af421201569",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4a03143433aabc3411e5824e956ef9f741abc99"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_tcp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-57bbd563361c0296",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8045d14eaf7c900902f569279726685019ad11b7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_time.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-7160e462e7cf4ad6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "07626fcb2dd8d752e265b13d737fa0a61c3759bd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_time.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-22efa630271604e7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b9fb62fa24e916a50adcb3aaf854a31acc5139d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_udp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b97542ecbed2c6ee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bcf27ffc16cafdf425936daca912920c782759e0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_udp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-dfafd49530c9e6c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c4bb2bf5bbeeb7e1f90a5c8e5a976e56f750454"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_util.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-a5fd8083f3b4f60e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "34fe697f39bd14acedb8a16fdbc3d4aa88b8627d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/iperf_util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9db1efa2fdda266d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ab355b114ad9e3ebee466ef59df7dd079d62e1ed"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/iperf_vsock.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-69515817fec5bd93",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "741aeb74600fc12b653192405259041ef691a78c"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/iperf_vsock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-134ae9e89e4ed3c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b14bc54226419fd68eefb3193f44903d9887133"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/libiperf.3"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-3a576e09615c0e19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d2738cdece1d35176bdf5d0566f38ae065cbab2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/main.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-52802b963a36d516",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac76c9507da00682319d40045e466198514cab59"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/net.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-059bb21560b58f84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4291cd621c637a8ec24efbf70fb2628970bec9b8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/net.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-026d8b6556043167",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f90eeb75ca1004ae68f7ac4546c7c5eb9e70b7ae"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/portable_endian.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-b47ab61a9e17373c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b487c5b8a65dc01a3497598cda03dd9835b7aeca"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/private.pem"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-cde73156de4e25fc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fdb96a6176f204f32e2197cad05d43580d57e88"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/public.pem"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-cc4e2384c7265f55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1add5d11dde5ea10b9dc287f9d37092a25e2dd8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/queue.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-158aadcab5225f14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cabdc1f49215a517215c24fb5b47eca23e82a877"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/t_api.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-df984f6db7e18ce7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "68a2fc70259048fdfc09c7826dff7bcfb1100132"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/t_auth.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-25f9a24c1f11e286",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9e70c6f6e108f22147270c3cb60c93bec3b7751"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/t_timer.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-10dffdccc7721b7a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bb38066a7b2436fcbd3980e2f65d81e61aa7e839"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/t_units.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9f1fe17a606ae0c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fc792b6f24c19b0706a35a4c6eecb0da4ff222dc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/t_uuid.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-a955d0ca80d1e034",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fafa51668d73e125992405315f5cf0941809b799"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/tcp_info.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-ce1e63c947884eee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "188066a8c48c274f7a0b536e407e131fb89030e3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/timer.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-9c7e807db0ed0c7c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17cf3be33fdb69b355363b9c842fd4adf104edb5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/timer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-2e3074c221406064",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aea3fb09333c101b16d84d64289d5214ce507dc7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/units.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-603cdcab48d71d73",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4f15ff19d0bec8cd7234dcdb13a295ddb3c7011d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/units.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-0abc253f11359dad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fc71f24e3f96cbc3f605917be59cd119976c519"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/version.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-cbdd0e0694dfb651",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "14e71003ab43e6a56617261454a3e1bbfc0e5123"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork iperf-vsock",
+   "fileName": "./src/vsock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-iperf-vsock-open-ddk-f632b2728721605c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b40fd976013338386db60222bfdf9b4ea875939"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test_commands.sh"
+  }
+ ],
+ "name": "iperf-vsock-9245f9af",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-iperf-vsock-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/iperf-vsock); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/stefano-garzarella/iperf-vsock@9245f9af6d215166943b8c1e26769bf6800f2787",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/stefano-garzarella/iperf-vsock@9245f9af6d215166943b8c1e26769bf6800f2787",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-iperf-vsock-upstream-ae5630a05ddad489",
+    "SPDXRef-File-iperf-vsock-upstream-e92266778ac0ab35",
+    "SPDXRef-File-iperf-vsock-upstream-b8baf23d7ed7f2b7",
+    "SPDXRef-File-iperf-vsock-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-iperf-vsock-upstream-587d266bb27a4dc3",
+    "SPDXRef-File-iperf-vsock-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-iperf-vsock-upstream-c335a27a082cc8d1",
+    "SPDXRef-File-iperf-vsock-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-iperf-vsock-upstream-d5b4de16d947214e",
+    "SPDXRef-File-iperf-vsock-upstream-4faecea6d9857941",
+    "SPDXRef-File-iperf-vsock-upstream-8ec9a00bfd09b319",
+    "SPDXRef-File-iperf-vsock-upstream-f77670399eb713d3",
+    "SPDXRef-File-iperf-vsock-upstream-9ab3868b23ed5d5a",
+    "SPDXRef-File-iperf-vsock-upstream-f201da200aae3ddf",
+    "SPDXRef-File-iperf-vsock-upstream-cf37cc74df80b837",
+    "SPDXRef-File-iperf-vsock-upstream-a4c78c9e2cc7673c",
+    "SPDXRef-File-iperf-vsock-upstream-871cae2023dd0d57",
+    "SPDXRef-File-iperf-vsock-upstream-cb251188d100caa6",
+    "SPDXRef-File-iperf-vsock-upstream-6db9a72753961d9a",
+    "SPDXRef-File-iperf-vsock-upstream-dd08bac4d7621f3f",
+    "SPDXRef-File-iperf-vsock-upstream-16b573e93021dbf1",
+    "SPDXRef-File-iperf-vsock-upstream-28786a4e4fcc9c3f",
+    "SPDXRef-File-iperf-vsock-upstream-ffa1f8d95f9de026",
+    "SPDXRef-File-iperf-vsock-upstream-221ff0aa55928f04",
+    "SPDXRef-File-iperf-vsock-upstream-6123df23913640b9",
+    "SPDXRef-File-iperf-vsock-upstream-09be8533ff0a6ee5",
+    "SPDXRef-File-iperf-vsock-upstream-87db583be5c13c1f",
+    "SPDXRef-File-iperf-vsock-upstream-b18b177b9798b6a2",
+    "SPDXRef-File-iperf-vsock-upstream-13e8c2d7429a2832",
+    "SPDXRef-File-iperf-vsock-upstream-3d7f9efc5b586316",
+    "SPDXRef-File-iperf-vsock-upstream-13607ec314069507",
+    "SPDXRef-File-iperf-vsock-upstream-1bc6cfc606aa11a2",
+    "SPDXRef-File-iperf-vsock-upstream-df87a4ee3bab887d",
+    "SPDXRef-File-iperf-vsock-upstream-f16d2da0ae910fe8",
+    "SPDXRef-File-iperf-vsock-upstream-3f4c1daa84110ac0",
+    "SPDXRef-File-iperf-vsock-upstream-96d678e87d72d516",
+    "SPDXRef-File-iperf-vsock-upstream-43ca77ee4aa0214e",
+    "SPDXRef-File-iperf-vsock-upstream-ad7458841f8df549",
+    "SPDXRef-File-iperf-vsock-upstream-9e23a922d1202e0c",
+    "SPDXRef-File-iperf-vsock-upstream-26d2010694ed0697",
+    "SPDXRef-File-iperf-vsock-upstream-b5fe4fe862c575dc",
+    "SPDXRef-File-iperf-vsock-upstream-b0ac812780d31849",
+    "SPDXRef-File-iperf-vsock-upstream-c4aa9c66e7954540",
+    "SPDXRef-File-iperf-vsock-upstream-9a48b1e26ad38d9b",
+    "SPDXRef-File-iperf-vsock-upstream-f5a04cfa55416633",
+    "SPDXRef-File-iperf-vsock-upstream-c2674727f544bf31",
+    "SPDXRef-File-iperf-vsock-upstream-2be76c9fc8848b94",
+    "SPDXRef-File-iperf-vsock-upstream-aaff391e2c630d80",
+    "SPDXRef-File-iperf-vsock-upstream-6b840e46f3f4d450",
+    "SPDXRef-File-iperf-vsock-upstream-efbdecd2f8b9e271",
+    "SPDXRef-File-iperf-vsock-upstream-254a2da7a740675e",
+    "SPDXRef-File-iperf-vsock-upstream-55552bb531c37e5c",
+    "SPDXRef-File-iperf-vsock-upstream-2663e0a9930b92c1",
+    "SPDXRef-File-iperf-vsock-upstream-d0153cac95479af9",
+    "SPDXRef-File-iperf-vsock-upstream-115762e7154e8da3",
+    "SPDXRef-File-iperf-vsock-upstream-f279823869b3dd2c",
+    "SPDXRef-File-iperf-vsock-upstream-3fcebac97b5d1079",
+    "SPDXRef-File-iperf-vsock-upstream-ae17d03698490f51",
+    "SPDXRef-File-iperf-vsock-upstream-c910d1786bfa887e",
+    "SPDXRef-File-iperf-vsock-upstream-fafd66d97c678e2d",
+    "SPDXRef-File-iperf-vsock-upstream-47d5954f54e5a9b2",
+    "SPDXRef-File-iperf-vsock-upstream-bc2944f12efc8d2c",
+    "SPDXRef-File-iperf-vsock-upstream-46681bd74dc27366",
+    "SPDXRef-File-iperf-vsock-upstream-67e794015a01b881",
+    "SPDXRef-File-iperf-vsock-upstream-49df23e069b78a53",
+    "SPDXRef-File-iperf-vsock-upstream-54c4c311d1206fce",
+    "SPDXRef-File-iperf-vsock-upstream-7a4bce74d4690566",
+    "SPDXRef-File-iperf-vsock-upstream-dc573788b0474cf2",
+    "SPDXRef-File-iperf-vsock-upstream-534568362d23185f",
+    "SPDXRef-File-iperf-vsock-upstream-4603f6dc02c76258",
+    "SPDXRef-File-iperf-vsock-upstream-cd88189591717f08",
+    "SPDXRef-File-iperf-vsock-upstream-079707b3f23b5fba",
+    "SPDXRef-File-iperf-vsock-upstream-1f9447ca20b5371a",
+    "SPDXRef-File-iperf-vsock-upstream-b27982f50e1663cc",
+    "SPDXRef-File-iperf-vsock-upstream-9349f243f228329c",
+    "SPDXRef-File-iperf-vsock-upstream-c6bdcd778dd580e6",
+    "SPDXRef-File-iperf-vsock-upstream-12563a585d0c917e",
+    "SPDXRef-File-iperf-vsock-upstream-d164144339e42745",
+    "SPDXRef-File-iperf-vsock-upstream-15d2e0c112d7a32b",
+    "SPDXRef-File-iperf-vsock-upstream-4e2962079a79e825",
+    "SPDXRef-File-iperf-vsock-upstream-726516d4cc316655",
+    "SPDXRef-File-iperf-vsock-upstream-c0abdf7a4d2fe1f4",
+    "SPDXRef-File-iperf-vsock-upstream-08e5c4e710dad978",
+    "SPDXRef-File-iperf-vsock-upstream-adff9af45f073e09",
+    "SPDXRef-File-iperf-vsock-upstream-e1296af421201569",
+    "SPDXRef-File-iperf-vsock-upstream-57bbd563361c0296",
+    "SPDXRef-File-iperf-vsock-upstream-7160e462e7cf4ad6",
+    "SPDXRef-File-iperf-vsock-upstream-22efa630271604e7",
+    "SPDXRef-File-iperf-vsock-upstream-b97542ecbed2c6ee",
+    "SPDXRef-File-iperf-vsock-upstream-dfafd49530c9e6c8",
+    "SPDXRef-File-iperf-vsock-upstream-a5fd8083f3b4f60e",
+    "SPDXRef-File-iperf-vsock-upstream-9db1efa2fdda266d",
+    "SPDXRef-File-iperf-vsock-upstream-69515817fec5bd93",
+    "SPDXRef-File-iperf-vsock-upstream-134ae9e89e4ed3c4",
+    "SPDXRef-File-iperf-vsock-upstream-3a576e09615c0e19",
+    "SPDXRef-File-iperf-vsock-upstream-52802b963a36d516",
+    "SPDXRef-File-iperf-vsock-upstream-059bb21560b58f84",
+    "SPDXRef-File-iperf-vsock-upstream-026d8b6556043167",
+    "SPDXRef-File-iperf-vsock-upstream-b47ab61a9e17373c",
+    "SPDXRef-File-iperf-vsock-upstream-cde73156de4e25fc",
+    "SPDXRef-File-iperf-vsock-upstream-cc4e2384c7265f55",
+    "SPDXRef-File-iperf-vsock-upstream-158aadcab5225f14",
+    "SPDXRef-File-iperf-vsock-upstream-df984f6db7e18ce7",
+    "SPDXRef-File-iperf-vsock-upstream-25f9a24c1f11e286",
+    "SPDXRef-File-iperf-vsock-upstream-10dffdccc7721b7a",
+    "SPDXRef-File-iperf-vsock-upstream-9f1fe17a606ae0c1",
+    "SPDXRef-File-iperf-vsock-upstream-a955d0ca80d1e034",
+    "SPDXRef-File-iperf-vsock-upstream-ce1e63c947884eee",
+    "SPDXRef-File-iperf-vsock-upstream-9c7e807db0ed0c7c",
+    "SPDXRef-File-iperf-vsock-upstream-2e3074c221406064",
+    "SPDXRef-File-iperf-vsock-upstream-603cdcab48d71d73",
+    "SPDXRef-File-iperf-vsock-upstream-0abc253f11359dad",
+    "SPDXRef-File-iperf-vsock-upstream-cbdd0e0694dfb651",
+    "SPDXRef-File-iperf-vsock-upstream-f632b2728721605c"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "iperf-vsock",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "58c2486fba8b0cfa38c9d4d0a045011b639d68e5"
+   },
+   "supplier": "Organization: stefano-garzarella",
+   "versionInfo": "9245f9af"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-iperf-vsock-open-ddk",
+   "comment": "As open-ddk ships it at third_party/iperf-vsock. the fork iperf-vsock (beside open-ddk; its submodule), branch nebula at 1c8b71798e3e0fe68db233fedfac9c7346f93d22: upstream 9245f9af6d215166943b8c1e26769bf6800f2787 and GRT's 1 commit(s), which add, change or remove 7 file(s): src/iperf_api.c, src/iperf_api.h, src/iperf_locale.c, src/iperf_vsock.c, src/iperf_vsock.h, src/net.c, src/vsock.h",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-iperf-vsock-open-ddk-ae5630a05ddad489",
+    "SPDXRef-File-iperf-vsock-open-ddk-e92266778ac0ab35",
+    "SPDXRef-File-iperf-vsock-open-ddk-b8baf23d7ed7f2b7",
+    "SPDXRef-File-iperf-vsock-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-iperf-vsock-open-ddk-587d266bb27a4dc3",
+    "SPDXRef-File-iperf-vsock-open-ddk-dea01dd89a3b6028",
+    "SPDXRef-File-iperf-vsock-open-ddk-c335a27a082cc8d1",
+    "SPDXRef-File-iperf-vsock-open-ddk-0398ccd0f49298b1",
+    "SPDXRef-File-iperf-vsock-open-ddk-d5b4de16d947214e",
+    "SPDXRef-File-iperf-vsock-open-ddk-4faecea6d9857941",
+    "SPDXRef-File-iperf-vsock-open-ddk-8ec9a00bfd09b319",
+    "SPDXRef-File-iperf-vsock-open-ddk-f77670399eb713d3",
+    "SPDXRef-File-iperf-vsock-open-ddk-9ab3868b23ed5d5a",
+    "SPDXRef-File-iperf-vsock-open-ddk-f201da200aae3ddf",
+    "SPDXRef-File-iperf-vsock-open-ddk-cf37cc74df80b837",
+    "SPDXRef-File-iperf-vsock-open-ddk-a4c78c9e2cc7673c",
+    "SPDXRef-File-iperf-vsock-open-ddk-871cae2023dd0d57",
+    "SPDXRef-File-iperf-vsock-open-ddk-cb251188d100caa6",
+    "SPDXRef-File-iperf-vsock-open-ddk-6db9a72753961d9a",
+    "SPDXRef-File-iperf-vsock-open-ddk-dd08bac4d7621f3f",
+    "SPDXRef-File-iperf-vsock-open-ddk-16b573e93021dbf1",
+    "SPDXRef-File-iperf-vsock-open-ddk-28786a4e4fcc9c3f",
+    "SPDXRef-File-iperf-vsock-open-ddk-ffa1f8d95f9de026",
+    "SPDXRef-File-iperf-vsock-open-ddk-221ff0aa55928f04",
+    "SPDXRef-File-iperf-vsock-open-ddk-6123df23913640b9",
+    "SPDXRef-File-iperf-vsock-open-ddk-09be8533ff0a6ee5",
+    "SPDXRef-File-iperf-vsock-open-ddk-87db583be5c13c1f",
+    "SPDXRef-File-iperf-vsock-open-ddk-b18b177b9798b6a2",
+    "SPDXRef-File-iperf-vsock-open-ddk-13e8c2d7429a2832",
+    "SPDXRef-File-iperf-vsock-open-ddk-3d7f9efc5b586316",
+    "SPDXRef-File-iperf-vsock-open-ddk-13607ec314069507",
+    "SPDXRef-File-iperf-vsock-open-ddk-1bc6cfc606aa11a2",
+    "SPDXRef-File-iperf-vsock-open-ddk-df87a4ee3bab887d",
+    "SPDXRef-File-iperf-vsock-open-ddk-f16d2da0ae910fe8",
+    "SPDXRef-File-iperf-vsock-open-ddk-3f4c1daa84110ac0",
+    "SPDXRef-File-iperf-vsock-open-ddk-96d678e87d72d516",
+    "SPDXRef-File-iperf-vsock-open-ddk-43ca77ee4aa0214e",
+    "SPDXRef-File-iperf-vsock-open-ddk-ad7458841f8df549",
+    "SPDXRef-File-iperf-vsock-open-ddk-9e23a922d1202e0c",
+    "SPDXRef-File-iperf-vsock-open-ddk-26d2010694ed0697",
+    "SPDXRef-File-iperf-vsock-open-ddk-b5fe4fe862c575dc",
+    "SPDXRef-File-iperf-vsock-open-ddk-b0ac812780d31849",
+    "SPDXRef-File-iperf-vsock-open-ddk-c4aa9c66e7954540",
+    "SPDXRef-File-iperf-vsock-open-ddk-9a48b1e26ad38d9b",
+    "SPDXRef-File-iperf-vsock-open-ddk-f5a04cfa55416633",
+    "SPDXRef-File-iperf-vsock-open-ddk-c2674727f544bf31",
+    "SPDXRef-File-iperf-vsock-open-ddk-2be76c9fc8848b94",
+    "SPDXRef-File-iperf-vsock-open-ddk-aaff391e2c630d80",
+    "SPDXRef-File-iperf-vsock-open-ddk-6b840e46f3f4d450",
+    "SPDXRef-File-iperf-vsock-open-ddk-efbdecd2f8b9e271",
+    "SPDXRef-File-iperf-vsock-open-ddk-254a2da7a740675e",
+    "SPDXRef-File-iperf-vsock-open-ddk-55552bb531c37e5c",
+    "SPDXRef-File-iperf-vsock-open-ddk-2663e0a9930b92c1",
+    "SPDXRef-File-iperf-vsock-open-ddk-d0153cac95479af9",
+    "SPDXRef-File-iperf-vsock-open-ddk-115762e7154e8da3",
+    "SPDXRef-File-iperf-vsock-open-ddk-f279823869b3dd2c",
+    "SPDXRef-File-iperf-vsock-open-ddk-3fcebac97b5d1079",
+    "SPDXRef-File-iperf-vsock-open-ddk-ae17d03698490f51",
+    "SPDXRef-File-iperf-vsock-open-ddk-c910d1786bfa887e",
+    "SPDXRef-File-iperf-vsock-open-ddk-fafd66d97c678e2d",
+    "SPDXRef-File-iperf-vsock-open-ddk-47d5954f54e5a9b2",
+    "SPDXRef-File-iperf-vsock-open-ddk-bc2944f12efc8d2c",
+    "SPDXRef-File-iperf-vsock-open-ddk-46681bd74dc27366",
+    "SPDXRef-File-iperf-vsock-open-ddk-67e794015a01b881",
+    "SPDXRef-File-iperf-vsock-open-ddk-49df23e069b78a53",
+    "SPDXRef-File-iperf-vsock-open-ddk-54c4c311d1206fce",
+    "SPDXRef-File-iperf-vsock-open-ddk-7a4bce74d4690566",
+    "SPDXRef-File-iperf-vsock-open-ddk-dc573788b0474cf2",
+    "SPDXRef-File-iperf-vsock-open-ddk-534568362d23185f",
+    "SPDXRef-File-iperf-vsock-open-ddk-4603f6dc02c76258",
+    "SPDXRef-File-iperf-vsock-open-ddk-cd88189591717f08",
+    "SPDXRef-File-iperf-vsock-open-ddk-079707b3f23b5fba",
+    "SPDXRef-File-iperf-vsock-open-ddk-1f9447ca20b5371a",
+    "SPDXRef-File-iperf-vsock-open-ddk-b27982f50e1663cc",
+    "SPDXRef-File-iperf-vsock-open-ddk-9349f243f228329c",
+    "SPDXRef-File-iperf-vsock-open-ddk-c6bdcd778dd580e6",
+    "SPDXRef-File-iperf-vsock-open-ddk-12563a585d0c917e",
+    "SPDXRef-File-iperf-vsock-open-ddk-d164144339e42745",
+    "SPDXRef-File-iperf-vsock-open-ddk-15d2e0c112d7a32b",
+    "SPDXRef-File-iperf-vsock-open-ddk-4e2962079a79e825",
+    "SPDXRef-File-iperf-vsock-open-ddk-726516d4cc316655",
+    "SPDXRef-File-iperf-vsock-open-ddk-c0abdf7a4d2fe1f4",
+    "SPDXRef-File-iperf-vsock-open-ddk-08e5c4e710dad978",
+    "SPDXRef-File-iperf-vsock-open-ddk-adff9af45f073e09",
+    "SPDXRef-File-iperf-vsock-open-ddk-e1296af421201569",
+    "SPDXRef-File-iperf-vsock-open-ddk-57bbd563361c0296",
+    "SPDXRef-File-iperf-vsock-open-ddk-7160e462e7cf4ad6",
+    "SPDXRef-File-iperf-vsock-open-ddk-22efa630271604e7",
+    "SPDXRef-File-iperf-vsock-open-ddk-b97542ecbed2c6ee",
+    "SPDXRef-File-iperf-vsock-open-ddk-dfafd49530c9e6c8",
+    "SPDXRef-File-iperf-vsock-open-ddk-a5fd8083f3b4f60e",
+    "SPDXRef-File-iperf-vsock-open-ddk-9db1efa2fdda266d",
+    "SPDXRef-File-iperf-vsock-open-ddk-69515817fec5bd93",
+    "SPDXRef-File-iperf-vsock-open-ddk-134ae9e89e4ed3c4",
+    "SPDXRef-File-iperf-vsock-open-ddk-3a576e09615c0e19",
+    "SPDXRef-File-iperf-vsock-open-ddk-52802b963a36d516",
+    "SPDXRef-File-iperf-vsock-open-ddk-059bb21560b58f84",
+    "SPDXRef-File-iperf-vsock-open-ddk-026d8b6556043167",
+    "SPDXRef-File-iperf-vsock-open-ddk-b47ab61a9e17373c",
+    "SPDXRef-File-iperf-vsock-open-ddk-cde73156de4e25fc",
+    "SPDXRef-File-iperf-vsock-open-ddk-cc4e2384c7265f55",
+    "SPDXRef-File-iperf-vsock-open-ddk-158aadcab5225f14",
+    "SPDXRef-File-iperf-vsock-open-ddk-df984f6db7e18ce7",
+    "SPDXRef-File-iperf-vsock-open-ddk-25f9a24c1f11e286",
+    "SPDXRef-File-iperf-vsock-open-ddk-10dffdccc7721b7a",
+    "SPDXRef-File-iperf-vsock-open-ddk-9f1fe17a606ae0c1",
+    "SPDXRef-File-iperf-vsock-open-ddk-a955d0ca80d1e034",
+    "SPDXRef-File-iperf-vsock-open-ddk-ce1e63c947884eee",
+    "SPDXRef-File-iperf-vsock-open-ddk-9c7e807db0ed0c7c",
+    "SPDXRef-File-iperf-vsock-open-ddk-2e3074c221406064",
+    "SPDXRef-File-iperf-vsock-open-ddk-603cdcab48d71d73",
+    "SPDXRef-File-iperf-vsock-open-ddk-0abc253f11359dad",
+    "SPDXRef-File-iperf-vsock-open-ddk-cbdd0e0694dfb651",
+    "SPDXRef-File-iperf-vsock-open-ddk-f632b2728721605c"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "iperf-vsock (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "11300839e7f1b9528b28a82b4575fe493f8d23f7"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "9245f9af+1c8b71798e3e"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-iperf-vsock-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-iperf-vsock-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-iperf-vsock-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-iperf-vsock-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

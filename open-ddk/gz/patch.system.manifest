@@ -1,0 +1,10 @@
+data/sos.lua=auto8668p1_64_sos_sta/sos_mt8668.lua
+data/sos1.lua=auto8668p1_64_sos_sta/sos_mt8668.lua
+data/sos2.lua=auto8668p1_64_sos_sta/sos_mt8668.lua
+data/sos3.lua=auto8668p1_64_sos_sta/sos_mt8668.lua
+data/product.lua=auto8668p1_64_sos_sta/product_mt8668.lua
+data/rproc.pb.txt=auto8668p1_64_sos_sta/rproc.pb.txt
+data/guest_manager.pb.txt=auto8668p1_64_sos_sta/guest_manager.pb.txt
+data/sos_bootloader.pb.txt=auto8668p1_64_sos_sta/sos_bootloader.pb.txt
+data/tbox_bootloader.pb.txt=auto8668p1_64_sos_sta/tbox_bootloader.pb.txt
+data/uos_tbox_pv8668.lua=auto8668p1_64_sos_sta/uos_tbox_pv8668.lua

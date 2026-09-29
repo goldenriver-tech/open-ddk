@@ -1,0 +1,2 @@
+# path	name	version	from	license	added by open-ddk
+open-ddk/qemu/rules_nbl	rules_nbl	8a9b35ec9afd6f896e24f299039c6111e2d6344b	GoldenRiver Technology bazel/rules_nbl	BSD-3-Clause	LICENSE

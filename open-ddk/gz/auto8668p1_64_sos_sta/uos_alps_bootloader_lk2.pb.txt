@@ -1,0 +1,15 @@
+protocol: "lk2"
+
+payload {
+    name: "lk2_a",
+    filepath: "/dev/disk/by-partlabel/bl2-an_a",
+    offset: 0x10200d00,
+    header_size: 0x1300,
+}
+
+payload {
+    name: "lk2_b",
+    filepath: "/dev/disk/by-partlabel/bl2-an_b",
+    offset: 0x10200d00,
+    header_size: 0x1300,
+}

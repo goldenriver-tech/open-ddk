@@ -1,0 +1,7 @@
+{
+    "imports": [
+        "garnet/packages/nebula/prod/nbl_hypervisor",
+        "garnet/packages/nebula/prod/nbl_trace",
+        "garnet/packages/benchmarks/zircon"
+    ]
+}

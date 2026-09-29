@@ -1,0 +1,43 @@
+# path	name	version	upstream url	upstream commit	license	project commit (a fork: the fork's;
+# -: a project open-ddk carries split out into a fork, which open-ddk's
+# commits move: its tag open-ddk-VERSION has it; copied: upstream's files
+# a project took, unchanged where FILES.tsv says copied:<name>; snapshot:
+# upstream's files the build environment carries, unchanged where
+# provenance/SNAPSHOT-FILES.tsv says copied:<name>)
+garnet/go/src/thinfs/vendor/github.com/golang/glog	glog	23def4e6	https://github.com/golang/glog	23def4e6c14b4da8ac2ed8007337bc5eb5007998	Apache-2.0	23def4e6c14b4da8ac2ed8007337bc5eb5007998
+garnet/go/src/thinfs/vendor/github.com/pkg/errors	errors	839d9e91	https://github.com/pkg/errors	839d9e913e063e28dfd0e6c7b7512793e0a48be9	BSD-2-Clause	839d9e913e063e28dfd0e6c7b7512793e0a48be9
+third_party/littlefs	littlefs	v2.11.2	https://github.com/littlefs-project/littlefs	adad0fbbcf5382c20978d07f94f9c13be9041c1b	BSD-3-Clause	45dceac45fc90793b8dc263e345a78359b1e292f
+third_party/ree-trusty/fuse	libfuse	3.18.1	https://github.com/libfuse/libfuse	2a6da8cb338b1718e899240d1d43d52e311e504a	LGPL-2.1-only AND GPL-2.0-only	4dceedb5c93d3b4bf47be84dd7afd8ded914ad43
+third_party/busybox	busybox	1.28.4	https://github.com/mirror/busybox	509f987e1677e7438d07dae8998565f9a7170333	GPL-2.0-only	509f987e1677e7438d07dae8998565f9a7170333
+buildtools	buildtools	32ad2207	https://fuchsia.googlesource.com/buildtools	32ad2207c1da738122357a82ad414dec0d5ca6b9	BSD-3-Clause	8ddf774f9ff7211e6915b5be0643914b347788c0
+third_party/protobuf	protobuf	c313f261	https://fuchsia.googlesource.com/third_party/protobuf	c313f26117c367ebbdca66f82164ed798bfc2c20	BSD-3-Clause	77634711220310c0eb494584aa565bace6c2eaa1
+third_party/vboot_reference	vboot_reference	0b235d5b	https://fuchsia.googlesource.com/third_party/vboot_reference	0b235d5b2c31cdb3fc5ef32c58fec37746a5f125	BSD-3-Clause	0b235d5b2c31cdb3fc5ef32c58fec37746a5f125
+third_party/mako	mako	84d21ded	https://github.com/sqlalchemy/mako	84d21ded4c270deebad88a61ef78356fa6e075ba	MIT	84d21ded4c270deebad88a61ef78356fa6e075ba
+third_party/gflags	gflags	f3ef162e	https://fuchsia.googlesource.com/third_party/gflags	f3ef162e5c5d2cb284b0649d81495990a01cd96b	BSD-3-Clause	f3ef162e5c5d2cb284b0649d81495990a01cd96b
+third_party/gtest	gtest	da8ed899	https://fuchsia.googlesource.com/third_party/gtest	da8ed89908140a3b937e7da81875bbeeebebbf43	BSD-3-Clause	da8ed89908140a3b937e7da81875bbeeebebbf43
+third_party/golang/crypto	go-crypto	c78caca8	https://go.googlesource.com/crypto	c78caca803c95773f48a844d3dcab04b9bc4d6dd	BSD-3-Clause	c78caca803c95773f48a844d3dcab04b9bc4d6dd
+third_party/golibs/github.com/flynn/go-tuf	go-tuf	ccc55922	https://fuchsia.googlesource.com/third_party/go-tuf	ccc55922bf6167995aabc750be433b9f408fd572	BSD-3-Clause	ccc55922bf6167995aabc750be433b9f408fd572
+third_party/golibs/github.com/tent/canonical-json-go	canonical-json-go	96e4ba3a	https://github.com/tent/canonical-json-go	96e4ba3a7613a1216cbd1badca4efe382adea337	BSD-3-Clause	96e4ba3a7613a1216cbd1badca4efe382adea337
+third_party/go	go	2b8360e4	https://fuchsia.googlesource.com/third_party/go	2b8360e4a23cba6890993eb140d52941d2c36678	BSD-3-Clause	8b8cfed5b12893b897e66e72e2f7674039064e3d
+third_party/openssl	openssl	da96ffd2	https://github.com/openssl/openssl	da96ffd2384144529a4236c892da07eb261d7089	OpenSSL	b6a5d338dab9a70c10c0dbf83c6d1487292e6401
+third_party/iperf-vsock	iperf-vsock	9245f9af	https://github.com/stefano-garzarella/iperf-vsock	9245f9af6d215166943b8c1e26769bf6800f2787	BSD-3-Clause	1c8b71798e3e0fe68db233fedfac9c7346f93d22
+third_party/googletest	googletest	84e75276	https://fuchsia.googlesource.com/third_party/googletest	84e75276af34678072bcb23b564568d2d840ef4a	BSD-3-Clause	5d0dd23c6cdc7ce75eb17866c7ff7e059e4c4cba
+third_party/zlib	zlib	f0b417f5	https://fuchsia.googlesource.com/third_party/zlib	f0b417f596815c67d7fbdf48faa2ce39dde0f672	Zlib	fe44c0467787d2752abd8669e7fb910355fcb1fa
+third_party/soc_term	soc_term	5493a6e7	https://github.com/linaro-swg/soc_term	5493a6e7c264536f5ca63fe7511e5eed991e4f20	BSD-2-Clause	ead4c53e7346d24f92c13ae7a249f75e7e2ba2ac
+third_party/benchmark	benchmark	e991355c	https://github.com/google/benchmark	e991355c02b93fe17713efe04cbc2e278e00fdbd	Apache-2.0	bfd5cc2b88e3dd74604acad92add2740dc9f14d6
+third_party/grpc	grpc	v1.46.3	https://github.com/grpc/grpc	53d69cc581c5b7305708587f4f1939278477c28a	Apache-2.0	2ee28a3debfc850d4dc2846c85442382a205f291
+third_party/rapidjson	rapidjson	e8b305ae	https://fuchsia.googlesource.com/third_party/rapidjson	e8b305ae6ab34f369fb7c753406671a6caccc31f	MIT	37e61fd6627163f9bb0938af3eef656d51f7e59c
+third_party/boringssl/src	boringssl	a4c3f8de	https://github.com/google/boringssl	a4c3f8de4406c2382e43e88a638882fb1a32da32	OpenSSL AND ISC	a4c3f8de4406c2382e43e88a638882fb1a32da32
+third_party/dropbear	dropbear	2018.76	https://github.com/mkj/dropbear	64bd345a5d11e159ac74d45bd009f98ff1a50cf9	MIT	035a44a5340dd9b4e397765b28ab9ac8b35c05d7
+third_party/socat	socat	1.8.0.0	https://repo.or.cz/socat.git	2da070164d454971d5c970b5278e645051f0d0f7	GPL-2.0-only	7aed69f24b8affb344214ec32f5b2b2a31405291
+linux-6.6	linux	nebula	https://android.googlesource.com/kernel/common	d7ec982179df2206de37eee40cb129c82748eaad	GPL-2.0-only WITH Linux-syscall-note	-
+trusted-firmware-a	tf-a	nebula	https://github.com/ARM-software/arm-trusted-firmware	a1be69e6c5db450f841f0edd9d734bf3cffb6621	BSD-3-Clause	cde90a259ddc743a6eb4f6fdf77272b55d380561
+third_party/qemu	qemu	nebula	https://github.com/qemu/qemu	9c673a41eefc50f1cb2fe3c083e7de842c7d276a	GPL-2.0-only	ea3ab3451cf12b4ac653ef20a7477b28db2532dc
+garnet	garnet	7398665a	https://fuchsia.googlesource.com/garnet	7398665a84657cdfe745e81f2f708d6a800dd536	BSD-3-Clause	-
+build	build	a5f717ed	https://fuchsia.googlesource.com/build	a5f717eddee6305f6b302f11c14d66e903c8e35d	BSD-3-Clause	-
+scripts	scripts	9f645eb0	https://fuchsia.googlesource.com/scripts	9f645eb07489bb16251f076dc713d1166982a029	BSD-3-Clause	-
+gen_rootfs	gen_rootfs	fe617d47	https://github.com/linaro-swg/gen_rootfs	fe617d470e45778c909038bf3e7ca15174a4f893	NOASSERTION	-
+linux-6.6/drivers/trusty	trusty-driver	eb124989	https://android.googlesource.com/kernel/common	eb1249894645c5480b58330e888ff5106c26e951	GPL-2.0-only	copied
+linux-6.6/include/linux/trusty	trusty-driver	eb124989	https://android.googlesource.com/kernel/common	eb1249894645c5480b58330e888ff5106c26e951	GPL-2.0-only	copied
+third_party/boringssl	boringssl-fuchsia	fa31ab89	https://fuchsia.googlesource.com/fuchsia	fa31ab89edf12e6e1d6621ffabafd3812eb75016	OpenSSL AND ISC	snapshot
+third_party/fdt	libfdt-zircon	daace4c6	https://fuchsia.googlesource.com/zircon	daace4c682c4332fa93af7c8c02b6049a9159659	BSD-2-Clause OR GPL-2.0-or-later	snapshot

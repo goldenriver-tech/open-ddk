@@ -1,0 +1,5 @@
+# Packages open-ddk leaves out of GRT's products: trim-packages.py removes
+# them from every package file, and their entries from the boot-time app
+# lists. None: open-ddk builds GRT's products whole, so its images are the
+# tag's (only build-ids differ), what is not published as source shipped
+# built (build-env/prebuilt.txt).

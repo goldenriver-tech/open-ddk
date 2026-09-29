@@ -1,0 +1,1935 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/gtest-da8ed899-da8ed89908140a3b937e7da81875bbeeebebbf43",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1929ef370fe274617c5f5ec5bb8ac12c27dfb8c9"
+    }
+   ],
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a2feb6ed0257c21c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b0fcd1a3c919673d70f44d110b6fb1f601cf5e6b"
+    }
+   ],
+   "fileName": "./CHANGES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fdcb27ee4cb10d878866ee1e9320da7b2d3d262a"
+    }
+   ],
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-c00c0afca84109e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02bbc2163b398d8411a21b9a477ea0de5a07f48b"
+    }
+   ],
+   "fileName": "./CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d5b4de16d947214e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "59f2d2fc190ce218eedead5dd3d3602fb8f73c6a"
+    }
+   ],
+   "fileName": "./Makefile.am"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "556de69a01e7435d5d6b83d4867b0c8650968fef"
+    }
+   ],
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-cb7459a3b233513c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./build-aux/.keep"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0b2e39842d121537",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b46bd90f57612f93283ed63204cde251dad2dbfe"
+    }
+   ],
+   "fileName": "./cmake/internal_utils.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-24d8f9bdc7a2e7b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15b28e4a63d0c9c8239ae6c1657778e0e1cd2cee"
+    }
+   ],
+   "fileName": "./codegear/gtest.cbproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f52e8037382b3cfa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fbc35f7e0c84cb5d5ee124254469a9959c275b09"
+    }
+   ],
+   "fileName": "./codegear/gtest.groupproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-14a98cc70216063d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc434be90938770c09007b4f59f3d6998837ec4f"
+    }
+   ],
+   "fileName": "./codegear/gtest_all.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-11c4555b4dd2f65d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5e057c00fc3f29c1db50bd36981fa6de895143b1"
+    }
+   ],
+   "fileName": "./codegear/gtest_link.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-bec88924c120e431",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1713a48d5f9cbee6bb7ed7012da9e6aca2a3e1ab"
+    }
+   ],
+   "fileName": "./codegear/gtest_main.cbproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-4b84e9a8d3a79de6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1f718cd8fe0e021d4f84539dcd8b2f1a57a6e373"
+    }
+   ],
+   "fileName": "./codegear/gtest_unittest.cbproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-87db583be5c13c1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5966ae92e6b12ba06c97efa0be7f9b59c681d76a"
+    }
+   ],
+   "fileName": "./configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1b35ac665c10dd8a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f99a00281da65e2889c7a1239c62df2403d8b47c"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-death-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e6a1bab9bd665351",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "26f33b16e3f7175fec7e8b0bc83065bcb35492a1"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-message.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-482f9627d0aec91d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e2225c06ec40a683d15d9768e0a5a578e13c6e65"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-param-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f30a5e30de5dfd52",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "953c7f83bb86a9d12baafffcbdc7be6d53e6e9a4"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-param-test.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a7f6787b4b2face7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "78f9928b3d9665a162e8dbadea1861d0f3280f35"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-printers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-378d1db6e0ebbf28",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b60b93db544925f29c03824bde525044798ad0e"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-spi.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-9199834d4ead29a8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9d0a93957de1f3a9cbcf4b5a9faea7096c870740"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-test-part.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-3ede007d9de65532",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17efa53bb822745ce48256ab4e13ebf4e801994a"
+    }
+   ],
+   "fileName": "./include/gtest/gtest-typed-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e61d1920ea933cba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "19c20f2ad939e2a01735eada85c524aa29ab435d"
+    }
+   ],
+   "fileName": "./include/gtest/gtest.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a9d81b003557665b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3d20b376bb0011fc07a11f8ea6ad058d9ef7e4e"
+    }
+   ],
+   "fileName": "./include/gtest/gtest_pred_impl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-fce278394ba6a9ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4a98b70d02234d569c4ed854bac1e787f71d62d"
+    }
+   ],
+   "fileName": "./include/gtest/gtest_prod.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-21e29f22782f04d5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a94bb13899b12149745829a192f83a52f120f33d"
+    }
+   ],
+   "fileName": "./include/gtest/internal/custom/gtest-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-168ea971815f40d2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e2cd8a2c3eafa1d1bd6832acfe4335398d06357"
+    }
+   ],
+   "fileName": "./include/gtest/internal/custom/gtest-printers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-6f87ee93bf0c3b64",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f85ab14cb0ea04a7235484a3b3125939670de0f1"
+    }
+   ],
+   "fileName": "./include/gtest/internal/custom/gtest.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-80eb60eaf5540172",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4a0f60332228674efb2461455ad4d7a110d00eaa"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-death-test-internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-64f955d3848e7ab1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e97fba3e99c2a2239e536f352a81a707d5f138c"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-filepath.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-2f9f4d1a371cbf8c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "49b90ebc2fb5748bff96d70cf98c6b5fbb7410fc"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-35f219a2ac136705",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32f79737ae8c1aebcf0b26d68ab064761a759e8b"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-linked_ptr.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-c6769d4d1d17e99f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4d09d7ab3c2ccf0127c1a414908db7aaead7925d"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-param-util-generated.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-03d3f9afa2106e22",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c3b66304bc955466678222d693ff09e85ffc4f7"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-param-util-generated.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b5b3555c841c78a0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4beeaf7679f696f8524ab154b9b4c4ddc1a31ae4"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-param-util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a96149bd076d7d46",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ecf48f9d1b130fbf980d31dccacf9eb0afc41f6"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-port-arch.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d913414d527bc65d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6ef794871327f5ae31d19f49f22391f119b62c81"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-6c4cc965782d3893",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15f1a173a341e436558c4b8b7f771a56f20ed269"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-string.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-fb97a6c6e7a37b04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "889d40322d311b6a53857be18f7edfd685666036"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-tuple.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-22b04eaefc3f92f2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b0a38e0268e583fff3a55a76d0aa39ef16706f75"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-tuple.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-4832bd401beb347d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f202542bbd3a9a733b4fead2c2d073328bf08071"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-type-util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f37fd155d8c1e3c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5adf716e3ee906bc96402c76824a84f602f0f40e"
+    }
+   ],
+   "fileName": "./include/gtest/internal/gtest-type-util.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-7f397db394ec1378",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "19fe01a5c94e10226965314d79ac867028256687"
+    }
+   ],
+   "fileName": "./m4/acx_pthread.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b4faefa17615ac61",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba104b2d1d8fb3bf54fe099eed5c11e1ff4a9de3"
+    }
+   ],
+   "fileName": "./m4/gtest.m4"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-5885c2d908cfd732",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "48ecc607eb493e5efec23e25cd8b1244c846c1d1"
+    }
+   ],
+   "fileName": "./make/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-308d13f56e85d825",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "add4561c3877c0f89f196677f0c9d78ed61b2f7c"
+    }
+   ],
+   "fileName": "./msvc/gtest-md.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e3234037d023068d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5f59898af7c35fa2eae55ec897a0c308a55b7ef"
+    }
+   ],
+   "fileName": "./msvc/gtest-md.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-74a45d15528ce7fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b92dcdfd9022dffd59ee3a02f021c9db1932820"
+    }
+   ],
+   "fileName": "./msvc/gtest.sln"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-3f8231ce5b56b787",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "587b460e3fdaf810755cf503621335fef7debc1e"
+    }
+   ],
+   "fileName": "./msvc/gtest.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-5b0a85e9d0f2d6e9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "270ed2da265f1c92afe82626f2a54938482a582c"
+    }
+   ],
+   "fileName": "./msvc/gtest_main-md.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-5742d4885eb7963c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ede69d05bb131da5a02a0517c695a3c37fb02a7"
+    }
+   ],
+   "fileName": "./msvc/gtest_main.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-85913e41c264cbf7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3361b980ca3d01dd398c872ea465b20bdc503bbd"
+    }
+   ],
+   "fileName": "./msvc/gtest_prod_test-md.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-8aaf3eec07075ee7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "86f1b4aad88584be0774c2eb95fc7aa08f47df8a"
+    }
+   ],
+   "fileName": "./msvc/gtest_prod_test.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a824b92983d3c0e1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3d77eeaff76dafd940964f7049ca86b56c8e507"
+    }
+   ],
+   "fileName": "./msvc/gtest_unittest-md.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-2cb0753f2adfeaf3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "97dd088bb3781d1cff1c962c86719f3e5078c0aa"
+    }
+   ],
+   "fileName": "./msvc/gtest_unittest.vcproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-c7809daff7e6991b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4019446108707a1bd4aaf52e0b924d9353962c66"
+    }
+   ],
+   "fileName": "./samples/prime_tables.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-198fe65038582ccf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a0a5c161fb5e7d97144c836c542b214d6094f387"
+    }
+   ],
+   "fileName": "./samples/sample1.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-83bef6aab1a11562",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7f828ae6bb8166c01ca928557beb03a31c331096"
+    }
+   ],
+   "fileName": "./samples/sample1.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d39d5b3efc4c0442",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "208124bca593cbccadeaf939f6d61bbb7b27b5e2"
+    }
+   ],
+   "fileName": "./samples/sample10_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-4d74abf20ddb5c5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "038f60256cd2b7a060bd2a3a2d657fd3684619df"
+    }
+   ],
+   "fileName": "./samples/sample1_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-302baa45ddbe0317",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b3d71487fa61d541d2a37e1f7b73354dc34df01"
+    }
+   ],
+   "fileName": "./samples/sample2.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f0b5174d2c0a618d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "446ad68bb13d4b244c5209067fdfd1c07241a39f"
+    }
+   ],
+   "fileName": "./samples/sample2.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-52254fd44333d13c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cb8f3a748349c8f2fca56ef39955e9393cbaa069"
+    }
+   ],
+   "fileName": "./samples/sample2_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f39da8326347213c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "91b7fcc6f632204fee176a7b08353cd9e9f93472"
+    }
+   ],
+   "fileName": "./samples/sample3-inl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-be016fa80f42c04a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4468b137bbcfb5fcf8af9fab9993fa797bee3d6"
+    }
+   ],
+   "fileName": "./samples/sample3_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-34363f213e09dc8c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4600fb6dd65ba47418b60aa0779f8a692873e337"
+    }
+   ],
+   "fileName": "./samples/sample4.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-2ac00d5e33f9726b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5ca3a6e02cdd8cbbde91fc4f993d62a53ebf37c"
+    }
+   ],
+   "fileName": "./samples/sample4.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d688861df2087ecd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e6cf38c5f8eed878209510e4fb8517b9880eaad4"
+    }
+   ],
+   "fileName": "./samples/sample4_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0e697270fd844752",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ac2c2ad9420d0b1a8a9dd740dce48fb8854c32f"
+    }
+   ],
+   "fileName": "./samples/sample5_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-920a984cce9c37b4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aba000e78c117994fe84095975be7e17dedcd443"
+    }
+   ],
+   "fileName": "./samples/sample6_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-c1e3d3fa45c3cd03",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "603c459b9084980f99b125cb152e23dbbb410b32"
+    }
+   ],
+   "fileName": "./samples/sample7_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-17e1b6e0692f35f7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b76c90ef5949919da945012129d71d85b388f6b2"
+    }
+   ],
+   "fileName": "./samples/sample8_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f27607d83319a4a0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fb2acaa37934bb4307f55ba905e01eb3ff286a6"
+    }
+   ],
+   "fileName": "./samples/sample9_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d63b5874ad7159b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9704f5a19272bc834e81011a789291d29f9b84ba"
+    }
+   ],
+   "fileName": "./scripts/common.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-4486b834993dcd71",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3697e099884dfa5f74ce5ceb1ce09cd5d36a2e5c"
+    }
+   ],
+   "fileName": "./scripts/fuse_gtest_files.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-41ed51b00fac903c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5c20c66a6d7c1bbcb34b7b52094dfa1f544c9b73"
+    }
+   ],
+   "fileName": "./scripts/gen_gtest_pred_impl.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-4426006f849ce4b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8dffe9ecd0c0145877dd2f449ad03d9028f194d8"
+    }
+   ],
+   "fileName": "./scripts/gtest-config.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1e5b51a41de0d868",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "af50b23923afd67cc066577d4954f2d781887fdf"
+    }
+   ],
+   "fileName": "./scripts/pump.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-24b4011191dd7f4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f9f11eaf090dc1935601e448e8df3f2ac89d546d"
+    }
+   ],
+   "fileName": "./scripts/release_docs.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b1a0a4e6bd1404fc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae1d5387d5fec27581ccc2f5bae8497999a13f67"
+    }
+   ],
+   "fileName": "./scripts/test/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-aa8614ef7e46ace9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa04ec409fc728543a41d5dfcb14d11067ec408a"
+    }
+   ],
+   "fileName": "./scripts/upload.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-ad8ce56812f95842",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8bce7770976d203c4bb5b532ef30f8724c6bc71"
+    }
+   ],
+   "fileName": "./scripts/upload_gtest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-9b09c119908c45b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b754776d9c9a23e45f120738f75de3fe9442585"
+    }
+   ],
+   "fileName": "./src/gtest-all.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d261ee1ca8934cbe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ec89a97c109569a5ac6d1601ade7f11991d238d9"
+    }
+   ],
+   "fileName": "./src/gtest-death-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-df3117688c028e14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f2ef740f14128a470d54e132a1eaf87a4a552ccb"
+    }
+   ],
+   "fileName": "./src/gtest-filepath.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-541517ac247eddfa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "647d18b23def423d2944f50b63fc2a217e6dddde"
+    }
+   ],
+   "fileName": "./src/gtest-internal-inl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-60482838630d98d9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "46b9bd92889fdc3a2be6ec8c7e45c73ee33350d5"
+    }
+   ],
+   "fileName": "./src/gtest-port.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e0883bc6af0c7101",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d0154ca190fdac1fbded17529e9d9ba2a8899bca"
+    }
+   ],
+   "fileName": "./src/gtest-printers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b98b14e60c8bf7c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f7d985c8814f34ff956fcbc6c482c84e6292ea59"
+    }
+   ],
+   "fileName": "./src/gtest-test-part.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a92e8dab02550b80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "86c81b74e0088d5cc4cf6eca8169a16ed4540749"
+    }
+   ],
+   "fileName": "./src/gtest-typed-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-8363895c34854716",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fa8647280597ab3d5fed8a21b40543b95e227c16"
+    }
+   ],
+   "fileName": "./src/gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e93741c5ca45a59e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "56bc67df1cf8a1d0d60c600fbe200393206cf1ad"
+    }
+   ],
+   "fileName": "./src/gtest_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-9f4a0730af72de02",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fba90968d974c15d071bd8ea2aeab5f469f64c25"
+    }
+   ],
+   "fileName": "./test/gtest-death-test_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0465868280d50d81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aaaf96139c27eeceb67e2ae3abae652cd1b9e9c6"
+    }
+   ],
+   "fileName": "./test/gtest-death-test_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-95d9aad1d6c4fb98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0bf9c83d37ab62f08f791018f62e5139a2233829"
+    }
+   ],
+   "fileName": "./test/gtest-filepath_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-ecc8c563a26d8368",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10d1e938e0047e2c232d3e9739f27a1de4d2d7db"
+    }
+   ],
+   "fileName": "./test/gtest-linked_ptr_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-9e0818023d9e4aa0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1051b377a53f20bb4d6f7b178672b9c3a3eb742"
+    }
+   ],
+   "fileName": "./test/gtest-listener_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-07eb0b07824da9bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "beca2304c908fd5d92a00292a9f98659eccf5ad0"
+    }
+   ],
+   "fileName": "./test/gtest-message_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-5d2620d394845c7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "858f0973ebb91c35cd8e42a28dd840ea9739ded2"
+    }
+   ],
+   "fileName": "./test/gtest-options_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-985184cb5300ed5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa24d0d784f139f1bfcbd18dd2e1e3f47da7ee48"
+    }
+   ],
+   "fileName": "./test/gtest-param-test2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b686d6a2caa80cc0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21b4a9a90ffdab471b788222b617ec6be2a865b4"
+    }
+   ],
+   "fileName": "./test/gtest-param-test_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-204e155f832d35b0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1a57992edaa1c1c0434b52c91b0d7ffbbc38cea"
+    }
+   ],
+   "fileName": "./test/gtest-param-test_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-8453b2ef378d3bc2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba70cf5157f2301157154ad71e4d917be2600bb7"
+    }
+   ],
+   "fileName": "./test/gtest-port_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-5c84fca876f600ce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9771d37d016963f87635cb695f7b5f37605092da"
+    }
+   ],
+   "fileName": "./test/gtest-printers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-cafb51420ac6b46c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f8fbb1a7a6d3429b531f336a4b51285a4a9be86"
+    }
+   ],
+   "fileName": "./test/gtest-test-part_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-48580b19b212612e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "634186ed4f62998b8916d036f6ce2b1da5304efc"
+    }
+   ],
+   "fileName": "./test/gtest-tuple_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1a8874e661eaf2f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89fa5859b71825b156ea63b090cc3a3cb97b31d4"
+    }
+   ],
+   "fileName": "./test/gtest-typed-test2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1752b1863f09cda4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1622a6ad94e1ea541ed427d07aa26104df8a3c7"
+    }
+   ],
+   "fileName": "./test/gtest-typed-test_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f3395d41d1e2dc1c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "80656479871729763aa45d0c988747a5e2e8b77d"
+    }
+   ],
+   "fileName": "./test/gtest-typed-test_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-cb35e462b848640c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "375a09ebdcd9b7c6af32f096ba6c365151c02408"
+    }
+   ],
+   "fileName": "./test/gtest-unittest-api_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b644122f8c144138",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6205e73fbd5383a4e0c667259b8ef9e92d275149"
+    }
+   ],
+   "fileName": "./test/gtest_all_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f68424f6b41e34a9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5fe4ed72b365dff076ad2d5c17c2986bef742bde"
+    }
+   ],
+   "fileName": "./test/gtest_break_on_failure_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0cfc58e19b927d98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "075c7621682189ab64c140293966cfba185fb0a5"
+    }
+   ],
+   "fileName": "./test/gtest_break_on_failure_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-362340d1c1382406",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "519e3f037bf30c923e8b5e6f78e5c10708892f06"
+    }
+   ],
+   "fileName": "./test/gtest_catch_exceptions_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-13ad39646b4ee439",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f6ce6eee3dee4975c2b1a334e76828da65918b55"
+    }
+   ],
+   "fileName": "./test/gtest_catch_exceptions_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f15d68719f1c62b3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1eb18dbe581f86886ae394d960cc2d4d7df5f3c"
+    }
+   ],
+   "fileName": "./test/gtest_color_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-06f18d284ef5eef6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f5675a2b994d190dbd4cb4ab769b861932c5f6f4"
+    }
+   ],
+   "fileName": "./test/gtest_color_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-9593a6cfadcd9b68",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f0ab6dd21ab84b7349ade98ca9cff036e0af8d82"
+    }
+   ],
+   "fileName": "./test/gtest_env_var_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-2e3e343c4f131491",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c981b44af0b463f59c2cbe97aab1868df57c87b8"
+    }
+   ],
+   "fileName": "./test/gtest_env_var_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1796669507003823",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2612ecf2f6188b26954828cacd59ce34ac188f80"
+    }
+   ],
+   "fileName": "./test/gtest_environment_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b49c4b232153a1f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "41c74b8b2f9a0e84617b51607bcedb385786c8f1"
+    }
+   ],
+   "fileName": "./test/gtest_filter_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0e64434ab0b9ead7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "042d921ee6a3c11524fbc3431da3b190dd2d31c6"
+    }
+   ],
+   "fileName": "./test/gtest_filter_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b86336c52175c5ce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53600c6cc906870f7015239cdecddefc4d0102c4"
+    }
+   ],
+   "fileName": "./test/gtest_help_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e57427b750866fe2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55b0be1bc4ac23f64d6eb679dc87f74705d14af4"
+    }
+   ],
+   "fileName": "./test/gtest_help_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-83098b8aa75d9288",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c92d558e13d5df26ce8ab58c3d795cc720837e00"
+    }
+   ],
+   "fileName": "./test/gtest_list_tests_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-517c6fc519d61e0e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a30a1540514ca7f8fa5f150b49e3d7b6185f3e1"
+    }
+   ],
+   "fileName": "./test/gtest_list_tests_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-571c9e4271a7f261",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f37e50a5db1f5b0e0eeec7f945710af7194921e5"
+    }
+   ],
+   "fileName": "./test/gtest_main_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-44c7df47f9be265c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "840572da5b9ac5e46f20b0a2f848db8d3cfe8db8"
+    }
+   ],
+   "fileName": "./test/gtest_no_test_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-3416f4061b3ae005",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b93d377c5fb49321355aec2c3924c269e687a9b0"
+    }
+   ],
+   "fileName": "./test/gtest_output_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-334de045e1372aea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3cac82b0d704c340964eab1d1fc7095611afdf16"
+    }
+   ],
+   "fileName": "./test/gtest_output_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1d45976dc2369a04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1f3c6884f7f81c7bae287fd0c4505056728db85b"
+    }
+   ],
+   "fileName": "./test/gtest_output_test_golden_lin.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d90d964c65b42b60",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d74abe0cbdd003d024e133e41af552ad397904b0"
+    }
+   ],
+   "fileName": "./test/gtest_pred_impl_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-24eb1382304992f6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b46d2285ae181ae8ac95d80874fad3622242e893"
+    }
+   ],
+   "fileName": "./test/gtest_premature_exit_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-163086ecd8023df6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca4faca245dffd232e3cf21dc1f30dfbe4e6843b"
+    }
+   ],
+   "fileName": "./test/gtest_prod_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-003d4478eb60bcba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8001a29df5f7229ea1cc754b52e18a8d5478e1e2"
+    }
+   ],
+   "fileName": "./test/gtest_repeat_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-2efd8eb3adccf02e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "961d5e2d38d2a738de733177257565995551a874"
+    }
+   ],
+   "fileName": "./test/gtest_shuffle_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a7daa93ddb6a54ff",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f839425154e1ef5beddbc81b6099562047477937"
+    }
+   ],
+   "fileName": "./test/gtest_shuffle_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-78d52693868980c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea70b610fa2ff8777cb905243ecbdf4f37869c88"
+    }
+   ],
+   "fileName": "./test/gtest_sole_header_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0c9f6091af68c8a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c040fcd1f241d364b61716d6bff414539c73b0a3"
+    }
+   ],
+   "fileName": "./test/gtest_stress_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-a86347d4370597e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7b0aaa9cb688e092928e31a32efd15138bb81ce4"
+    }
+   ],
+   "fileName": "./test/gtest_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-c8e0c9cd4b597fcc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7dea3bfaf52f66bd192c2caf3ef41738c0e6b8f5"
+    }
+   ],
+   "fileName": "./test/gtest_throw_on_failure_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-092d001a16c74117",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5c39ee54532b2d8d1475dacb772c4c5d394c776"
+    }
+   ],
+   "fileName": "./test/gtest_throw_on_failure_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f6830ce158770455",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10dd7f56f334d998194e03412a7cfbd100dbe9ac"
+    }
+   ],
+   "fileName": "./test/gtest_throw_on_failure_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-62f70c9be0cb0b3d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce6e2c9793e862571b40a7dd7ca34ccf9ca83fd8"
+    }
+   ],
+   "fileName": "./test/gtest_uninitialized_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e9c302cd81ba8390",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ee7db8e1b4ded4436c362cf28eb257c1f40e61af"
+    }
+   ],
+   "fileName": "./test/gtest_uninitialized_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f2ca0aea91c60c4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2c889ed50740ae5407ad16e4cc123091109311c4"
+    }
+   ],
+   "fileName": "./test/gtest_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-93eaabc594e15f0e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3ab55acb3a8e8a0a23c5abd7c5668098c0105774"
+    }
+   ],
+   "fileName": "./test/gtest_xml_outfile1_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-1409c93199e8844c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6eb9fa1400f05a333c60435fdee27b194badc362"
+    }
+   ],
+   "fileName": "./test/gtest_xml_outfile2_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-ad144288c4c2e373",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88418e80da814c8b3fc59d4b320da2be874b9280"
+    }
+   ],
+   "fileName": "./test/gtest_xml_outfiles_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-83fa43d59e1b5598",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1c9c3295cbf6c08a2c655840e3a3de1a2513ee6"
+    }
+   ],
+   "fileName": "./test/gtest_xml_output_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d7e6c4c8294f224b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b87fdaae1763976103133f050a1f277fe7687666"
+    }
+   ],
+   "fileName": "./test/gtest_xml_output_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-2451319594103b93",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "71c54e32effd1eb6ba70433217f055b0f632d786"
+    }
+   ],
+   "fileName": "./test/gtest_xml_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-6ada0c9c1d2532f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89d900f9a28f7c172febcd65562903f0bb6803cd"
+    }
+   ],
+   "fileName": "./test/production.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-70898c0f3f5c139a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60766aa66eba13fec6e6d4b8cad0a4f577b0ae4e"
+    }
+   ],
+   "fileName": "./test/production.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b88646ecbf186296",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3882acc8d06efd3f5c168f7e7c37935a00b2f094"
+    }
+   ],
+   "fileName": "./xcode/Config/DebugProject.xcconfig"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-0677b40494a86892",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f2db9aadf7987ef494ad0886dfcc7d65d25f4a8"
+    }
+   ],
+   "fileName": "./xcode/Config/FrameworkTarget.xcconfig"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-b901c02dd29384b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03ca3192404877230b57600ec073e9997f37aba0"
+    }
+   ],
+   "fileName": "./xcode/Config/General.xcconfig"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f08bfd77ddd2f943",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "924b12b1f2f386c3a0fcedecb66e3675afbf88d1"
+    }
+   ],
+   "fileName": "./xcode/Config/ReleaseProject.xcconfig"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-e3a61894cdf0b901",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2777571dea4e55d126fa62d8a8e91b91eabecfe7"
+    }
+   ],
+   "fileName": "./xcode/Config/StaticLibraryTarget.xcconfig"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-f7e04197fbf9e3ee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "061aaacead027985b0eafc6180964d4dd2d1a060"
+    }
+   ],
+   "fileName": "./xcode/Config/TestTarget.xcconfig"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-3a3b99389f85dbcf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "267a8056d000e4e82a7b0566310a5763d7bea2ea"
+    }
+   ],
+   "fileName": "./xcode/Resources/Info.plist"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-91ebc6a6c2a5116c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f4e9333d3637d5751afb25c0464b301a0ede10e0"
+    }
+   ],
+   "fileName": "./xcode/Samples/FrameworkSample/Info.plist"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-16faf902a9272333",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bf925c59fae9303967d06444ecf2c06920b8f185"
+    }
+   ],
+   "fileName": "./xcode/Samples/FrameworkSample/WidgetFramework.xcodeproj/project.pbxproj"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d4976fa334f5070c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "acb9708685bc9c8a841e1156695366272a825549"
+    }
+   ],
+   "fileName": "./xcode/Samples/FrameworkSample/runtests.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-ba963c75b21babba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "29ede7670b71551a3d40feb0e12be14583e3ade8"
+    }
+   ],
+   "fileName": "./xcode/Samples/FrameworkSample/widget.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-bce2f7637fd1403a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "738f5dc1d5c3df1fd6ced123b8b76ed3642a4323"
+    }
+   ],
+   "fileName": "./xcode/Samples/FrameworkSample/widget.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-225ae11835ea4bc9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "155d52129d83a5a8ba5dbf2679daeeadd26c7ebb"
+    }
+   ],
+   "fileName": "./xcode/Samples/FrameworkSample/widget_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-d82d769edd81e4cc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4903b96bedf2aa4487718c8e7c51bfbc575933d"
+    }
+   ],
+   "fileName": "./xcode/Scripts/runtests.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-6b197584df70a1c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5528ed4ba28d8303622a1b8299fa371edd3ffbd"
+    }
+   ],
+   "fileName": "./xcode/Scripts/versiongenerate.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gtest-upstream-82d7ce1d5821f3e9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4387f0f61d83cbc50c6a32ca66d4154c7cd21ae"
+    }
+   ],
+   "fileName": "./xcode/gtest.xcodeproj/project.pbxproj"
+  }
+ ],
+ "name": "gtest-da8ed899",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-gtest-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/gtest); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://fuchsia.googlesource.com/third_party/gtest@da8ed89908140a3b937e7da81875bbeeebebbf43",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-gtest-upstream-f1f3ef82935a010e",
+    "SPDXRef-File-gtest-upstream-a2feb6ed0257c21c",
+    "SPDXRef-File-gtest-upstream-9a2aa4db38d3115e",
+    "SPDXRef-File-gtest-upstream-c00c0afca84109e3",
+    "SPDXRef-File-gtest-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-gtest-upstream-d5b4de16d947214e",
+    "SPDXRef-File-gtest-upstream-69e27356ef629022",
+    "SPDXRef-File-gtest-upstream-cb7459a3b233513c",
+    "SPDXRef-File-gtest-upstream-0b2e39842d121537",
+    "SPDXRef-File-gtest-upstream-24d8f9bdc7a2e7b8",
+    "SPDXRef-File-gtest-upstream-f52e8037382b3cfa",
+    "SPDXRef-File-gtest-upstream-14a98cc70216063d",
+    "SPDXRef-File-gtest-upstream-11c4555b4dd2f65d",
+    "SPDXRef-File-gtest-upstream-bec88924c120e431",
+    "SPDXRef-File-gtest-upstream-4b84e9a8d3a79de6",
+    "SPDXRef-File-gtest-upstream-87db583be5c13c1f",
+    "SPDXRef-File-gtest-upstream-1b35ac665c10dd8a",
+    "SPDXRef-File-gtest-upstream-e6a1bab9bd665351",
+    "SPDXRef-File-gtest-upstream-482f9627d0aec91d",
+    "SPDXRef-File-gtest-upstream-f30a5e30de5dfd52",
+    "SPDXRef-File-gtest-upstream-a7f6787b4b2face7",
+    "SPDXRef-File-gtest-upstream-378d1db6e0ebbf28",
+    "SPDXRef-File-gtest-upstream-9199834d4ead29a8",
+    "SPDXRef-File-gtest-upstream-3ede007d9de65532",
+    "SPDXRef-File-gtest-upstream-e61d1920ea933cba",
+    "SPDXRef-File-gtest-upstream-a9d81b003557665b",
+    "SPDXRef-File-gtest-upstream-fce278394ba6a9ba",
+    "SPDXRef-File-gtest-upstream-21e29f22782f04d5",
+    "SPDXRef-File-gtest-upstream-168ea971815f40d2",
+    "SPDXRef-File-gtest-upstream-6f87ee93bf0c3b64",
+    "SPDXRef-File-gtest-upstream-80eb60eaf5540172",
+    "SPDXRef-File-gtest-upstream-64f955d3848e7ab1",
+    "SPDXRef-File-gtest-upstream-2f9f4d1a371cbf8c",
+    "SPDXRef-File-gtest-upstream-35f219a2ac136705",
+    "SPDXRef-File-gtest-upstream-c6769d4d1d17e99f",
+    "SPDXRef-File-gtest-upstream-03d3f9afa2106e22",
+    "SPDXRef-File-gtest-upstream-b5b3555c841c78a0",
+    "SPDXRef-File-gtest-upstream-a96149bd076d7d46",
+    "SPDXRef-File-gtest-upstream-d913414d527bc65d",
+    "SPDXRef-File-gtest-upstream-6c4cc965782d3893",
+    "SPDXRef-File-gtest-upstream-fb97a6c6e7a37b04",
+    "SPDXRef-File-gtest-upstream-22b04eaefc3f92f2",
+    "SPDXRef-File-gtest-upstream-4832bd401beb347d",
+    "SPDXRef-File-gtest-upstream-f37fd155d8c1e3c1",
+    "SPDXRef-File-gtest-upstream-7f397db394ec1378",
+    "SPDXRef-File-gtest-upstream-b4faefa17615ac61",
+    "SPDXRef-File-gtest-upstream-5885c2d908cfd732",
+    "SPDXRef-File-gtest-upstream-308d13f56e85d825",
+    "SPDXRef-File-gtest-upstream-e3234037d023068d",
+    "SPDXRef-File-gtest-upstream-74a45d15528ce7fb",
+    "SPDXRef-File-gtest-upstream-3f8231ce5b56b787",
+    "SPDXRef-File-gtest-upstream-5b0a85e9d0f2d6e9",
+    "SPDXRef-File-gtest-upstream-5742d4885eb7963c",
+    "SPDXRef-File-gtest-upstream-85913e41c264cbf7",
+    "SPDXRef-File-gtest-upstream-8aaf3eec07075ee7",
+    "SPDXRef-File-gtest-upstream-a824b92983d3c0e1",
+    "SPDXRef-File-gtest-upstream-2cb0753f2adfeaf3",
+    "SPDXRef-File-gtest-upstream-c7809daff7e6991b",
+    "SPDXRef-File-gtest-upstream-198fe65038582ccf",
+    "SPDXRef-File-gtest-upstream-83bef6aab1a11562",
+    "SPDXRef-File-gtest-upstream-d39d5b3efc4c0442",
+    "SPDXRef-File-gtest-upstream-4d74abf20ddb5c5e",
+    "SPDXRef-File-gtest-upstream-302baa45ddbe0317",
+    "SPDXRef-File-gtest-upstream-f0b5174d2c0a618d",
+    "SPDXRef-File-gtest-upstream-52254fd44333d13c",
+    "SPDXRef-File-gtest-upstream-f39da8326347213c",
+    "SPDXRef-File-gtest-upstream-be016fa80f42c04a",
+    "SPDXRef-File-gtest-upstream-34363f213e09dc8c",
+    "SPDXRef-File-gtest-upstream-2ac00d5e33f9726b",
+    "SPDXRef-File-gtest-upstream-d688861df2087ecd",
+    "SPDXRef-File-gtest-upstream-0e697270fd844752",
+    "SPDXRef-File-gtest-upstream-920a984cce9c37b4",
+    "SPDXRef-File-gtest-upstream-c1e3d3fa45c3cd03",
+    "SPDXRef-File-gtest-upstream-17e1b6e0692f35f7",
+    "SPDXRef-File-gtest-upstream-f27607d83319a4a0",
+    "SPDXRef-File-gtest-upstream-d63b5874ad7159b2",
+    "SPDXRef-File-gtest-upstream-4486b834993dcd71",
+    "SPDXRef-File-gtest-upstream-41ed51b00fac903c",
+    "SPDXRef-File-gtest-upstream-4426006f849ce4b8",
+    "SPDXRef-File-gtest-upstream-1e5b51a41de0d868",
+    "SPDXRef-File-gtest-upstream-24b4011191dd7f4a",
+    "SPDXRef-File-gtest-upstream-b1a0a4e6bd1404fc",
+    "SPDXRef-File-gtest-upstream-aa8614ef7e46ace9",
+    "SPDXRef-File-gtest-upstream-ad8ce56812f95842",
+    "SPDXRef-File-gtest-upstream-9b09c119908c45b5",
+    "SPDXRef-File-gtest-upstream-d261ee1ca8934cbe",
+    "SPDXRef-File-gtest-upstream-df3117688c028e14",
+    "SPDXRef-File-gtest-upstream-541517ac247eddfa",
+    "SPDXRef-File-gtest-upstream-60482838630d98d9",
+    "SPDXRef-File-gtest-upstream-e0883bc6af0c7101",
+    "SPDXRef-File-gtest-upstream-b98b14e60c8bf7c4",
+    "SPDXRef-File-gtest-upstream-a92e8dab02550b80",
+    "SPDXRef-File-gtest-upstream-8363895c34854716",
+    "SPDXRef-File-gtest-upstream-e93741c5ca45a59e",
+    "SPDXRef-File-gtest-upstream-9f4a0730af72de02",
+    "SPDXRef-File-gtest-upstream-0465868280d50d81",
+    "SPDXRef-File-gtest-upstream-95d9aad1d6c4fb98",
+    "SPDXRef-File-gtest-upstream-ecc8c563a26d8368",
+    "SPDXRef-File-gtest-upstream-9e0818023d9e4aa0",
+    "SPDXRef-File-gtest-upstream-07eb0b07824da9bb",
+    "SPDXRef-File-gtest-upstream-5d2620d394845c7f",
+    "SPDXRef-File-gtest-upstream-985184cb5300ed5e",
+    "SPDXRef-File-gtest-upstream-b686d6a2caa80cc0",
+    "SPDXRef-File-gtest-upstream-204e155f832d35b0",
+    "SPDXRef-File-gtest-upstream-8453b2ef378d3bc2",
+    "SPDXRef-File-gtest-upstream-5c84fca876f600ce",
+    "SPDXRef-File-gtest-upstream-cafb51420ac6b46c",
+    "SPDXRef-File-gtest-upstream-48580b19b212612e",
+    "SPDXRef-File-gtest-upstream-1a8874e661eaf2f9",
+    "SPDXRef-File-gtest-upstream-1752b1863f09cda4",
+    "SPDXRef-File-gtest-upstream-f3395d41d1e2dc1c",
+    "SPDXRef-File-gtest-upstream-cb35e462b848640c",
+    "SPDXRef-File-gtest-upstream-b644122f8c144138",
+    "SPDXRef-File-gtest-upstream-f68424f6b41e34a9",
+    "SPDXRef-File-gtest-upstream-0cfc58e19b927d98",
+    "SPDXRef-File-gtest-upstream-362340d1c1382406",
+    "SPDXRef-File-gtest-upstream-13ad39646b4ee439",
+    "SPDXRef-File-gtest-upstream-f15d68719f1c62b3",
+    "SPDXRef-File-gtest-upstream-06f18d284ef5eef6",
+    "SPDXRef-File-gtest-upstream-9593a6cfadcd9b68",
+    "SPDXRef-File-gtest-upstream-2e3e343c4f131491",
+    "SPDXRef-File-gtest-upstream-1796669507003823",
+    "SPDXRef-File-gtest-upstream-b49c4b232153a1f8",
+    "SPDXRef-File-gtest-upstream-0e64434ab0b9ead7",
+    "SPDXRef-File-gtest-upstream-b86336c52175c5ce",
+    "SPDXRef-File-gtest-upstream-e57427b750866fe2",
+    "SPDXRef-File-gtest-upstream-83098b8aa75d9288",
+    "SPDXRef-File-gtest-upstream-517c6fc519d61e0e",
+    "SPDXRef-File-gtest-upstream-571c9e4271a7f261",
+    "SPDXRef-File-gtest-upstream-44c7df47f9be265c",
+    "SPDXRef-File-gtest-upstream-3416f4061b3ae005",
+    "SPDXRef-File-gtest-upstream-334de045e1372aea",
+    "SPDXRef-File-gtest-upstream-1d45976dc2369a04",
+    "SPDXRef-File-gtest-upstream-d90d964c65b42b60",
+    "SPDXRef-File-gtest-upstream-24eb1382304992f6",
+    "SPDXRef-File-gtest-upstream-163086ecd8023df6",
+    "SPDXRef-File-gtest-upstream-003d4478eb60bcba",
+    "SPDXRef-File-gtest-upstream-2efd8eb3adccf02e",
+    "SPDXRef-File-gtest-upstream-a7daa93ddb6a54ff",
+    "SPDXRef-File-gtest-upstream-78d52693868980c5",
+    "SPDXRef-File-gtest-upstream-0c9f6091af68c8a2",
+    "SPDXRef-File-gtest-upstream-a86347d4370597e8",
+    "SPDXRef-File-gtest-upstream-c8e0c9cd4b597fcc",
+    "SPDXRef-File-gtest-upstream-092d001a16c74117",
+    "SPDXRef-File-gtest-upstream-f6830ce158770455",
+    "SPDXRef-File-gtest-upstream-62f70c9be0cb0b3d",
+    "SPDXRef-File-gtest-upstream-e9c302cd81ba8390",
+    "SPDXRef-File-gtest-upstream-f2ca0aea91c60c4f",
+    "SPDXRef-File-gtest-upstream-93eaabc594e15f0e",
+    "SPDXRef-File-gtest-upstream-1409c93199e8844c",
+    "SPDXRef-File-gtest-upstream-ad144288c4c2e373",
+    "SPDXRef-File-gtest-upstream-83fa43d59e1b5598",
+    "SPDXRef-File-gtest-upstream-d7e6c4c8294f224b",
+    "SPDXRef-File-gtest-upstream-2451319594103b93",
+    "SPDXRef-File-gtest-upstream-6ada0c9c1d2532f9",
+    "SPDXRef-File-gtest-upstream-70898c0f3f5c139a",
+    "SPDXRef-File-gtest-upstream-b88646ecbf186296",
+    "SPDXRef-File-gtest-upstream-0677b40494a86892",
+    "SPDXRef-File-gtest-upstream-b901c02dd29384b1",
+    "SPDXRef-File-gtest-upstream-f08bfd77ddd2f943",
+    "SPDXRef-File-gtest-upstream-e3a61894cdf0b901",
+    "SPDXRef-File-gtest-upstream-f7e04197fbf9e3ee",
+    "SPDXRef-File-gtest-upstream-3a3b99389f85dbcf",
+    "SPDXRef-File-gtest-upstream-91ebc6a6c2a5116c",
+    "SPDXRef-File-gtest-upstream-16faf902a9272333",
+    "SPDXRef-File-gtest-upstream-d4976fa334f5070c",
+    "SPDXRef-File-gtest-upstream-ba963c75b21babba",
+    "SPDXRef-File-gtest-upstream-bce2f7637fd1403a",
+    "SPDXRef-File-gtest-upstream-225ae11835ea4bc9",
+    "SPDXRef-File-gtest-upstream-d82d769edd81e4cc",
+    "SPDXRef-File-gtest-upstream-6b197584df70a1c9",
+    "SPDXRef-File-gtest-upstream-82d7ce1d5821f3e9"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "gtest",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "b772d3007dd4d253e061fbaa9c06d9a181a40332"
+   },
+   "supplier": "Organization: fuchsia.googlesource.com",
+   "versionInfo": "da8ed899"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-gtest-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

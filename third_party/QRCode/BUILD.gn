@@ -1,0 +1,40 @@
+# Copyright 2019 GoldenRiver Inc. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+# Do not use the targets in this file unless you need a certain libjpeg
+# implementation. Use the meta target //third_party:jpeg instead.
+
+import("//build/nebula/nbl_sdk_library.gni")
+
+config("qrcode_config") {
+  include_dirs = [ "./include/nbl_qrcode" ]
+
+  defines = [
+  ]
+}
+
+static_library("libnbl_qrcode") {
+  sources = [
+    "src/qrcode.c"
+  ]
+
+  configs += [ ":qrcode_config" ]
+
+  public_configs = [ ":qrcode_config" ]
+}
+
+#################################################
+## SDK
+#################################################
+
+nbl_sdk_library("libnbl_qrcode_sdk") {
+  name = "nbl_qrcode"
+  category = "hee"
+  hdr_dir = "include"
+  libs = [
+    "libnbl_qrcode.a",
+  ]
+  deps = [
+    ":libnbl_qrcode",
+  ]
+}

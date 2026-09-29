@@ -1,0 +1,306 @@
+// SPDX-License-Identifier: NebulaProprietary
+/*
+* Copyright (c) 2025 MediaTek Inc.
+* Copyright 2025 GoldenRiver Technologies Co., Ltd. All rights reserved.
+*/
+/ {
+    #address-cells = <2>;
+    #size-cells = <2>;
+
+    interrupt-parent = <&intc>;
+
+    aliases {
+        spi0 = &spi0;
+        spi1 = &spi1;
+        spi2 = &spi2;
+        spi3 = &spi3;
+        spi4 = &spi4;
+        spi5 = &spi5;
+        spi6 = &spi6;
+        spi7 = &spi7;
+        i2c0 = &i2c0;
+        i2c1 = &i2c1;
+        i2c2 = &i2c2;
+        i2c3 = &i2c3;
+        i2c4 = &i2c4;
+        i2c5 = &i2c5;
+        i2c6 = &i2c6;
+        i2c7 = &i2c7;
+        i2c8 = &i2c8;
+        i2c9 = &i2c9;
+        i2c10 = &i2c10;
+        i2c11 = &i2c11;
+        i2c12 = &i2c12;
+    };
+
+/*
+    intc: interrupt-controller@c400000 {
+        compatible = "arm,gic-v3";
+        #interrupt-cells = <3>;
+        #address-cells = <2>;
+        #size-cells = <2>;
+        //#redistributor-regions = <1>;
+        interrupt-parent = <&intc>;
+        interrupt-controller;
+        reg = <0 0x0c400000 0 0x40000>, // distributor
+              <0 0x0c440000 0 0x200000>; // redistributor
+        interrupts = <GIC_PPI 9 4>;
+    };
+    */
+
+    intc: interrupt-controller {
+        compatible = "grt,interrupt-controller-placeholder";
+        interrupt-controller;
+        #address-cells = <0>;
+        #interrupt-cells = <3>;
+    };
+
+    soc {
+        compatible = "simple-bus";
+        #address-cells = <2>;
+        #size-cells = <2>;
+        ranges;
+
+        uart: uart0@11001000 {
+            compatible = "mediatek,mt6577-uart";
+            reg = <0 0x11001000 0 0x1000>;
+            interrupts = <0 522 4>;
+            status = "disabled";
+        };
+
+        ufshci: ufshci@112b0000 {
+            compatible = "mediatek,mt8183-ufshci";
+            reg = <0 0x112b0000 0 0x2300>;
+            interrupts = <0 786 4>;
+            status = "disabled";
+        };
+
+        eint: apirq@11ce0000 {
+            compatible = "mediatek,mt6983-eint";
+            reg = <0 0x11ce0000 0 0x1000>,
+                    <0 0x11de0000 0 0x1000>,
+                    <0 0x11e60000 0 0x1000>,
+                    <0 0x1c01e000 0 0x1000>;
+//            reg-names = "eint-e", "eint-s", "eint-w", "eint-c";
+            interrupts = <0 367 4>;
+//            mediatek,instance-num = <4>;
+//            mediatek,total-pin-number = <217>;
+//            mediatek,pins = <0 1 0 1>,<1 2 0 1>,<2 2 1 1>,<3 2 2 1>,
+//                    <4 2 3 1>,<5 2 4 1>,<6 1 1 1>,<7 1 2 1>,
+//                    <8 1 3 1>,<9 1 4 1>,<10 1 5 1>,<11 1 6 1>,
+//                    <12 1 7 1>,<13 1 8 1>,<14 1 9 1>,<15 1 10 1>,
+//                    <16 1 11 1>,<17 1 12 1>,<18 1 13 1>,<19 1 14 1>,
+//                    <20 2 5 1>,<21 2 6 1>,<22 2 7 1>,<23 2 8 1>,
+//                    <24 2 9 1>,<25 2 10 1>,<26 2 11 1>,<27 2 12 1>,
+//                    <28 2 13 1>,<29 2 14 1>,<30 2 15 1>,<31 2 16 1>,
+//                    <32 2 17 1>,<33 2 18 1>,<34 2 19 1>,<35 2 20 1>,
+//                    <36 0 0 1>,<37 0 1 1>,<38 0 2 1>,<39 0 3 1>,
+//                    <40 0 4 1>,<41 0 5 1>,<42 0 6 1>,<43 0 7 1>,
+//                    <44 0 8 1>,<45 0 9 1>,<46 0 10 1>,<47 0 11 1>,
+//                    <48 0 12 1>,<49 0 13 1>,<50 0 14 1>,<51 0 15 1>,
+//                    <52 0 16 0>,<53 1 15 1>,<54 1 16 0>,<55 1 17 0>,
+//                    <56 1 18 0>,<57 1 19 0>,<58 1 20 0>,<59 1 21 0>,
+//                    <60 1 22 0>,<61 1 23 0>,<62 1 24 0>,<63 1 25 0>,
+//                    <64 1 26 0>,<65 1 27 0>,<66 1 28 0>,<67 0 17 0>,
+//                    <68 1 29 0>,<69 0 18 0>,<70 1 30 0>,<71 1 31 0>,
+//                    <72 1 32 0>,<73 1 33 0>,<74 1 34 0>,<75 0 19 0>,
+//                    <76 0 20 0>,<77 0 21 0>,<78 0 22 0>,<79 0 23 0>,
+//                    <80 0 24 0>,<81 0 25 0>,<82 0 26 0>,<83 0 27 0>,
+//                    <84 0 28 0>,<85 0 29 0>,<86 0 30 0>,<87 0 31 0>,
+//                    <88 0 32 0>,<89 0 33 0>,<90 0 34 0>,<91 0 35 0>,
+//                    <92 0 36 0>,<93 0 37 0>,<94 0 38 0>,<95 0 39 0>,
+//                    <96 0 40 0>,<97 0 41 0>,<98 0 42 0>,<99 0 43 0>,
+//                    <100 0 44 0>,<101 0 45 0>,<102 0 46 0>,<103 0 47 0>,
+//                    <104 0 48 0>,<105 0 49 0>,<106 0 50 0>,<107 0 51 0>,
+//                    <108 0 52 0>,<109 0 53 0>,<110 0 54 0>,<111 0 55 0>,
+//                    <112 0 56 0>,<113 1 35 0>,<114 1 36 0>,<115 1 37 0>,
+//                    <116 1 38 0>,<117 1 39 0>,<118 1 40 0>,<119 1 41 0>,
+//                    <120 1 42 0>,<199 3 0 0>,<200 3 1 0>,<201 3 2 0>,
+//                    <202 3 3 0>,<203 3 4 0>,<204 3 5 0>,<205 3 6 0>,
+//                    <206 3 7 0>,<207 3 8 0>,<208 3 9 0>,<209 3 10 0>,
+//                    <210 3 11 0>,<211 3 12 0>,<212 3 13 0>,<213 3 14 0>,
+//                    <214 3 15 0>,<215 3 16 0>,<216 3 17 0>;
+            status = "disabled";
+        };
+
+        spi0: spi0@11010800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11010800 0 0x100>;
+            interrupts = <0 587 4>;
+            status = "disabled";
+        };
+
+        spi1: spi1@11011800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11011800 0 0x100>;
+            interrupts = <0 588 4>;
+            status = "disabled";
+        };
+
+        spi2: spi2@11012800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11012800 0 0x100>;
+            interrupts = <0 589 4>;
+            status = "disabled";
+        };
+
+        spi3: spi3@11013800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11013800 0 0x100>;
+            interrupts = <0 590 4>;
+            status = "disabled";
+        };
+
+        spi4: spi4@11014800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11014800 0 0x100>;
+            interrupts = <0 591 4>;
+            status = "disabled";
+        };
+
+        spi5: spi5@11015800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11015800 0 0x100>;
+            interrupts = <0 592 4>;
+            status = "disabled";
+        };
+
+        spi6: spi6@11016800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11016800 0 0x100>;
+            interrupts = <0 593 4>;
+            status = "disabled";
+        };
+
+        spi7: spi7@11017800 {
+            compatible = "mediatek,mt6881-spi";
+            reg = <0 0x11017800 0 0x100>;
+            interrupts = <0 594 4>;
+            status = "disabled";
+        };
+
+        i2c0: i2c@11e00000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11e00000 0 0x1000>,
+                <0 0x11300300 0 0x80>;
+            interrupts = <0 528 4>;
+            status = "disabled";
+        };
+
+        i2c1: i2c@11e01000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11e01000 0 0x1000>,
+                <0 0x11300380 0 0x80>;
+            interrupts = <0 529 4>;
+            status = "disabled";
+        };
+
+        i2c2: i2c@11d70000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d70000 0 0x1000>,
+                <0 0x11300400 0 0x100>;
+            interrupts = <0 530 4>;
+            status = "disabled";
+        };
+
+        i2c3: i2c@11e02000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11e02000 0 0x1000>,
+                <0 0x11300500 0 0x80>;
+            interrupts = <0 531 4>;
+            status = "disabled";
+        };
+
+        i2c4: i2c@11d71000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d71000 0 0x1000>,
+                <0 0x11300580 0 0x100>;
+            interrupts = <0 532 4>;
+            status = "disabled";
+        };
+
+        i2c5: i2c@11e03000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11e03000 0 0x1000>,
+                <0 0x11300680 0 0x80>;
+            interrupts = <0 533 4>;
+            status = "disabled";
+        };
+
+        i2c6: i2c@11e04000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11e04000 0 0x1000>,
+                <0 0x11300700 0 0x80>;
+            interrupts = <0 534 4>;
+            status = "disabled";
+        };
+
+        i2c7: i2c@11d72000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d72000 0 0x1000>,
+                <0 0x11300780 0 0x100>;
+            interrupts = <0 535 4>;
+            status = "disabled";
+        };
+
+        i2c8: i2c@11d73000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d73000 0 0x1000>,
+                <0 0x11300880 0 0x100>;
+            interrupts = <0 536 4>;
+            status = "disabled";
+        };
+
+        i2c9: i2c@11d74000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d74000 0 0x1000>,
+                <0 0x11300980 0 0x100>;
+            interrupts = <0 537 4>;
+            status = "disabled";
+        };
+
+        i2c10: i2c@11d75000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d75000 0 0x1000>,
+                <0 0x11300a80 0 0x80>;
+            interrupts = <0 538 4>;
+            status = "disabled";
+        };
+
+        i2c11: i2c@11d76000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d76000 0 0x1000>,
+                <0 0x11300b00 0 0x80>;
+            interrupts = <0 539 4>;
+            status = "disabled";
+        };
+
+        i2c12: i2c@11d77000 {
+            compatible = "mediatek,mt6991-i2c";
+            reg = <0 0x11d77000 0 0x1000>,
+                <0 0x11300b80 0 0x80>;
+            interrupts = <0 540 4>;
+            status = "disabled";
+        };
+
+        watchdog: watchdog@1c00a000 {
+            compatible = "mediatek,mt6881-wdt",
+                     "mediatek,mt6589-wdt",
+                     "syscon", "simple-mfd";
+            reg = <0 0x1c00a000 0 0x1000>;
+            status = "disabled";
+        };
+
+        guest_allocator: guest_allocator {
+            compatible = "grt,guest-allocator";
+            status = "disabled";
+        };
+
+        rtc: rtc@1cc14000 {
+            compatible = "mediatek,mt6685-rtc";
+            reg = <0 0x1cc14000 0 0x30c0>,
+                  <0 0x1cc10000 0 0x30c0>;
+            status = "disabled";
+        };
+    };
+};

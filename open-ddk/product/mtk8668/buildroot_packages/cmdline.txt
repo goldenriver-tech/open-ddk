@@ -1,0 +1,2 @@
+ktrace.bufsize=1
+ktrace.grpmask=0

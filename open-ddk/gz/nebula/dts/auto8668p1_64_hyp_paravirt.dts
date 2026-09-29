@@ -1,0 +1,42 @@
+// SPDX-License-Identifier: NebulaProprietary
+/*
+* Copyright (c) 2025 MediaTek Inc.
+* Copyright 2025 GoldenRiver Technologies Co., Ltd. All rights reserved.
+*/
+/* auto8668p1_64_hyp_paravirt.dts */
+/dts-v1/;
+
+/include/ "mt8668.dtsi"
+/include/ "features.dtsi"
+
+/ {
+    model = "grt,mt8668";
+    compatible = "grt,nebula-config";
+};
+
+&uart {
+    workmode = <1>;  /*1: POLL 2:IRQ*/
+    uart_log = <1>; /*0: OFF  1: ON*/
+    status = "okay";
+};
+
+&feat_root {
+    status = "okay";
+};
+
+&feat_disable_uartlog {
+    status = "okay";
+};
+
+&watchdog {
+    status = "okay";
+};
+
+/* SOS watchdog failures in this product must reset the platform. */
+&feat_wdt_sink {
+    status = "disabled";
+};
+
+&guest_allocator {
+    status = "okay";
+};

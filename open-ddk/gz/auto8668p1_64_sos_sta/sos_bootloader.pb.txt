@@ -1,0 +1,12 @@
+protocol: "lk2"
+payload {
+    name: "dtb",
+    filepath: "/dev/misc/ramctl/ramdisk-1/block";
+    offset: 0x30400000,
+}
+payload {
+    name: "lk2",
+    partition_name: "bl2_sos_a";
+    offset: 0x50202000,
+    header_size: 0x1300,
+}

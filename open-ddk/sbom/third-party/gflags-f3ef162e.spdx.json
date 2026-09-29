@@ -1,0 +1,648 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/gflags-f3ef162e-f3ef162e5c5d2cb284b0649d81495990a01cd96b",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-24139dae656713ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15b1c204dbc7f99c5ee6a2bafe78c9613b7f463e"
+    }
+   ],
+   "fileName": "./.gitattributes"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a0052ff8eb9ae54b6de199acfe92381cdd69bf9e"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-7445606fbf8f3683",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "869427871c9f551b49d47c15d827c5d935541fb2"
+    }
+   ],
+   "fileName": "./.gitmodules"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "286dc0f5394c111d9c01fc3fe5c6855f2386ff56"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-570cd21892cd74bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ab80752327fd9dcec1313b2e95af5b4aa55905b6"
+    }
+   ],
+   "fileName": "./AUTHORS.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-9b8dfdff736c5b1d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f8e3616180722f5342e3fb5ba471c7c7db18ff90"
+    }
+   ],
+   "fileName": "./BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7b15773b7120deee2f4601e242eb16d880f4aa74"
+    }
+   ],
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d132444cba6f1e07716f1c67cbdd5dce02d27f9"
+    }
+   ],
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-a1798e552e2650b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b2d4ab17f1b8ef9e0646ba932dce81efe3b852ab"
+    }
+   ],
+   "fileName": "./COPYING.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-57bf262130f956ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "442bd6d4a880b768d7518b04751a156a864c1407"
+    }
+   ],
+   "fileName": "./ChangeLog.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-b2270542d41297db",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05a93de4a2f1070b588312cb02741d6ace561d93"
+    }
+   ],
+   "fileName": "./INSTALL.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "456018b4ab2b7030e9bc84b6694770a8047bc57a"
+    }
+   ],
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-703988282e63eeb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0912866ccd7d5991862269832fd5f9d21616ef3f"
+    }
+   ],
+   "fileName": "./WORKSPACE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-43b9d80d1f50472e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1becb9f40f9590acb409563e00d33a011344a453"
+    }
+   ],
+   "fileName": "./appveyor.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-2e9e6703ac74fee7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "341246cb00dbe64b40087c07a82e030d80072b0f"
+    }
+   ],
+   "fileName": "./bazel/gflags.bzl"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-761db38f04fca4fd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "72ef5a79e59e94b5ab205dc8dc0e6dc22de53a60"
+    }
+   ],
+   "fileName": "./cmake/README_runtime.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-8bb3bff7796bdf57",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1ec696762c6f8dad1363902acc2668cc0026a92"
+    }
+   ],
+   "fileName": "./cmake/config.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-94aec33344fe626c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f98bfe9b130788ca07bec8b8ff7d09da9e16a9b0"
+    }
+   ],
+   "fileName": "./cmake/execute_test.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-a62e1b44484a23a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "47761f37e4692c35f236524cc332f706092c31f5"
+    }
+   ],
+   "fileName": "./cmake/package.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-c0394c35bbce850b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ff77f05d1d6c530713fa94056bf5a5f576131a68"
+    }
+   ],
+   "fileName": "./cmake/package.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-f6c4f8175ae244fd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4d1f259b959e4ae404307da66044c46ce4a08d87"
+    }
+   ],
+   "fileName": "./cmake/utils.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-3bb04ca70e1666ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd035a00eef7ffdf5ed5cc15f4f77b706ab31370"
+    }
+   ],
+   "fileName": "./cmake/version.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-9766850dd15eda81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1323f4ad6b5c28d0a4af67366920a8a9fec2d33"
+    }
+   ],
+   "fileName": "./include/config.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-f53cd68089dc8d0d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "33b053698b72953a37833c71be2113231d5220eb"
+    }
+   ],
+   "fileName": "./include/gflags/gflags.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-2ac84a51a0f938be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bbf2a97d74de49b4ce51753ab62a2ebffe3e6f21"
+    }
+   ],
+   "fileName": "./include/gflags/gflags_completions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-bf36de7dfc9947cf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "914daecef7cbb5a967cdcb52f68c0a1e8180d5a7"
+    }
+   ],
+   "fileName": "./include/gflags/gflags_declare.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-37c254153da4f348",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e8a6dec3bd7984adb0edcc59313f6679ba9872b0"
+    }
+   ],
+   "fileName": "./include/gflags/gflags_gflags.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-700d3e6dc55d9da5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ab7f126ee8f0bf89f1c886df1f904a9864b42b4"
+    }
+   ],
+   "fileName": "./src/config.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-7d20a30d81ddd5db",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d867b41566a26c9b5f90fa010fa6758fb4d9cf14"
+    }
+   ],
+   "fileName": "./src/gflags.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-fb3c2530af76d039",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20db7c9110f50133478015836bdc163992c3a486"
+    }
+   ],
+   "fileName": "./src/gflags.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-02c0d4d529c21cba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4bfcacaa9dc2e3608ff55b382fe1414bc52a0b00"
+    }
+   ],
+   "fileName": "./src/gflags_completions.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-f6feff7b35b81cd1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e3efb9f2f8a9427c253108e7227fabad6f48a58"
+    }
+   ],
+   "fileName": "./src/gflags_completions.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-3d30bdbe6952e860",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dea8599b40dccede9fb3a1ea372eaf032ed9f621"
+    }
+   ],
+   "fileName": "./src/gflags_completions.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-ca2be21ec4f1a885",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99295b3dccc57416d51f3253b45606b1e974ca37"
+    }
+   ],
+   "fileName": "./src/gflags_declare.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-4f3e522d0f34aafc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9e321d3f4ed530a3d1d49c2df323b15c277bae7"
+    }
+   ],
+   "fileName": "./src/gflags_ns.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-7efba213022fb604",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "52a54c62b95607ebd5e33083eb4865613216a531"
+    }
+   ],
+   "fileName": "./src/gflags_reporting.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-7230f15475c06f91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "edd7cfc400915b1b3949aed5916e394c3527de20"
+    }
+   ],
+   "fileName": "./src/mutex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-5f65ec0c183df81e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "777b7b278023b2fb5d5720991741c71c4aa8a928"
+    }
+   ],
+   "fileName": "./src/util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-b2f5db8cbee76a3d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "50b6460f4ff0a448b8050aa0e18aa1370006d61e"
+    }
+   ],
+   "fileName": "./src/windows_port.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-ba8fd769b4e95368",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18c3557d760cd996691d6351e9f68a715023b4a6"
+    }
+   ],
+   "fileName": "./src/windows_port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-d9577b84b013e0c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55fa8d0e71bae5132123f1ec7e8e010f1ccf1906"
+    }
+   ],
+   "fileName": "./test/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-81dd25a7e9ecea9f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21818cef2f03868d06d73efda7043bf0dd825ac6"
+    }
+   ],
+   "fileName": "./test/config/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-dac64287548f37aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c78877d3e1ac742361bd8f2417f90cef895a3e4"
+    }
+   ],
+   "fileName": "./test/config/main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-a1c6a82c2d1ce0a1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02e8acc99fd502b05611295f8e527a3188de0a90"
+    }
+   ],
+   "fileName": "./test/flagfile.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-451da3ba78b6dca9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bac8e28eb2723e0ca1d199c8f01224e973f6667f"
+    }
+   ],
+   "fileName": "./test/flagfile.2"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-ed918a6f6f1634ce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e7b83a7a45792cfd7528d9f72423e1b7ad42270c"
+    }
+   ],
+   "fileName": "./test/flagfile.3"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-081dba319b985fe9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ae44fe4804e239b3fdc65066692f33b54eb42e2"
+    }
+   ],
+   "fileName": "./test/gflags_build.py.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-63999b78298272f1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f376df500b73811e409f01f27b5e7f69f8e90585"
+    }
+   ],
+   "fileName": "./test/gflags_declare_flags.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-52e2093a1db92fd9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6a81c63f2f9633556fb44218d460f8ed5f8e2104"
+    }
+   ],
+   "fileName": "./test/gflags_declare_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-1556079130a0f0dd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a2e5f43c16cccd49e7a99135f7c691c545cac0be"
+    }
+   ],
+   "fileName": "./test/gflags_strip_flags_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-b50df5753b154c9f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f1ff9b666e74cf9ac36896d968e4bdb3abdd2955"
+    }
+   ],
+   "fileName": "./test/gflags_strip_flags_test.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-993c762a47f9e18b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "708997cd706fea4fe971ceb1693071559bcd209c"
+    }
+   ],
+   "fileName": "./test/gflags_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-8e2c0a84532a58f1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d56aeb89fc5b9ad42e6ba56943adf4546d03202d"
+    }
+   ],
+   "fileName": "./test/gflags_unittest_flagfile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-f9bf30782e34b119",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b9da1457fa6b25e48b2faa36097ddf4de9ad326"
+    }
+   ],
+   "fileName": "./test/nc/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-gflags-upstream-c3419b3cf305e952",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4d32ff64328c486075e3697b44dee9a84a4885e0"
+    }
+   ],
+   "fileName": "./test/nc/gflags_nc.cc"
+  }
+ ],
+ "name": "gflags-f3ef162e",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-gflags-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/gflags); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://fuchsia.googlesource.com/third_party/gflags@f3ef162e5c5d2cb284b0649d81495990a01cd96b",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-gflags-upstream-24139dae656713ba",
+    "SPDXRef-File-gflags-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-gflags-upstream-7445606fbf8f3683",
+    "SPDXRef-File-gflags-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-gflags-upstream-570cd21892cd74bb",
+    "SPDXRef-File-gflags-upstream-9b8dfdff736c5b1d",
+    "SPDXRef-File-gflags-upstream-f1f3ef82935a010e",
+    "SPDXRef-File-gflags-upstream-9a2aa4db38d3115e",
+    "SPDXRef-File-gflags-upstream-a1798e552e2650b9",
+    "SPDXRef-File-gflags-upstream-57bf262130f956ca",
+    "SPDXRef-File-gflags-upstream-b2270542d41297db",
+    "SPDXRef-File-gflags-upstream-8ec9a00bfd09b319",
+    "SPDXRef-File-gflags-upstream-703988282e63eeb0",
+    "SPDXRef-File-gflags-upstream-43b9d80d1f50472e",
+    "SPDXRef-File-gflags-upstream-2e9e6703ac74fee7",
+    "SPDXRef-File-gflags-upstream-761db38f04fca4fd",
+    "SPDXRef-File-gflags-upstream-8bb3bff7796bdf57",
+    "SPDXRef-File-gflags-upstream-94aec33344fe626c",
+    "SPDXRef-File-gflags-upstream-a62e1b44484a23a7",
+    "SPDXRef-File-gflags-upstream-c0394c35bbce850b",
+    "SPDXRef-File-gflags-upstream-f6c4f8175ae244fd",
+    "SPDXRef-File-gflags-upstream-3bb04ca70e1666ca",
+    "SPDXRef-File-gflags-upstream-9766850dd15eda81",
+    "SPDXRef-File-gflags-upstream-f53cd68089dc8d0d",
+    "SPDXRef-File-gflags-upstream-2ac84a51a0f938be",
+    "SPDXRef-File-gflags-upstream-bf36de7dfc9947cf",
+    "SPDXRef-File-gflags-upstream-37c254153da4f348",
+    "SPDXRef-File-gflags-upstream-700d3e6dc55d9da5",
+    "SPDXRef-File-gflags-upstream-7d20a30d81ddd5db",
+    "SPDXRef-File-gflags-upstream-fb3c2530af76d039",
+    "SPDXRef-File-gflags-upstream-02c0d4d529c21cba",
+    "SPDXRef-File-gflags-upstream-f6feff7b35b81cd1",
+    "SPDXRef-File-gflags-upstream-3d30bdbe6952e860",
+    "SPDXRef-File-gflags-upstream-ca2be21ec4f1a885",
+    "SPDXRef-File-gflags-upstream-4f3e522d0f34aafc",
+    "SPDXRef-File-gflags-upstream-7efba213022fb604",
+    "SPDXRef-File-gflags-upstream-7230f15475c06f91",
+    "SPDXRef-File-gflags-upstream-5f65ec0c183df81e",
+    "SPDXRef-File-gflags-upstream-b2f5db8cbee76a3d",
+    "SPDXRef-File-gflags-upstream-ba8fd769b4e95368",
+    "SPDXRef-File-gflags-upstream-d9577b84b013e0c4",
+    "SPDXRef-File-gflags-upstream-81dd25a7e9ecea9f",
+    "SPDXRef-File-gflags-upstream-dac64287548f37aa",
+    "SPDXRef-File-gflags-upstream-a1c6a82c2d1ce0a1",
+    "SPDXRef-File-gflags-upstream-451da3ba78b6dca9",
+    "SPDXRef-File-gflags-upstream-ed918a6f6f1634ce",
+    "SPDXRef-File-gflags-upstream-081dba319b985fe9",
+    "SPDXRef-File-gflags-upstream-63999b78298272f1",
+    "SPDXRef-File-gflags-upstream-52e2093a1db92fd9",
+    "SPDXRef-File-gflags-upstream-1556079130a0f0dd",
+    "SPDXRef-File-gflags-upstream-b50df5753b154c9f",
+    "SPDXRef-File-gflags-upstream-993c762a47f9e18b",
+    "SPDXRef-File-gflags-upstream-8e2c0a84532a58f1",
+    "SPDXRef-File-gflags-upstream-f9bf30782e34b119",
+    "SPDXRef-File-gflags-upstream-c3419b3cf305e952"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "gflags",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "de72d4bd49c9abbb2530af7c71b09f65bd01a63e"
+   },
+   "supplier": "Organization: fuchsia.googlesource.com",
+   "versionInfo": "f3ef162e"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-gflags-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

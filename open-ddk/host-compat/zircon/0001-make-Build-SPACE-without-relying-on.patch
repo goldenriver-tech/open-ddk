@@ -1,0 +1,40 @@
+From e4f2d6ad605dcf80517d52165042d256d85e78ae Mon Sep 17 00:00:00 2001
+From: tao.jiang <tao.jiang@goldenrivertek.com>
+Date: Tue, 8 Sep 2026 00:40:34 +0000
+Subject: [PATCH] [make] Build SPACE without relying on +=
+
+GNU Make 4.3 no longer inserts a leading space when appending to an
+empty variable, so "SPACE :=" followed by "SPACE +=" left SPACE
+empty. The $(subst .,$(SPACE),$(MODULE)) in make/module.mk then
+collapsed module names such as system/host/blobfs.host to
+system/host/blobfshost, and the build stopped with a missing
+rules.mk error.
+
+Derive SPACE from two references to an empty variable, which yields
+a single space on every supported Make version.
+
+Test: fx set-venus venus-hee --tee none
+Test: fx full-build
+
+---
+ make/macros.mk | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/make/macros.mk b/make/macros.mk
+index 11167d0468..acd18dec7d 100644
+--- a/make/macros.mk
++++ b/make/macros.mk
+@@ -19,8 +19,8 @@ TOMODULEDIR = $(addprefix $(MODULE_BUILDDIR)/,$(1))
+ TOBOOL = $(if $(filter-out 0 false,$1),true,false)
+ 
+ COMMA := ,
+-SPACE :=
+-SPACE +=
++EMPTY :=
++SPACE := $(EMPTY) $(EMPTY)
+ 
+ # lower case and upper case translation
+ LC = $(subst A,a,$(subst B,b,$(subst C,c,$(subst D,d,$(subst E,e,$(subst F,f,$(subst G,g,$(subst H,h,$(subst I,i,$(subst J,j,$(subst K,k,$(subst L,l,$(subst M,m,$(subst N,n,$(subst O,o,$(subst P,p,$(subst Q,q,$(subst R,r,$(subst S,s,$(subst T,t,$(subst U,u,$(subst V,v,$(subst W,w,$(subst X,x,$(subst Y,y,$(subst Z,z,$1))))))))))))))))))))))))))
+-- 
+2.34.1
+

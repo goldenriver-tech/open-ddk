@@ -1,0 +1,105 @@
+# Copyright 2019 GoldenRiver Inc. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+# Do not use the targets in this file unless you need a certain libjpeg
+# implementation. Use the meta target //third_party:jpeg instead.
+
+import("//build/package.gni")
+
+config("lcui_config") {
+  include_dirs = [ "include" ]
+
+  cflags = [
+    "-Wno-missing-field-initializers",
+    "-Wno-sign-compare",
+  ]
+}
+
+config("lcui_public_config") {
+  include_dirs = [ "include" ]
+}
+
+static_library("LCUI") {
+  sources = [
+    "src/thread/pthread/mutex.c",
+    "src/util/charset.c",
+    "src/util/dict.c",
+    "src/util/string.c",
+    "src/util/strlist.c",
+    "src/util/strpool.c",
+    "src/util/logger.c",
+    "src/util/linkedlist.c",
+    "src/util/parse.c",
+    "src/util/time.c",
+    "src/gui/metrics.c",
+    "src/gui/css_fontstyle.c",
+    "src/gui/css_parser.c",
+    "src/gui/css_library.c",
+    "src/gui/css_rule_font_face.c",
+    "src/gui/widget_attribute.c",
+    "src/gui/widget_id.c",
+    "src/gui/widget_status.c",
+    "src/gui/widget_class.c",
+    "src/gui/widget_style.c",
+    "src/gui/widget_prototype.c",
+  ]
+
+  deps = [
+    "//garnet/public/lib/fxl",
+  ]
+
+  configs += [ ":lcui_config" ]
+
+  configs -= [ "//build/config:symbol_visibility_hidden" ]
+
+  public_configs = [ ":lcui_public_config" ]
+}
+
+config("lcui_test_config") {
+  defines = [
+    "PREVIEW_MODE=1"
+  ]
+}
+
+executable("test") {
+  output_name = "lcui_test"
+  testonly = true
+
+  sources = [
+    "test/test_widget_opacity.c"
+  ]
+
+  configs += [
+    ":lcui_test_config",
+  ]
+
+  deps = [
+    ":LCUI",
+  ]
+}
+
+package("lcui_test") {
+  system_image = true
+  testonly = true
+
+  deps = [
+    ":test",
+  ]
+
+  resources = [
+    {
+      path = rebase_path("test/test_widget_opacity.css")
+      dest = "lcui/test_widget_opacity.css"
+    },
+    {
+      path = rebase_path("test/test_widget_opacity.xml")
+      dest = "lcui/test_widget_opacity.xml"
+    },
+  ]
+
+  tests = [
+    {
+      name = "lcui_test"
+    },
+  ]
+}

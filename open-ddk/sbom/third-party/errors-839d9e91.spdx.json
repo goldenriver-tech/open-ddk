@@ -1,0 +1,181 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/errors-839d9e91-839d9e913e063e28dfd0e6c7b7512793e0a48be9",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d9a6d2ae7e2add88179e429f787e6a5b2c7b1133"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0c5cf1de1149bbed87957466aa8cf3c1088525c9"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c1bedc0d42f24c24a1bd266f3ce101a4b0579fc"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ce29b4ccc961496202a264eb21f8d707e341f29"
+    }
+   ],
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-43b9d80d1f50472e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ec0c79adcfaa68d65dbb62cfb67c5ee5fdfcc8cb"
+    }
+   ],
+   "fileName": "./appveyor.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-941aac86600e145c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "96148c77f36342a622f297a24818f4df3b98c7d8"
+    }
+   ],
+   "fileName": "./bench_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-2cac4a825d3d4dd6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f19813aa2e3957b79b12e7d1e61c0704521245e0"
+    }
+   ],
+   "fileName": "./errors.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-adf0a7d5ed614a65",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1227bd31e08e186c9360e9889f1f0681a65a2dd4"
+    }
+   ],
+   "fileName": "./errors_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-e3ec2aa3436ef9dd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "703238eee6c005068eedc73d644b6795534af2dd"
+    }
+   ],
+   "fileName": "./example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-281bce5e3af9be13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "27ec8a22552256e87640b8f3e923deaeb8de7866"
+    }
+   ],
+   "fileName": "./format_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-d69fab1aa6d05ca6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1f7ada0597d04da226a5faabf79f8ff52f10fa71"
+    }
+   ],
+   "fileName": "./stack.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-errors-upstream-d60fe8716c356990",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32af39450dc32f6774a304dc48f9948048fb684d"
+    }
+   ],
+   "fileName": "./stack_test.go"
+  }
+ ],
+ "name": "errors-839d9e91",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-errors-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (garnet/go/src/thinfs/vendor/github.com/pkg/errors); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/pkg/errors@839d9e913e063e28dfd0e6c7b7512793e0a48be9",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/pkg/errors@839d9e913e063e28dfd0e6c7b7512793e0a48be9",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-errors-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-errors-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-errors-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-errors-upstream-8ec9a00bfd09b319",
+    "SPDXRef-File-errors-upstream-43b9d80d1f50472e",
+    "SPDXRef-File-errors-upstream-941aac86600e145c",
+    "SPDXRef-File-errors-upstream-2cac4a825d3d4dd6",
+    "SPDXRef-File-errors-upstream-adf0a7d5ed614a65",
+    "SPDXRef-File-errors-upstream-e3ec2aa3436ef9dd",
+    "SPDXRef-File-errors-upstream-281bce5e3af9be13",
+    "SPDXRef-File-errors-upstream-d69fab1aa6d05ca6",
+    "SPDXRef-File-errors-upstream-d60fe8716c356990"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-2-Clause",
+   "name": "errors",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "1e5484fa7659cb1b3b0de1fb0ebccdabedc28c07"
+   },
+   "supplier": "Organization: pkg",
+   "versionInfo": "839d9e91"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-errors-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

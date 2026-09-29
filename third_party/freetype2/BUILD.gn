@@ -1,0 +1,103 @@
+# Copyright 2017 The Fuchsia Authors. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#    * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#    * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#    * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+config("freetype_config") {
+  include_dirs = [
+    "include",
+  ]
+
+  cflags = []
+
+  if (is_clang) {
+    cflags += [
+      "-Wno-unused-function",
+      "-Wno-unused-variable",
+    ]
+  }
+}
+
+#TODO(mikejurka): Remove once we've migrated to the freetype2 target everywhere
+group("freetype") {
+  public_deps = [
+    ":freetype2",
+  ]
+}
+
+target(default_library_type, "freetype2") {
+  sources = [
+    "src/autofit/autofit.c",
+    "src/base/ftbase.c",
+    "src/base/ftbbox.c",
+    "src/base/ftbitmap.c",
+    "src/base/ftfstype.c",
+    "src/base/ftgasp.c",
+    "src/base/ftglyph.c",
+    "src/base/ftinit.c",
+    "src/base/ftmm.c",
+    "src/base/ftstroke.c",
+    "src/base/ftsystem.c",
+    "src/base/fttype1.c",
+    "src/base/ftsynth.c",
+    "src/gzip/ftgzip.c",
+    "src/lzw/ftlzw.c",
+    "src/psaux/psaux.c",
+    "src/pshinter/pshinter.c",
+    "src/psnames/psnames.c",
+    "src/sfnt/sfnt.c",
+    "src/smooth/smooth.c",
+
+    # Font Drivers. Drivers need to be enabled in ftmodule.h explicitly.
+    "src/cff/cff.c",           # OpenType, (.cff, .cef)
+    "src/truetype/truetype.c", # TrueType
+  ]
+
+  defines = [
+    "FT2_BUILD_LIBRARY",
+    "DARWIN_NO_CARBON",
+    # Long directory name to avoid accidentally using wrong headers.
+    "FT_CONFIG_MODULES_H=<freetype-fuchsia-config/ftmodule.h>",
+    "FT_CONFIG_OPTIONS_H=<freetype-fuchsia-config/ftoption.h>",
+    # Reduce visibility of symbols.
+    #"FT_EXPORT(x)=x",
+  ]
+
+  if (default_library_type == "shared_library") {
+    defines += [
+      "FT_EXPORT(x)=extern __attribute__(( visibility( \"default\" ) )) x",
+      "FT_EXPORT_DEF(x)=extern __attribute__(( visibility( \"default\" ) )) x",
+      "FT_EXPORT_VAR(x)=extern __attribute__(( visibility( \"default\" ) )) x",
+    ]
+  }
+
+  public_configs = [ ":freetype_config" ]
+
+  deps = [
+    "//third_party/libpng",
+    "//third_party/zlib",
+  ]
+}

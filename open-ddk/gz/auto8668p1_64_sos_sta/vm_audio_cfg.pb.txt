@@ -1,0 +1,3292 @@
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL0",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_SL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_SR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL1",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL2",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL3",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL4",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL5",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL6",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL7",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL8",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL44",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 1,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_32000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DL45",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DLM1",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DLM2",
+    channels: 32,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 32,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL0",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL1",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL2",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL3",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL4",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL5",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 1,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_32000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL6",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 1,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_32000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL8",
+    channels: 8,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 8,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL9",
+    channels: 16,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL10",
+    channels: 32,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 32,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL37",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_32000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "UL38",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_32000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "ULCM0",
+    channels: 8,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 8,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "ULCM1",
+    channels: 16,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "ULCM2",
+    channels: 32,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 32,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "Hostless_Speech",
+    channels: 2,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 1,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "Hostless_Speech",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_LLFE,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_RLFE,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 1,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_88200,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_96000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_176400,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_192000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Voip",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Primary",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_DeepBuf",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Fast",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Spatializer",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Dynamic",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback",
+    channels: 32,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 32,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Capture_Ul1",
+    channels: 4,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 4,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Capture_Ktv",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Capture_Raw",
+    channels: 32,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 32,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Fm_Adsp",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Capture_Process",
+    channels: 4,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 4,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Echoref",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_MDDL",
+    channels: 4,
+    direction: VIRTIO_SND_D_INPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 4,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_MDUL",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_HFP_CLIENT_RX",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_HFP_CLIENT_TX",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_ANC",
+    channels: 4,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 4,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_EXTSTREAM1",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_EXTSTREAM2",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Sub_Playback",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback0",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback1",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback2",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback3",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback4",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback5",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback6",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback7",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback8",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback9",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback10",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback11",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback12",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback13",
+    channels: 2,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 2,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback14",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}
+
+pcmdev_info {
+    active: true,
+    hda_fn_name: "DSP_Playback_Playback15",
+    channels: 16,
+    direction: VIRTIO_SND_D_OUTPUT,
+    positions {
+        position: VIRTIO_SND_CHMAP_FL,
+    }
+    positions {
+        position: VIRTIO_SND_CHMAP_FR,
+    }
+    features: 0,
+    channels_min: 1,
+    channels_max: 16,
+    vmid: 0,
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_8000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_11025,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_16000,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_22050,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_44100,
+    }
+    rates {
+        rate: VIRTIO_SND_PCM_RATE_48000,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S16,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S24,
+    }
+    formats {
+        format: VIRTIO_SND_PCM_FMT_S32,
+    }
+}

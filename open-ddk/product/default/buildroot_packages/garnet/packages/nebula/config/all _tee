@@ -1,0 +1,6 @@
+{
+    "imports": [
+        "garnet/packages/nebula/config/trusty_apps"
+    ]
+}
+

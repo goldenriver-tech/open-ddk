@@ -1,0 +1,992 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/rapidjson-e8b305ae-e8b305ae6ab34f369fb7c753406671a6caccc31f",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "08175f4d8e4f0f8f5501468ac7b1a620cc53cafa"
+    }
+   ],
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c00da1847bc85b24226abe8184c3a8c5ec16174"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-c8b7551627952725",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b12e7f577bbf1849861043c60a8bc6036818701"
+    }
+   ],
+   "fileName": "./README.fuchsia.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-aee97b8cd975a14a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "368299d8024b3202345e6cdeaf79262d020e471c"
+    }
+   ],
+   "fileName": "./rapidjson/allocators.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-8638ef77ef886a49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03da3a6684a705880b40b3e77a1da9a85a05a761"
+    }
+   ],
+   "fileName": "./rapidjson/document.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-c3d577b3ae5c15f2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "249cd0b952b9e1ec72f40111c06b045132778430"
+    }
+   ],
+   "fileName": "./rapidjson/encodedstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-fe9a0fa8a1d41329",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0528b4c7293bdf5c81bb62a58d64a403bdc763f1"
+    }
+   ],
+   "fileName": "./rapidjson/encodings.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-89c51b8e73326f31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a7fa239cd28c0a8dd939afc9b0967bee2cc9a153"
+    }
+   ],
+   "fileName": "./rapidjson/error/en.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-4b31ad728da66702",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d71b0c7e82b3893134a20cda7aa486110db4f5e3"
+    }
+   ],
+   "fileName": "./rapidjson/error/error.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-15f378efc44c142d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "530301788a9b71dc0afcf34fab82221ccf2bdf2c"
+    }
+   ],
+   "fileName": "./rapidjson/filereadstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-350285df82b6a9d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dd7147394dbd796af3f10ed1c715507f2677d5a2"
+    }
+   ],
+   "fileName": "./rapidjson/filewritestream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-8df6cc2fdfbc2fba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ba3e77d34a169c73ad38b3b39971ab2a7bc5127"
+    }
+   ],
+   "fileName": "./rapidjson/fwd.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-09fe02645cdf99f2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "726e70c1396035787a469682815ffdad694c2395"
+    }
+   ],
+   "fileName": "./rapidjson/internal/biginteger.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-a3f25cd03d643e96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "626e62964cb8852cb053a8b1d2ee237b8915e01d"
+    }
+   ],
+   "fileName": "./rapidjson/internal/diyfp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-57c2adc24c9245d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53ba1c587d8f17224cca68f95b325eab668eca7e"
+    }
+   ],
+   "fileName": "./rapidjson/internal/dtoa.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-814c1db9db935259",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c6a17091ed37859fc9e075ccb217a9b35225d2cb"
+    }
+   ],
+   "fileName": "./rapidjson/internal/ieee754.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-e65870cf9b7e5218",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45ca0fc00693c2bf2f5db8bff4ebdb15fb89f103"
+    }
+   ],
+   "fileName": "./rapidjson/internal/itoa.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-5c30a3c14e5ffe41",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05658c5a51a6eb13d7afe45741d48e2b7b66d038"
+    }
+   ],
+   "fileName": "./rapidjson/internal/meta.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-93e7ce7525adfc06",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a0f58823ace85a878ce7134b0347ba916fe6c39"
+    }
+   ],
+   "fileName": "./rapidjson/internal/pow10.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-3525319cc8ef91ce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8648fc5c0d722a450a9a8aec67d16b8f7c67d8b9"
+    }
+   ],
+   "fileName": "./rapidjson/internal/regex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-0cd8263c13f940d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b83f7a1c131b6c6419356ea028d2533551baaceb"
+    }
+   ],
+   "fileName": "./rapidjson/internal/stack.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-b055b3d0ee354924",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "12ef8b30d251135e9117f75da9508037af9ac9e5"
+    }
+   ],
+   "fileName": "./rapidjson/internal/strfunc.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-6b6d503f62aabae9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8bd52b12dea29eb0601201bcad99ff64580f4099"
+    }
+   ],
+   "fileName": "./rapidjson/internal/strtod.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-770a9836bc728be0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "22111c586ffcba0485a0a56c5e911493ac769031"
+    }
+   ],
+   "fileName": "./rapidjson/internal/swap.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-760bfe7e298cb5c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "59e9dbbebb7401c1f2a2340582430dd2540e8d14"
+    }
+   ],
+   "fileName": "./rapidjson/istreamwrapper.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-f6ba34d1b7642dbd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03677f78fd4e6e3a2ec2bad610f4a50643ada638"
+    }
+   ],
+   "fileName": "./rapidjson/memorybuffer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-4ebd5bd0ba42448c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c1883ae1f8409d28c85e0f80c965744db7f2ee8"
+    }
+   ],
+   "fileName": "./rapidjson/memorystream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-ec77b720562d623a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a548e95689634296d9572a66915beb5c68f17fa3"
+    }
+   ],
+   "fileName": "./rapidjson/msinttypes/inttypes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-94a75b6e369ffb39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "37d726564bf64842d814666d7c8da4f31d315ff0"
+    }
+   ],
+   "fileName": "./rapidjson/msinttypes/stdint.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-451f90fc346297d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6d474a37ad51068a37e05db21313c01a744923f4"
+    }
+   ],
+   "fileName": "./rapidjson/ostreamwrapper.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-0dade94c1c73452a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1cd994aa93ba5847bbfd4134d917a07778b1415a"
+    }
+   ],
+   "fileName": "./rapidjson/pointer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-2895a3e602920c12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba2f7c714759141e9264b870d6c1df42c666db62"
+    }
+   ],
+   "fileName": "./rapidjson/prettywriter.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-c7ecfc5cfe75658f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f6eb06ee28eb8c8297347fdf083975ace1ceedc"
+    }
+   ],
+   "fileName": "./rapidjson/rapidjson.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-f1a9dd944226fa3b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b967872edcaac972451cae0070876510270916a"
+    }
+   ],
+   "fileName": "./rapidjson/reader.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-c3722c4013a2e8a5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0126d2e7604d0a0df3a52880b00c484de9d0953b"
+    }
+   ],
+   "fileName": "./rapidjson/schema.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-865749d6af476edf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0d505d7d3b44a1ac2c04319d6668b686dead2a63"
+    }
+   ],
+   "fileName": "./rapidjson/stream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-e066c44023db98fc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a3e63e9172a072dc20c8cf1c479c7f423bf7953"
+    }
+   ],
+   "fileName": "./rapidjson/stringbuffer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-upstream-6bfa6a88fffa8e99",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "822541cb8e53747e8aeb8a179257e988ab651e26"
+    }
+   ],
+   "fileName": "./rapidjson/writer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-4a34e750a740fe2d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ffb49984a04f72ca651244131770f6d0b1bb2d0b"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./Android.bp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-acb67900dcb6d543",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "901318e2561b121b86d298ae00d8d72c04831b04"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6a821286a548d10482cb4b003794858340235d70"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c00da1847bc85b24226abe8184c3a8c5ec16174"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-c8b7551627952725",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "47cee968ec4ddb8b61cb450f0c93769e79b67ae6"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./README.fuchsia.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-1c57da47ddb58bd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./WORKSPACE.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-aee97b8cd975a14a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b631ba804435d2c5fca71e4a4892329356383dc2"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/allocators.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-dc33166bc614774d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b332172d6eac2dcc8336f52e7f666f825a74ad3"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/cursorstreamwrapper.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-8638ef77ef886a49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2034ef6fce76fcf4f0ba1c1e493fe00361628825"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/document.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-c3d577b3ae5c15f2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a3d3703782bee3c795da69981dddaaeb1eca24ca"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/encodedstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-fe9a0fa8a1d41329",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53c4bb89d0f50193dbb3aa42dc7ac7f1dad5feef"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/encodings.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-89c51b8e73326f31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a7fa239cd28c0a8dd939afc9b0967bee2cc9a153"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/error/en.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-4b31ad728da66702",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5c6262957a1750e88c7b56168853ccb548faf49"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/error/error.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-15f378efc44c142d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca0eed47bd35f942593d10ea495cb1ed3714741e"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/filereadstream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-350285df82b6a9d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dd64f15100d2eec7672dd2ffb3b8298dd2dcf1eb"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/filewritestream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-8df6cc2fdfbc2fba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ba3e77d34a169c73ad38b3b39971ab2a7bc5127"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/fwd.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-09fe02645cdf99f2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "726e70c1396035787a469682815ffdad694c2395"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/internal/biginteger.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-a3f25cd03d643e96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b614c869c8b07ea640e004cf5f63885a1f705eab"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/diyfp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-57c2adc24c9245d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0093eb5b974f7c968d9a30ec9d8e1845e720c43"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/dtoa.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-814c1db9db935259",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "14206def0a832147f1fe9a5be7f8f4c7b76e8053"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/ieee754.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-e65870cf9b7e5218",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bc35d9858979de3467d875bef65c06e334a04238"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/itoa.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-5c30a3c14e5ffe41",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05658c5a51a6eb13d7afe45741d48e2b7b66d038"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/internal/meta.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-93e7ce7525adfc06",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a0f58823ace85a878ce7134b0347ba916fe6c39"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/internal/pow10.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-3525319cc8ef91ce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7be6c13e798dd2db5838293b50ad9e74e6603475"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/regex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-0cd8263c13f940d3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "91f173dc8954c0c5daaa1bf88200ea82a1835dc3"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/stack.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-b055b3d0ee354924",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "33baade555e049e31d59d5e10f0c5f2f210bf3ad"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/strfunc.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-6b6d503f62aabae9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f8795e52790f3a0dad3436c773719f41be3cc44c"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/internal/strtod.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-770a9836bc728be0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "22111c586ffcba0485a0a56c5e911493ac769031"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/internal/swap.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-760bfe7e298cb5c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6a4efa89a5b10653d47ca9694bdf40cbb9d5feec"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/istreamwrapper.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-f6ba34d1b7642dbd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03677f78fd4e6e3a2ec2bad610f4a50643ada638"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/memorybuffer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-4ebd5bd0ba42448c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c1883ae1f8409d28c85e0f80c965744db7f2ee8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/memorystream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-ec77b720562d623a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a548e95689634296d9572a66915beb5c68f17fa3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/msinttypes/inttypes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-94a75b6e369ffb39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "37d726564bf64842d814666d7c8da4f31d315ff0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/msinttypes/stdint.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-451f90fc346297d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6d474a37ad51068a37e05db21313c01a744923f4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./rapidjson/ostreamwrapper.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-0dade94c1c73452a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ff442b52d7eea9f5d3e9cc7ea420c92c27b857ca"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/pointer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-2895a3e602920c12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e77152153a95069f2b8b5bf18a6e9a7c27bd53f3"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/prettywriter.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-c7ecfc5cfe75658f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c40fe0846bcaaef5ed35aee508a249532505c339"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/rapidjson.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-f1a9dd944226fa3b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "746ec6c1ede9c85f7f2410547bca862e7f0e2289"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/reader.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-c3722c4013a2e8a5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a5b44eaa38c0c6a570156010f1f51e3b02e17c1"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/schema.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-865749d6af476edf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a0105b2b0160bbcf2ce3265c8ef362193523722"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/stream.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-e066c44023db98fc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aee3df6a39acf619899004067de7f2279c64918d"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/stringbuffer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-rapidjson-open-ddk-6bfa6a88fffa8e99",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7115cfe5c3405cbc6bca2e2b5826566f0c59870d"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork rapidjson",
+   "fileName": "./rapidjson/writer.h"
+  }
+ ],
+ "name": "rapidjson-e8b305ae",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-rapidjson-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/rapidjson); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://fuchsia.googlesource.com/third_party/rapidjson@e8b305ae6ab34f369fb7c753406671a6caccc31f",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-rapidjson-upstream-f1f3ef82935a010e",
+    "SPDXRef-File-rapidjson-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-rapidjson-upstream-c8b7551627952725",
+    "SPDXRef-File-rapidjson-upstream-aee97b8cd975a14a",
+    "SPDXRef-File-rapidjson-upstream-8638ef77ef886a49",
+    "SPDXRef-File-rapidjson-upstream-c3d577b3ae5c15f2",
+    "SPDXRef-File-rapidjson-upstream-fe9a0fa8a1d41329",
+    "SPDXRef-File-rapidjson-upstream-89c51b8e73326f31",
+    "SPDXRef-File-rapidjson-upstream-4b31ad728da66702",
+    "SPDXRef-File-rapidjson-upstream-15f378efc44c142d",
+    "SPDXRef-File-rapidjson-upstream-350285df82b6a9d1",
+    "SPDXRef-File-rapidjson-upstream-8df6cc2fdfbc2fba",
+    "SPDXRef-File-rapidjson-upstream-09fe02645cdf99f2",
+    "SPDXRef-File-rapidjson-upstream-a3f25cd03d643e96",
+    "SPDXRef-File-rapidjson-upstream-57c2adc24c9245d3",
+    "SPDXRef-File-rapidjson-upstream-814c1db9db935259",
+    "SPDXRef-File-rapidjson-upstream-e65870cf9b7e5218",
+    "SPDXRef-File-rapidjson-upstream-5c30a3c14e5ffe41",
+    "SPDXRef-File-rapidjson-upstream-93e7ce7525adfc06",
+    "SPDXRef-File-rapidjson-upstream-3525319cc8ef91ce",
+    "SPDXRef-File-rapidjson-upstream-0cd8263c13f940d3",
+    "SPDXRef-File-rapidjson-upstream-b055b3d0ee354924",
+    "SPDXRef-File-rapidjson-upstream-6b6d503f62aabae9",
+    "SPDXRef-File-rapidjson-upstream-770a9836bc728be0",
+    "SPDXRef-File-rapidjson-upstream-760bfe7e298cb5c8",
+    "SPDXRef-File-rapidjson-upstream-f6ba34d1b7642dbd",
+    "SPDXRef-File-rapidjson-upstream-4ebd5bd0ba42448c",
+    "SPDXRef-File-rapidjson-upstream-ec77b720562d623a",
+    "SPDXRef-File-rapidjson-upstream-94a75b6e369ffb39",
+    "SPDXRef-File-rapidjson-upstream-451f90fc346297d6",
+    "SPDXRef-File-rapidjson-upstream-0dade94c1c73452a",
+    "SPDXRef-File-rapidjson-upstream-2895a3e602920c12",
+    "SPDXRef-File-rapidjson-upstream-c7ecfc5cfe75658f",
+    "SPDXRef-File-rapidjson-upstream-f1a9dd944226fa3b",
+    "SPDXRef-File-rapidjson-upstream-c3722c4013a2e8a5",
+    "SPDXRef-File-rapidjson-upstream-865749d6af476edf",
+    "SPDXRef-File-rapidjson-upstream-e066c44023db98fc",
+    "SPDXRef-File-rapidjson-upstream-6bfa6a88fffa8e99"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "MIT",
+   "name": "rapidjson",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "0aad51bbc1f6661b82dfd026e1c3ae065393bb4c"
+   },
+   "supplier": "Organization: fuchsia.googlesource.com",
+   "versionInfo": "e8b305ae"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-rapidjson-open-ddk",
+   "comment": "As open-ddk ships it at third_party/rapidjson. the fork rapidjson (beside open-ddk; its submodule), branch nebula at 37e61fd6627163f9bb0938af3eef656d51f7e59c: upstream e8b305ae6ab34f369fb7c753406671a6caccc31f and GRT's 5 commit(s), which add, change or remove 30 file(s): Android.bp, BUILD.bazel, BUILD.gn, README.fuchsia.md, WORKSPACE.bazel, rapidjson/allocators.h, rapidjson/cursorstreamwrapper.h, rapidjson/document.h, rapidjson/encodedstream.h, rapidjson/encodings.h, rapidjson/error/error.h, rapidjson/filereadstream.h, rapidjson/filewritestream.h, rapidjson/internal/diyfp.h, rapidjson/internal/dtoa.h, rapidjson/internal/ieee754.h, rapidjson/internal/itoa.h, rapidjson/internal/regex.h, rapidjson/internal/stack.h, rapidjson/internal/strfunc.h ...",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-rapidjson-open-ddk-4a34e750a740fe2d",
+    "SPDXRef-File-rapidjson-open-ddk-acb67900dcb6d543",
+    "SPDXRef-File-rapidjson-open-ddk-f1f3ef82935a010e",
+    "SPDXRef-File-rapidjson-open-ddk-0398ccd0f49298b1",
+    "SPDXRef-File-rapidjson-open-ddk-c8b7551627952725",
+    "SPDXRef-File-rapidjson-open-ddk-1c57da47ddb58bd0",
+    "SPDXRef-File-rapidjson-open-ddk-aee97b8cd975a14a",
+    "SPDXRef-File-rapidjson-open-ddk-dc33166bc614774d",
+    "SPDXRef-File-rapidjson-open-ddk-8638ef77ef886a49",
+    "SPDXRef-File-rapidjson-open-ddk-c3d577b3ae5c15f2",
+    "SPDXRef-File-rapidjson-open-ddk-fe9a0fa8a1d41329",
+    "SPDXRef-File-rapidjson-open-ddk-89c51b8e73326f31",
+    "SPDXRef-File-rapidjson-open-ddk-4b31ad728da66702",
+    "SPDXRef-File-rapidjson-open-ddk-15f378efc44c142d",
+    "SPDXRef-File-rapidjson-open-ddk-350285df82b6a9d1",
+    "SPDXRef-File-rapidjson-open-ddk-8df6cc2fdfbc2fba",
+    "SPDXRef-File-rapidjson-open-ddk-09fe02645cdf99f2",
+    "SPDXRef-File-rapidjson-open-ddk-a3f25cd03d643e96",
+    "SPDXRef-File-rapidjson-open-ddk-57c2adc24c9245d3",
+    "SPDXRef-File-rapidjson-open-ddk-814c1db9db935259",
+    "SPDXRef-File-rapidjson-open-ddk-e65870cf9b7e5218",
+    "SPDXRef-File-rapidjson-open-ddk-5c30a3c14e5ffe41",
+    "SPDXRef-File-rapidjson-open-ddk-93e7ce7525adfc06",
+    "SPDXRef-File-rapidjson-open-ddk-3525319cc8ef91ce",
+    "SPDXRef-File-rapidjson-open-ddk-0cd8263c13f940d3",
+    "SPDXRef-File-rapidjson-open-ddk-b055b3d0ee354924",
+    "SPDXRef-File-rapidjson-open-ddk-6b6d503f62aabae9",
+    "SPDXRef-File-rapidjson-open-ddk-770a9836bc728be0",
+    "SPDXRef-File-rapidjson-open-ddk-760bfe7e298cb5c8",
+    "SPDXRef-File-rapidjson-open-ddk-f6ba34d1b7642dbd",
+    "SPDXRef-File-rapidjson-open-ddk-4ebd5bd0ba42448c",
+    "SPDXRef-File-rapidjson-open-ddk-ec77b720562d623a",
+    "SPDXRef-File-rapidjson-open-ddk-94a75b6e369ffb39",
+    "SPDXRef-File-rapidjson-open-ddk-451f90fc346297d6",
+    "SPDXRef-File-rapidjson-open-ddk-0dade94c1c73452a",
+    "SPDXRef-File-rapidjson-open-ddk-2895a3e602920c12",
+    "SPDXRef-File-rapidjson-open-ddk-c7ecfc5cfe75658f",
+    "SPDXRef-File-rapidjson-open-ddk-f1a9dd944226fa3b",
+    "SPDXRef-File-rapidjson-open-ddk-c3722c4013a2e8a5",
+    "SPDXRef-File-rapidjson-open-ddk-865749d6af476edf",
+    "SPDXRef-File-rapidjson-open-ddk-e066c44023db98fc",
+    "SPDXRef-File-rapidjson-open-ddk-6bfa6a88fffa8e99"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "MIT",
+   "name": "rapidjson (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "be2213b618132d4ebe6db864e034ffb3def7a9fc"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "e8b305ae+37e61fd66271"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-rapidjson-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-rapidjson-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-rapidjson-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-rapidjson-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

@@ -1,0 +1,65 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/tf-a-nebula-a1be69e6c5db450f841f0edd9d734bf3cffb6621",
+ "files": [],
+ "name": "tf-a-nebula",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-tf-a-upstream",
+   "comment": "The upstream repository at the commit GRT's commits start from, which the fork tf-a (open-ddk's submodule trusted-firmware-a) has as it is; anyone can recompute this package from upstream alone. Its 4365 files are not listed here. PackageVerificationCode: 459769dd79cee89b07d6a05c23b26e4eb29bfa34.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/ARM-software/arm-trusted-firmware@a1be69e6c5db450f841f0edd9d734bf3cffb6621",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/ARM-software/arm-trusted-firmware@a1be69e6c5db450f841f0edd9d734bf3cffb6621",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "tf-a",
+   "supplier": "Organization: ARM-software",
+   "versionInfo": "nebula"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-tf-a-open-ddk",
+   "comment": "As open-ddk ships it at trusted-firmware-a. the fork tf-a (beside open-ddk; its submodule), branch nebula at cde90a259ddc743a6eb4f6fdf77272b55d380561: upstream a1be69e6c5db450f841f0edd9d734bf3cffb6621 and GRT's 36 commit(s), which add, change or remove 20 file(s): Makefile, include/export/common/tbbr/tbbr_img_def_exp.h, include/services/el3_spmd_logical_sp.h, include/tools_share/firmware_image_package.h, lib/cpus/aarch64/qemu_max.S, plat/qemu/common/common.mk, plat/qemu/common/qemu_bl2_mem_params_desc.c, plat/qemu/common/qemu_bl2_setup.c, plat/qemu/common/qemu_bl31_setup.c, plat/qemu/common/qemu_common.c, plat/qemu/common/qemu_gicv3.c, plat/qemu/common/qemu_io_storage.c, plat/qemu/qemu/include/platform_def.h, services/spd/nebula/hvcall.h, services/spd/nebula/nebula.mk, services/spd/nebula/sm_err.h, services/spd/nebula/smcall.h, services/spd/nebula/trusty.c, services/spd/nebula/trusty_helpers.S, services/spd/trusty/trusty.c. Its 4371 files are in FILES.tsv (project trusted-firmware-a). PackageVerificationCode: d272385cbae11104cef538be6f02ad863431a276.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "tf-a (open-ddk)",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "nebula+cde90a259ddc"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-tf-a-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-tf-a-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-tf-a-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-tf-a-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

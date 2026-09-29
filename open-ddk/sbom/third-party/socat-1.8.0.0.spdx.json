@@ -1,0 +1,4338 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/socat-1.8.0.0-2da070164d454971d5c970b5278e645051f0d0f7",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-af475964be0c03ea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25c528dcd4a34b4d082fc9b8b5c317448118ba98"
+    }
+   ],
+   "fileName": "./BUGREPORTS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-a2feb6ed0257c21c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05d4557b64ad021ccfa2a1ed0db28c120c826255"
+    }
+   ],
+   "fileName": "./CHANGES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5676458d828a658e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea3d6e919d0c21dd19784982df6539f05192b6c4"
+    }
+   ],
+   "fileName": "./CHANGES.ISO-8859-1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-6156cd6ac57d8b88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4cc77b90af91e615a64ae04893fdffa7939db84c"
+    }
+   ],
+   "fileName": "./COPYING"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c018188b9632d41a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "82fcde476cb04d2b68f9a47c5c64f00019f6d821"
+    }
+   ],
+   "fileName": "./COPYING.OpenSSL"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4bf9f8cb6acd9b0d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a32e9e3c063c6bc4b5ecd9490a0ff998abd3229"
+    }
+   ],
+   "fileName": "./DEVELOPMENT"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9659699670b30983",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2ed9a5b6fc5ae8e0696e915114d37448bebc4991"
+    }
+   ],
+   "fileName": "./EXAMPLES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-03688ba6aa340b87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "763c3edba28781e6bde97831a0e33c88310d7a01"
+    }
+   ],
+   "fileName": "./FAQ"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9fb4f1d17ef878fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "92d7c11f48f2e39a7a37c7c62b146460c9a81382"
+    }
+   ],
+   "fileName": "./FILES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4faecea6d9857941",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b811ac0e88488e188f4b987db4d5b382dd4da453"
+    }
+   ],
+   "fileName": "./Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f5388fcc8416fb5f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "970a8b3bdd0a126f98426fe4e20161095cf711ea"
+    }
+   ],
+   "fileName": "./PORTING"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "495ae72ea6200e81b8f7bf4d0288b6c9c66c7c3e"
+    }
+   ],
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9953e72b89755380",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ca9aed7e80e97ac77cbbb148ec5dc3d57515073"
+    }
+   ],
+   "fileName": "./README.FIPS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c873bcc8c31961d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5299a0958f27c31ac4c210f0a706f495dcff1ea9"
+    }
+   ],
+   "fileName": "./RESEARCH"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0a7b77e1bff2cdf1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "edd5bd4c8aababac883f3008643f508c30b8cc74"
+    }
+   ],
+   "fileName": "./SECURITY"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b33892fbddeffc33",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e37557631ee899cc2c7b384f953e49c67d5b9ecf"
+    }
+   ],
+   "fileName": "./VERSION"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-69b7b779f4997cfe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55d7070627017a220b20141470e2039ecbe8656c"
+    }
+   ],
+   "fileName": "./compat.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-980c4659e480ee35",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e7db82ee89d46a73e61fec66d8d3bdae005dea65"
+    }
+   ],
+   "fileName": "./config.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-87db583be5c13c1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66c39fe30188a0053972aeec5352b97bc5635bed"
+    }
+   ],
+   "fileName": "./configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0ff7e25ee1cb9b87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "87db583be5c13c1f7b3c958b10e03d67b6a2ca06"
+    }
+   ],
+   "fileName": "./configure.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-bf1336cb501529fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4bc1e160ead4a327f6e0f097b72fe7095d563a5d"
+    }
+   ],
+   "fileName": "./daemon.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b2c5d0fdb53ec8f7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9239fdffd8355cd11b93f6fd3f53f7daf448d33a"
+    }
+   ],
+   "fileName": "./dalan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7d590f8c5cdfff40",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36b41e7cc9415875140d42c20585b5eed6e73c37"
+    }
+   ],
+   "fileName": "./dalan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5dd191ebb0f80926",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7cf35534af7381d1c53008c55b02e2200ecee201"
+    }
+   ],
+   "fileName": "./doc/dest-unreach.css"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d9ad291ef806e02d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d603090fe041047d60cee1517b1d69270fbded8b"
+    }
+   ],
+   "fileName": "./doc/socat-genericsocket.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-e7429b77924bfd7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f18a85a76be34c9e37463801a8f5b7f9f8b27ee6"
+    }
+   ],
+   "fileName": "./doc/socat-multicast.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f2495aa7bee8315a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e50d552f53453d3c5cfbcde444528a27c5ac8f5"
+    }
+   ],
+   "fileName": "./doc/socat-openssltunnel.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7b043bf90b29eee1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7ff515bb9d5a621538c851733fae1ac84df82eab"
+    }
+   ],
+   "fileName": "./doc/socat-tun.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-48c83e0642520653",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "171aa6ecd6a65e780726b8f4e90e585f1c9b55cc"
+    }
+   ],
+   "fileName": "./doc/socat.yo"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-a2b326b827826cdc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "240d2665002e86a40a0f3e6f4377c0a942ec9ed9"
+    }
+   ],
+   "fileName": "./error.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-853f5452aa588b8f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e52d18263c69018adde95b3ebacbfecef8fdbec"
+    }
+   ],
+   "fileName": "./error.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7c08a600657440e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b9846e8071ecf08a468eb14147e52c7a834691e"
+    }
+   ],
+   "fileName": "./fdname.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-6fc789dd836aabfc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae724f685aa2272a35606cc101db0f01ecc281e7"
+    }
+   ],
+   "fileName": "./filan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-a62e1ae8f806ab00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9330343cd4e9e0408bc247057243e247c0603d7"
+    }
+   ],
+   "fileName": "./filan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-a1dbcb94b2322b46",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "910d2dcb59b381bc7a1ba612de1a8454d93f539f"
+    }
+   ],
+   "fileName": "./filan_main.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b1b977de291d53f5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "944dabe6f3aa60596a217d834ecd538603f292c0"
+    }
+   ],
+   "fileName": "./ftp.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-72b4e5bb456704e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1d84d7ac358f622c8a37d93f6c3243fcdffb199"
+    }
+   ],
+   "fileName": "./hostan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-8483a090f556c9b7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8915e75453c99618fc1a678342d2b0bee5344287"
+    }
+   ],
+   "fileName": "./hostan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-547fe0db6ad3e73c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b1825e14443f31980a8a3a8071db3d608e24c4d"
+    }
+   ],
+   "fileName": "./install-sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-60fcd387c32285b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c658ed30aeab0170b21516a1c0621241f1854f26"
+    }
+   ],
+   "fileName": "./mail.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-8fd6bc75c617dcc9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "513fbd775a4be05e52a58e89fc64d6bbec9b4ca2"
+    }
+   ],
+   "fileName": "./mytypes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9d035429bafa9bad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b32beaade7f8226fdfaa57be8b71b26c48f14f24"
+    }
+   ],
+   "fileName": "./nestlex.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1e36796735e04506",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8da663d36294e0d7e4d0bdd9e126086a9a3d62a6"
+    }
+   ],
+   "fileName": "./nestlex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f2c2e1133281bb0b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10017548558336c063a4c3a3abfa9c698b348cb1"
+    }
+   ],
+   "fileName": "./procan-cdefs.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-736b556e8c141897",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2226cb8f1bfbc5cdd61b1d523d5e5785925f9698"
+    }
+   ],
+   "fileName": "./procan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-22fa4f2d665a410c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a941938e44f6544048c4f49e2cd761d47d0873a1"
+    }
+   ],
+   "fileName": "./procan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9519cc52540bc1c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c368f0c88a6f37b5790ba836ecd15b2cf3b74b3e"
+    }
+   ],
+   "fileName": "./procan_main.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5ba30e17cc02ee15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e8a7c3b24d431a1e76af6f0c6853f34802fb77d"
+    }
+   ],
+   "fileName": "./proxy.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-3024b369f79c2255",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "68b96ec812c4c6869b0c1c96b09c749eda8d64d0"
+    }
+   ],
+   "fileName": "./proxyecho.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-97e74dff44e47c4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "171a3020171d55efe6c33c0c1f4770da7b9ecdb4"
+    }
+   ],
+   "fileName": "./readline-test.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-6f7c618067b7f659",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f995a7e7414418ce823d359f6e6975b541a8962"
+    }
+   ],
+   "fileName": "./readline.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-29ebebcf75cdd39a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "932146a06b04422b9e84161b0488f22fee5bb939"
+    }
+   ],
+   "fileName": "./snprinterr.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-eda3011ece817d87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60c049e1ee577e90fd74de8333957f40bd1ac08e"
+    }
+   ],
+   "fileName": "./snprinterr.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-23a062b98fdc53cc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c99f692c56aadd967cde7d610d231227e03c7642"
+    }
+   ],
+   "fileName": "./socat-broker.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7a4feb53398ce08d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0df1c61b15f1e70524404c2ee223b54f98955491"
+    }
+   ],
+   "fileName": "./socat-chain.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-759b9ada5a579aeb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b83d11ce8d489778328ef6a8633bb166ab23f64"
+    }
+   ],
+   "fileName": "./socat-mux.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9ff24cf9b17fd166",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21627f157b95503eab5979459915acfcb70d4fdc"
+    }
+   ],
+   "fileName": "./socat.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b546c6ca8d210a62",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ef31914365ab37750490c9dbb44f4cde3072a798"
+    }
+   ],
+   "fileName": "./socat.spec"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f22601600dcfe21c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "43bdca1913b3439d4bf9713eeef3c1e8243d7491"
+    }
+   ],
+   "fileName": "./socat_buildscript_for_android.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5b8aaed72ee610e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "23ba82dd7c9f8a39eee19cde35e590f58e0a760d"
+    }
+   ],
+   "fileName": "./socks4a-echo.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-2c6b37b0ac9aaa8e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "26106f92fcf5ee71591b0e3f3c7a7f931f8c319f"
+    }
+   ],
+   "fileName": "./socks4echo.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0c2a93596cb88c54",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eaa9499f3c8d5258158753daf1228c8d92fb8fcd"
+    }
+   ],
+   "fileName": "./sslcls.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1bcbf4b97f9e4ea7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eaca52e558d41fffed6ae22833a88675fd4d2132"
+    }
+   ],
+   "fileName": "./sslcls.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f72ff7d38ba496fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "63cc029212e7134d2eccc38ce710db86c5ca48b3"
+    }
+   ],
+   "fileName": "./sycls.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d999eaf1e4e04943",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99e581658187ea15c63c630245b3be17d05d97ab"
+    }
+   ],
+   "fileName": "./sycls.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-fc28024c208fb98a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bfb8aae318ee4c0db1867ad6271c00ce3f1bc246"
+    }
+   ],
+   "fileName": "./sysincludes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0eb18a65d06b4b91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc5f263d75d9f95e9d3c27cfb9cd71673eab131c"
+    }
+   ],
+   "fileName": "./sysutils.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-e18c0db56b1da17c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c800f3347ff15cf4070d2be625cf812fd839f52"
+    }
+   ],
+   "fileName": "./sysutils.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-2acc65acdda9ae98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fb68e301f013eb340ae37462fb7a326e974d2f2"
+    }
+   ],
+   "fileName": "./test.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-280b7c0551214951",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ba78a927d9360a0234ad1cc4f413dab6ea92821"
+    }
+   ],
+   "fileName": "./utils.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c55fcc4bb991ba6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba2ef5de832ce67c7065083c1120df2699080032"
+    }
+   ],
+   "fileName": "./utils.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-fb25e563235f5039",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cff99f9a45a49a2dd3080d789d788478ec3892df"
+    }
+   ],
+   "fileName": "./vsnprintf_r.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-94fa1120d932de4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a06047870c3e87174b86e715f58d407d2a0b5dd"
+    }
+   ],
+   "fileName": "./vsnprintf_r.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-538c6caaa5d6a09e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42df0e4517b90c69de44f57b5268a2d81657a81f"
+    }
+   ],
+   "fileName": "./xio-ascii.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c637f5b42da9d429",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a8090d39edf3090fd498c49c55f6c8ab9b2088e"
+    }
+   ],
+   "fileName": "./xio-ascii.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-ecb556474d53ea77",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5156c6010e21ba7feb3e9b85e5d8251d423481e5"
+    }
+   ],
+   "fileName": "./xio-creat.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-541ad2da19c726da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7713d8d2c4c9fa6ab71e1fd0e8ba68bb40bdb004"
+    }
+   ],
+   "fileName": "./xio-creat.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-bb76e3741bea33bc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99d2dab98011b4833517016b02e38919d4ae0a7e"
+    }
+   ],
+   "fileName": "./xio-dccp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-e9719844cbc0f69c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9d4f7844348df5ff3ca08195ff746169f25392ab"
+    }
+   ],
+   "fileName": "./xio-dccp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-fc9f21dca0a1d949",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e47542df7acbdae99de52a243ed26e3c30bdd2e9"
+    }
+   ],
+   "fileName": "./xio-exec.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b971366a8c55f1e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "187cf7a9e2b7c99eb894dba39a267728f27c201f"
+    }
+   ],
+   "fileName": "./xio-exec.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1544647045c2dd81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a2b9c5ee17377b1864efcd62848f872775550617"
+    }
+   ],
+   "fileName": "./xio-fd.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-13fd815cf7fc104f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7168b2c3cb1f3069573a9dfa0c1d5e184e918533"
+    }
+   ],
+   "fileName": "./xio-fd.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-cd1b8f48a2c2a83d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7de7a65a6f842a2b81f0992256a275e2e2300340"
+    }
+   ],
+   "fileName": "./xio-fdnum.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4289441998ddf43e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "040707ce02285fa1cabd6783928fdce1fffad60d"
+    }
+   ],
+   "fileName": "./xio-fdnum.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-904bd1916cc6edbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24bd8bc4244e51d4084f62a9d7ab5c9a0f350bbf"
+    }
+   ],
+   "fileName": "./xio-file.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-8b4f46423983036c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1f8603b0cd805eb350a6aef052018352df9ef44"
+    }
+   ],
+   "fileName": "./xio-file.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1f28b2a78a8bee5f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b8f5afe575fe0e75a42e0a2cd5fc9492247b6c6"
+    }
+   ],
+   "fileName": "./xio-fs.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d4e806b621bee666",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6e13418211d39ccd1c1b7468a98e951d48070544"
+    }
+   ],
+   "fileName": "./xio-fs.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d48531c45223cbb6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f7afdc0cdafda2e885245bed3bff1b7af859d5ce"
+    }
+   ],
+   "fileName": "./xio-gopen.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5849b5e07c00dd63",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "825cab3baceb198d35b90be8ce7d02ecc8bf3664"
+    }
+   ],
+   "fileName": "./xio-gopen.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-05305350e7594525",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "762ab4e1819a55310cbc438d75bd462718ad1e0b"
+    }
+   ],
+   "fileName": "./xio-interface.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-eecc49368fdf2309",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a49c09e89722dad588c525c677f3c9681d14a59"
+    }
+   ],
+   "fileName": "./xio-interface.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b96afe4c5fb91a5c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60c4058fda2b140d794ae163433890ba863e7e12"
+    }
+   ],
+   "fileName": "./xio-ip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-562825059a93d657",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "421f3839cfdf9558ab5d887ec4396c43650399df"
+    }
+   ],
+   "fileName": "./xio-ip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-6e8fe1baa553b7a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7253fd058c1e46ecdb435642978a2cb88d95b305"
+    }
+   ],
+   "fileName": "./xio-ip4.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-e6305169dd139cca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18c48b6fbf6fa213fbe3c3ffae5f233a9d206b4d"
+    }
+   ],
+   "fileName": "./xio-ip4.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-2c06d09be5d4894c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a330e0a3dc0d06b0122a97e7ff33441f8d47ae3"
+    }
+   ],
+   "fileName": "./xio-ip6.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7d0fbaf1a268b58a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f6d0bb8cdeb9acb4be08a17c9ab98662375dc9c1"
+    }
+   ],
+   "fileName": "./xio-ip6.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-ca027b32761b6832",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "903c32641135d2ff79eaf8327df1b9227d473ae3"
+    }
+   ],
+   "fileName": "./xio-ipapp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f3aa346ec0f6df1a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cbbca1eaced97c21bf6154fca62384662b2183a9"
+    }
+   ],
+   "fileName": "./xio-ipapp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-74b420701ff0b3b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "918f0b394af51310ba74fe945bb948b32f879012"
+    }
+   ],
+   "fileName": "./xio-listen.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b1febb8f63ab2281",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc446f6df664ecd28f8c304edad8ab31c4485116"
+    }
+   ],
+   "fileName": "./xio-listen.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4ed67534ff26ada2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0771c42c541e1e1de319b4530004e80cdfebc4db"
+    }
+   ],
+   "fileName": "./xio-named.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-63d1ae3947734931",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed25cf9e0d8ca8a176c425ea605974043cf6e3da"
+    }
+   ],
+   "fileName": "./xio-named.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-322952def6fcc6f0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c7ca4288182322d8ed987de302039b16e4e3ea5"
+    }
+   ],
+   "fileName": "./xio-namespaces.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-edbaf455adaec88b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "47b74e473353bacc85ce21e302966456586b63be"
+    }
+   ],
+   "fileName": "./xio-namespaces.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-cb846f46dccfcba9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "90ccaf7d435495b53eb73c80b0157006ded403f5"
+    }
+   ],
+   "fileName": "./xio-openssl.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-bb25a85a104180f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "864d197113e83236589e4c49738e976eb4fe94dd"
+    }
+   ],
+   "fileName": "./xio-openssl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4d76ae7c52057d7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "06c4544ecac24d523d3b26bf43049eadb83810b2"
+    }
+   ],
+   "fileName": "./xio-pipe.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0fcd9495cb59ef25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9a21b329ca21fa044f2d2bcc4b2c361fc20a51d"
+    }
+   ],
+   "fileName": "./xio-pipe.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-560c438a29948f19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "75bab119ae28cbae082789b0c10e8054e2434e2c"
+    }
+   ],
+   "fileName": "./xio-posixmq.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4755f92f9e4a144a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "397d40f418cde90a97faca1e277f42bf7c2df86f"
+    }
+   ],
+   "fileName": "./xio-posixmq.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-20af9d10cad89a31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2861720e6f9af6b793946579d98c06f7b63daea4"
+    }
+   ],
+   "fileName": "./xio-process.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-8a6014f2c8c48131",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bcef4697db21cab41bc87968ca85a0c415be5e67"
+    }
+   ],
+   "fileName": "./xio-process.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-ce50a75022f87a4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f54e6faa0f57311adefc9a120cac5a2a7123d952"
+    }
+   ],
+   "fileName": "./xio-progcall.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-297b7285e5281d5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ed46d88b4ea93abe7ae5e62909b5d19f1bddf99"
+    }
+   ],
+   "fileName": "./xio-progcall.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-2c1068ecf8fef69e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fed5fdcf62a588be30b4ab699e40860235fa0979"
+    }
+   ],
+   "fileName": "./xio-proxy.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b1035f3eff2a9469",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4133dc81bf828acb38a634515c3fc8bca73af07"
+    }
+   ],
+   "fileName": "./xio-proxy.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-79c4d7c459668c19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55e3b83fd174ee7d5141f37b9431aa80e66a2f2e"
+    }
+   ],
+   "fileName": "./xio-pty.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0aa1a59e0ae22c92",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b41feccb8f849022767501b80771ab39780bd4eb"
+    }
+   ],
+   "fileName": "./xio-pty.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-433e6c70740065fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f112a12c8d4c4c4a1faf10dd2b65c5d2aa37563c"
+    }
+   ],
+   "fileName": "./xio-rawip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c92316f6e5d762c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df844352c356d4e1bb9a56fd33c0b38938192715"
+    }
+   ],
+   "fileName": "./xio-rawip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7bde8b8c5ec66faa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b96f3592e9405133023ecaf9fd7305074c792395"
+    }
+   ],
+   "fileName": "./xio-readline.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f1c3566f424398ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6523c44d615347d7077eb842e72db8472be2a01d"
+    }
+   ],
+   "fileName": "./xio-readline.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-73fb2a850259878d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c629919a1d6e7ed8db57971e6b158efcc001651c"
+    }
+   ],
+   "fileName": "./xio-sctp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-df5fe70f9a55e453",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a07053c8cc2da8fd100094ef674bd2ce7590e5c"
+    }
+   ],
+   "fileName": "./xio-sctp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-a07ef8691386fee2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a9ee86e53e57b69b924bc723555da5ccb93f558"
+    }
+   ],
+   "fileName": "./xio-shell.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5b7d51a415e8ddcb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "83aef3a99aa683097c01b69082ba0f413428841a"
+    }
+   ],
+   "fileName": "./xio-shell.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-30b0f35510e931a6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35d1c045634025a085fa214569eb726d387d8c85"
+    }
+   ],
+   "fileName": "./xio-socket.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-ee38f9fe59933fe9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6f06c2a48328a49a25fc884ba12be707411b9873"
+    }
+   ],
+   "fileName": "./xio-socket.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d03a5e91b9079775",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "552d8ef31b593025f490ea54847af3a673654043"
+    }
+   ],
+   "fileName": "./xio-socketpair.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f5e2329b38c60b88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "800a8925c8f6ea836209b2ebcae7898e79d3ed9b"
+    }
+   ],
+   "fileName": "./xio-socketpair.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-bcc32a4f4d509c65",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9aab28da2e1120c93cb7fe48abab2189a5f75f68"
+    }
+   ],
+   "fileName": "./xio-socks.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1fc4b3c33a8eff5a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d281b377609c6bf15055b461dd07109b1fbe4f06"
+    }
+   ],
+   "fileName": "./xio-socks.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-33fb73c4a517b1c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2858ce281ca24edc5a2498ff2cbb7e6072b81e74"
+    }
+   ],
+   "fileName": "./xio-socks5.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-978ed220c3d5cb5b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9776f794b3396e4d9f3f96f950195d4042661999"
+    }
+   ],
+   "fileName": "./xio-socks5.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-e5ac94f20cdc14e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "018adcd24e84bb34376a790d775ec40c06bcc97e"
+    }
+   ],
+   "fileName": "./xio-stdio.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b621c98272257866",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c28f6ab322a5b4a1981a52ab81f63ab73f7d74f"
+    }
+   ],
+   "fileName": "./xio-stdio.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b060552a6bc5cc40",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4d344c1d55725eaf29e9930e5b140eabaad1b47"
+    }
+   ],
+   "fileName": "./xio-streams.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-87df12ef67eb9854",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd9630404f5c2ecc763755a5ba9e93813d2bcc8a"
+    }
+   ],
+   "fileName": "./xio-streams.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-12d6996e5695ef84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "788a654e88de0b200de35ec6cde7b0fca0922aeb"
+    }
+   ],
+   "fileName": "./xio-system.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-2fac385e03f0d253",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0eb27689813e874e7430152e590672bf4062baeb"
+    }
+   ],
+   "fileName": "./xio-system.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-6cb633856ce98abb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0819493cf961def9639d078133f6aea2dae2c876"
+    }
+   ],
+   "fileName": "./xio-tcp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-bf3e3a91ae4a3f1b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "316a1eecb72e40032c4a1c3319bf470fb4972521"
+    }
+   ],
+   "fileName": "./xio-tcp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-630bf53c7cf80eaf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5bc5334c6b39699558519ef76a17cfb313b8c10d"
+    }
+   ],
+   "fileName": "./xio-tcpwrap.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-55bfdbf5b6e88631",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5620e5681ff105803c9110507d99a1d24c6370c5"
+    }
+   ],
+   "fileName": "./xio-tcpwrap.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d58de80aa10d473f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3752d9682c4bb0e33d23d1a7342c88819c8828d"
+    }
+   ],
+   "fileName": "./xio-termios.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-75a713fcfdf96441",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f50fd1d4e6182874db9a11607f1c7e1ea312242"
+    }
+   ],
+   "fileName": "./xio-termios.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-5fcecf9ee49af581",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "747aa31433853c4bde769dd4811e81cace1033a7"
+    }
+   ],
+   "fileName": "./xio-tun.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-39506ca2a748f03e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d607e5407e58e9575bb2c50ac4dbc5fbb34abb1"
+    }
+   ],
+   "fileName": "./xio-tun.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-d8e6a76973f2a362",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "48f4bb09e182e79dc950c45e770cd19c3c4748ab"
+    }
+   ],
+   "fileName": "./xio-udp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0c0ac5baca4dfd2f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d2f8e9f82d56807ac937ba20ec2aa1faee3e7239"
+    }
+   ],
+   "fileName": "./xio-udp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c51a59bbfff3ae7a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "959ab73c3470591d69fe21dc99d0f6a014a59b25"
+    }
+   ],
+   "fileName": "./xio-udplite.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9b28293a88c13371",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f15338eab86c2dd5d5a11683f598c39ff9736828"
+    }
+   ],
+   "fileName": "./xio-udplite.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0dc1b28876d49c3d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85edb1af045a9e3e69134d59336e5816d06d70fe"
+    }
+   ],
+   "fileName": "./xio-unix.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-b9fa2e41006e967c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4909c03ad526627066314ce962d6f0407517625"
+    }
+   ],
+   "fileName": "./xio-unix.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-927e7e04a2bac739",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "197a2d857be8b7a5e787fb536e6dc87c21b9d7df"
+    }
+   ],
+   "fileName": "./xio-vsock.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-fbe65567cfd9e87f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0fcdbdf5a87dbdcd6ebf6a6cbd2f51d8a7ad7bf9"
+    }
+   ],
+   "fileName": "./xio-vsock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-3e572a2d2b505898",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "642600052165bceb49304984ecea97ec3b03bd6e"
+    }
+   ],
+   "fileName": "./xio.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1d27e9d8bfb295bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9b069359da7114e7523af0b63fc626b8caa1cb0"
+    }
+   ],
+   "fileName": "./xioclose.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-3a18f747e6b429a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b2718c6e07924429c350241325e45809e6af036"
+    }
+   ],
+   "fileName": "./xioconfig.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f6cadfd31ca702c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "54b7e2147719d4211a16350fd3a894ae43fdd397"
+    }
+   ],
+   "fileName": "./xiodiag.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-ad117cb75a0026a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2516ff0625333357d79eb80fe7f2ab53e6a6a8e3"
+    }
+   ],
+   "fileName": "./xiodiag.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-247f45a9a299461e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6bafefdeafc5f76061e086b9891d8cf7f12d89e9"
+    }
+   ],
+   "fileName": "./xioexit.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-519dad1e1de1eab6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fa47dae07312a3de0beb4b38f46679010bda2299"
+    }
+   ],
+   "fileName": "./xiohelp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-71180d4df88af46c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "95841a967a4278edce43039b4aff04cb38a2d672"
+    }
+   ],
+   "fileName": "./xiohelp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-60e7603719567853",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09a365ba8ebb7d0c5580149641c68b8c8bb6672a"
+    }
+   ],
+   "fileName": "./xioinitialize.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-c61ded55a8323369",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ddb1d3a3abd709726cf219489e6864fbb38ede4"
+    }
+   ],
+   "fileName": "./xiolayer.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0e96886d52b2b428",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ebd983197dfcd8ebcd75e5a5d48b5c722d8761c"
+    }
+   ],
+   "fileName": "./xiolayer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7d572958fc0b3673",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84286a386b3534518766986676af30899e6fc83e"
+    }
+   ],
+   "fileName": "./xiolockfile.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-9d31db4855766132",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c48aee57e59f29e65f96f35ffe8d10de016f9ce5"
+    }
+   ],
+   "fileName": "./xiolockfile.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-4641236219e7ed37",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64779f524762a8c5d60864b42a2e97be5724d3ea"
+    }
+   ],
+   "fileName": "./xiomodes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-7a5c2fb70ba8953e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "184d0c22b3bd6bc786a33b3432d5b1c83d2d045d"
+    }
+   ],
+   "fileName": "./xioopen.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-51f3f495ccb9341e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1c623c9e3340844110097f6ee86f7eb9de6ee5a"
+    }
+   ],
+   "fileName": "./xioopen.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-0cdd4f8ea562fd4e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "823f9e0354b42fad6bd8376731f1a3e2d553e8e6"
+    }
+   ],
+   "fileName": "./xioopts.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-1d67cbf36e0e5c87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eadbbca09b87ffa4984a66e267aa7c8838561438"
+    }
+   ],
+   "fileName": "./xioopts.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-ce7d3e983b77c530",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "781b99eb6d945b3f8f3b7e8daf725f8e8da10885"
+    }
+   ],
+   "fileName": "./xioparam.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-54f79ff489741e83",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "444573aad44f363d2e6b7861ef1ad7ede6fc9a66"
+    }
+   ],
+   "fileName": "./xioread.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-640d67810003a8f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d523a092e51580ab14c70c46352b00112cbabce"
+    }
+   ],
+   "fileName": "./xioshutdown.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-f041819ba714efc3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "833f62eb93acd8cd4dacdb1df2d5964141dc24e6"
+    }
+   ],
+   "fileName": "./xiosigchld.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-47d485ce8e50b0fe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7255b87db8b63b3214322e11e09a0015423b6127"
+    }
+   ],
+   "fileName": "./xiosignal.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-17f0f3061fb4b880",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c49a3ee724005cf3f295bccc927f2d8718ee758"
+    }
+   ],
+   "fileName": "./xiosysincludes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-upstream-fc2398d4a39f7b1d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c869949cb1f47ac41bea9bcc22ee8226ab064d3c"
+    }
+   ],
+   "fileName": "./xiowrite.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b8b2dab231c56b43c6fd0a64b687f36a04282b2c"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork socat",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-af475964be0c03ea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "25c528dcd4a34b4d082fc9b8b5c317448118ba98"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./BUGREPORTS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-a2feb6ed0257c21c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05d4557b64ad021ccfa2a1ed0db28c120c826255"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CHANGES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-6156cd6ac57d8b88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4cc77b90af91e615a64ae04893fdffa7939db84c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./COPYING"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-c018188b9632d41a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "82fcde476cb04d2b68f9a47c5c64f00019f6d821"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./COPYING.OpenSSL"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4bf9f8cb6acd9b0d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a32e9e3c063c6bc4b5ecd9490a0ff998abd3229"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./DEVELOPMENT"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9659699670b30983",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2ed9a5b6fc5ae8e0696e915114d37448bebc4991"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./EXAMPLES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-03688ba6aa340b87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "763c3edba28781e6bde97831a0e33c88310d7a01"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./FAQ"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9fb4f1d17ef878fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "92d7c11f48f2e39a7a37c7c62b146460c9a81382"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./FILES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4faecea6d9857941",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b811ac0e88488e188f4b987db4d5b382dd4da453"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./Makefile.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f5388fcc8416fb5f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "970a8b3bdd0a126f98426fe4e20161095cf711ea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./PORTING"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "495ae72ea6200e81b8f7bf4d0288b6c9c66c7c3e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9953e72b89755380",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ca9aed7e80e97ac77cbbb148ec5dc3d57515073"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.FIPS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0a7b77e1bff2cdf1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "edd5bd4c8aababac883f3008643f508c30b8cc74"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./SECURITY"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b33892fbddeffc33",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e37557631ee899cc2c7b384f953e49c67d5b9ecf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./VERSION"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-59f81c123b3abbcb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c797b94081541239f1fbe4b3b30088e0bc2861e1"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork socat",
+   "fileName": "./build.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-69b7b779f4997cfe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "33fe64facdfb78d4e31e00f9cd742d6d9fbe60d2"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork socat",
+   "fileName": "./compat.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-980c4659e480ee35",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e7db82ee89d46a73e61fec66d8d3bdae005dea65"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./config.h.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-09be8533ff0a6ee5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9d124eee8bf2727caffc79b224d8f8c237be6447"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork socat",
+   "fileName": "./configure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-87db583be5c13c1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66c39fe30188a0053972aeec5352b97bc5635bed"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./configure.ac"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0ff7e25ee1cb9b87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "87db583be5c13c1f7b3c958b10e03d67b6a2ca06"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./configure.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-bf1336cb501529fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4bc1e160ead4a327f6e0f097b72fe7095d563a5d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./daemon.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b2c5d0fdb53ec8f7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9239fdffd8355cd11b93f6fd3f53f7daf448d33a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./dalan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7d590f8c5cdfff40",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36b41e7cc9415875140d42c20585b5eed6e73c37"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./dalan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-5dd191ebb0f80926",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7cf35534af7381d1c53008c55b02e2200ecee201"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/dest-unreach.css"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d9ad291ef806e02d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d603090fe041047d60cee1517b1d69270fbded8b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/socat-genericsocket.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-e7429b77924bfd7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f18a85a76be34c9e37463801a8f5b7f9f8b27ee6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/socat-multicast.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f2495aa7bee8315a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e50d552f53453d3c5cfbcde444528a27c5ac8f5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/socat-openssltunnel.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7b043bf90b29eee1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7ff515bb9d5a621538c851733fae1ac84df82eab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/socat-tun.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-452ea480d0911e21",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5d636f774322a4b9e7ea35dd936bda596a0ad2d1"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork socat",
+   "fileName": "./doc/socat.1"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0f68c4902d748a70",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed1e943ed7acc621df66fce47f6398bb661953c6"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork socat",
+   "fileName": "./doc/socat.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-48c83e0642520653",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "171aa6ecd6a65e780726b8f4e90e585f1c9b55cc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./doc/socat.yo"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-a2b326b827826cdc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "240d2665002e86a40a0f3e6f4377c0a942ec9ed9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./error.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-853f5452aa588b8f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e52d18263c69018adde95b3ebacbfecef8fdbec"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./error.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7c08a600657440e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b9846e8071ecf08a468eb14147e52c7a834691e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./fdname.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-6fc789dd836aabfc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae724f685aa2272a35606cc101db0f01ecc281e7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./filan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-a62e1ae8f806ab00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9330343cd4e9e0408bc247057243e247c0603d7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./filan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-a1dbcb94b2322b46",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "910d2dcb59b381bc7a1ba612de1a8454d93f539f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./filan_main.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b1b977de291d53f5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "944dabe6f3aa60596a217d834ecd538603f292c0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ftp.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-72b4e5bb456704e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a1d84d7ac358f622c8a37d93f6c3243fcdffb199"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./hostan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-8483a090f556c9b7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8915e75453c99618fc1a678342d2b0bee5344287"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./hostan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-547fe0db6ad3e73c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b1825e14443f31980a8a3a8071db3d608e24c4d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./install-sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-60fcd387c32285b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c658ed30aeab0170b21516a1c0621241f1854f26"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./mail.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-8fd6bc75c617dcc9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "513fbd775a4be05e52a58e89fc64d6bbec9b4ca2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./mytypes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9d035429bafa9bad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b32beaade7f8226fdfaa57be8b71b26c48f14f24"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./nestlex.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1e36796735e04506",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8da663d36294e0d7e4d0bdd9e126086a9a3d62a6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./nestlex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f2c2e1133281bb0b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10017548558336c063a4c3a3abfa9c698b348cb1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./procan-cdefs.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-736b556e8c141897",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2226cb8f1bfbc5cdd61b1d523d5e5785925f9698"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./procan.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-22fa4f2d665a410c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a941938e44f6544048c4f49e2cd761d47d0873a1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./procan.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9519cc52540bc1c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c368f0c88a6f37b5790ba836ecd15b2cf3b74b3e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./procan_main.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-5ba30e17cc02ee15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e8a7c3b24d431a1e76af6f0c6853f34802fb77d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./proxy.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-3024b369f79c2255",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "68b96ec812c4c6869b0c1c96b09c749eda8d64d0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./proxyecho.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-97e74dff44e47c4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "171a3020171d55efe6c33c0c1f4770da7b9ecdb4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./readline-test.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-6f7c618067b7f659",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f995a7e7414418ce823d359f6e6975b541a8962"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./readline.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-29ebebcf75cdd39a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "932146a06b04422b9e84161b0488f22fee5bb939"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./snprinterr.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-eda3011ece817d87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60c049e1ee577e90fd74de8333957f40bd1ac08e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./snprinterr.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-23a062b98fdc53cc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c99f692c56aadd967cde7d610d231227e03c7642"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socat-broker.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7a4feb53398ce08d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0df1c61b15f1e70524404c2ee223b54f98955491"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socat-chain.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-759b9ada5a579aeb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b83d11ce8d489778328ef6a8633bb166ab23f64"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socat-mux.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9ff24cf9b17fd166",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21627f157b95503eab5979459915acfcb70d4fdc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socat.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b546c6ca8d210a62",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ef31914365ab37750490c9dbb44f4cde3072a798"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socat.spec"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f22601600dcfe21c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "43bdca1913b3439d4bf9713eeef3c1e8243d7491"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socat_buildscript_for_android.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-5b8aaed72ee610e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "23ba82dd7c9f8a39eee19cde35e590f58e0a760d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socks4a-echo.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-2c6b37b0ac9aaa8e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "26106f92fcf5ee71591b0e3f3c7a7f931f8c319f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./socks4echo.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0c2a93596cb88c54",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eaa9499f3c8d5258158753daf1228c8d92fb8fcd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sslcls.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1bcbf4b97f9e4ea7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eaca52e558d41fffed6ae22833a88675fd4d2132"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sslcls.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f72ff7d38ba496fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "63cc029212e7134d2eccc38ce710db86c5ca48b3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sycls.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d999eaf1e4e04943",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99e581658187ea15c63c630245b3be17d05d97ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sycls.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-fc28024c208fb98a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bfb8aae318ee4c0db1867ad6271c00ce3f1bc246"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sysincludes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0eb18a65d06b4b91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc5f263d75d9f95e9d3c27cfb9cd71673eab131c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sysutils.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-e18c0db56b1da17c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c800f3347ff15cf4070d2be625cf812fd839f52"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./sysutils.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-2acc65acdda9ae98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fb68e301f013eb340ae37462fb7a326e974d2f2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-280b7c0551214951",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ba78a927d9360a0234ad1cc4f413dab6ea92821"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./utils.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-c55fcc4bb991ba6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ba2ef5de832ce67c7065083c1120df2699080032"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./utils.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-fb25e563235f5039",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cff99f9a45a49a2dd3080d789d788478ec3892df"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./vsnprintf_r.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-94fa1120d932de4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a06047870c3e87174b86e715f58d407d2a0b5dd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./vsnprintf_r.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-538c6caaa5d6a09e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42df0e4517b90c69de44f57b5268a2d81657a81f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ascii.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-c637f5b42da9d429",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a8090d39edf3090fd498c49c55f6c8ab9b2088e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ascii.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-ecb556474d53ea77",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5156c6010e21ba7feb3e9b85e5d8251d423481e5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-creat.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-541ad2da19c726da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7713d8d2c4c9fa6ab71e1fd0e8ba68bb40bdb004"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-creat.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-bb76e3741bea33bc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99d2dab98011b4833517016b02e38919d4ae0a7e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-dccp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-e9719844cbc0f69c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9d4f7844348df5ff3ca08195ff746169f25392ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-dccp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-fc9f21dca0a1d949",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e47542df7acbdae99de52a243ed26e3c30bdd2e9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-exec.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b971366a8c55f1e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "187cf7a9e2b7c99eb894dba39a267728f27c201f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-exec.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1544647045c2dd81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a2b9c5ee17377b1864efcd62848f872775550617"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-fd.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-13fd815cf7fc104f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7168b2c3cb1f3069573a9dfa0c1d5e184e918533"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-fd.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-cd1b8f48a2c2a83d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7de7a65a6f842a2b81f0992256a275e2e2300340"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-fdnum.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4289441998ddf43e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "040707ce02285fa1cabd6783928fdce1fffad60d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-fdnum.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-904bd1916cc6edbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24bd8bc4244e51d4084f62a9d7ab5c9a0f350bbf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-file.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-8b4f46423983036c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1f8603b0cd805eb350a6aef052018352df9ef44"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-file.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1f28b2a78a8bee5f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b8f5afe575fe0e75a42e0a2cd5fc9492247b6c6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-fs.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d4e806b621bee666",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6e13418211d39ccd1c1b7468a98e951d48070544"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-fs.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d48531c45223cbb6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f7afdc0cdafda2e885245bed3bff1b7af859d5ce"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-gopen.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-5849b5e07c00dd63",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "825cab3baceb198d35b90be8ce7d02ecc8bf3664"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-gopen.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-05305350e7594525",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "762ab4e1819a55310cbc438d75bd462718ad1e0b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-interface.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-eecc49368fdf2309",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a49c09e89722dad588c525c677f3c9681d14a59"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-interface.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b96afe4c5fb91a5c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60c4058fda2b140d794ae163433890ba863e7e12"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-562825059a93d657",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "421f3839cfdf9558ab5d887ec4396c43650399df"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-6e8fe1baa553b7a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7253fd058c1e46ecdb435642978a2cb88d95b305"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ip4.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-e6305169dd139cca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18c48b6fbf6fa213fbe3c3ffae5f233a9d206b4d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ip4.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-2c06d09be5d4894c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a330e0a3dc0d06b0122a97e7ff33441f8d47ae3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ip6.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7d0fbaf1a268b58a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f6d0bb8cdeb9acb4be08a17c9ab98662375dc9c1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ip6.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-ca027b32761b6832",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "903c32641135d2ff79eaf8327df1b9227d473ae3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ipapp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f3aa346ec0f6df1a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cbbca1eaced97c21bf6154fca62384662b2183a9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-ipapp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-74b420701ff0b3b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "918f0b394af51310ba74fe945bb948b32f879012"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-listen.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b1febb8f63ab2281",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc446f6df664ecd28f8c304edad8ab31c4485116"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-listen.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4ed67534ff26ada2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0771c42c541e1e1de319b4530004e80cdfebc4db"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-named.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-63d1ae3947734931",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed25cf9e0d8ca8a176c425ea605974043cf6e3da"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-named.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-322952def6fcc6f0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c7ca4288182322d8ed987de302039b16e4e3ea5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-namespaces.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-edbaf455adaec88b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "47b74e473353bacc85ce21e302966456586b63be"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-namespaces.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-cb846f46dccfcba9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "90ccaf7d435495b53eb73c80b0157006ded403f5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-openssl.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-bb25a85a104180f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "864d197113e83236589e4c49738e976eb4fe94dd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-openssl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4d76ae7c52057d7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "06c4544ecac24d523d3b26bf43049eadb83810b2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-pipe.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0fcd9495cb59ef25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9a21b329ca21fa044f2d2bcc4b2c361fc20a51d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-pipe.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-560c438a29948f19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "75bab119ae28cbae082789b0c10e8054e2434e2c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-posixmq.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4755f92f9e4a144a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "397d40f418cde90a97faca1e277f42bf7c2df86f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-posixmq.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-20af9d10cad89a31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2861720e6f9af6b793946579d98c06f7b63daea4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-process.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-8a6014f2c8c48131",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bcef4697db21cab41bc87968ca85a0c415be5e67"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-process.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-ce50a75022f87a4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f54e6faa0f57311adefc9a120cac5a2a7123d952"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-progcall.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-297b7285e5281d5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ed46d88b4ea93abe7ae5e62909b5d19f1bddf99"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-progcall.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-2c1068ecf8fef69e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fed5fdcf62a588be30b4ab699e40860235fa0979"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-proxy.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b1035f3eff2a9469",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4133dc81bf828acb38a634515c3fc8bca73af07"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-proxy.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-79c4d7c459668c19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55e3b83fd174ee7d5141f37b9431aa80e66a2f2e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-pty.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0aa1a59e0ae22c92",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b41feccb8f849022767501b80771ab39780bd4eb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-pty.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-433e6c70740065fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f112a12c8d4c4c4a1faf10dd2b65c5d2aa37563c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-rawip.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-c92316f6e5d762c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df844352c356d4e1bb9a56fd33c0b38938192715"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-rawip.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7bde8b8c5ec66faa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b96f3592e9405133023ecaf9fd7305074c792395"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-readline.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f1c3566f424398ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6523c44d615347d7077eb842e72db8472be2a01d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-readline.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-73fb2a850259878d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c629919a1d6e7ed8db57971e6b158efcc001651c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-sctp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-df5fe70f9a55e453",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a07053c8cc2da8fd100094ef674bd2ce7590e5c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-sctp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-a07ef8691386fee2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a9ee86e53e57b69b924bc723555da5ccb93f558"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-shell.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-5b7d51a415e8ddcb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "83aef3a99aa683097c01b69082ba0f413428841a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-shell.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-30b0f35510e931a6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35d1c045634025a085fa214569eb726d387d8c85"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socket.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-ee38f9fe59933fe9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6f06c2a48328a49a25fc884ba12be707411b9873"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socket.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d03a5e91b9079775",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "552d8ef31b593025f490ea54847af3a673654043"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socketpair.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f5e2329b38c60b88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "800a8925c8f6ea836209b2ebcae7898e79d3ed9b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socketpair.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-bcc32a4f4d509c65",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9aab28da2e1120c93cb7fe48abab2189a5f75f68"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socks.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1fc4b3c33a8eff5a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d281b377609c6bf15055b461dd07109b1fbe4f06"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socks.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-33fb73c4a517b1c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2858ce281ca24edc5a2498ff2cbb7e6072b81e74"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socks5.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-978ed220c3d5cb5b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9776f794b3396e4d9f3f96f950195d4042661999"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-socks5.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-e5ac94f20cdc14e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "018adcd24e84bb34376a790d775ec40c06bcc97e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-stdio.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b621c98272257866",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c28f6ab322a5b4a1981a52ab81f63ab73f7d74f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-stdio.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b060552a6bc5cc40",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4d344c1d55725eaf29e9930e5b140eabaad1b47"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-streams.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-87df12ef67eb9854",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd9630404f5c2ecc763755a5ba9e93813d2bcc8a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-streams.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-12d6996e5695ef84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "788a654e88de0b200de35ec6cde7b0fca0922aeb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-system.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-2fac385e03f0d253",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0eb27689813e874e7430152e590672bf4062baeb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-system.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-6cb633856ce98abb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0819493cf961def9639d078133f6aea2dae2c876"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-tcp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-bf3e3a91ae4a3f1b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "316a1eecb72e40032c4a1c3319bf470fb4972521"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-tcp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-630bf53c7cf80eaf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5bc5334c6b39699558519ef76a17cfb313b8c10d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-tcpwrap.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-55bfdbf5b6e88631",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5620e5681ff105803c9110507d99a1d24c6370c5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-tcpwrap.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d58de80aa10d473f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3752d9682c4bb0e33d23d1a7342c88819c8828d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-termios.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-75a713fcfdf96441",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f50fd1d4e6182874db9a11607f1c7e1ea312242"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-termios.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-5fcecf9ee49af581",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "747aa31433853c4bde769dd4811e81cace1033a7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-tun.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-39506ca2a748f03e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d607e5407e58e9575bb2c50ac4dbc5fbb34abb1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-tun.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-d8e6a76973f2a362",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "48f4bb09e182e79dc950c45e770cd19c3c4748ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-udp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0c0ac5baca4dfd2f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d2f8e9f82d56807ac937ba20ec2aa1faee3e7239"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-udp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-c51a59bbfff3ae7a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "959ab73c3470591d69fe21dc99d0f6a014a59b25"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-udplite.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9b28293a88c13371",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f15338eab86c2dd5d5a11683f598c39ff9736828"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-udplite.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0dc1b28876d49c3d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85edb1af045a9e3e69134d59336e5816d06d70fe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-unix.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-b9fa2e41006e967c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4909c03ad526627066314ce962d6f0407517625"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-unix.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-927e7e04a2bac739",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "197a2d857be8b7a5e787fb536e6dc87c21b9d7df"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-vsock.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-fbe65567cfd9e87f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0fcdbdf5a87dbdcd6ebf6a6cbd2f51d8a7ad7bf9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio-vsock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-3e572a2d2b505898",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "642600052165bceb49304984ecea97ec3b03bd6e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xio.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1d27e9d8bfb295bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9b069359da7114e7523af0b63fc626b8caa1cb0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioclose.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-3a18f747e6b429a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b2718c6e07924429c350241325e45809e6af036"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioconfig.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f6cadfd31ca702c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "54b7e2147719d4211a16350fd3a894ae43fdd397"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiodiag.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-ad117cb75a0026a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2516ff0625333357d79eb80fe7f2ab53e6a6a8e3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiodiag.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-247f45a9a299461e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6bafefdeafc5f76061e086b9891d8cf7f12d89e9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioexit.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-519dad1e1de1eab6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fa47dae07312a3de0beb4b38f46679010bda2299"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiohelp.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-71180d4df88af46c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "95841a967a4278edce43039b4aff04cb38a2d672"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiohelp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-60e7603719567853",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09a365ba8ebb7d0c5580149641c68b8c8bb6672a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioinitialize.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-c61ded55a8323369",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ddb1d3a3abd709726cf219489e6864fbb38ede4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiolayer.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0e96886d52b2b428",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ebd983197dfcd8ebcd75e5a5d48b5c722d8761c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiolayer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7d572958fc0b3673",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84286a386b3534518766986676af30899e6fc83e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiolockfile.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-9d31db4855766132",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c48aee57e59f29e65f96f35ffe8d10de016f9ce5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiolockfile.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-4641236219e7ed37",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64779f524762a8c5d60864b42a2e97be5724d3ea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiomodes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-7a5c2fb70ba8953e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "184d0c22b3bd6bc786a33b3432d5b1c83d2d045d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioopen.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-51f3f495ccb9341e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1c623c9e3340844110097f6ee86f7eb9de6ee5a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioopen.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-0cdd4f8ea562fd4e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "823f9e0354b42fad6bd8376731f1a3e2d553e8e6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioopts.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-1d67cbf36e0e5c87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eadbbca09b87ffa4984a66e267aa7c8838561438"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioopts.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-ce7d3e983b77c530",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "781b99eb6d945b3f8f3b7e8daf725f8e8da10885"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioparam.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-54f79ff489741e83",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "444573aad44f363d2e6b7861ef1ad7ede6fc9a66"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioread.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-640d67810003a8f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d523a092e51580ab14c70c46352b00112cbabce"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xioshutdown.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-f041819ba714efc3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "833f62eb93acd8cd4dacdb1df2d5964141dc24e6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiosigchld.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-47d485ce8e50b0fe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7255b87db8b63b3214322e11e09a0015423b6127"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiosignal.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-17f0f3061fb4b880",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c49a3ee724005cf3f295bccc927f2d8718ee758"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiosysincludes.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-socat-open-ddk-fc2398d4a39f7b1d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c869949cb1f47ac41bea9bcc22ee8226ab064d3c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./xiowrite.c"
+  }
+ ],
+ "name": "socat-1.8.0.0",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-socat-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/socat); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://repo.or.cz/socat.git@2da070164d454971d5c970b5278e645051f0d0f7",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-socat-upstream-af475964be0c03ea",
+    "SPDXRef-File-socat-upstream-a2feb6ed0257c21c",
+    "SPDXRef-File-socat-upstream-5676458d828a658e",
+    "SPDXRef-File-socat-upstream-6156cd6ac57d8b88",
+    "SPDXRef-File-socat-upstream-c018188b9632d41a",
+    "SPDXRef-File-socat-upstream-4bf9f8cb6acd9b0d",
+    "SPDXRef-File-socat-upstream-9659699670b30983",
+    "SPDXRef-File-socat-upstream-03688ba6aa340b87",
+    "SPDXRef-File-socat-upstream-9fb4f1d17ef878fb",
+    "SPDXRef-File-socat-upstream-4faecea6d9857941",
+    "SPDXRef-File-socat-upstream-f5388fcc8416fb5f",
+    "SPDXRef-File-socat-upstream-69e27356ef629022",
+    "SPDXRef-File-socat-upstream-9953e72b89755380",
+    "SPDXRef-File-socat-upstream-c873bcc8c31961d6",
+    "SPDXRef-File-socat-upstream-0a7b77e1bff2cdf1",
+    "SPDXRef-File-socat-upstream-b33892fbddeffc33",
+    "SPDXRef-File-socat-upstream-69b7b779f4997cfe",
+    "SPDXRef-File-socat-upstream-980c4659e480ee35",
+    "SPDXRef-File-socat-upstream-87db583be5c13c1f",
+    "SPDXRef-File-socat-upstream-0ff7e25ee1cb9b87",
+    "SPDXRef-File-socat-upstream-bf1336cb501529fb",
+    "SPDXRef-File-socat-upstream-b2c5d0fdb53ec8f7",
+    "SPDXRef-File-socat-upstream-7d590f8c5cdfff40",
+    "SPDXRef-File-socat-upstream-5dd191ebb0f80926",
+    "SPDXRef-File-socat-upstream-d9ad291ef806e02d",
+    "SPDXRef-File-socat-upstream-e7429b77924bfd7d",
+    "SPDXRef-File-socat-upstream-f2495aa7bee8315a",
+    "SPDXRef-File-socat-upstream-7b043bf90b29eee1",
+    "SPDXRef-File-socat-upstream-48c83e0642520653",
+    "SPDXRef-File-socat-upstream-a2b326b827826cdc",
+    "SPDXRef-File-socat-upstream-853f5452aa588b8f",
+    "SPDXRef-File-socat-upstream-7c08a600657440e6",
+    "SPDXRef-File-socat-upstream-6fc789dd836aabfc",
+    "SPDXRef-File-socat-upstream-a62e1ae8f806ab00",
+    "SPDXRef-File-socat-upstream-a1dbcb94b2322b46",
+    "SPDXRef-File-socat-upstream-b1b977de291d53f5",
+    "SPDXRef-File-socat-upstream-72b4e5bb456704e0",
+    "SPDXRef-File-socat-upstream-8483a090f556c9b7",
+    "SPDXRef-File-socat-upstream-547fe0db6ad3e73c",
+    "SPDXRef-File-socat-upstream-60fcd387c32285b8",
+    "SPDXRef-File-socat-upstream-8fd6bc75c617dcc9",
+    "SPDXRef-File-socat-upstream-9d035429bafa9bad",
+    "SPDXRef-File-socat-upstream-1e36796735e04506",
+    "SPDXRef-File-socat-upstream-f2c2e1133281bb0b",
+    "SPDXRef-File-socat-upstream-736b556e8c141897",
+    "SPDXRef-File-socat-upstream-22fa4f2d665a410c",
+    "SPDXRef-File-socat-upstream-9519cc52540bc1c9",
+    "SPDXRef-File-socat-upstream-5ba30e17cc02ee15",
+    "SPDXRef-File-socat-upstream-3024b369f79c2255",
+    "SPDXRef-File-socat-upstream-97e74dff44e47c4a",
+    "SPDXRef-File-socat-upstream-6f7c618067b7f659",
+    "SPDXRef-File-socat-upstream-29ebebcf75cdd39a",
+    "SPDXRef-File-socat-upstream-eda3011ece817d87",
+    "SPDXRef-File-socat-upstream-23a062b98fdc53cc",
+    "SPDXRef-File-socat-upstream-7a4feb53398ce08d",
+    "SPDXRef-File-socat-upstream-759b9ada5a579aeb",
+    "SPDXRef-File-socat-upstream-9ff24cf9b17fd166",
+    "SPDXRef-File-socat-upstream-b546c6ca8d210a62",
+    "SPDXRef-File-socat-upstream-f22601600dcfe21c",
+    "SPDXRef-File-socat-upstream-5b8aaed72ee610e5",
+    "SPDXRef-File-socat-upstream-2c6b37b0ac9aaa8e",
+    "SPDXRef-File-socat-upstream-0c2a93596cb88c54",
+    "SPDXRef-File-socat-upstream-1bcbf4b97f9e4ea7",
+    "SPDXRef-File-socat-upstream-f72ff7d38ba496fa",
+    "SPDXRef-File-socat-upstream-d999eaf1e4e04943",
+    "SPDXRef-File-socat-upstream-fc28024c208fb98a",
+    "SPDXRef-File-socat-upstream-0eb18a65d06b4b91",
+    "SPDXRef-File-socat-upstream-e18c0db56b1da17c",
+    "SPDXRef-File-socat-upstream-2acc65acdda9ae98",
+    "SPDXRef-File-socat-upstream-280b7c0551214951",
+    "SPDXRef-File-socat-upstream-c55fcc4bb991ba6d",
+    "SPDXRef-File-socat-upstream-fb25e563235f5039",
+    "SPDXRef-File-socat-upstream-94fa1120d932de4f",
+    "SPDXRef-File-socat-upstream-538c6caaa5d6a09e",
+    "SPDXRef-File-socat-upstream-c637f5b42da9d429",
+    "SPDXRef-File-socat-upstream-ecb556474d53ea77",
+    "SPDXRef-File-socat-upstream-541ad2da19c726da",
+    "SPDXRef-File-socat-upstream-bb76e3741bea33bc",
+    "SPDXRef-File-socat-upstream-e9719844cbc0f69c",
+    "SPDXRef-File-socat-upstream-fc9f21dca0a1d949",
+    "SPDXRef-File-socat-upstream-b971366a8c55f1e4",
+    "SPDXRef-File-socat-upstream-1544647045c2dd81",
+    "SPDXRef-File-socat-upstream-13fd815cf7fc104f",
+    "SPDXRef-File-socat-upstream-cd1b8f48a2c2a83d",
+    "SPDXRef-File-socat-upstream-4289441998ddf43e",
+    "SPDXRef-File-socat-upstream-904bd1916cc6edbb",
+    "SPDXRef-File-socat-upstream-8b4f46423983036c",
+    "SPDXRef-File-socat-upstream-1f28b2a78a8bee5f",
+    "SPDXRef-File-socat-upstream-d4e806b621bee666",
+    "SPDXRef-File-socat-upstream-d48531c45223cbb6",
+    "SPDXRef-File-socat-upstream-5849b5e07c00dd63",
+    "SPDXRef-File-socat-upstream-05305350e7594525",
+    "SPDXRef-File-socat-upstream-eecc49368fdf2309",
+    "SPDXRef-File-socat-upstream-b96afe4c5fb91a5c",
+    "SPDXRef-File-socat-upstream-562825059a93d657",
+    "SPDXRef-File-socat-upstream-6e8fe1baa553b7a7",
+    "SPDXRef-File-socat-upstream-e6305169dd139cca",
+    "SPDXRef-File-socat-upstream-2c06d09be5d4894c",
+    "SPDXRef-File-socat-upstream-7d0fbaf1a268b58a",
+    "SPDXRef-File-socat-upstream-ca027b32761b6832",
+    "SPDXRef-File-socat-upstream-f3aa346ec0f6df1a",
+    "SPDXRef-File-socat-upstream-74b420701ff0b3b9",
+    "SPDXRef-File-socat-upstream-b1febb8f63ab2281",
+    "SPDXRef-File-socat-upstream-4ed67534ff26ada2",
+    "SPDXRef-File-socat-upstream-63d1ae3947734931",
+    "SPDXRef-File-socat-upstream-322952def6fcc6f0",
+    "SPDXRef-File-socat-upstream-edbaf455adaec88b",
+    "SPDXRef-File-socat-upstream-cb846f46dccfcba9",
+    "SPDXRef-File-socat-upstream-bb25a85a104180f8",
+    "SPDXRef-File-socat-upstream-4d76ae7c52057d7d",
+    "SPDXRef-File-socat-upstream-0fcd9495cb59ef25",
+    "SPDXRef-File-socat-upstream-560c438a29948f19",
+    "SPDXRef-File-socat-upstream-4755f92f9e4a144a",
+    "SPDXRef-File-socat-upstream-20af9d10cad89a31",
+    "SPDXRef-File-socat-upstream-8a6014f2c8c48131",
+    "SPDXRef-File-socat-upstream-ce50a75022f87a4f",
+    "SPDXRef-File-socat-upstream-297b7285e5281d5e",
+    "SPDXRef-File-socat-upstream-2c1068ecf8fef69e",
+    "SPDXRef-File-socat-upstream-b1035f3eff2a9469",
+    "SPDXRef-File-socat-upstream-79c4d7c459668c19",
+    "SPDXRef-File-socat-upstream-0aa1a59e0ae22c92",
+    "SPDXRef-File-socat-upstream-433e6c70740065fa",
+    "SPDXRef-File-socat-upstream-c92316f6e5d762c4",
+    "SPDXRef-File-socat-upstream-7bde8b8c5ec66faa",
+    "SPDXRef-File-socat-upstream-f1c3566f424398ba",
+    "SPDXRef-File-socat-upstream-73fb2a850259878d",
+    "SPDXRef-File-socat-upstream-df5fe70f9a55e453",
+    "SPDXRef-File-socat-upstream-a07ef8691386fee2",
+    "SPDXRef-File-socat-upstream-5b7d51a415e8ddcb",
+    "SPDXRef-File-socat-upstream-30b0f35510e931a6",
+    "SPDXRef-File-socat-upstream-ee38f9fe59933fe9",
+    "SPDXRef-File-socat-upstream-d03a5e91b9079775",
+    "SPDXRef-File-socat-upstream-f5e2329b38c60b88",
+    "SPDXRef-File-socat-upstream-bcc32a4f4d509c65",
+    "SPDXRef-File-socat-upstream-1fc4b3c33a8eff5a",
+    "SPDXRef-File-socat-upstream-33fb73c4a517b1c9",
+    "SPDXRef-File-socat-upstream-978ed220c3d5cb5b",
+    "SPDXRef-File-socat-upstream-e5ac94f20cdc14e4",
+    "SPDXRef-File-socat-upstream-b621c98272257866",
+    "SPDXRef-File-socat-upstream-b060552a6bc5cc40",
+    "SPDXRef-File-socat-upstream-87df12ef67eb9854",
+    "SPDXRef-File-socat-upstream-12d6996e5695ef84",
+    "SPDXRef-File-socat-upstream-2fac385e03f0d253",
+    "SPDXRef-File-socat-upstream-6cb633856ce98abb",
+    "SPDXRef-File-socat-upstream-bf3e3a91ae4a3f1b",
+    "SPDXRef-File-socat-upstream-630bf53c7cf80eaf",
+    "SPDXRef-File-socat-upstream-55bfdbf5b6e88631",
+    "SPDXRef-File-socat-upstream-d58de80aa10d473f",
+    "SPDXRef-File-socat-upstream-75a713fcfdf96441",
+    "SPDXRef-File-socat-upstream-5fcecf9ee49af581",
+    "SPDXRef-File-socat-upstream-39506ca2a748f03e",
+    "SPDXRef-File-socat-upstream-d8e6a76973f2a362",
+    "SPDXRef-File-socat-upstream-0c0ac5baca4dfd2f",
+    "SPDXRef-File-socat-upstream-c51a59bbfff3ae7a",
+    "SPDXRef-File-socat-upstream-9b28293a88c13371",
+    "SPDXRef-File-socat-upstream-0dc1b28876d49c3d",
+    "SPDXRef-File-socat-upstream-b9fa2e41006e967c",
+    "SPDXRef-File-socat-upstream-927e7e04a2bac739",
+    "SPDXRef-File-socat-upstream-fbe65567cfd9e87f",
+    "SPDXRef-File-socat-upstream-3e572a2d2b505898",
+    "SPDXRef-File-socat-upstream-1d27e9d8bfb295bb",
+    "SPDXRef-File-socat-upstream-3a18f747e6b429a2",
+    "SPDXRef-File-socat-upstream-f6cadfd31ca702c1",
+    "SPDXRef-File-socat-upstream-ad117cb75a0026a3",
+    "SPDXRef-File-socat-upstream-247f45a9a299461e",
+    "SPDXRef-File-socat-upstream-519dad1e1de1eab6",
+    "SPDXRef-File-socat-upstream-71180d4df88af46c",
+    "SPDXRef-File-socat-upstream-60e7603719567853",
+    "SPDXRef-File-socat-upstream-c61ded55a8323369",
+    "SPDXRef-File-socat-upstream-0e96886d52b2b428",
+    "SPDXRef-File-socat-upstream-7d572958fc0b3673",
+    "SPDXRef-File-socat-upstream-9d31db4855766132",
+    "SPDXRef-File-socat-upstream-4641236219e7ed37",
+    "SPDXRef-File-socat-upstream-7a5c2fb70ba8953e",
+    "SPDXRef-File-socat-upstream-51f3f495ccb9341e",
+    "SPDXRef-File-socat-upstream-0cdd4f8ea562fd4e",
+    "SPDXRef-File-socat-upstream-1d67cbf36e0e5c87",
+    "SPDXRef-File-socat-upstream-ce7d3e983b77c530",
+    "SPDXRef-File-socat-upstream-54f79ff489741e83",
+    "SPDXRef-File-socat-upstream-640d67810003a8f8",
+    "SPDXRef-File-socat-upstream-f041819ba714efc3",
+    "SPDXRef-File-socat-upstream-47d485ce8e50b0fe",
+    "SPDXRef-File-socat-upstream-17f0f3061fb4b880",
+    "SPDXRef-File-socat-upstream-fc2398d4a39f7b1d"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "GPL-2.0-only",
+   "name": "socat",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "098831670364118275cdc2d7402fe012f7589f0a"
+   },
+   "supplier": "Organization: repo.or.cz",
+   "versionInfo": "1.8.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-socat-open-ddk",
+   "comment": "As open-ddk ships it at third_party/socat. the fork socat (beside open-ddk; its submodule), branch nebula at 7aed69f24b8affb344214ec32f5b2b2a31405291: upstream 2da070164d454971d5c970b5278e645051f0d0f7 and GRT's 3 commit(s), which add, change or remove 8 file(s): .gitignore, build.sh, compat.h, configure, doc/socat.1, doc/socat.html; 2 upstream file(s) removed: CHANGES.ISO-8859-1, RESEARCH",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-socat-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-socat-open-ddk-af475964be0c03ea",
+    "SPDXRef-File-socat-open-ddk-a2feb6ed0257c21c",
+    "SPDXRef-File-socat-open-ddk-6156cd6ac57d8b88",
+    "SPDXRef-File-socat-open-ddk-c018188b9632d41a",
+    "SPDXRef-File-socat-open-ddk-4bf9f8cb6acd9b0d",
+    "SPDXRef-File-socat-open-ddk-9659699670b30983",
+    "SPDXRef-File-socat-open-ddk-03688ba6aa340b87",
+    "SPDXRef-File-socat-open-ddk-9fb4f1d17ef878fb",
+    "SPDXRef-File-socat-open-ddk-4faecea6d9857941",
+    "SPDXRef-File-socat-open-ddk-f5388fcc8416fb5f",
+    "SPDXRef-File-socat-open-ddk-69e27356ef629022",
+    "SPDXRef-File-socat-open-ddk-9953e72b89755380",
+    "SPDXRef-File-socat-open-ddk-0a7b77e1bff2cdf1",
+    "SPDXRef-File-socat-open-ddk-b33892fbddeffc33",
+    "SPDXRef-File-socat-open-ddk-59f81c123b3abbcb",
+    "SPDXRef-File-socat-open-ddk-69b7b779f4997cfe",
+    "SPDXRef-File-socat-open-ddk-980c4659e480ee35",
+    "SPDXRef-File-socat-open-ddk-09be8533ff0a6ee5",
+    "SPDXRef-File-socat-open-ddk-87db583be5c13c1f",
+    "SPDXRef-File-socat-open-ddk-0ff7e25ee1cb9b87",
+    "SPDXRef-File-socat-open-ddk-bf1336cb501529fb",
+    "SPDXRef-File-socat-open-ddk-b2c5d0fdb53ec8f7",
+    "SPDXRef-File-socat-open-ddk-7d590f8c5cdfff40",
+    "SPDXRef-File-socat-open-ddk-5dd191ebb0f80926",
+    "SPDXRef-File-socat-open-ddk-d9ad291ef806e02d",
+    "SPDXRef-File-socat-open-ddk-e7429b77924bfd7d",
+    "SPDXRef-File-socat-open-ddk-f2495aa7bee8315a",
+    "SPDXRef-File-socat-open-ddk-7b043bf90b29eee1",
+    "SPDXRef-File-socat-open-ddk-452ea480d0911e21",
+    "SPDXRef-File-socat-open-ddk-0f68c4902d748a70",
+    "SPDXRef-File-socat-open-ddk-48c83e0642520653",
+    "SPDXRef-File-socat-open-ddk-a2b326b827826cdc",
+    "SPDXRef-File-socat-open-ddk-853f5452aa588b8f",
+    "SPDXRef-File-socat-open-ddk-7c08a600657440e6",
+    "SPDXRef-File-socat-open-ddk-6fc789dd836aabfc",
+    "SPDXRef-File-socat-open-ddk-a62e1ae8f806ab00",
+    "SPDXRef-File-socat-open-ddk-a1dbcb94b2322b46",
+    "SPDXRef-File-socat-open-ddk-b1b977de291d53f5",
+    "SPDXRef-File-socat-open-ddk-72b4e5bb456704e0",
+    "SPDXRef-File-socat-open-ddk-8483a090f556c9b7",
+    "SPDXRef-File-socat-open-ddk-547fe0db6ad3e73c",
+    "SPDXRef-File-socat-open-ddk-60fcd387c32285b8",
+    "SPDXRef-File-socat-open-ddk-8fd6bc75c617dcc9",
+    "SPDXRef-File-socat-open-ddk-9d035429bafa9bad",
+    "SPDXRef-File-socat-open-ddk-1e36796735e04506",
+    "SPDXRef-File-socat-open-ddk-f2c2e1133281bb0b",
+    "SPDXRef-File-socat-open-ddk-736b556e8c141897",
+    "SPDXRef-File-socat-open-ddk-22fa4f2d665a410c",
+    "SPDXRef-File-socat-open-ddk-9519cc52540bc1c9",
+    "SPDXRef-File-socat-open-ddk-5ba30e17cc02ee15",
+    "SPDXRef-File-socat-open-ddk-3024b369f79c2255",
+    "SPDXRef-File-socat-open-ddk-97e74dff44e47c4a",
+    "SPDXRef-File-socat-open-ddk-6f7c618067b7f659",
+    "SPDXRef-File-socat-open-ddk-29ebebcf75cdd39a",
+    "SPDXRef-File-socat-open-ddk-eda3011ece817d87",
+    "SPDXRef-File-socat-open-ddk-23a062b98fdc53cc",
+    "SPDXRef-File-socat-open-ddk-7a4feb53398ce08d",
+    "SPDXRef-File-socat-open-ddk-759b9ada5a579aeb",
+    "SPDXRef-File-socat-open-ddk-9ff24cf9b17fd166",
+    "SPDXRef-File-socat-open-ddk-b546c6ca8d210a62",
+    "SPDXRef-File-socat-open-ddk-f22601600dcfe21c",
+    "SPDXRef-File-socat-open-ddk-5b8aaed72ee610e5",
+    "SPDXRef-File-socat-open-ddk-2c6b37b0ac9aaa8e",
+    "SPDXRef-File-socat-open-ddk-0c2a93596cb88c54",
+    "SPDXRef-File-socat-open-ddk-1bcbf4b97f9e4ea7",
+    "SPDXRef-File-socat-open-ddk-f72ff7d38ba496fa",
+    "SPDXRef-File-socat-open-ddk-d999eaf1e4e04943",
+    "SPDXRef-File-socat-open-ddk-fc28024c208fb98a",
+    "SPDXRef-File-socat-open-ddk-0eb18a65d06b4b91",
+    "SPDXRef-File-socat-open-ddk-e18c0db56b1da17c",
+    "SPDXRef-File-socat-open-ddk-2acc65acdda9ae98",
+    "SPDXRef-File-socat-open-ddk-280b7c0551214951",
+    "SPDXRef-File-socat-open-ddk-c55fcc4bb991ba6d",
+    "SPDXRef-File-socat-open-ddk-fb25e563235f5039",
+    "SPDXRef-File-socat-open-ddk-94fa1120d932de4f",
+    "SPDXRef-File-socat-open-ddk-538c6caaa5d6a09e",
+    "SPDXRef-File-socat-open-ddk-c637f5b42da9d429",
+    "SPDXRef-File-socat-open-ddk-ecb556474d53ea77",
+    "SPDXRef-File-socat-open-ddk-541ad2da19c726da",
+    "SPDXRef-File-socat-open-ddk-bb76e3741bea33bc",
+    "SPDXRef-File-socat-open-ddk-e9719844cbc0f69c",
+    "SPDXRef-File-socat-open-ddk-fc9f21dca0a1d949",
+    "SPDXRef-File-socat-open-ddk-b971366a8c55f1e4",
+    "SPDXRef-File-socat-open-ddk-1544647045c2dd81",
+    "SPDXRef-File-socat-open-ddk-13fd815cf7fc104f",
+    "SPDXRef-File-socat-open-ddk-cd1b8f48a2c2a83d",
+    "SPDXRef-File-socat-open-ddk-4289441998ddf43e",
+    "SPDXRef-File-socat-open-ddk-904bd1916cc6edbb",
+    "SPDXRef-File-socat-open-ddk-8b4f46423983036c",
+    "SPDXRef-File-socat-open-ddk-1f28b2a78a8bee5f",
+    "SPDXRef-File-socat-open-ddk-d4e806b621bee666",
+    "SPDXRef-File-socat-open-ddk-d48531c45223cbb6",
+    "SPDXRef-File-socat-open-ddk-5849b5e07c00dd63",
+    "SPDXRef-File-socat-open-ddk-05305350e7594525",
+    "SPDXRef-File-socat-open-ddk-eecc49368fdf2309",
+    "SPDXRef-File-socat-open-ddk-b96afe4c5fb91a5c",
+    "SPDXRef-File-socat-open-ddk-562825059a93d657",
+    "SPDXRef-File-socat-open-ddk-6e8fe1baa553b7a7",
+    "SPDXRef-File-socat-open-ddk-e6305169dd139cca",
+    "SPDXRef-File-socat-open-ddk-2c06d09be5d4894c",
+    "SPDXRef-File-socat-open-ddk-7d0fbaf1a268b58a",
+    "SPDXRef-File-socat-open-ddk-ca027b32761b6832",
+    "SPDXRef-File-socat-open-ddk-f3aa346ec0f6df1a",
+    "SPDXRef-File-socat-open-ddk-74b420701ff0b3b9",
+    "SPDXRef-File-socat-open-ddk-b1febb8f63ab2281",
+    "SPDXRef-File-socat-open-ddk-4ed67534ff26ada2",
+    "SPDXRef-File-socat-open-ddk-63d1ae3947734931",
+    "SPDXRef-File-socat-open-ddk-322952def6fcc6f0",
+    "SPDXRef-File-socat-open-ddk-edbaf455adaec88b",
+    "SPDXRef-File-socat-open-ddk-cb846f46dccfcba9",
+    "SPDXRef-File-socat-open-ddk-bb25a85a104180f8",
+    "SPDXRef-File-socat-open-ddk-4d76ae7c52057d7d",
+    "SPDXRef-File-socat-open-ddk-0fcd9495cb59ef25",
+    "SPDXRef-File-socat-open-ddk-560c438a29948f19",
+    "SPDXRef-File-socat-open-ddk-4755f92f9e4a144a",
+    "SPDXRef-File-socat-open-ddk-20af9d10cad89a31",
+    "SPDXRef-File-socat-open-ddk-8a6014f2c8c48131",
+    "SPDXRef-File-socat-open-ddk-ce50a75022f87a4f",
+    "SPDXRef-File-socat-open-ddk-297b7285e5281d5e",
+    "SPDXRef-File-socat-open-ddk-2c1068ecf8fef69e",
+    "SPDXRef-File-socat-open-ddk-b1035f3eff2a9469",
+    "SPDXRef-File-socat-open-ddk-79c4d7c459668c19",
+    "SPDXRef-File-socat-open-ddk-0aa1a59e0ae22c92",
+    "SPDXRef-File-socat-open-ddk-433e6c70740065fa",
+    "SPDXRef-File-socat-open-ddk-c92316f6e5d762c4",
+    "SPDXRef-File-socat-open-ddk-7bde8b8c5ec66faa",
+    "SPDXRef-File-socat-open-ddk-f1c3566f424398ba",
+    "SPDXRef-File-socat-open-ddk-73fb2a850259878d",
+    "SPDXRef-File-socat-open-ddk-df5fe70f9a55e453",
+    "SPDXRef-File-socat-open-ddk-a07ef8691386fee2",
+    "SPDXRef-File-socat-open-ddk-5b7d51a415e8ddcb",
+    "SPDXRef-File-socat-open-ddk-30b0f35510e931a6",
+    "SPDXRef-File-socat-open-ddk-ee38f9fe59933fe9",
+    "SPDXRef-File-socat-open-ddk-d03a5e91b9079775",
+    "SPDXRef-File-socat-open-ddk-f5e2329b38c60b88",
+    "SPDXRef-File-socat-open-ddk-bcc32a4f4d509c65",
+    "SPDXRef-File-socat-open-ddk-1fc4b3c33a8eff5a",
+    "SPDXRef-File-socat-open-ddk-33fb73c4a517b1c9",
+    "SPDXRef-File-socat-open-ddk-978ed220c3d5cb5b",
+    "SPDXRef-File-socat-open-ddk-e5ac94f20cdc14e4",
+    "SPDXRef-File-socat-open-ddk-b621c98272257866",
+    "SPDXRef-File-socat-open-ddk-b060552a6bc5cc40",
+    "SPDXRef-File-socat-open-ddk-87df12ef67eb9854",
+    "SPDXRef-File-socat-open-ddk-12d6996e5695ef84",
+    "SPDXRef-File-socat-open-ddk-2fac385e03f0d253",
+    "SPDXRef-File-socat-open-ddk-6cb633856ce98abb",
+    "SPDXRef-File-socat-open-ddk-bf3e3a91ae4a3f1b",
+    "SPDXRef-File-socat-open-ddk-630bf53c7cf80eaf",
+    "SPDXRef-File-socat-open-ddk-55bfdbf5b6e88631",
+    "SPDXRef-File-socat-open-ddk-d58de80aa10d473f",
+    "SPDXRef-File-socat-open-ddk-75a713fcfdf96441",
+    "SPDXRef-File-socat-open-ddk-5fcecf9ee49af581",
+    "SPDXRef-File-socat-open-ddk-39506ca2a748f03e",
+    "SPDXRef-File-socat-open-ddk-d8e6a76973f2a362",
+    "SPDXRef-File-socat-open-ddk-0c0ac5baca4dfd2f",
+    "SPDXRef-File-socat-open-ddk-c51a59bbfff3ae7a",
+    "SPDXRef-File-socat-open-ddk-9b28293a88c13371",
+    "SPDXRef-File-socat-open-ddk-0dc1b28876d49c3d",
+    "SPDXRef-File-socat-open-ddk-b9fa2e41006e967c",
+    "SPDXRef-File-socat-open-ddk-927e7e04a2bac739",
+    "SPDXRef-File-socat-open-ddk-fbe65567cfd9e87f",
+    "SPDXRef-File-socat-open-ddk-3e572a2d2b505898",
+    "SPDXRef-File-socat-open-ddk-1d27e9d8bfb295bb",
+    "SPDXRef-File-socat-open-ddk-3a18f747e6b429a2",
+    "SPDXRef-File-socat-open-ddk-f6cadfd31ca702c1",
+    "SPDXRef-File-socat-open-ddk-ad117cb75a0026a3",
+    "SPDXRef-File-socat-open-ddk-247f45a9a299461e",
+    "SPDXRef-File-socat-open-ddk-519dad1e1de1eab6",
+    "SPDXRef-File-socat-open-ddk-71180d4df88af46c",
+    "SPDXRef-File-socat-open-ddk-60e7603719567853",
+    "SPDXRef-File-socat-open-ddk-c61ded55a8323369",
+    "SPDXRef-File-socat-open-ddk-0e96886d52b2b428",
+    "SPDXRef-File-socat-open-ddk-7d572958fc0b3673",
+    "SPDXRef-File-socat-open-ddk-9d31db4855766132",
+    "SPDXRef-File-socat-open-ddk-4641236219e7ed37",
+    "SPDXRef-File-socat-open-ddk-7a5c2fb70ba8953e",
+    "SPDXRef-File-socat-open-ddk-51f3f495ccb9341e",
+    "SPDXRef-File-socat-open-ddk-0cdd4f8ea562fd4e",
+    "SPDXRef-File-socat-open-ddk-1d67cbf36e0e5c87",
+    "SPDXRef-File-socat-open-ddk-ce7d3e983b77c530",
+    "SPDXRef-File-socat-open-ddk-54f79ff489741e83",
+    "SPDXRef-File-socat-open-ddk-640d67810003a8f8",
+    "SPDXRef-File-socat-open-ddk-f041819ba714efc3",
+    "SPDXRef-File-socat-open-ddk-47d485ce8e50b0fe",
+    "SPDXRef-File-socat-open-ddk-17f0f3061fb4b880",
+    "SPDXRef-File-socat-open-ddk-fc2398d4a39f7b1d"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "GPL-2.0-only",
+   "name": "socat (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "e2cfe0f4b3c6ce334e553bf46e04eebedf84bcd0"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "1.8.0.0+7aed69f24b8a"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-socat-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-socat-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-socat-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-socat-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

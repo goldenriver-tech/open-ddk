@@ -1,0 +1,3090 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/go-crypto-c78caca8-c78caca803c95773f48a844d3dcab04b9bc4d6dd",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-24139dae656713ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7cc72341f3eaa6cbf08bbe2dfd8c7e696322684a"
+    }
+   ],
+   "fileName": "./.gitattributes"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1af0ee86eabddb2a2b0c4eb6dd0b5acf9133645d"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-dad57a4c245a8007",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c4b3b81193d555e75fb0fb443ec48dce29f9b68"
+    }
+   ],
+   "fileName": "./AUTHORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3f454a98e586d1aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c89039f0093065e9bb4f7a61a5f3a391fe2a4692"
+    }
+   ],
+   "fileName": "./CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c00c0afca84109e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f09740ff46df61de932b77cb283fea09c8849292"
+    }
+   ],
+   "fileName": "./CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d6a5f1ecaedd723c325a2063375b3517e808a2b5"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9fed2aef933ddf64",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4eca45b612f7d86f2f598f238074a0dac9b72bc9"
+    }
+   ],
+   "fileName": "./PATENTS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-69e27356ef629022",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "557a8190da782e3412f769e488a77276122c7e75"
+    }
+   ],
+   "fileName": "./README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d0ea8468246b29c7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e2b05058ea6d1e2c8d2b6af8acb966a34ff7ba6"
+    }
+   ],
+   "fileName": "./acme/acme.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-52e2a565637ca428",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "641eba00ec16a8e04d14c76c8647833dc14d6332"
+    }
+   ],
+   "fileName": "./acme/acme_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-316767208be6535c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0284f7b48129b25690344dab853d74852550c199"
+    }
+   ],
+   "fileName": "./acme/autocert/autocert.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a38850af307feda0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "976b44b5fdfd3d5c034b3b39fb7e28ec32e6a44c"
+    }
+   ],
+   "fileName": "./acme/autocert/autocert_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a1a1a25597680a61",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d678a7f4617aa9e273db73c11242be51c2bf4fbd"
+    }
+   ],
+   "fileName": "./acme/autocert/cache.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3b997b545d2496de",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7c3a66b11866180992028ce24a9c3a1054f5b8e0"
+    }
+   ],
+   "fileName": "./acme/autocert/cache_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e3a2252f0e1ba2e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c19e4c18ead20763418eaa91be37fe56d9803033"
+    }
+   ],
+   "fileName": "./acme/autocert/renewal.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-00108c173beade6a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32b8d605161b1dff3fe379db61184377a3dd38a9"
+    }
+   ],
+   "fileName": "./acme/autocert/renewal_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f3b66761ec9d6389",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e59036d8372779713d2b6db48bd9aaec209f269f"
+    }
+   ],
+   "fileName": "./acme/jws.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-826c6688cfd14fb6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03ca7c5695fb9847986fb0a840c52ea3f0540643"
+    }
+   ],
+   "fileName": "./acme/jws_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7f98a36d6c75ac3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bc807169d44e1ec00fb3eabb3abaa21ece4c27cf"
+    }
+   ],
+   "fileName": "./acme/types.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-69ef8806601d67be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f98db62fc2b8879e18ca055290158278e21c62dd"
+    }
+   ],
+   "fileName": "./bcrypt/base64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7c06766cb06701c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "31dcb7244cefffd1ff5701fcc746b3467f65ce4b"
+    }
+   ],
+   "fileName": "./bcrypt/bcrypt.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-72b5ec3cf6b509d5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e6feaf113bfd8b413d5fe73e9695e5d38ed7471a"
+    }
+   ],
+   "fileName": "./bcrypt/bcrypt_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-4ac0c7088ec8291d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0618ee9c27add120dbf9b85be79f01a0e45c2a78"
+    }
+   ],
+   "fileName": "./blake2b/blake2b.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-bc5adfce94ab6b23",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac8a044d58481268eaf57a478509aa7cfe4b3765"
+    }
+   ],
+   "fileName": "./blake2b/blake2bAVX2_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b6d4de4bd62dcc13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5c9102473fc9a7b3e26157b28e389b4241a8671"
+    }
+   ],
+   "fileName": "./blake2b/blake2bAVX2_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-315ed25089044c68",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a0c659333af08151034d0e43332a88fc71dee9b4"
+    }
+   ],
+   "fileName": "./blake2b/blake2b_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e71052478ba437e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9abb9b1f15e2da6222ba8df8469d16d77c1eae7"
+    }
+   ],
+   "fileName": "./blake2b/blake2b_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-efd8e02f8d7d5d55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "41a6fca5cec47a63f47acb430f6e5d0b09a2a181"
+    }
+   ],
+   "fileName": "./blake2b/blake2b_generic.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0a03f266dbc6664a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c5371e01767e7490dd20e02cb37f7876a5e487b6"
+    }
+   ],
+   "fileName": "./blake2b/blake2b_ref.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f779702a9878d33d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4f287766388bb34375e2824175ebe8e96e2edad7"
+    }
+   ],
+   "fileName": "./blake2b/blake2b_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2433ee38cbe21d51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f0fd8c880e0e907f1c0506c3d2e53e2ef81e9ce"
+    }
+   ],
+   "fileName": "./blake2b/register.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2eafd7b6c3cfb09e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db1506ce65eacca9f162c0e8bf004cf685d32978"
+    }
+   ],
+   "fileName": "./blake2s/blake2s.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fa86c243d63f6f52",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "98bb15ef436638996fcb3d6e9a9f64e0f1ab7853"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_386.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2efedd03ac65be57",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "28f6a570357b07fe0401caecf0868f237540834e"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_386.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b8f26377eac17b79",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "17ce98b5bd04286e4388125d496a4fa2c537d024"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ea057ce3ce400ba6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ee986cda8d3611bfc976828b2dad96c03a0c9ca"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-844f37b2c6084aae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "93e945d4989198ac786c5b073392dc566d3ccb71"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_generic.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-48979d7dd4e78a2b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "be20f56a90fe321fbc7b770e09f02e52a0bb003d"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_ref.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fce11680d2a30469",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8620b8db48b49bfba4254cf00879948d90c7aa7b"
+    }
+   ],
+   "fileName": "./blake2s/blake2s_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b97fbb75c7b32c98",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c47b522f64c62d97063f9609f9ea298f516429e"
+    }
+   ],
+   "fileName": "./blake2s/register.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-58d38a08f569e034",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4dbe909d1e03436cf6f518037db220a0befd276"
+    }
+   ],
+   "fileName": "./blowfish/block.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f084064bfe8dd01c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a1a984a2285d75ac7f11ce554fcb449c17835f4"
+    }
+   ],
+   "fileName": "./blowfish/blowfish_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d884adc18d7fc3c0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e37cac216fae6c88f56b4ab657fdc6b44499e3ca"
+    }
+   ],
+   "fileName": "./blowfish/cipher.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-8dcdf8f8dffe39e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bb1c76c45740d296a9c1f34c0382f28b67445ec1"
+    }
+   ],
+   "fileName": "./blowfish/const.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f05c3b63fe52920f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "13e7a3662b288086c2174501066900cdc8f93095"
+    }
+   ],
+   "fileName": "./bn256/bn256.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cf3655e46a3cbf15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a7ca722dfa7eea21b023de0a312b4262d720aad4"
+    }
+   ],
+   "fileName": "./bn256/bn256_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-174c5d516b77d773",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ee1c69713834276bd981810c169175a6b38eb0cb"
+    }
+   ],
+   "fileName": "./bn256/constants.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-535a72c9cd8158f6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0592b01f3c385cf9b23b72be0c7cecead41992ba"
+    }
+   ],
+   "fileName": "./bn256/curve.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-af44af30c7aaf894",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60bd15c7c3d30af2dc40b241077429dcfc4111f8"
+    }
+   ],
+   "fileName": "./bn256/example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b58868b0d8c6aa67",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "16669948cad54f10d2e45ce518bc72eb19cdc729"
+    }
+   ],
+   "fileName": "./bn256/gfp12.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ed844be1e6ddd9ff",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "27ea8bce73efe16ad39f3d040532dfcfbba56d33"
+    }
+   ],
+   "fileName": "./bn256/gfp2.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-19cbe4bae15dc504",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f0d6b325529ace73f4afa37694e345353946d79d"
+    }
+   ],
+   "fileName": "./bn256/gfp6.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a6ca50f9e4b7841c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "43739318c0879424ee648d0c8f2279fdacad2749"
+    }
+   ],
+   "fileName": "./bn256/optate.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-5a1c7b0dcaa01e11",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f36e7ae0baf24c506a9e80dec02256194e73e836"
+    }
+   ],
+   "fileName": "./bn256/twist.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b788eced74b4edbc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e013a23b10284b736cf39a6a3a218c5d7f2da630"
+    }
+   ],
+   "fileName": "./cast5/cast5.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-eec63b7dfa9cef36",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10c01da914cf6250ccd501f0bfbcbe352c1b031f"
+    }
+   ],
+   "fileName": "./cast5/cast5_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a11547d69b8dc88a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1887b3267edd7a2c7ab669cdb376d81e31fc3964"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fb414ccf84e40ef7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca973b6a1278fdd4df6c373be2dd18c1f42fb4de"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ffddc06a3c09c6c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55d327e4dcefe208b286f26df33354b20ce7b98f"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d4ad63926f4449ad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8a33ac809ce3183618ddeb5942503d60e48275ef"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305_generic.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-35febe4502ebe67b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a2d532996fe5ba34224faeaf8c7277c695887d30"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305_noasm.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-173d0f96648427ac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ea8df251f2519fc6e9f66a33ae815647d303f6f"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d21775e0acc5a1a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "895790ff7918e93bea6d304d060a04156d109eb6"
+    }
+   ],
+   "fileName": "./chacha20poly1305/chacha20poly1305_vectors_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3f0abb235eefa344",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac4ac1cf83a583831babb4e2b2c585a057b48fb8"
+    }
+   ],
+   "fileName": "./chacha20poly1305/internal/chacha20/chacha_generic.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0be0f3d923cf5abc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "694e3935fc2e693419d644710c053a7bad44c1cb"
+    }
+   ],
+   "fileName": "./chacha20poly1305/internal/chacha20/chacha_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6dd1d960b749e1d7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0c0e666d70f0f20df1bd5c349d53f6e9d2d321f8"
+    }
+   ],
+   "fileName": "./codereview.cfg"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-8cb0a95f91237c9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bb703dec3ad2b42cb8a9d1641c751252c17429b1"
+    }
+   ],
+   "fileName": "./cryptobyte/asn1.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9c72377d951c4ac0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "77ab4d5cbfd6a3f2444dbbe7dc336457ec8951b9"
+    }
+   ],
+   "fileName": "./cryptobyte/asn1_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c860112b94a7006f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "57a8aad4bec247b98ff31dcc6b419727b42d0346"
+    }
+   ],
+   "fileName": "./cryptobyte/builder.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-34b6f06433b7c5eb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "13f33d79a30f2b25b619c56f3c0cda68e883c958"
+    }
+   ],
+   "fileName": "./cryptobyte/cryptobyte_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-755798df521c88d7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e5353aeb1b270db866bf4bcf47d209266ffb906"
+    }
+   ],
+   "fileName": "./cryptobyte/example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cecb08d2e6ede539",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a2e66b0ca4025f1a559491e118b998a8f4547f66"
+    }
+   ],
+   "fileName": "./cryptobyte/string.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-95aaa24f39a74a97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4d760f6e5ce73a59ba266e58ba6235d65a028c01"
+    }
+   ],
+   "fileName": "./curve25519/const_amd64.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-efbaff19c43ad158",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4bb49025fb587bb208b2598f348cace1d643d32a"
+    }
+   ],
+   "fileName": "./curve25519/const_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-78443eb20b7cf49f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5e588443b9f88e02f7dd4f5100e2b7e829f9940"
+    }
+   ],
+   "fileName": "./curve25519/cswap_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cfd31b7a07779dd2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c8b62491aa27ace2fc82118f12047838f3e2316"
+    }
+   ],
+   "fileName": "./curve25519/curve25519.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-feee4c74a751273b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0abf110f2257c1afcb3e36ec490c5d6b63c52207"
+    }
+   ],
+   "fileName": "./curve25519/curve25519_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f75a53cae0f6fc90",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "252fe621247bb3f6d1bb6478bcc44ebe7c24e9a7"
+    }
+   ],
+   "fileName": "./curve25519/doc.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e1aec7568e7db4c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bca2138757c442e1eec4bea76631181e93d1144d"
+    }
+   ],
+   "fileName": "./curve25519/freeze_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e1fee549c5201883",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fe95a8f2723f70abeed3750100c37d5ffc835842"
+    }
+   ],
+   "fileName": "./curve25519/ladderstep_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d22e1602396274fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac20cee5c8bbbd603f6e56d2a11b849a60ec934a"
+    }
+   ],
+   "fileName": "./curve25519/mont25519_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-be21e4a29fbedcec",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7806f174e26282c5c95170af84bd93f234ccdf89"
+    }
+   ],
+   "fileName": "./curve25519/mul_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9c5e218e452cdde8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b47d36219a398334ed0c16b7c9973237c254ece"
+    }
+   ],
+   "fileName": "./curve25519/square_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-bc71ce7dcc85fd97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "31999f0dfe7faf68cac6fef300c84ba6857c7965"
+    }
+   ],
+   "fileName": "./ed25519/ed25519.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-de274d6e0a74cdfd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7823d2ddbaaa35f445668c16c5b75394769b4626"
+    }
+   ],
+   "fileName": "./ed25519/ed25519_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-942bc411e5ff3764",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "99640d64c4de9616eedfe0af7acb3018e04d1631"
+    }
+   ],
+   "fileName": "./ed25519/internal/edwards25519/const.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-17b6d96b02d5e968",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b17fb169b9da89f1a2f7a11f88496815747769ba"
+    }
+   ],
+   "fileName": "./ed25519/internal/edwards25519/edwards25519.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-234516c209947137",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "30f53f417fd393f95808b929fe8649d5723c43f8"
+    }
+   ],
+   "fileName": "./ed25519/testdata/sign.input.gz"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-071e49fb28e8b578",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0855732a5370e8c2245a1782b33c0b08fd40ffa7"
+    }
+   ],
+   "fileName": "./hkdf/example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2c75fc3323360ec1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c323250a075ab0dfd4a07719529d06106d46ad37"
+    }
+   ],
+   "fileName": "./hkdf/hkdf.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-8390bcd7a15303aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c3abca33a85d8126a4137dcd8cbbb9ba14c70762"
+    }
+   ],
+   "fileName": "./hkdf/hkdf_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-de7837a60115af82",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f3f03a9e95328f271ca5ba3eb1fe3756e9336250"
+    }
+   ],
+   "fileName": "./md4/md4.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e622304293fbf632",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cb7e8d2045069c4c27cd67b03c656ae81733f692"
+    }
+   ],
+   "fileName": "./md4/md4_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-bf30d0725b1cef80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b0015733046e625163646381bb4a7712f6305cb0"
+    }
+   ],
+   "fileName": "./md4/md4block.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-38cfa0617887fda4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1f7230d597d1ec4b9d52c8f33c9231c114e473bf"
+    }
+   ],
+   "fileName": "./nacl/box/box.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-1c92fdb478f51af0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c8547eb5362e93c042180de4203d45b6d094cebf"
+    }
+   ],
+   "fileName": "./nacl/box/box_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-587e1a47128d0577",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd80e2da276e24d560a76e83193e25d55fb2b891"
+    }
+   ],
+   "fileName": "./nacl/secretbox/example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-49f41ee6a9c4f8b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "51fe5d76914501c01b89ede659c249750801d652"
+    }
+   ],
+   "fileName": "./nacl/secretbox/secretbox.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2c372cc47008d79b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3f0d828b9c9e36fddfd99046ef11961cb48917b2"
+    }
+   ],
+   "fileName": "./nacl/secretbox/secretbox_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d5e89024189927a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a83baa936544a3f70094e3e4d1ed9fa08122ebe3"
+    }
+   ],
+   "fileName": "./ocsp/ocsp.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-49dd0cea25cf1614",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bd279aefd2ee7cc599fb4688239e445aa3656d43"
+    }
+   ],
+   "fileName": "./ocsp/ocsp_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f61bdfaef25aa5be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bbfadcf252eb803c984eb45ce91e92b190ceb76d"
+    }
+   ],
+   "fileName": "./openpgp/armor/armor.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a0834741a05a611e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5ec016ab14467692141698b061902e13078440b"
+    }
+   ],
+   "fileName": "./openpgp/armor/armor_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-54ade182e39b4f7b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7ef4d772364ea2ecb8ec6f4a747abc84a3bbb079"
+    }
+   ],
+   "fileName": "./openpgp/armor/encode.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f61d68ed1b27169e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4670f9c34b3bcb4eb4ffe9029171cd248e246a0a"
+    }
+   ],
+   "fileName": "./openpgp/canonical_text.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0e2f3c0112efc7d7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2221bd5cf716db19ebcf7d139fc8dc47be9ce369"
+    }
+   ],
+   "fileName": "./openpgp/canonical_text_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-982b565c46934803",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc858f330ad88b1f8778734a78019a384e5128dc"
+    }
+   ],
+   "fileName": "./openpgp/clearsign/clearsign.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b4ce29dffca93bb6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "72bb26d85c3fab7b3847cfc97d3a1dd8732e17d2"
+    }
+   ],
+   "fileName": "./openpgp/clearsign/clearsign_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9a09e795616347d0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3531403a76a9f2eff6298635470acc87d782f4f4"
+    }
+   ],
+   "fileName": "./openpgp/elgamal/elgamal.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-928f68adfc1f602b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "116fdd3b56d6a44d89495adabd1d39c0a1cf87a3"
+    }
+   ],
+   "fileName": "./openpgp/elgamal/elgamal_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c5b02b4b2343613c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c626944c49808b5a726ccb4d769a152388c12bf5"
+    }
+   ],
+   "fileName": "./openpgp/errors/errors.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6284ccf9014ae1cf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "80db323be68bc96173e11c6c1a4a468839cbc59a"
+    }
+   ],
+   "fileName": "./openpgp/keys.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7961a833fe892acb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "40b0dfa007ef30849c91a29b8f83fab99fa6cdef"
+    }
+   ],
+   "fileName": "./openpgp/keys_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-94571bd1a28c678a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4076e5ef78569372ab59b557351c127079c6284d"
+    }
+   ],
+   "fileName": "./openpgp/packet/compressed.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-20caac87d8057776",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7cb821026a6c809f0387f4559ca3bafe172e0790"
+    }
+   ],
+   "fileName": "./openpgp/packet/compressed_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e3555446c268df3a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f86d4202fb375cbbbe6d628824496b72851ed810"
+    }
+   ],
+   "fileName": "./openpgp/packet/config.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7e3084aa47f6bf40",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d3ef9eb1e5ac7a86a6f0e39c91efd06fa0aead4"
+    }
+   ],
+   "fileName": "./openpgp/packet/encrypted_key.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-5b08ed506c2e02c7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "63cbf766a1cce532016d57ddd680133fdcbd1933"
+    }
+   ],
+   "fileName": "./openpgp/packet/encrypted_key_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-76ec628d5d55d15a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7938cf49a2bc3f896195c4493089546e6f1f26d4"
+    }
+   ],
+   "fileName": "./openpgp/packet/literal.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fccd87024dac117a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c28570d30724cc238918a62ff1416d803b1ce178"
+    }
+   ],
+   "fileName": "./openpgp/packet/ocfb.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-49b1877452d0f4aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ee613af5aea5a90ddc303f4f672ba9f5c67d7bff"
+    }
+   ],
+   "fileName": "./openpgp/packet/ocfb_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-54d72c5b2099fb37",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6bd89ac6d7c2b2201a1ead8a1846c01e9a78f69f"
+    }
+   ],
+   "fileName": "./openpgp/packet/one_pass_signature.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fb089b5a1ec76bd9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e3ec0c73dba0ac5840bc2356b013378019a54bcb"
+    }
+   ],
+   "fileName": "./openpgp/packet/opaque.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cac5f7a2f93c4e71",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b10d46d0714d118ac38b5a608539b3752c66921d"
+    }
+   ],
+   "fileName": "./openpgp/packet/opaque_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-94ad0274b8dfbdf9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7baa594204122f69c3d17796dd4ae257feb82568"
+    }
+   ],
+   "fileName": "./openpgp/packet/packet.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-af9454945d1a2ea2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70772142885fdcb2409c5c758367a414f88aceff"
+    }
+   ],
+   "fileName": "./openpgp/packet/packet_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6f792db8964c1c49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b687572b33cd4e30b6f2beac0f88365608a8045"
+    }
+   ],
+   "fileName": "./openpgp/packet/private_key.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-15661e1980b1dd8d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d97e034b81173f5f19336b715b45f4d6548a7bb9"
+    }
+   ],
+   "fileName": "./openpgp/packet/private_key_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-85b21ca8c687f8f2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "29a1c6d6e2667b6154943d68d10a926edcc0faca"
+    }
+   ],
+   "fileName": "./openpgp/packet/public_key.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-db3c914f9403cb7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "13e0dd9ba9bffacf014cf84915ac54d6b6b6830c"
+    }
+   ],
+   "fileName": "./openpgp/packet/public_key_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-07cd3e26f25ba8e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "abbbcd46b670ad1b83e8e82a80e4c4ae6bec2b87"
+    }
+   ],
+   "fileName": "./openpgp/packet/public_key_v3.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b7557ca889b472a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64b766d8cfbf3caf3350e56e9c150cac44475559"
+    }
+   ],
+   "fileName": "./openpgp/packet/public_key_v3_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f5dd983bc6854eff",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7cd9b191f6843b5ab33f5b791958122190bb40c4"
+    }
+   ],
+   "fileName": "./openpgp/packet/reader.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0362340147c74e9f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e479a885f622f17eb9c79b6f008d8e1aee3ef37b"
+    }
+   ],
+   "fileName": "./openpgp/packet/signature.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6722429a9a09b506",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "68ce48331b7373ebf7651776a817d0c730ab0865"
+    }
+   ],
+   "fileName": "./openpgp/packet/signature_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7df365a890de332b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ac016519e74ff889a2f7df5308ad6b5bccd89c0a"
+    }
+   ],
+   "fileName": "./openpgp/packet/signature_v3.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a1e2550d508b3041",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca2bdc842a8506452aab73b275fefe241bde231c"
+    }
+   ],
+   "fileName": "./openpgp/packet/signature_v3_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b9e73e91d6075aa5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2faf9501db3fde383eb1b7e9ba11a3fe40008ba7"
+    }
+   ],
+   "fileName": "./openpgp/packet/symmetric_key_encrypted.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fc4acdfc2f6aa145",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "185021e98195e88cc6fcfb70484cd98dea01b2f0"
+    }
+   ],
+   "fileName": "./openpgp/packet/symmetric_key_encrypted_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-1f01919483d7f1b0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "83d66b680a02130a59491824da2ecb0f121f7162"
+    }
+   ],
+   "fileName": "./openpgp/packet/symmetrically_encrypted.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c71e778cf7236dae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0440746787af314cd1e9509af34aaff20ac0bb18"
+    }
+   ],
+   "fileName": "./openpgp/packet/symmetrically_encrypted_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d965606e58a02862",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e6aca4470f9b6d52e6cea328d5038d79fdf438f"
+    }
+   ],
+   "fileName": "./openpgp/packet/userattribute.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-665593ea5f817c78",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3082f79f837ca1a8ee044dd1dc2fc58c1dff976e"
+    }
+   ],
+   "fileName": "./openpgp/packet/userattribute_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-afe3bddb9352c1cf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d1e5899bc750ca307c9c5b23b4e63121e6a85ed"
+    }
+   ],
+   "fileName": "./openpgp/packet/userid.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-937463f8fdb0d48d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f3bc0dbe09a371241826828b19832eb6b4744616"
+    }
+   ],
+   "fileName": "./openpgp/packet/userid_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fc4a255ebab8299c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eabba8fb1e284b67d2c51afc616bfbaf05b9f3bb"
+    }
+   ],
+   "fileName": "./openpgp/read.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-67f24f356d38a466",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b173501c274ce255f8f90226e3fe3878029dd6b3"
+    }
+   ],
+   "fileName": "./openpgp/read_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3a02cf347bfd39f5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c41568ca16a8d2d9ec119ef842f97ea9d4fad034"
+    }
+   ],
+   "fileName": "./openpgp/s2k/s2k.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e584067c19f99129",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "04ccceaca0b5dbe7e930c9a9784de552f5ba65c4"
+    }
+   ],
+   "fileName": "./openpgp/s2k/s2k_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-46c525fd8fa0752d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "783af8723f2cdcf18765e8a011c49a1c4c3ea66c"
+    }
+   ],
+   "fileName": "./openpgp/write.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b2374acd82b0cc00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76ed6c579aab22db06d96bc6997b4abb74183918"
+    }
+   ],
+   "fileName": "./openpgp/write_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-33572d4b2cfaf0aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d0c7bbe668d23a13866b9121e4de194f750282f"
+    }
+   ],
+   "fileName": "./otr/libotr_test_helper.c"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-522ddd3a222e1328",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3a6a037819fd6d9b58b11fd115745aa1aae81d16"
+    }
+   ],
+   "fileName": "./otr/otr.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-99c1c0ef0040fd5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a432532564f9787c14657eafa49a3af808944479"
+    }
+   ],
+   "fileName": "./otr/otr_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-407cad5e4a306bbd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b83f98ba67955fa55a83e99062cc8b05914f40dc"
+    }
+   ],
+   "fileName": "./otr/smp.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-578047d13bb078da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b92a74f493010c9a22bdd7f9378ab9d631d8a0a2"
+    }
+   ],
+   "fileName": "./pbkdf2/pbkdf2.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d7efe43d064428da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "37213eb29f89577822e714b07542b12b581c9541"
+    }
+   ],
+   "fileName": "./pbkdf2/pbkdf2_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ee012148db5a08cd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7c2c9e9d50c47dabfc97888a40ffb00f641fd865"
+    }
+   ],
+   "fileName": "./pkcs12/bmp-string.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-96b6f54b8700bd07",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6339da5a477e93d9f7fc410012e1c94e15023603"
+    }
+   ],
+   "fileName": "./pkcs12/bmp-string_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-54346c5035de4bc1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd2975bdfd744385e8475259d377a1cfb3444ada"
+    }
+   ],
+   "fileName": "./pkcs12/crypto.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-34d592f35653fd3e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e6511ab07360e7e1867b40310abbb07a41f73b5"
+    }
+   ],
+   "fileName": "./pkcs12/crypto_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-009816c77eae0097",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3952d2a62180c1bc7814e7888ed972f31954b555"
+    }
+   ],
+   "fileName": "./pkcs12/errors.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-14d8d78b9d28795b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9bd0a91c9325bd88868efd823ae6201cb665f022"
+    }
+   ],
+   "fileName": "./pkcs12/internal/rc2/bench_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cc89c6dbd00765b7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b090a10a18d20ecd3b0f30c924e4a8a25190df61"
+    }
+   ],
+   "fileName": "./pkcs12/internal/rc2/rc2.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-eae6fcc0076e6c70",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "050ec3f877319fa83e83ef4e8ee3ced9e223ff5e"
+    }
+   ],
+   "fileName": "./pkcs12/internal/rc2/rc2_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c0b3cd5f4e4c1b36",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5e1c15d57183e34402f52dd2b4b223825d8c56bf"
+    }
+   ],
+   "fileName": "./pkcs12/mac.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e6273e6482dbccce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce20caacc47d933f621201b33e48efa9cbed4f68"
+    }
+   ],
+   "fileName": "./pkcs12/mac_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c6fec4544fac794c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "94908c6ab9a8ad7d17bc37c27d44e485aca582be"
+    }
+   ],
+   "fileName": "./pkcs12/pbkdf.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0ddb501c66aee14d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9bbe3f79dde3f7b379e1b4a43496570eae7aa804"
+    }
+   ],
+   "fileName": "./pkcs12/pbkdf_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0375fe4814a5a187",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5369a5b559693eb1c7bd5c27339013789c90f221"
+    }
+   ],
+   "fileName": "./pkcs12/pkcs12.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2bbc9c6adb3a2e1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "032bf5070e1bf8bc45609469cc0d7a589e19a495"
+    }
+   ],
+   "fileName": "./pkcs12/pkcs12_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-38f136b6221fd82d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e99e80d05e9f5e7bc0c0b0a1f7d4cc5694ab2c6"
+    }
+   ],
+   "fileName": "./pkcs12/safebags.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2fa2d283637f3638",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21503b0c01dbcd048f52712e3ffa60f6d51ae39c"
+    }
+   ],
+   "fileName": "./poly1305/poly1305.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a013c77516ef5d5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c956d43c3b8ece9007e77dc99766c6e472008c61"
+    }
+   ],
+   "fileName": "./poly1305/poly1305_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6dc14fd08115c3f3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1d7324939f184a6f9b26facb73190e2401e5e6e"
+    }
+   ],
+   "fileName": "./poly1305/sum_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-8a666aba1b0666a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d51d92933186e5143d16fb8fd33213f595820b74"
+    }
+   ],
+   "fileName": "./poly1305/sum_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d7d674dfb4672540",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3938ee31c07f4596b720fe53916a03880db77d7"
+    }
+   ],
+   "fileName": "./poly1305/sum_arm.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6731f36af657d3eb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7229ff9587809386d7de88d5cc976d95e250e3f4"
+    }
+   ],
+   "fileName": "./poly1305/sum_arm.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-606764f80089906a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3ef0dea14df81c565126cbe9aef508796bf55507"
+    }
+   ],
+   "fileName": "./poly1305/sum_ref.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b274842fb0ad5c97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "759f936a0e51a0dc2613578a7f06d3679c0c1bad"
+    }
+   ],
+   "fileName": "./ripemd160/ripemd160.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-457fbbd5fe0d1360",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9628646ff35556d14c5f903f6e69a6171ef8f0e"
+    }
+   ],
+   "fileName": "./ripemd160/ripemd160_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-358ea81ef362f8df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fed8831524b483ba459459942179a749a088f75b"
+    }
+   ],
+   "fileName": "./ripemd160/ripemd160block.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-1f951e980ee63ad1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "117c0c5a26ed1ca6c410304a93496c9bac05207d"
+    }
+   ],
+   "fileName": "./salsa20/salsa/hsalsa20.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-686c8f82305f1624",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5e9c48ab343277bd9639e0378853769a22fdc2d"
+    }
+   ],
+   "fileName": "./salsa20/salsa/salsa2020_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-1798efc3b06c9cc9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f6804d250342ea92ce612a621d5b6466d7d9737"
+    }
+   ],
+   "fileName": "./salsa20/salsa/salsa208.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b3a7c696dcb0078d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca2758b4d14ac42bb75ed3efb40ce2e72c8eac5f"
+    }
+   ],
+   "fileName": "./salsa20/salsa/salsa20_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-1e589f898600665b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3dcb6348bf3b33df7b21e3f7e2af331195299389"
+    }
+   ],
+   "fileName": "./salsa20/salsa/salsa20_ref.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9012c497bca6cf79",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1bfa50bc4ac0f0d985a475c9366e4d140d0066f9"
+    }
+   ],
+   "fileName": "./salsa20/salsa/salsa_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ae2c02ca9a3b96bf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d09508bbb58323e331088b85af7b0cbbc71b614e"
+    }
+   ],
+   "fileName": "./salsa20/salsa20.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2ff4f3fabd3ae49b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9be1b7b7bc0b6dd3ec30647b9c468c759966a10e"
+    }
+   ],
+   "fileName": "./salsa20/salsa20_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-182cd102146c1e9c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "113900793a02ed2f1f8a1b6f8ba3a7b296d182ca"
+    }
+   ],
+   "fileName": "./scrypt/scrypt.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cfe1b7bab5a4abe5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c97a8a1cac4284978c99fe9b9d76cb3517397961"
+    }
+   ],
+   "fileName": "./scrypt/scrypt_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ac027f8174888678",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "be6ef3db1deaf9e4dbe00e1a68bfaf22b79ee82f"
+    }
+   ],
+   "fileName": "./sha3/doc.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3dd066fba4fd6e3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bfa8a724f0a083eaf5a462307ef6c814356dbd63"
+    }
+   ],
+   "fileName": "./sha3/hashes.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a11faa86b8868737",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "078dff2d14d621baceb124266ec65374d8323624"
+    }
+   ],
+   "fileName": "./sha3/keccakf.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-43d52bf9139b103c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "951f9d2ec7b562ec82a85179adde237bdca923c3"
+    }
+   ],
+   "fileName": "./sha3/keccakf_amd64.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d82f679674819dcf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e38a6c1c731bdad19810e17ccd279361d63dc2f"
+    }
+   ],
+   "fileName": "./sha3/keccakf_amd64.s"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a9ee69e88a8a0720",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f0d9680b63946f80e561ec5b9670e1de47ad210b"
+    }
+   ],
+   "fileName": "./sha3/register.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f8ceb809614aac3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c74dada929023ea5c61f213ac083fb7bb04a1e1"
+    }
+   ],
+   "fileName": "./sha3/sha3.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-e9983121e3eb8b0c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ea50344cd240f98dddc0275c611f20abcf6d0f73"
+    }
+   ],
+   "fileName": "./sha3/sha3_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9b3130e5bd365fb3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f749c36f86043f08bf720f616938c4c14360834b"
+    }
+   ],
+   "fileName": "./sha3/shake.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-21b96bf49ffa3d67",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "add4219bad09e7ae50f9605f52724f070119d029"
+    }
+   ],
+   "fileName": "./sha3/testdata/keccakKats.json.deflate"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-95244cfb316acc2c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1247a8d96a666d5171cfd4fe3cf4f5d878d37693"
+    }
+   ],
+   "fileName": "./sha3/xor.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0f492ed141ae1dfa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2db35ebfad30400016b16ae3f77f05239f2b676b"
+    }
+   ],
+   "fileName": "./sha3/xor_generic.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-12b983dae459eac2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "561e1b108fa89cdd836a893dd79412b4b3328e67"
+    }
+   ],
+   "fileName": "./sha3/xor_unaligned.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-86c501b00690e6bd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8b25a89a5fa0ac7c4a209c00e791e05bdc75ba11"
+    }
+   ],
+   "fileName": "./ssh/agent/client.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-67c23c66c8c99451",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fcd81cc06260e996a0fa7c8868e10875e6cc739d"
+    }
+   ],
+   "fileName": "./ssh/agent/client_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-45fd412e9fd5cd65",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ad3c038ac3f719f68dd3e32b49ed6bb29fb30b1"
+    }
+   ],
+   "fileName": "./ssh/agent/example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-48a0c48eaaa9e307",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "57cced96da818f4bf783750b144d7214f4e01e13"
+    }
+   ],
+   "fileName": "./ssh/agent/forward.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3cde998dc3ed4fe2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4329026a0a02fa7315b1af7b3de1ae0b048c94e6"
+    }
+   ],
+   "fileName": "./ssh/agent/keyring.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2bb3c57cb097e612",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2635983e6a0675f847e50d9bc71e7673fbbe5c89"
+    }
+   ],
+   "fileName": "./ssh/agent/keyring_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-66d1f84e7b09f3a8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0db402867a822d1e0c2255b828e667502d6d9ec0"
+    }
+   ],
+   "fileName": "./ssh/agent/server.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-44cda540dbda99f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e64df9b659799af76a384634a962934a16d0ea0e"
+    }
+   ],
+   "fileName": "./ssh/agent/server_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-028057279a56a374",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e286d55cf418e4ba35868789d6cf4ed260080fe9"
+    }
+   ],
+   "fileName": "./ssh/agent/testdata_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-4b041c6a620ce66a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "410c2d4cb7707701eb2378ab84c02d3b49689b83"
+    }
+   ],
+   "fileName": "./ssh/benchmark_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-376aa3879186210a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b86c11f4b4c842e5f30722016fa07b16de62031"
+    }
+   ],
+   "fileName": "./ssh/buffer.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-af363e477749c298",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bef1c12ae0111d02c898759139fa0ed075802c9f"
+    }
+   ],
+   "fileName": "./ssh/buffer_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a3dba70648e9a583",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c6e5d7f2c204c37eca5abfc437eb0b4cf76a07e6"
+    }
+   ],
+   "fileName": "./ssh/certs.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6f289d8603f251e1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5c625e444a81dc475b4c7ffbdf40a0bc8c98335d"
+    }
+   ],
+   "fileName": "./ssh/certs_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-84abb80e98355808",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fd307dab7f323c759cbaa06ca4b3ddf69a1cf0b"
+    }
+   ],
+   "fileName": "./ssh/channel.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-4662696b9e87caf3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "584ec51f33111be8571efee4581a010bcf9a7ded"
+    }
+   ],
+   "fileName": "./ssh/cipher.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-62d4c6cdd35ab943",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4f42e477566577b139f9508f00a447bf262a7d4c"
+    }
+   ],
+   "fileName": "./ssh/cipher_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-53356089b42614af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e89dfa00ce7092e811cf0561577fbd54fba8375"
+    }
+   ],
+   "fileName": "./ssh/client.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a21aa9f25fbf2971",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f7d491e079e033ebc6dff89f393194bf456197f7"
+    }
+   ],
+   "fileName": "./ssh/client_auth.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-1bbaa8c10491532b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a503b5883d14886e3d5705e1f3c4790e8b56b5ea"
+    }
+   ],
+   "fileName": "./ssh/client_auth_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-4b802f0a66a332ad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c1c70a59b9ce5eed81597398b64f667edf3c6ab"
+    }
+   ],
+   "fileName": "./ssh/client_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6701fba96a58b7eb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7c819028bce98255ddbfd90f6c7bfbcfcfe14f13"
+    }
+   ],
+   "fileName": "./ssh/common.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-def1f71601972c97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "919cc9f931d29b97fbd377f280e6dd8f489951a9"
+    }
+   ],
+   "fileName": "./ssh/connection.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b5fea857224efb97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ddf710e1019099a52fca2c1188c31aae2a9dd807"
+    }
+   ],
+   "fileName": "./ssh/doc.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6f4c2e5b64649a5c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60397cf3dd1813035891c4d720904a874b2e75ad"
+    }
+   ],
+   "fileName": "./ssh/example_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d4b300fbca58eb59",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b82c590c7c9c7bf4d53d35d605babdf663b9a23"
+    }
+   ],
+   "fileName": "./ssh/handshake.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3402bb3e1080f23f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "343f93eea95761fc627f540ca96c60c637b50db4"
+    }
+   ],
+   "fileName": "./ssh/handshake_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ce3f34d0c008fd21",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "913e00e1bbbba4b349e872a1cfa1ce7fa8638f3a"
+    }
+   ],
+   "fileName": "./ssh/kex.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-fa9604191a864b28",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ddc574085adb91ae291aa24e5b7ad4c3c451b38"
+    }
+   ],
+   "fileName": "./ssh/kex_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-5c1a624fd3e8e664",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ec76974e1628aa408f7385a09f4bc4978d8ef14"
+    }
+   ],
+   "fileName": "./ssh/keys.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7872bcce1d80964b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c0082a5b36e096472c34d9599e8d2494d8b6c8fa"
+    }
+   ],
+   "fileName": "./ssh/keys_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-746e7e516bbc53fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a40369523c17cc80ab426609b4c00f384fa4987f"
+    }
+   ],
+   "fileName": "./ssh/mac.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-11d3315cb1c04a04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "01764c41d9f69a3c67cfc822512337fc0508af14"
+    }
+   ],
+   "fileName": "./ssh/mempipe_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-7178f9ba5ba24552",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7031185f477fd25794bf8e998bcdc44e6df86a4c"
+    }
+   ],
+   "fileName": "./ssh/messages.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a7bed5a3cb721b72",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df67560322dd8288136928d50f90a43747944d9e"
+    }
+   ],
+   "fileName": "./ssh/messages_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9cce06b8a53853aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "684df8615340d6d42dd7e64e827a7e9ce443e991"
+    }
+   ],
+   "fileName": "./ssh/mux.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-770ab6e1dc624ce7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e62eb159292a58053fe15c9f27e99a2eafeef968"
+    }
+   ],
+   "fileName": "./ssh/mux_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ca83bea09b93e137",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c2e55628a960c28e68fcc0724317da01c54e13d"
+    }
+   ],
+   "fileName": "./ssh/server.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a210874414aa1534",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "22e2a43d554c6fc7b161e3aafaed910cf41e0c4d"
+    }
+   ],
+   "fileName": "./ssh/session.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a7f981acc7e2aedf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05efda4d42da92fa25bbcb464199b1d914d0774c"
+    }
+   ],
+   "fileName": "./ssh/session_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f2ac288e6dd94991",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "acb85eb8578909d2912c5b9bc3ad9619d53f54ec"
+    }
+   ],
+   "fileName": "./ssh/tcpip.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-345ca20e072a4f7c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b6659bddd08a5847905c8f74d0ec182208b8c7c"
+    }
+   ],
+   "fileName": "./ssh/tcpip_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-35bdf5f9b39d3a8c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "01600cb2fc12018d53c3f028717c29196ffa03fd"
+    }
+   ],
+   "fileName": "./ssh/terminal/terminal.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-facb4b621ad0a7bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f026e3e74fae4517f700d5a26b13ca3aca2bfaa"
+    }
+   ],
+   "fileName": "./ssh/terminal/terminal_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-20e0ba1b4c282908",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d2db3b327b6f76fda6c9846439d4c95ea4a50b8"
+    }
+   ],
+   "fileName": "./ssh/terminal/util.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-69dd3c62c3e80b63",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a2c76405620f45729380949d2df20afc61418913"
+    }
+   ],
+   "fileName": "./ssh/terminal/util_bsd.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-d846b4200934a99b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e3bbcdf0051328e824420ddc9d0844ae638e48b3"
+    }
+   ],
+   "fileName": "./ssh/terminal/util_linux.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-30776b6e6c0be9ff",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c31ac3d03a2c4d7c606deb461f93bd7d8c710593"
+    }
+   ],
+   "fileName": "./ssh/terminal/util_plan9.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-2737f097f20a7230",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e2bf77b26d616198983847a5d450d9cdbdc1b273"
+    }
+   ],
+   "fileName": "./ssh/terminal/util_solaris.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-0362f50bb9cec3f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ff9acdb58931a06e3e2118b9942ae80bd754dc37"
+    }
+   ],
+   "fileName": "./ssh/terminal/util_windows.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a1fd02e717d95a3b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ca67b95ef929e0041215f078461614dd29f39e2"
+    }
+   ],
+   "fileName": "./ssh/test/agent_unix_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ccc2ccdfd0a480fd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "969065947517881df532f1b6ae565713447506f8"
+    }
+   ],
+   "fileName": "./ssh/test/cert_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-40eeea14945b67d4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "08fad8f084ff02a90f897bce704473dcee7cfd11"
+    }
+   ],
+   "fileName": "./ssh/test/doc.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ed52a619868a06ec",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0897065d4cd76a7102d071d5bab3045166a7bdfa"
+    }
+   ],
+   "fileName": "./ssh/test/forward_unix_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-3e99ee02a9b61003",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "024aea812b39ad5fe489526d2b767f5c99f1fdd8"
+    }
+   ],
+   "fileName": "./ssh/test/session_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-5544a9018187b59e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a657749fbace6dbd04038244a38693526a84927"
+    }
+   ],
+   "fileName": "./ssh/test/tcpip_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-44563e8029aa7cbb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "418f1441f9e5e47513967a600caca3250f919321"
+    }
+   ],
+   "fileName": "./ssh/test/test_unix_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-582b83a928ba6ca0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c23ac30faa559197920b408b72d0987cb2f64091"
+    }
+   ],
+   "fileName": "./ssh/test/testdata_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-9d06a3e45382e2d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d809047245f978b0b7ac1518329922787528f7e9"
+    }
+   ],
+   "fileName": "./ssh/testdata/doc.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-aa58157848d66a42",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5327a34a98c814deb7458c886e727486339eb18f"
+    }
+   ],
+   "fileName": "./ssh/testdata/keys.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-dd44f220e5d94001",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d3be589b6376a7cff8e2e07fb40e5aa5befe5fa"
+    }
+   ],
+   "fileName": "./ssh/testdata_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b934028b99a47794",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "29a8535b426d3a0011937b573ea95fbd575eccd7"
+    }
+   ],
+   "fileName": "./ssh/transport.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-5d21d6c42ffd7ad2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eb8ab61a85dbfa77f41b6acb64bb2c95ece68bec"
+    }
+   ],
+   "fileName": "./ssh/transport_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-cdd70bc358be6a3b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d8a3d52484b0b28352ce6c24f93d8d28df24bfc"
+    }
+   ],
+   "fileName": "./tea/cipher.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-f2744ac859cb4c6b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d6beee4395599e62766e1903c5165ca60a54ee46"
+    }
+   ],
+   "fileName": "./tea/tea_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-a7cfcd18a4be11fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d7ad1d2f1dc22f9c8c7e0477c4c73e786213e803"
+    }
+   ],
+   "fileName": "./twofish/twofish.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ccd14cf1a5a7ab53",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8a5d38e9a86abbceb0b8f0d853c09ae516346f43"
+    }
+   ],
+   "fileName": "./twofish/twofish_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-6090aa32f215aea4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5e4ea53b43a7a9667dc8e2ad468a541fa8f87df"
+    }
+   ],
+   "fileName": "./xtea/block.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-00b73e0f7ed25ec9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fc578b54e019090aaeca17d7bef3faef50fb458"
+    }
+   ],
+   "fileName": "./xtea/cipher.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-c75c59806a5bc823",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "27a1b95eacb4f4a5666d01d3504f719a6776d97f"
+    }
+   ],
+   "fileName": "./xtea/xtea_test.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-b7814b7d2c10b3ae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ddf399495f875f953a1e689071a55c54f65c92c0"
+    }
+   ],
+   "fileName": "./xts/xts.go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-go-crypto-upstream-ddead02bfc9042a4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f5673765473fe57c3919c7ef5d205ea6b457fca1"
+    }
+   ],
+   "fileName": "./xts/xts_test.go"
+  }
+ ],
+ "name": "go-crypto-c78caca8",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-go-crypto-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/golang/crypto); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://go.googlesource.com/crypto@c78caca803c95773f48a844d3dcab04b9bc4d6dd",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-go-crypto-upstream-24139dae656713ba",
+    "SPDXRef-File-go-crypto-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-go-crypto-upstream-dad57a4c245a8007",
+    "SPDXRef-File-go-crypto-upstream-3f454a98e586d1aa",
+    "SPDXRef-File-go-crypto-upstream-c00c0afca84109e3",
+    "SPDXRef-File-go-crypto-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-go-crypto-upstream-9fed2aef933ddf64",
+    "SPDXRef-File-go-crypto-upstream-69e27356ef629022",
+    "SPDXRef-File-go-crypto-upstream-d0ea8468246b29c7",
+    "SPDXRef-File-go-crypto-upstream-52e2a565637ca428",
+    "SPDXRef-File-go-crypto-upstream-316767208be6535c",
+    "SPDXRef-File-go-crypto-upstream-a38850af307feda0",
+    "SPDXRef-File-go-crypto-upstream-a1a1a25597680a61",
+    "SPDXRef-File-go-crypto-upstream-3b997b545d2496de",
+    "SPDXRef-File-go-crypto-upstream-e3a2252f0e1ba2e4",
+    "SPDXRef-File-go-crypto-upstream-00108c173beade6a",
+    "SPDXRef-File-go-crypto-upstream-f3b66761ec9d6389",
+    "SPDXRef-File-go-crypto-upstream-826c6688cfd14fb6",
+    "SPDXRef-File-go-crypto-upstream-7f98a36d6c75ac3f",
+    "SPDXRef-File-go-crypto-upstream-69ef8806601d67be",
+    "SPDXRef-File-go-crypto-upstream-7c06766cb06701c5",
+    "SPDXRef-File-go-crypto-upstream-72b5ec3cf6b509d5",
+    "SPDXRef-File-go-crypto-upstream-4ac0c7088ec8291d",
+    "SPDXRef-File-go-crypto-upstream-bc5adfce94ab6b23",
+    "SPDXRef-File-go-crypto-upstream-b6d4de4bd62dcc13",
+    "SPDXRef-File-go-crypto-upstream-315ed25089044c68",
+    "SPDXRef-File-go-crypto-upstream-e71052478ba437e8",
+    "SPDXRef-File-go-crypto-upstream-efd8e02f8d7d5d55",
+    "SPDXRef-File-go-crypto-upstream-0a03f266dbc6664a",
+    "SPDXRef-File-go-crypto-upstream-f779702a9878d33d",
+    "SPDXRef-File-go-crypto-upstream-2433ee38cbe21d51",
+    "SPDXRef-File-go-crypto-upstream-2eafd7b6c3cfb09e",
+    "SPDXRef-File-go-crypto-upstream-fa86c243d63f6f52",
+    "SPDXRef-File-go-crypto-upstream-2efedd03ac65be57",
+    "SPDXRef-File-go-crypto-upstream-b8f26377eac17b79",
+    "SPDXRef-File-go-crypto-upstream-ea057ce3ce400ba6",
+    "SPDXRef-File-go-crypto-upstream-844f37b2c6084aae",
+    "SPDXRef-File-go-crypto-upstream-48979d7dd4e78a2b",
+    "SPDXRef-File-go-crypto-upstream-fce11680d2a30469",
+    "SPDXRef-File-go-crypto-upstream-b97fbb75c7b32c98",
+    "SPDXRef-File-go-crypto-upstream-58d38a08f569e034",
+    "SPDXRef-File-go-crypto-upstream-f084064bfe8dd01c",
+    "SPDXRef-File-go-crypto-upstream-d884adc18d7fc3c0",
+    "SPDXRef-File-go-crypto-upstream-8dcdf8f8dffe39e4",
+    "SPDXRef-File-go-crypto-upstream-f05c3b63fe52920f",
+    "SPDXRef-File-go-crypto-upstream-cf3655e46a3cbf15",
+    "SPDXRef-File-go-crypto-upstream-174c5d516b77d773",
+    "SPDXRef-File-go-crypto-upstream-535a72c9cd8158f6",
+    "SPDXRef-File-go-crypto-upstream-af44af30c7aaf894",
+    "SPDXRef-File-go-crypto-upstream-b58868b0d8c6aa67",
+    "SPDXRef-File-go-crypto-upstream-ed844be1e6ddd9ff",
+    "SPDXRef-File-go-crypto-upstream-19cbe4bae15dc504",
+    "SPDXRef-File-go-crypto-upstream-a6ca50f9e4b7841c",
+    "SPDXRef-File-go-crypto-upstream-5a1c7b0dcaa01e11",
+    "SPDXRef-File-go-crypto-upstream-b788eced74b4edbc",
+    "SPDXRef-File-go-crypto-upstream-eec63b7dfa9cef36",
+    "SPDXRef-File-go-crypto-upstream-a11547d69b8dc88a",
+    "SPDXRef-File-go-crypto-upstream-fb414ccf84e40ef7",
+    "SPDXRef-File-go-crypto-upstream-ffddc06a3c09c6c8",
+    "SPDXRef-File-go-crypto-upstream-d4ad63926f4449ad",
+    "SPDXRef-File-go-crypto-upstream-35febe4502ebe67b",
+    "SPDXRef-File-go-crypto-upstream-173d0f96648427ac",
+    "SPDXRef-File-go-crypto-upstream-d21775e0acc5a1a2",
+    "SPDXRef-File-go-crypto-upstream-3f0abb235eefa344",
+    "SPDXRef-File-go-crypto-upstream-0be0f3d923cf5abc",
+    "SPDXRef-File-go-crypto-upstream-6dd1d960b749e1d7",
+    "SPDXRef-File-go-crypto-upstream-8cb0a95f91237c9e",
+    "SPDXRef-File-go-crypto-upstream-9c72377d951c4ac0",
+    "SPDXRef-File-go-crypto-upstream-c860112b94a7006f",
+    "SPDXRef-File-go-crypto-upstream-34b6f06433b7c5eb",
+    "SPDXRef-File-go-crypto-upstream-755798df521c88d7",
+    "SPDXRef-File-go-crypto-upstream-cecb08d2e6ede539",
+    "SPDXRef-File-go-crypto-upstream-95aaa24f39a74a97",
+    "SPDXRef-File-go-crypto-upstream-efbaff19c43ad158",
+    "SPDXRef-File-go-crypto-upstream-78443eb20b7cf49f",
+    "SPDXRef-File-go-crypto-upstream-cfd31b7a07779dd2",
+    "SPDXRef-File-go-crypto-upstream-feee4c74a751273b",
+    "SPDXRef-File-go-crypto-upstream-f75a53cae0f6fc90",
+    "SPDXRef-File-go-crypto-upstream-e1aec7568e7db4c2",
+    "SPDXRef-File-go-crypto-upstream-e1fee549c5201883",
+    "SPDXRef-File-go-crypto-upstream-d22e1602396274fa",
+    "SPDXRef-File-go-crypto-upstream-be21e4a29fbedcec",
+    "SPDXRef-File-go-crypto-upstream-9c5e218e452cdde8",
+    "SPDXRef-File-go-crypto-upstream-bc71ce7dcc85fd97",
+    "SPDXRef-File-go-crypto-upstream-de274d6e0a74cdfd",
+    "SPDXRef-File-go-crypto-upstream-942bc411e5ff3764",
+    "SPDXRef-File-go-crypto-upstream-17b6d96b02d5e968",
+    "SPDXRef-File-go-crypto-upstream-234516c209947137",
+    "SPDXRef-File-go-crypto-upstream-071e49fb28e8b578",
+    "SPDXRef-File-go-crypto-upstream-2c75fc3323360ec1",
+    "SPDXRef-File-go-crypto-upstream-8390bcd7a15303aa",
+    "SPDXRef-File-go-crypto-upstream-de7837a60115af82",
+    "SPDXRef-File-go-crypto-upstream-e622304293fbf632",
+    "SPDXRef-File-go-crypto-upstream-bf30d0725b1cef80",
+    "SPDXRef-File-go-crypto-upstream-38cfa0617887fda4",
+    "SPDXRef-File-go-crypto-upstream-1c92fdb478f51af0",
+    "SPDXRef-File-go-crypto-upstream-587e1a47128d0577",
+    "SPDXRef-File-go-crypto-upstream-49f41ee6a9c4f8b8",
+    "SPDXRef-File-go-crypto-upstream-2c372cc47008d79b",
+    "SPDXRef-File-go-crypto-upstream-d5e89024189927a3",
+    "SPDXRef-File-go-crypto-upstream-49dd0cea25cf1614",
+    "SPDXRef-File-go-crypto-upstream-f61bdfaef25aa5be",
+    "SPDXRef-File-go-crypto-upstream-a0834741a05a611e",
+    "SPDXRef-File-go-crypto-upstream-54ade182e39b4f7b",
+    "SPDXRef-File-go-crypto-upstream-f61d68ed1b27169e",
+    "SPDXRef-File-go-crypto-upstream-0e2f3c0112efc7d7",
+    "SPDXRef-File-go-crypto-upstream-982b565c46934803",
+    "SPDXRef-File-go-crypto-upstream-b4ce29dffca93bb6",
+    "SPDXRef-File-go-crypto-upstream-9a09e795616347d0",
+    "SPDXRef-File-go-crypto-upstream-928f68adfc1f602b",
+    "SPDXRef-File-go-crypto-upstream-c5b02b4b2343613c",
+    "SPDXRef-File-go-crypto-upstream-6284ccf9014ae1cf",
+    "SPDXRef-File-go-crypto-upstream-7961a833fe892acb",
+    "SPDXRef-File-go-crypto-upstream-94571bd1a28c678a",
+    "SPDXRef-File-go-crypto-upstream-20caac87d8057776",
+    "SPDXRef-File-go-crypto-upstream-e3555446c268df3a",
+    "SPDXRef-File-go-crypto-upstream-7e3084aa47f6bf40",
+    "SPDXRef-File-go-crypto-upstream-5b08ed506c2e02c7",
+    "SPDXRef-File-go-crypto-upstream-76ec628d5d55d15a",
+    "SPDXRef-File-go-crypto-upstream-fccd87024dac117a",
+    "SPDXRef-File-go-crypto-upstream-49b1877452d0f4aa",
+    "SPDXRef-File-go-crypto-upstream-54d72c5b2099fb37",
+    "SPDXRef-File-go-crypto-upstream-fb089b5a1ec76bd9",
+    "SPDXRef-File-go-crypto-upstream-cac5f7a2f93c4e71",
+    "SPDXRef-File-go-crypto-upstream-94ad0274b8dfbdf9",
+    "SPDXRef-File-go-crypto-upstream-af9454945d1a2ea2",
+    "SPDXRef-File-go-crypto-upstream-6f792db8964c1c49",
+    "SPDXRef-File-go-crypto-upstream-15661e1980b1dd8d",
+    "SPDXRef-File-go-crypto-upstream-85b21ca8c687f8f2",
+    "SPDXRef-File-go-crypto-upstream-db3c914f9403cb7f",
+    "SPDXRef-File-go-crypto-upstream-07cd3e26f25ba8e4",
+    "SPDXRef-File-go-crypto-upstream-b7557ca889b472a3",
+    "SPDXRef-File-go-crypto-upstream-f5dd983bc6854eff",
+    "SPDXRef-File-go-crypto-upstream-0362340147c74e9f",
+    "SPDXRef-File-go-crypto-upstream-6722429a9a09b506",
+    "SPDXRef-File-go-crypto-upstream-7df365a890de332b",
+    "SPDXRef-File-go-crypto-upstream-a1e2550d508b3041",
+    "SPDXRef-File-go-crypto-upstream-b9e73e91d6075aa5",
+    "SPDXRef-File-go-crypto-upstream-fc4acdfc2f6aa145",
+    "SPDXRef-File-go-crypto-upstream-1f01919483d7f1b0",
+    "SPDXRef-File-go-crypto-upstream-c71e778cf7236dae",
+    "SPDXRef-File-go-crypto-upstream-d965606e58a02862",
+    "SPDXRef-File-go-crypto-upstream-665593ea5f817c78",
+    "SPDXRef-File-go-crypto-upstream-afe3bddb9352c1cf",
+    "SPDXRef-File-go-crypto-upstream-937463f8fdb0d48d",
+    "SPDXRef-File-go-crypto-upstream-fc4a255ebab8299c",
+    "SPDXRef-File-go-crypto-upstream-67f24f356d38a466",
+    "SPDXRef-File-go-crypto-upstream-3a02cf347bfd39f5",
+    "SPDXRef-File-go-crypto-upstream-e584067c19f99129",
+    "SPDXRef-File-go-crypto-upstream-46c525fd8fa0752d",
+    "SPDXRef-File-go-crypto-upstream-b2374acd82b0cc00",
+    "SPDXRef-File-go-crypto-upstream-33572d4b2cfaf0aa",
+    "SPDXRef-File-go-crypto-upstream-522ddd3a222e1328",
+    "SPDXRef-File-go-crypto-upstream-99c1c0ef0040fd5e",
+    "SPDXRef-File-go-crypto-upstream-407cad5e4a306bbd",
+    "SPDXRef-File-go-crypto-upstream-578047d13bb078da",
+    "SPDXRef-File-go-crypto-upstream-d7efe43d064428da",
+    "SPDXRef-File-go-crypto-upstream-ee012148db5a08cd",
+    "SPDXRef-File-go-crypto-upstream-96b6f54b8700bd07",
+    "SPDXRef-File-go-crypto-upstream-54346c5035de4bc1",
+    "SPDXRef-File-go-crypto-upstream-34d592f35653fd3e",
+    "SPDXRef-File-go-crypto-upstream-009816c77eae0097",
+    "SPDXRef-File-go-crypto-upstream-14d8d78b9d28795b",
+    "SPDXRef-File-go-crypto-upstream-cc89c6dbd00765b7",
+    "SPDXRef-File-go-crypto-upstream-eae6fcc0076e6c70",
+    "SPDXRef-File-go-crypto-upstream-c0b3cd5f4e4c1b36",
+    "SPDXRef-File-go-crypto-upstream-e6273e6482dbccce",
+    "SPDXRef-File-go-crypto-upstream-c6fec4544fac794c",
+    "SPDXRef-File-go-crypto-upstream-0ddb501c66aee14d",
+    "SPDXRef-File-go-crypto-upstream-0375fe4814a5a187",
+    "SPDXRef-File-go-crypto-upstream-2bbc9c6adb3a2e1f",
+    "SPDXRef-File-go-crypto-upstream-38f136b6221fd82d",
+    "SPDXRef-File-go-crypto-upstream-2fa2d283637f3638",
+    "SPDXRef-File-go-crypto-upstream-a013c77516ef5d5e",
+    "SPDXRef-File-go-crypto-upstream-6dc14fd08115c3f3",
+    "SPDXRef-File-go-crypto-upstream-8a666aba1b0666a3",
+    "SPDXRef-File-go-crypto-upstream-d7d674dfb4672540",
+    "SPDXRef-File-go-crypto-upstream-6731f36af657d3eb",
+    "SPDXRef-File-go-crypto-upstream-606764f80089906a",
+    "SPDXRef-File-go-crypto-upstream-b274842fb0ad5c97",
+    "SPDXRef-File-go-crypto-upstream-457fbbd5fe0d1360",
+    "SPDXRef-File-go-crypto-upstream-358ea81ef362f8df",
+    "SPDXRef-File-go-crypto-upstream-1f951e980ee63ad1",
+    "SPDXRef-File-go-crypto-upstream-686c8f82305f1624",
+    "SPDXRef-File-go-crypto-upstream-1798efc3b06c9cc9",
+    "SPDXRef-File-go-crypto-upstream-b3a7c696dcb0078d",
+    "SPDXRef-File-go-crypto-upstream-1e589f898600665b",
+    "SPDXRef-File-go-crypto-upstream-9012c497bca6cf79",
+    "SPDXRef-File-go-crypto-upstream-ae2c02ca9a3b96bf",
+    "SPDXRef-File-go-crypto-upstream-2ff4f3fabd3ae49b",
+    "SPDXRef-File-go-crypto-upstream-182cd102146c1e9c",
+    "SPDXRef-File-go-crypto-upstream-cfe1b7bab5a4abe5",
+    "SPDXRef-File-go-crypto-upstream-ac027f8174888678",
+    "SPDXRef-File-go-crypto-upstream-3dd066fba4fd6e3f",
+    "SPDXRef-File-go-crypto-upstream-a11faa86b8868737",
+    "SPDXRef-File-go-crypto-upstream-43d52bf9139b103c",
+    "SPDXRef-File-go-crypto-upstream-d82f679674819dcf",
+    "SPDXRef-File-go-crypto-upstream-a9ee69e88a8a0720",
+    "SPDXRef-File-go-crypto-upstream-f8ceb809614aac3f",
+    "SPDXRef-File-go-crypto-upstream-e9983121e3eb8b0c",
+    "SPDXRef-File-go-crypto-upstream-9b3130e5bd365fb3",
+    "SPDXRef-File-go-crypto-upstream-21b96bf49ffa3d67",
+    "SPDXRef-File-go-crypto-upstream-95244cfb316acc2c",
+    "SPDXRef-File-go-crypto-upstream-0f492ed141ae1dfa",
+    "SPDXRef-File-go-crypto-upstream-12b983dae459eac2",
+    "SPDXRef-File-go-crypto-upstream-86c501b00690e6bd",
+    "SPDXRef-File-go-crypto-upstream-67c23c66c8c99451",
+    "SPDXRef-File-go-crypto-upstream-45fd412e9fd5cd65",
+    "SPDXRef-File-go-crypto-upstream-48a0c48eaaa9e307",
+    "SPDXRef-File-go-crypto-upstream-3cde998dc3ed4fe2",
+    "SPDXRef-File-go-crypto-upstream-2bb3c57cb097e612",
+    "SPDXRef-File-go-crypto-upstream-66d1f84e7b09f3a8",
+    "SPDXRef-File-go-crypto-upstream-44cda540dbda99f8",
+    "SPDXRef-File-go-crypto-upstream-028057279a56a374",
+    "SPDXRef-File-go-crypto-upstream-4b041c6a620ce66a",
+    "SPDXRef-File-go-crypto-upstream-376aa3879186210a",
+    "SPDXRef-File-go-crypto-upstream-af363e477749c298",
+    "SPDXRef-File-go-crypto-upstream-a3dba70648e9a583",
+    "SPDXRef-File-go-crypto-upstream-6f289d8603f251e1",
+    "SPDXRef-File-go-crypto-upstream-84abb80e98355808",
+    "SPDXRef-File-go-crypto-upstream-4662696b9e87caf3",
+    "SPDXRef-File-go-crypto-upstream-62d4c6cdd35ab943",
+    "SPDXRef-File-go-crypto-upstream-53356089b42614af",
+    "SPDXRef-File-go-crypto-upstream-a21aa9f25fbf2971",
+    "SPDXRef-File-go-crypto-upstream-1bbaa8c10491532b",
+    "SPDXRef-File-go-crypto-upstream-4b802f0a66a332ad",
+    "SPDXRef-File-go-crypto-upstream-6701fba96a58b7eb",
+    "SPDXRef-File-go-crypto-upstream-def1f71601972c97",
+    "SPDXRef-File-go-crypto-upstream-b5fea857224efb97",
+    "SPDXRef-File-go-crypto-upstream-6f4c2e5b64649a5c",
+    "SPDXRef-File-go-crypto-upstream-d4b300fbca58eb59",
+    "SPDXRef-File-go-crypto-upstream-3402bb3e1080f23f",
+    "SPDXRef-File-go-crypto-upstream-ce3f34d0c008fd21",
+    "SPDXRef-File-go-crypto-upstream-fa9604191a864b28",
+    "SPDXRef-File-go-crypto-upstream-5c1a624fd3e8e664",
+    "SPDXRef-File-go-crypto-upstream-7872bcce1d80964b",
+    "SPDXRef-File-go-crypto-upstream-746e7e516bbc53fb",
+    "SPDXRef-File-go-crypto-upstream-11d3315cb1c04a04",
+    "SPDXRef-File-go-crypto-upstream-7178f9ba5ba24552",
+    "SPDXRef-File-go-crypto-upstream-a7bed5a3cb721b72",
+    "SPDXRef-File-go-crypto-upstream-9cce06b8a53853aa",
+    "SPDXRef-File-go-crypto-upstream-770ab6e1dc624ce7",
+    "SPDXRef-File-go-crypto-upstream-ca83bea09b93e137",
+    "SPDXRef-File-go-crypto-upstream-a210874414aa1534",
+    "SPDXRef-File-go-crypto-upstream-a7f981acc7e2aedf",
+    "SPDXRef-File-go-crypto-upstream-f2ac288e6dd94991",
+    "SPDXRef-File-go-crypto-upstream-345ca20e072a4f7c",
+    "SPDXRef-File-go-crypto-upstream-35bdf5f9b39d3a8c",
+    "SPDXRef-File-go-crypto-upstream-facb4b621ad0a7bb",
+    "SPDXRef-File-go-crypto-upstream-20e0ba1b4c282908",
+    "SPDXRef-File-go-crypto-upstream-69dd3c62c3e80b63",
+    "SPDXRef-File-go-crypto-upstream-d846b4200934a99b",
+    "SPDXRef-File-go-crypto-upstream-30776b6e6c0be9ff",
+    "SPDXRef-File-go-crypto-upstream-2737f097f20a7230",
+    "SPDXRef-File-go-crypto-upstream-0362f50bb9cec3f8",
+    "SPDXRef-File-go-crypto-upstream-a1fd02e717d95a3b",
+    "SPDXRef-File-go-crypto-upstream-ccc2ccdfd0a480fd",
+    "SPDXRef-File-go-crypto-upstream-40eeea14945b67d4",
+    "SPDXRef-File-go-crypto-upstream-ed52a619868a06ec",
+    "SPDXRef-File-go-crypto-upstream-3e99ee02a9b61003",
+    "SPDXRef-File-go-crypto-upstream-5544a9018187b59e",
+    "SPDXRef-File-go-crypto-upstream-44563e8029aa7cbb",
+    "SPDXRef-File-go-crypto-upstream-582b83a928ba6ca0",
+    "SPDXRef-File-go-crypto-upstream-9d06a3e45382e2d1",
+    "SPDXRef-File-go-crypto-upstream-aa58157848d66a42",
+    "SPDXRef-File-go-crypto-upstream-dd44f220e5d94001",
+    "SPDXRef-File-go-crypto-upstream-b934028b99a47794",
+    "SPDXRef-File-go-crypto-upstream-5d21d6c42ffd7ad2",
+    "SPDXRef-File-go-crypto-upstream-cdd70bc358be6a3b",
+    "SPDXRef-File-go-crypto-upstream-f2744ac859cb4c6b",
+    "SPDXRef-File-go-crypto-upstream-a7cfcd18a4be11fb",
+    "SPDXRef-File-go-crypto-upstream-ccd14cf1a5a7ab53",
+    "SPDXRef-File-go-crypto-upstream-6090aa32f215aea4",
+    "SPDXRef-File-go-crypto-upstream-00b73e0f7ed25ec9",
+    "SPDXRef-File-go-crypto-upstream-c75c59806a5bc823",
+    "SPDXRef-File-go-crypto-upstream-b7814b7d2c10b3ae",
+    "SPDXRef-File-go-crypto-upstream-ddead02bfc9042a4"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "go-crypto",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "f334b3e118225194ee04318f352f3369faf7bbc9"
+   },
+   "supplier": "Organization: go.googlesource.com",
+   "versionInfo": "c78caca8"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-go-crypto-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

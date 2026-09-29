@@ -1,0 +1,3676 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/benchmark-e991355c-e991355c02b93fe17713efe04cbc2e278e00fdbd",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-01a718df87a96135",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "512e85bb44a3b95983017cf72f47483cf61516c4"
+    }
+   ],
+   "fileName": "./.clang-format"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-565d40a190d34609",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f9950120b79d4f9895888d3af69ca6f0ec9b3d1"
+    }
+   ],
+   "fileName": "./.github/.libcxx-setup.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a03585ab89eed5e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9d1bf34433e27bf9e972e60a4602c9de75696481"
+    }
+   ],
+   "fileName": "./.github/ISSUE_TEMPLATE/bug_report.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-67c0231b0ea83057",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "227b7af320e236220ca9f8f06d2660269bdee33e"
+    }
+   ],
+   "fileName": "./.github/ISSUE_TEMPLATE/feature_request.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a030fe7129d96ae6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f78900f12adfbc6d1a393354548f35502ea38e16"
+    }
+   ],
+   "fileName": "./.github/workflows/bazel.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e39881842ae9dc78",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9467735a9cdc2c501750901bef67eb541f6d1cc7"
+    }
+   ],
+   "fileName": "./.github/workflows/build-and-test-perfcounters.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8b8be14a99b7f797",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36bde23014749f70c24714e6e49aa533320e98ff"
+    }
+   ],
+   "fileName": "./.github/workflows/build-and-test.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-7bfadd3082972524",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "130daf861ce7bbdc6fadfa0380dfbad8bcfc1f03"
+    }
+   ],
+   "fileName": "./.github/workflows/pylint.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-c7c75e3b91c61195",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39e04b801a93507eeedf1a118928bc9aa08f27ac"
+    }
+   ],
+   "fileName": "./.github/workflows/sanitizer.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-00d78ab4ce666731",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05f0dbfca4b11154fff108600785ad8ed68cc5ba"
+    }
+   ],
+   "fileName": "./.github/workflows/test_bindings.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b84896ea7f0113aacca6073b6d049546f8e00b7e"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9fedeab00d775bed457bce1d47c8cdc7cb8cf4e9"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-73f8abedbab7412a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5740ac5ca34297a0e25ef77712daecadcfe4665b"
+    }
+   ],
+   "fileName": "./.ycm_extra_conf.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-dad57a4c245a8007",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "187e21d5e54cba058d02c47e2c1d07d4bfeffffa"
+    }
+   ],
+   "fileName": "./AUTHORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-acb67900dcb6d543",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c8fe978885ccb4a2a3b0df60e87e78394bf5cd8"
+    }
+   ],
+   "fileName": "./BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7969547bf55ce4e480db23af1afd0a0fc1fc5ac2"
+    }
+   ],
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3f454a98e586d1aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ec1172fee9e818dcf62a039dd40c55c58e04b606"
+    }
+   ],
+   "fileName": "./CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-c00c0afca84109e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5dafe1f88708fb4c930bc69754b577d36083591b"
+    }
+   ],
+   "fileName": "./CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b8b815229aa8a61e483fb4ba0588b8b6c491890"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "046b9f827b18a1fafbae63fedd3c5fdf124d41bd"
+    }
+   ],
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-703988282e63eeb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f04f61fb2a177bc1ab01d53441e269e8491b9f57"
+    }
+   ],
+   "fileName": "./WORKSPACE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-cd089ae45ce870c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "882e95ba1a08b19efe12a117c80fedede072e4b3"
+    }
+   ],
+   "fileName": "./_config.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-43b9d80d1f50472e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a20c3a3547d02e229687329a98e955f3c7a94a9"
+    }
+   ],
+   "fileName": "./appveyor.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-30e10373d866c3bd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "663df96ca6d670eee5eec2eedc6e058b20ff28a7"
+    }
+   ],
+   "fileName": "./bindings/python/BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-5b60106ab128dc05",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9da336dd477946378a23ac1189c6a1160dcedd48"
+    }
+   ],
+   "fileName": "./bindings/python/build_defs.bzl"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a6411d3e3cf29c0a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "86c1b9a01e5f268d565bf9bb297b58348b83917a"
+    }
+   ],
+   "fileName": "./bindings/python/google_benchmark/BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e5eb327bde37ba0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f421e31baf4257dd08551f90c1e59e87a5e3907"
+    }
+   ],
+   "fileName": "./bindings/python/google_benchmark/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-555f98a813419605",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "957e2401241caeff1f4ebd3d725baef9c8fcb812"
+    }
+   ],
+   "fileName": "./bindings/python/google_benchmark/benchmark.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-635218f96489d82b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fd22704de500b0b36613472b5169a642020242b"
+    }
+   ],
+   "fileName": "./bindings/python/google_benchmark/example.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-38b640d497239db3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a3e6319f872907f90e1319ebe48e487e09bc84e4"
+    }
+   ],
+   "fileName": "./bindings/python/pybind11.BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3bc8b6344a4faded",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24c77ca6549c318e9a8bb0a1151299f72df01935"
+    }
+   ],
+   "fileName": "./bindings/python/python_headers.BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-576ca3e14adf0e82",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cd6eeeb4c3086ae02ab03c77e746bc2682abd742"
+    }
+   ],
+   "fileName": "./bindings/python/requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e714910481a58308",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0734ccc6b41fb589f4c2ebdb31a11a18ecbe79c3"
+    }
+   ],
+   "fileName": "./cmake/AddCXXCompilerFlag.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-fa30ebcdd53cbc3d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2f85d026e320e89b5173a71821ff285133ba579e"
+    }
+   ],
+   "fileName": "./cmake/CXXFeatureCheck.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-1ba3e4d7c2ae5bea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b035bb6a8d10354a24a473c52bc49835223f5edc"
+    }
+   ],
+   "fileName": "./cmake/Config.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-7f04b3be2ccddc30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "83086c7147b998c168740da24fa88350186e7972"
+    }
+   ],
+   "fileName": "./cmake/GetGitVersion.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-fc074bc553984153",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b7670e4716bb7a661e329d9092e5addffaf9101"
+    }
+   ],
+   "fileName": "./cmake/GoogleTest.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3e045e4ca867b87d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "382112f9d5136e635bae77115bf4de4d9bd7394c"
+    }
+   ],
+   "fileName": "./cmake/GoogleTest.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-b16254f21699aed4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6379731ef836733b858fb0ba9aa464236ad27994"
+    }
+   ],
+   "fileName": "./cmake/Modules/FindLLVMAr.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-38271299096b2aef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df1fb8cc31e012dfc0e41268c3627e380cf933f1"
+    }
+   ],
+   "fileName": "./cmake/Modules/FindLLVMNm.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-2aa7bcf550e2c213",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d02572c27f8588cf7184ebaf5fd073895047776b"
+    }
+   ],
+   "fileName": "./cmake/Modules/FindLLVMRanLib.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-663a03cc8eb8c6a6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "de93223067d74f311e29c80abbd05090a191eaf0"
+    }
+   ],
+   "fileName": "./cmake/Modules/FindPFM.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-ca6aca94c5a95b96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5bc2f5332d67f3d552021305eddaf0677ed54340"
+    }
+   ],
+   "fileName": "./cmake/benchmark.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-cc0807dc57ba0857",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dce1a4bb9d8b233682b4c600112f62f8efbe4afb"
+    }
+   ],
+   "fileName": "./cmake/gnu_posix_regex.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-fcb8c90c73e4f336",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d8d360104b2484e2b47a89ae601db34cdeaad1ed"
+    }
+   ],
+   "fileName": "./cmake/llvm-toolchain.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8f8e07aba0c7d683",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1c56275d6447ab5d5321e399c61d2cbf5d11b0a"
+    }
+   ],
+   "fileName": "./cmake/posix_regex.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-2574d572cb392003",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e8ac0e942990d41939d65aee1f4df8ad3f8b476"
+    }
+   ],
+   "fileName": "./cmake/split_list.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-442cbc3423c27d3a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d2082a4059c5ae36519a34c1379985691e83975"
+    }
+   ],
+   "fileName": "./cmake/std_regex.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-01c09e116018c52b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70f304f244f510220bd74d4411f31a962d9c98e1"
+    }
+   ],
+   "fileName": "./cmake/steady_clock.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-68c963b4ca0c5251",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6cbf45c3b66e485ab684e77c75dc34a4c1d00cf7"
+    }
+   ],
+   "fileName": "./cmake/thread_safety_attributes.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-94ec8fdb505fd851",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "600008744bd439ae816ecdd94ea2b7ee4b2d328f"
+    }
+   ],
+   "fileName": "./dependencies.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-f30fb32ea350472a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fa6b1886e446eaa1a1bfdfdf8f2721f497ac535"
+    }
+   ],
+   "fileName": "./docs/AssemblyTests.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0b0bc73f3732038f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e63cc95b8109155633243544e7396af491fdc507"
+    }
+   ],
+   "fileName": "./docs/_config.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-86f536b1f28199d9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fe0b7c02809fef1f4ada85cf5ad725ba8e8b1849"
+    }
+   ],
+   "fileName": "./docs/perf_counters.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-5a510cf9afc7e6d0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ffec36128c3281839baffec434c5e17d760ccbb4"
+    }
+   ],
+   "fileName": "./docs/random_interleaving.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8187a4780485cdf3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b35968b103d8e55483a7216151c1b902147af4f8"
+    }
+   ],
+   "fileName": "./docs/releasing.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-c5f47346a42500e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fd349a2f85c031780538f6993f01eb697503cae"
+    }
+   ],
+   "fileName": "./docs/tools.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-03aea7f6d798beba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "67b0f2ce4203d0fc1d0cc2422e59377c084fe033"
+    }
+   ],
+   "fileName": "./include/benchmark/benchmark.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-19359a61ae2446b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b33f7421b89b310152df6baa958dac6812bc9f1"
+    }
+   ],
+   "fileName": "./requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8e2edce0d507e129",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36cdbb574f781e2be1562aa10b28633539f98c3a"
+    }
+   ],
+   "fileName": "./setup.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-631c8d07f5ea23b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4b86184d2f3cca7dab7d67ae57b84b9efdbbf52"
+    }
+   ],
+   "fileName": "./src/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-86ac2619ef42c8c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "994c48e96837c803e36ef3cef90f6acd571c7411"
+    }
+   ],
+   "fileName": "./src/arraysize.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e03761d4e4fe156b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e23b62402c86e1f9b913ab0a07f5e19d6fd2c3d"
+    }
+   ],
+   "fileName": "./src/benchmark.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-38b3bc07db655e6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1dd1230038b7540eb75bd1f05b7514a5a8377ffb"
+    }
+   ],
+   "fileName": "./src/benchmark_api_internal.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-02959a04799987bd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7466b9f72fd1ca587dda40ca07aacdfdafc8f7db"
+    }
+   ],
+   "fileName": "./src/benchmark_api_internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-9e990d67c57b46aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35ce4868b612bde1d8bada59c9aa65aadfcde198"
+    }
+   ],
+   "fileName": "./src/benchmark_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a3d397786689bb96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c7131f2231d30b3e4987a7804cfe9b73c64add2"
+    }
+   ],
+   "fileName": "./src/benchmark_name.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-5fb0d3b799e0284f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d37d17d4a2d9ec4d5423959eae1db6a910abf3e3"
+    }
+   ],
+   "fileName": "./src/benchmark_register.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-aecc00908b059123",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c538f27123e93e1767bf4411d71236401ecab2a0"
+    }
+   ],
+   "fileName": "./src/benchmark_register.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-410cb5d655399f49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1db3beb947916721046e72b5106404a1cb231630"
+    }
+   ],
+   "fileName": "./src/benchmark_runner.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-29a51bd3b4ddcbe4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aeb2ab64fd7a35a2384c6fe3adc0f2221bc3e2fc"
+    }
+   ],
+   "fileName": "./src/benchmark_runner.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0efb901394d1f62e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "81fcef0ba207156635e35abbd632b40a58c245fa"
+    }
+   ],
+   "fileName": "./src/check.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-d1797c9b1763a228",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f4a1e817755488aff14c54834d23c0b8ea62588"
+    }
+   ],
+   "fileName": "./src/colorprint.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-060a36be22b7e216",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3abf35df3a95bce696205cb7f5cab857dfb64c44"
+    }
+   ],
+   "fileName": "./src/colorprint.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8f9e62bbe2834e04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "80f4b9ba84f0dc40e2c82da937cda24387419f9a"
+    }
+   ],
+   "fileName": "./src/commandlineflags.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-06ebaf0024a45064",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b866a513bedf2e8992ab0c5281b595c1af3a9ea6"
+    }
+   ],
+   "fileName": "./src/commandlineflags.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-6565458fb40df5b6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b0a293c361fb409022658245a1f35718d4432c0"
+    }
+   ],
+   "fileName": "./src/complexity.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-268ad9b316e6219a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d8644cafa2d113fc3c46097ec7ccf1ebdd27681a"
+    }
+   ],
+   "fileName": "./src/complexity.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-932ab0394c1c8bb5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "28ceef1d92fa98bc9cd7e2e7f892bbee3d24452c"
+    }
+   ],
+   "fileName": "./src/console_reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-abbbeb12ff3c5294",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b9e3d519e62224e7f29288f5c8212f9f48026dba"
+    }
+   ],
+   "fileName": "./src/counter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-fd34b6369539911d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "856d8f33e5d87bfbd80fda44bc689ca49ec7151d"
+    }
+   ],
+   "fileName": "./src/counter.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-f607bc08f1d01aa7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "989db9d1fe74c67287676164ba47e55bf093a492"
+    }
+   ],
+   "fileName": "./src/csv_reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0de168c447d7e743",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9eeb83571fab9e3ce11767059b25bae5924e99a3"
+    }
+   ],
+   "fileName": "./src/cycleclock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-cb4cc8491930811a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ab1944d01a531c6616248ade1418a725e9a64d7f"
+    }
+   ],
+   "fileName": "./src/internal_macros.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-86e4ca9c42eab62d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d154c838af4270313c613df827d1a7beefaa806"
+    }
+   ],
+   "fileName": "./src/json_reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-62ad513e4a65c97c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "47a336adc2fe8ee701a473487f3dc195ba138261"
+    }
+   ],
+   "fileName": "./src/log.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-7230f15475c06f91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eea252d994a9ea34c8a552324c86c7540c5fa5b6"
+    }
+   ],
+   "fileName": "./src/mutex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3d5d6853a934a613",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ca4240baa133eba643da64dc6131e7a362f5925"
+    }
+   ],
+   "fileName": "./src/perf_counters.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0ce1529ccea485ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b66d7b58586c9af730c557504a7eaeb1e0ae1722"
+    }
+   ],
+   "fileName": "./src/perf_counters.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-783e5497d0549d63",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "44ff41b87c1f85ef1153e0c7b8e1108ba6ab85ad"
+    }
+   ],
+   "fileName": "./src/re.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8bd549d87d8bb52e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "62d03e22b39b520aa827a2366a312e25516b173e"
+    }
+   ],
+   "fileName": "./src/reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4fda7145901f220e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "485571cc2d4c900916866f725db6ab9f7d7d56f6"
+    }
+   ],
+   "fileName": "./src/sleep.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-51eb21035cbd8ad5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3e6ea40c1a40088228ff00c7ce8d69391b7e62d2"
+    }
+   ],
+   "fileName": "./src/sleep.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e657b75ffbae638e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20e61038517e8c3ff7b2813ad97b5ac60309e6cd"
+    }
+   ],
+   "fileName": "./src/statistics.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-65efcca6896db542",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a353e16afa5314b0944a3edb6feb14b9ad225865"
+    }
+   ],
+   "fileName": "./src/statistics.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4109f02f81980d76",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ad5a47ed9e6ec69075405f6a3ff20b9123180cf"
+    }
+   ],
+   "fileName": "./src/string_util.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-5995944883798586",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2ac3af5b01860165c0c4b2eef2f0ff5ae2d3c8ad"
+    }
+   ],
+   "fileName": "./src/string_util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4a691e0bc84a5f7a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dc6f7aced5a81d3902da4fea814a6209868f4555"
+    }
+   ],
+   "fileName": "./src/sysinfo.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e5ee7a6b27c3a55a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e2ed4c582e47ddf5ee7af2f78c5b39662172e34"
+    }
+   ],
+   "fileName": "./src/thread_manager.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3b2e8d68c6c95c31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bfa7a81813616259a41be95641e5623811cc5663"
+    }
+   ],
+   "fileName": "./src/thread_timer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-22ccc8c60b9d5562",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b1d01b00717d3600d7506d87beba1675047e72d"
+    }
+   ],
+   "fileName": "./src/timers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-20a8a897619ed9fe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eca884df8ef434cb1aae3fca5ce4428d8f483879"
+    }
+   ],
+   "fileName": "./src/timers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-91fa8cc90b00aaf0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6ff9fe8c1f0c216e937ecf7b4ba292edb02d602d"
+    }
+   ],
+   "fileName": "./test/AssemblyTests.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-b1a52dc61f040ca0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "090c0e8338d18ee8192c8b1c0cca585ba3bef1fc"
+    }
+   ],
+   "fileName": "./test/BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-d9577b84b013e0c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1205b2056d486af86881d6d930e5657d961f0d14"
+    }
+   ],
+   "fileName": "./test/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a17049c61627711a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e19134be9e656d167c2f183b5c8d867ff2e9d8ea"
+    }
+   ],
+   "fileName": "./test/args_product_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3b8be761d6ed6073",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5bcad27050d043be64a53cae411de828b9e4b3fa"
+    }
+   ],
+   "fileName": "./test/basic_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-af1522ecd8702d09",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20888abdc0389740a68c0fd9ec81c94bc0d3f7c1"
+    }
+   ],
+   "fileName": "./test/benchmark_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e7ec2ea73023a279",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e627dd80c9945583d4f5c36d68a65d6dae577ef1"
+    }
+   ],
+   "fileName": "./test/benchmark_name_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-c12f2a64a366da6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05b5d7e7826bb3b45afb7ca9505b69296a6aa882"
+    }
+   ],
+   "fileName": "./test/benchmark_random_interleaving_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-d672fd50f3ba112f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "423b4effe61b23c4c92e55c56d5d82694833c2c5"
+    }
+   ],
+   "fileName": "./test/benchmark_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e149c516cb98b0bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "72d70abfe8bd71050b152137b160e6a1fd6afcb9"
+    }
+   ],
+   "fileName": "./test/clobber_memory_assembly_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-184cfbe3ba8afd4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5fe54ce3bad5cc5f2dcb4c6c6d9dfabc276be531"
+    }
+   ],
+   "fileName": "./test/commandlineflags_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-88467721269f3c81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9692224eef370f4a6659606a8661a29ff4312f1b"
+    }
+   ],
+   "fileName": "./test/complexity_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0fc4b167f8c2e895",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5985d84e8b0d63af8f74ad72c269144fa370e3ea"
+    }
+   ],
+   "fileName": "./test/cxx03_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a4eaef49a8dd89c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6af4446e0fa5891375c87f8f6a4f24a2b626adea"
+    }
+   ],
+   "fileName": "./test/diagnostics_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0f92e57b72e4957f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15e0b481aaa039b3409ea123f68fed9acad70abe"
+    }
+   ],
+   "fileName": "./test/display_aggregates_only_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-7956a3d2ce7f6819",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b7196bd76fec1f75e58c25916397f54f6fdd537"
+    }
+   ],
+   "fileName": "./test/donotoptimize_assembly_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-864c30ede10f1b43",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "61d8499cdaf7f53da57a98b1adef894fd8cde98d"
+    }
+   ],
+   "fileName": "./test/donotoptimize_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-f007e6eb952344ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76eee1d93a7f8dbf52b06b1bf96abbfb92d1ec9d"
+    }
+   ],
+   "fileName": "./test/filter_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8f3565297fd24f81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4eb2cf4712b1df56f79594ff6970719a0b8a94c1"
+    }
+   ],
+   "fileName": "./test/fixture_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-df8158bbfad08753",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f21863836ca2941a9da6487b3c7a71f998a5cb7f"
+    }
+   ],
+   "fileName": "./test/internal_threading_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-d34274d2ad90a530",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d3d86db00a9148de15ad05c7c575165de2732e3"
+    }
+   ],
+   "fileName": "./test/link_main_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-8571d604057708f0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "82eb8af5af0b41ebbca4ca61e457b479107833ba"
+    }
+   ],
+   "fileName": "./test/map_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-d2c74311afd7ce1d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e2bbaeabb60972d92f3c388cdb520899bca54bdc"
+    }
+   ],
+   "fileName": "./test/memory_manager_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-049a97b90ff5d11c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c889e1ab08d12e9970fa6bb97e8c7620bd655e4"
+    }
+   ],
+   "fileName": "./test/multiple_ranges_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-6d9696e94f4571b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "223368a418faec678206eb3f958166c6bee5aedc"
+    }
+   ],
+   "fileName": "./test/options_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-dff75c6139bfb342",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d564c628e5d4905253bfc13a1bf0cba74861b99b"
+    }
+   ],
+   "fileName": "./test/output_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-d072967e8d209aaf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fcbcffe3cfd0e194087d737c06d64c094c2852c"
+    }
+   ],
+   "fileName": "./test/output_test_helper.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-6191ba978b644fa6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2294089301136363fa936aabcb580655317ac162"
+    }
+   ],
+   "fileName": "./test/perf_counters_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4536b95f88ca2c50",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "52415d850d22c53653d75bbc3c0f3275bda4d0e0"
+    }
+   ],
+   "fileName": "./test/perf_counters_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-c78a2093a4d78ee6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eb70e8cc0e1c90fdad0d205c422fb4966f8da312"
+    }
+   ],
+   "fileName": "./test/register_benchmark_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-a055960c3814a62d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b03ae4ed8a77238e5372f6493ade8493d8f56ad"
+    }
+   ],
+   "fileName": "./test/repetitions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-3d2912fe72991e81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cb0e8250cf3300fd40a57dc8510cf05c604db966"
+    }
+   ],
+   "fileName": "./test/report_aggregates_only_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-1d0b4d940d683aee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "515e67608baad1931227870cef07b0d1a71a3d83"
+    }
+   ],
+   "fileName": "./test/reporter_output_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-2848339a8b662b3a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d7239d948cab0e622211bb6bc758e9088d1e670"
+    }
+   ],
+   "fileName": "./test/skip_with_error_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-ba9fe78a573ad7c0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "94b5c56fc2a33ea27162399f4f1b0a099cde4411"
+    }
+   ],
+   "fileName": "./test/state_assembly_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-f390fa5224cbcdae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36f729c5f03aa315ff2b9052beb5784cf985fc0e"
+    }
+   ],
+   "fileName": "./test/statistics_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-6ad1cd0bf0aa6dbd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c3c9a0d6dd7c5cf2b4d4825d4d2fd0613711caea"
+    }
+   ],
+   "fileName": "./test/string_util_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-80aaa669cbd16568",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "956a6dffac8ed06db105ed3eeddcf3b8acac83c3"
+    }
+   ],
+   "fileName": "./test/templated_fixture_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-7ecd1da556c1eb4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b895a5fefa6192e4b16b3c457a293e05ecbb6e0e"
+    }
+   ],
+   "fileName": "./test/user_counters_tabular_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-b0c07032b05aadc1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45691b6ddcf839796dab74667b96b4af159fdebb"
+    }
+   ],
+   "fileName": "./test/user_counters_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-0a4ff5eb241c6da2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c726c53c9dd5df9724f01f4de2023de285794519"
+    }
+   ],
+   "fileName": "./test/user_counters_thousands_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4f33b963e18619e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d860626a9701cf311258d03c35e919793f3b6260"
+    }
+   ],
+   "fileName": "./tools/BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-1933c3d98c804f77",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d46f89b7db613946efadb503491aa2816bb8b1c"
+    }
+   ],
+   "fileName": "./tools/compare.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-04003abdc2db9451",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "06e6b53f87cacf5fbc4f1d33209909f064a140fa"
+    }
+   ],
+   "fileName": "./tools/gbench/Inputs/test1_run1.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-b880a2e8d5eaf99b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c0e697077e3222480e131728879bc2ce6aefd8f5"
+    }
+   ],
+   "fileName": "./tools/gbench/Inputs/test1_run2.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4fa4ad6b6ff33e8f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d2c75f6181ccafb407eda384800fa1970670ba5"
+    }
+   ],
+   "fileName": "./tools/gbench/Inputs/test2_run.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-974a78f55fef7fee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "093dd532a23f2ea309f3c50cfa4655157ac9b0a4"
+    }
+   ],
+   "fileName": "./tools/gbench/Inputs/test3_run0.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-27da252ad3d6e7c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4fc17ef7031f718fdd8313b7684e983cf71454e"
+    }
+   ],
+   "fileName": "./tools/gbench/Inputs/test3_run1.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-e46038fa37fef743",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "723b9fa1a38f08746f56620897ffcf48f387c599"
+    }
+   ],
+   "fileName": "./tools/gbench/Inputs/test4_run.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-2a3cb851acce5a34",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9d338cd7d20e84f59d68734b8117a17fcfab168"
+    }
+   ],
+   "fileName": "./tools/gbench/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-eca1996e0efd464a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a7959b0ddd9a7810ff17bebbfa3cbe3de7df40d7"
+    }
+   ],
+   "fileName": "./tools/gbench/report.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-7492600a9c05279e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1179a1b80cd3b43d85b817f176c051adff68b5b6"
+    }
+   ],
+   "fileName": "./tools/gbench/util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-4970485c01b8edee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3937440678561deff7ebc54f541fd27ce15fbfb"
+    }
+   ],
+   "fileName": "./tools/requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-upstream-f5dc7c0e22e0261b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9da322f883c5022e0b09b74cdbb6742fa420210b"
+    }
+   ],
+   "fileName": "./tools/strip_asm.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-01a718df87a96135",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "512e85bb44a3b95983017cf72f47483cf61516c4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.clang-format"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-565d40a190d34609",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f9950120b79d4f9895888d3af69ca6f0ec9b3d1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/.libcxx-setup.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a03585ab89eed5e0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9d1bf34433e27bf9e972e60a4602c9de75696481"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/ISSUE_TEMPLATE/bug_report.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-67c0231b0ea83057",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "227b7af320e236220ca9f8f06d2660269bdee33e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/ISSUE_TEMPLATE/feature_request.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a030fe7129d96ae6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f78900f12adfbc6d1a393354548f35502ea38e16"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/workflows/bazel.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e39881842ae9dc78",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9467735a9cdc2c501750901bef67eb541f6d1cc7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/workflows/build-and-test-perfcounters.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8b8be14a99b7f797",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36bde23014749f70c24714e6e49aa533320e98ff"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/workflows/build-and-test.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-7bfadd3082972524",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "130daf861ce7bbdc6fadfa0380dfbad8bcfc1f03"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/workflows/pylint.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-c7c75e3b91c61195",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39e04b801a93507eeedf1a118928bc9aa08f27ac"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/workflows/sanitizer.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-00d78ab4ce666731",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05f0dbfca4b11154fff108600785ad8ed68cc5ba"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.github/workflows/test_bindings.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b84896ea7f0113aacca6073b6d049546f8e00b7e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9fedeab00d775bed457bce1d47c8cdc7cb8cf4e9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-73f8abedbab7412a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5740ac5ca34297a0e25ef77712daecadcfe4665b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.ycm_extra_conf.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-dad57a4c245a8007",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "187e21d5e54cba058d02c47e2c1d07d4bfeffffa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./AUTHORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-acb67900dcb6d543",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c8fe978885ccb4a2a3b0df60e87e78394bf5cd8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a575482b6357ae610039325388ce5d7b9aa64da5"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork benchmark",
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7969547bf55ce4e480db23af1afd0a0fc1fc5ac2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3f454a98e586d1aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ec1172fee9e818dcf62a039dd40c55c58e04b606"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-c00c0afca84109e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5dafe1f88708fb4c930bc69754b577d36083591b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b8b815229aa8a61e483fb4ba0588b8b6c491890"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "046b9f827b18a1fafbae63fedd3c5fdf124d41bd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-703988282e63eeb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f04f61fb2a177bc1ab01d53441e269e8491b9f57"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./WORKSPACE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-cd089ae45ce870c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "882e95ba1a08b19efe12a117c80fedede072e4b3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./_config.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-43b9d80d1f50472e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a20c3a3547d02e229687329a98e955f3c7a94a9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./appveyor.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-30e10373d866c3bd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "663df96ca6d670eee5eec2eedc6e058b20ff28a7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-5b60106ab128dc05",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9da336dd477946378a23ac1189c6a1160dcedd48"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/build_defs.bzl"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a6411d3e3cf29c0a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "86c1b9a01e5f268d565bf9bb297b58348b83917a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/google_benchmark/BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e5eb327bde37ba0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f421e31baf4257dd08551f90c1e59e87a5e3907"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/google_benchmark/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-555f98a813419605",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "957e2401241caeff1f4ebd3d725baef9c8fcb812"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/google_benchmark/benchmark.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-635218f96489d82b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fd22704de500b0b36613472b5169a642020242b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/google_benchmark/example.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-38b640d497239db3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a3e6319f872907f90e1319ebe48e487e09bc84e4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/pybind11.BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3bc8b6344a4faded",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24c77ca6549c318e9a8bb0a1151299f72df01935"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/python_headers.BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-576ca3e14adf0e82",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cd6eeeb4c3086ae02ab03c77e746bc2682abd742"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./bindings/python/requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e714910481a58308",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0734ccc6b41fb589f4c2ebdb31a11a18ecbe79c3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/AddCXXCompilerFlag.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-fa30ebcdd53cbc3d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2f85d026e320e89b5173a71821ff285133ba579e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/CXXFeatureCheck.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-1ba3e4d7c2ae5bea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b035bb6a8d10354a24a473c52bc49835223f5edc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/Config.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-7f04b3be2ccddc30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "83086c7147b998c168740da24fa88350186e7972"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/GetGitVersion.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-fc074bc553984153",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b7670e4716bb7a661e329d9092e5addffaf9101"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/GoogleTest.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3e045e4ca867b87d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "382112f9d5136e635bae77115bf4de4d9bd7394c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/GoogleTest.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-b16254f21699aed4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6379731ef836733b858fb0ba9aa464236ad27994"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/Modules/FindLLVMAr.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-38271299096b2aef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df1fb8cc31e012dfc0e41268c3627e380cf933f1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/Modules/FindLLVMNm.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-2aa7bcf550e2c213",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d02572c27f8588cf7184ebaf5fd073895047776b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/Modules/FindLLVMRanLib.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-663a03cc8eb8c6a6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "de93223067d74f311e29c80abbd05090a191eaf0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/Modules/FindPFM.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-ca6aca94c5a95b96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5bc2f5332d67f3d552021305eddaf0677ed54340"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/benchmark.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-cc0807dc57ba0857",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dce1a4bb9d8b233682b4c600112f62f8efbe4afb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/gnu_posix_regex.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-fcb8c90c73e4f336",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d8d360104b2484e2b47a89ae601db34cdeaad1ed"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/llvm-toolchain.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8f8e07aba0c7d683",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1c56275d6447ab5d5321e399c61d2cbf5d11b0a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/posix_regex.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-2574d572cb392003",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e8ac0e942990d41939d65aee1f4df8ad3f8b476"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/split_list.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-442cbc3423c27d3a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d2082a4059c5ae36519a34c1379985691e83975"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/std_regex.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-01c09e116018c52b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70f304f244f510220bd74d4411f31a962d9c98e1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/steady_clock.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-68c963b4ca0c5251",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6cbf45c3b66e485ab684e77c75dc34a4c1d00cf7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cmake/thread_safety_attributes.cpp"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-94ec8fdb505fd851",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "600008744bd439ae816ecdd94ea2b7ee4b2d328f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./dependencies.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-f30fb32ea350472a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fa6b1886e446eaa1a1bfdfdf8f2721f497ac535"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/AssemblyTests.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0b0bc73f3732038f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e63cc95b8109155633243544e7396af491fdc507"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/_config.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-86f536b1f28199d9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fe0b7c02809fef1f4ada85cf5ad725ba8e8b1849"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/perf_counters.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-5a510cf9afc7e6d0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ffec36128c3281839baffec434c5e17d760ccbb4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/random_interleaving.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8187a4780485cdf3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b35968b103d8e55483a7216151c1b902147af4f8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/releasing.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-c5f47346a42500e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6fd349a2f85c031780538f6993f01eb697503cae"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./docs/tools.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-03aea7f6d798beba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "67b0f2ce4203d0fc1d0cc2422e59377c084fe033"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./include/benchmark/benchmark.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-19359a61ae2446b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4b33f7421b89b310152df6baa958dac6812bc9f1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8e2edce0d507e129",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36cdbb574f781e2be1562aa10b28633539f98c3a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./setup.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-631c8d07f5ea23b9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4b86184d2f3cca7dab7d67ae57b84b9efdbbf52"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-86ac2619ef42c8c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "994c48e96837c803e36ef3cef90f6acd571c7411"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/arraysize.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e03761d4e4fe156b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e23b62402c86e1f9b913ab0a07f5e19d6fd2c3d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-38b3bc07db655e6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1dd1230038b7540eb75bd1f05b7514a5a8377ffb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_api_internal.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-02959a04799987bd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7466b9f72fd1ca587dda40ca07aacdfdafc8f7db"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_api_internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-9e990d67c57b46aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35ce4868b612bde1d8bada59c9aa65aadfcde198"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a3d397786689bb96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8c7131f2231d30b3e4987a7804cfe9b73c64add2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_name.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-5fb0d3b799e0284f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d37d17d4a2d9ec4d5423959eae1db6a910abf3e3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_register.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-aecc00908b059123",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c538f27123e93e1767bf4411d71236401ecab2a0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_register.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-410cb5d655399f49",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1db3beb947916721046e72b5106404a1cb231630"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_runner.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-29a51bd3b4ddcbe4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aeb2ab64fd7a35a2384c6fe3adc0f2221bc3e2fc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/benchmark_runner.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0efb901394d1f62e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "81fcef0ba207156635e35abbd632b40a58c245fa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/check.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-d1797c9b1763a228",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f4a1e817755488aff14c54834d23c0b8ea62588"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/colorprint.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-060a36be22b7e216",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3abf35df3a95bce696205cb7f5cab857dfb64c44"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/colorprint.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8f9e62bbe2834e04",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "80f4b9ba84f0dc40e2c82da937cda24387419f9a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/commandlineflags.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-06ebaf0024a45064",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b866a513bedf2e8992ab0c5281b595c1af3a9ea6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/commandlineflags.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-6565458fb40df5b6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b0a293c361fb409022658245a1f35718d4432c0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/complexity.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-268ad9b316e6219a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d8644cafa2d113fc3c46097ec7ccf1ebdd27681a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/complexity.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-932ab0394c1c8bb5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "28ceef1d92fa98bc9cd7e2e7f892bbee3d24452c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/console_reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-abbbeb12ff3c5294",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b9e3d519e62224e7f29288f5c8212f9f48026dba"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/counter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-fd34b6369539911d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "856d8f33e5d87bfbd80fda44bc689ca49ec7151d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/counter.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-f607bc08f1d01aa7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "989db9d1fe74c67287676164ba47e55bf093a492"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/csv_reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0de168c447d7e743",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9eeb83571fab9e3ce11767059b25bae5924e99a3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/cycleclock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-cb4cc8491930811a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ab1944d01a531c6616248ade1418a725e9a64d7f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/internal_macros.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-86e4ca9c42eab62d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d154c838af4270313c613df827d1a7beefaa806"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/json_reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-62ad513e4a65c97c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "47a336adc2fe8ee701a473487f3dc195ba138261"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/log.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-7230f15475c06f91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eea252d994a9ea34c8a552324c86c7540c5fa5b6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/mutex.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3d5d6853a934a613",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ca4240baa133eba643da64dc6131e7a362f5925"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/perf_counters.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0ce1529ccea485ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b66d7b58586c9af730c557504a7eaeb1e0ae1722"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/perf_counters.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-783e5497d0549d63",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "44ff41b87c1f85ef1153e0c7b8e1108ba6ab85ad"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/re.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8bd549d87d8bb52e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "62d03e22b39b520aa827a2366a312e25516b173e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/reporter.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4fda7145901f220e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "485571cc2d4c900916866f725db6ab9f7d7d56f6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/sleep.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-51eb21035cbd8ad5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3e6ea40c1a40088228ff00c7ce8d69391b7e62d2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/sleep.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e657b75ffbae638e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20e61038517e8c3ff7b2813ad97b5ac60309e6cd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/statistics.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-65efcca6896db542",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a353e16afa5314b0944a3edb6feb14b9ad225865"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/statistics.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4109f02f81980d76",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ad5a47ed9e6ec69075405f6a3ff20b9123180cf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/string_util.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-5995944883798586",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2ac3af5b01860165c0c4b2eef2f0ff5ae2d3c8ad"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/string_util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4a691e0bc84a5f7a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dc6f7aced5a81d3902da4fea814a6209868f4555"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/sysinfo.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e5ee7a6b27c3a55a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e2ed4c582e47ddf5ee7af2f78c5b39662172e34"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/thread_manager.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3b2e8d68c6c95c31",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bfa7a81813616259a41be95641e5623811cc5663"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/thread_timer.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-22ccc8c60b9d5562",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b1d01b00717d3600d7506d87beba1675047e72d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/timers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-20a8a897619ed9fe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eca884df8ef434cb1aae3fca5ce4428d8f483879"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./src/timers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-91fa8cc90b00aaf0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6ff9fe8c1f0c216e937ecf7b4ba292edb02d602d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/AssemblyTests.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-b1a52dc61f040ca0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "090c0e8338d18ee8192c8b1c0cca585ba3bef1fc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/BUILD"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-d9577b84b013e0c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1205b2056d486af86881d6d930e5657d961f0d14"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a17049c61627711a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e19134be9e656d167c2f183b5c8d867ff2e9d8ea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/args_product_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3b8be761d6ed6073",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5bcad27050d043be64a53cae411de828b9e4b3fa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/basic_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-af1522ecd8702d09",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20888abdc0389740a68c0fd9ec81c94bc0d3f7c1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/benchmark_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e7ec2ea73023a279",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e627dd80c9945583d4f5c36d68a65d6dae577ef1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/benchmark_name_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-c12f2a64a366da6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "05b5d7e7826bb3b45afb7ca9505b69296a6aa882"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/benchmark_random_interleaving_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-d672fd50f3ba112f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "423b4effe61b23c4c92e55c56d5d82694833c2c5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/benchmark_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e149c516cb98b0bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "72d70abfe8bd71050b152137b160e6a1fd6afcb9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/clobber_memory_assembly_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-184cfbe3ba8afd4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5fe54ce3bad5cc5f2dcb4c6c6d9dfabc276be531"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/commandlineflags_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-88467721269f3c81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9692224eef370f4a6659606a8661a29ff4312f1b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/complexity_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0fc4b167f8c2e895",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5985d84e8b0d63af8f74ad72c269144fa370e3ea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/cxx03_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a4eaef49a8dd89c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6af4446e0fa5891375c87f8f6a4f24a2b626adea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/diagnostics_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0f92e57b72e4957f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15e0b481aaa039b3409ea123f68fed9acad70abe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/display_aggregates_only_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-7956a3d2ce7f6819",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b7196bd76fec1f75e58c25916397f54f6fdd537"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/donotoptimize_assembly_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-864c30ede10f1b43",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "61d8499cdaf7f53da57a98b1adef894fd8cde98d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/donotoptimize_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-f007e6eb952344ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76eee1d93a7f8dbf52b06b1bf96abbfb92d1ec9d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/filter_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8f3565297fd24f81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4eb2cf4712b1df56f79594ff6970719a0b8a94c1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/fixture_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-df8158bbfad08753",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f21863836ca2941a9da6487b3c7a71f998a5cb7f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/internal_threading_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-d34274d2ad90a530",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2d3d86db00a9148de15ad05c7c575165de2732e3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/link_main_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-8571d604057708f0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "82eb8af5af0b41ebbca4ca61e457b479107833ba"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/map_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-d2c74311afd7ce1d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e2bbaeabb60972d92f3c388cdb520899bca54bdc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/memory_manager_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-049a97b90ff5d11c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c889e1ab08d12e9970fa6bb97e8c7620bd655e4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/multiple_ranges_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-6d9696e94f4571b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "223368a418faec678206eb3f958166c6bee5aedc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/options_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-dff75c6139bfb342",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d564c628e5d4905253bfc13a1bf0cba74861b99b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/output_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-d072967e8d209aaf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2fcbcffe3cfd0e194087d737c06d64c094c2852c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/output_test_helper.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-6191ba978b644fa6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2294089301136363fa936aabcb580655317ac162"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/perf_counters_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4536b95f88ca2c50",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "52415d850d22c53653d75bbc3c0f3275bda4d0e0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/perf_counters_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-c78a2093a4d78ee6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eb70e8cc0e1c90fdad0d205c422fb4966f8da312"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/register_benchmark_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-a055960c3814a62d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b03ae4ed8a77238e5372f6493ade8493d8f56ad"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/repetitions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-3d2912fe72991e81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cb0e8250cf3300fd40a57dc8510cf05c604db966"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/report_aggregates_only_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-1d0b4d940d683aee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "515e67608baad1931227870cef07b0d1a71a3d83"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/reporter_output_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-2848339a8b662b3a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d7239d948cab0e622211bb6bc758e9088d1e670"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/skip_with_error_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-ba9fe78a573ad7c0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "94b5c56fc2a33ea27162399f4f1b0a099cde4411"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/state_assembly_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-f390fa5224cbcdae",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "36f729c5f03aa315ff2b9052beb5784cf985fc0e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/statistics_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-6ad1cd0bf0aa6dbd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c3c9a0d6dd7c5cf2b4d4825d4d2fd0613711caea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/string_util_gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-80aaa669cbd16568",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "956a6dffac8ed06db105ed3eeddcf3b8acac83c3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/templated_fixture_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-7ecd1da556c1eb4f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b895a5fefa6192e4b16b3c457a293e05ecbb6e0e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/user_counters_tabular_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-b0c07032b05aadc1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45691b6ddcf839796dab74667b96b4af159fdebb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/user_counters_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-0a4ff5eb241c6da2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c726c53c9dd5df9724f01f4de2023de285794519"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./test/user_counters_thousands_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4f33b963e18619e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d860626a9701cf311258d03c35e919793f3b6260"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-1933c3d98c804f77",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d46f89b7db613946efadb503491aa2816bb8b1c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/compare.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-04003abdc2db9451",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "06e6b53f87cacf5fbc4f1d33209909f064a140fa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/Inputs/test1_run1.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-b880a2e8d5eaf99b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c0e697077e3222480e131728879bc2ce6aefd8f5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/Inputs/test1_run2.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4fa4ad6b6ff33e8f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8d2c75f6181ccafb407eda384800fa1970670ba5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/Inputs/test2_run.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-974a78f55fef7fee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "093dd532a23f2ea309f3c50cfa4655157ac9b0a4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/Inputs/test3_run0.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-27da252ad3d6e7c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4fc17ef7031f718fdd8313b7684e983cf71454e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/Inputs/test3_run1.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-e46038fa37fef743",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "723b9fa1a38f08746f56620897ffcf48f387c599"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/Inputs/test4_run.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-2a3cb851acce5a34",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9d338cd7d20e84f59d68734b8117a17fcfab168"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-eca1996e0efd464a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a7959b0ddd9a7810ff17bebbfa3cbe3de7df40d7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/report.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-7492600a9c05279e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1179a1b80cd3b43d85b817f176c051adff68b5b6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/gbench/util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-4970485c01b8edee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b3937440678561deff7ebc54f541fd27ce15fbfb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-benchmark-open-ddk-f5dc7c0e22e0261b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9da322f883c5022e0b09b74cdbb6742fa420210b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./tools/strip_asm.py"
+  }
+ ],
+ "name": "benchmark-e991355c",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-benchmark-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/benchmark); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/google/benchmark@e991355c02b93fe17713efe04cbc2e278e00fdbd",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/google/benchmark@e991355c02b93fe17713efe04cbc2e278e00fdbd",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-benchmark-upstream-01a718df87a96135",
+    "SPDXRef-File-benchmark-upstream-565d40a190d34609",
+    "SPDXRef-File-benchmark-upstream-a03585ab89eed5e0",
+    "SPDXRef-File-benchmark-upstream-67c0231b0ea83057",
+    "SPDXRef-File-benchmark-upstream-a030fe7129d96ae6",
+    "SPDXRef-File-benchmark-upstream-e39881842ae9dc78",
+    "SPDXRef-File-benchmark-upstream-8b8be14a99b7f797",
+    "SPDXRef-File-benchmark-upstream-7bfadd3082972524",
+    "SPDXRef-File-benchmark-upstream-c7c75e3b91c61195",
+    "SPDXRef-File-benchmark-upstream-00d78ab4ce666731",
+    "SPDXRef-File-benchmark-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-benchmark-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-benchmark-upstream-73f8abedbab7412a",
+    "SPDXRef-File-benchmark-upstream-dad57a4c245a8007",
+    "SPDXRef-File-benchmark-upstream-acb67900dcb6d543",
+    "SPDXRef-File-benchmark-upstream-9a2aa4db38d3115e",
+    "SPDXRef-File-benchmark-upstream-3f454a98e586d1aa",
+    "SPDXRef-File-benchmark-upstream-c00c0afca84109e3",
+    "SPDXRef-File-benchmark-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-benchmark-upstream-8ec9a00bfd09b319",
+    "SPDXRef-File-benchmark-upstream-703988282e63eeb0",
+    "SPDXRef-File-benchmark-upstream-cd089ae45ce870c4",
+    "SPDXRef-File-benchmark-upstream-43b9d80d1f50472e",
+    "SPDXRef-File-benchmark-upstream-30e10373d866c3bd",
+    "SPDXRef-File-benchmark-upstream-5b60106ab128dc05",
+    "SPDXRef-File-benchmark-upstream-a6411d3e3cf29c0a",
+    "SPDXRef-File-benchmark-upstream-e5eb327bde37ba0f",
+    "SPDXRef-File-benchmark-upstream-555f98a813419605",
+    "SPDXRef-File-benchmark-upstream-635218f96489d82b",
+    "SPDXRef-File-benchmark-upstream-38b640d497239db3",
+    "SPDXRef-File-benchmark-upstream-3bc8b6344a4faded",
+    "SPDXRef-File-benchmark-upstream-576ca3e14adf0e82",
+    "SPDXRef-File-benchmark-upstream-e714910481a58308",
+    "SPDXRef-File-benchmark-upstream-fa30ebcdd53cbc3d",
+    "SPDXRef-File-benchmark-upstream-1ba3e4d7c2ae5bea",
+    "SPDXRef-File-benchmark-upstream-7f04b3be2ccddc30",
+    "SPDXRef-File-benchmark-upstream-fc074bc553984153",
+    "SPDXRef-File-benchmark-upstream-3e045e4ca867b87d",
+    "SPDXRef-File-benchmark-upstream-b16254f21699aed4",
+    "SPDXRef-File-benchmark-upstream-38271299096b2aef",
+    "SPDXRef-File-benchmark-upstream-2aa7bcf550e2c213",
+    "SPDXRef-File-benchmark-upstream-663a03cc8eb8c6a6",
+    "SPDXRef-File-benchmark-upstream-ca6aca94c5a95b96",
+    "SPDXRef-File-benchmark-upstream-cc0807dc57ba0857",
+    "SPDXRef-File-benchmark-upstream-fcb8c90c73e4f336",
+    "SPDXRef-File-benchmark-upstream-8f8e07aba0c7d683",
+    "SPDXRef-File-benchmark-upstream-2574d572cb392003",
+    "SPDXRef-File-benchmark-upstream-442cbc3423c27d3a",
+    "SPDXRef-File-benchmark-upstream-01c09e116018c52b",
+    "SPDXRef-File-benchmark-upstream-68c963b4ca0c5251",
+    "SPDXRef-File-benchmark-upstream-94ec8fdb505fd851",
+    "SPDXRef-File-benchmark-upstream-f30fb32ea350472a",
+    "SPDXRef-File-benchmark-upstream-0b0bc73f3732038f",
+    "SPDXRef-File-benchmark-upstream-86f536b1f28199d9",
+    "SPDXRef-File-benchmark-upstream-5a510cf9afc7e6d0",
+    "SPDXRef-File-benchmark-upstream-8187a4780485cdf3",
+    "SPDXRef-File-benchmark-upstream-c5f47346a42500e8",
+    "SPDXRef-File-benchmark-upstream-03aea7f6d798beba",
+    "SPDXRef-File-benchmark-upstream-19359a61ae2446b5",
+    "SPDXRef-File-benchmark-upstream-8e2edce0d507e129",
+    "SPDXRef-File-benchmark-upstream-631c8d07f5ea23b9",
+    "SPDXRef-File-benchmark-upstream-86ac2619ef42c8c9",
+    "SPDXRef-File-benchmark-upstream-e03761d4e4fe156b",
+    "SPDXRef-File-benchmark-upstream-38b3bc07db655e6d",
+    "SPDXRef-File-benchmark-upstream-02959a04799987bd",
+    "SPDXRef-File-benchmark-upstream-9e990d67c57b46aa",
+    "SPDXRef-File-benchmark-upstream-a3d397786689bb96",
+    "SPDXRef-File-benchmark-upstream-5fb0d3b799e0284f",
+    "SPDXRef-File-benchmark-upstream-aecc00908b059123",
+    "SPDXRef-File-benchmark-upstream-410cb5d655399f49",
+    "SPDXRef-File-benchmark-upstream-29a51bd3b4ddcbe4",
+    "SPDXRef-File-benchmark-upstream-0efb901394d1f62e",
+    "SPDXRef-File-benchmark-upstream-d1797c9b1763a228",
+    "SPDXRef-File-benchmark-upstream-060a36be22b7e216",
+    "SPDXRef-File-benchmark-upstream-8f9e62bbe2834e04",
+    "SPDXRef-File-benchmark-upstream-06ebaf0024a45064",
+    "SPDXRef-File-benchmark-upstream-6565458fb40df5b6",
+    "SPDXRef-File-benchmark-upstream-268ad9b316e6219a",
+    "SPDXRef-File-benchmark-upstream-932ab0394c1c8bb5",
+    "SPDXRef-File-benchmark-upstream-abbbeb12ff3c5294",
+    "SPDXRef-File-benchmark-upstream-fd34b6369539911d",
+    "SPDXRef-File-benchmark-upstream-f607bc08f1d01aa7",
+    "SPDXRef-File-benchmark-upstream-0de168c447d7e743",
+    "SPDXRef-File-benchmark-upstream-cb4cc8491930811a",
+    "SPDXRef-File-benchmark-upstream-86e4ca9c42eab62d",
+    "SPDXRef-File-benchmark-upstream-62ad513e4a65c97c",
+    "SPDXRef-File-benchmark-upstream-7230f15475c06f91",
+    "SPDXRef-File-benchmark-upstream-3d5d6853a934a613",
+    "SPDXRef-File-benchmark-upstream-0ce1529ccea485ca",
+    "SPDXRef-File-benchmark-upstream-783e5497d0549d63",
+    "SPDXRef-File-benchmark-upstream-8bd549d87d8bb52e",
+    "SPDXRef-File-benchmark-upstream-4fda7145901f220e",
+    "SPDXRef-File-benchmark-upstream-51eb21035cbd8ad5",
+    "SPDXRef-File-benchmark-upstream-e657b75ffbae638e",
+    "SPDXRef-File-benchmark-upstream-65efcca6896db542",
+    "SPDXRef-File-benchmark-upstream-4109f02f81980d76",
+    "SPDXRef-File-benchmark-upstream-5995944883798586",
+    "SPDXRef-File-benchmark-upstream-4a691e0bc84a5f7a",
+    "SPDXRef-File-benchmark-upstream-e5ee7a6b27c3a55a",
+    "SPDXRef-File-benchmark-upstream-3b2e8d68c6c95c31",
+    "SPDXRef-File-benchmark-upstream-22ccc8c60b9d5562",
+    "SPDXRef-File-benchmark-upstream-20a8a897619ed9fe",
+    "SPDXRef-File-benchmark-upstream-91fa8cc90b00aaf0",
+    "SPDXRef-File-benchmark-upstream-b1a52dc61f040ca0",
+    "SPDXRef-File-benchmark-upstream-d9577b84b013e0c4",
+    "SPDXRef-File-benchmark-upstream-a17049c61627711a",
+    "SPDXRef-File-benchmark-upstream-3b8be761d6ed6073",
+    "SPDXRef-File-benchmark-upstream-af1522ecd8702d09",
+    "SPDXRef-File-benchmark-upstream-e7ec2ea73023a279",
+    "SPDXRef-File-benchmark-upstream-c12f2a64a366da6d",
+    "SPDXRef-File-benchmark-upstream-d672fd50f3ba112f",
+    "SPDXRef-File-benchmark-upstream-e149c516cb98b0bb",
+    "SPDXRef-File-benchmark-upstream-184cfbe3ba8afd4f",
+    "SPDXRef-File-benchmark-upstream-88467721269f3c81",
+    "SPDXRef-File-benchmark-upstream-0fc4b167f8c2e895",
+    "SPDXRef-File-benchmark-upstream-a4eaef49a8dd89c5",
+    "SPDXRef-File-benchmark-upstream-0f92e57b72e4957f",
+    "SPDXRef-File-benchmark-upstream-7956a3d2ce7f6819",
+    "SPDXRef-File-benchmark-upstream-864c30ede10f1b43",
+    "SPDXRef-File-benchmark-upstream-f007e6eb952344ef",
+    "SPDXRef-File-benchmark-upstream-8f3565297fd24f81",
+    "SPDXRef-File-benchmark-upstream-df8158bbfad08753",
+    "SPDXRef-File-benchmark-upstream-d34274d2ad90a530",
+    "SPDXRef-File-benchmark-upstream-8571d604057708f0",
+    "SPDXRef-File-benchmark-upstream-d2c74311afd7ce1d",
+    "SPDXRef-File-benchmark-upstream-049a97b90ff5d11c",
+    "SPDXRef-File-benchmark-upstream-6d9696e94f4571b1",
+    "SPDXRef-File-benchmark-upstream-dff75c6139bfb342",
+    "SPDXRef-File-benchmark-upstream-d072967e8d209aaf",
+    "SPDXRef-File-benchmark-upstream-6191ba978b644fa6",
+    "SPDXRef-File-benchmark-upstream-4536b95f88ca2c50",
+    "SPDXRef-File-benchmark-upstream-c78a2093a4d78ee6",
+    "SPDXRef-File-benchmark-upstream-a055960c3814a62d",
+    "SPDXRef-File-benchmark-upstream-3d2912fe72991e81",
+    "SPDXRef-File-benchmark-upstream-1d0b4d940d683aee",
+    "SPDXRef-File-benchmark-upstream-2848339a8b662b3a",
+    "SPDXRef-File-benchmark-upstream-ba9fe78a573ad7c0",
+    "SPDXRef-File-benchmark-upstream-f390fa5224cbcdae",
+    "SPDXRef-File-benchmark-upstream-6ad1cd0bf0aa6dbd",
+    "SPDXRef-File-benchmark-upstream-80aaa669cbd16568",
+    "SPDXRef-File-benchmark-upstream-7ecd1da556c1eb4f",
+    "SPDXRef-File-benchmark-upstream-b0c07032b05aadc1",
+    "SPDXRef-File-benchmark-upstream-0a4ff5eb241c6da2",
+    "SPDXRef-File-benchmark-upstream-4f33b963e18619e6",
+    "SPDXRef-File-benchmark-upstream-1933c3d98c804f77",
+    "SPDXRef-File-benchmark-upstream-04003abdc2db9451",
+    "SPDXRef-File-benchmark-upstream-b880a2e8d5eaf99b",
+    "SPDXRef-File-benchmark-upstream-4fa4ad6b6ff33e8f",
+    "SPDXRef-File-benchmark-upstream-974a78f55fef7fee",
+    "SPDXRef-File-benchmark-upstream-27da252ad3d6e7c9",
+    "SPDXRef-File-benchmark-upstream-e46038fa37fef743",
+    "SPDXRef-File-benchmark-upstream-2a3cb851acce5a34",
+    "SPDXRef-File-benchmark-upstream-eca1996e0efd464a",
+    "SPDXRef-File-benchmark-upstream-7492600a9c05279e",
+    "SPDXRef-File-benchmark-upstream-4970485c01b8edee",
+    "SPDXRef-File-benchmark-upstream-f5dc7c0e22e0261b"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "Apache-2.0",
+   "name": "benchmark",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "5d6f2be63f1e9cf090b57388b1e3d7bf5ea26f9a"
+   },
+   "supplier": "Organization: google",
+   "versionInfo": "e991355c"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-benchmark-open-ddk",
+   "comment": "As open-ddk ships it at third_party/benchmark. the fork benchmark (beside open-ddk; its submodule), branch nebula at bfd5cc2b88e3dd74604acad92add2740dc9f14d6: upstream e991355c02b93fe17713efe04cbc2e278e00fdbd and GRT's 1 commit(s), which add, change or remove 1 file(s): BUILD.gn",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-benchmark-open-ddk-01a718df87a96135",
+    "SPDXRef-File-benchmark-open-ddk-565d40a190d34609",
+    "SPDXRef-File-benchmark-open-ddk-a03585ab89eed5e0",
+    "SPDXRef-File-benchmark-open-ddk-67c0231b0ea83057",
+    "SPDXRef-File-benchmark-open-ddk-a030fe7129d96ae6",
+    "SPDXRef-File-benchmark-open-ddk-e39881842ae9dc78",
+    "SPDXRef-File-benchmark-open-ddk-8b8be14a99b7f797",
+    "SPDXRef-File-benchmark-open-ddk-7bfadd3082972524",
+    "SPDXRef-File-benchmark-open-ddk-c7c75e3b91c61195",
+    "SPDXRef-File-benchmark-open-ddk-00d78ab4ce666731",
+    "SPDXRef-File-benchmark-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-benchmark-open-ddk-dea01dd89a3b6028",
+    "SPDXRef-File-benchmark-open-ddk-73f8abedbab7412a",
+    "SPDXRef-File-benchmark-open-ddk-dad57a4c245a8007",
+    "SPDXRef-File-benchmark-open-ddk-acb67900dcb6d543",
+    "SPDXRef-File-benchmark-open-ddk-f1f3ef82935a010e",
+    "SPDXRef-File-benchmark-open-ddk-9a2aa4db38d3115e",
+    "SPDXRef-File-benchmark-open-ddk-3f454a98e586d1aa",
+    "SPDXRef-File-benchmark-open-ddk-c00c0afca84109e3",
+    "SPDXRef-File-benchmark-open-ddk-0398ccd0f49298b1",
+    "SPDXRef-File-benchmark-open-ddk-8ec9a00bfd09b319",
+    "SPDXRef-File-benchmark-open-ddk-703988282e63eeb0",
+    "SPDXRef-File-benchmark-open-ddk-cd089ae45ce870c4",
+    "SPDXRef-File-benchmark-open-ddk-43b9d80d1f50472e",
+    "SPDXRef-File-benchmark-open-ddk-30e10373d866c3bd",
+    "SPDXRef-File-benchmark-open-ddk-5b60106ab128dc05",
+    "SPDXRef-File-benchmark-open-ddk-a6411d3e3cf29c0a",
+    "SPDXRef-File-benchmark-open-ddk-e5eb327bde37ba0f",
+    "SPDXRef-File-benchmark-open-ddk-555f98a813419605",
+    "SPDXRef-File-benchmark-open-ddk-635218f96489d82b",
+    "SPDXRef-File-benchmark-open-ddk-38b640d497239db3",
+    "SPDXRef-File-benchmark-open-ddk-3bc8b6344a4faded",
+    "SPDXRef-File-benchmark-open-ddk-576ca3e14adf0e82",
+    "SPDXRef-File-benchmark-open-ddk-e714910481a58308",
+    "SPDXRef-File-benchmark-open-ddk-fa30ebcdd53cbc3d",
+    "SPDXRef-File-benchmark-open-ddk-1ba3e4d7c2ae5bea",
+    "SPDXRef-File-benchmark-open-ddk-7f04b3be2ccddc30",
+    "SPDXRef-File-benchmark-open-ddk-fc074bc553984153",
+    "SPDXRef-File-benchmark-open-ddk-3e045e4ca867b87d",
+    "SPDXRef-File-benchmark-open-ddk-b16254f21699aed4",
+    "SPDXRef-File-benchmark-open-ddk-38271299096b2aef",
+    "SPDXRef-File-benchmark-open-ddk-2aa7bcf550e2c213",
+    "SPDXRef-File-benchmark-open-ddk-663a03cc8eb8c6a6",
+    "SPDXRef-File-benchmark-open-ddk-ca6aca94c5a95b96",
+    "SPDXRef-File-benchmark-open-ddk-cc0807dc57ba0857",
+    "SPDXRef-File-benchmark-open-ddk-fcb8c90c73e4f336",
+    "SPDXRef-File-benchmark-open-ddk-8f8e07aba0c7d683",
+    "SPDXRef-File-benchmark-open-ddk-2574d572cb392003",
+    "SPDXRef-File-benchmark-open-ddk-442cbc3423c27d3a",
+    "SPDXRef-File-benchmark-open-ddk-01c09e116018c52b",
+    "SPDXRef-File-benchmark-open-ddk-68c963b4ca0c5251",
+    "SPDXRef-File-benchmark-open-ddk-94ec8fdb505fd851",
+    "SPDXRef-File-benchmark-open-ddk-f30fb32ea350472a",
+    "SPDXRef-File-benchmark-open-ddk-0b0bc73f3732038f",
+    "SPDXRef-File-benchmark-open-ddk-86f536b1f28199d9",
+    "SPDXRef-File-benchmark-open-ddk-5a510cf9afc7e6d0",
+    "SPDXRef-File-benchmark-open-ddk-8187a4780485cdf3",
+    "SPDXRef-File-benchmark-open-ddk-c5f47346a42500e8",
+    "SPDXRef-File-benchmark-open-ddk-03aea7f6d798beba",
+    "SPDXRef-File-benchmark-open-ddk-19359a61ae2446b5",
+    "SPDXRef-File-benchmark-open-ddk-8e2edce0d507e129",
+    "SPDXRef-File-benchmark-open-ddk-631c8d07f5ea23b9",
+    "SPDXRef-File-benchmark-open-ddk-86ac2619ef42c8c9",
+    "SPDXRef-File-benchmark-open-ddk-e03761d4e4fe156b",
+    "SPDXRef-File-benchmark-open-ddk-38b3bc07db655e6d",
+    "SPDXRef-File-benchmark-open-ddk-02959a04799987bd",
+    "SPDXRef-File-benchmark-open-ddk-9e990d67c57b46aa",
+    "SPDXRef-File-benchmark-open-ddk-a3d397786689bb96",
+    "SPDXRef-File-benchmark-open-ddk-5fb0d3b799e0284f",
+    "SPDXRef-File-benchmark-open-ddk-aecc00908b059123",
+    "SPDXRef-File-benchmark-open-ddk-410cb5d655399f49",
+    "SPDXRef-File-benchmark-open-ddk-29a51bd3b4ddcbe4",
+    "SPDXRef-File-benchmark-open-ddk-0efb901394d1f62e",
+    "SPDXRef-File-benchmark-open-ddk-d1797c9b1763a228",
+    "SPDXRef-File-benchmark-open-ddk-060a36be22b7e216",
+    "SPDXRef-File-benchmark-open-ddk-8f9e62bbe2834e04",
+    "SPDXRef-File-benchmark-open-ddk-06ebaf0024a45064",
+    "SPDXRef-File-benchmark-open-ddk-6565458fb40df5b6",
+    "SPDXRef-File-benchmark-open-ddk-268ad9b316e6219a",
+    "SPDXRef-File-benchmark-open-ddk-932ab0394c1c8bb5",
+    "SPDXRef-File-benchmark-open-ddk-abbbeb12ff3c5294",
+    "SPDXRef-File-benchmark-open-ddk-fd34b6369539911d",
+    "SPDXRef-File-benchmark-open-ddk-f607bc08f1d01aa7",
+    "SPDXRef-File-benchmark-open-ddk-0de168c447d7e743",
+    "SPDXRef-File-benchmark-open-ddk-cb4cc8491930811a",
+    "SPDXRef-File-benchmark-open-ddk-86e4ca9c42eab62d",
+    "SPDXRef-File-benchmark-open-ddk-62ad513e4a65c97c",
+    "SPDXRef-File-benchmark-open-ddk-7230f15475c06f91",
+    "SPDXRef-File-benchmark-open-ddk-3d5d6853a934a613",
+    "SPDXRef-File-benchmark-open-ddk-0ce1529ccea485ca",
+    "SPDXRef-File-benchmark-open-ddk-783e5497d0549d63",
+    "SPDXRef-File-benchmark-open-ddk-8bd549d87d8bb52e",
+    "SPDXRef-File-benchmark-open-ddk-4fda7145901f220e",
+    "SPDXRef-File-benchmark-open-ddk-51eb21035cbd8ad5",
+    "SPDXRef-File-benchmark-open-ddk-e657b75ffbae638e",
+    "SPDXRef-File-benchmark-open-ddk-65efcca6896db542",
+    "SPDXRef-File-benchmark-open-ddk-4109f02f81980d76",
+    "SPDXRef-File-benchmark-open-ddk-5995944883798586",
+    "SPDXRef-File-benchmark-open-ddk-4a691e0bc84a5f7a",
+    "SPDXRef-File-benchmark-open-ddk-e5ee7a6b27c3a55a",
+    "SPDXRef-File-benchmark-open-ddk-3b2e8d68c6c95c31",
+    "SPDXRef-File-benchmark-open-ddk-22ccc8c60b9d5562",
+    "SPDXRef-File-benchmark-open-ddk-20a8a897619ed9fe",
+    "SPDXRef-File-benchmark-open-ddk-91fa8cc90b00aaf0",
+    "SPDXRef-File-benchmark-open-ddk-b1a52dc61f040ca0",
+    "SPDXRef-File-benchmark-open-ddk-d9577b84b013e0c4",
+    "SPDXRef-File-benchmark-open-ddk-a17049c61627711a",
+    "SPDXRef-File-benchmark-open-ddk-3b8be761d6ed6073",
+    "SPDXRef-File-benchmark-open-ddk-af1522ecd8702d09",
+    "SPDXRef-File-benchmark-open-ddk-e7ec2ea73023a279",
+    "SPDXRef-File-benchmark-open-ddk-c12f2a64a366da6d",
+    "SPDXRef-File-benchmark-open-ddk-d672fd50f3ba112f",
+    "SPDXRef-File-benchmark-open-ddk-e149c516cb98b0bb",
+    "SPDXRef-File-benchmark-open-ddk-184cfbe3ba8afd4f",
+    "SPDXRef-File-benchmark-open-ddk-88467721269f3c81",
+    "SPDXRef-File-benchmark-open-ddk-0fc4b167f8c2e895",
+    "SPDXRef-File-benchmark-open-ddk-a4eaef49a8dd89c5",
+    "SPDXRef-File-benchmark-open-ddk-0f92e57b72e4957f",
+    "SPDXRef-File-benchmark-open-ddk-7956a3d2ce7f6819",
+    "SPDXRef-File-benchmark-open-ddk-864c30ede10f1b43",
+    "SPDXRef-File-benchmark-open-ddk-f007e6eb952344ef",
+    "SPDXRef-File-benchmark-open-ddk-8f3565297fd24f81",
+    "SPDXRef-File-benchmark-open-ddk-df8158bbfad08753",
+    "SPDXRef-File-benchmark-open-ddk-d34274d2ad90a530",
+    "SPDXRef-File-benchmark-open-ddk-8571d604057708f0",
+    "SPDXRef-File-benchmark-open-ddk-d2c74311afd7ce1d",
+    "SPDXRef-File-benchmark-open-ddk-049a97b90ff5d11c",
+    "SPDXRef-File-benchmark-open-ddk-6d9696e94f4571b1",
+    "SPDXRef-File-benchmark-open-ddk-dff75c6139bfb342",
+    "SPDXRef-File-benchmark-open-ddk-d072967e8d209aaf",
+    "SPDXRef-File-benchmark-open-ddk-6191ba978b644fa6",
+    "SPDXRef-File-benchmark-open-ddk-4536b95f88ca2c50",
+    "SPDXRef-File-benchmark-open-ddk-c78a2093a4d78ee6",
+    "SPDXRef-File-benchmark-open-ddk-a055960c3814a62d",
+    "SPDXRef-File-benchmark-open-ddk-3d2912fe72991e81",
+    "SPDXRef-File-benchmark-open-ddk-1d0b4d940d683aee",
+    "SPDXRef-File-benchmark-open-ddk-2848339a8b662b3a",
+    "SPDXRef-File-benchmark-open-ddk-ba9fe78a573ad7c0",
+    "SPDXRef-File-benchmark-open-ddk-f390fa5224cbcdae",
+    "SPDXRef-File-benchmark-open-ddk-6ad1cd0bf0aa6dbd",
+    "SPDXRef-File-benchmark-open-ddk-80aaa669cbd16568",
+    "SPDXRef-File-benchmark-open-ddk-7ecd1da556c1eb4f",
+    "SPDXRef-File-benchmark-open-ddk-b0c07032b05aadc1",
+    "SPDXRef-File-benchmark-open-ddk-0a4ff5eb241c6da2",
+    "SPDXRef-File-benchmark-open-ddk-4f33b963e18619e6",
+    "SPDXRef-File-benchmark-open-ddk-1933c3d98c804f77",
+    "SPDXRef-File-benchmark-open-ddk-04003abdc2db9451",
+    "SPDXRef-File-benchmark-open-ddk-b880a2e8d5eaf99b",
+    "SPDXRef-File-benchmark-open-ddk-4fa4ad6b6ff33e8f",
+    "SPDXRef-File-benchmark-open-ddk-974a78f55fef7fee",
+    "SPDXRef-File-benchmark-open-ddk-27da252ad3d6e7c9",
+    "SPDXRef-File-benchmark-open-ddk-e46038fa37fef743",
+    "SPDXRef-File-benchmark-open-ddk-2a3cb851acce5a34",
+    "SPDXRef-File-benchmark-open-ddk-eca1996e0efd464a",
+    "SPDXRef-File-benchmark-open-ddk-7492600a9c05279e",
+    "SPDXRef-File-benchmark-open-ddk-4970485c01b8edee",
+    "SPDXRef-File-benchmark-open-ddk-f5dc7c0e22e0261b"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "Apache-2.0",
+   "name": "benchmark (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "5bf4674665e2845c1782fcabf009dbe20af0d059"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "e991355c+bfd5cc2b88e3"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-benchmark-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-benchmark-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-benchmark-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-benchmark-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

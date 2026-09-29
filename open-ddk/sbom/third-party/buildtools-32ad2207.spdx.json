@@ -1,0 +1,508 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/buildtools-32ad2207-32ad2207c1da738122357a82ad414dec0d5ca6b9",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-e9a1629aa39320a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a60ec5bcc65104b2e62dd52600af56e84ab1a05"
+    }
+   ],
+   "fileName": "./.cipd_version"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8504e7c3df81f2c715fdaa4cff91b2c94e7f8fc2"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-dad57a4c245a8007",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c172b250f9fc6c58403822284ebbfe16ee8b868d"
+    }
+   ],
+   "fileName": "./AUTHORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5fa5aa1d7640e642d1c7c13db47e5972bcd67f1"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-9fed2aef933ddf64",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7b1e9b087d71a17f842cb611849a3212fa46d01"
+    }
+   ],
+   "fileName": "./PATENTS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fced961e06fd339d4b572bc57d66d67913213f0"
+    }
+   ],
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-c01c71cd7181ab66",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6531f8e54c398134eb43041b1ba1297f156a05b5"
+    }
+   ],
+   "fileName": "./cipd"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-8528c8335e43f1a1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0aaecb60c37ab10c524a4facbcb25849aeb9cf08"
+    }
+   ],
+   "fileName": "./download.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-1e4b6345b6b04c4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4c5e05babb6f0c1a5fb6dd12746d793af6d9615"
+    }
+   ],
+   "fileName": "./exec_tool.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-95fef27a84f39d51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24875904a53b15b295b8172f1e6cf973952519be"
+    }
+   ],
+   "fileName": "./fuchsia.ensure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-d4f8341558d545ad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b56431d9e9f936d3f064b140876b6fb6a7be75f"
+    }
+   ],
+   "fileName": "./gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-1ec558a60b5dda24",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3234710bc2804db361275b3efe24afa1487f01ce"
+    }
+   ],
+   "fileName": "./go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-473df75e306bfd8f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b56431d9e9f936d3f064b140876b6fb6a7be75f"
+    }
+   ],
+   "fileName": "./godepfile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-9ca79a3490ea562f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f0ecc0e1cd37b63bded9deb4c3009f31a8a6770"
+    }
+   ],
+   "fileName": "./manifest/buildtools"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-88cf20284d95b267",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "06b04209b32e44f6cee7f7f8d785fb569a89a7d4"
+    }
+   ],
+   "fileName": "./manifest/minimal"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-04a4fce796c2cf39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b56431d9e9f936d3f064b140876b6fb6a7be75f"
+    }
+   ],
+   "fileName": "./ninja"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-efe50602faea7a59",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5d18af1bfa2e05bbd391bd4e5e637a4e3d90212"
+    }
+   ],
+   "fileName": "./update.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-upstream-97e60ff013e1ffbe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cd5abf5367cd8b51d94542a5b2a1adc19136983e"
+    }
+   ],
+   "fileName": "./vars.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-e9a1629aa39320a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2a60ec5bcc65104b2e62dd52600af56e84ab1a05"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.cipd_version"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ad1b93f1fe6c5141b139041b075357226cb1f2e"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork buildtools",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-dad57a4c245a8007",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c172b250f9fc6c58403822284ebbfe16ee8b868d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./AUTHORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5fa5aa1d7640e642d1c7c13db47e5972bcd67f1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-9fed2aef933ddf64",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7b1e9b087d71a17f842cb611849a3212fa46d01"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./PATENTS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7fced961e06fd339d4b572bc57d66d67913213f0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-c01c71cd7181ab66",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6531f8e54c398134eb43041b1ba1297f156a05b5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./cipd"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-8528c8335e43f1a1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0aaecb60c37ab10c524a4facbcb25849aeb9cf08"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./download.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-1e4b6345b6b04c4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4c5e05babb6f0c1a5fb6dd12746d793af6d9615"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./exec_tool.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-95fef27a84f39d51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce1bfa981569cfb8756f84775916aeb4d803a13f"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork buildtools",
+   "fileName": "./fuchsia.ensure"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-d4f8341558d545ad",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b56431d9e9f936d3f064b140876b6fb6a7be75f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-1ec558a60b5dda24",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3234710bc2804db361275b3efe24afa1487f01ce"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./go"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-473df75e306bfd8f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b56431d9e9f936d3f064b140876b6fb6a7be75f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./godepfile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-9ca79a3490ea562f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8f0ecc0e1cd37b63bded9deb4c3009f31a8a6770"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./manifest/buildtools"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-2d9c24d266d131ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53208d9a3ee19e35d9d439a08e7dd70dcab7511f"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork buildtools",
+   "fileName": "./manifest/buildtools-sy"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-88cf20284d95b267",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bdba742f748fa91f5cf3ece63a7620b0246a84de"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork buildtools",
+   "fileName": "./manifest/minimal"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-e50eeb4a35d90dc8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b33633295743ff92934215f098dce0c6e1f9a40"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork buildtools",
+   "fileName": "./manifest/minimal-sy"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-04a4fce796c2cf39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b56431d9e9f936d3f064b140876b6fb6a7be75f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ninja"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-efe50602faea7a59",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32fc0331241ed5291752a95aa244fd0e7b4f2e90"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork buildtools",
+   "fileName": "./update.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-buildtools-open-ddk-97e60ff013e1ffbe",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cd5abf5367cd8b51d94542a5b2a1adc19136983e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./vars.sh"
+  }
+ ],
+ "name": "buildtools-32ad2207",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-buildtools-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (buildtools); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://fuchsia.googlesource.com/buildtools@32ad2207c1da738122357a82ad414dec0d5ca6b9",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-buildtools-upstream-e9a1629aa39320a7",
+    "SPDXRef-File-buildtools-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-buildtools-upstream-dad57a4c245a8007",
+    "SPDXRef-File-buildtools-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-buildtools-upstream-9fed2aef933ddf64",
+    "SPDXRef-File-buildtools-upstream-8ec9a00bfd09b319",
+    "SPDXRef-File-buildtools-upstream-c01c71cd7181ab66",
+    "SPDXRef-File-buildtools-upstream-8528c8335e43f1a1",
+    "SPDXRef-File-buildtools-upstream-1e4b6345b6b04c4a",
+    "SPDXRef-File-buildtools-upstream-95fef27a84f39d51",
+    "SPDXRef-File-buildtools-upstream-d4f8341558d545ad",
+    "SPDXRef-File-buildtools-upstream-1ec558a60b5dda24",
+    "SPDXRef-File-buildtools-upstream-473df75e306bfd8f",
+    "SPDXRef-File-buildtools-upstream-9ca79a3490ea562f",
+    "SPDXRef-File-buildtools-upstream-88cf20284d95b267",
+    "SPDXRef-File-buildtools-upstream-04a4fce796c2cf39",
+    "SPDXRef-File-buildtools-upstream-efe50602faea7a59",
+    "SPDXRef-File-buildtools-upstream-97e60ff013e1ffbe"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "buildtools",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "7f356777ff680e18c3e1715963df6eeea2735058"
+   },
+   "supplier": "Organization: fuchsia.googlesource.com",
+   "versionInfo": "32ad2207"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-buildtools-open-ddk",
+   "comment": "As open-ddk ships it at buildtools. the fork buildtools (beside open-ddk; its submodule), branch nebula at 8ddf774f9ff7211e6915b5be0643914b347788c0: upstream 32ad2207c1da738122357a82ad414dec0d5ca6b9 and GRT's 8 commit(s), which add, change or remove 6 file(s): .gitignore, fuchsia.ensure, manifest/buildtools-sy, manifest/minimal, manifest/minimal-sy, update.sh",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-buildtools-open-ddk-e9a1629aa39320a7",
+    "SPDXRef-File-buildtools-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-buildtools-open-ddk-dad57a4c245a8007",
+    "SPDXRef-File-buildtools-open-ddk-0398ccd0f49298b1",
+    "SPDXRef-File-buildtools-open-ddk-9fed2aef933ddf64",
+    "SPDXRef-File-buildtools-open-ddk-8ec9a00bfd09b319",
+    "SPDXRef-File-buildtools-open-ddk-c01c71cd7181ab66",
+    "SPDXRef-File-buildtools-open-ddk-8528c8335e43f1a1",
+    "SPDXRef-File-buildtools-open-ddk-1e4b6345b6b04c4a",
+    "SPDXRef-File-buildtools-open-ddk-95fef27a84f39d51",
+    "SPDXRef-File-buildtools-open-ddk-d4f8341558d545ad",
+    "SPDXRef-File-buildtools-open-ddk-1ec558a60b5dda24",
+    "SPDXRef-File-buildtools-open-ddk-473df75e306bfd8f",
+    "SPDXRef-File-buildtools-open-ddk-9ca79a3490ea562f",
+    "SPDXRef-File-buildtools-open-ddk-2d9c24d266d131ca",
+    "SPDXRef-File-buildtools-open-ddk-88cf20284d95b267",
+    "SPDXRef-File-buildtools-open-ddk-e50eeb4a35d90dc8",
+    "SPDXRef-File-buildtools-open-ddk-04a4fce796c2cf39",
+    "SPDXRef-File-buildtools-open-ddk-efe50602faea7a59",
+    "SPDXRef-File-buildtools-open-ddk-97e60ff013e1ffbe"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "buildtools (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "6cf7c5678262ecae457f9a1b7eef2cf638918049"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "32ad2207+8ddf774f9ff7"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-buildtools-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-buildtools-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-buildtools-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-buildtools-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

@@ -1,0 +1,7 @@
+# Copyright 2026 GoldenRiver Technology. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# open-ddk does not carry the TSM server, nor the list of its files:
+# //build/bootfs's nbl_tsm_server (not built) imports this.
+nbl_tsm_server_sources = []

@@ -1,0 +1,566 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/open-ddk-v2.0.0",
+ "externalDocumentRefs": [
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "f70dde4ae1e75ca28c12944a53e222bdaa0ef4fe"
+   },
+   "externalDocumentId": "DocumentRef-glog-23def4e6",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/glog-23def4e6-23def4e6c14b4da8ac2ed8007337bc5eb5007998"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "7406610bc6027a7746fa8298bb9cd129800566bb"
+   },
+   "externalDocumentId": "DocumentRef-errors-839d9e91",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/errors-839d9e91-839d9e913e063e28dfd0e6c7b7512793e0a48be9"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "76b8f2e65d456ff2998f87e237c45a10b25ded4e"
+   },
+   "externalDocumentId": "DocumentRef-littlefs-v2.11.2",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/littlefs-v2.11.2-adad0fbbcf5382c20978d07f94f9c13be9041c1b"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "a28f0815d2918c47c00f46dd79839bfbb8b16859"
+   },
+   "externalDocumentId": "DocumentRef-libfuse-3.18.1",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/libfuse-3.18.1-2a6da8cb338b1718e899240d1d43d52e311e504a"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "0af79725288a28a2daeb8e2533c050aca481e333"
+   },
+   "externalDocumentId": "DocumentRef-busybox-1.28.4",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/busybox-1.28.4-509f987e1677e7438d07dae8998565f9a7170333"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "4ed180ba076291592ace38b896a9f1c7f377823a"
+   },
+   "externalDocumentId": "DocumentRef-buildtools-32ad2207",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/buildtools-32ad2207-32ad2207c1da738122357a82ad414dec0d5ca6b9"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "fea7fe657243cfc94eed6a438ab95bf93af9dc87"
+   },
+   "externalDocumentId": "DocumentRef-protobuf-c313f261",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/protobuf-c313f261-c313f26117c367ebbdca66f82164ed798bfc2c20"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "bb5de8a6b643bef588036eb331c494969b799f16"
+   },
+   "externalDocumentId": "DocumentRef-vboot-reference-0b235d5b",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/vboot_reference-0b235d5b-0b235d5b2c31cdb3fc5ef32c58fec37746a5f125"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "23c2e85ebf626d60db6874cf14293cab426af394"
+   },
+   "externalDocumentId": "DocumentRef-mako-84d21ded",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/mako-84d21ded-84d21ded4c270deebad88a61ef78356fa6e075ba"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "faf4b4bf2795c1ff40689c626197010a0e475b8d"
+   },
+   "externalDocumentId": "DocumentRef-gflags-f3ef162e",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/gflags-f3ef162e-f3ef162e5c5d2cb284b0649d81495990a01cd96b"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "1c74bfa11d84957aedea5f1375cf91ae3b7af788"
+   },
+   "externalDocumentId": "DocumentRef-gtest-da8ed899",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/gtest-da8ed899-da8ed89908140a3b937e7da81875bbeeebebbf43"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "3babe620122ae2b21b7d43a0e9f4e4fd28fbdcd8"
+   },
+   "externalDocumentId": "DocumentRef-go-crypto-c78caca8",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/go-crypto-c78caca8-c78caca803c95773f48a844d3dcab04b9bc4d6dd"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "9ffcadf69ed8ec3a23f0297e733cb568b4e3cb58"
+   },
+   "externalDocumentId": "DocumentRef-go-tuf-ccc55922",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/go-tuf-ccc55922-ccc55922bf6167995aabc750be433b9f408fd572"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "6bfd04325da0e483073d0424aaa72b247386aa32"
+   },
+   "externalDocumentId": "DocumentRef-canonical-json-go-96e4ba3a",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/canonical-json-go-96e4ba3a-96e4ba3a7613a1216cbd1badca4efe382adea337"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "b6d9847dc18f41359b5db5d3e3e6a748f6e3149e"
+   },
+   "externalDocumentId": "DocumentRef-go-2b8360e4",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/go-2b8360e4-2b8360e4a23cba6890993eb140d52941d2c36678"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "c3703dceeeeec00f234cdd6c6954393e072e6293"
+   },
+   "externalDocumentId": "DocumentRef-openssl-da96ffd2",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/openssl-da96ffd2-da96ffd2384144529a4236c892da07eb261d7089"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "fe9d1a6f8105de92b5aef408ba3a81094224faa0"
+   },
+   "externalDocumentId": "DocumentRef-iperf-vsock-9245f9af",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/iperf-vsock-9245f9af-9245f9af6d215166943b8c1e26769bf6800f2787"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "87e4664aa40f3a5020496c6f5ca976652a6e63f7"
+   },
+   "externalDocumentId": "DocumentRef-googletest-84e75276",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/googletest-84e75276-84e75276af34678072bcb23b564568d2d840ef4a"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "a2cc6ef83309f53c2f4f525ffde16a38733719c7"
+   },
+   "externalDocumentId": "DocumentRef-zlib-f0b417f5",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/zlib-f0b417f5-f0b417f596815c67d7fbdf48faa2ce39dde0f672"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "03f4fffb8f1ab57ec6d88822f5cbe5010d73e500"
+   },
+   "externalDocumentId": "DocumentRef-soc-term-5493a6e7",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/soc_term-5493a6e7-5493a6e7c264536f5ca63fe7511e5eed991e4f20"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "10d2d75b0fcb758cb3a27d008abba6473e0511a2"
+   },
+   "externalDocumentId": "DocumentRef-benchmark-e991355c",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/benchmark-e991355c-e991355c02b93fe17713efe04cbc2e278e00fdbd"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "9e63a6c22b4935fef3652f1c4e1ca4cbae22951d"
+   },
+   "externalDocumentId": "DocumentRef-grpc-v1.46.3",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/grpc-v1.46.3-53d69cc581c5b7305708587f4f1939278477c28a"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "6e97f1ebcf8ace35bd0604dc1031d7a1c190a960"
+   },
+   "externalDocumentId": "DocumentRef-rapidjson-e8b305ae",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/rapidjson-e8b305ae-e8b305ae6ab34f369fb7c753406671a6caccc31f"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "4274552ba5c46269e27f0dbda523225fa79cfdc6"
+   },
+   "externalDocumentId": "DocumentRef-boringssl-a4c3f8de",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/boringssl-a4c3f8de-a4c3f8de4406c2382e43e88a638882fb1a32da32"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "d8c182e02f6cddfd0f764c5946dc86749cf2e6b3"
+   },
+   "externalDocumentId": "DocumentRef-dropbear-2018.76",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/dropbear-2018.76-64bd345a5d11e159ac74d45bd009f98ff1a50cf9"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "9fa55cb5ddeb0f7187451fb9d00b1d2a9893c4d0"
+   },
+   "externalDocumentId": "DocumentRef-socat-1.8.0.0",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/socat-1.8.0.0-2da070164d454971d5c970b5278e645051f0d0f7"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "e4c0b4312507ac1237db7852aa8aef31db23acf1"
+   },
+   "externalDocumentId": "DocumentRef-linux-nebula",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/linux-nebula-d7ec982179df2206de37eee40cb129c82748eaad"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "1b55e6cfad4da70e341707e2908471cba88f6746"
+   },
+   "externalDocumentId": "DocumentRef-tf-a-nebula",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/tf-a-nebula-a1be69e6c5db450f841f0edd9d734bf3cffb6621"
+  },
+  {
+   "checksum": {
+    "algorithm": "SHA1",
+    "checksumValue": "fce3eface2e79f5daf1bcf34da9b04410aaca894"
+   },
+   "externalDocumentId": "DocumentRef-qemu-nebula",
+   "spdxDocument": "https://spdx.org/spdxdocs/open-ddk/qemu-nebula-9c673a41eefc50f1cb2fe3c083e7de842c7d276a"
+  }
+ ],
+ "name": "open-ddk-v2.0.0",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-open-ddk",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "open-ddk",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-zircon-reference",
+   "comment": "The prebuilt zircon kernel of the release asset open-ddk-prebuilt-out (out/build-zircon*/): a reference the images are built and checked with, not for production. Devices run the SoC vendor's own zircon, an implementation of the same interfaces, which open-ddk does not carry. zircon/ in the repository (user-space libraries and public headers, as source) is part of the build environment.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "zircon (reference)",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-venus-tee-qemu",
+   "comment": "The prebuilt TEE image of the release asset open-ddk-prebuilt-out (out/venus-tee/arm64/bootdata-combo-qemu-virt.bin): only the QEMU environment boots it. The hypervisor image gz.img takes no input from it (checked on every release), and no device runs it.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "venus-tee (QEMU only)",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-vendored-rules-nbl",
+   "comment": "From GoldenRiver Technology bazel/rules_nbl at 8a9b35ec9afd6f896e24f299039c6111e2d6344b, unchanged, in open-ddk/qemu/rules_nbl/ (LICENSE added by open-ddk). PackageVerificationCode of its 29 files: b258f5878fae47e1b1e5fb9103c8fa0c42b7c9a6. Build tools: the rules the QEMU environment's bazel build uses; no device runs it.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "rules_nbl",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "8a9b35ec9afd6f896e24f299039c6111e2d6344b"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-project-build",
+   "comment": "PackageVerificationCode of its 250 files (FILES.tsv): 11ed8dfe8e829e1635453a259816a2689109c1b9. Build tools: runs on the build host, not on a device. A fork of https://fuchsia.googlesource.com/build at a5f717eddee6305f6b302f11c14d66e903c8e35d, beside open-ddk (../build, branch nebula): only what open-ddk publishes of it",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "build",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-project-garnet",
+   "comment": "PackageVerificationCode of its 5911 files (FILES.tsv): a2ede08f98697b9298cdfe5f91c415d00295a703. Runs in the hypervisor image gz.img (its build reads 5964 of its files). A fork of https://fuchsia.googlesource.com/garnet at 7398665a84657cdfe745e81f2f708d6a800dd536, beside open-ddk (../garnet, branch nebula): only what open-ddk publishes of it",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "garnet",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-project-gen-rootfs",
+   "comment": "PackageVerificationCode of its 66 files (FILES.tsv): 18a6cc3c49f41a0bdfc8e36b40ddc7f6a693aeb2. Runs only in the QEMU environment that checks the images: the build of the hypervisor image gz.img reads none of its files; no device runs it. A fork of https://github.com/linaro-swg/gen_rootfs at fe617d470e45778c909038bf3e7ca15174a4f893, beside open-ddk (../gen_rootfs, branch nebula): only what open-ddk publishes of it",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "gen_rootfs",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-project-scripts",
+   "comment": "PackageVerificationCode of its 294 files (FILES.tsv): a23e75fa2bb44249d2fa9850e241f53e60bb9c4a. Build tools: runs on the build host, not on a device. A fork of https://fuchsia.googlesource.com/scripts at 9f645eb07489bb16251f076dc713d1166982a029, beside open-ddk (../scripts, branch nebula): only what open-ddk publishes of it",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "scripts",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-project-third-party-hee-trusty",
+   "comment": "PackageVerificationCode of its 164 files (FILES.tsv): 82484ef85cf2dab9113e2652a18781b1dd4c9d0a. Runs in the hypervisor image gz.img (its build reads 145 of its files). GRT's own, beside open-ddk (hee-trusty, branch nebula): only what open-ddk publishes of it",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "third_party/hee-trusty",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-project-third-party-ree-trusty",
+   "comment": "PackageVerificationCode of its 1184 files (FILES.tsv): 23f95c29e9fb31f0f65ea0e098f8e1310319e918. Runs in the hypervisor image gz.img (its build reads 46 of its files). GRT's own, beside open-ddk (ree-trusty, branch nebula): only what open-ddk publishes of it",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "third_party/ree-trusty",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "v2.0.0"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-open-ddk",
+   "relationshipType": "TEST_DEPENDENCY_OF",
+   "spdxElementId": "SPDXRef-Package-zircon-reference"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-open-ddk",
+   "relationshipType": "TEST_DEPENDENCY_OF",
+   "spdxElementId": "SPDXRef-Package-venus-tee-qemu"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-vendored-rules-nbl",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-project-build",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-project-garnet",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-project-gen-rootfs",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-project-scripts",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-project-third-party-hee-trusty",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-project-third-party-ree-trusty",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-glog-23def4e6:SPDXRef-Package-glog-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-errors-839d9e91:SPDXRef-Package-errors-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-littlefs-v2.11.2:SPDXRef-Package-littlefs-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-libfuse-3.18.1:SPDXRef-Package-libfuse-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-busybox-1.28.4:SPDXRef-Package-busybox-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-buildtools-32ad2207:SPDXRef-Package-buildtools-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-protobuf-c313f261:SPDXRef-Package-protobuf-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-vboot-reference-0b235d5b:SPDXRef-Package-vboot-reference-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-mako-84d21ded:SPDXRef-Package-mako-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-gflags-f3ef162e:SPDXRef-Package-gflags-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-gtest-da8ed899:SPDXRef-Package-gtest-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-go-crypto-c78caca8:SPDXRef-Package-go-crypto-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-go-tuf-ccc55922:SPDXRef-Package-go-tuf-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-canonical-json-go-96e4ba3a:SPDXRef-Package-canonical-json-go-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-go-2b8360e4:SPDXRef-Package-go-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-openssl-da96ffd2:SPDXRef-Package-openssl-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-iperf-vsock-9245f9af:SPDXRef-Package-iperf-vsock-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-googletest-84e75276:SPDXRef-Package-googletest-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-zlib-f0b417f5:SPDXRef-Package-zlib-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-soc-term-5493a6e7:SPDXRef-Package-soc-term-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-benchmark-e991355c:SPDXRef-Package-benchmark-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-grpc-v1.46.3:SPDXRef-Package-grpc-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-rapidjson-e8b305ae:SPDXRef-Package-rapidjson-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-boringssl-a4c3f8de:SPDXRef-Package-boringssl-upstream",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-dropbear-2018.76:SPDXRef-Package-dropbear-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-socat-1.8.0.0:SPDXRef-Package-socat-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-linux-nebula:SPDXRef-Package-linux-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-tf-a-nebula:SPDXRef-Package-tf-a-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  },
+  {
+   "relatedSpdxElement": "DocumentRef-qemu-nebula:SPDXRef-Package-qemu-open-ddk",
+   "relationshipType": "CONTAINS",
+   "spdxElementId": "SPDXRef-Package-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

@@ -1,0 +1,47 @@
+genrule(
+    name = "linux-rootfs",
+    srcs = [
+        ":gen_init_cpio_x64",
+        ":generate-cpio-rootfs",
+        "@ree//rprocd",
+        "@ree//nblruncmd",
+        "@ree//gzfs_fuse:gzfs_d",
+        "@ree//:dropbear",
+        "@ree//:socat",
+        "@ree//:iperf3",
+        "@gcc//:libstdc++.so",
+    ],
+    outs = ["rootfs/filesystem.cpio.gz"],
+    cmd = """
+    export PATH=$${PATH}:$$(dirname $$(realpath $(location :gen_init_cpio_x64)))
+    export ROOTFS_BUILDROOT=$$(dirname $$(realpath $(location :generate-cpio-rootfs)))
+    export SSH_OUT=($(locations @ree//:dropbear))
+    export SOCAT_OUT=($(locations @ree//:socat))
+    export IPERF_OUT=($(locations @ree//:iperf3))
+
+    mkdir -p $(@D)
+    ln -sf $${ROOTFS_BUILDROOT}/* $(@D)/
+
+    cat $(@D)/filelist-final.txt > $(@D)/filelist.tmp
+    cat >> $(@D)/filelist.tmp << EOF
+file /bin/rprocd $$(realpath $(location @ree//rprocd:rprocd)) 755 0 0
+file /bin/nblruncmd $$(realpath $(location @ree//nblruncmd:nblruncmd)) 755 0 0
+file /bin/gzfs_d $$(realpath $(location @ree//gzfs_fuse:gzfs_d)) 755 0 0
+dir /data 755 0 0
+file /data/nblruncmd $$(realpath $(location @ree//nblruncmd:nblruncmd)) 755 0 0
+file /lib/libstdc++.so.6.0.24 $$(realpath $(location @gcc//:libstdc++.so)) 755 0 0
+file /bin/dropbear $$(realpath $${SSH_OUT})/sbin/dropbear 755 0 0
+file /bin/scp $$(realpath $${SSH_OUT})/bin/scp 755 0 0
+file /bin/socat $$(realpath $${SOCAT_OUT})/socat 755 0 0
+file /bin/iperf3 $$(realpath $${IPERF_OUT})/bin/iperf3 755 0 0
+file /lib/libiperf.so.0.0.0 $$(realpath $${IPERF_OUT})/lib/libiperf.so.0.0.0 755 0 0
+slink /lib/libiperf.so.0 /lib/libiperf.so.0.0.0 755 0 0
+slink /lib/libiperf.so /lib/libiperf.so.0.0.0 755 0 0
+EOF
+
+    pushd $(@D) > /dev/null
+    gen_init_cpio filelist.tmp | gzip > filesystem.cpio.gz
+    popd > /dev/null
+    """,
+    local = True,
+)

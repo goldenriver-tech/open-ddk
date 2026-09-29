@@ -40,6 +40,11 @@
              remote="https://github.com/OpenTrustGroup/linux"
              remotebranch="nebula"
              revision="remotes/origin/nebula"/>
+    <project name="rules_nbl"
+             path="open-ddk/qemu/rules_nbl"
+             remote="https://github.com/OpenTrustGroup/rules_nbl"
+             remotebranch="nebula"
+             revision="remotes/origin/nebula"/>
     <project name="scripts"
              path="scripts"
              remote="https://github.com/OpenTrustGroup/scripts"

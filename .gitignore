@@ -7,6 +7,7 @@
 /garnet/
 /gen_rootfs/
 /linux-6.6/
+/open-ddk/qemu/rules_nbl/
 /scripts/
 /third_party/benchmark/
 /third_party/boringssl/src/

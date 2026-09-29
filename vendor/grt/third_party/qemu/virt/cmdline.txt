@@ -1,0 +1,10 @@
+driver.nbl_display.bti=0:0
+driver.nbl_display.mmio=0xf000000:0x1000
+driver.nbl_display.irq=230:0
+driver.nbl_touch.bti=0:0
+driver.nbl_touch.mmio=0xf001000:0x1000
+driver.nbl_touch.irq=231:0
+driver.nbl_touch.i2c_id=0
+driver.nbl_drvtest.bti=0:0
+driver.nbl_drvtest.mmio=0xf002000:0x1000,0xf003000:0x1000
+driver.nbl_drvtest.irq=232:0

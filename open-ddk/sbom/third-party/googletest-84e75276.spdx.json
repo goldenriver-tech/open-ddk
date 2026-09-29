@@ -1,0 +1,6189 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/googletest-84e75276-84e75276af34678072bcb23b564568d2d840ef4a",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-01a718df87a96135",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c93dba71d153bf06f8e73ac7389cd9e129029f1f"
+    }
+   ],
+   "fileName": "./.clang-format"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc7f8170072fa840a3def72f8ea83544f8772aa4"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8eae8f90d9dc5b81e5b59f1a5290c56eae5658a2"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-acb67900dcb6d543",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e3edc394b488c5a7ee10e9cff8732e6c7941c04"
+    }
+   ],
+   "fileName": "./BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d94715340fb5394e6e47e77c75cb0cb81d9499cd"
+    }
+   ],
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d8b05a193f9eeef2c8aae51a944a7383816b5e1f"
+    }
+   ],
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3f454a98e586d1aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce8f6fd95af2eaf95621751a4c15d0c84ab55507"
+    }
+   ],
+   "fileName": "./CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-fe8dbbeeacec3919",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09594e51a974efbff1aba0ef7dbd6f2753f9f4b4"
+    }
+   ],
+   "fileName": "./README.fuchsia"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60a7597d191abf225ce47d755407fd3520c85e5d"
+    }
+   ],
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-703988282e63eeb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "16f8e361c78fc499d0ed018e0776bf63486cb99b"
+    }
+   ],
+   "fileName": "./WORKSPACE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-43b9d80d1f50472e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "076ddde8995004b33b7a3df46c6e8903a91f592d"
+    }
+   ],
+   "fileName": "./appveyor.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-bc2181de6937a7e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f6b2cdb3f507594ace83f45af655cee393137f6f"
+    }
+   ],
+   "fileName": "./ci/build-linux-bazel.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-46c987cdce3165ac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f849c003ad8c4f436d943fac185a660a3c071ef9"
+    }
+   ],
+   "fileName": "./ci/build-platformio.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ee95e6c4c76f3176",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "08917e6edc6a909766f65140a6e14d34244f4e0a"
+    }
+   ],
+   "fileName": "./ci/env-linux.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e07efe6ff6b94caa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce363d64577670c41c01f149ca6b3a7b2243d43f"
+    }
+   ],
+   "fileName": "./ci/env-osx.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-cc8b3efe87ff6b15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "07883fac1b475b846273171654d41c59915f424a"
+    }
+   ],
+   "fileName": "./ci/get-nprocessors.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0cf58189db3cb4e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6490a00c8306fe6f06ec76086d29fe6c6b21e503"
+    }
+   ],
+   "fileName": "./ci/install-linux.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e6fb2e3ef4215676",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2bb6ede4bd701a535041bfeb6a97b9307261401e"
+    }
+   ],
+   "fileName": "./ci/install-osx.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e6688600299fcd84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fcc10c4fd5879c80b56025c501c6fd684754b05"
+    }
+   ],
+   "fileName": "./ci/install-platformio.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-69b08aaec56d0d67",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b571e6b9fed7197276d81977aac845a3eb03c2d"
+    }
+   ],
+   "fileName": "./ci/log-config.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-43e41d0c98905aa8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76aff0b1afd13c235d1a6ee33deeb1c473f1e47e"
+    }
+   ],
+   "fileName": "./ci/travis.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1f205d87f480b47c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7a5139a69dffc14af2495852f2841108dcff9793"
+    }
+   ],
+   "fileName": "./googlemock/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1587bba7d10f10e2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ce43a5f6fb1a1918e4bb542244d99e58a497cd4"
+    }
+   ],
+   "fileName": "./googlemock/CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-acb69160d149ffbf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "fileName": "./googlemock/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9e6f602f55a7fc4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b705682b9bf9dcc299cee48f9f9073b33772600f"
+    }
+   ],
+   "fileName": "./googlemock/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-073c63147b2a799c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "93807a6df1c29e67ba0dd0e7c4f761e36c4898d9"
+    }
+   ],
+   "fileName": "./googlemock/cmake/gmock.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e536c685ef840b11",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "718589d69bf5f88da93a6617e2cb1db7d7561911"
+    }
+   ],
+   "fileName": "./googlemock/cmake/gmock_main.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-75b7ec3fabe019df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3483faed0e5bd0e6b41230f691d3fb09a1aa5a92"
+    }
+   ],
+   "fileName": "./googlemock/docs/cheat_sheet.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9ed9f17b0b8bf3da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a0412aa3c1c7d74d28daf3e0d1a900f92bf1cfa7"
+    }
+   ],
+   "fileName": "./googlemock/docs/cook_book.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2cc394c77a465dc5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39b55baf3cf12824e2d23c7dde031fe5e45e3092"
+    }
+   ],
+   "fileName": "./googlemock/docs/for_dummies.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a57bffcb71800e1e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7c23d41d069df55f63688e044c6df4132b6d2cf9"
+    }
+   ],
+   "fileName": "./googlemock/docs/gmock_faq.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-bed0fb356766d10c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84b8184850cceb3e0a87fad1c9616541664db80f"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f41f50d96605ad8b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d5167e76df3781d60fbfce59f4d8b3c17cf9ca9"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-cardinalities.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-cb983d0616c0173c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "560d08dc3ab227d400ce59a075eed89294c04136"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-function-mocker.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-62d8a63bc58e5834",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d7cafcde4062740d7bcef928477b6ccea8223eb1"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-generated-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d8d04dd164f93ebb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ccc32796d207f8437edf5124642821a273b3a77b"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-generated-actions.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b44ae8bbaed1e4be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20eff9f57fe18bd50af91d67e630f7637f211dde"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-generated-function-mockers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-075fdc336bafb718",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c1c900e5b4dbf73a8f6499d4feb3498f9600eab"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-generated-function-mockers.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b117591f6fda38c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "956137c9d156cc7e719c5824da92c6d42f55c297"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-generated-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a935d98d90678481",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "974e9572611c2bf4ba88036e893453860739c5dc"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-generated-matchers.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1f880ae94587274f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "144bd2854ff311a6fe473a75d2f864ccc33b1432"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-36b26d988ee28198",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "056201b1a5210b83a6e8ba2f571ae9d40b879f91"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-more-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2c6d0d8d6bb1d7c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0e581970189221567f091219d3ea41a68ed4d2d"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-more-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b2591e2af3d2888a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2adc9f8b097a9719c25a16a983f320f786954b59"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-nice-strict.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-31a315c99d48c74f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "600e2ca451305739b2f9ae58ba1f13ddf0d020e1"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock-spec-builders.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c715ab8b1be3fbd5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "be0577a0f3acbf6f7453a6b09f551a50a9f1b217"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/gmock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-eb79d29f316b8b19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9462a5624e815dea06d04798ca04e411f7b43e65"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/custom/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0c49eb160674f3b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "12b3a5c3d8f7fd317c38f101fdceab7934ea1eac"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-generated-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-7e4909edccf49f4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a944c704647477b539d35aa32b14ae21a5293dff"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5b067054c7fcfd13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd686cdfed54386c34174e9919675f068d8dc0d2"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b4ede7627ea69a68",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2855291853771ab6a17e4ac423f4cbdcfa44bb74"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-16ec6eb9d85e4324",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d1e2b7d8607148dfea297410c9a2925649846d4"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/gmock-internal-utils.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2877e5e082ad08b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fc040ea4866029273326c91e86a35b8005ca5d3e"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/gmock-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-cb09d8387bdb4586",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ff78d6501b42448a596c9b9ddd643edb7e37344c"
+    }
+   ],
+   "fileName": "./googlemock/include/gmock/internal/gmock-pp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-aa31664daf1641f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fbb3f257698290508700a5666d65588eb93c2329"
+    }
+   ],
+   "fileName": "./googlemock/scripts/fuse_gmock_files.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-383294c02ad49ad5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d4719e04eaa4909ab5a59ef5cb04d2a5517716e"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5db42411e65293fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e39ca54c1d1b4660c35f0736431758b25c30d68a"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-414f8b521b160a00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1d0b3b3038c671724180f37ef2d54d43cf1a434"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/README.cppclean"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-422814ca469e6469",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-924a0440bff516cd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cdc872d6f3cf489e389bab8aba0d309232725800"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/ast.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9504d82a9abe3512",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e735385a9d8486c3ee191c2a7cb5e8e8ab27ee1"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/gmock_class.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-85fb3bf93d1b4a62",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66ccbc36590ebe1c67e6c72fdb06f7f6aac4ee3d"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/gmock_class_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-560a9c778c403b4d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "22e9b378cbfdf609228b9f5cbfa609afc9fc2309"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/keywords.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3dbfddc9a65da856",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa3671df5bb965e6791eb0d89f97e6657e4cf0f3"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/tokenize.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2b6786c6ba0bd6d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10a680e3c3fc7afc096b383bb5237efc4c72564c"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/cpp/utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-177e676439277c18",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e3fc4ed662d6cd026b451acc0cf9fdac0df8fd4"
+    }
+   ],
+   "fileName": "./googlemock/scripts/generator/gmock_gen.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f6aafad4a3010b0e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a273b92b2bbe3872ead63bc89655c1a7bb4e35b"
+    }
+   ],
+   "fileName": "./googlemock/scripts/gmock-config.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ae757c1f2b97f544",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b45c36172f23822ea8512bf61735445fdbed607a"
+    }
+   ],
+   "fileName": "./googlemock/scripts/gmock_doctor.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-764b76253b786b81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "26ebe2e58140f65a846f6335e8db5ceba5195f51"
+    }
+   ],
+   "fileName": "./googlemock/scripts/upload.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-83214825791e151f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db218c11cbe6fc7d716974556e5b5495330e9ba7"
+    }
+   ],
+   "fileName": "./googlemock/scripts/upload_gmock.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3ef5dd43b01e5f5b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7776114274f3755381b08310001b04c477cfd601"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock-all.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2e70476b6626b907",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "667ca71aa3d8f3b54ce972b0dffc8492cf5bf1ea"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock-cardinalities.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-bef239b2e8b5c223",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88dbb3f56d712ffa289f31cdedfce2e979562b9c"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock-internal-utils.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-fc20a490eb631992",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "31565d52fc85c1d1dbb15900a700bf56469aeccf"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock-matchers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-eb4ed42fbf010536",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4da4ebfbd9959c2c50d07b38075f0f826bff7547"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock-spec-builders.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-bd5b9dadb68ca4c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "87eba96811b03ed3ffb26e4be8c36e01c0a42340"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-739051d63cf56d58",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "278cdebdb44ccd66596b30cfe8a2a240b224fff0"
+    }
+   ],
+   "fileName": "./googlemock/src/gmock_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-30b00390bc540f94",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fbf148a183f4721479837e0fc58d42bf35893131"
+    }
+   ],
+   "fileName": "./googlemock/test/BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d2082dd7c0f6d156",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5b1c63f1a763b20bb7a0b1e40517abe79905c9f"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-actions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-03b763e90876bede",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f60d23bdfe18de8b3616710a40384af4955b7b76"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-cardinalities_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-82a8b5a567fb06c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e09d990ed5a84fb74b91133b17bb82dc6d2bf4f"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-function-mocker_nc.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f308288df3a4014f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cabae3f2b29eddaa15fc697c2ab3ba9d551883ee"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-function-mocker_nc_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-972f2cfa0334d405",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58c79975f4f9107aae8759fd60dc4d1413e3a937"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-function-mocker_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a25a013b14649816",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "65f05b0c2470bc7ab3a8d50032732be97e762e8c"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-generated-actions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b125308a00977645",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b276cc35748dae5a15d2444593222b980fafeda3"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-generated-function-mockers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-862d2d89815abe19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e8b39ba9002e4534167561054f9ae4af2b6eaeea"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-generated-matchers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3618513cfe3fc098",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f65263d86cb8bbebd9b40fc76fe12e1abcc3caeb"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-internal-utils_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4689fc78a5bec761",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c2b9e460b3016e59035f2116591f00317725c30"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-matchers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a66706024e355873",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9436dead19655904fdbc7b6f070d2d087b6e7d5"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-more-actions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-fa8ed838b1dc87c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9bc98d4a7b5440cc64b0c243f80b7039c2129223"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-nice-strict_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-63defb5fde980e82",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1f83b2546b025107f07c052f3d9f3ee6a79bd095"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-port_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-72674b2436f51f13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8133ac5313acb26d8df2230580503f8ae7816303"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-pp-string_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-16cee72603c8a7c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f116fe2acde902e7615415829d83567a3d60dcaf"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-pp_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2b4f8713eb9cd21b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bf92dffb15c8e6088230af469a4bef26113fca9b"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock-spec-builders_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-740c5fd7c6f9e6da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d68658757ca447b647039b32e085419f63d8436"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_all_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8287fb84bf1f2bdb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ae80cb62c350b23a5375a051619ebfd1b30815e"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-112fa8ae77d515c7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a5072171558600e6462d5fb41a769134d42ae79"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_leak_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c60e671e0635d8aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c7133c1cd9b7e8abd2d891270f221f0ee526204"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_leak_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4064a11c5224da91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4cbeb290c83108c298a66190d1e23f8400c868f"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_link2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ab866c7e77b596b0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24577ca7a4ccf822f858fd6c2f3998ab2a52dc1a"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_link_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f6ab48b62b8da544",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0361d358ee397e0a05d70e5ffeb026fcffa5cf85"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_link_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-95c9c15f6f001207",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35d38e925269dba27775896949324a80a5d41082"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_output_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3e10f2145ba6e80c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4323514bf160ea8c0d5d268f6bf969a88be8df2"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_output_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6381b6499121b201",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ccb80efa00230d4053602b75b49f9c81eff79acb"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_output_test_golden.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-025ee8c7d817fc76",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "72c060d53ae45fa702dbde48af508213483f3307"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_stress_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f7a46599e92561ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e48d271aee4970ca75be1dd73588d657874ef6d"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-48c590e7d6923db8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e16ec652cee6c76becd606cafbd4f4223fe6f1d4"
+    }
+   ],
+   "fileName": "./googlemock/test/gmock_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4571ec5e7071a862",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "78974e91b1ed2632b2b9defc4481946f82c7f61c"
+    }
+   ],
+   "fileName": "./googletest/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-224c6d74886208c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02bbc2163b398d8411a21b9a477ea0de5a07f48b"
+    }
+   ],
+   "fileName": "./googletest/CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-360b9cc0a19330cb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "fileName": "./googletest/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-bc888b72e30a54c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9470c00ceb4a0b8b05a01df7cd15ada7e1760a0"
+    }
+   ],
+   "fileName": "./googletest/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d42f8d243ff7a1e1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "982b8941dc8933bf8f3a3cba5b062f189b73f37f"
+    }
+   ],
+   "fileName": "./googletest/cmake/Config.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b7c292743b19a2f5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a4337b26c74cbb281a7c0b4b9d1f2c111e8fcd3c"
+    }
+   ],
+   "fileName": "./googletest/cmake/gtest.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3b221f5194f1cb3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a3bb02738ce83526579daf8f745fb24fdbc2506"
+    }
+   ],
+   "fileName": "./googletest/cmake/gtest_main.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-54ce0c54d309e5a8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dfd97344eda99b6267212847867383eb9d3261dd"
+    }
+   ],
+   "fileName": "./googletest/cmake/internal_utils.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-91866ad729a3bd0a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b0ca137e48bb5f86f120b2dd104cd6f64f5143ae"
+    }
+   ],
+   "fileName": "./googletest/cmake/libgtest.la.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2d67973b1b9eaa08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e935641df3fbc46d31dd200901fd75f20f204854"
+    }
+   ],
+   "fileName": "./googletest/docs/advanced.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-55ee12f68b8dba8c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bad4b88cf566f552ab799f1eff4be103b0b046d2"
+    }
+   ],
+   "fileName": "./googletest/docs/faq.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-03f6635cf916b79f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b4e8e71e97bc6766f5991aff7d778cabf72403a"
+    }
+   ],
+   "fileName": "./googletest/docs/pkgconfig.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c5d827e780081777",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ec0b7b251342df21986166015d542284ce313d2d"
+    }
+   ],
+   "fileName": "./googletest/docs/primer.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b975f30b96223a15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "859be9351f41e47fa1c361cc081673234a08dc05"
+    }
+   ],
+   "fileName": "./googletest/docs/pump_manual.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9a376149a68c7884",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e3ae3d522c06216e89cd0ceea8b274a00e1eca69"
+    }
+   ],
+   "fileName": "./googletest/docs/samples.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4e3bdaf8f28b6dc7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f5b4c4ecb69dd84e2763f22b617b25e24b703a76"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-death-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9f9b487a8fbac030",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7478e2637b594fd9acb19e6943ac2c1decfa46ef"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-180a87661683c1fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a133d6f055f5f332462819b3fd1541993928e90"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-message.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-dc4172866f1b2859",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03430461f7bb5930150d3ca91a1df661f0bac437"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-param-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2c6ae1e480c40ec5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5f5ec4781c730e007d3dc8090928e1f138a41cf4"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-printers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-cbdbd1a2389cbf8e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7341d717ea7bef96f04040d8fb893c3cf11ad42c"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-spi.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-7d782eed261e729a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76791d3cfe3b15913f53e29fbc6cb4a4b7d96eb4"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-test-part.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-866ad46e0f041993",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89757eaabd49ddb2439b8f13863d256eb4f2cb2a"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest-typed-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c7b27cb116e743bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "08d0ad2470d544e61c9ff79ba0b61d1f30325f73"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-32e478563fc04e6f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85f939929614cae804652c22bff6f6e685f55d3c"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest_pred_impl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ee7f3ee4c2f41dd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b5d2c7f23775f2ea3d9274e3bdc991881714b0f"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/gtest_prod.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9699b2faea47397b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3e824995816e5e2e770773ee6127c938909619c3"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/custom/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-005d403551207b88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ff15364a274076908cdf572b918d878b65da6a2"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/custom/gtest-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-73ab91e94d76d9b4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42c8cc6bf1b86f6b73b438f4bcd7b5c54aa20d5e"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/custom/gtest-printers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5bd1493bbb8ee92d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09c0c055b28d26fbb1c7af47416dffd6540c16b1"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/custom/gtest.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-221639a7bb1550df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "142b92ba6098e11333c044203a44d6e872db294d"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-death-test-internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d039d0e228a153a4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a278caa4c754c2bacb3373e57ee34e337c54131a"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-filepath.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-52e9caca8e481d26",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3baecb806dd7ac41b1514afaa92ef563b5843150"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f4b367480b303daa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "01d8a8ec58acdaa071a5cadc6c6cee17ed8861fe"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-param-util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b7039de87b57edb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ec1a3a0599c1d1d2c744425867e45d0b09bbc0e"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-port-arch.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-168da99825e3a8d2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6cbc39f53e5d9ce5e01512442de26e7cafc08e3f"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-643acbec76bddf84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b5185a4cbd4877221572302d56eca4d950f251f"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-string.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b5c9bb08d77a288d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b95204ee59b7942e9377b853596863be4b36bcb"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-type-util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3dadebd0abbe7282",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e24d56318bbc38b994927e60b002c4ac9d6a28e"
+    }
+   ],
+   "fileName": "./googletest/include/gtest/internal/gtest-type-util.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b631e38228288c1b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32cfea785210e488b5ae9839ed318b6b48a00ce7"
+    }
+   ],
+   "fileName": "./googletest/samples/prime_tables.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8acf481b5c62986b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c47717ebfe5a79b253b4204f1be4c6482c853ab"
+    }
+   ],
+   "fileName": "./googletest/samples/sample1.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-121f437e43b54ee9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0c2d6f3e255e0ac901a66b6ab0f038e584b1687"
+    }
+   ],
+   "fileName": "./googletest/samples/sample1.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-7a4fe4afec4a98b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5733195b726aa239add6cb4fd4476cc0017e963"
+    }
+   ],
+   "fileName": "./googletest/samples/sample10_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4c424c269b3cb5ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18933ab33adb02e171ef217b238140a565f779fe"
+    }
+   ],
+   "fileName": "./googletest/samples/sample1_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d2d96992e637bec0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b386ebc4f3d506377298a72c311414a229c1d2e8"
+    }
+   ],
+   "fileName": "./googletest/samples/sample2.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e394651b62b67b0e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "afb42cec4db767ba6d809055a915ca7888882ca7"
+    }
+   ],
+   "fileName": "./googletest/samples/sample2.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1f017394cfce8ac7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df22f79367bf7ed0e58946ad51d32462b13ee4a3"
+    }
+   ],
+   "fileName": "./googletest/samples/sample2_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-81794ed9dce56eb2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b92648a80b344aef1a5c5da37c6d43cd9f60514"
+    }
+   ],
+   "fileName": "./googletest/samples/sample3-inl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4dcf2bd32f59a770",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eb31c84a7b01fabb39ea72b7c73c5a929a72a1fe"
+    }
+   ],
+   "fileName": "./googletest/samples/sample3_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-afb12b5cabff3021",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7b7dcf498db1b4a08829b832777d947dd6811d87"
+    }
+   ],
+   "fileName": "./googletest/samples/sample4.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4045476c6f09ecd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45b54481b83b4ebe336a7608cdb875c9dfcb62c5"
+    }
+   ],
+   "fileName": "./googletest/samples/sample4.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c26a1e85f2cccc9a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1225940f84d6fae1a7254ea0af8bc2d604c880dd"
+    }
+   ],
+   "fileName": "./googletest/samples/sample4_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d4510c0c6dd99494",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89f502cc8c383ec5e77cfe65faebc504a4598938"
+    }
+   ],
+   "fileName": "./googletest/samples/sample5_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b25e486cddacee08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "023c876874594043d140ca83b2da82461bb578c0"
+    }
+   ],
+   "fileName": "./googletest/samples/sample6_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4f516825764dc2aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "af3ce919f0ea7dbb30e5a0c39363ef5f02da1fd3"
+    }
+   ],
+   "fileName": "./googletest/samples/sample7_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-dbe2426b026a0eb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "62364d1c0e48876344026b71edf8bad09904bb0d"
+    }
+   ],
+   "fileName": "./googletest/samples/sample8_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-85ffe0a7598a5b51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0435c679c372740295636d8b2ab67602bc93d3d1"
+    }
+   ],
+   "fileName": "./googletest/samples/sample9_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b3de42e8c589aa12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9704f5a19272bc834e81011a789291d29f9b84ba"
+    }
+   ],
+   "fileName": "./googletest/scripts/common.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3610d0d85fc021bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da7e07a07fe99e5bde6bcdcd2637d90c738ff520"
+    }
+   ],
+   "fileName": "./googletest/scripts/fuse_gtest_files.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f7b6eb16e77e736a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ba9936f447c1423b3888986ca6e76c34f8d3bc1"
+    }
+   ],
+   "fileName": "./googletest/scripts/gen_gtest_pred_impl.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5d28ff6ff70623d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8dffe9ecd0c0145877dd2f449ad03d9028f194d8"
+    }
+   ],
+   "fileName": "./googletest/scripts/gtest-config.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1fc88d549ba781c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "af50b23923afd67cc066577d4954f2d781887fdf"
+    }
+   ],
+   "fileName": "./googletest/scripts/pump.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-95ec53241fbfc99c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f9f11eaf090dc1935601e448e8df3f2ac89d546d"
+    }
+   ],
+   "fileName": "./googletest/scripts/release_docs.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-228fef53d636aa45",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae1d5387d5fec27581ccc2f5bae8497999a13f67"
+    }
+   ],
+   "fileName": "./googletest/scripts/test/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-43ffbe003fd5e0ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c453a7f9fe689067d4e663906fef4b444ff20613"
+    }
+   ],
+   "fileName": "./googletest/scripts/upload.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-486cf33e71e6ab6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8bce7770976d203c4bb5b532ef30f8724c6bc71"
+    }
+   ],
+   "fileName": "./googletest/scripts/upload_gtest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5750f5f820eca638",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "967765bd3d8f05f11018c2607a8cd45b2ca836b4"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-all.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-fd3fe7cff0c1c7c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "61064c785f5aa63ffe72a591cf155416603b31de"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-death-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-475976dfbb1b9eba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed7be9384170019fea9b4962bcc0c687b7841284"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-filepath.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1b720ff42b633e64",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "de110d23d9436bf9ba9ec09a4d4f3223bf07ace8"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-internal-inl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-13e1bcd411216449",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8464ac49950963cf8b3905cf164f4dc2a5c6e060"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-matchers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ee06d0d2187bf9e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "903dabe5fd6c217ba2349bc15d788e8e3ea5e0cb"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-port.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b8da6e06d5a4f0d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5c0c4c03bba2172865c031723db8a4846cb9a7af"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-printers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6268f2dd8379bb4e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e4aa65160bf81f2e365a8ee7074ec99d5fc3f17"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-test-part.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f21f03e758a2af89",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f733d6d3110252ab19b8bd32e74d2413c6cc3114"
+    }
+   ],
+   "fileName": "./googletest/src/gtest-typed-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6e9f66848077c6d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9dfe09d2aa0bf9a171c496bd0ef71f7254183acd"
+    }
+   ],
+   "fileName": "./googletest/src/gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e2a2347d92a2357f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7b3ef0ccb31f7750aed1ca89d03dbffa26c1bddf"
+    }
+   ],
+   "fileName": "./googletest/src/gtest_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6a9c7cf38e937424",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e6a969c8c12097443efed42b9a24b0620d68f63c"
+    }
+   ],
+   "fileName": "./googletest/test/BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-026448fa029a1edc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9577f655614511c4d9022008c00ca730d942ae71"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-break-on-failure-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a220592e75c840b6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f951718fe4ab075fd15ae91b06aec0f23d85d465"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-break-on-failure-unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5276197d08deec25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84aa568cbf897df0b219d9c5f3076aef02f5f900"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-catch-exceptions-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3b7acb608983fddc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "076818b1ab19c44ef4b4dab09d61135ca2248ae4"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-catch-exceptions-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ccbcfb3636a3c8f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a61940d36e5afa42e3c69a6f028e907da3efd674"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-color-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-dce1709eee829f57",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85930ce2d04ee8acc080afd5831d669eeda4ea8a"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-color-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1845bb0722360e28",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d85dc302a1c9c0bfbcd3264c288d2bb1cdbe1fc"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-death-test-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-530e121a7191f268",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e27ed5189c4ebd6bcb9e23cc7264ab0da7c7345f"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-death-test_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3ce75ac7f76554bc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b64f06e0349c4ada3765e8e2ea1e1467c0698c12"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-env-var-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-30d35f4afa3672e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2abd470c63525a88211ce8f3a730298a556ed622"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-env-var-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-aa56f9fec6e07a83",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3fa7ca80057aebab3a6786c9b33a98fc8df722bf"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-filepath-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5698dd95a3e1992c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9533a58cec70c3bc328d1b2afba516107a12d6da"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-filter-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ba00d16cd0a5aa7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "676b62d3e0ed4bac0e9f9b70238dfdd9fbc9b81f"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-filter-unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d09de1983b880fa9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8a2ce7a6f4759c163f251767725ac3726c0f2d56"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-json-outfiles-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-321a63f46a8a8f5f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ef30aae75347c21ab28382d56e32af5abba2435"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-json-output-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1d94dea533a5d9e9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "75770f9ed5e696365cf45d492c06a78dc05dbf80"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-list-tests-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3388a059cad30f96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d9cc5c7dafcfb9d8d8de51af4ac8b2f2d6e2113b"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-list-tests-unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-50495df6079c5a1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1556abcfe72422e254b08562f22d07d56ad81368"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-listener-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b8bf6f51ce9fd599",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca917a9d4990d34b7e9f2862e3ed17503e6a79f8"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-message-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d215ca2178f8b0b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "509b4e24f57a905bbec8c9a5e310627e3e9823c9"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-options-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a8c292c726ba0bb3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "296a32e15746f4daf9b59bc8f70af871263dc34d"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-output-test-golden-lin.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d1de1a9d231ab347",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b987f185329f74f3f92b159edad70bf264a8c63"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-output-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3e96801911c67f66",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa0a1be7cd2dbc7750c253f12db41c96ee79ef84"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-output-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2aca381f18779fa3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10e4027f8a9c73f0ff668f5c6791cb473687ffbb"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test-invalid-name1-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-057add0309f8dca1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0742b7d724cac621e4f321c84a666644b74147aa"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test-invalid-name1-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e5fbd555427850df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8a4976ef4456ee2dfa4fd4e1da0557582240c53e"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test-invalid-name2-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-65701105a5cf6a7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a34549c88c33263dd02d1dcdc2eb48a098803e86"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test-invalid-name2-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0a6cf978d7195898",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "59bf682bc69ccb0be12ffd5bf8d03a49d1f975d9"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-47362bf36a3911a5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eda9744fe47606c5fca724be44bd1c91bd74e922"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-88685dc189f71972",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "13eaf9e7ded2df1f207dc1c026fc1d7150af2360"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-param-test2-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-abf4c42b5484560e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c8f1dfc8d34fd65338b49c62918cce851fe47101"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-port-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-bd1b7fad3740bdef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b5478e6605c1fdf9682954bf8114748930340608"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-printers-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e4e28b66cef097ed",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f45e81318c7bc0556f9228234af8bebb431c4d36"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-shuffle-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-df85830d98fba0b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "507a3c4617e0844ab75197b89a877ed49d8201a3"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-shuffle-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1b2080f188d0ecf5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0a88ba49732b8074b56e858d2ef20ce44ae1a3c"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-test-part-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a2e8a5f34911bd87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85c6b5314fb1120e930f08502dd07124b297128d"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-test2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-34687ae9baab9b91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e149668cb97c50c9ba8ceb3f250c720808e135d6"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-throw-on-failure-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-2b925e19bbaea53b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c6a63156fb323f8d1bfdf75d07617689db203326"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-throw-on-failure-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0d87b514992a08ab",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5acd75d823216d54b37b3fe7e6fc9a5c91409404"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-uninitialized-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-d994a66037fab210",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f756508f514ca32a094330ae314b01a4b305925"
+    }
+   ],
+   "fileName": "./googletest/test/googletest-uninitialized-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9793ab77f787e441",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f7872b9cd971eac2c453a362117546420da58d7a"
+    }
+   ],
+   "fileName": "./googletest/test/gtest-typed-test2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-b254f9a4f9159a62",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18c5855dfeb0535af270249639c0fb2e52b8af99"
+    }
+   ],
+   "fileName": "./googletest/test/gtest-typed-test_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-3e5140bf6c55e10d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "edd55a0d50ef64f57a96d362447b3b957648df6a"
+    }
+   ],
+   "fileName": "./googletest/test/gtest-typed-test_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1bb203f17e965446",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f16596bd291cff22d26fa1861bc31526ebfce89"
+    }
+   ],
+   "fileName": "./googletest/test/gtest-unittest-api_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-669b5bb0de860e39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d969264e5ae269fa709a33479c273e0895d11b12"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_all_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1d5550df08fa5f56",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55482b702b07cf9c324ee6c3ca521bed0d834fcb"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_assert_by_exception_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-02a541b5a45c6796",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bd28758ae2964884cbd25595691c78feb754d163"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_environment_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-67ba9bcfce6610a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1068fada18e4b2e4fc7789a3f24ca9d862f6b1c6"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_help_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9c80eaff4bb6dfa9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3710a7a726e24f7af0e50e928ed2e1c29088a905"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_help_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ec6b867eb39aec18",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b26888eec2088dfa0916bb3af22c0734aff8c59a"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_json_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-e7a4b5cd09261caf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09b2737d3da73cc386c09b234d4afaac993b8688"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_list_output_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-fb93af94a2ff8319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9eea81eea4f59694e9fcb7d9f2db2f509bbea44c"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_list_output_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-fe21e0f24ba308a9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53410a02a99625a0e4ac654fd659eaf3412749ab"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_main_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-7ca6f37e18aadbf8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1cb74a4b4a379d6290d393f225eaff5a07c33fa"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_no_test_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6cb0375b6429e08d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64d38fac1b5fc29cfbe037dfc86284759d739b15"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_pred_impl_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-f63300405f36449f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fb8efe0d82306a3619cacf199571417486d4207c"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_premature_exit_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-5929491f55bd3ad8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c0211967557545ea9f09acb7ced733e8a715b91c"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_prod_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6d83fb5f07b09749",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c57a206b6f90d71a5884fb2fd4b9389f252dc33"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_repeat_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-dba2f4af23c0127d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18bda322c9cbb16e809046ff2e60230b9755de38"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_skip_environment_check_output_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8f406b362bf12f17",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9650a086aa390d7eb411981b398295590f9d6fa2"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_skip_in_environment_setup_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1c7ca61d0308283d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bbfe89d075d0979edbcf56e74b542b71c09c2df1"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_skip_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-24e1c3bd2d20ff58",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da55a22842cb0e959588a53a7909e276fdd3edc4"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_sole_header_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-9faa9b3d55799145",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "494263947a86535abc94f6d01d4d4f100bb0b99c"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_stress_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8123a69882ac3b91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8927175fa342ad8a31a4aaa7f86bc7d9a6046bf1"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_test_macro_stack_footprint_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8e614ea1bd50ff39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88641aac1af8147b1a975b3c16993a90cf40c69e"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8d3faceee165853f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "73714b19bfbcc0e6f10e7877a1ad2a07b202129d"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_testbridge_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c53959cd89e26f0c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f4c773b8f6e8f7a6f88cc3c633159a194ca425d"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_testbridge_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-6445e732f0f755e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cea68cbb0a4f62b546102b72318fcc5e66e9861c"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_throw_on_failure_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0a48b98a36aaf588",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a6cf0a2a79bc9344f611f38cfeeeab2e3dbd1757"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-c601836ba319db14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7bd21fd2791e6619632752d08eb05e365e65c2b6"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_xml_outfile1_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-23a92de396521d56",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4a248e413fa98fb148a9214643206f11cd8b8de2"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_xml_outfile2_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-ceef76f076862069",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "467fa714b13d84a72bdb300f37efa91a4a20ff65"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_xml_outfiles_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-8df02af7fc90eaa6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "131ea3b4b456ae65a4b700f94184dbd1a8028ec3"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_xml_output_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-7771101ace639343",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dcf02e47e927647c934e5bfeedcb91c3c49f0150"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_xml_output_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-0cfcab0be966a78b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7c36e59e3d9013bf2f9fad617274b6f027f8b10"
+    }
+   ],
+   "fileName": "./googletest/test/gtest_xml_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-81d255db6fb8cfb9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15194f1e2ab38f3ca7d7a33b4acee2c5b4956d76"
+    }
+   ],
+   "fileName": "./googletest/test/production.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-a7e39037439de168",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cae371674cdc5b91f4623fdfda7a4a727ed8b580"
+    }
+   ],
+   "fileName": "./googletest/test/production.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-4205bc83be3e369c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a26707d5958478b1c57bc27c67eca04f3cb45685"
+    }
+   ],
+   "fileName": "./library.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-upstream-1210fff3c0bb6170",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5cc1c8178f81c42215f31e47afae7d5540b89f62"
+    }
+   ],
+   "fileName": "./platformio.ini"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-01a718df87a96135",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c93dba71d153bf06f8e73ac7389cd9e129029f1f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.clang-format"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cc7f8170072fa840a3def72f8ea83544f8772aa4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8eae8f90d9dc5b81e5b59f1a5290c56eae5658a2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-acb67900dcb6d543",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "44b1b4071baf2967aaea11c672920fa65a68d84f"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork googletest",
+   "fileName": "./BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f1f3ef82935a010e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b549628eafbe2d3ab88487a5e022d40f3b748cf1"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork googletest",
+   "fileName": "./BUILD.gn"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9a2aa4db38d3115e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d8b05a193f9eeef2c8aae51a944a7383816b5e1f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3f454a98e586d1aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce8f6fd95af2eaf95621751a4c15d0c84ab55507"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./CONTRIBUTING.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-fe8dbbeeacec3919",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09594e51a974efbff1aba0ef7dbd6f2753f9f4b4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.fuchsia"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8ec9a00bfd09b319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "60a7597d191abf225ce47d755407fd3520c85e5d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-703988282e63eeb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "16f8e361c78fc499d0ed018e0776bf63486cb99b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./WORKSPACE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1c57da47ddb58bd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork googletest",
+   "fileName": "./WORKSPACE.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-43b9d80d1f50472e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "076ddde8995004b33b7a3df46c6e8903a91f592d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./appveyor.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-bc2181de6937a7e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f6b2cdb3f507594ace83f45af655cee393137f6f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/build-linux-bazel.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-46c987cdce3165ac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f849c003ad8c4f436d943fac185a660a3c071ef9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/build-platformio.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ee95e6c4c76f3176",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "08917e6edc6a909766f65140a6e14d34244f4e0a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/env-linux.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e07efe6ff6b94caa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ce363d64577670c41c01f149ca6b3a7b2243d43f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/env-osx.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-cc8b3efe87ff6b15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "07883fac1b475b846273171654d41c59915f424a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/get-nprocessors.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0cf58189db3cb4e4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6490a00c8306fe6f06ec76086d29fe6c6b21e503"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/install-linux.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e6fb2e3ef4215676",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2bb6ede4bd701a535041bfeb6a97b9307261401e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/install-osx.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e6688600299fcd84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fcc10c4fd5879c80b56025c501c6fd684754b05"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/install-platformio.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-69b08aaec56d0d67",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b571e6b9fed7197276d81977aac845a3eb03c2d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/log-config.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-43e41d0c98905aa8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76aff0b1afd13c235d1a6ee33deeb1c473f1e47e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./ci/travis.sh"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1f205d87f480b47c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7a5139a69dffc14af2495852f2841108dcff9793"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1587bba7d10f10e2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ce43a5f6fb1a1918e4bb542244d99e58a497cd4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-acb69160d149ffbf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9e6f602f55a7fc4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b705682b9bf9dcc299cee48f9f9073b33772600f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-073c63147b2a799c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "93807a6df1c29e67ba0dd0e7c4f761e36c4898d9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/cmake/gmock.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e536c685ef840b11",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "718589d69bf5f88da93a6617e2cb1db7d7561911"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/cmake/gmock_main.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-75b7ec3fabe019df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3483faed0e5bd0e6b41230f691d3fb09a1aa5a92"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/docs/cheat_sheet.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9ed9f17b0b8bf3da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a0412aa3c1c7d74d28daf3e0d1a900f92bf1cfa7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/docs/cook_book.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2cc394c77a465dc5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "39b55baf3cf12824e2d23c7dde031fe5e45e3092"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/docs/for_dummies.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a57bffcb71800e1e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7c23d41d069df55f63688e044c6df4132b6d2cf9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/docs/gmock_faq.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-bed0fb356766d10c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84b8184850cceb3e0a87fad1c9616541664db80f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f41f50d96605ad8b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d5167e76df3781d60fbfce59f4d8b3c17cf9ca9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-cardinalities.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-cb983d0616c0173c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "560d08dc3ab227d400ce59a075eed89294c04136"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-function-mocker.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-62d8a63bc58e5834",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d7cafcde4062740d7bcef928477b6ccea8223eb1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-generated-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d8d04dd164f93ebb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ccc32796d207f8437edf5124642821a273b3a77b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-generated-actions.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b44ae8bbaed1e4be",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "20eff9f57fe18bd50af91d67e630f7637f211dde"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-generated-function-mockers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-075fdc336bafb718",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c1c900e5b4dbf73a8f6499d4feb3498f9600eab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-generated-function-mockers.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b117591f6fda38c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "956137c9d156cc7e719c5824da92c6d42f55c297"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-generated-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a935d98d90678481",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "974e9572611c2bf4ba88036e893453860739c5dc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-generated-matchers.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1f880ae94587274f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "144bd2854ff311a6fe473a75d2f864ccc33b1432"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-36b26d988ee28198",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "056201b1a5210b83a6e8ba2f571ae9d40b879f91"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-more-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2c6d0d8d6bb1d7c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0e581970189221567f091219d3ea41a68ed4d2d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-more-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b2591e2af3d2888a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2adc9f8b097a9719c25a16a983f320f786954b59"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-nice-strict.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-31a315c99d48c74f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "600e2ca451305739b2f9ae58ba1f13ddf0d020e1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock-spec-builders.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c715ab8b1be3fbd5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "be0577a0f3acbf6f7453a6b09f551a50a9f1b217"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/gmock.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-eb79d29f316b8b19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9462a5624e815dea06d04798ca04e411f7b43e65"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/custom/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0c49eb160674f3b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "12b3a5c3d8f7fd317c38f101fdceab7934ea1eac"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-generated-actions.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-7e4909edccf49f4a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a944c704647477b539d35aa32b14ae21a5293dff"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5b067054c7fcfd13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fd686cdfed54386c34174e9919675f068d8dc0d2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b4ede7627ea69a68",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2855291853771ab6a17e4ac423f4cbdcfa44bb74"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/custom/gmock-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-16ec6eb9d85e4324",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d1e2b7d8607148dfea297410c9a2925649846d4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/gmock-internal-utils.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2877e5e082ad08b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fc040ea4866029273326c91e86a35b8005ca5d3e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/gmock-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-cb09d8387bdb4586",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ff78d6501b42448a596c9b9ddd643edb7e37344c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/include/gmock/internal/gmock-pp.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-aa31664daf1641f9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fbb3f257698290508700a5666d65588eb93c2329"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/fuse_gmock_files.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-383294c02ad49ad5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1d4719e04eaa4909ab5a59ef5cb04d2a5517716e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5db42411e65293fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e39ca54c1d1b4660c35f0736431758b25c30d68a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/README"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-414f8b521b160a00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1d0b3b3038c671724180f37ef2d54d43cf1a434"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/README.cppclean"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-422814ca469e6469",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-924a0440bff516cd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cdc872d6f3cf489e389bab8aba0d309232725800"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/ast.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9504d82a9abe3512",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e735385a9d8486c3ee191c2a7cb5e8e8ab27ee1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/gmock_class.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-85fb3bf93d1b4a62",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66ccbc36590ebe1c67e6c72fdb06f7f6aac4ee3d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/gmock_class_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-560a9c778c403b4d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "22e9b378cbfdf609228b9f5cbfa609afc9fc2309"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/keywords.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3dbfddc9a65da856",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa3671df5bb965e6791eb0d89f97e6657e4cf0f3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/tokenize.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2b6786c6ba0bd6d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10a680e3c3fc7afc096b383bb5237efc4c72564c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/cpp/utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-177e676439277c18",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4e3fc4ed662d6cd026b451acc0cf9fdac0df8fd4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/generator/gmock_gen.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f6aafad4a3010b0e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9a273b92b2bbe3872ead63bc89655c1a7bb4e35b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/gmock-config.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ae757c1f2b97f544",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b45c36172f23822ea8512bf61735445fdbed607a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/gmock_doctor.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-764b76253b786b81",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "26ebe2e58140f65a846f6335e8db5ceba5195f51"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/upload.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-83214825791e151f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "db218c11cbe6fc7d716974556e5b5495330e9ba7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/scripts/upload_gmock.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3ef5dd43b01e5f5b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7776114274f3755381b08310001b04c477cfd601"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock-all.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2e70476b6626b907",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "667ca71aa3d8f3b54ce972b0dffc8492cf5bf1ea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock-cardinalities.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-bef239b2e8b5c223",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88dbb3f56d712ffa289f31cdedfce2e979562b9c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock-internal-utils.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-fc20a490eb631992",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "31565d52fc85c1d1dbb15900a700bf56469aeccf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock-matchers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-eb4ed42fbf010536",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4da4ebfbd9959c2c50d07b38075f0f826bff7547"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock-spec-builders.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-bd5b9dadb68ca4c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "87eba96811b03ed3ffb26e4be8c36e01c0a42340"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-739051d63cf56d58",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "278cdebdb44ccd66596b30cfe8a2a240b224fff0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/src/gmock_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-30b00390bc540f94",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fbf148a183f4721479837e0fc58d42bf35893131"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d2082dd7c0f6d156",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a5b1c63f1a763b20bb7a0b1e40517abe79905c9f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-actions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-03b763e90876bede",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f60d23bdfe18de8b3616710a40384af4955b7b76"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-cardinalities_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-82a8b5a567fb06c1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9e09d990ed5a84fb74b91133b17bb82dc6d2bf4f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-function-mocker_nc.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f308288df3a4014f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cabae3f2b29eddaa15fc697c2ab3ba9d551883ee"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-function-mocker_nc_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-972f2cfa0334d405",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58c79975f4f9107aae8759fd60dc4d1413e3a937"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-function-mocker_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a25a013b14649816",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "65f05b0c2470bc7ab3a8d50032732be97e762e8c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-generated-actions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b125308a00977645",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b276cc35748dae5a15d2444593222b980fafeda3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-generated-function-mockers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-862d2d89815abe19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e8b39ba9002e4534167561054f9ae4af2b6eaeea"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-generated-matchers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3618513cfe3fc098",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f65263d86cb8bbebd9b40fc76fe12e1abcc3caeb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-internal-utils_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4689fc78a5bec761",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c2b9e460b3016e59035f2116591f00317725c30"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-matchers_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a66706024e355873",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9436dead19655904fdbc7b6f070d2d087b6e7d5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-more-actions_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-fa8ed838b1dc87c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9bc98d4a7b5440cc64b0c243f80b7039c2129223"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-nice-strict_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-63defb5fde980e82",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1f83b2546b025107f07c052f3d9f3ee6a79bd095"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-port_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-72674b2436f51f13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8133ac5313acb26d8df2230580503f8ae7816303"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-pp-string_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-16cee72603c8a7c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f116fe2acde902e7615415829d83567a3d60dcaf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-pp_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2b4f8713eb9cd21b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bf92dffb15c8e6088230af469a4bef26113fca9b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock-spec-builders_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-740c5fd7c6f9e6da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7d68658757ca447b647039b32e085419f63d8436"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_all_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8287fb84bf1f2bdb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5ae80cb62c350b23a5375a051619ebfd1b30815e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-112fa8ae77d515c7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1a5072171558600e6462d5fb41a769134d42ae79"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_leak_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c60e671e0635d8aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c7133c1cd9b7e8abd2d891270f221f0ee526204"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_leak_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4064a11c5224da91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4cbeb290c83108c298a66190d1e23f8400c868f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_link2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ab866c7e77b596b0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "24577ca7a4ccf822f858fd6c2f3998ab2a52dc1a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_link_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f6ab48b62b8da544",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0361d358ee397e0a05d70e5ffeb026fcffa5cf85"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_link_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-95c9c15f6f001207",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "35d38e925269dba27775896949324a80a5d41082"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_output_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3e10f2145ba6e80c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b4323514bf160ea8c0d5d268f6bf969a88be8df2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_output_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6381b6499121b201",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ccb80efa00230d4053602b75b49f9c81eff79acb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_output_test_golden.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-025ee8c7d817fc76",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "72c060d53ae45fa702dbde48af508213483f3307"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_stress_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f7a46599e92561ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e48d271aee4970ca75be1dd73588d657874ef6d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-48c590e7d6923db8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e16ec652cee6c76becd606cafbd4f4223fe6f1d4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googlemock/test/gmock_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0835e54085f40ce9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a587bb7f687107be69dffcb33aa421a08bfc29f8"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork googletest",
+   "fileName": "./googletest/Android.mk"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4571ec5e7071a862",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "78974e91b1ed2632b2b9defc4481946f82c7f61c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/CMakeLists.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-224c6d74886208c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02bbc2163b398d8411a21b9a477ea0de5a07f48b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/CONTRIBUTORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-360b9cc0a19330cb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a2314153eadadc69258a9429104cd11804ea304"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-bc888b72e30a54c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9470c00ceb4a0b8b05a01df7cd15ada7e1760a0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d42f8d243ff7a1e1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "982b8941dc8933bf8f3a3cba5b062f189b73f37f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/cmake/Config.cmake.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b7c292743b19a2f5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a4337b26c74cbb281a7c0b4b9d1f2c111e8fcd3c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/cmake/gtest.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3b221f5194f1cb3f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a3bb02738ce83526579daf8f745fb24fdbc2506"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/cmake/gtest_main.pc.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-54ce0c54d309e5a8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dfd97344eda99b6267212847867383eb9d3261dd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/cmake/internal_utils.cmake"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-91866ad729a3bd0a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b0ca137e48bb5f86f120b2dd104cd6f64f5143ae"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/cmake/libgtest.la.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2d67973b1b9eaa08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e935641df3fbc46d31dd200901fd75f20f204854"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/docs/advanced.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-55ee12f68b8dba8c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bad4b88cf566f552ab799f1eff4be103b0b046d2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/docs/faq.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-03f6635cf916b79f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b4e8e71e97bc6766f5991aff7d778cabf72403a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/docs/pkgconfig.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c5d827e780081777",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ec0b7b251342df21986166015d542284ce313d2d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/docs/primer.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b975f30b96223a15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "859be9351f41e47fa1c361cc081673234a08dc05"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/docs/pump_manual.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9a376149a68c7884",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e3ae3d522c06216e89cd0ceea8b274a00e1eca69"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/docs/samples.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4e3bdaf8f28b6dc7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f5b4c4ecb69dd84e2763f22b617b25e24b703a76"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-death-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9f9b487a8fbac030",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7478e2637b594fd9acb19e6943ac2c1decfa46ef"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-matchers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-180a87661683c1fa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0a133d6f055f5f332462819b3fd1541993928e90"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-message.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-dc4172866f1b2859",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "03430461f7bb5930150d3ca91a1df661f0bac437"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-param-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2c6ae1e480c40ec5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5f5ec4781c730e007d3dc8090928e1f138a41cf4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-printers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-cbdbd1a2389cbf8e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7341d717ea7bef96f04040d8fb893c3cf11ad42c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-spi.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-7d782eed261e729a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "76791d3cfe3b15913f53e29fbc6cb4a4b7d96eb4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-test-part.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-866ad46e0f041993",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89757eaabd49ddb2439b8f13863d256eb4f2cb2a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest-typed-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c7b27cb116e743bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "08d0ad2470d544e61c9ff79ba0b61d1f30325f73"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-32e478563fc04e6f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85f939929614cae804652c22bff6f6e685f55d3c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest_pred_impl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ee7f3ee4c2f41dd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b5d2c7f23775f2ea3d9274e3bdc991881714b0f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/gtest_prod.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9699b2faea47397b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3e824995816e5e2e770773ee6127c938909619c3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/custom/README.md"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-005d403551207b88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ff15364a274076908cdf572b918d878b65da6a2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/custom/gtest-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-73ab91e94d76d9b4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "42c8cc6bf1b86f6b73b438f4bcd7b5c54aa20d5e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/custom/gtest-printers.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5bd1493bbb8ee92d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09c0c055b28d26fbb1c7af47416dffd6540c16b1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/custom/gtest.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-221639a7bb1550df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "142b92ba6098e11333c044203a44d6e872db294d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-death-test-internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d039d0e228a153a4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a278caa4c754c2bacb3373e57ee34e337c54131a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-filepath.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-52e9caca8e481d26",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3baecb806dd7ac41b1514afaa92ef563b5843150"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-internal.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f4b367480b303daa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "01d8a8ec58acdaa071a5cadc6c6cee17ed8861fe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-param-util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b7039de87b57edb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ec1a3a0599c1d1d2c744425867e45d0b09bbc0e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-port-arch.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-168da99825e3a8d2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9541847a1f4048817c9405fe8843314ccadf8636"
+    }
+   ],
+   "comment": "changed by GRT's commits on the fork googletest",
+   "fileName": "./googletest/include/gtest/internal/gtest-port.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-643acbec76bddf84",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b5185a4cbd4877221572302d56eca4d950f251f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-string.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b5c9bb08d77a288d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b95204ee59b7942e9377b853596863be4b36bcb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-type-util.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3dadebd0abbe7282",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7e24d56318bbc38b994927e60b002c4ac9d6a28e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/include/gtest/internal/gtest-type-util.h.pump"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b631e38228288c1b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "32cfea785210e488b5ae9839ed318b6b48a00ce7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/prime_tables.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8acf481b5c62986b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c47717ebfe5a79b253b4204f1be4c6482c853ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample1.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-121f437e43b54ee9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0c2d6f3e255e0ac901a66b6ab0f038e584b1687"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample1.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-7a4fe4afec4a98b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d5733195b726aa239add6cb4fd4476cc0017e963"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample10_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4c424c269b3cb5ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18933ab33adb02e171ef217b238140a565f779fe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample1_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d2d96992e637bec0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b386ebc4f3d506377298a72c311414a229c1d2e8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample2.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e394651b62b67b0e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "afb42cec4db767ba6d809055a915ca7888882ca7"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample2.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1f017394cfce8ac7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "df22f79367bf7ed0e58946ad51d32462b13ee4a3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample2_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-81794ed9dce56eb2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6b92648a80b344aef1a5c5da37c6d43cd9f60514"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample3-inl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4dcf2bd32f59a770",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eb31c84a7b01fabb39ea72b7c73c5a929a72a1fe"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample3_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-afb12b5cabff3021",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7b7dcf498db1b4a08829b832777d947dd6811d87"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample4.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4045476c6f09ecd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "45b54481b83b4ebe336a7608cdb875c9dfcb62c5"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample4.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c26a1e85f2cccc9a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1225940f84d6fae1a7254ea0af8bc2d604c880dd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample4_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d4510c0c6dd99494",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "89f502cc8c383ec5e77cfe65faebc504a4598938"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample5_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b25e486cddacee08",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "023c876874594043d140ca83b2da82461bb578c0"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample6_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4f516825764dc2aa",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "af3ce919f0ea7dbb30e5a0c39363ef5f02da1fd3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample7_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-dbe2426b026a0eb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "62364d1c0e48876344026b71edf8bad09904bb0d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample8_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-85ffe0a7598a5b51",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0435c679c372740295636d8b2ab67602bc93d3d1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/samples/sample9_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b3de42e8c589aa12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9704f5a19272bc834e81011a789291d29f9b84ba"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/common.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3610d0d85fc021bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da7e07a07fe99e5bde6bcdcd2637d90c738ff520"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/fuse_gtest_files.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f7b6eb16e77e736a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4ba9936f447c1423b3888986ca6e76c34f8d3bc1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/gen_gtest_pred_impl.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5d28ff6ff70623d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8dffe9ecd0c0145877dd2f449ad03d9028f194d8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/gtest-config.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1fc88d549ba781c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "af50b23923afd67cc066577d4954f2d781887fdf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/pump.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-95ec53241fbfc99c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f9f11eaf090dc1935601e448e8df3f2ac89d546d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/release_docs.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-228fef53d636aa45",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ae1d5387d5fec27581ccc2f5bae8497999a13f67"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/test/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-43ffbe003fd5e0ef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c453a7f9fe689067d4e663906fef4b444ff20613"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/upload.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-486cf33e71e6ab6d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a8bce7770976d203c4bb5b532ef30f8724c6bc71"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/scripts/upload_gtest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5750f5f820eca638",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "967765bd3d8f05f11018c2607a8cd45b2ca836b4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-all.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-fd3fe7cff0c1c7c2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "61064c785f5aa63ffe72a591cf155416603b31de"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-death-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-475976dfbb1b9eba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ed7be9384170019fea9b4962bcc0c687b7841284"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-filepath.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1b720ff42b633e64",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "de110d23d9436bf9ba9ec09a4d4f3223bf07ace8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-internal-inl.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-13e1bcd411216449",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8464ac49950963cf8b3905cf164f4dc2a5c6e060"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-matchers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ee06d0d2187bf9e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "903dabe5fd6c217ba2349bc15d788e8e3ea5e0cb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-port.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b8da6e06d5a4f0d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5c0c4c03bba2172865c031723db8a4846cb9a7af"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-printers.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6268f2dd8379bb4e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2e4aa65160bf81f2e365a8ee7074ec99d5fc3f17"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-test-part.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f21f03e758a2af89",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f733d6d3110252ab19b8bd32e74d2413c6cc3114"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest-typed-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6e9f66848077c6d6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9dfe09d2aa0bf9a171c496bd0ef71f7254183acd"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e2a2347d92a2357f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7b3ef0ccb31f7750aed1ca89d03dbffa26c1bddf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/src/gtest_main.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6a9c7cf38e937424",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e6a969c8c12097443efed42b9a24b0620d68f63c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/BUILD.bazel"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-026448fa029a1edc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9577f655614511c4d9022008c00ca730d942ae71"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-break-on-failure-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a220592e75c840b6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f951718fe4ab075fd15ae91b06aec0f23d85d465"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-break-on-failure-unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5276197d08deec25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84aa568cbf897df0b219d9c5f3076aef02f5f900"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-catch-exceptions-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3b7acb608983fddc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "076818b1ab19c44ef4b4dab09d61135ca2248ae4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-catch-exceptions-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ccbcfb3636a3c8f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a61940d36e5afa42e3c69a6f028e907da3efd674"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-color-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-dce1709eee829f57",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85930ce2d04ee8acc080afd5831d669eeda4ea8a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-color-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1845bb0722360e28",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d85dc302a1c9c0bfbcd3264c288d2bb1cdbe1fc"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-death-test-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-530e121a7191f268",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e27ed5189c4ebd6bcb9e23cc7264ab0da7c7345f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-death-test_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3ce75ac7f76554bc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b64f06e0349c4ada3765e8e2ea1e1467c0698c12"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-env-var-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-30d35f4afa3672e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2abd470c63525a88211ce8f3a730298a556ed622"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-env-var-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-aa56f9fec6e07a83",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3fa7ca80057aebab3a6786c9b33a98fc8df722bf"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-filepath-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5698dd95a3e1992c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9533a58cec70c3bc328d1b2afba516107a12d6da"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-filter-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ba00d16cd0a5aa7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "676b62d3e0ed4bac0e9f9b70238dfdd9fbc9b81f"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-filter-unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d09de1983b880fa9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8a2ce7a6f4759c163f251767725ac3726c0f2d56"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-json-outfiles-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-321a63f46a8a8f5f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ef30aae75347c21ab28382d56e32af5abba2435"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-json-output-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1d94dea533a5d9e9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "75770f9ed5e696365cf45d492c06a78dc05dbf80"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-list-tests-unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3388a059cad30f96",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d9cc5c7dafcfb9d8d8de51af4ac8b2f2d6e2113b"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-list-tests-unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-50495df6079c5a1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1556abcfe72422e254b08562f22d07d56ad81368"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-listener-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b8bf6f51ce9fd599",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca917a9d4990d34b7e9f2862e3ed17503e6a79f8"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-message-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d215ca2178f8b0b2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "509b4e24f57a905bbec8c9a5e310627e3e9823c9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-options-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a8c292c726ba0bb3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "296a32e15746f4daf9b59bc8f70af871263dc34d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-output-test-golden-lin.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d1de1a9d231ab347",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b987f185329f74f3f92b159edad70bf264a8c63"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-output-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3e96801911c67f66",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa0a1be7cd2dbc7750c253f12db41c96ee79ef84"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-output-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2aca381f18779fa3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "10e4027f8a9c73f0ff668f5c6791cb473687ffbb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test-invalid-name1-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-057add0309f8dca1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0742b7d724cac621e4f321c84a666644b74147aa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test-invalid-name1-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e5fbd555427850df",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8a4976ef4456ee2dfa4fd4e1da0557582240c53e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test-invalid-name2-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-65701105a5cf6a7d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a34549c88c33263dd02d1dcdc2eb48a098803e86"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test-invalid-name2-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0a6cf978d7195898",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "59bf682bc69ccb0be12ffd5bf8d03a49d1f975d9"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-47362bf36a3911a5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "eda9744fe47606c5fca724be44bd1c91bd74e922"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test-test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-88685dc189f71972",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "13eaf9e7ded2df1f207dc1c026fc1d7150af2360"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-param-test2-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-abf4c42b5484560e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c8f1dfc8d34fd65338b49c62918cce851fe47101"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-port-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-bd1b7fad3740bdef",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b5478e6605c1fdf9682954bf8114748930340608"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-printers-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e4e28b66cef097ed",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f45e81318c7bc0556f9228234af8bebb431c4d36"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-shuffle-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-df85830d98fba0b5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "507a3c4617e0844ab75197b89a877ed49d8201a3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-shuffle-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1b2080f188d0ecf5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0a88ba49732b8074b56e858d2ef20ce44ae1a3c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-test-part-test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a2e8a5f34911bd87",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "85c6b5314fb1120e930f08502dd07124b297128d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-test2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-34687ae9baab9b91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e149668cb97c50c9ba8ceb3f250c720808e135d6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-throw-on-failure-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-2b925e19bbaea53b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c6a63156fb323f8d1bfdf75d07617689db203326"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-throw-on-failure-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0d87b514992a08ab",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5acd75d823216d54b37b3fe7e6fc9a5c91409404"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-uninitialized-test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-d994a66037fab210",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f756508f514ca32a094330ae314b01a4b305925"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/googletest-uninitialized-test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9793ab77f787e441",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f7872b9cd971eac2c453a362117546420da58d7a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest-typed-test2_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-b254f9a4f9159a62",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18c5855dfeb0535af270249639c0fb2e52b8af99"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest-typed-test_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-3e5140bf6c55e10d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "edd55a0d50ef64f57a96d362447b3b957648df6a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest-typed-test_test.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1bb203f17e965446",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f16596bd291cff22d26fa1861bc31526ebfce89"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest-unittest-api_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-669b5bb0de860e39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d969264e5ae269fa709a33479c273e0895d11b12"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_all_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1d5550df08fa5f56",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "55482b702b07cf9c324ee6c3ca521bed0d834fcb"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_assert_by_exception_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-02a541b5a45c6796",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bd28758ae2964884cbd25595691c78feb754d163"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_environment_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-67ba9bcfce6610a3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1068fada18e4b2e4fc7789a3f24ca9d862f6b1c6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_help_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9c80eaff4bb6dfa9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3710a7a726e24f7af0e50e928ed2e1c29088a905"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_help_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ec6b867eb39aec18",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b26888eec2088dfa0916bb3af22c0734aff8c59a"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_json_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-e7a4b5cd09261caf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "09b2737d3da73cc386c09b234d4afaac993b8688"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_list_output_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-fb93af94a2ff8319",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9eea81eea4f59694e9fcb7d9f2db2f509bbea44c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_list_output_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-fe21e0f24ba308a9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "53410a02a99625a0e4ac654fd659eaf3412749ab"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_main_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-7ca6f37e18aadbf8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b1cb74a4b4a379d6290d393f225eaff5a07c33fa"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_no_test_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6cb0375b6429e08d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "64d38fac1b5fc29cfbe037dfc86284759d739b15"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_pred_impl_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-f63300405f36449f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fb8efe0d82306a3619cacf199571417486d4207c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_premature_exit_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-5929491f55bd3ad8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c0211967557545ea9f09acb7ced733e8a715b91c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_prod_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6d83fb5f07b09749",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c57a206b6f90d71a5884fb2fd4b9389f252dc33"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_repeat_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-dba2f4af23c0127d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "18bda322c9cbb16e809046ff2e60230b9755de38"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_skip_environment_check_output_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8f406b362bf12f17",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9650a086aa390d7eb411981b398295590f9d6fa2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_skip_in_environment_setup_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1c7ca61d0308283d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bbfe89d075d0979edbcf56e74b542b71c09c2df1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_skip_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-24e1c3bd2d20ff58",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da55a22842cb0e959588a53a7909e276fdd3edc4"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_sole_header_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-9faa9b3d55799145",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "494263947a86535abc94f6d01d4d4f100bb0b99c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_stress_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8123a69882ac3b91",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8927175fa342ad8a31a4aaa7f86bc7d9a6046bf1"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_test_macro_stack_footprint_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8e614ea1bd50ff39",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "88641aac1af8147b1a975b3c16993a90cf40c69e"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8d3faceee165853f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "73714b19bfbcc0e6f10e7877a1ad2a07b202129d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_testbridge_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c53959cd89e26f0c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0f4c773b8f6e8f7a6f88cc3c633159a194ca425d"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_testbridge_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-6445e732f0f755e6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cea68cbb0a4f62b546102b72318fcc5e66e9861c"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_throw_on_failure_ex_test.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0a48b98a36aaf588",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a6cf0a2a79bc9344f611f38cfeeeab2e3dbd1757"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_unittest.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-c601836ba319db14",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7bd21fd2791e6619632752d08eb05e365e65c2b6"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_xml_outfile1_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-23a92de396521d56",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4a248e413fa98fb148a9214643206f11cd8b8de2"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_xml_outfile2_test_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-ceef76f076862069",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "467fa714b13d84a72bdb300f37efa91a4a20ff65"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_xml_outfiles_test.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-8df02af7fc90eaa6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "131ea3b4b456ae65a4b700f94184dbd1a8028ec3"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_xml_output_unittest.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-7771101ace639343",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dcf02e47e927647c934e5bfeedcb91c3c49f0150"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_xml_output_unittest_.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-0cfcab0be966a78b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c7c36e59e3d9013bf2f9fad617274b6f027f8b10"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/gtest_xml_test_utils.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-81d255db6fb8cfb9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15194f1e2ab38f3ca7d7a33b4acee2c5b4956d76"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/production.cc"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-a7e39037439de168",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cae371674cdc5b91f4623fdfda7a4a727ed8b580"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./googletest/test/production.h"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-4205bc83be3e369c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a26707d5958478b1c57bc27c67eca04f3cb45685"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./library.json"
+  },
+  {
+   "SPDXID": "SPDXRef-File-googletest-open-ddk-1210fff3c0bb6170",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5cc1c8178f81c42215f31e47afae7d5540b89f62"
+    }
+   ],
+   "comment": "from upstream, unchanged",
+   "fileName": "./platformio.ini"
+  }
+ ],
+ "name": "googletest-84e75276",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-googletest-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/googletest); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://fuchsia.googlesource.com/third_party/googletest@84e75276af34678072bcb23b564568d2d840ef4a",
+   "externalRefs": [],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-googletest-upstream-01a718df87a96135",
+    "SPDXRef-File-googletest-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-googletest-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-googletest-upstream-acb67900dcb6d543",
+    "SPDXRef-File-googletest-upstream-f1f3ef82935a010e",
+    "SPDXRef-File-googletest-upstream-9a2aa4db38d3115e",
+    "SPDXRef-File-googletest-upstream-3f454a98e586d1aa",
+    "SPDXRef-File-googletest-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-googletest-upstream-fe8dbbeeacec3919",
+    "SPDXRef-File-googletest-upstream-8ec9a00bfd09b319",
+    "SPDXRef-File-googletest-upstream-703988282e63eeb0",
+    "SPDXRef-File-googletest-upstream-43b9d80d1f50472e",
+    "SPDXRef-File-googletest-upstream-bc2181de6937a7e6",
+    "SPDXRef-File-googletest-upstream-46c987cdce3165ac",
+    "SPDXRef-File-googletest-upstream-ee95e6c4c76f3176",
+    "SPDXRef-File-googletest-upstream-e07efe6ff6b94caa",
+    "SPDXRef-File-googletest-upstream-cc8b3efe87ff6b15",
+    "SPDXRef-File-googletest-upstream-0cf58189db3cb4e4",
+    "SPDXRef-File-googletest-upstream-e6fb2e3ef4215676",
+    "SPDXRef-File-googletest-upstream-e6688600299fcd84",
+    "SPDXRef-File-googletest-upstream-69b08aaec56d0d67",
+    "SPDXRef-File-googletest-upstream-43e41d0c98905aa8",
+    "SPDXRef-File-googletest-upstream-1f205d87f480b47c",
+    "SPDXRef-File-googletest-upstream-1587bba7d10f10e2",
+    "SPDXRef-File-googletest-upstream-acb69160d149ffbf",
+    "SPDXRef-File-googletest-upstream-9e6f602f55a7fc4a",
+    "SPDXRef-File-googletest-upstream-073c63147b2a799c",
+    "SPDXRef-File-googletest-upstream-e536c685ef840b11",
+    "SPDXRef-File-googletest-upstream-75b7ec3fabe019df",
+    "SPDXRef-File-googletest-upstream-9ed9f17b0b8bf3da",
+    "SPDXRef-File-googletest-upstream-2cc394c77a465dc5",
+    "SPDXRef-File-googletest-upstream-a57bffcb71800e1e",
+    "SPDXRef-File-googletest-upstream-bed0fb356766d10c",
+    "SPDXRef-File-googletest-upstream-f41f50d96605ad8b",
+    "SPDXRef-File-googletest-upstream-cb983d0616c0173c",
+    "SPDXRef-File-googletest-upstream-62d8a63bc58e5834",
+    "SPDXRef-File-googletest-upstream-d8d04dd164f93ebb",
+    "SPDXRef-File-googletest-upstream-b44ae8bbaed1e4be",
+    "SPDXRef-File-googletest-upstream-075fdc336bafb718",
+    "SPDXRef-File-googletest-upstream-b117591f6fda38c2",
+    "SPDXRef-File-googletest-upstream-a935d98d90678481",
+    "SPDXRef-File-googletest-upstream-1f880ae94587274f",
+    "SPDXRef-File-googletest-upstream-36b26d988ee28198",
+    "SPDXRef-File-googletest-upstream-2c6d0d8d6bb1d7c5",
+    "SPDXRef-File-googletest-upstream-b2591e2af3d2888a",
+    "SPDXRef-File-googletest-upstream-31a315c99d48c74f",
+    "SPDXRef-File-googletest-upstream-c715ab8b1be3fbd5",
+    "SPDXRef-File-googletest-upstream-eb79d29f316b8b19",
+    "SPDXRef-File-googletest-upstream-0c49eb160674f3b2",
+    "SPDXRef-File-googletest-upstream-7e4909edccf49f4a",
+    "SPDXRef-File-googletest-upstream-5b067054c7fcfd13",
+    "SPDXRef-File-googletest-upstream-b4ede7627ea69a68",
+    "SPDXRef-File-googletest-upstream-16ec6eb9d85e4324",
+    "SPDXRef-File-googletest-upstream-2877e5e082ad08b8",
+    "SPDXRef-File-googletest-upstream-cb09d8387bdb4586",
+    "SPDXRef-File-googletest-upstream-aa31664daf1641f9",
+    "SPDXRef-File-googletest-upstream-383294c02ad49ad5",
+    "SPDXRef-File-googletest-upstream-5db42411e65293fb",
+    "SPDXRef-File-googletest-upstream-414f8b521b160a00",
+    "SPDXRef-File-googletest-upstream-422814ca469e6469",
+    "SPDXRef-File-googletest-upstream-924a0440bff516cd",
+    "SPDXRef-File-googletest-upstream-9504d82a9abe3512",
+    "SPDXRef-File-googletest-upstream-85fb3bf93d1b4a62",
+    "SPDXRef-File-googletest-upstream-560a9c778c403b4d",
+    "SPDXRef-File-googletest-upstream-3dbfddc9a65da856",
+    "SPDXRef-File-googletest-upstream-2b6786c6ba0bd6d1",
+    "SPDXRef-File-googletest-upstream-177e676439277c18",
+    "SPDXRef-File-googletest-upstream-f6aafad4a3010b0e",
+    "SPDXRef-File-googletest-upstream-ae757c1f2b97f544",
+    "SPDXRef-File-googletest-upstream-764b76253b786b81",
+    "SPDXRef-File-googletest-upstream-83214825791e151f",
+    "SPDXRef-File-googletest-upstream-3ef5dd43b01e5f5b",
+    "SPDXRef-File-googletest-upstream-2e70476b6626b907",
+    "SPDXRef-File-googletest-upstream-bef239b2e8b5c223",
+    "SPDXRef-File-googletest-upstream-fc20a490eb631992",
+    "SPDXRef-File-googletest-upstream-eb4ed42fbf010536",
+    "SPDXRef-File-googletest-upstream-bd5b9dadb68ca4c4",
+    "SPDXRef-File-googletest-upstream-739051d63cf56d58",
+    "SPDXRef-File-googletest-upstream-30b00390bc540f94",
+    "SPDXRef-File-googletest-upstream-d2082dd7c0f6d156",
+    "SPDXRef-File-googletest-upstream-03b763e90876bede",
+    "SPDXRef-File-googletest-upstream-82a8b5a567fb06c1",
+    "SPDXRef-File-googletest-upstream-f308288df3a4014f",
+    "SPDXRef-File-googletest-upstream-972f2cfa0334d405",
+    "SPDXRef-File-googletest-upstream-a25a013b14649816",
+    "SPDXRef-File-googletest-upstream-b125308a00977645",
+    "SPDXRef-File-googletest-upstream-862d2d89815abe19",
+    "SPDXRef-File-googletest-upstream-3618513cfe3fc098",
+    "SPDXRef-File-googletest-upstream-4689fc78a5bec761",
+    "SPDXRef-File-googletest-upstream-a66706024e355873",
+    "SPDXRef-File-googletest-upstream-fa8ed838b1dc87c9",
+    "SPDXRef-File-googletest-upstream-63defb5fde980e82",
+    "SPDXRef-File-googletest-upstream-72674b2436f51f13",
+    "SPDXRef-File-googletest-upstream-16cee72603c8a7c8",
+    "SPDXRef-File-googletest-upstream-2b4f8713eb9cd21b",
+    "SPDXRef-File-googletest-upstream-740c5fd7c6f9e6da",
+    "SPDXRef-File-googletest-upstream-8287fb84bf1f2bdb",
+    "SPDXRef-File-googletest-upstream-112fa8ae77d515c7",
+    "SPDXRef-File-googletest-upstream-c60e671e0635d8aa",
+    "SPDXRef-File-googletest-upstream-4064a11c5224da91",
+    "SPDXRef-File-googletest-upstream-ab866c7e77b596b0",
+    "SPDXRef-File-googletest-upstream-f6ab48b62b8da544",
+    "SPDXRef-File-googletest-upstream-95c9c15f6f001207",
+    "SPDXRef-File-googletest-upstream-3e10f2145ba6e80c",
+    "SPDXRef-File-googletest-upstream-6381b6499121b201",
+    "SPDXRef-File-googletest-upstream-025ee8c7d817fc76",
+    "SPDXRef-File-googletest-upstream-f7a46599e92561ba",
+    "SPDXRef-File-googletest-upstream-48c590e7d6923db8",
+    "SPDXRef-File-googletest-upstream-4571ec5e7071a862",
+    "SPDXRef-File-googletest-upstream-224c6d74886208c8",
+    "SPDXRef-File-googletest-upstream-360b9cc0a19330cb",
+    "SPDXRef-File-googletest-upstream-bc888b72e30a54c2",
+    "SPDXRef-File-googletest-upstream-d42f8d243ff7a1e1",
+    "SPDXRef-File-googletest-upstream-b7c292743b19a2f5",
+    "SPDXRef-File-googletest-upstream-3b221f5194f1cb3f",
+    "SPDXRef-File-googletest-upstream-54ce0c54d309e5a8",
+    "SPDXRef-File-googletest-upstream-91866ad729a3bd0a",
+    "SPDXRef-File-googletest-upstream-2d67973b1b9eaa08",
+    "SPDXRef-File-googletest-upstream-55ee12f68b8dba8c",
+    "SPDXRef-File-googletest-upstream-03f6635cf916b79f",
+    "SPDXRef-File-googletest-upstream-c5d827e780081777",
+    "SPDXRef-File-googletest-upstream-b975f30b96223a15",
+    "SPDXRef-File-googletest-upstream-9a376149a68c7884",
+    "SPDXRef-File-googletest-upstream-4e3bdaf8f28b6dc7",
+    "SPDXRef-File-googletest-upstream-9f9b487a8fbac030",
+    "SPDXRef-File-googletest-upstream-180a87661683c1fa",
+    "SPDXRef-File-googletest-upstream-dc4172866f1b2859",
+    "SPDXRef-File-googletest-upstream-2c6ae1e480c40ec5",
+    "SPDXRef-File-googletest-upstream-cbdbd1a2389cbf8e",
+    "SPDXRef-File-googletest-upstream-7d782eed261e729a",
+    "SPDXRef-File-googletest-upstream-866ad46e0f041993",
+    "SPDXRef-File-googletest-upstream-c7b27cb116e743bb",
+    "SPDXRef-File-googletest-upstream-32e478563fc04e6f",
+    "SPDXRef-File-googletest-upstream-ee7f3ee4c2f41dd0",
+    "SPDXRef-File-googletest-upstream-9699b2faea47397b",
+    "SPDXRef-File-googletest-upstream-005d403551207b88",
+    "SPDXRef-File-googletest-upstream-73ab91e94d76d9b4",
+    "SPDXRef-File-googletest-upstream-5bd1493bbb8ee92d",
+    "SPDXRef-File-googletest-upstream-221639a7bb1550df",
+    "SPDXRef-File-googletest-upstream-d039d0e228a153a4",
+    "SPDXRef-File-googletest-upstream-52e9caca8e481d26",
+    "SPDXRef-File-googletest-upstream-f4b367480b303daa",
+    "SPDXRef-File-googletest-upstream-b7039de87b57edb0",
+    "SPDXRef-File-googletest-upstream-168da99825e3a8d2",
+    "SPDXRef-File-googletest-upstream-643acbec76bddf84",
+    "SPDXRef-File-googletest-upstream-b5c9bb08d77a288d",
+    "SPDXRef-File-googletest-upstream-3dadebd0abbe7282",
+    "SPDXRef-File-googletest-upstream-b631e38228288c1b",
+    "SPDXRef-File-googletest-upstream-8acf481b5c62986b",
+    "SPDXRef-File-googletest-upstream-121f437e43b54ee9",
+    "SPDXRef-File-googletest-upstream-7a4fe4afec4a98b1",
+    "SPDXRef-File-googletest-upstream-4c424c269b3cb5ef",
+    "SPDXRef-File-googletest-upstream-d2d96992e637bec0",
+    "SPDXRef-File-googletest-upstream-e394651b62b67b0e",
+    "SPDXRef-File-googletest-upstream-1f017394cfce8ac7",
+    "SPDXRef-File-googletest-upstream-81794ed9dce56eb2",
+    "SPDXRef-File-googletest-upstream-4dcf2bd32f59a770",
+    "SPDXRef-File-googletest-upstream-afb12b5cabff3021",
+    "SPDXRef-File-googletest-upstream-4045476c6f09ecd0",
+    "SPDXRef-File-googletest-upstream-c26a1e85f2cccc9a",
+    "SPDXRef-File-googletest-upstream-d4510c0c6dd99494",
+    "SPDXRef-File-googletest-upstream-b25e486cddacee08",
+    "SPDXRef-File-googletest-upstream-4f516825764dc2aa",
+    "SPDXRef-File-googletest-upstream-dbe2426b026a0eb0",
+    "SPDXRef-File-googletest-upstream-85ffe0a7598a5b51",
+    "SPDXRef-File-googletest-upstream-b3de42e8c589aa12",
+    "SPDXRef-File-googletest-upstream-3610d0d85fc021bb",
+    "SPDXRef-File-googletest-upstream-f7b6eb16e77e736a",
+    "SPDXRef-File-googletest-upstream-5d28ff6ff70623d1",
+    "SPDXRef-File-googletest-upstream-1fc88d549ba781c4",
+    "SPDXRef-File-googletest-upstream-95ec53241fbfc99c",
+    "SPDXRef-File-googletest-upstream-228fef53d636aa45",
+    "SPDXRef-File-googletest-upstream-43ffbe003fd5e0ef",
+    "SPDXRef-File-googletest-upstream-486cf33e71e6ab6d",
+    "SPDXRef-File-googletest-upstream-5750f5f820eca638",
+    "SPDXRef-File-googletest-upstream-fd3fe7cff0c1c7c2",
+    "SPDXRef-File-googletest-upstream-475976dfbb1b9eba",
+    "SPDXRef-File-googletest-upstream-1b720ff42b633e64",
+    "SPDXRef-File-googletest-upstream-13e1bcd411216449",
+    "SPDXRef-File-googletest-upstream-ee06d0d2187bf9e5",
+    "SPDXRef-File-googletest-upstream-b8da6e06d5a4f0d1",
+    "SPDXRef-File-googletest-upstream-6268f2dd8379bb4e",
+    "SPDXRef-File-googletest-upstream-f21f03e758a2af89",
+    "SPDXRef-File-googletest-upstream-6e9f66848077c6d6",
+    "SPDXRef-File-googletest-upstream-e2a2347d92a2357f",
+    "SPDXRef-File-googletest-upstream-6a9c7cf38e937424",
+    "SPDXRef-File-googletest-upstream-026448fa029a1edc",
+    "SPDXRef-File-googletest-upstream-a220592e75c840b6",
+    "SPDXRef-File-googletest-upstream-5276197d08deec25",
+    "SPDXRef-File-googletest-upstream-3b7acb608983fddc",
+    "SPDXRef-File-googletest-upstream-ccbcfb3636a3c8f8",
+    "SPDXRef-File-googletest-upstream-dce1709eee829f57",
+    "SPDXRef-File-googletest-upstream-1845bb0722360e28",
+    "SPDXRef-File-googletest-upstream-530e121a7191f268",
+    "SPDXRef-File-googletest-upstream-3ce75ac7f76554bc",
+    "SPDXRef-File-googletest-upstream-30d35f4afa3672e5",
+    "SPDXRef-File-googletest-upstream-aa56f9fec6e07a83",
+    "SPDXRef-File-googletest-upstream-5698dd95a3e1992c",
+    "SPDXRef-File-googletest-upstream-ba00d16cd0a5aa7f",
+    "SPDXRef-File-googletest-upstream-d09de1983b880fa9",
+    "SPDXRef-File-googletest-upstream-321a63f46a8a8f5f",
+    "SPDXRef-File-googletest-upstream-1d94dea533a5d9e9",
+    "SPDXRef-File-googletest-upstream-3388a059cad30f96",
+    "SPDXRef-File-googletest-upstream-50495df6079c5a1f",
+    "SPDXRef-File-googletest-upstream-b8bf6f51ce9fd599",
+    "SPDXRef-File-googletest-upstream-d215ca2178f8b0b2",
+    "SPDXRef-File-googletest-upstream-a8c292c726ba0bb3",
+    "SPDXRef-File-googletest-upstream-d1de1a9d231ab347",
+    "SPDXRef-File-googletest-upstream-3e96801911c67f66",
+    "SPDXRef-File-googletest-upstream-2aca381f18779fa3",
+    "SPDXRef-File-googletest-upstream-057add0309f8dca1",
+    "SPDXRef-File-googletest-upstream-e5fbd555427850df",
+    "SPDXRef-File-googletest-upstream-65701105a5cf6a7d",
+    "SPDXRef-File-googletest-upstream-0a6cf978d7195898",
+    "SPDXRef-File-googletest-upstream-47362bf36a3911a5",
+    "SPDXRef-File-googletest-upstream-88685dc189f71972",
+    "SPDXRef-File-googletest-upstream-abf4c42b5484560e",
+    "SPDXRef-File-googletest-upstream-bd1b7fad3740bdef",
+    "SPDXRef-File-googletest-upstream-e4e28b66cef097ed",
+    "SPDXRef-File-googletest-upstream-df85830d98fba0b5",
+    "SPDXRef-File-googletest-upstream-1b2080f188d0ecf5",
+    "SPDXRef-File-googletest-upstream-a2e8a5f34911bd87",
+    "SPDXRef-File-googletest-upstream-34687ae9baab9b91",
+    "SPDXRef-File-googletest-upstream-2b925e19bbaea53b",
+    "SPDXRef-File-googletest-upstream-0d87b514992a08ab",
+    "SPDXRef-File-googletest-upstream-d994a66037fab210",
+    "SPDXRef-File-googletest-upstream-9793ab77f787e441",
+    "SPDXRef-File-googletest-upstream-b254f9a4f9159a62",
+    "SPDXRef-File-googletest-upstream-3e5140bf6c55e10d",
+    "SPDXRef-File-googletest-upstream-1bb203f17e965446",
+    "SPDXRef-File-googletest-upstream-669b5bb0de860e39",
+    "SPDXRef-File-googletest-upstream-1d5550df08fa5f56",
+    "SPDXRef-File-googletest-upstream-02a541b5a45c6796",
+    "SPDXRef-File-googletest-upstream-67ba9bcfce6610a3",
+    "SPDXRef-File-googletest-upstream-9c80eaff4bb6dfa9",
+    "SPDXRef-File-googletest-upstream-ec6b867eb39aec18",
+    "SPDXRef-File-googletest-upstream-e7a4b5cd09261caf",
+    "SPDXRef-File-googletest-upstream-fb93af94a2ff8319",
+    "SPDXRef-File-googletest-upstream-fe21e0f24ba308a9",
+    "SPDXRef-File-googletest-upstream-7ca6f37e18aadbf8",
+    "SPDXRef-File-googletest-upstream-6cb0375b6429e08d",
+    "SPDXRef-File-googletest-upstream-f63300405f36449f",
+    "SPDXRef-File-googletest-upstream-5929491f55bd3ad8",
+    "SPDXRef-File-googletest-upstream-6d83fb5f07b09749",
+    "SPDXRef-File-googletest-upstream-dba2f4af23c0127d",
+    "SPDXRef-File-googletest-upstream-8f406b362bf12f17",
+    "SPDXRef-File-googletest-upstream-1c7ca61d0308283d",
+    "SPDXRef-File-googletest-upstream-24e1c3bd2d20ff58",
+    "SPDXRef-File-googletest-upstream-9faa9b3d55799145",
+    "SPDXRef-File-googletest-upstream-8123a69882ac3b91",
+    "SPDXRef-File-googletest-upstream-8e614ea1bd50ff39",
+    "SPDXRef-File-googletest-upstream-8d3faceee165853f",
+    "SPDXRef-File-googletest-upstream-c53959cd89e26f0c",
+    "SPDXRef-File-googletest-upstream-6445e732f0f755e6",
+    "SPDXRef-File-googletest-upstream-0a48b98a36aaf588",
+    "SPDXRef-File-googletest-upstream-c601836ba319db14",
+    "SPDXRef-File-googletest-upstream-23a92de396521d56",
+    "SPDXRef-File-googletest-upstream-ceef76f076862069",
+    "SPDXRef-File-googletest-upstream-8df02af7fc90eaa6",
+    "SPDXRef-File-googletest-upstream-7771101ace639343",
+    "SPDXRef-File-googletest-upstream-0cfcab0be966a78b",
+    "SPDXRef-File-googletest-upstream-81d255db6fb8cfb9",
+    "SPDXRef-File-googletest-upstream-a7e39037439de168",
+    "SPDXRef-File-googletest-upstream-4205bc83be3e369c",
+    "SPDXRef-File-googletest-upstream-1210fff3c0bb6170"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "googletest",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "f040da82665d6538cae91b23a15ea061406b70ca"
+   },
+   "supplier": "Organization: fuchsia.googlesource.com",
+   "versionInfo": "84e75276"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-googletest-open-ddk",
+   "comment": "As open-ddk ships it at third_party/googletest. the fork googletest (beside open-ddk; its submodule), branch nebula at 5d0dd23c6cdc7ce75eb17866c7ff7e059e4c4cba: upstream 84e75276af34678072bcb23b564568d2d840ef4a and GRT's 4 commit(s), which add, change or remove 5 file(s): BUILD.bazel, BUILD.gn, WORKSPACE.bazel, googletest/Android.mk, googletest/include/gtest/internal/gtest-port.h",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-googletest-open-ddk-01a718df87a96135",
+    "SPDXRef-File-googletest-open-ddk-a5cc2925ca8258af",
+    "SPDXRef-File-googletest-open-ddk-dea01dd89a3b6028",
+    "SPDXRef-File-googletest-open-ddk-acb67900dcb6d543",
+    "SPDXRef-File-googletest-open-ddk-f1f3ef82935a010e",
+    "SPDXRef-File-googletest-open-ddk-9a2aa4db38d3115e",
+    "SPDXRef-File-googletest-open-ddk-3f454a98e586d1aa",
+    "SPDXRef-File-googletest-open-ddk-0398ccd0f49298b1",
+    "SPDXRef-File-googletest-open-ddk-fe8dbbeeacec3919",
+    "SPDXRef-File-googletest-open-ddk-8ec9a00bfd09b319",
+    "SPDXRef-File-googletest-open-ddk-703988282e63eeb0",
+    "SPDXRef-File-googletest-open-ddk-1c57da47ddb58bd0",
+    "SPDXRef-File-googletest-open-ddk-43b9d80d1f50472e",
+    "SPDXRef-File-googletest-open-ddk-bc2181de6937a7e6",
+    "SPDXRef-File-googletest-open-ddk-46c987cdce3165ac",
+    "SPDXRef-File-googletest-open-ddk-ee95e6c4c76f3176",
+    "SPDXRef-File-googletest-open-ddk-e07efe6ff6b94caa",
+    "SPDXRef-File-googletest-open-ddk-cc8b3efe87ff6b15",
+    "SPDXRef-File-googletest-open-ddk-0cf58189db3cb4e4",
+    "SPDXRef-File-googletest-open-ddk-e6fb2e3ef4215676",
+    "SPDXRef-File-googletest-open-ddk-e6688600299fcd84",
+    "SPDXRef-File-googletest-open-ddk-69b08aaec56d0d67",
+    "SPDXRef-File-googletest-open-ddk-43e41d0c98905aa8",
+    "SPDXRef-File-googletest-open-ddk-1f205d87f480b47c",
+    "SPDXRef-File-googletest-open-ddk-1587bba7d10f10e2",
+    "SPDXRef-File-googletest-open-ddk-acb69160d149ffbf",
+    "SPDXRef-File-googletest-open-ddk-9e6f602f55a7fc4a",
+    "SPDXRef-File-googletest-open-ddk-073c63147b2a799c",
+    "SPDXRef-File-googletest-open-ddk-e536c685ef840b11",
+    "SPDXRef-File-googletest-open-ddk-75b7ec3fabe019df",
+    "SPDXRef-File-googletest-open-ddk-9ed9f17b0b8bf3da",
+    "SPDXRef-File-googletest-open-ddk-2cc394c77a465dc5",
+    "SPDXRef-File-googletest-open-ddk-a57bffcb71800e1e",
+    "SPDXRef-File-googletest-open-ddk-bed0fb356766d10c",
+    "SPDXRef-File-googletest-open-ddk-f41f50d96605ad8b",
+    "SPDXRef-File-googletest-open-ddk-cb983d0616c0173c",
+    "SPDXRef-File-googletest-open-ddk-62d8a63bc58e5834",
+    "SPDXRef-File-googletest-open-ddk-d8d04dd164f93ebb",
+    "SPDXRef-File-googletest-open-ddk-b44ae8bbaed1e4be",
+    "SPDXRef-File-googletest-open-ddk-075fdc336bafb718",
+    "SPDXRef-File-googletest-open-ddk-b117591f6fda38c2",
+    "SPDXRef-File-googletest-open-ddk-a935d98d90678481",
+    "SPDXRef-File-googletest-open-ddk-1f880ae94587274f",
+    "SPDXRef-File-googletest-open-ddk-36b26d988ee28198",
+    "SPDXRef-File-googletest-open-ddk-2c6d0d8d6bb1d7c5",
+    "SPDXRef-File-googletest-open-ddk-b2591e2af3d2888a",
+    "SPDXRef-File-googletest-open-ddk-31a315c99d48c74f",
+    "SPDXRef-File-googletest-open-ddk-c715ab8b1be3fbd5",
+    "SPDXRef-File-googletest-open-ddk-eb79d29f316b8b19",
+    "SPDXRef-File-googletest-open-ddk-0c49eb160674f3b2",
+    "SPDXRef-File-googletest-open-ddk-7e4909edccf49f4a",
+    "SPDXRef-File-googletest-open-ddk-5b067054c7fcfd13",
+    "SPDXRef-File-googletest-open-ddk-b4ede7627ea69a68",
+    "SPDXRef-File-googletest-open-ddk-16ec6eb9d85e4324",
+    "SPDXRef-File-googletest-open-ddk-2877e5e082ad08b8",
+    "SPDXRef-File-googletest-open-ddk-cb09d8387bdb4586",
+    "SPDXRef-File-googletest-open-ddk-aa31664daf1641f9",
+    "SPDXRef-File-googletest-open-ddk-383294c02ad49ad5",
+    "SPDXRef-File-googletest-open-ddk-5db42411e65293fb",
+    "SPDXRef-File-googletest-open-ddk-414f8b521b160a00",
+    "SPDXRef-File-googletest-open-ddk-422814ca469e6469",
+    "SPDXRef-File-googletest-open-ddk-924a0440bff516cd",
+    "SPDXRef-File-googletest-open-ddk-9504d82a9abe3512",
+    "SPDXRef-File-googletest-open-ddk-85fb3bf93d1b4a62",
+    "SPDXRef-File-googletest-open-ddk-560a9c778c403b4d",
+    "SPDXRef-File-googletest-open-ddk-3dbfddc9a65da856",
+    "SPDXRef-File-googletest-open-ddk-2b6786c6ba0bd6d1",
+    "SPDXRef-File-googletest-open-ddk-177e676439277c18",
+    "SPDXRef-File-googletest-open-ddk-f6aafad4a3010b0e",
+    "SPDXRef-File-googletest-open-ddk-ae757c1f2b97f544",
+    "SPDXRef-File-googletest-open-ddk-764b76253b786b81",
+    "SPDXRef-File-googletest-open-ddk-83214825791e151f",
+    "SPDXRef-File-googletest-open-ddk-3ef5dd43b01e5f5b",
+    "SPDXRef-File-googletest-open-ddk-2e70476b6626b907",
+    "SPDXRef-File-googletest-open-ddk-bef239b2e8b5c223",
+    "SPDXRef-File-googletest-open-ddk-fc20a490eb631992",
+    "SPDXRef-File-googletest-open-ddk-eb4ed42fbf010536",
+    "SPDXRef-File-googletest-open-ddk-bd5b9dadb68ca4c4",
+    "SPDXRef-File-googletest-open-ddk-739051d63cf56d58",
+    "SPDXRef-File-googletest-open-ddk-30b00390bc540f94",
+    "SPDXRef-File-googletest-open-ddk-d2082dd7c0f6d156",
+    "SPDXRef-File-googletest-open-ddk-03b763e90876bede",
+    "SPDXRef-File-googletest-open-ddk-82a8b5a567fb06c1",
+    "SPDXRef-File-googletest-open-ddk-f308288df3a4014f",
+    "SPDXRef-File-googletest-open-ddk-972f2cfa0334d405",
+    "SPDXRef-File-googletest-open-ddk-a25a013b14649816",
+    "SPDXRef-File-googletest-open-ddk-b125308a00977645",
+    "SPDXRef-File-googletest-open-ddk-862d2d89815abe19",
+    "SPDXRef-File-googletest-open-ddk-3618513cfe3fc098",
+    "SPDXRef-File-googletest-open-ddk-4689fc78a5bec761",
+    "SPDXRef-File-googletest-open-ddk-a66706024e355873",
+    "SPDXRef-File-googletest-open-ddk-fa8ed838b1dc87c9",
+    "SPDXRef-File-googletest-open-ddk-63defb5fde980e82",
+    "SPDXRef-File-googletest-open-ddk-72674b2436f51f13",
+    "SPDXRef-File-googletest-open-ddk-16cee72603c8a7c8",
+    "SPDXRef-File-googletest-open-ddk-2b4f8713eb9cd21b",
+    "SPDXRef-File-googletest-open-ddk-740c5fd7c6f9e6da",
+    "SPDXRef-File-googletest-open-ddk-8287fb84bf1f2bdb",
+    "SPDXRef-File-googletest-open-ddk-112fa8ae77d515c7",
+    "SPDXRef-File-googletest-open-ddk-c60e671e0635d8aa",
+    "SPDXRef-File-googletest-open-ddk-4064a11c5224da91",
+    "SPDXRef-File-googletest-open-ddk-ab866c7e77b596b0",
+    "SPDXRef-File-googletest-open-ddk-f6ab48b62b8da544",
+    "SPDXRef-File-googletest-open-ddk-95c9c15f6f001207",
+    "SPDXRef-File-googletest-open-ddk-3e10f2145ba6e80c",
+    "SPDXRef-File-googletest-open-ddk-6381b6499121b201",
+    "SPDXRef-File-googletest-open-ddk-025ee8c7d817fc76",
+    "SPDXRef-File-googletest-open-ddk-f7a46599e92561ba",
+    "SPDXRef-File-googletest-open-ddk-48c590e7d6923db8",
+    "SPDXRef-File-googletest-open-ddk-0835e54085f40ce9",
+    "SPDXRef-File-googletest-open-ddk-4571ec5e7071a862",
+    "SPDXRef-File-googletest-open-ddk-224c6d74886208c8",
+    "SPDXRef-File-googletest-open-ddk-360b9cc0a19330cb",
+    "SPDXRef-File-googletest-open-ddk-bc888b72e30a54c2",
+    "SPDXRef-File-googletest-open-ddk-d42f8d243ff7a1e1",
+    "SPDXRef-File-googletest-open-ddk-b7c292743b19a2f5",
+    "SPDXRef-File-googletest-open-ddk-3b221f5194f1cb3f",
+    "SPDXRef-File-googletest-open-ddk-54ce0c54d309e5a8",
+    "SPDXRef-File-googletest-open-ddk-91866ad729a3bd0a",
+    "SPDXRef-File-googletest-open-ddk-2d67973b1b9eaa08",
+    "SPDXRef-File-googletest-open-ddk-55ee12f68b8dba8c",
+    "SPDXRef-File-googletest-open-ddk-03f6635cf916b79f",
+    "SPDXRef-File-googletest-open-ddk-c5d827e780081777",
+    "SPDXRef-File-googletest-open-ddk-b975f30b96223a15",
+    "SPDXRef-File-googletest-open-ddk-9a376149a68c7884",
+    "SPDXRef-File-googletest-open-ddk-4e3bdaf8f28b6dc7",
+    "SPDXRef-File-googletest-open-ddk-9f9b487a8fbac030",
+    "SPDXRef-File-googletest-open-ddk-180a87661683c1fa",
+    "SPDXRef-File-googletest-open-ddk-dc4172866f1b2859",
+    "SPDXRef-File-googletest-open-ddk-2c6ae1e480c40ec5",
+    "SPDXRef-File-googletest-open-ddk-cbdbd1a2389cbf8e",
+    "SPDXRef-File-googletest-open-ddk-7d782eed261e729a",
+    "SPDXRef-File-googletest-open-ddk-866ad46e0f041993",
+    "SPDXRef-File-googletest-open-ddk-c7b27cb116e743bb",
+    "SPDXRef-File-googletest-open-ddk-32e478563fc04e6f",
+    "SPDXRef-File-googletest-open-ddk-ee7f3ee4c2f41dd0",
+    "SPDXRef-File-googletest-open-ddk-9699b2faea47397b",
+    "SPDXRef-File-googletest-open-ddk-005d403551207b88",
+    "SPDXRef-File-googletest-open-ddk-73ab91e94d76d9b4",
+    "SPDXRef-File-googletest-open-ddk-5bd1493bbb8ee92d",
+    "SPDXRef-File-googletest-open-ddk-221639a7bb1550df",
+    "SPDXRef-File-googletest-open-ddk-d039d0e228a153a4",
+    "SPDXRef-File-googletest-open-ddk-52e9caca8e481d26",
+    "SPDXRef-File-googletest-open-ddk-f4b367480b303daa",
+    "SPDXRef-File-googletest-open-ddk-b7039de87b57edb0",
+    "SPDXRef-File-googletest-open-ddk-168da99825e3a8d2",
+    "SPDXRef-File-googletest-open-ddk-643acbec76bddf84",
+    "SPDXRef-File-googletest-open-ddk-b5c9bb08d77a288d",
+    "SPDXRef-File-googletest-open-ddk-3dadebd0abbe7282",
+    "SPDXRef-File-googletest-open-ddk-b631e38228288c1b",
+    "SPDXRef-File-googletest-open-ddk-8acf481b5c62986b",
+    "SPDXRef-File-googletest-open-ddk-121f437e43b54ee9",
+    "SPDXRef-File-googletest-open-ddk-7a4fe4afec4a98b1",
+    "SPDXRef-File-googletest-open-ddk-4c424c269b3cb5ef",
+    "SPDXRef-File-googletest-open-ddk-d2d96992e637bec0",
+    "SPDXRef-File-googletest-open-ddk-e394651b62b67b0e",
+    "SPDXRef-File-googletest-open-ddk-1f017394cfce8ac7",
+    "SPDXRef-File-googletest-open-ddk-81794ed9dce56eb2",
+    "SPDXRef-File-googletest-open-ddk-4dcf2bd32f59a770",
+    "SPDXRef-File-googletest-open-ddk-afb12b5cabff3021",
+    "SPDXRef-File-googletest-open-ddk-4045476c6f09ecd0",
+    "SPDXRef-File-googletest-open-ddk-c26a1e85f2cccc9a",
+    "SPDXRef-File-googletest-open-ddk-d4510c0c6dd99494",
+    "SPDXRef-File-googletest-open-ddk-b25e486cddacee08",
+    "SPDXRef-File-googletest-open-ddk-4f516825764dc2aa",
+    "SPDXRef-File-googletest-open-ddk-dbe2426b026a0eb0",
+    "SPDXRef-File-googletest-open-ddk-85ffe0a7598a5b51",
+    "SPDXRef-File-googletest-open-ddk-b3de42e8c589aa12",
+    "SPDXRef-File-googletest-open-ddk-3610d0d85fc021bb",
+    "SPDXRef-File-googletest-open-ddk-f7b6eb16e77e736a",
+    "SPDXRef-File-googletest-open-ddk-5d28ff6ff70623d1",
+    "SPDXRef-File-googletest-open-ddk-1fc88d549ba781c4",
+    "SPDXRef-File-googletest-open-ddk-95ec53241fbfc99c",
+    "SPDXRef-File-googletest-open-ddk-228fef53d636aa45",
+    "SPDXRef-File-googletest-open-ddk-43ffbe003fd5e0ef",
+    "SPDXRef-File-googletest-open-ddk-486cf33e71e6ab6d",
+    "SPDXRef-File-googletest-open-ddk-5750f5f820eca638",
+    "SPDXRef-File-googletest-open-ddk-fd3fe7cff0c1c7c2",
+    "SPDXRef-File-googletest-open-ddk-475976dfbb1b9eba",
+    "SPDXRef-File-googletest-open-ddk-1b720ff42b633e64",
+    "SPDXRef-File-googletest-open-ddk-13e1bcd411216449",
+    "SPDXRef-File-googletest-open-ddk-ee06d0d2187bf9e5",
+    "SPDXRef-File-googletest-open-ddk-b8da6e06d5a4f0d1",
+    "SPDXRef-File-googletest-open-ddk-6268f2dd8379bb4e",
+    "SPDXRef-File-googletest-open-ddk-f21f03e758a2af89",
+    "SPDXRef-File-googletest-open-ddk-6e9f66848077c6d6",
+    "SPDXRef-File-googletest-open-ddk-e2a2347d92a2357f",
+    "SPDXRef-File-googletest-open-ddk-6a9c7cf38e937424",
+    "SPDXRef-File-googletest-open-ddk-026448fa029a1edc",
+    "SPDXRef-File-googletest-open-ddk-a220592e75c840b6",
+    "SPDXRef-File-googletest-open-ddk-5276197d08deec25",
+    "SPDXRef-File-googletest-open-ddk-3b7acb608983fddc",
+    "SPDXRef-File-googletest-open-ddk-ccbcfb3636a3c8f8",
+    "SPDXRef-File-googletest-open-ddk-dce1709eee829f57",
+    "SPDXRef-File-googletest-open-ddk-1845bb0722360e28",
+    "SPDXRef-File-googletest-open-ddk-530e121a7191f268",
+    "SPDXRef-File-googletest-open-ddk-3ce75ac7f76554bc",
+    "SPDXRef-File-googletest-open-ddk-30d35f4afa3672e5",
+    "SPDXRef-File-googletest-open-ddk-aa56f9fec6e07a83",
+    "SPDXRef-File-googletest-open-ddk-5698dd95a3e1992c",
+    "SPDXRef-File-googletest-open-ddk-ba00d16cd0a5aa7f",
+    "SPDXRef-File-googletest-open-ddk-d09de1983b880fa9",
+    "SPDXRef-File-googletest-open-ddk-321a63f46a8a8f5f",
+    "SPDXRef-File-googletest-open-ddk-1d94dea533a5d9e9",
+    "SPDXRef-File-googletest-open-ddk-3388a059cad30f96",
+    "SPDXRef-File-googletest-open-ddk-50495df6079c5a1f",
+    "SPDXRef-File-googletest-open-ddk-b8bf6f51ce9fd599",
+    "SPDXRef-File-googletest-open-ddk-d215ca2178f8b0b2",
+    "SPDXRef-File-googletest-open-ddk-a8c292c726ba0bb3",
+    "SPDXRef-File-googletest-open-ddk-d1de1a9d231ab347",
+    "SPDXRef-File-googletest-open-ddk-3e96801911c67f66",
+    "SPDXRef-File-googletest-open-ddk-2aca381f18779fa3",
+    "SPDXRef-File-googletest-open-ddk-057add0309f8dca1",
+    "SPDXRef-File-googletest-open-ddk-e5fbd555427850df",
+    "SPDXRef-File-googletest-open-ddk-65701105a5cf6a7d",
+    "SPDXRef-File-googletest-open-ddk-0a6cf978d7195898",
+    "SPDXRef-File-googletest-open-ddk-47362bf36a3911a5",
+    "SPDXRef-File-googletest-open-ddk-88685dc189f71972",
+    "SPDXRef-File-googletest-open-ddk-abf4c42b5484560e",
+    "SPDXRef-File-googletest-open-ddk-bd1b7fad3740bdef",
+    "SPDXRef-File-googletest-open-ddk-e4e28b66cef097ed",
+    "SPDXRef-File-googletest-open-ddk-df85830d98fba0b5",
+    "SPDXRef-File-googletest-open-ddk-1b2080f188d0ecf5",
+    "SPDXRef-File-googletest-open-ddk-a2e8a5f34911bd87",
+    "SPDXRef-File-googletest-open-ddk-34687ae9baab9b91",
+    "SPDXRef-File-googletest-open-ddk-2b925e19bbaea53b",
+    "SPDXRef-File-googletest-open-ddk-0d87b514992a08ab",
+    "SPDXRef-File-googletest-open-ddk-d994a66037fab210",
+    "SPDXRef-File-googletest-open-ddk-9793ab77f787e441",
+    "SPDXRef-File-googletest-open-ddk-b254f9a4f9159a62",
+    "SPDXRef-File-googletest-open-ddk-3e5140bf6c55e10d",
+    "SPDXRef-File-googletest-open-ddk-1bb203f17e965446",
+    "SPDXRef-File-googletest-open-ddk-669b5bb0de860e39",
+    "SPDXRef-File-googletest-open-ddk-1d5550df08fa5f56",
+    "SPDXRef-File-googletest-open-ddk-02a541b5a45c6796",
+    "SPDXRef-File-googletest-open-ddk-67ba9bcfce6610a3",
+    "SPDXRef-File-googletest-open-ddk-9c80eaff4bb6dfa9",
+    "SPDXRef-File-googletest-open-ddk-ec6b867eb39aec18",
+    "SPDXRef-File-googletest-open-ddk-e7a4b5cd09261caf",
+    "SPDXRef-File-googletest-open-ddk-fb93af94a2ff8319",
+    "SPDXRef-File-googletest-open-ddk-fe21e0f24ba308a9",
+    "SPDXRef-File-googletest-open-ddk-7ca6f37e18aadbf8",
+    "SPDXRef-File-googletest-open-ddk-6cb0375b6429e08d",
+    "SPDXRef-File-googletest-open-ddk-f63300405f36449f",
+    "SPDXRef-File-googletest-open-ddk-5929491f55bd3ad8",
+    "SPDXRef-File-googletest-open-ddk-6d83fb5f07b09749",
+    "SPDXRef-File-googletest-open-ddk-dba2f4af23c0127d",
+    "SPDXRef-File-googletest-open-ddk-8f406b362bf12f17",
+    "SPDXRef-File-googletest-open-ddk-1c7ca61d0308283d",
+    "SPDXRef-File-googletest-open-ddk-24e1c3bd2d20ff58",
+    "SPDXRef-File-googletest-open-ddk-9faa9b3d55799145",
+    "SPDXRef-File-googletest-open-ddk-8123a69882ac3b91",
+    "SPDXRef-File-googletest-open-ddk-8e614ea1bd50ff39",
+    "SPDXRef-File-googletest-open-ddk-8d3faceee165853f",
+    "SPDXRef-File-googletest-open-ddk-c53959cd89e26f0c",
+    "SPDXRef-File-googletest-open-ddk-6445e732f0f755e6",
+    "SPDXRef-File-googletest-open-ddk-0a48b98a36aaf588",
+    "SPDXRef-File-googletest-open-ddk-c601836ba319db14",
+    "SPDXRef-File-googletest-open-ddk-23a92de396521d56",
+    "SPDXRef-File-googletest-open-ddk-ceef76f076862069",
+    "SPDXRef-File-googletest-open-ddk-8df02af7fc90eaa6",
+    "SPDXRef-File-googletest-open-ddk-7771101ace639343",
+    "SPDXRef-File-googletest-open-ddk-0cfcab0be966a78b",
+    "SPDXRef-File-googletest-open-ddk-81d255db6fb8cfb9",
+    "SPDXRef-File-googletest-open-ddk-a7e39037439de168",
+    "SPDXRef-File-googletest-open-ddk-4205bc83be3e369c",
+    "SPDXRef-File-googletest-open-ddk-1210fff3c0bb6170"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "BSD-3-Clause",
+   "name": "googletest (open-ddk)",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "9d767d6f99e5eb55bd76133c1ef98ccb6d09dff8"
+   },
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "84e75276+5d0dd23c6cdc"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-googletest-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-googletest-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-googletest-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-googletest-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

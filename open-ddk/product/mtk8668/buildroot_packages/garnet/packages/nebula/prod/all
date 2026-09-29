@@ -1,0 +1,13 @@
+{
+    "imports": [
+        "garnet/packages/nebula/prod/nbl_license_srv",
+        "garnet/packages/nebula/prod/nbl_loader_provider",
+        "garnet/packages/nebula/prod/nbl_loader_srv",
+        "garnet/packages/nebula/prod/nbl_sysinfo_srv",
+        "garnet/packages/nebula/prod/nbl_hypervisor",
+        "garnet/packages/nebula/prod/nbl_trace",
+        "garnet/packages/nebula/prod/drivers",
+        "garnet/packages/nebula/prod/filesystems",
+        "garnet/packages/benchmarks/zircon"
+    ]
+}

@@ -1,0 +1,91 @@
+// SPDX-License-Identifier: NebulaProprietary
+/*
+* Copyright (c) 2025 MediaTek Inc.
+* Copyright 2025 GoldenRiver Technologies Co., Ltd. All rights reserved.
+*/
+/ {
+    feat_root: features {
+        status = "disabled";
+
+        feat_wdt_sink: wdt-sink {
+            status = "disabled";
+        };
+
+        feat_disable_uartlog: disable_uartlog {
+            status = "disabled";
+        };
+
+        feat_nebulalog: nebulalog {
+            status = "disabled";
+        };
+
+        feat_vmlog: vmlog {
+            status = "disabled";
+        };
+
+        feat_mmio_bus: mmio_bus {
+            status = "disabled";
+
+            feat_mmio_virtio_block: mmio-virtio-block {
+                status = "disabled";
+            };
+
+        };
+
+        feat_pci_bus: pci_bus {
+            status = "disabled";
+
+            feat_pci_virtio_block: pci-virtio-block {
+                status = "disabled";
+            };
+
+            feat_virtio_cluster: virtio-cluster {
+                status = "disabled";
+            };
+
+            feat_virtio_spi: virtio-spi {
+                status = "disabled";
+            };
+
+            feat_virtio_i2c: virtio-i2c {
+                status = "disabled";
+            };
+
+            feat_virtio_eint: virtio-eint {
+                status = "disabled";
+            };
+
+            feat_virtio_console: virtio-console {
+                status = "disabled";
+            };
+
+            feat_virtio_vsock: virtio-vsock {
+                status = "disabled";
+
+                feat_gzfs: gzfs {
+                    status = "disabled";
+                };
+            };
+ 
+            feat_virtio_rtc: virtio-rtc {
+                status = "disabled";
+            };
+        };
+
+        feat_ufs: ufs {
+            status = "disabled";
+        };
+
+        feat_smc: smc {
+            status = "disabled";
+        };
+
+        feat_cvm_lock: cvm_lock {
+            status = "disabled";
+        };
+
+        feat_pvblk: pvblk {
+            status = "disabled";
+        };
+    };
+};

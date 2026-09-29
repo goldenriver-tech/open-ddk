@@ -1,0 +1,1743 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/mako-84d21ded-84d21ded4c270deebad88a61ef78356fa6e075ba",
+ "files": [
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-a5cc2925ca8258af",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8af9181aaa898ac119e3b2be23d6222d155571db"
+    }
+   ],
+   "fileName": "./.gitignore"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b4d9cceeb8796581",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "58fdfcb10da7d17da338fccbaf9fe81466545446"
+    }
+   ],
+   "fileName": "./.gitreview"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-dea01dd89a3b6028",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "aa546bc877969f4db95e9d2c38f8543cf4a7c755"
+    }
+   ],
+   "fileName": "./.travis.yml"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-dad57a4c245a8007",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e82ec9a8f3607070c26ab091aacc5fbb190f05d1"
+    }
+   ],
+   "fileName": "./AUTHORS"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-a2feb6ed0257c21c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c6202ccb2b0e0e2c25efc6bf20aa6d0134206e1"
+    }
+   ],
+   "fileName": "./CHANGES"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-0398ccd0f49298b1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b53499295259aa2621d56cf4375d193fc69a42d5"
+    }
+   ],
+   "fileName": "./LICENSE"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-8875df48c1803012",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ede73e5551dda75f8ef0540c287fbf60e7e3a42"
+    }
+   ],
+   "fileName": "./MANIFEST.in"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-561b88e19de321ca",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ad6ad311e33a09f3c3a42d2a44ad10c8d6874d0f"
+    }
+   ],
+   "fileName": "./README.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4746f3085d9c07e1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e9277c3196de9a010c646b299a105420fdc5a436"
+    }
+   ],
+   "fileName": "./doc/build/Makefile"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-621c63a82c492013",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./doc/build/builder/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b24aaa5006b858b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d9fc5e97ab648061cbe47137684a2af5adb1583"
+    }
+   ],
+   "fileName": "./doc/build/builder/builders.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-3c1ed1014d616926",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a76ecd1d66c6b4f3cf5bc05ce4ed03fa13199833"
+    }
+   ],
+   "fileName": "./doc/build/builder/util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-91633ffb9d2cd653",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d0a877f03c46ad5f52bbee2de44f67496227d983"
+    }
+   ],
+   "fileName": "./doc/build/caching.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9834f9583693984c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e3c1143d6af39cc23f791f5e61ff6fa5b12a9a23"
+    }
+   ],
+   "fileName": "./doc/build/changelog.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-218b387bdf62c2ed",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e4cfd288128baac4cfe2c66aa65c46292c2ced3"
+    }
+   ],
+   "fileName": "./doc/build/conf.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-d3c1bbfefdabbb66",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "485fdc8ec9a4efa558447e2a2b753d92e7d75b9f"
+    }
+   ],
+   "fileName": "./doc/build/defs.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4c9c89099ffe69a0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "02e404534db170239d940058a651400619b7ab72"
+    }
+   ],
+   "fileName": "./doc/build/filtering.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-ef96a2b42498c201",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1b55baed885340db8756c6618aa2f7c5625a396a"
+    }
+   ],
+   "fileName": "./doc/build/index.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7356d9910bda01a9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b238aa23e86c05f8d0e4f62572e1364670ef0a18"
+    }
+   ],
+   "fileName": "./doc/build/inheritance.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7ac9e2497b9b0f1d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "602a58ad52b87a8c4dfa5cc42059e1a5802853aa"
+    }
+   ],
+   "fileName": "./doc/build/namespaces.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-446bbd3ed642eb17",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6afc6ca3fa225bcec745acfa8c80fd99679ffc17"
+    }
+   ],
+   "fileName": "./doc/build/requirements.txt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-076179acaa15a511",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6a0fe7db7558c2dbe5a1af2cccbff38362939a19"
+    }
+   ],
+   "fileName": "./doc/build/runtime.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e93f62550a972711",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "beb074c46014474800b07259cab3cdc88192774e"
+    }
+   ],
+   "fileName": "./doc/build/static/docs.css"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-63d3f5be3eabebeb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4a8c0c8ed3928c49822ad45ae65e48075e500e3d"
+    }
+   ],
+   "fileName": "./doc/build/static/makoLogo.png"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7c678fa4ec5d19e7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "66e31ea060cbb66366425747140a71b2f0bc9449"
+    }
+   ],
+   "fileName": "./doc/build/static/python-logo.gif"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-38d821a341596ff4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f2f2c3d6dc010c9f0a3faa9bff105e81c506cffa"
+    }
+   ],
+   "fileName": "./doc/build/static/site.css"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-55fc78b1814cfa80",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d66e7b7056ee6ea2d6d15faa41e61640cc33024e"
+    }
+   ],
+   "fileName": "./doc/build/syntax.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-0ae76594244515c9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6db66f988dacaff90231ddf97bc0913f1c8f1dc7"
+    }
+   ],
+   "fileName": "./doc/build/templates/base.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-259f6996eacfcfea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5c50049cff08cc1bd89702dad0fcdc96155fdff8"
+    }
+   ],
+   "fileName": "./doc/build/templates/genindex.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-6ba4381d2eebc454",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f2bf5f456a3a6433259f8bf9590432606cb578f0"
+    }
+   ],
+   "fileName": "./doc/build/templates/layout.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-5ee17343da17725f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5a16b36977f12b55ddf8081517929428bbdb262b"
+    }
+   ],
+   "fileName": "./doc/build/templates/page.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-ea6082d20755ad0c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "187f570b8974435dfbd445b2c8ea86b02bbc1017"
+    }
+   ],
+   "fileName": "./doc/build/templates/rtd_layout.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9a01085adc211a3e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "75ca0ad5b90807ea55fc59f64e004ae9efecfa2d"
+    }
+   ],
+   "fileName": "./doc/build/templates/search.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-6968cdec0a31c27d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca6a3464c66eda235c040a16aa091b9a69b97eaa"
+    }
+   ],
+   "fileName": "./doc/build/unicode.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9179074dfc3bcd12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "ca58a1b98a35a2b48815bbdeef80b18fc48e2a0d"
+    }
+   ],
+   "fileName": "./doc/build/usage.rst"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-59eacf3711fc03b4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4c26dcd0d5fbe966db119abb95fbf4cbe8326c73"
+    }
+   ],
+   "fileName": "./examples/bench/basic.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-28239a262e25ab7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b7e0fa9b9e7d3485349212566a097f67dce7933"
+    }
+   ],
+   "fileName": "./examples/bench/cheetah/footer.tmpl"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4fbcebaf355b3488",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "75d071aad37dc94c05f825f44bd649563f0c8d33"
+    }
+   ],
+   "fileName": "./examples/bench/cheetah/header.tmpl"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-8ca268db0f76df45",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5b496513166fe563035006c45e233d265f58a329"
+    }
+   ],
+   "fileName": "./examples/bench/cheetah/template.tmpl"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4187c5aa5779e059",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2db6d9acd059c86b3d716bfdfde502e085a65f5d"
+    }
+   ],
+   "fileName": "./examples/bench/django/templates/base.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-3392c673ec7b9c9d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f787b04bfa84372694ef042109026b4eadbc32b6"
+    }
+   ],
+   "fileName": "./examples/bench/django/templates/template.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7f685a47c55851c0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./examples/bench/django/templatetags/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b4a143557ae9d0e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d36080d40fb4201b4aacfdc1f83b202e32830793"
+    }
+   ],
+   "fileName": "./examples/bench/django/templatetags/bench.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-0945001b7e2ec888",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9b05a5609b57e112ab9872bb03a75a1b4ac29e9a"
+    }
+   ],
+   "fileName": "./examples/bench/genshi/base.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e87bcb9d94deb70b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cace8c7a9347481ed2585222b206621253db3530"
+    }
+   ],
+   "fileName": "./examples/bench/genshi/template.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4ec7a52592120869",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b7e0fa9b9e7d3485349212566a097f67dce7933"
+    }
+   ],
+   "fileName": "./examples/bench/jinja2/footer.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e3db72cf07df4dc2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7c317adc03b7e0d4b9f822b552359fc07958e91b"
+    }
+   ],
+   "fileName": "./examples/bench/jinja2/header.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-c6eaad287c025e10",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d4a73abbffdd25a4869451363f24f9e0bae7c57f"
+    }
+   ],
+   "fileName": "./examples/bench/jinja2/template.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-5e48708e34d33f97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c4cf52e8f923378600f6b7da8081d7c69b87beef"
+    }
+   ],
+   "fileName": "./examples/bench/jinja2_inheritance/base.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f0854fd8842d5e75",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "65b5dfb4ba4ffc9707b4863c5b195b22a479bac6"
+    }
+   ],
+   "fileName": "./examples/bench/jinja2_inheritance/template.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e6a895b30118931c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "686573c192144c908ba8a106084734dec43ff7da"
+    }
+   ],
+   "fileName": "./examples/bench/kid/base.kid"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-bb93c3d39e0155cc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5e4d624e5dc9a6d4e2d372ea71490122aa672469"
+    }
+   ],
+   "fileName": "./examples/bench/kid/template.kid"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-ff812ac5c1fa9ad4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b7e0fa9b9e7d3485349212566a097f67dce7933"
+    }
+   ],
+   "fileName": "./examples/bench/mako/footer.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-1c52c1cfd67baea2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fcc63ffe52c4cb0709db8ad1b53dd0ddb801fe40"
+    }
+   ],
+   "fileName": "./examples/bench/mako/header.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-ae9b8d54881ab021",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "be04c95a89516d95fe4df2fe363f10602ba21cfb"
+    }
+   ],
+   "fileName": "./examples/bench/mako/template.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-947b22908320ab55",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dd7497f078c22c2812e03dd610a9f731053cadc1"
+    }
+   ],
+   "fileName": "./examples/bench/mako_inheritance/base.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-476b181743174a1e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e7538974e2b3089417846a398c860a4c1e725959"
+    }
+   ],
+   "fileName": "./examples/bench/mako_inheritance/template.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-194d96dbf1c1b162",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "dcc94da78b7fecf6f371da180096023aba4f208c"
+    }
+   ],
+   "fileName": "./examples/bench/myghty/base.myt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-1a30aa1f1f219c25",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9c8cb38f2c138f9cb8a848db40268f940cc9b518"
+    }
+   ],
+   "fileName": "./examples/bench/myghty/template.myt"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b3616c4f0641df70",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "750bb5a902730f58a4270a7f438a52844f0cc768"
+    }
+   ],
+   "fileName": "./examples/wsgi/htdocs/index.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-bd9c035b5cff784b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "44bfd0204b4237373797f8ccdbf2fb2fb05a3aee"
+    }
+   ],
+   "fileName": "./examples/wsgi/run_wsgi.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-62503a544b9dbd11",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4723ab19feb3f0b40097c5b6aabb9642cc1c24e9"
+    }
+   ],
+   "fileName": "./examples/wsgi/templates/root.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-76ed7828e607ef5e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e0534c60d832136c9458594075c295345200baab"
+    }
+   ],
+   "fileName": "./mako/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-a805aa2adf5cc31c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3e82fc6e5a80b380d6c2c4f00463ea39b10b5c79"
+    }
+   ],
+   "fileName": "./mako/_ast_util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4f69c882486d17d7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a73365a9ce9a6dabe22576056259d9a9c9a3dfad"
+    }
+   ],
+   "fileName": "./mako/ast.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-99144dc6dd3f2990",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0d84e858b2c258f825064ff79cc769c8993ed0fe"
+    }
+   ],
+   "fileName": "./mako/cache.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-1cfc42af17f4c3da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9aa9c04b0c0633bd4c090f013343e7c65b810b4e"
+    }
+   ],
+   "fileName": "./mako/cmd.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7d2a198498b79202",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cf1d2ae0c5fe572b46a4abbe51ed6fe7c7f303c5"
+    }
+   ],
+   "fileName": "./mako/codegen.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-519e286c5040c578",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ea5da84fc5940392e5c8d2030bf11ac4275e215"
+    }
+   ],
+   "fileName": "./mako/compat.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-2472dc9e6efff479",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1c91e71e5a7079c755972d241da286776a04babf"
+    }
+   ],
+   "fileName": "./mako/exceptions.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-1964d2d4b3cdfe93",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./mako/ext/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e363f667171ace16",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4fa66c041ef9edbc174a4dbb2bfefcc2baabb9fd"
+    }
+   ],
+   "fileName": "./mako/ext/autohandler.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9b94ecec2239cf76",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "2b2bd27973967fae08866ac0d918af757a8ec68a"
+    }
+   ],
+   "fileName": "./mako/ext/babelplugin.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-a2fa7263284e6059",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "15c4a511e8561ca206efbd17edf0bded4e6f62f9"
+    }
+   ],
+   "fileName": "./mako/ext/beaker_cache.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4ff1a98f7131db15",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "8323f84a3c2aeaaed74765e178101e5a73949b38"
+    }
+   ],
+   "fileName": "./mako/ext/extract.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-ea7a8b7e86c21fbf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d3ffb94506ab38d52e350bc96e59eba84c20d72f"
+    }
+   ],
+   "fileName": "./mako/ext/linguaplugin.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-6618acc59018dab2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6d8cb132445b52df912cea576a92adfbc340a4ee"
+    }
+   ],
+   "fileName": "./mako/ext/preprocessors.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-08e8f49598057c40",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "521150218b72a3c6d314f227b5fc8011cb20d65b"
+    }
+   ],
+   "fileName": "./mako/ext/pygmentplugin.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-d1818e2923aeeafb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "efe40af814565639814ef5a97e44e928503e30d4"
+    }
+   ],
+   "fileName": "./mako/ext/turbogears.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f44e33b505965b3c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "526807a779a2cbc5bd574d5fe837322ae6db056f"
+    }
+   ],
+   "fileName": "./mako/filters.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-c3ba6c2ef4168e2a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "367a2020358b7591295631a10ad4da0add5e24f1"
+    }
+   ],
+   "fileName": "./mako/lexer.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-3039548ae6cb4c97",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b65471bd8909c571ed82f76da0c02340398f8799"
+    }
+   ],
+   "fileName": "./mako/lookup.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9b3649b79bed645e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "22b3bb6a51f75ce9f582f469786e42921aa34240"
+    }
+   ],
+   "fileName": "./mako/parsetree.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f1905fa669e178e2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9daf275962d3f4ab80e2cc0f91666f5032138ddf"
+    }
+   ],
+   "fileName": "./mako/pygen.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-683e11b47957a315",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1ce7c9ed3cbed47c9142f69a85c6350dd445bf13"
+    }
+   ],
+   "fileName": "./mako/pyparser.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4bb6c2992aa88d12",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "654cd92c4d8c8aa150754b4aab8815676b6ac3dc"
+    }
+   ],
+   "fileName": "./mako/runtime.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-de2110d89b986eac",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d00e87851244e963e2d2c0e5beca08c0717a71b"
+    }
+   ],
+   "fileName": "./mako/template.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7cd78453078bc0d7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "534932149797052bfc49bef1199ef9cd20015602"
+    }
+   ],
+   "fileName": "./mako/util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-8c91c0296909b5ea",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9f4b6e4189bcb05ad179170a707e6fb4e51e024c"
+    }
+   ],
+   "fileName": "./setup.cfg"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-8e2edce0d507e129",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3920ee5644cc125a0a780758fb5c926f2f5bc498"
+    }
+   ],
+   "fileName": "./setup.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7ac8b74ac3c1c514",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "abb7b9f02c10c5285eb8142a1cb7f187c37d6e84"
+    }
+   ],
+   "fileName": "./test/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-abbd89c21b97c902",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./test/ext/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-16bc7d5b50a77c88",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "51357c02712262a321f17464f0e91df5290be66e"
+    }
+   ],
+   "fileName": "./test/ext/test_babelplugin.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7924de34d30fe2b8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4cf78f3bdc5831d66bf9668c19eb41d140c854ac"
+    }
+   ],
+   "fileName": "./test/ext/test_linguaplugin.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-fa7d8804b233b4e8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./test/foo/__init__.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4dde0d31ef436986",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d9d15ff02b6eafb323f6822bd924287a48f313e3"
+    }
+   ],
+   "fileName": "./test/foo/test_ns.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f74113b9909791e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d94f696c7fbe893ab380b713f34be297c2eee5cd"
+    }
+   ],
+   "fileName": "./test/sample_module_namespace.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b0c10cef1cbf5393",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0202f35a96218cb0cca7f0a24823a04d9b1c4ad2"
+    }
+   ],
+   "fileName": "./test/templates/badbom.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-1f715fccd8af88c5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0303a2bb9acd5ebc05188668be0fe23464b45292"
+    }
+   ],
+   "fileName": "./test/templates/bom.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-58c0d1360d4c1c00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "800f184b96a04ce9b2094c3eec59ade25d4d917d"
+    }
+   ],
+   "fileName": "./test/templates/bommagic.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9cddd493478d2400",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "1e91a9f2ad3563f78852b7135d35ec98cfdbb234"
+    }
+   ],
+   "fileName": "./test/templates/chs_unicode.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b9068791b8ccba4e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e367cc5accbb01652d71e62d5ed9774d2f598d88"
+    }
+   ],
+   "fileName": "./test/templates/chs_unicode_py3k.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b35d1fd4f8aa9e24",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "21b2ce5f0f74e359ef87f69fe5b348225cf8164b"
+    }
+   ],
+   "fileName": "./test/templates/chs_utf8.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e4fb88ad2a90cda3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "9ddfe6aa519943a8f8aec2f8abf2a8d2d26d55a2"
+    }
+   ],
+   "fileName": "./test/templates/cmd_good.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-67113499a86f9dd0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "240c2badc54b428b913725e7db80274c30fa67bb"
+    }
+   ],
+   "fileName": "./test/templates/cmd_runtime.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f7bed22766d4179e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3d371d7cda8a5e15bfaf4fb29e0156198883cb81"
+    }
+   ],
+   "fileName": "./test/templates/cmd_syntax.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-c0c7b5923569b2ee",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "826f99a842e42337b7ac74894988ddaf02854877"
+    }
+   ],
+   "fileName": "./test/templates/crlf.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-72ce72d50bbe4556",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "87fc4ee4edde74adbb5f842fd8c575d5abe58717"
+    }
+   ],
+   "fileName": "./test/templates/foo/modtest.html.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-11529d35b5922407",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3c32466d3bff4b976e95387549b42ef2736d208c"
+    }
+   ],
+   "fileName": "./test/templates/gettext.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-d4ca35959de19f0f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "837bc548fd4d5adca69a1415ae63443abf2e4c9d"
+    }
+   ],
+   "fileName": "./test/templates/gettext_cp1251.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-76059119b68b4d73",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e8cba122404dc5f8bdda8e20b49425eed0a8673c"
+    }
+   ],
+   "fileName": "./test/templates/gettext_utf8.mako"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4d694ce3a66f81b4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "52ede3178fb286894e8a45490e8f5b776a29e7e7"
+    }
+   ],
+   "fileName": "./test/templates/index.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-893b380846ec646d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e5d9e0ca291a31dbfea6e42263f8c7cebc6b593f"
+    }
+   ],
+   "fileName": "./test/templates/internationalization.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-709ae5b3f3c62b19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fa26be19de6bff93f70bc2308434e4a440bbad02"
+    }
+   ],
+   "fileName": "./test/templates/modtest.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b00b56c325df5b3b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+   ],
+   "fileName": "./test/templates/othersubdir/foo.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-0d0986047db6fae8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e1e8d741fdaba84a359a8fefcf5da8218ec946bb"
+    }
+   ],
+   "fileName": "./test/templates/read_unicode.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-abd991366f8e186f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f1748d2ed76216081124e2733a0d22a0996e09ba"
+    }
+   ],
+   "fileName": "./test/templates/read_unicode_py3k.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-4a0c286a2aa59e9d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "e4e5db892e011cc5610d917b09f4751f0142985c"
+    }
+   ],
+   "fileName": "./test/templates/runtimeerr.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-822ad640cc1f0f8c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "70a492d96bf1879d5a02af9274fd07a312fb7275"
+    }
+   ],
+   "fileName": "./test/templates/runtimeerr_py3k.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-cff94eb9acf466e3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a9df588a51251c9b8221658217c90a64e8b01f56"
+    }
+   ],
+   "fileName": "./test/templates/subdir/foo/modtest.html.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9a65f0c39d47d05d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "4faca5386a21a70fe50aa887c37f102cf8c882b7"
+    }
+   ],
+   "fileName": "./test/templates/subdir/incl.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e5f1fe4c93bc166e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d3d2cc47c88dd89603556b6a24bc30a335e58299"
+    }
+   ],
+   "fileName": "./test/templates/subdir/index.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f29894b14564294e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "fa26be19de6bff93f70bc2308434e4a440bbad02"
+    }
+   ],
+   "fileName": "./test/templates/subdir/modtest.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f70c22cdc2e0bbc4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "26ac25d1d76a38b5bd9d4b05d6dbda921f6b7722"
+    }
+   ],
+   "fileName": "./test/templates/unicode.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-ca91a5f746367c9e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6c42c8d82667df9c1159947b698b1b781e08d01e"
+    }
+   ],
+   "fileName": "./test/templates/unicode_arguments.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-141f2c3a2bf80d7f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "6543ca6f1ac4f570abcfb001ffbcc03060549d37"
+    }
+   ],
+   "fileName": "./test/templates/unicode_arguments_py3k.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-2da8dad125afdc0d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0b3752a7b550ccf1322860530fc6e56d96054e01"
+    }
+   ],
+   "fileName": "./test/templates/unicode_code.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-23a13a5bf1c550ce",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "93850acd84aabeaad46fbe3835256fc819a24da0"
+    }
+   ],
+   "fileName": "./test/templates/unicode_code_py3k.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-0070b6810f7b9992",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "381147de0734f0ebbb86307b3af9a583bcbbd07c"
+    }
+   ],
+   "fileName": "./test/templates/unicode_expr.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-b4d351f83c4f4e54",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "3b5521f8db5307473f3ce563287e32bfe792a372"
+    }
+   ],
+   "fileName": "./test/templates/unicode_expr_py3k.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-35150b81311f5bb4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "cecf65f34df5be9e3a0895dd8fcd08a8e8654a9c"
+    }
+   ],
+   "fileName": "./test/templates/unicode_runtime_error.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-5d157bc5eac2a36e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "68789d0cc6d8e59f6b02156a04dc6b3ccfb959b2"
+    }
+   ],
+   "fileName": "./test/templates/unicode_syntax_error.html"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-7955cbe5889e19bf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "44dfd797b003fcfc1dce5851c8d4ff09decad7b9"
+    }
+   ],
+   "fileName": "./test/test_ast.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-e044a8a20ea73b79",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "431b0a44f2f827bc09cf8c72d5c3dea87fd156d3"
+    }
+   ],
+   "fileName": "./test/test_block.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-d5c5843574f3dbb0",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "d1f8992f1c731c9bf3e3678c0e0039ad6ca7215f"
+    }
+   ],
+   "fileName": "./test/test_cache.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-748d49e528466ed2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "7ad5b24183723d3c4b6098486b5379f1fb60cf21"
+    }
+   ],
+   "fileName": "./test/test_call.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-be4fe7bea22b8446",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b36f46c8abaed93406721a2b2ade6f910e03bd29"
+    }
+   ],
+   "fileName": "./test/test_cmd.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-32451007e56bdd2e",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "5d090ebfa678c681e9054ca83bc0752bf8cf561d"
+    }
+   ],
+   "fileName": "./test/test_decorators.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-2e1b1433f8998a17",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0ed7d21c280767e9c5a2abe5b8cf679e894c9dcd"
+    }
+   ],
+   "fileName": "./test/test_def.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-34f9cfbef9823b0a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c9c6d65b945fe4edd0ebc7f9c70475cf781a57cc"
+    }
+   ],
+   "fileName": "./test/test_exceptions.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-2e4ae1213dae66f1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "825d871987f3551679db0673e5bc513a34f59f46"
+    }
+   ],
+   "fileName": "./test/test_filters.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-f8ef2a8bc521bac3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "31703795ab136cc31d8f86165da52628bfa80c82"
+    }
+   ],
+   "fileName": "./test/test_inheritance.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-22612c7b18e3402b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "c1aab35c5239822af6e42af90f287ba2fd6f4e09"
+    }
+   ],
+   "fileName": "./test/test_lexer.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-8b653a17528b492d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "f5e7db5c20f02d8cc9a57bdfed919c2f736b1759"
+    }
+   ],
+   "fileName": "./test/test_lookup.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-955a2a7004293323",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b64466f53e3d4f125abf624073af828cda9b527c"
+    }
+   ],
+   "fileName": "./test/test_loop.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-a99df866a9853441",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0d02f0fe4914990a885164af3670b12c5fd50e78"
+    }
+   ],
+   "fileName": "./test/test_lru.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-8e1d35f01ceec1f8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "217c65deaa25f47cc7883df5c6d1f2b5ee27a8c7"
+    }
+   ],
+   "fileName": "./test/test_namespace.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-271fb96f1bcdf4d7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "bb711e537fb3716388f31ab29641c4c7c7f66f99"
+    }
+   ],
+   "fileName": "./test/test_pygen.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-0d90df8b097f9420",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "84af01064a9f7e2d354d7191ba59c46f94f9c301"
+    }
+   ],
+   "fileName": "./test/test_runtime.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9cdbdb1e692d395f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "262f7304f1031f690a0c7f8ea10decb1fab4432c"
+    }
+   ],
+   "fileName": "./test/test_template.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-9108a9afe2772c13",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "768284795f0e931526b3a26e7bad6467ba05766f"
+    }
+   ],
+   "fileName": "./test/test_tgplugin.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-6640185810de16e7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "a4630152268bdcb9e0697b113418ee3590cd810c"
+    }
+   ],
+   "fileName": "./test/test_util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-32953abcf1a7bd6f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "b8e0d9975e10a3a2d26abd2e13672d7d59c9fb90"
+    }
+   ],
+   "fileName": "./test/util.py"
+  },
+  {
+   "SPDXID": "SPDXRef-File-mako-upstream-61be067c7cf3bdbf",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "306b0fe3f2d6871dc6c2a87af46ec6a0e9ea64bf"
+    }
+   ],
+   "fileName": "./tox.ini"
+  }
+ ],
+ "name": "mako-84d21ded",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-mako-upstream",
+   "comment": "The upstream repository at the commit open-ddk refers to as a git submodule (third_party/mako); anyone can recompute this package from upstream alone.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/sqlalchemy/mako@84d21ded4c270deebad88a61ef78356fa6e075ba",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/sqlalchemy/mako@84d21ded4c270deebad88a61ef78356fa6e075ba",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": true,
+   "hasFiles": [
+    "SPDXRef-File-mako-upstream-a5cc2925ca8258af",
+    "SPDXRef-File-mako-upstream-b4d9cceeb8796581",
+    "SPDXRef-File-mako-upstream-dea01dd89a3b6028",
+    "SPDXRef-File-mako-upstream-dad57a4c245a8007",
+    "SPDXRef-File-mako-upstream-a2feb6ed0257c21c",
+    "SPDXRef-File-mako-upstream-0398ccd0f49298b1",
+    "SPDXRef-File-mako-upstream-8875df48c1803012",
+    "SPDXRef-File-mako-upstream-561b88e19de321ca",
+    "SPDXRef-File-mako-upstream-4746f3085d9c07e1",
+    "SPDXRef-File-mako-upstream-621c63a82c492013",
+    "SPDXRef-File-mako-upstream-b24aaa5006b858b8",
+    "SPDXRef-File-mako-upstream-3c1ed1014d616926",
+    "SPDXRef-File-mako-upstream-91633ffb9d2cd653",
+    "SPDXRef-File-mako-upstream-9834f9583693984c",
+    "SPDXRef-File-mako-upstream-218b387bdf62c2ed",
+    "SPDXRef-File-mako-upstream-d3c1bbfefdabbb66",
+    "SPDXRef-File-mako-upstream-4c9c89099ffe69a0",
+    "SPDXRef-File-mako-upstream-ef96a2b42498c201",
+    "SPDXRef-File-mako-upstream-7356d9910bda01a9",
+    "SPDXRef-File-mako-upstream-7ac9e2497b9b0f1d",
+    "SPDXRef-File-mako-upstream-446bbd3ed642eb17",
+    "SPDXRef-File-mako-upstream-076179acaa15a511",
+    "SPDXRef-File-mako-upstream-e93f62550a972711",
+    "SPDXRef-File-mako-upstream-63d3f5be3eabebeb",
+    "SPDXRef-File-mako-upstream-7c678fa4ec5d19e7",
+    "SPDXRef-File-mako-upstream-38d821a341596ff4",
+    "SPDXRef-File-mako-upstream-55fc78b1814cfa80",
+    "SPDXRef-File-mako-upstream-0ae76594244515c9",
+    "SPDXRef-File-mako-upstream-259f6996eacfcfea",
+    "SPDXRef-File-mako-upstream-6ba4381d2eebc454",
+    "SPDXRef-File-mako-upstream-5ee17343da17725f",
+    "SPDXRef-File-mako-upstream-ea6082d20755ad0c",
+    "SPDXRef-File-mako-upstream-9a01085adc211a3e",
+    "SPDXRef-File-mako-upstream-6968cdec0a31c27d",
+    "SPDXRef-File-mako-upstream-9179074dfc3bcd12",
+    "SPDXRef-File-mako-upstream-59eacf3711fc03b4",
+    "SPDXRef-File-mako-upstream-28239a262e25ab7f",
+    "SPDXRef-File-mako-upstream-4fbcebaf355b3488",
+    "SPDXRef-File-mako-upstream-8ca268db0f76df45",
+    "SPDXRef-File-mako-upstream-4187c5aa5779e059",
+    "SPDXRef-File-mako-upstream-3392c673ec7b9c9d",
+    "SPDXRef-File-mako-upstream-7f685a47c55851c0",
+    "SPDXRef-File-mako-upstream-b4a143557ae9d0e8",
+    "SPDXRef-File-mako-upstream-0945001b7e2ec888",
+    "SPDXRef-File-mako-upstream-e87bcb9d94deb70b",
+    "SPDXRef-File-mako-upstream-4ec7a52592120869",
+    "SPDXRef-File-mako-upstream-e3db72cf07df4dc2",
+    "SPDXRef-File-mako-upstream-c6eaad287c025e10",
+    "SPDXRef-File-mako-upstream-5e48708e34d33f97",
+    "SPDXRef-File-mako-upstream-f0854fd8842d5e75",
+    "SPDXRef-File-mako-upstream-e6a895b30118931c",
+    "SPDXRef-File-mako-upstream-bb93c3d39e0155cc",
+    "SPDXRef-File-mako-upstream-ff812ac5c1fa9ad4",
+    "SPDXRef-File-mako-upstream-1c52c1cfd67baea2",
+    "SPDXRef-File-mako-upstream-ae9b8d54881ab021",
+    "SPDXRef-File-mako-upstream-947b22908320ab55",
+    "SPDXRef-File-mako-upstream-476b181743174a1e",
+    "SPDXRef-File-mako-upstream-194d96dbf1c1b162",
+    "SPDXRef-File-mako-upstream-1a30aa1f1f219c25",
+    "SPDXRef-File-mako-upstream-b3616c4f0641df70",
+    "SPDXRef-File-mako-upstream-bd9c035b5cff784b",
+    "SPDXRef-File-mako-upstream-62503a544b9dbd11",
+    "SPDXRef-File-mako-upstream-76ed7828e607ef5e",
+    "SPDXRef-File-mako-upstream-a805aa2adf5cc31c",
+    "SPDXRef-File-mako-upstream-4f69c882486d17d7",
+    "SPDXRef-File-mako-upstream-99144dc6dd3f2990",
+    "SPDXRef-File-mako-upstream-1cfc42af17f4c3da",
+    "SPDXRef-File-mako-upstream-7d2a198498b79202",
+    "SPDXRef-File-mako-upstream-519e286c5040c578",
+    "SPDXRef-File-mako-upstream-2472dc9e6efff479",
+    "SPDXRef-File-mako-upstream-1964d2d4b3cdfe93",
+    "SPDXRef-File-mako-upstream-e363f667171ace16",
+    "SPDXRef-File-mako-upstream-9b94ecec2239cf76",
+    "SPDXRef-File-mako-upstream-a2fa7263284e6059",
+    "SPDXRef-File-mako-upstream-4ff1a98f7131db15",
+    "SPDXRef-File-mako-upstream-ea7a8b7e86c21fbf",
+    "SPDXRef-File-mako-upstream-6618acc59018dab2",
+    "SPDXRef-File-mako-upstream-08e8f49598057c40",
+    "SPDXRef-File-mako-upstream-d1818e2923aeeafb",
+    "SPDXRef-File-mako-upstream-f44e33b505965b3c",
+    "SPDXRef-File-mako-upstream-c3ba6c2ef4168e2a",
+    "SPDXRef-File-mako-upstream-3039548ae6cb4c97",
+    "SPDXRef-File-mako-upstream-9b3649b79bed645e",
+    "SPDXRef-File-mako-upstream-f1905fa669e178e2",
+    "SPDXRef-File-mako-upstream-683e11b47957a315",
+    "SPDXRef-File-mako-upstream-4bb6c2992aa88d12",
+    "SPDXRef-File-mako-upstream-de2110d89b986eac",
+    "SPDXRef-File-mako-upstream-7cd78453078bc0d7",
+    "SPDXRef-File-mako-upstream-8c91c0296909b5ea",
+    "SPDXRef-File-mako-upstream-8e2edce0d507e129",
+    "SPDXRef-File-mako-upstream-7ac8b74ac3c1c514",
+    "SPDXRef-File-mako-upstream-abbd89c21b97c902",
+    "SPDXRef-File-mako-upstream-16bc7d5b50a77c88",
+    "SPDXRef-File-mako-upstream-7924de34d30fe2b8",
+    "SPDXRef-File-mako-upstream-fa7d8804b233b4e8",
+    "SPDXRef-File-mako-upstream-4dde0d31ef436986",
+    "SPDXRef-File-mako-upstream-f74113b9909791e5",
+    "SPDXRef-File-mako-upstream-b0c10cef1cbf5393",
+    "SPDXRef-File-mako-upstream-1f715fccd8af88c5",
+    "SPDXRef-File-mako-upstream-58c0d1360d4c1c00",
+    "SPDXRef-File-mako-upstream-9cddd493478d2400",
+    "SPDXRef-File-mako-upstream-b9068791b8ccba4e",
+    "SPDXRef-File-mako-upstream-b35d1fd4f8aa9e24",
+    "SPDXRef-File-mako-upstream-e4fb88ad2a90cda3",
+    "SPDXRef-File-mako-upstream-67113499a86f9dd0",
+    "SPDXRef-File-mako-upstream-f7bed22766d4179e",
+    "SPDXRef-File-mako-upstream-c0c7b5923569b2ee",
+    "SPDXRef-File-mako-upstream-72ce72d50bbe4556",
+    "SPDXRef-File-mako-upstream-11529d35b5922407",
+    "SPDXRef-File-mako-upstream-d4ca35959de19f0f",
+    "SPDXRef-File-mako-upstream-76059119b68b4d73",
+    "SPDXRef-File-mako-upstream-4d694ce3a66f81b4",
+    "SPDXRef-File-mako-upstream-893b380846ec646d",
+    "SPDXRef-File-mako-upstream-709ae5b3f3c62b19",
+    "SPDXRef-File-mako-upstream-b00b56c325df5b3b",
+    "SPDXRef-File-mako-upstream-0d0986047db6fae8",
+    "SPDXRef-File-mako-upstream-abd991366f8e186f",
+    "SPDXRef-File-mako-upstream-4a0c286a2aa59e9d",
+    "SPDXRef-File-mako-upstream-822ad640cc1f0f8c",
+    "SPDXRef-File-mako-upstream-cff94eb9acf466e3",
+    "SPDXRef-File-mako-upstream-9a65f0c39d47d05d",
+    "SPDXRef-File-mako-upstream-e5f1fe4c93bc166e",
+    "SPDXRef-File-mako-upstream-f29894b14564294e",
+    "SPDXRef-File-mako-upstream-f70c22cdc2e0bbc4",
+    "SPDXRef-File-mako-upstream-ca91a5f746367c9e",
+    "SPDXRef-File-mako-upstream-141f2c3a2bf80d7f",
+    "SPDXRef-File-mako-upstream-2da8dad125afdc0d",
+    "SPDXRef-File-mako-upstream-23a13a5bf1c550ce",
+    "SPDXRef-File-mako-upstream-0070b6810f7b9992",
+    "SPDXRef-File-mako-upstream-b4d351f83c4f4e54",
+    "SPDXRef-File-mako-upstream-35150b81311f5bb4",
+    "SPDXRef-File-mako-upstream-5d157bc5eac2a36e",
+    "SPDXRef-File-mako-upstream-7955cbe5889e19bf",
+    "SPDXRef-File-mako-upstream-e044a8a20ea73b79",
+    "SPDXRef-File-mako-upstream-d5c5843574f3dbb0",
+    "SPDXRef-File-mako-upstream-748d49e528466ed2",
+    "SPDXRef-File-mako-upstream-be4fe7bea22b8446",
+    "SPDXRef-File-mako-upstream-32451007e56bdd2e",
+    "SPDXRef-File-mako-upstream-2e1b1433f8998a17",
+    "SPDXRef-File-mako-upstream-34f9cfbef9823b0a",
+    "SPDXRef-File-mako-upstream-2e4ae1213dae66f1",
+    "SPDXRef-File-mako-upstream-f8ef2a8bc521bac3",
+    "SPDXRef-File-mako-upstream-22612c7b18e3402b",
+    "SPDXRef-File-mako-upstream-8b653a17528b492d",
+    "SPDXRef-File-mako-upstream-955a2a7004293323",
+    "SPDXRef-File-mako-upstream-a99df866a9853441",
+    "SPDXRef-File-mako-upstream-8e1d35f01ceec1f8",
+    "SPDXRef-File-mako-upstream-271fb96f1bcdf4d7",
+    "SPDXRef-File-mako-upstream-0d90df8b097f9420",
+    "SPDXRef-File-mako-upstream-9cdbdb1e692d395f",
+    "SPDXRef-File-mako-upstream-9108a9afe2772c13",
+    "SPDXRef-File-mako-upstream-6640185810de16e7",
+    "SPDXRef-File-mako-upstream-32953abcf1a7bd6f",
+    "SPDXRef-File-mako-upstream-61be067c7cf3bdbf"
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "MIT",
+   "name": "mako",
+   "packageVerificationCode": {
+    "packageVerificationCodeValue": "c45fb7164cec32993c04ab80b2f763ada544544e"
+   },
+   "supplier": "Organization: sqlalchemy",
+   "versionInfo": "84d21ded"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-mako-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

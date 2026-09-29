@@ -1,0 +1,53 @@
+nbl_vm_srv_wdt_timeout_ms: 25000
+nbl_vm_srv_kick_interval_ms: 20000
+vmrecords {
+  name: "Android"
+  vmid: "0"
+  lk2: "/dev/disk/by-partlabel/bl2-an"
+  exec: "nbl_vmm"
+  json: "/vendor/etc/hyper_android/uos_alps_pv8668.lua"
+  log_severity: 2
+  auto_start: true
+  dump_console: true
+  pm_state_path: "/sys/guest_os/android/pm_state"
+  watchdog_timeout_s: 45
+
+  backends {
+    exec: "video_server"
+    args: "--socket_path=/tmp/virtio_video_decoder"
+    args: "--backend_path=/dev/video0"
+    args: "--is_decoder"
+  }
+
+  backends {
+    exec: "video_server"
+    args: "--socket_path=/tmp/virtio_video_encoder"
+    args: "--backend_path=/dev/video1"
+  }
+
+  backends {
+    exec: "virtiofsd"
+    args: "--socket-path=/tmp/virtiofs_socket0"
+    args: "--shared-dir=/data/share/media"
+    args: "--tag=media"
+    args: "--sandbox=none"
+    args: "--security-label"
+    args: "--cache=never"
+    args: "--selabel=u:object_r:mtk_vendor_data_file:s0"
+    args: "--xattrmap=:map:security.selinux:trusted.virtiofs.:"
+    args: "--modcaps=+sys_admin"
+  }
+}
+
+vmrecords {
+  name: "tbox"
+  vmid: "1"
+  lk2: "/dev/disk/by-partlabel/bl2-uos"
+  exec: "nbl_vmm"
+  json: "/vendor/etc/hyper_tbox/uos_tbox_pv8668.lua"
+  log_severity: 2
+  auto_start: false
+  dump_console: true
+  pm_state_path: "/sys/guest_os/tbox/pm_state"
+  watchdog_timeout_s: 45
+}

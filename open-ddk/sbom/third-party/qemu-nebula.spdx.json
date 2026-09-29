@@ -1,0 +1,65 @@
+{
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "creationInfo": {
+  "created": "2026-09-30T00:00:00Z",
+  "creators": [
+   "Organization: GoldenRiver Technology",
+   "Tool: open-ddk"
+  ]
+ },
+ "dataLicense": "CC0-1.0",
+ "documentNamespace": "https://spdx.org/spdxdocs/open-ddk/qemu-nebula-9c673a41eefc50f1cb2fe3c083e7de842c7d276a",
+ "files": [],
+ "name": "qemu-nebula",
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-qemu-upstream",
+   "comment": "The upstream repository at the commit GRT's commits start from, which the fork qemu (open-ddk's submodule third_party/qemu) has as it is; anyone can recompute this package from upstream alone. Its 9933 files are not listed here. PackageVerificationCode: bb76ffbf5459db52dbc5c27530e36bfe6c28772c.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/qemu/qemu@9c673a41eefc50f1cb2fe3c083e7de842c7d276a",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceLocator": "pkg:github/qemu/qemu@9c673a41eefc50f1cb2fe3c083e7de842c7d276a",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "GPL-2.0-only",
+   "name": "qemu",
+   "supplier": "Organization: qemu",
+   "versionInfo": "nebula"
+  },
+  {
+   "SPDXID": "SPDXRef-Package-qemu-open-ddk",
+   "comment": "As open-ddk ships it at third_party/qemu. the fork qemu (beside open-ddk; its submodule), branch nebula at ea3ab3451cf12b4ac653ef20a7477b28db2532dc: upstream 9c673a41eefc50f1cb2fe3c083e7de842c7d276a and GRT's 49 commit(s), which add, change or remove 20 file(s): .gitignore, hw/arm/virt-acpi-build.c, hw/arm/virt.c, hw/char/irq_generator.c, hw/char/meson.build, hw/intc/arm_gic.c, hw/intc/arm_gicv3.c, hw/intc/arm_gicv3_common.c, hw/intc/arm_gicv3_cpuif.c, hw/intc/gicv3_internal.h, hw/pci/pci.c, include/hw/arm/virt.h, include/hw/intc/arm_gicv3_common.h, include/hw/pci/pci_device.h, system/device_tree.c, target/arm/cpu-features.h, target/arm/cpu.c, target/arm/cpu.h, target/arm/helper.c, util/memfd.c. Its 9934 files are in FILES.tsv (project third_party/qemu). PackageVerificationCode: 39823d58be306978b053b6bdfb104c453a87e7ed.",
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "GPL-2.0-only",
+   "name": "qemu (open-ddk)",
+   "supplier": "Organization: GoldenRiver Technology",
+   "versionInfo": "nebula+ea3ab3451cf1"
+  }
+ ],
+ "relationships": [
+  {
+   "relatedSpdxElement": "SPDXRef-Package-qemu-upstream",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-qemu-open-ddk",
+   "relationshipType": "DESCRIBES",
+   "spdxElementId": "SPDXRef-DOCUMENT"
+  },
+  {
+   "relatedSpdxElement": "SPDXRef-Package-qemu-upstream",
+   "relationshipType": "VARIANT_OF",
+   "spdxElementId": "SPDXRef-Package-qemu-open-ddk"
+  }
+ ],
+ "spdxVersion": "SPDX-2.3"
+}

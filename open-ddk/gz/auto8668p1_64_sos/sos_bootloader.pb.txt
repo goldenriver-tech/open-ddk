@@ -1,0 +1,4 @@
+protocol: "dummy"
+dtb_base: 0x47c80000
+dtb_size: 0x800000
+entry: 0x40000000

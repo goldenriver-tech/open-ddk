@@ -1,0 +1,12 @@
+[Unit]
+Description=Yocto CPU Offline server
+DefaultDependencies=no
+After=sysinit.target
+
+[Service]
+ExecStart="/vendor/etc/hyper_android/nbl_yocto_cpu_offline.sh"
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
+

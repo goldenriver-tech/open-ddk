@@ -1,0 +1,130 @@
+# Copyright 2019 GoldenRiver Inc. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+# Do not use the targets in this file unless you need a certain libjpeg
+# implementation. Use the meta target //third_party:jpeg instead.
+
+import("//build/package.gni")
+
+config("libyoga_config") {
+  include_dirs = [ "." ]
+
+  defines = [ "DEBUG" ]
+}
+
+config("libyoga_public_config") {
+  include_dirs = [ "." ]
+}
+
+static_library("yoga") {
+  sources = [
+    "yoga/CompactValue.h",
+    "yoga/Utils.cpp",
+    "yoga/Utils.h",
+    "yoga/YGConfig.cpp",
+    "yoga/YGConfig.h",
+    "yoga/YGEnums.cpp",
+    "yoga/YGEnums.h",
+    "yoga/YGFloatOptional.h",
+    "yoga/YGLayout.cpp",
+    "yoga/YGLayout.h",
+    "yoga/YGMacros.h",
+    "yoga/YGMarker.cpp",
+    "yoga/YGMarker.h",
+    "yoga/YGNode.cpp",
+    "yoga/YGNode.h",
+    "yoga/YGNodePrint.cpp",
+    "yoga/YGNodePrint.h",
+    "yoga/YGStyle.cpp",
+    "yoga/YGStyle.h",
+    "yoga/YGValue.cpp",
+    "yoga/YGValue.h",
+    "yoga/Yoga-internal.h",
+    "yoga/Yoga.cpp",
+    "yoga/Yoga.h",
+    "yoga/instrumentation.h",
+    "yoga/log.cpp",
+    "yoga/log.h",
+  ]
+
+  configs += [ ":libyoga_config" ]
+
+  public_configs = [ ":libyoga_public_config" ]
+}
+
+executable("test") {
+  output_name = "libyoga_test"
+  testonly = true
+
+  sources = [
+    "tests/CompactValueTest.cpp",
+    "tests/YGAbsolutePositionTest.cpp",
+    "tests/YGAlignBaselineTest.cpp",
+    "tests/YGAlignContentTest.cpp",
+    "tests/YGAlignItemsTest.cpp",
+    "tests/YGAlignSelfTest.cpp",
+    "tests/YGAndroidNewsFeed.cpp",
+    "tests/YGAspectRatioTest.cpp",
+    "tests/YGBaselineFuncTest.cpp",
+    "tests/YGBorderTest.cpp",
+    "tests/YGComputedMarginTest.cpp",
+    "tests/YGComputedPaddingTest.cpp",
+    "tests/YGConfigTest.cpp",
+    "tests/YGDefaultValuesTest.cpp",
+    "tests/YGDimensionTest.cpp",
+    "tests/YGDirtiedTest.cpp",
+    "tests/YGDirtyMarkingTest.cpp",
+    "tests/YGDisplayTest.cpp",
+    "tests/YGEdgeTest.cpp",
+    "tests/YGFlexDirectionTest.cpp",
+    "tests/YGFlexTest.cpp",
+    "tests/YGFlexWrapTest.cpp",
+    "tests/YGFloatOptionalTest.cpp",
+    "tests/YGHadOverflowTest.cpp",
+    "tests/YGInfiniteHeightTest.cpp",
+    "tests/YGJustifyContentTest.cpp",
+    "tests/YGLayoutDiffingTest.cpp",
+    "tests/YGLoggerTest.cpp",
+    "tests/YGMarginTest.cpp",
+    "tests/YGMeasureCacheTest.cpp",
+    "tests/YGMeasureModeTest.cpp",
+    "tests/YGMeasureTest.cpp",
+    "tests/YGMinMaxDimensionTest.cpp",
+    "tests/YGNodeCallbackTest.cpp",
+    "tests/YGNodeChildTest.cpp",
+    "tests/YGPaddingTest.cpp",
+    "tests/YGPercentageTest.cpp",
+    "tests/YGPersistenceTest.cpp",
+    "tests/YGRelayoutTest.cpp",
+    "tests/YGRoundingFunctionTest.cpp",
+    "tests/YGRoundingMeasureFuncTest.cpp",
+    "tests/YGRoundingTest.cpp",
+    "tests/YGSizeOverflowTest.cpp",
+    "tests/YGStyleTest.cpp",
+    "tests/YGTraversalTest.cpp",
+    "tests/YGTreeMutationTest.cpp",
+    "tests/YGValueTest.cpp",
+    "tests/YGZeroOutLayoutRecursivlyTest.cpp",
+    "tests/run_all_unittests.cpp",
+  ]
+
+  deps = [
+    ":yoga",
+    "//third_party/googletest:gtest",
+  ]
+}
+
+package("libyoga_test") {
+  system_image = true
+  testonly = true
+
+  deps = [
+    ":test",
+  ]
+
+  tests = [
+    {
+      name = "libyoga_test"
+    },
+  ]
+}
