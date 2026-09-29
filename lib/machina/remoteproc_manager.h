@@ -17,14 +17,13 @@
 #include "garnet/bin/guest/proto/rproc.pb.h"
 #include "garnet/lib/machina/guest_config.h"
 #include "garnet/lib/machina/remoteproc.h"
+#include "garnet/lib/machina/vm_id.h"
 #include "lib/app/cpp/application_context.h"
 #include "lib/async/cpp/task.h"
 #include "lib/fidl/cpp/binding_set.h"
 #include "lib/fxl/logging.h"
 
 namespace machina {
-
-constexpr int16_t kSosVmid = -1;
 
 class RprocManager : public RprocService {
  public:

@@ -1,7 +1,8 @@
 {
   "dev": [
     "sys/platform/00:00:f",
-    "misc"
+    "misc",
+    "sys/platform/wdt/mtk_wdt"
   ],
   "system": [ "data" ]
 }

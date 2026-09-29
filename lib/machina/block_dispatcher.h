@@ -19,6 +19,9 @@ namespace machina {
 
 class PhysMem;
 
+zx_status_t DoVblockIoctl(int fd, uint32_t request, void* buf, size_t size,
+                          const char* dispatcher_type);
+
 class BlockDispatcher {
 public:
   enum class Mode {
@@ -48,7 +51,13 @@ public:
 
     bool empty() const { return type == GuidType::NONE; }
   };
-
+  enum bio_ioctl_num_ext {
+    BIO_IOCTL_CUSTOM_START = 0x100, /* for custom to add new enum */
+    BIO_IOCTL_SET_BOOT_REGION = BIO_IOCTL_CUSTOM_START,
+    BIO_IOCTL_SET_WRITE_PROTECT,
+    BIO_IOCTL_GET_BOOTDEV_TYPE,
+    BIO_IOCTL_GET_ACTIVE_BOOT,
+  };
   static zx_status_t
   CreateVolatileWrapper(fbl::unique_ptr<BlockDispatcher> dispatcher,
                         fbl::unique_ptr<BlockDispatcher> *out);
@@ -76,6 +85,9 @@ public:
   virtual zx_status_t Read(off_t disk_offset, void *buf, size_t size) = 0;
   virtual zx_status_t Write(off_t disk_offset, const void *buf,
                             size_t size) = 0;
+  virtual zx_status_t ioctl(uint32_t request, void *buf, size_t size) {
+    return ZX_ERR_NOT_SUPPORTED;
+  }
   virtual zx_status_t Submit() = 0;
   virtual void Shutdown() {}
 

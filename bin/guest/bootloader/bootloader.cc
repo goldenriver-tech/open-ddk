@@ -7,6 +7,7 @@
 #include "garnet/bin/guest/bootloader/bootloader.h"
 
 #include <block-client/client.h>
+#include <fdio/watcher.h>
 #include <fbl/unique_fd.h>
 #include <fcntl.h>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
@@ -50,6 +51,38 @@ zx_status_t register_fast_block_io(const fbl::unique_fd& fd,
   return ZX_OK;
 }
 
+static zx_status_t MatchBlockDeviceToPath(int dirfd, int event, const char* fn,
+                                          void* cookie) {
+  if (event != WATCH_EVENT_ADD_FILE) {
+    return ZX_OK;
+  }
+  if (strcmp(fn, static_cast<const char*>(cookie)) == 0) {
+    return ZX_ERR_STOP;
+  }
+  return ZX_OK;
+}
+
+static zx_status_t wait_for_block_device(const std::string& path) {
+  static constexpr char kBlockDirPath[] = "/dev/class/block";
+  static constexpr char kBlockDirPrefix[] = "/dev/class/block/";
+
+  if (path.rfind(kBlockDirPrefix, 0) != 0) {
+    return ZX_OK;
+  }
+
+  std::string file_name = path.substr(strlen(kBlockDirPrefix));
+  fbl::unique_fd dir_fd(open(kBlockDirPath, O_DIRECTORY | O_RDONLY));
+  if (!dir_fd) {
+    LOG(ERROR) << "failed to open block directory: " << kBlockDirPath;
+    return ZX_ERR_IO;
+  }
+
+  zx_status_t status =
+      fdio_watch_directory(dir_fd.get(), MatchBlockDeviceToPath,
+                           ZX_TIME_INFINITE, const_cast<char*>(file_name.c_str()));
+  return status == ZX_ERR_STOP ? ZX_OK : status;
+}
+
 static zx_status_t load_image_from_file(machina::Guest& guest,
                                         uint64_t* out_offset,
                                         uint64_t* out_size,
@@ -85,6 +118,13 @@ static zx_status_t load_image_from_block_device(
     uint64_t* out_offset,
     uint64_t* out_size,
     const nbl_vmm::Payload& payload) {
+  auto wait_status = wait_for_block_device(payload.filepath());
+  if (wait_status != ZX_OK) {
+    LOG(ERROR) << "failed to wait for bootloader payload block device: "
+               << payload.filepath();
+    return wait_status;
+  }
+
   fbl::unique_fd fd(open(payload.filepath().c_str(), O_RDONLY));
   if (!fd) {
     LOG(ERROR) << "failed to open bootloader payload file: "

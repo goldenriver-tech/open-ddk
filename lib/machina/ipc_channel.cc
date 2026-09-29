@@ -568,7 +568,7 @@ void IpcRequestHandler::SetSchedMem() {
 
 uint32_t IpcRequestHandler::GetMailboxPowerState(uint32_t vmid) {
   fbl::AutoLock lock(&mutex_);
-  if (vmid == 0) {
+  if (IsAlpsVmid(vmid)) {
     return mbox_state_vm0_;
   } else {
     return mbox_state_vm1_;
@@ -577,7 +577,7 @@ uint32_t IpcRequestHandler::GetMailboxPowerState(uint32_t vmid) {
 
 void IpcRequestHandler::SetPowerState(uint32_t vmid, uint32_t state) {
   fbl::AutoLock lock(&mutex_);
-  if (vmid == 0) {
+  if (IsAlpsVmid(vmid)) {
     mbox_state_vm0_ = state;
   } else {
     mbox_state_vm1_ = state;

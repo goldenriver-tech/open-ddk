@@ -64,6 +64,7 @@ class GuestConfig {
   }
   uint32_t monitor_irq() const { return monitor_irq_; }
   uint32_t smc_irq() const { return smc_irq_; }
+  uint32_t cvm_lock_irq() const { return cvm_lock_irq_; }
   std::vector<uint32_t>& wakeup_irqs() { return wakeup_irqs_; }
   machina::IrqMonitorSpec& irq_monitor() { return irq_monitor_spec_; }
 
@@ -76,11 +77,14 @@ class GuestConfig {
   const std::vector<uint16_t>& apu_irqs() const { return apu_irqs_; }
   const std::vector<uint16_t>& cmdq_irqs() const { return cmdq_irqs_; }
   uint32_t guest_reserved_memory() const { return guest_reserved_memory_; }
+  bool pvblk_enabled() const { return pvblk_enabled_; }
   std::vector<uint32_t>& bind_pcpus() { return bind_pcpus_; }
   std::vector<uint64_t>& budgets() { return budgets_; }
   std::vector<uint64_t>& periods() { return periods_; }
   std::vector<uint64_t>& sched_priority() { return sched_priority_; }
   std::vector<uint64_t>& sched_timeslice() { return sched_timeslice_; }
+  std::vector<uint64_t>& vcpus_priority() { return vcpus_priority_; }
+  std::vector<uint64_t>& sched_policy() { return sched_policy_; }
   const std::vector<machina::ProductSpec>& product_info() const {
     return product_spec_;
   }
@@ -118,6 +122,14 @@ class GuestConfig {
   {
     sched_timeslice_.push_back(num);
   }
+  void setVcpuPriority(uint64_t priority)
+  {
+    vcpus_priority_.push_back(priority);
+  }
+  void setSchedPolicy(uint64_t policy)
+  {
+    sched_policy_.push_back(policy);
+  }
   void setVgicPaddr(uint64_t gicd, uint64_t gicr)
   {
       vgic_spec_.gicd_paddr = gicd;
@@ -154,6 +166,10 @@ class GuestConfig {
   {
     smc_irq_ = id;
   }
+  void setCvmLockIrq(uint32_t id)
+  {
+    cvm_lock_irq_ = id;
+  }
   void setGpuIrq(uint32_t id)
   {
     gpu_irq_ = id;
@@ -185,6 +201,10 @@ class GuestConfig {
   void setGuestReservedMemory(uint32_t id)
   {
     guest_reserved_memory_ = id;
+  }
+  void setPvblkEnabled(uint8_t enabled)
+  {
+    pvblk_enabled_ = enabled != 0;
   }
   void setCpufreq(std::string freq);
   void setVsmmu(uint64_t paddr, uint16_t irq, std::vector<uint16_t> sids)
@@ -295,11 +315,13 @@ class GuestConfig {
   std::vector<machina::VmemSpec> vmem_spec_;
   std::vector<machina::VmemSpec> vmem_auto_spec_;
   uint32_t guest_reserved_memory_ = 0;
+  bool pvblk_enabled_ = false;
   uint32_t sched_irq_;
   uint8_t sched_id_ = 0;
   uint32_t dump_irq_;
   uint32_t monitor_irq_;
   uint32_t smc_irq_;
+  uint32_t cvm_lock_irq_;
   std::vector<uint32_t> wakeup_irqs_;
   uint8_t nbl_trace_mem_enable_ = 0;
   std::vector<machina::IpcMboxSpec> mbox_spec_;
@@ -310,6 +332,8 @@ class GuestConfig {
   std::vector<uint64_t> budgets_;
   std::vector<uint64_t> sched_priority_;
   std::vector<uint64_t> sched_timeslice_;
+  std::vector<uint64_t> vcpus_priority_;
+  std::vector<uint64_t> sched_policy_;
   uint32_t vtee_notifier_irq_;
   std::vector<uint32_t> pci_global_irqs_;
 };

@@ -45,6 +45,8 @@ typedef struct ramfb_device {
     zx_handle_t bti;
     uint32_t fb_pa[2];
     uint64_t fb_va[2];
+    io_buffer_t fb_buffers[2];
+    io_buffer_t ovl0_buffer;
     uint32_t fb_size;
     uint64_t rsvd_addr;
     uint64_t rsvd_size;
@@ -214,25 +216,25 @@ static void parse_fb_addr(ramfb_device_t* device, const void *dtb) {
     device->fb_size = fb_size;
     zxlogf(INFO, "fb_1_pa: 0x%x fb_1_pa: 0x%x fb_size:0x%x\n", device->fb_pa[0], device->fb_pa[1], device->fb_size);
 
-    /* Map the physical buffer to the virtual address */
-    io_buffer_t buffer;
-    zx_status_t status = io_buffer_init_physical(&buffer, device->bti, device->fb_pa[0], device->fb_size, get_root_resource(),
+    zx_status_t status = io_buffer_init_physical(&device->fb_buffers[0], device->bti, device->fb_pa[0], device->fb_size, get_root_resource(),
                                      ZX_CACHE_POLICY_UNCACHED_DEVICE);
     if (status != ZX_OK) {
         zxlogf(ERROR, "fb 1 addr io_buffer_init_physical failed : %d\n", status);
         return;
     }
 
-    void *ptr = io_buffer_virt(&buffer);
+    void *ptr = io_buffer_virt(&device->fb_buffers[0]);
     device->fb_va[0] = (uint64_t)ptr;
 
-    status = io_buffer_init_physical(&buffer, device->bti, device->fb_pa[1], device->fb_size, get_root_resource(),
+    status = io_buffer_init_physical(&device->fb_buffers[1], device->bti, device->fb_pa[1], device->fb_size, get_root_resource(),
                                      ZX_CACHE_POLICY_UNCACHED_DEVICE);
     if (status != ZX_OK) {
         zxlogf(ERROR, "fb 2 addr io_buffer_init_physical failed: %d\n", status);
+        io_buffer_release(&device->fb_buffers[0]);
+        device->fb_va[0] = 0;
         return;
     }
-    ptr = io_buffer_virt(&buffer);
+    ptr = io_buffer_virt(&device->fb_buffers[1]);
     device->fb_va[1] = (uint64_t)ptr;
 
     zxlogf(INFO, "fb1 buffer pa:0x%x va:0x%lx size:0x%x\n",
@@ -316,8 +318,23 @@ static void ramfb_release(void* ctx) {
     zxlogf(INFO, "ramfb_unbind\n");
 
     if (vdev->regs) {
+        zx_vmar_unmap(zx_vmar_root_self(), (uintptr_t)vdev->regs,
+                       vdev->regs_size);
+        vdev->regs = NULL;
         zx_handle_close(vdev->regs_handle);
         vdev->regs_handle = -1;
+    }
+    if (vdev->fb_va[0]) {
+        io_buffer_release(&vdev->fb_buffers[0]);
+        vdev->fb_va[0] = 0;
+    }
+    if (vdev->fb_va[1]) {
+        io_buffer_release(&vdev->fb_buffers[1]);
+        vdev->fb_va[1] = 0;
+    }
+    if (vdev->ovl0_regs) {
+        io_buffer_release(&vdev->ovl0_buffer);
+        vdev->ovl0_regs = NULL;
     }
     zx_handle_close(vdev->event);
     zx_handle_close(vdev->vsync_event);
@@ -668,14 +685,13 @@ static zx_status_t ramfb_bind(void* ctx, zx_device_t* dev) {
         .flags = DEVICE_ADD_MUST_ISOLATE,
     };
 
-    io_buffer_t buffer;
-    status = io_buffer_init_physical(&buffer, device->bti, DISP_OVL0_2L_BASE, DISP_OVL0_2L_SIZE,
+    status = io_buffer_init_physical(&device->ovl0_buffer, device->bti, DISP_OVL0_2L_BASE, DISP_OVL0_2L_SIZE,
                                 get_root_resource(), ZX_CACHE_POLICY_UNCACHED_DEVICE);
     if (status != ZX_OK) {
         zxlogf(ERROR, "ramfb: io_buffer_init_physical failed: %d\n", status);
-        return status;
+        goto fail;
     }
-    device->ovl0_regs = io_buffer_virt(&buffer);
+    device->ovl0_regs = io_buffer_virt(&device->ovl0_buffer);
 
     if ((status = zx_event_create(0, &device->event)) < 0) {
         zxlogf(ERROR, "cannot create event: %d\n", status);

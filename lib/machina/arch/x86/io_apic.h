@@ -38,6 +38,8 @@ class IoApic : public IoHandler {
   // Associate a VCPU with an IO APIC.
   zx_status_t RegisterVcpu(uint8_t local_apic_id, Vcpu* vcpu);
 
+  void Shutdown() {}
+
   // Writes the redirect entry for a global IRQ.
   zx_status_t SetRedirect(uint32_t global_irq, RedirectEntry& redirect);
 

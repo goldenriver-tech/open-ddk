@@ -109,9 +109,9 @@ private:
   zx_status_t ReleaseI2cTrans(void);
   uint8_t native_i2c_proc(struct virtio_i2c *vi2c, struct virtio_i2c_req *req, VirtioQueue* queue, uint16_t head);
   async::Wait single_queue;
-  grt_i2c_transfer_t trans[MAX_I2C_DEVICE_NUM];
-  zx_vaddr_t input_memory[MAX_I2C_DEVICE_NUM];
-  zx_vaddr_t output_memory[MAX_I2C_DEVICE_NUM];
+  grt_i2c_transfer_t trans[MAX_I2C_DEVICE_NUM] = {};
+  zx_vaddr_t input_memory[MAX_I2C_DEVICE_NUM] = {};
+  zx_vaddr_t output_memory[MAX_I2C_DEVICE_NUM] = {};
   /*
    * Per-bus mutex: serialise concurrent vCPU requests that target the
    * same i2c bus. Each bus has its own pair of shared input/output
@@ -124,18 +124,12 @@ private:
    * process.
    */
   std::mutex bus_mtx_[MAX_I2C_DEVICE_NUM];
-  /*
-   * Legacy single-msg per-bus header. Kept only to preserve the C++ class
-   * layout for callers that may still reference the symbol; the batch
-   * protocol path does NOT use this field.
-   */
-  grt_i2c_transfer_head trans_head[MAX_I2C_DEVICE_NUM];
-
   // bool fail_next = false;
-  struct virtio_i2c *vi2c;
+  struct virtio_i2c *vi2c = nullptr;
   async::Loop m_i2c_loop;
-  async_t* m_async;
-  int fd;
+  async_t* m_async = nullptr;
+  bool loop_started_ = false;
+  int fd = -1;
 };
 
 }  // namespace machina

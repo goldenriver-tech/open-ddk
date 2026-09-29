@@ -16,11 +16,13 @@ class PhysMemFake : public PhysMem {
   PhysMemFake() {
     vmo_size_ = SIZE_MAX;
     addr_ = 0;
+    phys_base_ = 0;
   }
 
   PhysMemFake(uintptr_t addr, size_t size) {
     vmo_size_ = size;
     addr_ = addr;
+    phys_base_ = 0;
   }
 };
 

@@ -7,11 +7,15 @@
 
 #pragma once
 
+#include <atomic>
 #include <mutex>
+#include <threads.h>
 
 #include <fuchsia/cpp/machina.h>
 #include <lib/fidl/cpp/binding.h>
 #include <lib/fsl/vmo/sized_vmo.h>
+#include <lib/zx/event.h>
+#include <lib/zx/port.h>
 
 #include "garnet/lib/machina/arch/arm64/gic_its.h"
 #include "garnet/lib/machina/guest.h"
@@ -39,7 +43,7 @@ class VhmDevice : public IoHandler,
  public:
   static constexpr zx_signals_t kSignalVmDump = ZX_USER_SIGNAL_3;
   VhmDevice(uint16_t vmid);
-  virtual ~VhmDevice() = default;
+  virtual ~VhmDevice();
 
   fidl::InterfaceRequest<VhmService> NewRequest() {
     return vhm_client_.NewRequest();
@@ -48,6 +52,7 @@ class VhmDevice : public IoHandler,
   zx_status_t Init(Guest* guest,
                    InterruptController* interrupt_controller,
                    GicIts* gic_its);
+  void Shutdown();
 
   void FetchVmConfig();
   void RegisterMessageListener(fidl::InterfaceHandle<MessageListener> listener);
@@ -56,6 +61,7 @@ class VhmDevice : public IoHandler,
 
 #ifdef _VHM_USE_CHANNEL_
   void HandleVhmChannelMsgLoop();
+  int HandleExceptionDumpLoop();
 #endif
   Guest* GetGuest() {
     return guest_;
@@ -96,31 +102,45 @@ class VhmDevice : public IoHandler,
                        uintptr_t addr) const;
 #ifdef _VHM_USE_CHANNEL_
   zx_txid_t GetNextTxid() const;
-  void KickAndWaitIoRequest(uint8_t vcpu_id, uintptr_t addr) const;
-  void KickIoRequestAsync(uint8_t vcpu_id,
-                          uintptr_t addr,
-                          acrn_io_request* req,
-                          const IoValue& value) const;
+  zx_status_t KickAndWaitIoRequest(uint8_t vcpu_id, uintptr_t addr) const;
+  zx_status_t KickIoRequestAsync(uint8_t vcpu_id,
+                                 uintptr_t addr,
+                                 acrn_io_request* req,
+                                 const IoValue& value) const;
+  void NotifySidebandWaiters();
+  void JoinThread(thrd_t thread,
+                  bool* started,
+                  const char* thread_name);
+  zx_status_t QueueExceptionPortShutdown();
 #endif
 
   machina::VhmServiceSyncPtr vhm_client_;
 
   zx::vmo ioreq_vmo_;
-  acrn_io_request_buffer* ioreq_buf_;
+  acrn_io_request_buffer* ioreq_buf_ = nullptr;
   std::string config_;
 
   uint16_t vmid_ = 0;
 
-  InterruptController* interrupt_controller_;
-  GicIts* gic_its_;
+  InterruptController* interrupt_controller_ = nullptr;
+  GicIts* gic_its_ = nullptr;
 
   fidl::Binding<InterruptListener> binding_;
-  Guest* guest_;
+  Guest* guest_ = nullptr;
   async::Loop loop_;
+  bool loop_started_ = false;
+  std::atomic_bool shutdown_started_{false};
 
 #ifdef _VHM_USE_CHANNEL_
   zx::channel vhm_cli_chan_;
   zx::channel vhm_srv_chan_;
+  thrd_t vhm_thread_ = {};
+  thrd_t edump_thread_ = {};
+  bool vhm_thread_started_ = false;
+  bool edump_thread_started_ = false;
+  zx::event vhm_shutdown_event_;
+  zx::port exception_port_;
+  std::atomic_bool exception_port_bound_{false};
   std::unique_ptr<std::atomic<zx_txid_t>> next_txid_;
   std::unique_ptr<uint8_t[]> side_chan_state_;
   std::unique_ptr<std::mutex[]> side_chan_mutex_;

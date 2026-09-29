@@ -17,14 +17,15 @@
 
 #include "mt8668-board.h"
 
-// NOTE:
-// mphy is already initialized in preloader stage and no need
-// to change any setting of mphy, neither the PWR/CRG.
 static const pbus_mmio_t ufs_mmios[] = {
     // register
     {
         .base = UFS_HCI_MMIO_BASE,
         .length = UFS_HCI_MMIO_LEN,
+    },
+    {
+        .base = UFS_MPHY_MMIO_BASE,
+        .length = UFS_MPHY_MMIO_LEN,
     },
 };
 
@@ -66,4 +67,3 @@ zx_status_t mt8668_board_ufs_init(mt8668_board_t* board) {
     }
     return ZX_OK;
 }
-

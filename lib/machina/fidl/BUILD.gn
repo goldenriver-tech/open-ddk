@@ -15,6 +15,7 @@ fidl("fidl") {
     "ipc.fidl",
     "rproc.fidl",
     "ipcmessage.fidl",
+    "cross_vm_lock.fidl",
   ]
   public_deps = [
     "//garnet/public/lib/mem/fidl",

@@ -432,6 +432,11 @@ VirtioSPI::VirtioSPI(const PhysMem& phys_mem)
 VirtioSPI::~VirtioSPI() {
 	int i;
 
+	if (queue(0)) {
+		queue(0)->Terminate();
+		queue(0)->Join();
+	}
+
 	/*
 	 * Order matters here. The cs worker dereferences members of *this* and
 	 * of vspi (via native_spi_find) on every iteration, so we must stop &

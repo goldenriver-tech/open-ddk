@@ -63,6 +63,14 @@ namespace machina {
 
 thread_local Vcpu* thread_vcpu = nullptr;
 
+Vcpu::~Vcpu() {
+  if (vcpu_ != ZX_HANDLE_INVALID) {
+    zx_handle_close(vcpu_);
+    vcpu_ = ZX_HANDLE_INVALID;
+  }
+  cnd_destroy(&state_cnd_);
+}
+
 #if __aarch64__
 static zx_status_t HandleMmioArm(Guest *guest,
                                  const zx_packet_guest_mem_t& mem,
@@ -296,6 +304,7 @@ void Vcpu::SetState(State new_state) {
 zx_status_t Vcpu::Loop() {
   FXL_DCHECK(thread_vcpu == nullptr) << "Thread has multiple VCPUs";
   thread_vcpu = this;
+  FXL_LOG(INFO) << "event=vcpu_loop_begin vcpu=" << id_;
   zx_port_packet_t packet;
 
   zx_status_t status;
@@ -308,7 +317,8 @@ zx_status_t Vcpu::Loop() {
     if (unlikely(status != ZX_OK)) {
       SetState(State::TERMINATED);
       if (status == ZX_ERR_STOP || status == ZX_ERR_CANCELED || status == ZX_ERR_UNAVAILABLE) {
-        FXL_LOG(INFO) << "VCPU-" << id_ << " stopped";
+        FXL_LOG(INFO) << "event=vcpu_resume_stopped vcpu=" << id_
+                      << " zx_status=" << status;
         return ZX_OK;
       } else {
         FXL_LOG(ERROR) << "Failed to resume VCPU-" << id_ << ": " << status;
@@ -506,8 +516,10 @@ zx_status_t Vcpu::HandleVcpu(const zx_packet_guest_vcpu_t& packet,
       }
       return guest_->StartVcpu(packet.startup.entry, packet.startup.id);
     case ZX_PKT_GUEST_VCPU_STOP:
-      if (guest_->get_watchdog() && guest_->get_watchdog()->dump_state_callback_)
-        guest_->get_watchdog()->dump_state_callback_(1);
+      FXL_LOG(WARNING) << "event=guest_vcpu_stop_packet vcpu=" << id_
+                       << " stop_reason=guest_reboot_or_stop";
+      if (guest_->get_watchdog())
+        guest_->get_watchdog()->DumpState(1);
       guest_->Stop(ZX_ERR_CANCELED);
       return ZX_OK;
     default:
@@ -594,6 +606,22 @@ zx_status_t Vcpu::SetBudget(uint64_t budget) {
 
   rc =
       _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
+  if (rc) {
+    result = ZX_ERR_BAD_HANDLE;
+  }
+
+  return result;
+}
+
+zx_status_t Vcpu::SetPriority(uint32_t priority) {
+  int rc = NO_ERROR;
+  zx_status_t result = ZX_OK;
+  struct sched_param_req req;
+
+  req.type = SCHED_PARAM_TYPE_VCPU_PRIORITY;
+  req.vcpu_priority_info.vcpu_handle = vcpu_;
+  req.vcpu_priority_info.priority = priority;
+  rc = _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
   if (rc) {
     result = ZX_ERR_BAD_HANDLE;
   }

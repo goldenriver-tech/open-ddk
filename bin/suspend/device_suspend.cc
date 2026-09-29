@@ -46,9 +46,9 @@ zx_status_t DeviceSuspend::Initialize() {
     return ZX_OK;
   }
 
-  zx_status_t status = zx_suspend_notifier_create(&device_suspend_handle_);
+  zx_status_t status = zx_suspend_notifier_init(&device_suspend_handle_);
   if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "Failed to create suspend notifier: " << status;
+    FXL_LOG(ERROR) << "Failed to init suspend notifier: " << status;
     return status;
   }
 

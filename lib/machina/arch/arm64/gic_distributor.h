@@ -143,6 +143,7 @@ class GicDistributor : public IoHandler {
                    const VgicSpec& vgic) __TA_NO_THREAD_SAFETY_ANALYSIS;
 
   zx_status_t PassThroughInterrupts(const std::vector<uint16_t>& interrupts);
+  void Shutdown();
 
   zx_status_t Read(uint64_t addr, IoValue* value) const override;
   zx_status_t Write(uint64_t addr, const IoValue& value) override;

@@ -76,8 +76,11 @@ zx_status_t SmcCommunication::TriggerSmcMessageRead() {
   return ZX_OK;
 }
 
-zx_status_t SmcCommunication::ParseMessage(const uint8_t* message, size_t length,
-                                           std::string& vm, std::string& cmd) {
+zx_status_t SmcCommunication::ParseMessage(const uint8_t* message,
+                                           size_t length,
+                                           uint8_t& out_vmid,
+                                           std::string& tgt_vm,
+                                           std::string& cmd) {
   if (!message || length != SMC_DATA_SIZE) {
     FXL_LOG(ERROR) << "Invalid message or length";
     return ZX_ERR_INVALID_ARGS;
@@ -88,6 +91,7 @@ zx_status_t SmcCommunication::ParseMessage(const uint8_t* message, size_t length
     FXL_LOG(ERROR) << "Invalid source vmid: " << static_cast<int>(src_vmid);
     return ZX_ERR_INVALID_ARGS;
   }
+  out_vmid = src_vmid;
 
   uint8_t msg_len = message[SMC_COUNT_OFFSET];
   if (msg_len == 0 || msg_len > SMC_MSG_SIZE) {
@@ -114,10 +118,10 @@ zx_status_t SmcCommunication::ParseMessage(const uint8_t* message, size_t length
     return ZX_ERR_INVALID_ARGS;
   }
 
-  vm = message_str.substr(0, comma_pos);
+  tgt_vm = message_str.substr(0, comma_pos);
   cmd = message_str.substr(comma_pos + 1);
 
-  if (vm.empty() || cmd.empty()) {
+  if (tgt_vm.empty() || cmd.empty()) {
     FXL_LOG(ERROR) << "Invalid message: <vm> and <cmd> must be non-empty";
     return ZX_ERR_INVALID_ARGS;
   }
@@ -144,7 +148,9 @@ zx_status_t SmcCommunication::ParseVmid(const std::string& vm, uint8_t& vmid) {
   return ZX_ERR_INVALID_ARGS;
 }
 
-zx_status_t SmcCommunication::HandleCmd(const std::string& cmd, uint8_t vmid) {
+zx_status_t SmcCommunication::HandleCmd(const std::string& cmd,
+                                        uint8_t src_vmid,
+                                        uint8_t tgt_vmid) {
   zx_status_t status;
 
   if (cmd == "secure reboot") {
@@ -160,9 +166,9 @@ zx_status_t SmcCommunication::HandleCmd(const std::string& cmd, uint8_t vmid) {
       return status;
     }
   } else if (cmd == "vm poweroff") {
-    status = zx_smc_communication_vm_poweroff(vmid);
+    status = zx_smc_communication_vm_poweroff(src_vmid, tgt_vmid);
     if (status != ZX_OK) {
-      FXL_LOG(ERROR) << "Failed to poweroff vm: " << vmid << ", ret: "<< status;
+      FXL_LOG(ERROR) << "Failed to poweroff vm: " << tgt_vmid << ", ret: "<< status;
       return status;
     }
   } else {
@@ -182,26 +188,29 @@ zx_status_t SmcCommunication::TriggerSmcMessageHandle() {
     return ZX_ERR_SHOULD_WAIT;
   }
 
-  std::string vm, cmd;
-  zx_status_t status = ParseMessage(smc_message_, sizeof(smc_message_), vm, cmd);
+  uint8_t src_vmid;
+  std::string tgt_vm, cmd;
+  zx_status_t status = ParseMessage(smc_message_, sizeof(smc_message_),
+                                    src_vmid, tgt_vm, cmd);
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to parse message";
     message_status_.store(MESSAGE_EMPTY);
     return status;
   }
 
-  uint8_t vmid;
-  status = ParseVmid(vm, vmid);
+  uint8_t tgt_vmid;
+  status = ParseVmid(tgt_vm, tgt_vmid);
   if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "Invalid vm: " << vm;
+    FXL_LOG(ERROR) << "Invalid vm: " << tgt_vm;
     message_status_.store(MESSAGE_EMPTY);
     return status;
   }
 
-  FXL_LOG(INFO) << "Processing message - vm: " << vm
-                << ", vmid: " << static_cast<int>(vmid)
+  FXL_LOG(INFO) << "Processing message - source_vmid: " << static_cast<int>(src_vmid)
+                << ", target_vm: " << tgt_vm
+                << ", target_vmid: " << static_cast<int>(tgt_vmid)
                 << ", cmd: " << cmd;
-  status = HandleCmd(cmd, vmid);
+  status = HandleCmd(cmd, src_vmid, tgt_vmid);
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to handle cmd";
     message_status_.store(MESSAGE_EMPTY);

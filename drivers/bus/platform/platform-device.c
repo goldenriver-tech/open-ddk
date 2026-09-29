@@ -448,6 +448,9 @@ static zx_status_t platform_dev_rxrpc(void* ctx, zx_handle_t channel) {
                               handle_count);
     if (status != ZX_OK) {
         zxlogf(ERROR, "platform_dev_rxrpc: zx_channel_write failed %d\n", status);
+        if (handle != ZX_HANDLE_INVALID) {
+            zx_handle_close(handle);
+        }
     }
     return status;
 }

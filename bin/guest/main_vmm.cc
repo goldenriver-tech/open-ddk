@@ -28,9 +28,14 @@ int main(int argc, char* argv[]) {
   auto app_context = component::ApplicationContext::CreateFromStartupInfo();
 
   auto stop_component_callback = [&loop]() { loop.Quit(); };
-  VmmController controller(app_context.get(), loop.async(),
-                           stop_component_callback);
-
-  zx_thread_set_priority(kLooperPriority);
-  return loop.Run();
+  zx_status_t run_status = ZX_OK;
+  {
+    VmmController controller(app_context.get(), loop.async(),
+                             stop_component_callback);
+    zx_thread_set_priority(kLooperPriority);
+    run_status = loop.Run();
+  }
+  app_context.reset();
+  loop.Shutdown();
+  return run_status;
 }

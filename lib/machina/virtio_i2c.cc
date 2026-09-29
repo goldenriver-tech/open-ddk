@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include <fbl/intrusive_hash_table.h>
 #include <fbl/unique_ptr.h>
@@ -150,6 +151,7 @@ static int virtio_i2c_parse(struct virtio_i2c *vi2c, char *optstr)
 
 		vi2c->native_i2c[n_i2c] = (struct native_i2c_dev *)calloc(1, sizeof(struct native_i2c_dev));
 		vi2c->native_i2c[n_i2c]->bus = bus;
+		vi2c->native_i2c[n_i2c]->fd = -1;
 
 		if (n_i2c >= MAX_I2C_DEVICE_NUM) {
 			FXL_LOG(ERROR) << "too many adapter, only support " <<MAX_I2C_DEVICE_NUM;
@@ -339,8 +341,13 @@ VirtioI2C::VirtioI2C(const PhysMem& phys_mem)
 
     int i = 0, i2c_cnt = 0;
 
-  	m_i2c_loop.StartThread("virtio-i2c");
-  	m_async = m_i2c_loop.async();
+    zx_status_t loop_status = m_i2c_loop.StartThread("virtio-i2c");
+    if (loop_status != ZX_OK) {
+      FXL_LOG(ERROR) << "Failed to start virtio-i2c loop: " << loop_status;
+      return;
+    }
+    loop_started_ = true;
+    m_async = m_i2c_loop.async();
 
   	zx_status_t status = queue(0)->PollAsync(
       m_async, &single_queue, &VirtioI2C::QueueHandler, this);
@@ -395,8 +402,23 @@ VirtioI2C::VirtioI2C(const PhysMem& phys_mem)
 }
 
 VirtioI2C::~VirtioI2C() {
+    if (loop_started_) {
+        single_queue.Cancel(m_async);
+        m_i2c_loop.Quit();
+        m_i2c_loop.JoinThreads();
+        loop_started_ = false;
+    }
+
+    ReleaseI2cTrans();
+
+    if (vi2c) {
+        for (int i = 0; i < MAX_I2C_DEVICE_NUM; ++i) {
+            free(vi2c->native_i2c[i]);
+            vi2c->native_i2c[i] = nullptr;
+        }
+    }
     free(vi2c);
-    // Releasei2cTrans();
+    vi2c = nullptr;
 }
 
 zx_status_t VirtioI2C::InitI2cTrans(int bus_id, int fd) {
@@ -460,13 +482,68 @@ zx_status_t VirtioI2C::InitI2cTrans(int bus_id, int fd) {
     }
 
     trans[bus_id].size = MAX_I2C_BUF_SIZE;
-    status = ioctl_grt_i2c_create_transfer_handles(fd, &trans[bus_id]);
+    grt_i2c_transfer_t driver_trans = trans[bus_id];
+    driver_trans.input_vmo = ZX_HANDLE_INVALID;
+    driver_trans.output_vmo = ZX_HANDLE_INVALID;
+
+    status = zx_handle_duplicate(trans[bus_id].input_vmo,
+                                 ZX_RIGHT_SAME_RIGHTS,
+                                 &driver_trans.input_vmo);
+    if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "i2c duplicate input vmo failed:" << status;
+        return status;
+    }
+
+    status = zx_handle_duplicate(trans[bus_id].output_vmo,
+                                 ZX_RIGHT_SAME_RIGHTS,
+                                 &driver_trans.output_vmo);
+    if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "i2c duplicate output vmo failed:" << status;
+        zx_handle_close(driver_trans.input_vmo);
+        return status;
+    }
+
+    status = ioctl_grt_i2c_create_transfer_handles(fd, &driver_trans);
 	
     if (status != ZX_OK) {
         FXL_LOG(ERROR) << "virtio be create i2c handles failed:" << status;
     }
 
     return status;
+}
+
+zx_status_t VirtioI2C::ReleaseI2cTrans(void) {
+    for (int i = 0; i < MAX_I2C_DEVICE_NUM; ++i) {
+        if (vi2c && vi2c->native_i2c[i] && vi2c->native_i2c[i]->fd >= 0) {
+            ioctl_grt_i2c_close_transfer_handles(vi2c->native_i2c[i]->fd);
+            close(vi2c->native_i2c[i]->fd);
+            vi2c->native_i2c[i]->fd = -1;
+        }
+
+        if (input_memory[i] != 0) {
+            zx_vmar_unmap(zx_vmar_root_self(), input_memory[i],
+                          MAX_I2C_BUF_SIZE);
+            input_memory[i] = 0;
+        }
+
+        if (output_memory[i] != 0) {
+            zx_vmar_unmap(zx_vmar_root_self(), output_memory[i],
+                          MAX_I2C_BUF_SIZE);
+            output_memory[i] = 0;
+        }
+
+        if (trans[i].input_vmo != ZX_HANDLE_INVALID) {
+            zx_handle_close(trans[i].input_vmo);
+            trans[i].input_vmo = ZX_HANDLE_INVALID;
+        }
+
+        if (trans[i].output_vmo != ZX_HANDLE_INVALID) {
+            zx_handle_close(trans[i].output_vmo);
+            trans[i].output_vmo = ZX_HANDLE_INVALID;
+        }
+    }
+
+    return ZX_OK;
 }
 
 zx_status_t VirtioI2C::QueueHandler(VirtioQueue* queue,

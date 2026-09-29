@@ -233,6 +233,14 @@ zx_status_t Guest::SetSmcIRQ(uint32_t smc_irq) {
   return zx_guest_set_smc_irq(guest_, smc_irq);
 }
 
+zx_status_t Guest::SetCvmLockIRQ(uint32_t cvm_lock_irq) {
+  return zx_guest_set_cvm_lock_irq(guest_, cvm_lock_irq);
+}
+
+zx_status_t Guest::SetCvmLockVMO(zx_handle_t cvm_lock_vmo_handle) {
+  return zx_guest_set_cvm_lock_vmo(guest_, cvm_lock_vmo_handle);
+}
+
 zx_status_t Guest::SetWakeupIrqs(uint32_t* wakeup_irqs, int size) {
   return zx_guest_set_wakeup_irqs(guest_, wakeup_irqs, size);
 }
@@ -272,8 +280,16 @@ zx_status_t Guest::SetSchedId(uint8_t sched_id) {
 }
 
 Guest::~Guest() {
+  FXL_LOG(INFO) << "vmid=" << vmid_ << " event=guest_destructor_begin";
+  ShutdownAsyncLoops();
   zx_handle_close(guest_);
   zx_handle_close(vmar_);
+  FXL_LOG(INFO) << "vmid=" << vmid_ << " event=guest_destructor_complete";
+}
+
+void Guest::ShutdownAsyncLoops() {
+  device_loop_.Shutdown();
+  trapbell_loop_.Shutdown();
 }
 
 zx_status_t Guest::CreateMapping(TrapType type,
@@ -609,36 +625,65 @@ zx_status_t Guest::HandleGuestCall(zx_vcpu_state_t* state) {
       break;
     }
     case HC_GUEST_WDTK_KICK: {
+        wdt_kick_call_count_++;
         if (wdt_ != nullptr) {
-          wdt_->notify();
-          wdt_->kick_start();
+          if (wdt_kick_call_count_ == 1 ||
+              (wdt_kick_call_count_ % 6) == 0) {
+            FXL_LOG(INFO) << "event=guest_watchdog_vmcall_kick vmid="
+                          << vmid_ << " count=" << wdt_kick_call_count_;
+          }
+          wdt_->Heartbeat();
+        } else if (wdt_kick_missing_log_count_ < 3) {
+          wdt_kick_missing_log_count_++;
+          FXL_LOG(WARNING)
+              << "event=guest_watchdog_vmcall_kick_missing_watchdog vmid="
+              << vmid_ << " count=" << wdt_kick_call_count_
+              << " missing_log_count=" << wdt_kick_missing_log_count_;
         }
       break;
     }
     case HC_GUEST_WDTK_SET_RST_STATUS: {
-      if (wdt_fd_ > 0) {
-        FXL_LOG(INFO) << "handled yocto call set wdt rst status. ";
+      if (wdt_fd_ >= 0) {
+        FXL_LOG(INFO) << "event=guest_watchdog_set_rst_status vmid="
+                      << vmid_;
         ioctl_grt_wdt_set_rst_status(wdt_fd_);
+      } else {
+        FXL_LOG(WARNING)
+            << "event=guest_watchdog_set_rst_status_missing_fd vmid="
+            << vmid_;
       }
       break;
     }
     case HC_GUEST_WDTK_SUSPEND: {
-      if (wdt_fd_ > 0) {
+      if (wdt_fd_ >= 0) {
         if (wdt_ != nullptr) {
-          wdt_->notify_suspend();
+          wdt_->OnSuspend();
+        } else {
+          FXL_LOG(WARNING)
+              << "event=guest_watchdog_suspend_missing_watchdog vmid="
+              << vmid_;
         }
-        FXL_LOG(INFO) << "handled yocto call set wdt suspend. ";
+        FXL_LOG(INFO) << "event=guest_watchdog_suspend vmid=" << vmid_;
         ioctl_grt_wdt_set_suspend(wdt_fd_);
+      } else {
+        FXL_LOG(WARNING) << "event=guest_watchdog_suspend_missing_fd vmid="
+                         << vmid_;
       }
       break;
     }
     case HC_GUEST_WDTK_RESUME: {
-      if (wdt_fd_ > 0) {
+      if (wdt_fd_ >= 0) {
         if (wdt_ != nullptr) {
-          wdt_->notify_resume();
+          wdt_->OnResume();
+        } else {
+          FXL_LOG(WARNING)
+              << "event=guest_watchdog_resume_missing_watchdog vmid=" << vmid_;
         }
-        FXL_LOG(INFO) << "handled yocto call set wdt resume. ";
+        FXL_LOG(INFO) << "event=guest_watchdog_resume vmid=" << vmid_;
         ioctl_grt_wdt_set_resume(wdt_fd_);
+      } else {
+        FXL_LOG(WARNING) << "event=guest_watchdog_resume_missing_fd vmid="
+                         << vmid_;
       }
       break;
     }
@@ -667,7 +712,7 @@ zx_status_t Guest::HandleGuestCall(zx_vcpu_state_t* state) {
       break;
     }
     case HC_GUEST_SET_RTC: {
-      if (this->vmid() == SOS_VMID) {
+      if (IsSosVmid(this->vmid())) {
         zx::resource root_resource;
         zx_status_t status = get_root_resource(&root_resource);
         FXL_CHECK(status == ZX_OK);
@@ -903,6 +948,7 @@ zx_status_t Guest::SignalLpiInterrupt(uint32_t mask, uint16_t vector) {
 }
 
 zx_status_t Guest::Join() {
+  FXL_LOG(INFO) << "vmid=" << vmid_ << " event=guest_join_begin";
   zx_status_t status = ZX_OK;
 
   for (size_t id = 0; id != kMaxVcpus; ++id) {
@@ -911,11 +957,16 @@ zx_status_t Guest::Join() {
 
       zx_status_t vcpu_status = vcpus_[id]->Join();
       if (vcpu_status != ZX_OK) {
+        FXL_LOG(WARNING) << "vmid=" << vmid_
+                         << " event=guest_join_vcpu_failed vcpu=" << id
+                         << " zx_status=" << vcpu_status;
         status = vcpu_status;
       }
     }
   }
 
+  FXL_LOG(INFO) << "vmid=" << vmid_ << " event=guest_join_complete zx_status="
+                << status;
   return status;
 }
 
@@ -1339,19 +1390,28 @@ bool Guest::GpaValid(uint64_t gpa, uint32_t len) {
 }
 
 int Guest::create_wdt_fd() {
+  wdt_fd_ = -1;
   int fd;
   if (access(GRT_WDT_CONTROL_DEVICE, F_OK) != 0) {
-    FXL_LOG(ERROR) << GRT_WDT_CONTROL_DEVICE << " does not exist!";
+    FXL_LOG(ERROR) << "vmid=" << vmid_
+                   << " event=guest_watchdog_device_missing path="
+                   << GRT_WDT_CONTROL_DEVICE;
     return ZX_ERR_NO_RESOURCES;
   }
 
   fd = open(GRT_WDT_CONTROL_DEVICE, O_RDWR);
   if (fd < 0) {
-    FXL_LOG(ERROR) << GRT_WDT_CONTROL_DEVICE << " open filed!";
+    FXL_LOG(ERROR) << "vmid=" << vmid_
+                   << " event=guest_watchdog_device_open_failed path="
+                   << GRT_WDT_CONTROL_DEVICE;
+    wdt_fd_ = -1;
     return ZX_ERR_NOT_FILE;
   }
 
   wdt_fd_ = fd;
+  FXL_LOG(INFO) << "vmid=" << vmid_
+                << " event=guest_watchdog_device_opened path="
+                << GRT_WDT_CONTROL_DEVICE;
 
   return ZX_OK;
 }
@@ -1365,6 +1425,7 @@ void Guest::Stop(zx_status_t status) {
   fbl::AutoLock lock(&mutex_);
   if (stop_callback_) {
     auto callback = std::move(stop_callback_);
+    stop_callback_ = nullptr;
     callback(status);
   }
 }

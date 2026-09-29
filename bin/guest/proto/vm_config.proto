@@ -65,4 +65,7 @@ message VmConfig {
   uint32 monitor_irq = 21;
   uint32 smc_irq = 22;
   repeated uint32 pci_irqs = 23;
+  bool pvblk_enabled = 24;
+  repeated uint32 vcpus_priority = 25;
+  uint32 cvm_lock_irq = 26;
 };

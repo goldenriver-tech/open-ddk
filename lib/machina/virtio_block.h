@@ -64,7 +64,7 @@ public:
 
   zx_status_t HandleBlockRequestAsyncBatch(VirtioQueue* queue, uint16_t head,
                                            fifo_in_item* out_item,
-                                           uint64_t *cookie);
+                                           uint64_t *cookie, bool *queued);
 
   zx_status_t HandleBlockRequestAsync(VirtioQueue *queue, uint16_t head);
 
@@ -75,6 +75,10 @@ public:
 private:
   void FastWriteStatus(VirtioQueue *queue, const virtio_desc_t &desc_lv1,
                        uint8_t status);
+  zx_status_t HandleBlockIoctlAsync(VirtioQueue *queue, uint16_t head,
+                                    const virtio_desc_t &desc_lv1,
+                                    const struct vring_desc *vring_desc,
+                                    uint16_t desc_cnt);
   zx_status_t CompletionWorker(uint16_t qidx = 0);
 
   fbl::unique_ptr<BlockDispatcher> dispatcher_;

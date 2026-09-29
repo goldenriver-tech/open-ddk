@@ -2,6 +2,10 @@
 
 #include <fbl/auto_call.h>
 #include <fbl/auto_lock.h>
+#include <algorithm>
+#include <stdint.h>
+#include <string.h>
+#include <zircon/device/vfs.h>
 #include <fs/vfs.h>
 #include <sys/stat.h>
 
@@ -101,6 +105,52 @@ zx_status_t VnodeLittleFs::Getattr(vnattr_t* attr) {
     case LFS_TYPE_REG: attr->mode |= V_TYPE_FILE; break;
   }
   return ZX_OK;
+}
+
+zx_status_t VnodeLittleFs::Ioctl(uint32_t op, const void* in_buf, size_t in_len,
+                                void* out_buf, size_t out_len,
+                                size_t* out_actual) {
+  if (op != IOCTL_VFS_QUERY_FS) {
+    return fs::Vnode::Ioctl(op, in_buf, in_len, out_buf, out_len, out_actual);
+  }
+
+  if (out_actual == nullptr) {
+    return ZX_ERR_INVALID_ARGS;
+  }
+  *out_actual = 0;
+
+  const char kFsName[] = "littlefs";
+  const size_t name_len = strlen(kFsName);
+  const size_t required_len = sizeof(vfs_query_info_t) + name_len;
+  if (out_buf == nullptr || out_len < sizeof(vfs_query_info_t)) {
+    return ZX_ERR_BUFFER_TOO_SMALL;
+  }
+
+  lfs_ssize_t used_blocks = lfs_fs_size(lfs_);
+  if (used_blocks < 0) {
+    return lfs_error_to_zx_status(used_blocks);
+  }
+
+  memset(out_buf, 0, out_len);
+  auto* info = reinterpret_cast<vfs_query_info_t*>(out_buf);
+  const lfs_size_t block_size = lfs_->cfg ? lfs_->cfg->block_size : 0;
+  info->total_bytes = static_cast<uint64_t>(lfs_->block_count) * block_size;
+  info->used_bytes = static_cast<uint64_t>(used_blocks) * block_size;
+  info->block_size = static_cast<uint32_t>(
+      std::min<uint64_t>(block_size, UINT32_MAX));
+  info->max_filename_size = static_cast<uint32_t>(
+      std::min<uint64_t>(lfs_->name_max, UINT32_MAX));
+
+  const size_t copy_len = std::min(name_len,
+                                   out_len > sizeof(vfs_query_info_t)
+                                       ? out_len - sizeof(vfs_query_info_t)
+                                       : 0);
+  if (copy_len > 0) {
+    memcpy(info->name, kFsName, copy_len);
+    info->fs_type = VFS_TYPE_LITTLEFS;
+  }
+  *out_actual = std::min(required_len, out_len);
+  return out_len >= required_len ? ZX_OK : ZX_ERR_BUFFER_TOO_SMALL;
 }
 
 bool VnodeDir::IsEmpty() {

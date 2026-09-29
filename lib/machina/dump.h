@@ -28,8 +28,20 @@ enum {
 };
 
 enum {
+  CVMD_CMD_MP_BUFFER_CONFIG = 0,
+  CVMD_CMD_TP_BUFFER_CONFIG = 1,
+  CVMD_CMD_EXCEPTION_DUMP = 2,
+};
+
+enum {
   CROSS_VM_DUMP_VDEV_NOTIFY_G2H = 2,
   CROSS_VM_DUMP_VDEV_NOTIFY_H2G = 3,
+};
+
+enum {
+  // Existing UOS exception dump completion wait window. This bounds exception
+  // resume if the dump completion signal never arrives.
+  CVMD_EXCEPTION_DUMP_COMPLETION_TIMEOUT_SEC = 5,
 };
 
 typedef struct cvmd_cp {

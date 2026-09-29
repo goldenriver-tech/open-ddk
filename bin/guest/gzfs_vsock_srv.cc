@@ -3,15 +3,19 @@
 #include "gzfs_vsock_srv.h"
 
 #include <dirent.h>
+#include <errno.h>
 #include <fcntl.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <sys/statvfs.h>
+#include <unistd.h>
 #include <unordered_map>
 
 namespace {
 
 constexpr char kLocalStorageDir[] = "/data";
 constexpr uint32_t kGzfsVsockHostPort = 5022;
+constexpr uint32_t kFallbackBlockSize = 4096;
 
 std::unordered_map<opcode_t, std::string> kOpcodeNames = {
     {OP_GETATTR, "OP_GETATTR"}, {OP_READDIR, "OP_READDIR"},
@@ -338,34 +342,37 @@ void GzFsVsockService::Read(const request_t* req, const void* data) {
 }
 
 void GzFsVsockService::StatFs(const request_t* req, const void* data) {
-  struct statvfs stbuf;
   statfs_t resp_data;
   auto local_path = make_local_path("/");
+  int saved_errno = 0;
 
-  memset(&resp_data, 0, sizeof(statfs_t));
+  memset(&resp_data, 0, sizeof(resp_data));
 
+  struct statvfs stbuf = {};
+  errno = 0;
   int ret = statvfs(local_path.c_str(), &stbuf);
+  saved_errno = errno;
   if (ret == 0) {
     resp_data.blocks = stbuf.f_blocks;
     resp_data.bfree = stbuf.f_bfree;
     resp_data.bavail = stbuf.f_bavail;
     resp_data.files = stbuf.f_files;
     resp_data.ffree = stbuf.f_ffree;
-    resp_data.bsize = stbuf.f_bsize;
+    resp_data.bsize = stbuf.f_bsize ? stbuf.f_bsize : kFallbackBlockSize;
     resp_data.namelen = stbuf.f_namemax;
   } else {
-    FXL_LOG(ERROR) << "do statvfs failed for path: " << local_path << ", "
-                   << strerror(errno);
+    FXL_LOG(ERROR) << "gzfs statfs statvfs failed for path: " << local_path
+                   << ", " << strerror(saved_errno);
   }
 
   response_t resp = {
       .opcode = OP_STATFS,
       .seq = req->seq,
-      .result = (ret == 0) ? 0 : -errno,
+      .result = (ret == 0) ? 0 : -saved_errno,
       .length = (ret == 0) ? (uint32_t)sizeof(statfs_t) : 0u,
   };
 
-  response_handler_.SendResponse(&resp, &resp_data);
+  response_handler_.SendResponse(&resp, (ret == 0) ? &resp_data : nullptr);
   return;
 }
 

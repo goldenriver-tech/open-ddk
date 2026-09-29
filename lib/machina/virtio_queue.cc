@@ -34,7 +34,20 @@ static bool validate_queue_range(VirtioDevice* device,
   zx_vaddr_t range_end = addr + size;
   zx_vaddr_t mem_end = mem_addr + mem_size;
 
-  return addr >= mem_addr && range_end <= mem_end;
+  return range_end >= addr && mem_end >= mem_addr && addr >= mem_addr &&
+         range_end <= mem_end;
+}
+
+static bool validate_guest_range(VirtioDevice* device,
+                                 zx_paddr_t paddr,
+                                 size_t size) {
+  zx_paddr_t phys_base = device->phys_mem().phys_base();
+  size_t mem_size = device->phys_mem().size();
+  zx_paddr_t range_end = paddr + size;
+  zx_paddr_t mem_end = phys_base + mem_size;
+
+  return range_end >= paddr && mem_end >= phys_base && paddr >= phys_base &&
+         range_end <= mem_end;
 }
 
 template <typename T>
@@ -291,6 +304,7 @@ zx_status_t VirtioQueue::PollAsync(async_t* async,
                                    void* ctx) {
   wait->set_object(event_.get());
   wait->set_trigger(SIGNAL_QUEUE_AVAIL);
+  wait->set_flags(ASYNC_FLAG_HANDLE_SHUTDOWN);
   wait->set_handler([this, handler, ctx](async_t* async, zx_status_t status,
                                          const zx_packet_signal_t* signal) {
     if (status != ZX_OK) {
@@ -326,23 +340,28 @@ async_wait_result_t VirtioQueue::InvokeAsyncHandler(
   return status == ZX_OK ? ASYNC_WAIT_AGAIN : ASYNC_WAIT_FINISHED;
 }
 
-zx_status_t VirtioQueue::ReadDesc(uint16_t desc_index, virtio_desc_t* out, struct phys_range *prange) {
+zx_status_t VirtioQueue::ReadDesc(uint16_t desc_index, virtio_desc_t* out,
+                                  struct phys_range* prange) {
   fbl::AutoLock lock(&mutex_);
-  auto const *desc = &ring_.desc[desc_index];
-  size_t mem_size = device_->phys_mem().size();
-  auto phys_base = device_->phys_mem().phys_base();
-  const uint64_t end = desc->addr + desc->len;
-  if (end < desc->addr || end > (phys_base + mem_size)) {
+  if (ring_.desc == nullptr) {
+    return ZX_ERR_BAD_STATE;
+  }
+  if (desc_index >= ring_.size) {
+    return ZX_ERR_OUT_OF_RANGE;
+  }
+
+  const auto* desc = &ring_.desc[desc_index];
+  if (!validate_guest_range(device_, desc->addr, desc->len)) {
     return ZX_ERR_OUT_OF_RANGE;
   }
 
   if (prange) {
-	prange->paddr = desc->addr;
-	prange->len = desc->len;
+    prange->paddr = desc->addr;
+    prange->len = desc->len;
   }
 
-  out->addr = reinterpret_cast<void*>(guest_paddr_to_host_vaddr
-				(device_, desc->addr));
+  out->addr =
+      reinterpret_cast<void*>(guest_paddr_to_host_vaddr(device_, desc->addr));
   out->len = desc->len;
   out->has_next = desc->flags & VRING_DESC_F_NEXT;
   out->writable = desc->flags & VRING_DESC_F_WRITE;

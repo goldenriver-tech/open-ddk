@@ -9,6 +9,8 @@
 #include <ddk/debug.h>
 #include <ddk/driver.h>
 #include <stdatomic.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "vblock-drv.h"
 #include "vblock-drv-crypto.h"
@@ -28,11 +30,15 @@
 #define VBLOCK_HANDLE_TYPE_FIFO 0x20
 #define VBLOCK_HANDLE_INDEX_MASK 0x0f
 
-#define VBLOCK_WORKER_CPU_AFFINITY_MASK 0x20
+#define VBLOCK_WORKER_CPU_AFFINITY_MASK 0xf0
 #define VBLOCK_MAX_THREAD_NAME_LEN 32
 #define VBLOCK_DEFAULT_CACHE_LINE_SIZE 64
 
 #define VBLOCK_FLUSH_WAIT_MSEC 100
+
+static bool vblock_backend_needs_partition_isolation(vblock_drv_t *dev) {
+  return strncmp(dev->backend_name, "sdc", strlen("sdc")) == 0;
+}
 #define VBLOCK_STATE_WAIT_MSEC 1
 #define VBLOCK_STATE_STOP_WAIT_MSEC 5
 
@@ -52,6 +58,11 @@ typedef struct {
   completion_t completion;
   zx_status_t status;
 } read_ctx_t;
+
+struct direct_read_param {
+  int32_t vmid;
+  struct direct_io_rw_param rw;
+};
 
 typedef struct vblock_drv_cb {
   uint64_t phy_status;
@@ -370,6 +381,10 @@ static zx_status_t analyze_rw_req(vblock_drv_t *dev, guest_ctx_t *guest,
 
   block_op->rw.vmo = guest->gpa_vmo;
   block_op->rw.pages = guest->mapped_vaddr;
+  // Legacy virtio requests have one data descriptor.  Clear the native-SG
+  // marker because this block_op is recycled and UFS treats sg_count > 0 as
+  // a native-SG request.
+  block_op->rw.sg_count = 0;
 
   block_op->rw.sectors = len >> SECTOR_BITS;
   block_op->rw.length = len / dev->block_info->block_size;
@@ -510,6 +525,16 @@ static zx_status_t vblock_dev_handle_request(guest_ctx_t *guest,
 
   if (block_op->command == BLOCK_OP_READ ||
       block_op->command == BLOCK_OP_WRITE) {
+    // Legacy vblock-drv has a single descriptor data path.  The device
+    // advertises seg_max=1, but fail safely if a frontend violates it instead
+    // of silently submitting only desc_lv2[1].
+    if (unlikely(desc_cnt != 3)) {
+      zxlogf(ERROR,
+             "[vblock][%d]: legacy rw needs header/data/status, got %d descs\n",
+             guest->vmid, desc_cnt);
+      status = VIRTIO_BLK_S_IOERR;
+      goto quick_complete;
+    }
     status = analyze_rw_req(dev, guest, hdr, desc_lv2 + 1, block_op);
     if (unlikely(status != ZX_OK))
       goto quick_complete;
@@ -713,7 +738,7 @@ static zx_status_t vblock_guest_start(vblock_drv_t *dev, const void *in_buf,
   if (status != ZX_OK)
     return status;
 
-  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+  if (!grt_is_block_backend_vmid(vmid)) {
     zxlogf(ERROR, "[vblock]: vblock-drv vmid error, vmid: %d\n", vmid);
     return ZX_ERR_NOT_SUPPORTED;
   }
@@ -727,14 +752,20 @@ static zx_status_t vblock_guest_start(vblock_drv_t *dev, const void *in_buf,
     guest_ctx_exit(guest);
   }
 
-  status = vpart_isolate_init((guest_ctx_t *)guest, dev, vmid);
-  if (status) {
-    zxlogf(ERROR, "[vblock][%d]: virt partition isolate init failed: %d\n",
-           guest->vmid, status);
-    return status;
+  if (vblock_backend_needs_partition_isolation(dev)) {
+    status = vpart_isolate_init((guest_ctx_t *)guest, dev, vmid);
+    if (status) {
+      zxlogf(ERROR, "[vblock][%d]: virt partition isolate init failed: %d\n",
+             guest->vmid, status);
+      return status;
+    }
+    zxlogf(INFO, "[vblock][%d]: virt partition isolate init succeed\n",
+           guest->vmid);
+  } else {
+    guest->has_partition_isolation = false;
+    zxlogf(INFO, "[vblock][%d]: skip partition isolate for backend %s\n",
+           guest->vmid, dev->backend_name);
   }
-  zxlogf(INFO, "[vblock][%d]: virt partition isolate init succeed\n",
-         guest->vmid);
 
   status = zx_fifo_create(FIFO_QDEPTH, sizeof(struct fifo_in_item), 0,
                           &guest->fifo_in[VBLOCK_FIFO_END_SELF],
@@ -789,7 +820,7 @@ static zx_status_t vblock_guest_stop(vblock_drv_t *dev, const void *in_buf,
   }
 
   int32_t vmid = *(const int32_t *)in_buf;
-  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+  if (!grt_is_block_backend_vmid(vmid)) {
     zxlogf(ERROR, "[vblock]: vblock-drv stop vmid error, vmid: %d\n", vmid);
     return ZX_ERR_NOT_SUPPORTED;
   }
@@ -799,7 +830,7 @@ static zx_status_t vblock_guest_stop(vblock_drv_t *dev, const void *in_buf,
 
   mtx_lock(&dev->device_lock);
   if (dev->selected_guest_vmid == vmid) {
-    dev->selected_guest_vmid = -1;
+    dev->selected_guest_vmid = GRT_VMID_INVALID;
   }
   mtx_unlock(&dev->device_lock);
 
@@ -811,13 +842,13 @@ static zx_status_t vblock_set_guest_id(vblock_drv_t *dev, const void *in_buf,
   const int32_t *ptr = in_buf;
   int32_t vmid = ptr[0];
 
-  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+  if (!grt_is_block_backend_vmid(vmid)) {
     zxlogf(ERROR, "[vblock]: vblock-drv vmid error, vmid: %d\n", vmid);
     return ZX_ERR_NOT_SUPPORTED;
   }
 
   mtx_lock(&dev->device_lock);
-  if (dev->selected_guest_vmid > 0) {
+  if (dev->selected_guest_vmid != GRT_VMID_INVALID) {
     mtx_unlock(&dev->device_lock);
     return ZX_ERR_SHOULD_WAIT;
   }
@@ -829,18 +860,24 @@ static zx_status_t vblock_set_guest_id(vblock_drv_t *dev, const void *in_buf,
 static zx_status_t vblock_set_gpa_vmo(vblock_drv_t *dev, const void *in_buf,
                                       size_t in_len) {
   const zx_handle_t *ptr = in_buf;
+  zx_handle_t in_gpa_vmo =
+      in_len >= sizeof(*ptr) ? ptr[0] : ZX_HANDLE_INVALID;
 
   if (in_len != sizeof(*ptr)) {
     zxlogf(ERROR, "[vblock]: set_handle invalid args\n");
+    if (in_gpa_vmo != ZX_HANDLE_INVALID) {
+      zx_handle_close(in_gpa_vmo);
+    }
     return ZX_ERR_INVALID_ARGS;
   }
 
   mtx_lock(&dev->device_lock);
   int vmid = dev->selected_guest_vmid;
-  dev->selected_guest_vmid = -1;
+  dev->selected_guest_vmid = GRT_VMID_INVALID;
   mtx_unlock(&dev->device_lock);
-  if (vmid < 0 || vmid >= VBLOCK_MAX_GUESTS) {
+  if (!grt_is_block_backend_vmid(vmid)) {
     zxlogf(ERROR, "[vblock]: guest sel bad state\n");
+    zx_handle_close(in_gpa_vmo);
     return ZX_ERR_BAD_STATE;
   }
 
@@ -854,19 +891,22 @@ static zx_status_t vblock_set_gpa_vmo(vblock_drv_t *dev, const void *in_buf,
         zx_vmar_unmap(zx_vmar_root_self(), (uintptr_t)guest->mapped_vaddr,
                       prev_sz);
       }
+      guest->mapped_vaddr = NULL;
     }
     zx_handle_close(guest->gpa_vmo);
     guest->gpa_vmo = ZX_HANDLE_INVALID;
   }
 
   zx_status_t status =
-      zx_handle_duplicate(ptr[0], ZX_RIGHT_SAME_RIGHTS, &guest->gpa_vmo);
+      zx_handle_duplicate(in_gpa_vmo, ZX_RIGHT_SAME_RIGHTS, &guest->gpa_vmo);
   if (status != ZX_OK) {
     zxlogf(ERROR,
            "[vblock][%d]: set_handle, failed to duplicate handle, ret: %d\n",
            guest->vmid, status);
+    zx_handle_close(in_gpa_vmo);
     return status;
   }
+  zx_handle_close(in_gpa_vmo);
 
   uint64_t vmo_sz, mrg_sz;
   if ((vmo_sz = vmo_get_size(guest->gpa_vmo)) !=
@@ -884,6 +924,9 @@ static zx_status_t vblock_set_gpa_vmo(vblock_drv_t *dev, const void *in_buf,
   if (status != ZX_OK) {
     zxlogf(ERROR, "[vblock][%d]: set_handle, failed to map gpa_vmo, ret: %d\n",
            guest->vmid, status);
+    zx_handle_close(guest->gpa_vmo);
+    guest->gpa_vmo = ZX_HANDLE_INVALID;
+    guest->mapped_vaddr = NULL;
     return status;
   }
 
@@ -896,6 +939,10 @@ static zx_status_t vblock_set_gpa_vmo(vblock_drv_t *dev, const void *in_buf,
     if (status != ZX_OK) {
       zxlogf(ERROR, "[vblock][%d]: failed to start worker thread, ret: %d\n",
              guest->vmid, status);
+      zx_vmar_unmap(zx_vmar_root_self(), (uintptr_t)guest->mapped_vaddr, vmo_sz);
+      guest->mapped_vaddr = NULL;
+      zx_handle_close(guest->gpa_vmo);
+      guest->gpa_vmo = ZX_HANDLE_INVALID;
       return status;
     }
     SET_STATE(guest, GUEST_STATE_READY);
@@ -972,7 +1019,7 @@ static zx_status_t vblock_get_vpi_info(vblock_drv_t *dev, const void *in_buf,
                                        size_t in_len, uint64_t *vblock_count) {
   guest_ctx_t *guest;
   int vmid = dev->selected_guest_vmid;
-  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+  if (!grt_is_block_backend_vmid(vmid)) {
     zxlogf(ERROR, "[vblock]: vblock-drv vmid error, vmid: %d\n", vmid);
     return ZX_ERR_NOT_SUPPORTED;
   }
@@ -1010,35 +1057,52 @@ static void vblock_direct_guest_reset(direct_io_ctx_t *direct_guest) {
     direct_guest->gpa_vmo = ZX_HANDLE_INVALID;
   }
 
+  if (direct_guest->io_vmo != ZX_HANDLE_INVALID) {
+    zx_handle_close(direct_guest->io_vmo);
+    direct_guest->io_vmo = ZX_HANDLE_INVALID;
+  }
+
   memset(&direct_guest->vm_phys_mem, 0, sizeof(direct_guest->vm_phys_mem));
   direct_guest->inited = false;
 }
 
 #define MAX_XFER_SIZE (256 * 4096)
-static zx_status_t sync_read_blocks(vblock_drv_t *dev, void *buffer,
-                                    uint64_t block_addr, uint32_t block_count) {
+static zx_status_t sync_read_blocks(vblock_drv_t *dev,
+                                    direct_io_ctx_t *direct_guest,
+                                    void *buffer, uint64_t byte_offset,
+                                    uint32_t byte_len) {
   zx_status_t status;
-  direct_io_ctx_t *direct_guest = &dev->direct_guest;
   uint32_t bsz = dev->block_info->block_size;
   block_op_t *block_op = direct_guest->io_block_op;
+  zx_handle_t io_vmo = direct_guest->io_vmo;
+  bool use_temp_vmo = byte_len > MAX_XFER_SIZE;
   if (!block_op) {
     zxlogf(ERROR, "[vblock]: NULL pointer in input parameters\n");
     return ZX_ERR_NO_MEMORY;
   }
 
-  read_ctx_t ctx;
+  read_ctx_t ctx = {};
 
-  if (direct_guest->io_vmo == ZX_HANDLE_INVALID) {
-    if (zx_vmo_create(MAX_XFER_SIZE, 0, &direct_guest->io_vmo) != ZX_OK) {
-      zxlogf(ERROR, "[vblock]: Failed to create vmo\n");
-      return ZX_ERR_INTERNAL;
+  if (use_temp_vmo) {
+    status = zx_vmo_create(byte_len, 0, &io_vmo);
+    if (status != ZX_OK) {
+      zxlogf(ERROR, "[vblock]: Failed to create temp vmo, size: %u, ret: %d\n",
+             byte_len, status);
+      return status;
     }
+  } else if (io_vmo == ZX_HANDLE_INVALID) {
+    status = zx_vmo_create(MAX_XFER_SIZE, 0, &io_vmo);
+    if (status != ZX_OK) {
+      zxlogf(ERROR, "[vblock]: Failed to create vmo\n");
+      return status;
+    }
+    direct_guest->io_vmo = io_vmo;
   }
 
   block_op->command = BLOCK_OP_READ;
-  block_op->rw.vmo = direct_guest->io_vmo;
-  block_op->rw.length = block_count / bsz;
-  block_op->rw.offset_dev = block_addr / bsz;
+  block_op->rw.vmo = io_vmo;
+  block_op->rw.length = byte_len / bsz;
+  block_op->rw.offset_dev = byte_offset / bsz;
   block_op->rw.offset_vmo = 0;
   block_op->completion_cb = sync_read_completion;
   block_op->cookie = &ctx;
@@ -1049,10 +1113,16 @@ static zx_status_t sync_read_blocks(vblock_drv_t *dev, void *buffer,
 
   if (ctx.status != ZX_OK) {
     zxlogf(ERROR, "[vblock]: Block I/O callback failed, ret: %d\n", ctx.status);
+    if (use_temp_vmo) {
+      zx_handle_close(io_vmo);
+    }
     return ctx.status;
   }
 
-  status = zx_vmo_read(direct_guest->io_vmo, buffer, 0, block_count);
+  status = zx_vmo_read(io_vmo, buffer, 0, byte_len);
+  if (use_temp_vmo) {
+    zx_handle_close(io_vmo);
+  }
   if (status != ZX_OK) {
     zxlogf(ERROR, "[vblock]: zx_vmo_read failed, bsz: %u, status: %d\n", bsz,
            status);
@@ -1066,22 +1136,25 @@ static zx_status_t vblock_direct_guest_start(vblock_drv_t *dev,
                                              const void *in_buf,
                                              size_t in_len) {
   zxlogf(INFO, "[vblock]: direct vblock ioctl start\n");
-  direct_io_ctx_t *direct_guest = &dev->direct_guest;
-  const struct mem_region *ptr = (const struct mem_region *)in_buf;
+  struct mem_region mem;
+  int vmid;
 
-  if (sizeof(*ptr) != in_len) {
-    zxlogf(ERROR,
-           "[vblock]: guest start invalid args, struct len: %lu, in_len: %lu\n",
-           sizeof(*ptr), in_len);
+  zx_status_t status = calculate_vmid(in_buf, &mem, in_len, &vmid);
+  if (status != ZX_OK) {
+    return status;
+  }
+  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+    zxlogf(ERROR, "[vblock]: direct vblock vmid error, vmid: %d\n", vmid);
     return ZX_ERR_INVALID_ARGS;
   }
 
+  direct_io_ctx_t *direct_guest = &dev->direct_guest[vmid];
   if (direct_guest->inited || direct_guest->gpa_vmo != ZX_HANDLE_INVALID ||
       direct_guest->mapped_vaddr) {
     vblock_direct_guest_reset(direct_guest);
   }
 
-  direct_guest->vm_phys_mem = *ptr;
+  direct_guest->vm_phys_mem = mem;
 
   if (!direct_guest->io_block_op) {
     direct_guest->io_block_op = calloc(1, dev->block_op_size);
@@ -1093,7 +1166,7 @@ static zx_status_t vblock_direct_guest_start(vblock_drv_t *dev,
 
   if (direct_guest->io_vmo == ZX_HANDLE_INVALID) {
     zx_handle_t vmo = ZX_HANDLE_INVALID;
-    zx_status_t status = zx_vmo_create(MAX_XFER_SIZE, 0, &vmo);
+    status = zx_vmo_create(MAX_XFER_SIZE, 0, &vmo);
     if (status != ZX_OK) {
       zxlogf(ERROR, "[vblock]: Failed to create vmo\n");
       return status;
@@ -1101,22 +1174,41 @@ static zx_status_t vblock_direct_guest_start(vblock_drv_t *dev,
     direct_guest->io_vmo = vmo;
   }
 
+  mtx_lock(&dev->device_lock);
+  dev->selected_direct_vmid = vmid;
+  mtx_unlock(&dev->device_lock);
+
   return ZX_OK;
 }
 
 static zx_status_t vblock_direct_set_gpa_range(vblock_drv_t *dev,
                                                const void *in_buf,
                                                size_t in_len) {
-  direct_io_ctx_t *direct_guest = &dev->direct_guest;
   const zx_handle_t *ptr = in_buf;
+  zx_handle_t in_gpa_vmo =
+      in_len >= sizeof(*ptr) ? ptr[0] : ZX_HANDLE_INVALID;
   if (sizeof(*ptr) != in_len) {
     zxlogf(
         ERROR,
         "[vblock]: set gpa range invalid args, struct len: %lu, in_len: %lu\n",
         sizeof(*ptr), in_len);
+    if (in_gpa_vmo != ZX_HANDLE_INVALID) {
+      zx_handle_close(in_gpa_vmo);
+    }
     return ZX_ERR_INVALID_ARGS;
   }
 
+  mtx_lock(&dev->device_lock);
+  int vmid = dev->selected_direct_vmid;
+  dev->selected_direct_vmid = GRT_VMID_INVALID;
+  mtx_unlock(&dev->device_lock);
+  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+    zxlogf(ERROR, "[vblock]: direct set gpa vmid error, vmid: %d\n", vmid);
+    zx_handle_close(in_gpa_vmo);
+    return ZX_ERR_BAD_STATE;
+  }
+
+  direct_io_ctx_t *direct_guest = &dev->direct_guest[vmid];
   if (direct_guest->gpa_vmo != ZX_HANDLE_INVALID) {
     if (direct_guest->mapped_vaddr) {
       uint64_t prev_sz = mem_region_size(&direct_guest->vm_phys_mem);
@@ -1124,17 +1216,20 @@ static zx_status_t vblock_direct_set_gpa_range(vblock_drv_t *dev,
         zx_vmar_unmap(zx_vmar_root_self(),
                       (uintptr_t)direct_guest->mapped_vaddr, prev_sz);
       }
+      direct_guest->mapped_vaddr = NULL;
     }
     zx_handle_close(direct_guest->gpa_vmo);
     direct_guest->gpa_vmo = ZX_HANDLE_INVALID;
   }
 
-  zx_status_t status =
-      zx_handle_duplicate(ptr[0], ZX_RIGHT_SAME_RIGHTS, &direct_guest->gpa_vmo);
+  zx_status_t status = zx_handle_duplicate(
+      in_gpa_vmo, ZX_RIGHT_SAME_RIGHTS, &direct_guest->gpa_vmo);
   if (status != ZX_OK) {
     zxlogf(ERROR, "[vblock]: failed to duplicate handle, ret: %d\n", status);
+    zx_handle_close(in_gpa_vmo);
     return status;
   }
+  zx_handle_close(in_gpa_vmo);
 
   uint64_t vmo_sz, mrg_sz;
   if ((vmo_sz = vmo_get_size(direct_guest->gpa_vmo)) !=
@@ -1143,6 +1238,9 @@ static zx_status_t vblock_direct_set_gpa_range(vblock_drv_t *dev,
            "[vblock]: size is not match, gpa_vmo size: 0x%lx, mem_region_size: "
            "0x%lx\n",
            vmo_sz, mrg_sz);
+    zx_handle_close(direct_guest->gpa_vmo);
+    direct_guest->gpa_vmo = ZX_HANDLE_INVALID;
+    direct_guest->mapped_vaddr = NULL;
     return ZX_ERR_INVALID_ARGS;
   }
 
@@ -1152,6 +1250,9 @@ static zx_status_t vblock_direct_set_gpa_range(vblock_drv_t *dev,
                        direct_guest->gpa_vmo, 0, vmo_sz, &vaddr);
   if (status != ZX_OK) {
     zxlogf(ERROR, "[vblock]: failed to map gpa_vmo, ret: %d\n", status);
+    zx_handle_close(direct_guest->gpa_vmo);
+    direct_guest->gpa_vmo = ZX_HANDLE_INVALID;
+    direct_guest->mapped_vaddr = NULL;
     return status;
   }
 
@@ -1163,20 +1264,46 @@ static zx_status_t vblock_direct_set_gpa_range(vblock_drv_t *dev,
 
 static zx_status_t vblock_direct_read(vblock_drv_t *dev, const void *in_buf,
                                       size_t in_len) {
-  direct_io_ctx_t *direct_guest = &dev->direct_guest;
+  if (in_len != sizeof(struct direct_read_param)) {
+    zxlogf(ERROR, "[vblock]: direct read invalid args, in_len: %lu\n", in_len);
+    return ZX_ERR_INVALID_ARGS;
+  }
 
-  const struct direct_io_rw_param *param =
-      (const struct direct_io_rw_param *)in_buf;
+  const struct direct_read_param *param = in_buf;
+  int32_t vmid = param->vmid;
+  struct direct_io_rw_param rw = param->rw;
 
-  uint64_t offset = param->addr - direct_guest->vm_phys_mem.start;
+  if (vmid >= VBLOCK_MAX_GUESTS || vmid < 0) {
+    zxlogf(ERROR, "[vblock]: direct read vmid error, vmid: %d\n", vmid);
+    return ZX_ERR_INVALID_ARGS;
+  }
+
+  direct_io_ctx_t *direct_guest = &dev->direct_guest[vmid];
+  if (!direct_guest->inited || !direct_guest->mapped_vaddr) {
+    zxlogf(ERROR, "[vblock]: direct read before guest memory is ready\n");
+    return ZX_ERR_BAD_STATE;
+  }
+
+  if (rw.addr < direct_guest->vm_phys_mem.start ||
+      rw.addr > direct_guest->vm_phys_mem.end ||
+      rw.len > direct_guest->vm_phys_mem.end - rw.addr + 1) {
+    zxlogf(ERROR,
+           "[vblock]: direct read addr out of range, vmid: %d, addr: 0x%lx, "
+           "len: %u, mem: 0x%lx-0x%lx\n",
+           vmid, rw.addr, rw.len, direct_guest->vm_phys_mem.start,
+           direct_guest->vm_phys_mem.end);
+    return ZX_ERR_OUT_OF_RANGE;
+  }
+
+  uint64_t offset = rw.addr - direct_guest->vm_phys_mem.start;
   void *read_buf = (void *)((uint8_t *)direct_guest->mapped_vaddr + offset);
 
   zx_status_t status =
-      sync_read_blocks(dev, read_buf, param->sector, param->len);
+      sync_read_blocks(dev, direct_guest, read_buf, rw.offset, rw.len);
   if (status != ZX_OK) {
     zxlogf(ERROR, "[vblock]: read failed, error code: %d\n", status);
   }
-  return ZX_OK;
+  return status;
 }
 
 zx_status_t vblock_dev_ioctl(vblock_drv_t *dev, uint32_t op, const void *in_buf,
@@ -1222,16 +1349,13 @@ void vblock_dev_release(vblock_drv_t *dev) {
   for (int i = 0; i < VBLOCK_MAX_GUESTS; i++) {
     guest = dev->guests + i;
     guest_ctx_exit(guest);
-  }
 
-  vblock_direct_guest_reset(&dev->direct_guest);
-  if (dev->direct_guest.io_block_op) {
-    free(dev->direct_guest.io_block_op);
+    vblock_direct_guest_reset(&dev->direct_guest[i]);
+    if (dev->direct_guest[i].io_block_op) {
+      free(dev->direct_guest[i].io_block_op);
+      dev->direct_guest[i].io_block_op = NULL;
+    }
   }
-  if (dev->direct_guest.io_vmo != ZX_HANDLE_INVALID) {
-    zx_handle_close(dev->direct_guest.io_vmo);
-  }
-  dev->direct_guest.inited = false;
 
   free(dev);
 }
@@ -1243,24 +1367,34 @@ void vblock_dev_init(vblock_drv_t *dev) {
     guest_ctx_t *guest = dev->guests + i;
     guest_ctx_init(guest);
     guest->vmid = get_guest_vmid(dev, guest);
+
+    dev->direct_guest[i].gpa_vmo = ZX_HANDLE_INVALID;
+    dev->direct_guest[i].io_vmo = ZX_HANDLE_INVALID;
+    dev->direct_guest[i].io_block_op = NULL;
+    dev->direct_guest[i].inited = false;
   }
 
-  dev->direct_guest.gpa_vmo = ZX_HANDLE_INVALID;
-  dev->direct_guest.io_vmo = ZX_HANDLE_INVALID;
-
-  dev->selected_guest_vmid = -1;
+  dev->selected_guest_vmid = GRT_VMID_INVALID;
+  dev->selected_direct_vmid = GRT_VMID_INVALID;
   mtx_init(&dev->device_lock, mtx_plain);
 }
 
 zx_status_t vblock_dev_set_backend(vblock_drv_t *dev, block_protocol_t *bp,
-                                   block_info_t *info, size_t block_op_size) {
+                                   block_info_t *info, size_t block_op_size,
+                                   const char *backend_name) {
   dev->block_proto = bp;
   dev->block_info = info;
   dev->block_op_size = ALIGN(block_op_size, sizeof(void *));
+  if (backend_name) {
+    snprintf(dev->backend_name, sizeof(dev->backend_name), "%s", backend_name);
+  } else {
+    dev->backend_name[0] = '\0';
+  }
   zxlogf(INFO,
          "[vblock]: dev->block_op_size: %lu, sizeof(block_op_t): %lu, "
-         "info->block_count: %lu\n",
-         dev->block_op_size, sizeof(block_op_t), info->block_count);
+         "info->block_count: %lu, backend: %s\n",
+         dev->block_op_size, sizeof(block_op_t), info->block_count,
+         dev->backend_name);
 
   return ZX_OK;
 }

@@ -24,9 +24,15 @@ class SmcCommunication {
   void SmcCommunicationLoop();
   zx_status_t TriggerSmcMessageRead();
   zx_status_t TriggerSmcMessageHandle();
-  zx_status_t ParseMessage(const uint8_t* message, size_t length, std::string& vm, std::string& cmd);
+  zx_status_t ParseMessage(const uint8_t* message,
+                           size_t length,
+                           uint8_t& out_vmid,
+                           std::string& tgt_vm,
+                           std::string& cmd);
   zx_status_t ParseVmid(const std::string& vm, uint8_t& vmid);
-  zx_status_t HandleCmd(const std::string& cmd, uint8_t vmid);
+  zx_status_t HandleCmd(const std::string& cmd,
+                        uint8_t src_vmid,
+                        uint8_t tgt_vmid);
 
   static constexpr uint8_t YOCTO_VMID = 1;
   static constexpr uint8_t ALPS_VMID = 2;

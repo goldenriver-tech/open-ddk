@@ -11,6 +11,9 @@
 #include <virtio/console.h>
 #include <virtio/virtio_ids.h>
 
+#include <fbl/auto_lock.h>
+#include <fbl/mutex.h>
+
 #include "garnet/lib/machina/virtio_device.h"
 #include "garnet/lib/machina/virtio_queue_waiter.h"
 
@@ -55,6 +58,9 @@ class VirtioConsole : public VirtioDeviceBase<VIRTIO_ID_CONSOLE,
     VirtioQueue* queue_;
     VirtioQueueWaiter queue_wait_;
     async::Wait socket_wait_;
+    fbl::Mutex mutex_;
+    bool shutting_down_ __TA_GUARDED(mutex_) = false;
+    bool wait_cancelled_ __TA_GUARDED(mutex_) = false;
     uint16_t head_;
     virtio_desc_t desc_;
   };

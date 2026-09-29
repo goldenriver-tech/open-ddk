@@ -29,7 +29,7 @@ class Vcpu {
   using StartCallback = std::function<void()>;
 
   Vcpu() { cnd_init(&state_cnd_); }
-  ~Vcpu() { cnd_destroy(&state_cnd_); }
+  ~Vcpu();
 
   // Create a new VCPU for a given guest.
   //
@@ -89,6 +89,7 @@ class Vcpu {
   zx_status_t SetGroup(int group);
   zx_status_t SetBudget(uint64_t budget);
   static void DumpGroups();
+  zx_status_t SetPriority(uint32_t priority);
 
  private:
   enum class State {

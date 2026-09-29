@@ -22,8 +22,6 @@
 
 #include <zircon/syscalls.h>
 #include <zircon/device/device.h>
-#include <zircon/device/grt-wdt.h>
-#include <fcntl.h>
 
 namespace sysmgr {
 
@@ -45,7 +43,6 @@ class App {
   void RegisterAppLoaders(Config::ServiceMap app_loaders);
   void LaunchApplication(component::ApplicationLaunchInfo launch_info);
   void LaunchService(const std::string& service_name, bool auto_restart = false);
-  void DisableSosKickNebula();
 
   std::unique_ptr<component::ApplicationContext> application_context_;
 

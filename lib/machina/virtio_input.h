@@ -7,6 +7,9 @@
 #ifndef GARNET_LIB_MACHINA_VIRTIO_INPUT_H_
 #define GARNET_LIB_MACHINA_VIRTIO_INPUT_H_
 
+#include <atomic>
+#include <threads.h>
+
 #include <fbl/intrusive_single_list.h>
 #include <fbl/unique_ptr.h>
 #include <hid/hid.h>
@@ -34,6 +37,7 @@ class VirtioInput : public VirtioDeviceBase<VIRTIO_ID_INPUT,
               const PhysMem& phys_mem,
               const char* device_name,
               const char* device_serial);
+  ~VirtioInput() override;
 
   zx_status_t WriteConfig(uint64_t addr, const IoValue& value) override;
 
@@ -42,6 +46,7 @@ class VirtioInput : public VirtioDeviceBase<VIRTIO_ID_INPUT,
   // Spawns a thread to monitor for new input devices. When one is detected
   // the corresponding event source will be created to poll for events.
   zx_status_t Start();
+  void Stop();
 
  private:
   zx_status_t PollEventQueue();
@@ -57,6 +62,9 @@ class VirtioInput : public VirtioDeviceBase<VIRTIO_ID_INPUT,
   const char* device_name_;
   const char* device_serial_;
   InputEventQueue* event_queue_;
+  std::atomic<bool> stopping_{false};
+  thrd_t thread_ = {};
+  bool thread_started_ = false;
 };
 
 class VirtioKeyboard : public VirtioInput {

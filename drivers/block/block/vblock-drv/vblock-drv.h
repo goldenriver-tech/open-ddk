@@ -11,12 +11,16 @@
 #include <ddk/protocol/block.h>
 #include <zircon/device/vblock.h>
 
-#define VBLOCK_MAX_GUESTS 3
+#include "garnet/lib/vm_id/vm_id.h"
+
+#define VBLOCK_MAX_GUESTS GRT_BLOCK_MAX_BACKEND_VMIDS
 #define BLK_CRYPTO_KEY_SLOT_NUM 32
 
 #define VBLOCK_FIFO_COUNT 2
 #define VBLOCK_FIFO_END_SELF 0
 #define VBLOCK_FIFO_END_PEER 1
+
+#define VBLOCK_BACKEND_NAME_LEN 32
 
 #define VBLOCK_EVENT_INTR 0
 #define VBLOCK_EVENT_NOTIFY 1
@@ -81,12 +85,14 @@ typedef struct direct_io_ctx {
 
 typedef struct vblock_drv {
   guest_ctx_t guests[VBLOCK_MAX_GUESTS];
-  direct_io_ctx_t direct_guest;
+  direct_io_ctx_t direct_guest[VBLOCK_MAX_GUESTS];
   block_protocol_t *block_proto;
   block_info_t *block_info;
   size_t block_op_size;
+  char backend_name[VBLOCK_BACKEND_NAME_LEN];
   mtx_t device_lock;
   int selected_guest_vmid;
+  int selected_direct_vmid;
 } vblock_drv_t;
 
 zx_status_t vblock_dev_ioctl(vblock_drv_t *dev, uint32_t op, const void *in_buf,
@@ -96,6 +102,7 @@ zx_status_t vblock_dev_ioctl(vblock_drv_t *dev, uint32_t op, const void *in_buf,
 void vblock_dev_release(vblock_drv_t *dev);
 
 zx_status_t vblock_dev_set_backend(vblock_drv_t *dev, block_protocol_t *bp,
-                                   block_info_t *info, size_t block_op_size);
+                                   block_info_t *info, size_t block_op_size,
+                                   const char *backend_name);
 
 void vblock_dev_init(vblock_drv_t *dev);

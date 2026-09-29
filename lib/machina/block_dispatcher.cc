@@ -7,7 +7,12 @@
 #include "garnet/lib/machina/block_dispatcher.h"
 
 #include <fcntl.h>
+#include <limits.h>
+#include <string>
+#include <string.h>
+#include <utility>
 #include <unistd.h>
+#include <algorithm>
 
 #include <block-client/client.h>
 #include <fbl/auto_call.h>
@@ -24,6 +29,7 @@
 
 #include "garnet/lib/machina/phys_mem.h"
 #include "garnet/lib/machina/volatile_write_block_dispatcher.h"
+#include "garnet/lib/machina/vm_id.h"
 #include "lib/fxl/logging.h"
 
 namespace machina {
@@ -33,6 +39,45 @@ constexpr size_t kDefaultMaxSegSize = 4096;
 constexpr uint32_t kSectorSize = 512;
 constexpr uint32_t kDefaultGeometry = 128;
 constexpr int kMaxIoctlRetries = 100;
+
+zx_status_t BioToVblockIoctl(uint32_t request, int *op) {
+  switch (request) {
+  case BlockDispatcher::BIO_IOCTL_SET_BOOT_REGION:
+    *op = IOCTL_VBLOCK_SET_BOOT_REGION;
+    return ZX_OK;
+  case BlockDispatcher::BIO_IOCTL_SET_WRITE_PROTECT:
+    *op = IOCTL_VBLOCK_SET_WRITE_PROTECT;
+    return ZX_OK;
+  case BlockDispatcher::BIO_IOCTL_GET_BOOTDEV_TYPE:
+    *op = IOCTL_VBLOCK_GET_BOOTDEV_TYPE;
+    return ZX_OK;
+  case BlockDispatcher::BIO_IOCTL_GET_ACTIVE_BOOT:
+    *op = IOCTL_VBLOCK_GET_ACTIVE_BOOT;
+    return ZX_OK;
+  default:
+    return ZX_ERR_NOT_SUPPORTED;
+  }
+}
+
+zx_status_t DoVblockIoctl(int fd, uint32_t request, void *buf, size_t size,
+                          const char *dispatcher_type) {
+  int op = 0;
+
+  zx_status_t status = BioToVblockIoctl(request, &op);
+  if (status != ZX_OK) {
+    return status;
+  }
+
+  status = fdio_ioctl(fd, op, buf, size, buf, size);
+  if (status < 0) {
+    FXL_LOG(ERROR) << "block_dispatcher ioctl " << dispatcher_type
+                   << " ioctl failed, ret:" << status
+                   << ", request:" << request;
+    return status;
+  }
+
+  return ZX_OK;
+}
 
 class FdioBlockDispatcher : public BlockDispatcher {
 public:
@@ -52,8 +97,9 @@ public:
     block_info_t info;
     zx_status_t ret = ioctl_block_get_info(fd, &info);
     if (ret != sizeof(info)) {
-      FXL_LOG(ERROR) << "block_dispatcher ioctl get info failed";
-      return ret;
+      FXL_LOG(INFO) << "block_dispatcher ioctl get info failed, using fd size";
+      *out = fbl::move(dispatcher);
+      return ZX_OK;
     }
 
     dispatcher->size_ = info.block_count * info.block_size;
@@ -113,21 +159,29 @@ protected:
 
 class DirectIOBlockDispatcher : public FdioBlockDispatcher {
 public:
-  static zx_status_t Create(int fd, size_t file_size, bool read_only,
+  static zx_status_t Create(int fd, size_t file_size, bool read_only, int vmid,
                             const PhysMem &phys_mem,
                             fbl::unique_ptr<BlockDispatcher> *out) {
     fbl::unique_fd ufd(fd);
+    int vblock_id = GuestVmidToBlockBackendVmid(vmid);
+    if (!IsBlockBackendVmid(vblock_id)) {
+      FXL_LOG(ERROR) << "invalid block backend vmid: guest_vmid=" << vmid
+                     << " backend_vmid=" << vblock_id;
+      return ZX_ERR_INVALID_ARGS;
+    }
+
     zx_handle_t guest_vmo = phys_mem.vmo().get();
-    struct mem_region phys_mem_rg_ = {
-        .start = phys_mem.phys_base(),
-        .end = phys_mem.phys_base() + phys_mem.size() - 1,
-    };
+    struct start_param start_par = {};
+    start_par.vmid = static_cast<uint16_t>(vblock_id);
+    start_par.mem.start = phys_mem.phys_base();
+    start_par.mem.end = phys_mem.phys_base() + phys_mem.size() - 1;
 
     zx_status_t ret =
-        fdio_ioctl(ufd.get(), IOCTL_VBLOCK_DIRECT_START, &phys_mem_rg_,
-                   sizeof(struct mem_region), nullptr, 0);
+        fdio_ioctl(ufd.get(), IOCTL_VBLOCK_DIRECT_START, &start_par,
+                   sizeof(start_par), nullptr, 0);
     if (ret < 0) {
       FXL_LOG(ERROR) << "block_dispatcher ioctl start failed, ret:" << ret;
+      return ret;
     } else {
       FXL_LOG(INFO) << "block_dispatcher ioctl start succeed";
     }
@@ -144,14 +198,16 @@ public:
                      sizeof(vmo), nullptr, 0);
     if (ret < 0) {
       FXL_LOG(ERROR) << "block_dispatcher, ioctl set gpa failed, ret: " << ret;
+      zx_handle_close(vmo);
       return ret;
     }
+    zx_handle_close(vmo);
 
     FXL_LOG(INFO) << "block_dispatcher ioctl set gpa succeed, ret:" << ret;
 
     fbl::AllocChecker ac;
     auto dispatcher = fbl::make_unique_checked<DirectIOBlockDispatcher>(
-        &ac, file_size, read_only, ufd.get());
+        &ac, file_size, read_only, ufd.get(), vblock_id);
     if (!ac.check())
       return ZX_ERR_NO_MEMORY;
 
@@ -177,21 +233,24 @@ public:
     return ZX_OK;
   }
 
-  DirectIOBlockDispatcher(size_t size, bool read_only, int fd)
-      : FdioBlockDispatcher(size, read_only, fd) {}
+  DirectIOBlockDispatcher(size_t size, bool read_only, int fd, int vmid)
+      : FdioBlockDispatcher(size, read_only, fd), vmid_(vmid) {}
 
   zx_status_t Read(off_t disk_offset, void *buf, size_t size) override {
     fbl::AutoLock lock(&file_mutex_);
 
-    struct direct_io_rw_param param {
-      .len = static_cast<uint32_t>(size),
-      .sector = static_cast<uint64_t>(disk_offset),
-      .addr = reinterpret_cast<uint64_t>(buf),
-    };
+    struct direct_read_param {
+      int32_t vmid;
+      struct direct_io_rw_param rw;
+    } param = {};
+    param.vmid = vmid_;
+    param.rw.len = static_cast<uint32_t>(size);
+    param.rw.offset = static_cast<uint64_t>(disk_offset);
+    param.rw.addr = reinterpret_cast<uint64_t>(buf);
 
     zx_status_t status =
         fdio_ioctl(fd_, IOCTL_VBLOCK_DIRECT_READ, &param,
-                   sizeof(struct direct_io_rw_param), nullptr, 0);
+                   sizeof(param), nullptr, 0);
     if (status < 0) {
       FXL_LOG(ERROR) << "block_dispatcher ioctl read failed, ret:" << status;
       return ZX_ERR_IO;
@@ -199,6 +258,14 @@ public:
 
     return ZX_OK;
   }
+
+  zx_status_t ioctl(uint32_t request, void *buf, size_t size) override {
+    fbl::AutoLock lock(&file_mutex_);
+    return DoVblockIoctl(fd_, request, buf, size, "direct");
+  }
+
+private:
+  const int vmid_;
 };
 
 struct PathLookupArgs {
@@ -368,9 +435,10 @@ public:
   static zx_status_t Create(int fd, int vmid, const PhysMem &phys_mem,
                             fbl::unique_ptr<BlockDispatcher> *out) {
     fbl::unique_fd ufd(fd);
-    int vblock_id = vmid + 1;
-    if (vblock_id < 0) {
-      FXL_LOG(ERROR) << "invalid vmid: " << vmid;
+    int vblock_id = GuestVmidToBlockBackendVmid(vmid);
+    if (!IsBlockBackendVmid(vblock_id)) {
+      FXL_LOG(ERROR) << "invalid block backend vmid: guest_vmid=" << vmid
+                     << " backend_vmid=" << vblock_id;
       return ZX_ERR_INVALID_ARGS;
     }
 
@@ -458,14 +526,24 @@ public:
     FXL_LOG(INFO) << "block_dispatcher ioctl get vinfo done, vblock_count: "
                   << vblock_count << ", ret " << ret;
 
-    zx_handle_t vmo = guest_vmo_;
+    zx_handle_t vmo = ZX_HANDLE_INVALID;
+    ret = zx_handle_duplicate(guest_vmo_, ZX_RIGHT_SAME_RIGHTS, &vmo);
+    if (ret != ZX_OK) {
+      FXL_LOG(ERROR) << "block_dispatcher duplicate guest vmo failed, ret: "
+                     << ret;
+      init_status_ = ret;
+      return;
+    }
+
     ret = fdio_ioctl(fd_.get(), IOCTL_VBLOCK_SET_GPA_RANGE, &vmo, sizeof(vmo),
                      nullptr, 0);
     if (ret < 0) {
       FXL_LOG(ERROR) << "block_dispatcher ioctl set gpa failed, ret: " << ret;
+      zx_handle_close(vmo);
       init_status_ = ret;
       return;
     }
+    zx_handle_close(vmo);
 
     this->size_ = info_.block_count * info_.block_size;
     this->blk_size_ = info_.block_size;
@@ -482,6 +560,9 @@ public:
     if (ret < 0 || fifos[0] == ZX_HANDLE_INVALID) {
       FXL_LOG(ERROR) << "block_dispatcher ioctl get handle failed, ret: "
                      << ret;
+      if (fifos[0] != ZX_HANDLE_INVALID) {
+        zx_handle_close(fifos[0]);
+      }
       init_status_ = ret < 0 ? static_cast<zx_status_t>(ret) : ZX_ERR_IO;
       return;
     }
@@ -492,6 +573,12 @@ public:
     if (ret < 0 || fifos[1] == ZX_HANDLE_INVALID) {
       FXL_LOG(ERROR) << "block_dispatcher ioctl get handle failed, ret: "
                      << ret;
+      if (fifos[0] != ZX_HANDLE_INVALID) {
+        zx_handle_close(fifos[0]);
+      }
+      if (fifos[1] != ZX_HANDLE_INVALID) {
+        zx_handle_close(fifos[1]);
+      }
       init_status_ = ret < 0 ? static_cast<zx_status_t>(ret) : ZX_ERR_IO;
       return;
     }
@@ -515,6 +602,10 @@ public:
   }
   zx_status_t Flush() override { return ZX_ERR_NOT_SUPPORTED; }
   zx_status_t Submit() override { return ZX_ERR_NOT_SUPPORTED; }
+
+  zx_status_t ioctl(uint32_t request, void *buf, size_t size) override {
+    return DoVblockIoctl(fd_.get(), request, buf, size, "fifo");
+  }
 
   void Shutdown() override {
     if (fd_) {
@@ -597,12 +688,27 @@ public:
         return ret;
       }
 
+      for (uint32_t i = 0; i < actual; ++i) {
+        if (items[i].head >= pending_cookies_.size()) {
+          FXL_LOG(ERROR) << "block_dispatcher@" << vmid_
+                         << ", completion head out of range: "
+                         << items[i].head;
+          return ZX_ERR_OUT_OF_RANGE;
+        }
+      }
+
       *count = actual;
       return ZX_OK;
     }
   }
 
   uint64_t GetCompletionCookie(uint32_t head) const override {
+    if (head >= pending_cookies_.size()) {
+      FXL_LOG(ERROR) << "block_dispatcher@" << vmid_
+                     << ", completion head out of range: " << head;
+      return 0;
+    }
+
     return pending_cookies_[head];
   }
 
@@ -644,6 +750,12 @@ public:
         return ret;
       }
 
+      if (itm.head >= pending_cookies_.size()) {
+        FXL_LOG(ERROR) << "block_dispatcher@" << vmid_
+                       << ", completion head out of range: " << itm.head;
+        return ZX_ERR_OUT_OF_RANGE;
+      }
+
       *head = itm.head;
       *cookie = pending_cookies_[itm.head];
       return ZX_OK;
@@ -672,6 +784,7 @@ public:
     config.secure_erase_sector_alignment =
         info_.secure_erase_granularity / kSectorSize;
     config.wce = info_.wce;
+    config.ufs_lun = info_.block_id;
 
     if (info_.inline_crypto_supported) {
       config.crypto_cap = info_.crypto_cap;
@@ -716,8 +829,12 @@ BlockDispatcher::CreateFromFd(int fd, const DispatcherOptions &options,
     return FdioBlockDispatcher::Create(ufd.release(), file_size, read_only,
                                        phys_mem, dispatcher);
   case DataPlane::DIRECTIO:
+    if (options.vmid == INT32_MAX) {
+      FXL_LOG(ERROR) << "DIRECTIO data plane requires a valid vmid";
+      return ZX_ERR_INVALID_ARGS;
+    }
     return DirectIOBlockDispatcher::Create(ufd.release(), file_size, read_only,
-                                           phys_mem, dispatcher);
+                                           options.vmid, phys_mem, dispatcher);
   case DataPlane::FIFO:
     if (options.vmid == INT32_MAX) {
       FXL_LOG(ERROR) << "FIFO data plane requires a valid vmid";
@@ -745,6 +862,12 @@ zx_status_t SubmissionQueue::QueueBatch(const fifo_in_item* items, size_t count,
   }
 
   for (size_t i = 0; i < count; ++i) {
+    if (req_ids[i] >= disp_->pending_cookies_.size()) {
+      FXL_LOG(ERROR) << "block_dispatcher@" << disp_->vmid_
+                     << ", request id out of range: " << req_ids[i];
+      return ZX_ERR_OUT_OF_RANGE;
+    }
+
     disp_->pending_cookies_[req_ids[i]] = cookies[i];
   }
 
@@ -784,6 +907,12 @@ zx_status_t SubmissionQueue::QueueBatch(const fifo_in_item* items, size_t count,
 
 zx_status_t SubmissionQueue::Queue(const void *addr, size_t size,
                                    uint32_t req_id, uint64_t cookie) {
+  if (req_id >= disp_->pending_cookies_.size()) {
+    FXL_LOG(ERROR) << "block_dispatcher@" << disp_->vmid_
+                   << ", request id out of range: " << req_id;
+    return ZX_ERR_OUT_OF_RANGE;
+  }
+
   disp_->pending_cookies_[req_id] = cookie;
 
   while (true) {

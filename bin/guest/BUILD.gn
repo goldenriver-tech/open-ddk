@@ -14,6 +14,8 @@ source_set("lib") {
     "guest_config.h",
     "linux.cc",
     "linux.h",
+    "watchdog_bootstrap.cc",
+    "watchdog_bootstrap.h",
     "zircon.cc",
     "zircon.h",
   ]
@@ -36,6 +38,15 @@ source_set("lib") {
   configs -= [ "//build/config:no_exceptions" ]
 
   defines = [ "_ALL_SOURCE=1" ]
+}
+
+source_set("vmm_controller_teardown") {
+  visibility = [ ":*" ]
+
+  sources = [
+    "vmm_controller_teardown.cc",
+    "vmm_controller_teardown.h",
+  ]
 }
 
 executable("bin") {
@@ -87,8 +98,10 @@ executable("bin_sos") {
 
   deps = [
     ":lib",
+    ":vmm_controller_teardown",
     "//third_party/ree-trusty/libnebula-cpp:nebula-base",
     "//zircon/public/lib/block-client",
+    "//zircon/public/lib/fdio",
     "//zircon/system/ulib/task-utils:compiler",
     "//garnet/public/lib/virtualization/fidl",
     "//garnet/lib/vmlog_store",
@@ -110,10 +123,13 @@ executable("guest_unittests") {
   sources = [
     "guest_config-unittest.cc",
     "run_all_unittests.cc",
+    "vmm_controller_teardown_unittest.cc",
   ]
 
   deps = [
     ":lib",
+    ":vmm_controller_teardown",
+    "//third_party/fdt",
     "//third_party/googletest:gtest",
     "//zircon/public/lib/fbl",
   ]

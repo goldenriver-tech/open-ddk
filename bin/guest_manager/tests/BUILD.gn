@@ -4,6 +4,9 @@ executable("guest_manager_tests") {
   testonly = true
 
   sources = [
+    "../guest_manager.cc",
+    "../guest_manager_reporter.cc",
+    "guest_manager_state_unittest.cc",
     "guest_manager_test.cc",
   ]
 

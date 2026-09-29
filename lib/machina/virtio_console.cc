@@ -11,15 +11,10 @@
 
 #include <fcntl.h>
 #include <string.h>
-#include <fbl/atomic.h>
 
 #include "lib/fxl/logging.h"
 
 namespace machina {
-
-namespace {
-fbl::atomic<bool> Stream_is_destory(false);
-}  // namespace
 
 VirtioConsole::Stream::Stream(async_t* async,
                               VirtioQueue* queue,
@@ -30,32 +25,56 @@ VirtioConsole::Stream::Stream(async_t* async,
       queue_wait_(async,
                   queue,
                   fbl::BindMember(this, &VirtioConsole::Stream::OnQueueReady)) {
+  socket_wait_.set_flags(ASYNC_FLAG_HANDLE_SHUTDOWN);
   socket_wait_.set_handler(
       fbl::BindMember(this, &VirtioConsole::Stream::OnSocketReady));
 }
 
 VirtioConsole::Stream::~Stream() {
   FXL_LOG(INFO) << "VirtioConsole::Stream::~Stream";
-  Stream_is_destory.store(true);
+  Stop();
 }
 
 zx_status_t VirtioConsole::Stream::Start() {
+  {
+    fbl::AutoLock lock(&mutex_);
+    shutting_down_ = false;
+    wait_cancelled_ = false;
+  }
   return WaitOnQueue();
 }
 
 void VirtioConsole::Stream::Stop() {
   FXL_LOG(INFO) << "VirtioConsole::Stream::Stop";
-  if (socket_wait_.is_pending()) {
-    socket_wait_.Cancel(async_);
+  {
+    fbl::AutoLock lock(&mutex_);
+    if (wait_cancelled_) {
+      return;
+    }
+    shutting_down_ = true;
+    wait_cancelled_ = true;
   }
+  socket_wait_.Cancel(async_);
   queue_wait_.Cancel();
 }
 
 zx_status_t VirtioConsole::Stream::WaitOnQueue() {
+  {
+    fbl::AutoLock lock(&mutex_);
+    if (shutting_down_) {
+      return ZX_ERR_CANCELED;
+    }
+  }
   return queue_wait_.Begin();
 }
 
 void VirtioConsole::Stream::OnQueueReady(zx_status_t status, uint16_t index) {
+  {
+    fbl::AutoLock lock(&mutex_);
+    if (shutting_down_) {
+      return;
+    }
+  }
   if (status == ZX_OK) {
     head_ = index;
     status = queue_->ReadDesc(head_, &desc_);
@@ -71,6 +90,12 @@ void VirtioConsole::Stream::OnQueueReady(zx_status_t status, uint16_t index) {
 }
 
 zx_status_t VirtioConsole::Stream::WaitOnSocket() {
+  {
+    fbl::AutoLock lock(&mutex_);
+    if (shutting_down_) {
+      return ZX_ERR_CANCELED;
+    }
+  }
   zx_signals_t signals = ZX_SOCKET_PEER_CLOSED;
   signals |= desc_.writable ? ZX_SOCKET_READABLE : ZX_SOCKET_WRITABLE;
   socket_wait_.set_object(socket_);
@@ -82,6 +107,12 @@ async_wait_result_t VirtioConsole::Stream::OnSocketReady(
     async_t* async,
     zx_status_t status,
     const zx_packet_signal_t* signal) {
+  {
+    fbl::AutoLock lock(&mutex_);
+    if (shutting_down_) {
+      return ASYNC_WAIT_FINISHED;
+    }
+  }
   if (status != ZX_OK) {
     OnStreamClosed(status, "async wait on socket");
     return ASYNC_WAIT_FINISHED;
@@ -133,9 +164,9 @@ async_wait_result_t VirtioConsole::Stream::OnSocketReady(
 void VirtioConsole::Stream::OnStreamClosed(zx_status_t status,
                                            const char* action) {
   FXL_LOG(INFO) << "VirtioConsole::Stream::OnStreamClosed";
-  FXL_LOG(INFO) << "Stream_is_destory= "<< Stream_is_destory.load();
-  if (Stream_is_destory.load() == false) {
-    Stop();
+  {
+    fbl::AutoLock lock(&mutex_);
+    shutting_down_ = true;
   }
   FXL_LOG(ERROR) << "Stream closed during step '" << action << "' (" << status
                  << ")";

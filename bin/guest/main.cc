@@ -210,7 +210,7 @@ int main(int argc, char** argv) {
   }
 
   machina::Guest guest;
-  guest.SetVmid((uint32_t)SOS_VMID);
+  guest.SetVmid(machina::kSosVmid);
   status = guest.Init(cfg.memory());
   if (status != ZX_OK) {
     return status;

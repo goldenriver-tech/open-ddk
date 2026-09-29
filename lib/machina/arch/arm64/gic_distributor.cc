@@ -399,6 +399,25 @@ zx_status_t GicDistributor::PassThroughInterrupts(
   return ZX_OK;
 }
 
+void GicDistributor::Shutdown() {
+  std::map<uint32_t, zx::interrupt> interrupts;
+
+  {
+    std::lock_guard<std::mutex> lock(mutex_);
+    memset(enabled_, 0, sizeof(enabled_));
+    memset(enabled_espi_, 0, sizeof(enabled_espi_));
+    interrupts.swap(interrupts_);
+  }
+
+  for (auto& it : interrupts) {
+    zx_status_t status = it.second.mask_interrupt(it.first);
+    if (status != ZX_OK) {
+      FXL_LOG(WARNING) << "Failed to mask passthrough interrupt " << it.first
+                       << " during GIC shutdown: " << status;
+    }
+  }
+}
+
 zx_status_t GicDistributor::Init(uint8_t num_cpus,
                                  Gic gic_version,
                                  const std::vector<uint16_t>& interrupts,

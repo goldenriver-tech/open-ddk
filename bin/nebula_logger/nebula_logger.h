@@ -36,9 +36,11 @@ public:
 private:
     int detect_fs_is_mounted(void);
     bool is_file(const char* path);
+    int64_t get_file_size(const char* path);
     void log_file_rotate(const char* base_filename);
-    void write_to_file(FILE* fp, zx_log_record_t* rec, bool plain);
+    size_t write_to_file(FILE* fp, zx_log_record_t* rec, bool plain);
     zx_status_t writer_thread(void);
+    void file_sync_thread(void);
     void check_size_and_rotate(void);
     void sync_file(FILE* fp);
     void close_file_safely(FILE* fp);
@@ -64,16 +66,20 @@ private:
     };
 
 private:
-    std::atomic<FILE*> log_fp_{ nullptr };
-    std::atomic<uint64_t> log_size_counter_{0};
+    FILE* log_fp_ = nullptr;
+    std::atomic<uint64_t> dirty_bytes_counter_{0};
+    std::mutex file_lock_;
     bool plain_;
 
     std::queue<QueuedLog> queue_;
     std::mutex mu_;
     std::condition_variable cv_;
+    std::mutex sync_mu_;
+    std::condition_variable sync_cv_;
 
     std::atomic<bool> exiting_{false};
     std::thread worker_;
+    std::thread sync_worker_;
 
     enum FileSystemStatus {
         FS_DETECT_FAILED        = -1,

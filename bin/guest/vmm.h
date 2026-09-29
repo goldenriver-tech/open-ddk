@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include <vector>
+
 #include "garnet/bin/guest/bootloader/bootloader.h"
 #include "garnet/bin/guest/guest_config.h"
 #include "garnet/bin/guest/tee-smc.h"
@@ -13,6 +15,7 @@
 #include "garnet/lib/machina/monitor_virtio.h"
 #include "garnet/lib/machina/pci.h"
 #include "garnet/lib/machina/mmio_bus.h"
+#include "garnet/lib/machina/pv_block.h"
 #include "garnet/lib/machina/remoteproc.h"
 #include "garnet/lib/machina/uart.h"
 #include "garnet/lib/machina/utrace.h"
@@ -22,6 +25,7 @@
 #include "garnet/lib/machina/virtio_rpmb.h"
 #include "garnet/lib/machina/block_dispatcher.h"
 #include "garnet/lib/machina/virtio_vsock.h"
+#include "garnet/lib/machina/cross_vm_lock.h"
 #include "garnet/public/lib/guest_allocator/cpp/guest_allocator.h"
 
 #include <zircon/device/grt-wdt.h>
@@ -41,6 +45,7 @@
 #include "tipc_vqueue_notifier.h"
 #include "vmlog_srv.h"
 #include "gzfs_vsock_srv.h"
+#include <fbl/function.h>
 
 using virtualization::GuestController;
 using virtualization::HostVsockEndpoint;
@@ -50,11 +55,13 @@ class Vmm : public GuestController {
   Vmm(component::ApplicationContext* app_context);
   ~Vmm();
 
-  zx_status_t InitializeVirtioBlock();
+  zx_status_t InitializeBlockDevices();
+  zx_status_t InitializePvBlock(const char* block_path, uint32_t index);
   zx_status_t InitializeVirtioRpmb();
   zx_status_t Initialize(virtualization::Config vmm_cfg);
   zx_status_t StartPrimaryVcpu(std::function<void(zx_status_t)> stop_callback);
   void CreateNestedEnvironment();
+  void Shutdown(fbl::Closure callback);
   void AddBinding(fidl::InterfaceRequest<GuestController> request) {
     guest_bindings_.AddBinding(this, std::move(request));
   }
@@ -83,10 +90,13 @@ class Vmm : public GuestController {
   std::unique_ptr<machina::IpcServiceImpl> ipc_mbox_svc_;
   std::unique_ptr<machina::IpcMessage> ipc_msg_;
   std::unique_ptr<RprocClient> rproc_client_;
+  std::unique_ptr<machina::CrossVMLockGMClient> cvm_lock_gm_client_;
+  std::unique_ptr<machina::CrossVMLockSOSServiceImpl> cvm_lock_sos_svc_;
   std::unique_ptr<TipcVqueueNotifier> vqueue_notifier_;
   std::unique_ptr<Bootloader> bootloader_;
-  fbl::unique_ptr<machina::VirtioBlock> block_;
-  std::unique_ptr<machina::VirtioBlock> fdio_block_;
+  std::vector<fbl::unique_ptr<machina::VirtioBlock>> pci_blocks_;
+  std::vector<fbl::unique_ptr<machina::VirtioBlock>> mmio_blocks_;
+  std::vector<fbl::unique_ptr<machina::PvBlockDevice>> pv_blocks_;
   std::unique_ptr<machina::VirtioRpmb> rpmb_;
 
   machina::InterruptController interrupt_controller_;
@@ -103,12 +113,12 @@ class Vmm : public GuestController {
   std::unique_ptr<VmlogStore> log_store_;
   std::unique_ptr<GzFsVsockService> gzfs_vsock_srv_;
 
-  SpiTransportClient spi_client_;
-  machina::VirtioCluster cluster_;
-  machina::VirtioSPI spi_;
-  machina::VirtioI2C i2c_;
-  machina::VirtioEINT eint_;
-  machina::VirtioRTC rtc_;
+  std::unique_ptr<SpiTransportClient> spi_client_;
+  std::unique_ptr<machina::VirtioCluster> cluster_;
+  std::unique_ptr<machina::VirtioSPI> spi_;
+  std::unique_ptr<machina::VirtioI2C> i2c_;
+  std::unique_ptr<machina::VirtioEINT> eint_;
+  std::unique_ptr<machina::VirtioRTC> rtc_;
 
   uintptr_t guest_ip_;
   std::vector<uint64_t> extra_params_;
@@ -116,4 +126,6 @@ class Vmm : public GuestController {
 
   fidl::BindingSet<GuestController> guest_bindings_;
   machina::Watchdog wdt_;
+  bool nested_environment_created_ = false;
+  bool shutdown_started_ = false;
 };

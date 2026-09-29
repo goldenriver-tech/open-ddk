@@ -53,7 +53,13 @@ VirtioEINT::VirtioEINT(const PhysMem &phys_mem)
   irq_counts_.assign(max_eint_pins_, 0);
   eint_enabled_.assign(max_eint_pins_, 0);
 
-  eint_loop_.StartThread("virtio-eint");
+  zx_status_t loop_status = eint_loop_.StartThread("virtio-eint");
+  if (loop_status != ZX_OK) {
+    FXL_LOG(ERROR) << "VirtioEINT: Failed to start async loop: "
+                   << loop_status;
+    return;
+  }
+  loop_started_ = true;
   async_ = eint_loop_.async();
 
   // Start polling the control queue (queue 0)
@@ -69,6 +75,13 @@ VirtioEINT::VirtioEINT(const PhysMem &phys_mem)
 }
 
 VirtioEINT::~VirtioEINT() {
+  if (loop_started_) {
+    control_queue_wait_.Cancel(async_);
+    eint_loop_.Quit();
+    eint_loop_.JoinThreads();
+    loop_started_ = false;
+  }
+
   if (eint_fd_ < 0) {
     return;
   }

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "garnet/bin/guest/vmm.h"
+#include "garnet/bin/guest/vmm_controller_teardown.h"
 
 #include <fuchsia/cpp/machina.h>
 #include <fuchsia/cpp/virtualization.h>
@@ -36,8 +37,11 @@ class VmmController : public GuestLifecycle {
 
   void ScheduleVmmTeardown(GuestError status);
   void DestroyAndRespond(GuestError status);
+  void FinishVmmTeardown(GuestError status);
 
  private:
+  void MaybeStopComponent();
+
   component::ApplicationContext* application_context_;
   async_t* async_;
 
@@ -47,4 +51,5 @@ class VmmController : public GuestLifecycle {
 
   RunCallback run_callback_;
   std::function<void()> stop_component_callback_;
+  VmmTeardownLifecycle teardown_;
 };

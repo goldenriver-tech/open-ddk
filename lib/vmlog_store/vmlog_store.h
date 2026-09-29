@@ -17,6 +17,7 @@
 #include <thread>
 #include <mutex>
 #include <cstdio>
+#include <atomic>
 
 #define VMLOG_STORE_LINE_BUFFER_SIZE 200
 #define VMLOG_STORE_MAX_FILE_BACKUPS 5
@@ -45,8 +46,17 @@ class VmlogStore {
       FXL_EXCLUSIVE_LOCKS_REQUIRED(store_lock_);
   void WriteFileLocked(const char* log, int len)
       FXL_EXCLUSIVE_LOCKS_REQUIRED(store_lock_);
+  void CheckSizeAndRotateLocked()
+      FXL_EXCLUSIVE_LOCKS_REQUIRED(store_lock_);
   zx_status_t LogFileRotate(std::string base_filename);
   void LogFileSyncLoop(void);
+  bool is_file(const char* path);
+  int64_t get_file_size(const char* path);
+  void sync_file(FILE* fp);
+  void close_file_safely(FILE* fp);
+  FILE* open_log_file(const char* path);
+  void rename_file_safe(const char* old_path, const char* new_path);
+  void remove_file_safe(const char* path);
 
   std::mutex store_lock_;
   char log_with_prefix_[VMLOG_STORE_LINE_BUFFER_SIZE + 22];
@@ -57,7 +67,6 @@ class VmlogStore {
   FILE *log_fp_;
   std::string log_file_;
   uint32_t flags_;
-  bool shutdown_;
-  fbl::atomic<uint32_t> log_size_counter_{0};
+  std::atomic<bool> shutdown_;
+  fbl::atomic<uint64_t> dirty_bytes_counter_{0};
 };
-

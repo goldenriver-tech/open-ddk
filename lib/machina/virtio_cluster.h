@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <memory>
+
 #include <fbl/intrusive_hash_table.h>
 #include <fbl/unique_ptr.h>
 #include <lib/async/cpp/wait.h>
@@ -42,9 +44,11 @@ class VirtioCluster : public VirtioDeviceBase<VIRTIO_ID_CLUSTER, VIRTIO_CLUSTER_
     virtio_cluster_config_t> {
  public:
    VirtioCluster(const PhysMem& phys_mem);
-  ~VirtioCluster();
+  ~VirtioCluster() override;
   zx_status_t Init(async_t* async, SpiTransportClient* spi_client);
  private:
+  struct CallbackState;
+
   zx_status_t cluster_write(struct virtio_cluster_tx *tx,
     struct virtio_cluster_rsp *rsp, uint32_t *used);
   static zx_status_t CommandQueueHandler(VirtioQueue* queue,
@@ -53,9 +57,14 @@ class VirtioCluster : public VirtioDeviceBase<VIRTIO_ID_CLUSTER, VIRTIO_CLUSTER_
                                          void* ctx);
 
   zx_status_t HandleCommand(VirtioQueue* queue, uint16_t head, uint32_t* used);
-  void NotifyGuestCluster(const char *buf, uint32_t len);
+  zx_status_t NotifyGuestCluster(
+      const char *buf,
+      uint32_t len,
+      const std::shared_ptr<CallbackState>& callback_state);
   SpiTransportClient* spi_client_ = nullptr;
   async::Wait command_queue_wait_;
+  async_t* async_ = nullptr;
+  std::shared_ptr<CallbackState> callback_state_;
 };
 
 }  // namespace machina

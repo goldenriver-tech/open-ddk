@@ -711,6 +711,7 @@ GuestConfigParser::OptionMap GuestConfigParser::GetRootOptionHandlers() {
                    parse_number(&cfg_->balloon_pages_threshold_));
   handlers.emplace("display", parse_display(&cfg_->display_));
   handlers.emplace("block-wait", set_flag(&cfg_->block_wait_, true));
+  handlers.emplace("pvblk-enabled", set_flag(&cfg_->pvblk_enabled_, true));
   handlers.emplace("gic", parse_gic(&cfg_->gic_version_));
   handlers.emplace("vmem", parse_vmem(&cfg_->vmem_spec_));
   handlers.emplace("device-tree", parse_device_tree(&cfg_->dtb_spec_));
@@ -725,6 +726,8 @@ GuestConfigParser::OptionMap GuestConfigParser::GetRootOptionHandlers() {
   handlers.emplace("budgets", parse_array_u64(&cfg_->budgets_));
   handlers.emplace("sched-priority", parse_array_u64(&cfg_->sched_priority_));
   handlers.emplace("sched-timeslice", parse_array_u64(&cfg_->sched_timeslice_));
+  handlers.emplace("vcpu-priority", parse_array_u64(&cfg_->vcpus_priority_));
+  handlers.emplace("sched-policy", parse_array_u64(&cfg_->sched_policy_));
   handlers.emplace("shared-irqs",
                    append_option<machina::SharedIrqSpec>(
                        &cfg_->vgic_spec_.shared_irqs, parse_shared_irq_spec));
@@ -738,6 +741,7 @@ GuestConfigParser::OptionMap GuestConfigParser::GetRootOptionHandlers() {
   handlers.emplace("dump-irq", parse_number(&cfg_->dump_irq_));
   handlers.emplace("monitor-irq", parse_number(&cfg_->monitor_irq_));
   handlers.emplace("smc-irq", parse_number(&cfg_->smc_irq_));
+  handlers.emplace("cvm-lock-irq", parse_number(&cfg_->cvm_lock_irq_));
   handlers.emplace("cpufreq", parse_cpufreq(&cfg_->cpufreq_));
   handlers.emplace("gpu-irq", parse_irq(&cfg_->gpu_irq_));
   handlers.emplace("vsock-irqs", parse_vgic_irq(&cfg_->vsock_irqs_));
@@ -1130,6 +1134,8 @@ zx_status_t GuestConfigParser::ParseConfigFromLua(const std::string& cfg_path, G
     .addFunction("setBudgets", &GuestConfig::setBudgets)
     .addFunction("setSchedPriority", &GuestConfig::setSchedPriority)
     .addFunction("setSchedTimeslice", &GuestConfig::setSchedTimeslice)
+    .addFunction("setVcpuPriority", &GuestConfig::setVcpuPriority)
+    .addFunction("setSchedPolicy", &GuestConfig::setSchedPolicy)
     .addFunction("setVgicPaddr", &GuestConfig::setVgicPaddr)
     .addFunction("setVgicIrq", &GuestConfig::setVgicIrqs)
     .addFunction("setVgicPercpuIrq", &GuestConfig::setVgicPercpuIrqs)
@@ -1138,6 +1144,7 @@ zx_status_t GuestConfigParser::ParseConfigFromLua(const std::string& cfg_path, G
     .addFunction("setSchedId", &GuestConfig::setSchedId)
     .addFunction("setDumpIrq", &GuestConfig::setDumpIrq)
     .addFunction("setSmcIrq", &GuestConfig::setSmcIrq)
+    .addFunction("setCvmLockIrq", &GuestConfig::setCvmLockIrq)
     .addFunction("setGpuIrq", &GuestConfig::setGpuIrq)
     .addFunction("setWakeupIrq", &GuestConfig::setWakeupIrq)
     .addFunction("setVteeNotifierIrq", &GuestConfig::setVteeNotifierIrq)
@@ -1146,6 +1153,7 @@ zx_status_t GuestConfigParser::ParseConfigFromLua(const std::string& cfg_path, G
     .addFunction("setTipcVqNotifierIrq", &GuestConfig::setTipcVqNotifierIrq)
     .addFunction("setVhmIrq", &GuestConfig::setVhmIrq)
     .addFunction("setGuestReservedMemory", &GuestConfig::setGuestReservedMemory)
+    .addFunction("setPvblkEnabled", &GuestConfig::setPvblkEnabled)
     .addFunction("setCpufreq", &GuestConfig::setCpufreq)
     .addFunction("setVsmmu", &GuestConfig::setVsmmu)
     .addFunction("setCmdqIrqs", &GuestConfig::setCmdqIrqs)

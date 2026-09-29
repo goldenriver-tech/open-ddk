@@ -2,13 +2,16 @@
 
 #include "gtest/gtest.h"
 
+#include "garnet/bin/guest_manager/guest_manager.h"
 #include "lib/app/cpp/application_context.h"
 #include "lib/app/cpp/environment_services.h"
 #include "lib/async-loop/cpp/loop.h"
+#include "lib/fidl/cpp/binding.h"
 #include "lib/fxl/log_settings.h"
 #include "lib/fxl/logging.h"
 
 #include "garnet/bin/guest_manager/tests/lib/guest_console.h"
+#include "garnet/lib/machina/vm_id.h"
 
 #include <fuchsia/cpp/machina.h>
 #include <fuchsia/cpp/virtualization.h>
@@ -21,9 +24,84 @@
 #define ENABLE_GZFS_DEBUG 0  // for QEMU platform only
 #define VERBOSE_LOGGING 0
 
-constexpr int kSosVmid = -1;
-constexpr int kTboxVmid = 1;
+constexpr int kSosVmid = machina::kSosVmid;
+constexpr int kTboxVmid = machina::kTboxVmid;
+constexpr int8_t kTestVmid = 1;
+constexpr int8_t kMissingVmid = 42;
 constexpr zx::duration kDefaultTimeout = zx::sec(5);
+
+class GuestManagerTestPeer {
+ public:
+  static std::unique_ptr<GuestManagerImpl> Build(
+      component::ApplicationContext* app_context,
+      async_t* async,
+      guest_manager::ManagerConfig cfg) {
+    return GuestManagerImpl::Build(app_context, async, std::move(cfg));
+  }
+
+  static Guest* GetGuest(GuestManagerImpl* manager, int8_t vmid) {
+    auto it = manager->guests_.find(vmid);
+    return it == manager->guests_.end() ? nullptr : it->second.get();
+  }
+};
+
+namespace {
+
+guest_manager::ManagerConfig MakeManagerConfig() {
+  guest_manager::ManagerConfig manager_cfg;
+  auto* guest_cfg = manager_cfg.add_guest_configs();
+  guest_cfg->set_vmid(kTestVmid);
+  guest_cfg->set_name("test");
+  guest_cfg->set_auto_start(false);
+  return manager_cfg;
+}
+
+class TestGuestLifecycle : public virtualization::GuestLifecycle {
+ public:
+  explicit TestGuestLifecycle(async_t* async) : async_(async), binding_(this) {}
+
+  zx_status_t Bind(zx::channel channel) {
+    return binding_.Bind(
+        fidl::InterfaceRequest<virtualization::GuestLifecycle>(
+            std::move(channel)),
+        async_);
+  }
+
+  void Create(virtualization::Config, CreateCallback callback) override {
+    callback(virtualization::GuestError::OK);
+  }
+
+  void Bind(fidl::InterfaceRequest<virtualization::GuestController>,
+            BindCallback callback) override {
+    callback(virtualization::GuestError::OK);
+  }
+
+  void Run(RunCallback) override {}
+
+  void Stop(StopCallback callback) override {
+    (void)callback;
+    ++stop_count_;
+  }
+
+  size_t stop_count() const { return stop_count_; }
+
+ private:
+  async_t* const async_;
+  fidl::Binding<virtualization::GuestLifecycle> binding_;
+  size_t stop_count_ = 0;
+};
+
+void BindLifecycle(Guest* guest,
+                   TestGuestLifecycle* lifecycle,
+                   async_t* async) {
+  zx::channel client;
+  zx::channel server;
+  ASSERT_EQ(ZX_OK, zx::channel::create(0, &client, &server));
+  ASSERT_EQ(ZX_OK, guest->lifecycle_.Bind(std::move(client), async));
+  ASSERT_EQ(ZX_OK, lifecycle->Bind(std::move(server)));
+}
+
+}  // namespace
 
 class GuestManagerTest : public ::testing::Test,
                          public ::testing::WithParamInterface<size_t> {
@@ -49,6 +127,59 @@ class GuestManagerTest : public ::testing::Test,
   async::Loop loop_;
   std::unique_ptr<GuestConsole> serial_;
 };
+
+TEST(GuestManagerForceShutdownTest,
+     PublicCallbackWaitsForGuestLifecycleClose) {
+  async::Loop loop(&kAsyncLoopConfigMakeDefault);
+  component::ApplicationContext app_context{zx::channel(), zx::channel()};
+  auto manager = GuestManagerTestPeer::Build(&app_context, loop.async(),
+                                             MakeManagerConfig());
+  Guest* guest = GuestManagerTestPeer::GetGuest(manager.get(), kTestVmid);
+  ASSERT_NE(nullptr, guest);
+
+  TestGuestLifecycle lifecycle(loop.async());
+  ASSERT_NO_FATAL_FAILURE(BindLifecycle(guest, &lifecycle, loop.async()));
+  guest->state_ = virtualization::GuestStatus::RUNNING;
+
+  fidl::Binding<virtualization::GuestManager> binding(manager.get());
+  virtualization::GuestManagerPtr guest_manager;
+  ASSERT_EQ(ZX_OK,
+            binding.Bind(guest_manager.NewRequest(loop.async()), loop.async()));
+
+  bool callback_called = false;
+  guest_manager->ForceShutdown(
+      kTestVmid, [&callback_called] { callback_called = true; });
+  ASSERT_EQ(ZX_OK, loop.RunUntilIdle());
+
+  EXPECT_EQ(virtualization::GuestStatus::STOPPING, guest->state());
+  EXPECT_EQ(1u, lifecycle.stop_count());
+  EXPECT_FALSE(callback_called);
+
+  guest->HandleLifecycleClosed();
+  ASSERT_EQ(ZX_OK, loop.RunUntilIdle());
+
+  EXPECT_EQ(virtualization::GuestStatus::STOPPED, guest->state());
+  EXPECT_TRUE(callback_called);
+}
+
+TEST(GuestManagerForceShutdownTest, MissingVmidRepliesImmediately) {
+  async::Loop loop(&kAsyncLoopConfigMakeDefault);
+  component::ApplicationContext app_context{zx::channel(), zx::channel()};
+  auto manager = GuestManagerTestPeer::Build(&app_context, loop.async(),
+                                             MakeManagerConfig());
+
+  fidl::Binding<virtualization::GuestManager> binding(manager.get());
+  virtualization::GuestManagerPtr guest_manager;
+  ASSERT_EQ(ZX_OK,
+            binding.Bind(guest_manager.NewRequest(loop.async()), loop.async()));
+
+  bool callback_called = false;
+  guest_manager->ForceShutdown(
+      kMissingVmid, [&callback_called] { callback_called = true; });
+  ASSERT_EQ(ZX_OK, loop.RunUntilIdle());
+
+  EXPECT_TRUE(callback_called);
+}
 
 void GuestManagerTest::GzfsVsockTest(size_t test_size,
                                      std::string console_prompt) {

@@ -29,6 +29,16 @@ void ServiceProviderBridge::AddBinding(
   bindings_.AddBinding(this, std::move(request));
 }
 
+void ServiceProviderBridge::Shutdown(fbl::Closure callback) {
+  weak_factory_.InvalidateWeakPtrs();
+  bindings_.CloseAll();
+  backend_.Unbind();
+  backing_dir_.reset();
+  if (callback) {
+    callback();
+  }
+}
+
 void ServiceProviderBridge::AddServiceForName(ServiceConnector connector,
                                               const std::string& service_name) {
   name_to_service_connector_[service_name] = std::move(connector);

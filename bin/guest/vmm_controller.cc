@@ -4,6 +4,50 @@
 
 #include <zircon/processargs.h>
 
+#include <memory>
+#include <utility>
+
+namespace {
+
+const char* VcpuExitToString(zx_status_t status) {
+  switch (status) {
+    case ZX_ERR_CANCELED:
+      return "reboot_required";
+    case ZX_ERR_UNAVAILABLE:
+      return "shutdown";
+    default:
+      return "internal_error";
+  }
+}
+
+const char* GuestErrorToString(GuestError status) {
+  switch (status) {
+    case GuestError::OK:
+      return "ok";
+    case GuestError::NOT_FOUND:
+      return "not_found";
+    case GuestError::ALREADY_RUNNING:
+      return "already_running";
+    case GuestError::REBOOT_REQUIRED:
+      return "reboot_required";
+    case GuestError::INITIALIZATION_FAILED:
+      return "initialization_failed";
+    case GuestError::START_VCPU_FAILED:
+      return "start_vcpu_failed";
+    case GuestError::OUT_OF_MEMORY:
+      return "out_of_memory";
+    case GuestError::FORCE_STOPPED:
+      return "force_stopped";
+    case GuestError::SHUTDOWN:
+      return "shutdown";
+    case GuestError::INTERNAL_ERROR:
+      return "internal_error";
+  }
+  return "unknown";
+}
+
+}  // namespace
+
 VmmController::VmmController(component::ApplicationContext* app_context,
                              async_t* async,
                              std::function<void()> stop_callback)
@@ -20,13 +64,13 @@ VmmController::VmmController(component::ApplicationContext* app_context,
 
 void VmmController::Create(virtualization::Config config,
                            CreateCallback callback) {
-  if (run_callback_) {
+  FXL_LOG(INFO) << "event=vmm_create_request vmid=" << config.vmid
+                << " has_vmm=" << static_cast<bool>(vmm_)
+                << " has_run_callback=" << static_cast<bool>(run_callback_);
+  if (vmm_ || run_callback_ || teardown_.create_blocked()) {
     callback(GuestError::ALREADY_RUNNING);
     return;
   }
-
-  if (vmm_)
-    vmm_.reset();
 
   auto vmm = std::make_unique<Vmm>(application_context_);
   if (!vmm) {
@@ -36,15 +80,21 @@ void VmmController::Create(virtualization::Config config,
 
   auto status = vmm->Initialize(std::move(config));
   if (status != ZX_OK) {
-    callback(GuestError::INITIALIZATION_FAILED);
+    FXL_LOG(ERROR) << "event=vmm_initialize_failed zx_status=" << status;
+    vmm->Shutdown([callback = std::move(callback)]() mutable {
+      callback(GuestError::INITIALIZATION_FAILED);
+    });
     return;
   }
 
+  FXL_LOG(INFO) << "event=vmm_create_succeeded";
   vmm_ = std::move(vmm);
   callback(GuestError::OK);
 }
 
 void VmmController::Run(RunCallback callback) {
+  FXL_LOG(INFO) << "event=vmm_run_request has_vmm=" << static_cast<bool>(vmm_)
+                << " run_callback_bound=" << static_cast<bool>(run_callback_);
   if (!vmm_) {
     callback(GuestError::NOT_FOUND);
     return;
@@ -65,14 +115,21 @@ void VmmController::Run(RunCallback callback) {
     } else {
       error = GuestError::INTERNAL_ERROR;
     }
+    FXL_LOG(INFO) << "event=primary_vcpu_exit zx_status=" << result
+                  << " stop_reason=" << VcpuExitToString(result)
+                  << " mapped_status=" << GuestErrorToString(error);
     ScheduleVmmTeardown(error);
   });
   if (status != ZX_OK) {
-    vmm_.reset();
-    callback(GuestError::START_VCPU_FAILED);
+    FXL_LOG(ERROR) << "event=primary_vcpu_start_failed zx_status=" << status;
+    vmm_->Shutdown([this, callback = std::move(callback)]() mutable {
+      vmm_.reset();
+      callback(GuestError::START_VCPU_FAILED);
+    });
     return;
   }
 
+  FXL_LOG(INFO) << "event=primary_vcpu_started";
   run_callback_ = std::move(callback);
 }
 
@@ -87,34 +144,58 @@ void VmmController::Bind(fidl::InterfaceRequest<GuestController> request,
 }
 
 void VmmController::Stop(StopCallback callback) {
-  FXL_LOG(INFO) << "Received Stop request from client";
+  FXL_LOG(INFO) << "event=vmm_stop_request source=client_request has_vmm="
+                << static_cast<bool>(vmm_);
   ScheduleVmmTeardown(GuestError::FORCE_STOPPED);
   callback();
 }
 
 void VmmController::LifecycleChannelClosed() {
-  FXL_LOG(INFO) << "A client closed the lifecycle channel, shutting down the "
-                   "VMM component";
-  stop_component_callback_();
+  teardown_.RecordLifecycleClose();
+
+  if (vmm_ || run_callback_ || teardown_.teardown_active()) {
+    ScheduleVmmTeardown(GuestError::FORCE_STOPPED);
+    return;
+  }
+
+  MaybeStopComponent();
 }
 
 void VmmController::ScheduleVmmTeardown(GuestError status) {
+  if (!teardown_.RequestTeardown()) {
+    return;
+  }
+
   auto result =
       async::PostTask(async_, [this, status]() { DestroyAndRespond(status); });
 
   // If ZX_OK, the task was successfully scheduled. If ZX_ERR_BAD_STATE, the
-  // component is already shutting down so there is nothing to do.
+  // component is already shutting down. Run teardown inline so pending run
+  // callbacks and lifecycle-stop completion are not lost.
   if (result != ZX_OK) {
-    FXL_LOG(WARNING) << "Failed to schedule a VMM teardown, so shutting down "
-                        "the component instead: "
-                     << status;
-    stop_component_callback_();
+    FXL_LOG(WARNING) << "event=vmm_teardown_schedule_failed async_status="
+                     << result;
+    DestroyAndRespond(status);
   }
 }
 
 void VmmController::DestroyAndRespond(GuestError status) {
+  if (!teardown_.BeginTeardown()) {
+    return;
+  }
+
   if (vmm_) {
     vmm_->NotifyClientsShutdown();
+    vmm_->Shutdown([this, status]() { FinishVmmTeardown(status); });
+    return;
+  }
+
+  FinishVmmTeardown(status);
+}
+
+void VmmController::FinishVmmTeardown(GuestError status) {
+  if (!teardown_.FinishTeardown()) {
+    return;
   }
 
   vmm_.reset();
@@ -123,4 +204,14 @@ void VmmController::DestroyAndRespond(GuestError status) {
     RunCallback callback = std::move(run_callback_);
     callback(status);
   }
+
+  MaybeStopComponent();
+}
+
+void VmmController::MaybeStopComponent() {
+  if (!teardown_.CompleteComponentStop()) {
+    return;
+  }
+
+  stop_component_callback_();
 }

@@ -7,6 +7,7 @@
 #include "lib/fxl/strings/string_printf.h"
 #include "lib/fxl/files/unique_fd.h"
 #include "garnet/lib/machina/guest.h"
+#include "garnet/lib/machina/vm_id.h"
 #include "garnet/lib/vmlog_store/vmlog_store.h"
 #include "garnet/public/lib/guest_allocator/cpp/guest_allocator.h"
 
@@ -43,12 +44,6 @@ class VmlogSrv {
   void enable_vmlog(void);
   void disable_vmlog(void);
   int log_read_line(struct log_rb *log_ptr, uint32_t put, uint32_t get);
-  // TODO: read vmid mapping table from sos.json config file
-  enum {
-    VMLOG_SOS_VMID = -1,
-    VMLOG_ALPS_VMID = 0,
-    VMLOG_TBOX_VMID = 1,
-  };
   enum TrustyLogDumpState {
     TRUSTY_LOG_IS_DUMPING,
     TRUSTY_LOG_IS_DUMPED,

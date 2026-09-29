@@ -83,7 +83,8 @@ private:
 
   async::Wait control_queue_wait_;
   async::Loop eint_loop_;
-  async_t *async_;
+  async_t *async_ = nullptr;
+  bool loop_started_ = false;
 
   std::mutex event_queue_mutex_;
   int eint_fd_;

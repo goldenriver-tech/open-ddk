@@ -2,6 +2,7 @@
 
 #include "garnet/bin/guest_manager/guest_manager.h"
 #include "garnet/lib/machina/remoteproc_manager.h"
+#include "garnet/lib/machina/cross_vm_lock.h"
 #include "garnet/bin/smc_communication/smc_communication.h"
 #include "garnet/bin/suspend/device_suspend.h"
 #include "garnet/public/lib/guest_allocator/cpp/guest_allocator.h"
@@ -110,16 +111,19 @@ int main(int argc, char** argv) {
     return EXIT_FAILURE;
   }
 
+  machina::CrossVMLockGMServiceImpl cvm_lock_gm_svc(application_context.get());
+
   SmcCommunication* smc_communication = SmcCommunication::GetInstance();
   status = smc_communication->Initialize();
   if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "Failed to initialize SmcCommunication: " << status;
+    FXL_LOG(WARNING) << "Failed to initialize SmcCommunication: " << status;
   }
 
   DeviceSuspend* device_suspend = DeviceSuspend::GetInstance();
   status = device_suspend->Initialize();
-  if (status != ZX_OK)
-    FXL_LOG(ERROR) << "Failed to initialize DeviceSuspend: " << status;
+  if (status != ZX_OK) {
+    FXL_LOG(WARNING) << "Failed to initialize DeviceSuspend: " << status;
+  }
 
   auto vmm_manager = GuestManagerImpl::BuildFromFile(
       application_context.get(), loop.async(), kDefaultVmmConfigPath);

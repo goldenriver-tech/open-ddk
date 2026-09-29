@@ -105,9 +105,8 @@ App::App()
   }
 
   if (bootmode == ZX_BOOTMODE_AHYP) {
-      LaunchService("nebula.LogService", true);
-      LaunchService("fuchsia.virtualization.GuestManager", true);
-      DisableSosKickNebula();
+    LaunchService("nebula.LogService", true);
+    LaunchService("fuchsia.virtualization.GuestManager", true);
   } else if (bootmode == ZX_BOOTMODE_TEE) {
     LaunchService("nebula.GpManager");
   }
@@ -185,24 +184,6 @@ void App::LaunchService(const std::string& service_name, bool auto_restart) {
   if (auto_restart) {
     auto_restart_services.push_back(service_name);
   }
-}
-
-void App::DisableSosKickNebula() {
-  int fd = 0;
-
-  if (access(GRT_WDT_CONTROL_DEVICE, F_OK) != 0) {
-    printf("wdt driver is not ready:%s\n",GRT_WDT_CONTROL_DEVICE);
-    return;
-  }
-  fd = open(GRT_WDT_CONTROL_DEVICE, O_RDWR);
-  if (fd < 0) {
-    printf("driver-tests: no %s device found\n", GRT_WDT_CONTROL_DEVICE);
-    return;
-  }
-
-  ioctl_grt_wdt_stop(fd);
-  close(fd);
-  return;
 }
 
 }  // namespace sysmgr

@@ -5,6 +5,8 @@
 // found in the LICENSE file.
 #pragma once
 
+#include <threads.h>
+#include <atomic>
 #include <memory>
 #include <mutex>
 #include <unordered_map>
@@ -12,6 +14,7 @@
 
 #include <fuchsia/cpp/machina.h>
 #include <lib/async-loop/cpp/loop.h>
+#include <lib/zx/time.h>
 #include <sys/types.h>
 #include <zircon/syscalls/hypervisor.h>
 
@@ -21,8 +24,8 @@
 #include "garnet/lib/machina/phys_mem.h"
 #include "garnet/lib/machina/rwlock.h"
 #include "lib/app/cpp/application_context.h"
-#include "lib/svc/cpp/service_provider_bridge.h"
 #include "lib/fidl/cpp/binding_set.h"
+#include "lib/svc/cpp/service_provider_bridge.h"
 
 struct acrn_io_request;
 struct acrn_mmio_mapping;
@@ -40,6 +43,7 @@ class VmContext {
   static constexpr zx_signals_t kSignalIoreqCompletion = ZX_USER_SIGNAL_0;
   static constexpr zx_signals_t kSignalIoreqTermination = ZX_USER_SIGNAL_1;
   static constexpr zx_signals_t kSignalVmReady = ZX_USER_SIGNAL_2;
+  static constexpr zx_signals_t kSignalVmShutdown = ZX_USER_SIGNAL_3;
 
   VmContext(uint16_t vmid,
             uint8_t num_vcpus,
@@ -49,6 +53,7 @@ class VmContext {
             uint32_t kick_irq);
   ~VmContext();
 
+  void Shutdown();
   void SetInterruptListener(fidl::InterfaceHandle<InterruptListener> handle);
   void SetMessageListener(fidl::InterfaceHandle<MessageListener> handle);
   void Wait(uint8_t vcpu_id);
@@ -63,7 +68,8 @@ class VmContext {
   void signal_ioreq_termination(uint8_t vcpu_id);
   void send_interrupt(uint64_t msi_addr, uint64_t msi_data);
   zx_status_t vm_call(std::string& req, void* resp, size_t* resp_size);
-  void start_vm();
+  zx_status_t start_vm();
+  zx_status_t WaitForVmReady(zx::time deadline);
   void add_mmio_mapping(std::unique_ptr<acrn_mmio_mapping>& mapping);
   bool is_message_listener_ready();
 
@@ -102,9 +108,12 @@ class VmContext {
   MessageListenerSyncPtr message_listener_;
 
 #ifdef _VHM_USE_CHANNEL_
+  thrd_t vhm_thread_ = {};
+  bool vhm_thread_started_ = false;
   zx::channel vhm_srv_chan_;
   zx::channel vhm_cli_chan_;
 #endif
+  std::atomic_bool shutdown_started_{false};
   InterruptController* interrupt_controller_;
   uint32_t kick_irq_;
 
@@ -174,12 +183,19 @@ class VhmServiceImpl : public VhmRequestHandler, public VhmService {
                    uint64_t rx_buf_addr,
                    uint64_t rx_buf_size);
 
+  struct VmEntry {
+    std::shared_ptr<VmContext> context;
+    bool shutting_down = false;
+  };
+
+  std::shared_ptr<VmContext> FindActiveVmContextLocked(uint64_t vmid);
+
   component::ApplicationLauncherPtr& launcher_;
 
   fidl::BindingSet<VhmService> bindings_;
 
   std::mutex vm_map_lock_;
-  std::unordered_map<uint64_t, std::shared_ptr<VmContext>> vm_map_;
+  std::unordered_map<uint64_t, VmEntry> vm_map_;
 
   const PhysMem& phys_mem_;
   uintptr_t phys_mem_base_;

@@ -18,6 +18,7 @@
 #include <lib/async-loop/cpp/loop.h>
 #include <lib/fsl/handles/object_info.h>
 #include <lib/fsl/vmo/strings.h>
+#include <lib/zx/port.h>
 #include <lib/zx/vmar.h>
 #include <trusty_std.h>
 #include <uapi/err.h>
@@ -42,8 +43,24 @@ thread_local size_t ThreadChannel = NUM_VHM_SIDEBAND_CHANNELS;
 
 static constexpr uint32_t kMapFlags =
     ZX_VM_FLAG_PERM_READ | ZX_VM_FLAG_PERM_WRITE;
+static constexpr zx_signals_t kSignalVhmShutdown = ZX_USER_SIGNAL_0;
+static constexpr uint64_t kExceptionPortKey = 0;
+static constexpr uint64_t kExceptionPortShutdownKey = 1;
+static constexpr uint32_t kSinglePortPacket = 1;
+static constexpr zx::duration kVmDumpCompletionTimeout =
+    zx::sec(CVMD_EXCEPTION_DUMP_COMPLETION_TIMEOUT_SEC);
+
+enum ExceptionDumpWaitItem {
+  kExceptionDumpWaitItemDumpEvent,
+  kExceptionDumpWaitItemShutdown,
+  kExceptionDumpWaitItemCount,
+};
 
 VhmDevice::VhmDevice(uint16_t vmid) : vmid_(vmid), binding_(this) {}
+
+VhmDevice::~VhmDevice() {
+  Shutdown();
+}
 
 #ifdef _VHM_USE_CHANNEL_
 
@@ -55,12 +72,14 @@ static int vhm_thread_loop(void* param) {
 
 static int uos_exception_dump(void* param) {
   VhmDevice* device = (VhmDevice*)param;
+  return device->HandleExceptionDumpLoop();
+}
 
+int VhmDevice::HandleExceptionDumpLoop() {
   FXL_LOG(ERROR) << "uos_exception_dump enter";
-  zx_handle_t eport;
-  auto status = zx_port_create(0, &eport);
-  if (status < 0) {
-    FXL_LOG(ERROR) << "zx_port_create failed, status: " << status;
+
+  if (!exception_port_.is_valid()) {
+    FXL_LOG(ERROR) << "exception port is not valid";
     return -1;
   }
 
@@ -68,24 +87,33 @@ static int uos_exception_dump(void* param) {
   zx_handle_t handle = zx_process_self();
 
   uint32_t options = 0;
-  uint64_t child_key = 0;
-  status = zx_task_bind_exception_port(handle, eport, child_key, options);
+  auto status = zx_task_bind_exception_port(
+      handle, exception_port_.get(), kExceptionPortKey, options);
   if (status < 0) {
     FXL_LOG(ERROR) << "unable to bind subject exception port, status: "
                    << status;
     return -1;
   }
+  exception_port_bound_.store(true, std::memory_order_release);
 
-  while (true) {
+  while (!shutdown_started_.load(std::memory_order_acquire)) {
     zx_port_packet_t packet;
     FXL_LOG(ERROR) << "uos_exception_dump zx_port_wait";
-    status = zx_port_wait(eport, ZX_TIME_INFINITE, &packet, 1);
+    status = exception_port_.wait(zx::time::infinite(), &packet,
+                                  kSinglePortPacket);
     if (status < 0) {
+      if (shutdown_started_.load(std::memory_order_acquire)) {
+        break;
+      }
       FXL_LOG(ERROR) << "zx_port_wait failed, status: " << status;
       return -1;
     }
 
-    if (packet.key != child_key) {
+    if (packet.key == kExceptionPortShutdownKey &&
+        packet.type == ZX_PKT_TYPE_USER) {
+      break;
+    }
+    if (packet.key != kExceptionPortKey) {
       continue;
     }
     if (!ZX_PKT_IS_EXCEPTION(packet.type)) {
@@ -101,11 +129,22 @@ static int uos_exception_dump(void* param) {
       FXL_LOG(ERROR) << "zx_object_get_child failed, status: " << status;
       return -1;
     }
+    zx::thread exception_thread(thread);
 
-    Guest* guest = device->GetGuest();
+    Guest* guest = GetGuest();
+    if (guest == nullptr ||
+        shutdown_started_.load(std::memory_order_acquire)) {
+      status = zx_task_resume(exception_thread.get(),
+                              ZX_RESUME_EXCEPTION | ZX_RESUME_TRY_NEXT);
+      if (status < 0) {
+        FXL_LOG(ERROR) << "zx_task_resume failed during shutdown, status: "
+                       << status;
+        return -1;
+      }
+      continue;
+    }
     guest->SetUosException(true);
 
-    uint64_t CVMD_CMD_EXCEPTION_DUMP = 2;
     cmvd_cmd_t cmd = {};
     cmd.cmd = CVMD_CMD_EXCEPTION_DUMP;
     _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_CVMD_CMD, (void*)&cmd);
@@ -113,23 +152,39 @@ static int uos_exception_dump(void* param) {
     FXL_LOG(ERROR) << "uos_exception_dump, wait dump signal";
     // wait vm dump complete
     zx::event* dump_evnet = guest->vm_dmp_event();
-    status = dump_evnet->wait_one(VhmDevice::kSignalVmDump,
-                                  zx::deadline_after(zx::sec(5)), nullptr);
+    zx_wait_item_t wait_items[kExceptionDumpWaitItemCount] = {};
+    wait_items[kExceptionDumpWaitItemDumpEvent].handle = dump_evnet->get();
+    wait_items[kExceptionDumpWaitItemDumpEvent].waitfor =
+        VhmDevice::kSignalVmDump;
+    wait_items[kExceptionDumpWaitItemShutdown].handle =
+        vhm_shutdown_event_.get();
+    wait_items[kExceptionDumpWaitItemShutdown].waitfor = kSignalVhmShutdown;
+    status = zx_object_wait_many(
+        wait_items, kExceptionDumpWaitItemCount,
+        zx::deadline_after(kVmDumpCompletionTimeout).get());
     guest->SetUosException(false);
+    if (status != ZX_OK && status != ZX_ERR_TIMED_OUT &&
+        !shutdown_started_.load(std::memory_order_acquire)) {
+      FXL_LOG(ERROR) << "uos_exception_dump wait failed, status: " << status;
+    }
 
     FXL_LOG(ERROR) << "uos_exception_dump, wait dump signal done";
     uint32_t resume_flags = ZX_RESUME_EXCEPTION | ZX_RESUME_TRY_NEXT;
-    status = zx_task_resume(thread, resume_flags);
+    status = zx_task_resume(exception_thread.get(), resume_flags);
     if (status < 0) {
       FXL_LOG(ERROR) << "zx_task_resume failed, status: " << status;
       return -1;
     }
-    status = zx_handle_close(thread);
-    if (status < 0) {
-      FXL_LOG(ERROR) << "zx_handle_close failed, status: " << status;
-      return -1;
-    }
     break;
+  }
+  if (exception_port_bound_.exchange(false)) {
+    status = zx_task_bind_exception_port(
+        handle, ZX_HANDLE_INVALID, kExceptionPortKey,
+        ZX_EXCEPTION_PORT_UNBIND_QUIETLY);
+    if (status < 0) {
+      FXL_LOG(ERROR) << "unable to unbind subject exception port, status: "
+                     << status;
+    }
   }
   return 0;
 }
@@ -156,22 +211,7 @@ zx_status_t VhmDevice::Init(Guest* guest,
   vhm_client_->SetupChannel(vmid_, &err, &vhm_cli_chan_, &vhm_srv_chan_);
   FXL_CHECK(err == machina::VhmClientStatus::OK);
 
-  thrd_t vhm_thread;
-  int ret;
-  ret = thrd_create_with_name(&vhm_thread, vhm_thread_loop, this,
-                              "vhm-uos-thread");
-  FXL_CHECK(ret == thrd_success);
-  ret = thrd_detach(vhm_thread);
-  FXL_CHECK(ret == thrd_success);
-
-  thrd_t edump_thread;
-  ret = thrd_create_with_name(&edump_thread, uos_exception_dump, this,
-                              "edump-thread");
-  FXL_CHECK(ret == thrd_success);
-  ret = thrd_detach(edump_thread);
-  FXL_CHECK(ret == thrd_success);
-
-  std::unique_ptr<uint8_t[]> state(new uint8_t[NUM_VHM_SIDEBAND_CHANNELS]);
+  std::unique_ptr<uint8_t[]> state(new uint8_t[NUM_VHM_SIDEBAND_CHANNELS]());
   side_chan_state_ = std::move(state);
 
   std::unique_ptr<std::mutex[]> mutex(
@@ -181,6 +221,22 @@ zx_status_t VhmDevice::Init(Guest* guest,
   std::unique_ptr<std::condition_variable[]> cv(
       new std::condition_variable[NUM_VHM_SIDEBAND_CHANNELS]);
   side_chan_cv_ = std::move(cv);
+
+  zx_status_t status = zx::event::create(0, &vhm_shutdown_event_);
+  FXL_CHECK(status == ZX_OK);
+  status = zx::port::create(0, &exception_port_);
+  FXL_CHECK(status == ZX_OK);
+
+  int ret;
+  ret = thrd_create_with_name(&vhm_thread_, vhm_thread_loop, this,
+                              "vhm-uos-thread");
+  FXL_CHECK(ret == thrd_success);
+  vhm_thread_started_ = true;
+
+  ret = thrd_create_with_name(&edump_thread_, uos_exception_dump, this,
+                              "edump-thread");
+  FXL_CHECK(ret == thrd_success);
+  edump_thread_started_ = true;
 #endif
 
   loop.RunUntilIdle();
@@ -197,11 +253,102 @@ void VhmDevice::InitInternal() {
   FXL_CHECK(status == ZX_OK);
 
   FXL_CHECK(loop_.StartThread() == ZX_OK);
+  loop_started_ = true;
 
   vhm_client_->RegisterInterruptListener(
       vmid_, binding_.NewBinding(loop_.async()), &err);
   FXL_CHECK(err == machina::VhmClientStatus::OK);
 }
+
+void VhmDevice::Shutdown() {
+  if (shutdown_started_.exchange(true, std::memory_order_acq_rel)) {
+    return;
+  }
+
+#ifdef _VHM_USE_CHANNEL_
+  NotifySidebandWaiters();
+  if (vhm_shutdown_event_.is_valid()) {
+    vhm_shutdown_event_.signal(0, kSignalVhmShutdown);
+  }
+  if (vhm_srv_chan_.is_valid()) {
+    vhm_srv_chan_.signal(0, kSignalVhmShutdown);
+  }
+  QueueExceptionPortShutdown();
+
+  vhm_cli_chan_.reset();
+  JoinThread(vhm_thread_, &vhm_thread_started_, "vhm-uos-thread");
+  vhm_srv_chan_.reset();
+
+  JoinThread(edump_thread_, &edump_thread_started_, "edump-thread");
+  vhm_shutdown_event_.reset();
+  exception_port_.reset();
+#endif
+
+  if (binding_.is_bound()) {
+    binding_.Unbind();
+  }
+  if (vhm_client_.is_bound()) {
+    vhm_client_.Bind(zx::channel());
+  }
+  if (loop_started_) {
+    loop_.Shutdown();
+    loop_started_ = false;
+  }
+
+  if (ioreq_buf_ != nullptr) {
+    zx::vmar::root_self().unmap((uintptr_t)ioreq_buf_, PAGE_SIZE);
+    ioreq_buf_ = nullptr;
+  }
+}
+
+#ifdef _VHM_USE_CHANNEL_
+
+void VhmDevice::NotifySidebandWaiters() {
+  if (!side_chan_state_ || !side_chan_mutex_ || !side_chan_cv_) {
+    return;
+  }
+  for (size_t chn = 0; chn < NUM_VHM_SIDEBAND_CHANNELS; ++chn) {
+    {
+      std::lock_guard<std::mutex> lock(side_chan_mutex_[chn]);
+      side_chan_state_[chn] = 0;
+    }
+    side_chan_cv_[chn].notify_all();
+  }
+}
+
+void VhmDevice::JoinThread(thrd_t thread,
+                           bool* started,
+                           const char* thread_name) {
+  if (!started || !*started) {
+    return;
+  }
+
+  int result = 0;
+  const zx_time_t join_start = zx_clock_get(ZX_CLOCK_MONOTONIC);
+  const int ret = thrd_join(thread, &result);
+  const zx_duration_t join_duration =
+      zx_clock_get(ZX_CLOCK_MONOTONIC) - join_start;
+  FXL_LOG(INFO) << thread_name << " join waited " << join_duration << " ns ("
+                << join_duration / ZX_MSEC(1) << " ms), ret=" << ret
+                << ", result=" << result;
+  if (ret != thrd_success) {
+    FXL_LOG(ERROR) << thread_name << " join failed";
+  }
+  *started = false;
+}
+
+zx_status_t VhmDevice::QueueExceptionPortShutdown() {
+  if (!exception_port_.is_valid()) {
+    return ZX_ERR_BAD_STATE;
+  }
+
+  zx_port_packet_t packet = {};
+  packet.key = kExceptionPortShutdownKey;
+  packet.type = ZX_PKT_TYPE_USER;
+  return exception_port_.queue(&packet, 0);
+}
+
+#endif
 
 void VhmDevice::RegisterMessageListener(
     fidl::InterfaceHandle<MessageListener> listener) {
@@ -301,18 +448,29 @@ zx_status_t VhmDevice::Write(uintptr_t addr, const IoValue& value) {
 zx_txid_t VhmDevice::GetNextTxid() const {
   zx_txid_t txid = 0;
   while (!txid) {
+    if (shutdown_started_.load(std::memory_order_acquire)) {
+      return 0;
+    }
     txid = next_txid_->fetch_add(1, std::memory_order_relaxed);
   }
   return txid;
 }
 
-void VhmDevice::KickAndWaitIoRequest(uint8_t vcpu_id, uintptr_t addr) const {
+zx_status_t VhmDevice::KickAndWaitIoRequest(uint8_t vcpu_id,
+                                            uintptr_t addr) const {
+  if (shutdown_started_.load(std::memory_order_acquire)) {
+    return ZX_ERR_CANCELED;
+  }
+
   struct vhm_chan_request request;
   struct vhm_chan_response response;
   zx_status_t status;
   utrace(TAG_COMM_ENTER, 1, 1, 2, vcpu_id);
 
   request.txid = GetNextTxid();
+  if (!request.txid) {
+    return ZX_ERR_CANCELED;
+  }
   request.cmd = VHM_IO_REQUEST;
   request.param.io_req.vcpu_id = vcpu_id;
 #ifdef VHE_MMIO_TRAP_DEBUG
@@ -330,20 +488,25 @@ void VhmDevice::KickAndWaitIoRequest(uint8_t vcpu_id, uintptr_t addr) const {
 
   uint32_t bytes_read;
   uint32_t handles_read;
-  zx_status_t read_status;
+  zx_status_t read_status = ZX_OK;
   status = vhm_cli_chan_.call(0, zx::time::infinite(), &args, &bytes_read,
                               &handles_read, &read_status);
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "failed to kick vm:" << vmid_;
-    ;
+    return status;
   }
   utrace(TAG_COMM_EXIT, 1, 1, 2, vcpu_id);
+  return read_status;
 }
 
-void VhmDevice::KickIoRequestAsync(uint8_t vcpu_id,
-                                   uintptr_t addr,
-                                   acrn_io_request* req,
-                                   const IoValue& value) const {
+zx_status_t VhmDevice::KickIoRequestAsync(uint8_t vcpu_id,
+                                          uintptr_t addr,
+                                          acrn_io_request* req,
+                                          const IoValue& value) const {
+  if (shutdown_started_.load(std::memory_order_acquire)) {
+    return ZX_ERR_CANCELED;
+  }
+
   struct vhm_chan_request request;
   zx_status_t status;
   uint8_t side_chan = VCPU_ID_SIDEBAND_CHANNEL(vcpu_id);
@@ -355,12 +518,19 @@ void VhmDevice::KickIoRequestAsync(uint8_t vcpu_id,
     std::unique_lock<std::mutex> lock(mutex);
     cvmd_mp_set_ticks(CROSS_VM_DUMP_VDEV_NOTIFY_G2H, 1);
 
+    if (shutdown_started_.load(std::memory_order_acquire)) {
+      return ZX_ERR_CANCELED;
+    }
     if (side_chan_state_[side_chan] != SIDE_CHAN_BUSY) {
       side_chan_state_[side_chan] = SIDE_CHAN_BUSY;
     } else {
       cv.wait(lock, [this, side_chan] {
-        return side_chan_state_[side_chan] != SIDE_CHAN_BUSY;
+        return shutdown_started_.load(std::memory_order_acquire) ||
+               side_chan_state_[side_chan] != SIDE_CHAN_BUSY;
       });
+      if (shutdown_started_.load(std::memory_order_acquire)) {
+        return ZX_ERR_CANCELED;
+      }
       side_chan_state_[side_chan] = SIDE_CHAN_BUSY;
     }
     utrace(TAG_COMM_EXIT, 1, 2, 3, side_chan);
@@ -378,8 +548,15 @@ void VhmDevice::KickIoRequestAsync(uint8_t vcpu_id,
   status = vhm_cli_chan_.write(0, &request, sizeof(request), NULL, 0);
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "failed to kick vm:" << vmid_;
+    {
+      std::lock_guard<std::mutex> lock(mutex);
+      side_chan_state_[side_chan] = 0;
+    }
+    cv.notify_all();
+    return status;
   }
   cvmd_mp_set_ticks(CROSS_VM_DUMP_VDEV_NOTIFY_G2H, 3);
+  return ZX_OK;
 }
 
 #endif
@@ -387,13 +564,20 @@ void VhmDevice::KickIoRequestAsync(uint8_t vcpu_id,
 zx_status_t VhmDevice::ReadInternal(uint8_t vcpu_id,
                                     uintptr_t addr,
                                     IoValue* value) const {
+  if (shutdown_started_.load(std::memory_order_acquire)) {
+    return ZX_ERR_CANCELED;
+  }
+
   acrn_io_request* req = &ioreq_buf_->req_slot[vcpu_id];
 
   make_io_request(req, ACRN_IOREQ_DIR_READ, value->access_size, addr);
 #ifndef _VHM_USE_CHANNEL_
   vhm_client_->WaitForIoRequestCompletion(vmid_, vcpu_id);
 #else
-  KickAndWaitIoRequest(vcpu_id, addr);
+  zx_status_t status = KickAndWaitIoRequest(vcpu_id, addr);
+  if (status != ZX_OK) {
+    return status;
+  }
 #endif
 
   memcpy(value->data, &req->reqs.mmio_request.value, value->access_size);
@@ -403,6 +587,10 @@ zx_status_t VhmDevice::ReadInternal(uint8_t vcpu_id,
 zx_status_t VhmDevice::WriteInternal(uint8_t vcpu_id,
                                      uintptr_t addr,
                                      const IoValue& value) {
+  if (shutdown_started_.load(std::memory_order_acquire)) {
+    return ZX_ERR_CANCELED;
+  }
+
   acrn_io_request* req = &ioreq_buf_->req_slot[vcpu_id];
 
   memcpy(&req->reqs.mmio_request.value, value.data, value.access_size);
@@ -411,7 +599,10 @@ zx_status_t VhmDevice::WriteInternal(uint8_t vcpu_id,
 #ifndef _VHM_USE_CHANNEL_
   vhm_client_->WaitForIoRequestCompletion(vmid_, vcpu_id);
 #else
-  KickAndWaitIoRequest(vcpu_id, addr);
+  zx_status_t status = KickAndWaitIoRequest(vcpu_id, addr);
+  if (status != ZX_OK) {
+    return status;
+  }
 #endif
 
   if (req->status == ZX_ERR_PCI_BAR_REALLOC) {
@@ -440,24 +631,35 @@ zx_status_t VhmDevice::WriteInternalAsync(uint8_t vcpu_id,
   uint8_t side_chan = VCPU_ID_SIDEBAND_CHANNEL(vcpu_id);
 
   utrace(TAG_COMM_ENTER, 1, 3, 3, side_chan, 1, addr);
-  KickIoRequestAsync(vcpu_id, addr, req, value);
+  zx_status_t status = KickIoRequestAsync(vcpu_id, addr, req, value);
   utrace(TAG_COMM_EXIT, 1, 3, 3, side_chan, 1, addr);
 
-  return ZX_OK;
+  return status;
 }
 
 void VhmDevice::HandleVhmChannelMsgLoop() {
-  zx_signals_t signals = ZX_CHANNEL_READABLE | ZX_CHANNEL_PEER_CLOSED;
-  zx_signals_t pending = 0;
+  zx_signals_t signals =
+      ZX_CHANNEL_READABLE | ZX_CHANNEL_PEER_CLOSED | kSignalVhmShutdown;
   zx_status_t status;
+  zx_signals_t pending = 0;
   zx_thread_set_priority(kIRQPriority);
 
   uint32_t cpu_mask = kNormalCpuAffinity;
   _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_CUR_THREAD_AFFINITY,
                 (void*)&cpu_mask);
 
-  while ((status = vhm_srv_chan_.wait_one(signals, zx::time::infinite(),
-                                          &pending)) == ZX_OK) {
+  while (!shutdown_started_.load(std::memory_order_acquire)) {
+    status = vhm_srv_chan_.wait_one(signals, zx::time::infinite(), &pending);
+    if (status != ZX_OK) {
+      if (!shutdown_started_.load(std::memory_order_acquire)) {
+        FXL_LOG(ERROR) << "vhm channel wait failed, status:" << status;
+      }
+      break;
+    }
+    if (pending & kSignalVhmShutdown) {
+      break;
+    }
+
     if (pending & ZX_CHANNEL_READABLE) {
       struct vhm_chan_request request;
       uint32_t actual_bytes = 0;
@@ -468,8 +670,18 @@ void VhmDevice::HandleVhmChannelMsgLoop() {
       uint8_t side_chan;
       status = vhm_srv_chan_.read(0, &request, msg_size, &actual_bytes, nullptr,
                                   0, nullptr);
-      FXL_CHECK(status == ZX_OK);
-      FXL_CHECK(actual_bytes == msg_size);
+      if (status != ZX_OK) {
+        if (!shutdown_started_.load(std::memory_order_acquire)) {
+          FXL_LOG(ERROR) << "Failed to read vhm message from vm: " << vmid_
+                         << ", status:" << status;
+        }
+        break;
+      }
+      if (actual_bytes != msg_size) {
+        FXL_LOG(ERROR) << "Wrong vhm message size, expect:[" << msg_size
+                       << "], actual:[" << actual_bytes << "]";
+        continue;
+      }
       switch (request.cmd) {
         case VHM_INTR_INJECT:
           dev_id = request.param.intr_inject.dev_id;

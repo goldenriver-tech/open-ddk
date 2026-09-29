@@ -232,9 +232,9 @@ zx_status_t VmlogSrv::CreateVmlogSinkNodes(const machina::Guest& guest,
     return ZX_ERR_IO_DATA_INTEGRITY;
   }
 
-  if (vmid_ == VMLOG_SOS_VMID) {
+  if (machina::IsSosVmid(vmid_)) {
     snprintf(dtb_node_path, sizeof(dtb_node_path) - 1, "/nebula_vmlog_sos_sinking");
-  } else if (vmid_ == VMLOG_TBOX_VMID) {
+  } else if (machina::IsTboxVmid(vmid_)) {
     snprintf(dtb_node_path, sizeof(dtb_node_path) - 1, "/nebula_vmlog_tbox_sinking");
   } else {
     FXL_LOG(ERROR) << "Incompatible vmid: "<< vmid_;
@@ -275,7 +275,7 @@ zx_status_t VmlogSrv::CreateAlpsVmlogSinkNodes(void* dtb, size_t dtb_size) {
     return ZX_ERR_IO_DATA_INTEGRITY;
   }
 
-  if (vmid_ == VMLOG_ALPS_VMID) {
+  if (machina::IsAlpsVmid(vmid_)) {
     snprintf(dtb_node_path, sizeof(dtb_node_path) - 1, "/nebula_vmlog_alps_sinking");
   } else {
     FXL_LOG(ERROR) << "Incompatible vmid: "<< vmid_;
@@ -319,13 +319,13 @@ zx_status_t VmlogSrv::Initialize(void) {
   std::string vmlog_tbox_resv_mem("vmlog_sink_tbox");
   std::string vmlog_alps_resv_mem("vmlog_sink_alps");
 
-  if (vmid_ == VMLOG_SOS_VMID) {
+  if (machina::IsSosVmid(vmid_)) {
     snprintf(vmlog_req.search_string, sizeof(vmlog_req.search_string),
                                           "%s", vmlog_sos_resv_mem.c_str());
-  } else if (vmid_ == VMLOG_TBOX_VMID) {
+  } else if (machina::IsTboxVmid(vmid_)) {
     snprintf(vmlog_req.search_string, sizeof(vmlog_req.search_string),
                                           "%s", vmlog_tbox_resv_mem.c_str());
-  } else if (vmid_ == VMLOG_ALPS_VMID) {
+  } else if (machina::IsAlpsVmid(vmid_)) {
     snprintf(vmlog_req.search_string, sizeof(vmlog_req.search_string),
                                           "%s", vmlog_alps_resv_mem.c_str());
   } else {

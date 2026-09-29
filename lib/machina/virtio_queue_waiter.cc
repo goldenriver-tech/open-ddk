@@ -18,6 +18,7 @@ VirtioQueueWaiter::VirtioQueueWaiter(async_t* async,
       queue_(queue),
       handler_(fbl::move(handler)) {
   FXL_DCHECK(async_ != nullptr && queue_ != nullptr);
+  wait_.set_flags(ASYNC_FLAG_HANDLE_SHUTDOWN);
   wait_.set_handler(fbl::BindMember(this, &VirtioQueueWaiter::WaitHandler));
 }
 

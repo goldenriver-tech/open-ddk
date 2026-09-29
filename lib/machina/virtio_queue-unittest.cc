@@ -43,5 +43,29 @@ TEST(VirtioQueueTest, HandleOverflow) {
   ASSERT_EQ(queue->ring()->index, 0);
 }
 
+TEST(VirtioQueueTest, ReadDescRejectsIndexOutsideQueueSize) {
+  VirtioDeviceFake device;
+  ASSERT_EQ(device.Init(), ZX_OK);
+  VirtioQueue* queue = device.queue();
+
+  virtio_desc_t desc = {};
+  ASSERT_EQ(queue->ReadDesc(QUEUE_SIZE, &desc), ZX_ERR_OUT_OF_RANGE);
+}
+
+TEST(VirtioQueueTest, ReadDescRejectsGuestPhysicalAddressBelowBase) {
+  VirtioDeviceFake device;
+  ASSERT_EQ(device.Init(), ZX_OK);
+  VirtioQueue* queue = device.queue();
+  VirtioQueueFake& queue_fake = device.queue_fake();
+
+  uint16_t desc_index;
+  ASSERT_EQ(queue_fake.WriteDescriptor(reinterpret_cast<void*>(UINTPTR_MAX),
+                                       1, 0, &desc_index),
+            ZX_OK);
+
+  virtio_desc_t desc = {};
+  ASSERT_EQ(queue->ReadDesc(desc_index, &desc), ZX_ERR_OUT_OF_RANGE);
+}
+
 }  // namespace
 }  // namespace machina

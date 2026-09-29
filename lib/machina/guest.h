@@ -22,11 +22,8 @@
 #include "garnet/lib/machina/phys_mem.h"
 #include "garnet/lib/machina/vcpu.h"
 #include "garnet/lib/machina/vhm_service_impl.h"
+#include "garnet/lib/machina/vm_id.h"
 #include "garnet/lib/machina/watchdog.h"
-
-#ifndef SOS_VMID
-#define SOS_VMID (-1)
-#endif
 
 struct reg_sched_shm_req {
   uint64_t shm_base;
@@ -54,6 +51,8 @@ enum {
   SCHED_PARAM_TYPE_BUDGET,
   SCHED_PARAM_TYPE_PRIORITY,
   SCHED_PARAM_TYPE_TIMESLICE,
+  SCHED_PARAM_TYPE_VCPU_PRIORITY,
+  SCHED_PARAM_TYPE_POLICY,
 };
 enum {
   SCHED_VCPU_STATUS_RT = 0,
@@ -92,6 +91,14 @@ struct timeslice_info {
   uint64_t vcpu_status;
   uint64_t timeslice;
 };
+struct vcpu_priority_info {
+    zx_handle_t vcpu_handle;
+    uint32_t priority;
+};
+struct policy_info {
+    uint64_t group;
+    uint32_t policy;
+};
 struct sched_param_req {
   uint64_t type;
   union {
@@ -102,6 +109,8 @@ struct sched_param_req {
     struct period_info period_info;
     struct priority_info priority_info;
     struct timeslice_info timeslice_info;
+    struct vcpu_priority_info vcpu_priority_info;
+    struct policy_info policy_info;
   };
 };
 struct dt_dram_info { /* RAM configuration */
@@ -156,12 +165,15 @@ class Guest {
   ~Guest();
 
   zx_status_t Init(const std::vector<machina::VmemSpec>& vmem);
+  void ShutdownAsyncLoops();
   zx_status_t SetCpuAffinity(uint32_t* bind_pcpus, int size);
   zx_status_t SetUserVmid(int32_t user_vmid);
   zx_status_t TeeVmCreate(int32_t user_vmid);
   zx_status_t TeeVmDestroy(int32_t user_vmid);
   zx_status_t SetSchedId(uint8_t sched_id);
   zx_status_t SetSmcIRQ(uint32_t smc_irq);
+  zx_status_t SetCvmLockIRQ(uint32_t cvm_lock_irq);
+  zx_status_t SetCvmLockVMO(zx_handle_t cvm_lock_vmo_handle);
   zx_status_t SetWakeupIrqs(uint32_t* wakeup_irq, int size);
 
   void SetCpuNums(uint32_t cpu_nums) { cpu_nums_ = cpu_nums; }
@@ -288,7 +300,7 @@ class Guest {
 
   void set_stop_callback(std::function<void(zx_status_t)> stop_callback);
 
-  void regerister_watchdog(Watchdog *wdt) { wdt_ = wdt; };
+  void RegisterWatchdog(Watchdog *wdt) { wdt_ = wdt; };
   Watchdog *get_watchdog() { return wdt_; };
  private:
   zx_status_t HandleIrqRequest(zx_vcpu_state_t* state);
@@ -341,7 +353,9 @@ class Guest {
   uint32_t monitor_irq_{0};
   int32_t vmid_;
   uint32_t sched_id_;
-  int wdt_fd_;
+  int wdt_fd_ = -1;
+  uint64_t wdt_kick_call_count_ = 0;
+  uint64_t wdt_kick_missing_log_count_ = 0;
 
   bool uos_exception_ = false;
   zx::event vm_dump_event_;

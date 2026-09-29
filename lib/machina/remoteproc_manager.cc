@@ -12,14 +12,17 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#include "lib/fxl/strings/string_printf.h"
+
 using google::protobuf::RepeatedPtrField;
 namespace machina {
 
 // Default rproc config for mt8678
-constexpr char kDefaultRprocConfig[] = R"pbtxt(
+static std::string BuildDefaultRprocConfig() {
+  return fxl::StringPrintf(R"pbtxt(
   devices {
-      remote_vmid: -1
-      host_vmid: 0
+      remote_vmid: %d
+      host_vmid: %d
       ctrl_irq: 200
       local_irqs: {
           start: 201
@@ -33,7 +36,9 @@ constexpr char kDefaultRprocConfig[] = R"pbtxt(
       host_ipi_affinity: true
       remote_ipi_affinity: true
   }
-)pbtxt";
+)pbtxt",
+                           kSosVmid, kAlpsVmid);
+}
 
 std::unique_ptr<RprocManager> RprocManager::BuildFromString(
     component::ApplicationContext* application_context,
@@ -62,7 +67,7 @@ std::unique_ptr<RprocManager> RprocManager::BuildFromFile(
 
 std::unique_ptr<RprocManager> RprocManager::BuildWithDefaultConfig(
     component::ApplicationContext* application_context) {
-  return BuildFromString(application_context, kDefaultRprocConfig);
+  return BuildFromString(application_context, BuildDefaultRprocConfig());
 }
 
 static void ParseIrqRange(

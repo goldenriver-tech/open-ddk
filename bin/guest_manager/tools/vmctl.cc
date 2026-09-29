@@ -16,9 +16,9 @@
 #include "lib/fxl/log_settings.h"
 #include "lib/fxl/log_settings_command_line.h"
 #include "lib/fxl/strings/string_printf.h"
+#include "garnet/lib/machina/vm_id.h"
 
 static virtualization::GuestManagerSyncPtr g_guest_manager;
-constexpr int8_t kSosVmid = -1;
 constexpr uint32_t kDefaultHostVsockPort = 8888;
 
 using virtualization::GuestError;
@@ -72,13 +72,13 @@ void print_usage() {
                "                         Set VM params in runtime\n"
                "\n"
                "default parameters:\n"
-               "  vmid: -1 (SOS)\n"
+               "  vmid: " << machina::kSosVmid << " (SOS)\n"
                "  host_port: " << kDefaultHostVsockPort << "\n";
 }
 // clang-format on
 
 int StartCommand(const fxl::CommandLine& command_line) {
-  int8_t vmid = kSosVmid;
+  int8_t vmid = machina::kSosVmid;
 
   std::string vmid_str;
   if (command_line.GetOptionValue("vmid", &vmid_str)) {
@@ -105,7 +105,7 @@ int StartCommand(const fxl::CommandLine& command_line) {
 }
 
 int StopCommand(const fxl::CommandLine& command_line) {
-  int8_t vmid = kSosVmid;
+  int8_t vmid = machina::kSosVmid;
 
   std::string vmid_str;
   if (command_line.GetOptionValue("vmid", &vmid_str)) {
@@ -152,7 +152,7 @@ static zx_status_t ConnectToGuestController(
 }
 
 int ShellCommand(async::Loop& loop, const fxl::CommandLine& command_line) {
-  int8_t vmid = kSosVmid;
+  int8_t vmid = machina::kSosVmid;
 
   std::string vmid_str;
   if (command_line.GetOptionValue("vmid", &vmid_str)) {
@@ -219,7 +219,7 @@ int InfoCommand(const fxl::CommandLine& command_line) {
 
 int SocatListenCommand(async::Loop& loop,
                        const fxl::CommandLine& command_line) {
-  int8_t vmid = kSosVmid;
+  int8_t vmid = machina::kSosVmid;
   uint32_t host_port = kDefaultHostVsockPort;
 
   std::string vmid_str;
@@ -257,7 +257,7 @@ int SocatListenCommand(async::Loop& loop,
 
 int SetParamCommand(async::Loop& loop,
                     const fxl::CommandLine& command_line) {
-  int8_t vmid = kSosVmid;
+  int8_t vmid = machina::kSosVmid;
   std::string vmid_str;
   if (command_line.GetOptionValue("vmid", &vmid_str)) {
     vmid = strtol(vmid_str.c_str(), nullptr, 10);

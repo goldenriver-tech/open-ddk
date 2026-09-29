@@ -6,6 +6,7 @@ executable("bin") {
   sources = [
     "main.cc",
     "guest_manager.cc",
+    "guest_manager_reporter.cc",
   ]
 
   deps = [

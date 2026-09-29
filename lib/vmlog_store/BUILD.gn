@@ -9,8 +9,8 @@ source_set("vmlog_store") {
   ]
 
   public_deps = [
-    "//zircon/public/lib/fbl",
+    "//garnet/lib/vm_id",
     "//garnet/public/lib/fxl",
+    "//zircon/public/lib/fbl",
   ]
 }
-

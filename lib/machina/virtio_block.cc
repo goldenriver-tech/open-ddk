@@ -8,6 +8,7 @@
 #include "virtio_block.h"
 
 #include <fcntl.h>
+#include <string.h>
 #include <unistd.h>
 #include <trusty_std.h>
 
@@ -30,10 +31,24 @@ namespace {
 constexpr uint32_t kDefaultGeometry = 128;
 constexpr uintptr_t kNormalPriority = 16;
 constexpr uintptr_t kVblockPriority = kNormalPriority + 1;
-constexpr uint32_t kCpuMaskPoll = 0x10;
-constexpr uint32_t kCpuMaskCq = 0x20;
+#if PERF_BIND_CPU_TEMPORARILY
+constexpr uint32_t kBigClusterCpuMask = 0xf0;
+constexpr uint32_t kCpuMaskPoll = kBigClusterCpuMask;
+constexpr uint32_t kCpuMaskCq = kBigClusterCpuMask;
+#endif
 constexpr uint16_t kProducerBatchSize = FIFO_QDEPTH;
 constexpr size_t kCompletionBatchSize = FIFO_QDEPTH;
+
+uint8_t VirtioBlockStatus(zx_status_t status) {
+  switch (status) {
+  case ZX_OK:
+    return VIRTIO_BLK_S_OK;
+  case ZX_ERR_NOT_SUPPORTED:
+    return VIRTIO_BLK_S_UNSUPP;
+  default:
+    return VIRTIO_BLK_S_IOERR;
+  }
+}
 
 union VblockCookie {
   uint64_t raw;
@@ -94,8 +109,10 @@ int PollRequestThread(void *ctx) {
     for (uint16_t i = 0; i < count; ++i) {
       fifo_in_item it;
       VblockCookie ck;
-      status = vm->HandleBlockRequestAsyncBatch(vq, heads[i], &it, &ck.raw);
-      if (status == ZX_OK) {
+      bool queued = false;
+      status = vm->HandleBlockRequestAsyncBatch(vq, heads[i], &it, &ck.raw,
+                                                &queued);
+      if (status == ZX_OK && queued) {
         items[valid] = it;
         cookies[valid] = ck;
         req_ids[valid] = heads[i];
@@ -128,6 +145,7 @@ int CompletionPollThread(void *ctx) {
   while (!vm->IsStopping()) {
     fifo_out_item items[kCompletionBatchSize];
     size_t count = 0;
+    bool queue0_needs_notify = false;
 
     zx_status_t status =
         vm->Dispatcher()->WaitForCompletionBatch(items, kCompletionBatchSize, &count);
@@ -142,7 +160,27 @@ int CompletionPollThread(void *ctx) {
       VblockCookie cookie;
       cookie.raw = vm->Dispatcher()->GetCompletionCookie(items[i].head);
       auto vq = vm->RequestQueue(cookie.data.queue_index);
-      vq->Return(items[i].head, cookie.data.used_bytes);
+      status = vq->Return(items[i].head, cookie.data.used_bytes,
+                          VirtioQueue::InterruptAction::SET_FLAGS);
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "virtio_block: batch return failed: " << status;
+        break;
+      }
+      if (cookie.data.queue_index == 0) {
+        queue0_needs_notify = true;
+      }
+    }
+
+    if (status != ZX_OK) {
+      break;
+    }
+
+    if (queue0_needs_notify) {
+      status = vm->NotifyGuest(0);
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "virtio_block: batch notify failed: " << status;
+        break;
+      }
     }
   }
   return 0;
@@ -199,9 +237,14 @@ VirtioBlock::SetDispatcher(fbl::unique_ptr<BlockDispatcher> dispatcher) {
     fbl::AutoLock lock(&config_mutex_);
     bool crypto = false;
     dispatcher_->SetBlkConfig(config_, crypto);
+    // The legacy vblock-drv backend consumes one data descriptor per request.
+    // PVBlock has its own device class and native-SG implementation, so keep
+    // the legacy virtio advertisement at one segment.
+    config_.seg_max = 1;
     if (crypto) {
       add_device_features(VIRTIO_BLK_F_INLINE_CRYPTO);
     }
+    add_device_features(VIRTIO_BLK_F_UFS_LUN);
     add_device_features(VIRTIO_RING_F_INDIRECT_DESC | VIRTIO_BLK_F_CONFIG_WCE |
                         VIRTIO_BLK_F_DISCARD);
     dispatcher_->SetCtxStore(kVirtioBlockQdepth);
@@ -355,13 +398,58 @@ void VirtioBlock::FastWriteStatus(VirtioQueue *queue,
   }
 }
 
+zx_status_t VirtioBlock::HandleBlockIoctlAsync(
+    VirtioQueue *queue, uint16_t head, const virtio_desc_t &desc_lv1,
+    const struct vring_desc *vring_desc, uint16_t desc_cnt) {
+  auto complete_with_error = [&](uint8_t block_status, const char *err_msg) {
+    FXL_LOG(ERROR) << "virtio_block@" << dispatcher_->Vmid() << ": "
+                   << err_msg;
+    FastWriteStatus(queue, desc_lv1, block_status);
+    queue->Return(head, sizeof(struct vring_desc));
+    return ZX_ERR_IO;
+  };
+
+  if (desc_cnt < 4 || vring_desc[1].len != sizeof(uint32_t)) {
+    return complete_with_error(VIRTIO_BLK_S_IOERR, "Bad ioctl desc");
+  }
+
+  VirtioDevice *device = queue->device();
+  const auto *request_ptr = reinterpret_cast<const uint32_t *>(
+      GuestPaddrToHostVaddr(device, vring_desc[1].addr));
+  if (!request_ptr) {
+    return complete_with_error(VIRTIO_BLK_S_IOERR,
+                               "Bad ioctl request addr");
+  }
+
+  auto *arg = reinterpret_cast<uint8_t *>(
+      GuestPaddrToHostVaddr(device, vring_desc[2].addr));
+  const uint32_t arg_len = vring_desc[2].len;
+  if (arg_len != 0 && !arg) {
+    return complete_with_error(VIRTIO_BLK_S_IOERR,
+                               "Bad ioctl split arg addr");
+  }
+
+  const bool arg_writable =
+      (vring_desc[2].flags & VRING_DESC_F_WRITE) != 0;
+  zx_status_t status = dispatcher_->ioctl(*request_ptr, arg, arg_len);
+  FastWriteStatus(queue, desc_lv1, VirtioBlockStatus(status));
+
+  uint32_t used = 1;
+  if (status == ZX_OK && arg_writable) {
+    used += arg_len;
+  }
+  queue->Return(head, used);
+  return ZX_OK;
+}
+
 zx_status_t VirtioBlock::HandleBlockRequestAsyncBatch(
     VirtioQueue* queue, uint16_t head,
-    fifo_in_item* out_item, uint64_t *cookie) {
+    fifo_in_item* out_item, uint64_t *cookie, bool *queued) {
   virtio_desc_t desc;
   VblockCookie* out_cookie = (VblockCookie *)cookie;
   struct phys_range desc_phy[1];
   VirtioDevice* device = queue->device();
+  *queued = false;
 
   zx_status_t status = queue->ReadDesc(head, &desc, desc_phy);
   if (status != ZX_OK) {
@@ -399,6 +487,10 @@ zx_status_t VirtioBlock::HandleBlockRequestAsyncBatch(
   const auto* req = reinterpret_cast<const virtio_blk_req_t*>(
       GuestPaddrToHostVaddr(device, vring_desc[0].addr));
 
+  if (req != nullptr && req->type == VIRTIO_BLK_T_IOCTL) {
+    return HandleBlockIoctlAsync(queue, head, desc, vring_desc, desc_cnt);
+  }
+
   if (req != nullptr && req->type == VIRTIO_BLK_T_OUT && IsReadOnly()) {
     set_error(VIRTIO_BLK_S_IOERR,
               "Err: try to write to read-only disk");
@@ -412,6 +504,7 @@ zx_status_t VirtioBlock::HandleBlockRequestAsyncBatch(
   out_cookie->data.queue_index = queue->index();
   out_cookie->data.used_bytes = static_cast<uint32_t>(sizeof(struct vring_desc));
 
+  *queued = true;
   return ZX_OK;
 }
 
@@ -454,6 +547,10 @@ zx_status_t VirtioBlock::HandleBlockRequestAsync(VirtioQueue *queue,
 
   const auto *req = reinterpret_cast<const virtio_blk_req_t *>(
       GuestPaddrToHostVaddr(device, vring_desc[0].addr));
+
+  if (req != nullptr && req->type == VIRTIO_BLK_T_IOCTL) {
+    return HandleBlockIoctlAsync(queue, head, desc, vring_desc, desc_cnt);
+  }
 
   if (req != nullptr && req->type == VIRTIO_BLK_T_OUT && IsReadOnly()) {
     return complete_with_error(VIRTIO_BLK_S_IOERR,
@@ -570,6 +667,25 @@ zx_status_t VirtioBlock::HandleBlockRequest(VirtioQueue *queue, uint16_t head,
       if (status != ZX_OK)
         FXL_LOG(ERROR) << "virtio block, flush error";
       break;
+    case VIRTIO_BLK_T_IOCTL:
+      if (desc.len < sizeof(uint32_t)) {
+        block_status = VIRTIO_BLK_S_IOERR;
+        FXL_LOG(ERROR) << "virtio block, ioctl arg desc too small: "
+                       << desc.len;
+        continue;
+      }
+      {
+        auto *request = static_cast<uint32_t *>(desc.addr);
+        auto *arg = reinterpret_cast<uint8_t *>(desc.addr) + sizeof(*request);
+        const size_t ioctl_arg_len = desc.len - sizeof(*request);
+        status = dispatcher_->ioctl(*request, arg, ioctl_arg_len);
+      }
+      if (status != ZX_OK)
+        FXL_LOG(ERROR) << "virtio block, ioctl error: " << status
+                       << ", request: " << *static_cast<uint32_t *>(desc.addr);
+      if (status == ZX_OK && desc.writable)
+        *used += desc.len - sizeof(uint32_t);
+      break;
     default:
       block_status = VIRTIO_BLK_S_UNSUPP;
       FXL_LOG(ERROR) << "virtio block, unsupported operation";
@@ -578,7 +694,8 @@ zx_status_t VirtioBlock::HandleBlockRequest(VirtioQueue *queue, uint16_t head,
 
     // Report any failures queuing the IO request.
     if (block_status == VIRTIO_BLK_S_OK && status != ZX_OK) {
-      block_status = VIRTIO_BLK_S_IOERR;
+      block_status = status == ZX_ERR_NOT_SUPPORTED ? VIRTIO_BLK_S_UNSUPP
+                                                    : VIRTIO_BLK_S_IOERR;
       FXL_LOG(ERROR) << "virtio block, operation not ok";
     }
   }

@@ -9,6 +9,7 @@
 #include <fbl/unique_ptr.h>
 #include <fs/vfs.h>
 #include <fs/vnode.h>
+#include <zircon/device/vfs.h>
 #include <memory>
 #include <string>
 
@@ -30,6 +31,8 @@ class VnodeLittleFs : public fs::Vnode {
   // |Vnode| implementation:
   zx_status_t ValidateFlags(uint32_t flags) override;
   zx_status_t Getattr(vnattr_t* attr) final;
+  zx_status_t Ioctl(uint32_t op, const void* in_buf, size_t in_len,
+                    void* out_buf, size_t out_len, size_t* out_actual) final;
 
   friend class VnodeDir;
   lfs_t* lfs_;

@@ -23,6 +23,7 @@
 
 #include "server.h"
 
+#include "pvblk/pvblk.h"
 #include "vblock-drv/vblock-drv.h"
 
 typedef struct blkdev {
@@ -45,6 +46,7 @@ typedef struct blkdev {
   completion_t iosignal;
   block_op_t *iobop;
   vblock_drv_t *vb_drv;
+  pvblk_dev_t *pv_drv;
 } blkdev_t;
 
 static int blockserver_thread_serve(blkdev_t *bdev) __TA_RELEASE(bdev->lock) {
@@ -254,9 +256,25 @@ static zx_status_t blkdev_create_vblock(blkdev_t *blkdev) {
   }
   vblock_dev_init(blkdev->vb_drv);
   vblock_dev_set_backend(blkdev->vb_drv, &blkdev->bp, &blkdev->info,
-                         blkdev->block_op_size);
+                         blkdev->block_op_size,
+                         device_get_name(blkdev->parent));
 
   return ZX_OK;
+}
+
+static zx_status_t blkdev_create_pvblk(blkdev_t *blkdev) {
+  if (blkdev->pv_drv) {
+    return ZX_OK;
+  }
+  blkdev->pv_drv = calloc(1, sizeof(pvblk_dev_t));
+  if (!blkdev->pv_drv) {
+    zxlogf(ERROR, "failed to alloc pvblk\n");
+    return ZX_ERR_NO_MEMORY;
+  }
+  pvblk_dev_init(blkdev->pv_drv);
+  return pvblk_dev_set_backend(blkdev->pv_drv, &blkdev->bp, &blkdev->info,
+                               blkdev->block_op_size,
+                               device_get_name(blkdev->parent));
 }
 
 static zx_status_t blkdev_ioctl(void *ctx, uint32_t op, const void *cmd,
@@ -297,6 +315,19 @@ static zx_status_t blkdev_ioctl(void *ctx, uint32_t op, const void *cmd,
     if (ret == ZX_OK) {
       ret = vblock_dev_ioctl(blkdev->vb_drv, op, cmd, cmdlen, reply, max,
                              out_actual);
+    }
+    return ret;
+  case IOCTL_PVBLK_START:
+  case IOCTL_PVBLK_SET_GPA_RANGE:
+  case IOCTL_PVBLK_SET_EVENT:
+  case IOCTL_PVBLK_SET_RING:
+  case IOCTL_PVBLK_DOORBELL:
+  case IOCTL_PVBLK_GET_CONFIG:
+  case IOCTL_PVBLK_STOP:
+    ret = blkdev_create_pvblk(blkdev);
+    if (ret == ZX_OK) {
+      ret = pvblk_dev_ioctl(blkdev->pv_drv, op, cmd, cmdlen, reply, max,
+                            out_actual);
     }
     return ret;
   default:
@@ -407,6 +438,12 @@ static void blkdev_release(void *ctx) {
     blkdev->vb_drv = NULL;
   }
 
+  if (blkdev->pv_drv) {
+    pvblk_dev_release(blkdev->pv_drv);
+    free(blkdev->pv_drv);
+    blkdev->pv_drv = NULL;
+  }
+
   bool bg_thread_running = (blkdev->threadcount != 0);
   blkdev_fifo_close_locked(blkdev);
   blkdev->dead = true;
@@ -470,8 +507,12 @@ static zx_status_t block_driver_bind(void *ctx, zx_device_t *dev) {
 
   bdev->bp.ops->query(bdev->bp.ctx, &bdev->info, &bdev->block_op_size);
 
-  bdev->info.block_id = atomic_fetch_add(&blk_id, 1);
+  if (!(bdev->info.flags & BLOCK_FLAG_BLOCK_ID_VALID)) {
+    bdev->info.block_id = atomic_fetch_add(&blk_id, 1);
+    bdev->info.flags |= BLOCK_FLAG_BLOCK_ID_VALID;
+  }
   bdev->vb_drv = NULL;
+  bdev->pv_drv = NULL;
 
   zx_status_t status;
   if ((bdev->iobop = malloc(bdev->block_op_size)) == NULL) {

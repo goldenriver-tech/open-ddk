@@ -11,6 +11,8 @@
 // MPHY has been configured in preloader, no need to configure them.
 #define UFS_HCI_MMIO_BASE      0x112b0000
 #define UFS_HCI_MMIO_LEN       0x2300
+#define UFS_MPHY_MMIO_BASE     0x112a0000
+#define UFS_MPHY_MMIO_LEN      0x10000
 
 #define PDEV_DID_GRT_I2C            17 //i2c
 

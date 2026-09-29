@@ -7,6 +7,7 @@
 #ifndef LIB_SVC_CPP_SERVICE_PROVIDER_BRIDGE_H_
 #define LIB_SVC_CPP_SERVICE_PROVIDER_BRIDGE_H_
 
+#include <fbl/function.h>
 #include <fbl/ref_ptr.h>
 #include <fs/managed-vfs.h>
 #include <lib/zx/channel.h>
@@ -62,6 +63,7 @@ class ServiceProviderBridge : public component::ServiceProvider {
   }
 
   void AddBinding(fidl::InterfaceRequest<component::ServiceProvider> request);
+  void Shutdown(fbl::Closure callback);
   bool ServeDirectory(zx::channel channel);
 
   zx::channel OpenAsDirectory();

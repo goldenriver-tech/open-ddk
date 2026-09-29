@@ -43,5 +43,5 @@ class ParaParse {
   std::unordered_map<std::string, std::string> sys_env_map_ __TA_GUARDED(sys_env_mutex_);
   fbl::unique_ptr<MappedVmo> Para_Vmo_;
   fbl::atomic<bool> sys_env_init_{false};
-  const char* parameter_partition_dev_node = "/dev/class/block/004";
+  const char* parameter_partition_dev_node = "/dev/class/block/006";
 };

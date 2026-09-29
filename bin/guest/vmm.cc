@@ -37,7 +37,7 @@
 #include <trusty_std.h>
 #include <trusty_syscalls.h>
 #include <lib/zx/vmar.h>
-#include "google/protobuf/text_format.h"
+#include "garnet/bin/guest/watchdog_bootstrap.h"
 #include "lib/fxl/files/file.h"
 #include "lib/fxl/files/unique_fd.h"
 #include "lib/fxl/log_settings.h"
@@ -49,6 +49,29 @@ static constexpr char kDefaultPath[] = "/system/data/";
 
 static constexpr char kGuestMemoryAllocator[] =
     "/dev/sys/platform/00:00:f/guest_memory_allocator";
+
+static bool should_use_pvblk_for_guest(const GuestConfig& cfg, int32_t vmid) {
+  return cfg.pvblk_enabled() &&
+         (machina::IsSosVmid(vmid) || machina::IsAlpsVmid(vmid) ||
+          machina::IsTboxVmid(vmid));
+}
+
+static bool pvblk_backend_visible_to_guest(int32_t vmid, uint32_t index) {
+  if (machina::IsSosVmid(vmid)) {
+    return index < machina::kPvBlockDeviceCount;
+  }
+  if (machina::IsAlpsVmid(vmid) || machina::IsTboxVmid(vmid)) {
+    return index == 2;
+  }
+  return false;
+}
+
+static uint32_t pvblk_guest_disk_index(int32_t vmid, uint32_t backend_index) {
+  if (machina::IsAlpsVmid(vmid) || machina::IsTboxVmid(vmid)) {
+    return 0;
+  }
+  return backend_index;
+}
 
 static void* get_dtb(const machina::Guest& guest, GuestConfig& cfg) {
   auto dtb_spec = cfg.dtb();
@@ -537,15 +560,13 @@ static zx_status_t create_acrn_vhm_node(const machina::Guest& guest,
 
 static zx_status_t create_smc_irq_node(const machina::Guest& guest,
                                        GuestConfig& cfg) {
-  auto dtb_spec = cfg.dtb();
-  uintptr_t dtb_offset = dtb_spec.base - cfg.phys_base();
-  size_t dtb_size = dtb_spec.size;
+  if (cfg.smc_irq() <= 32U) {
+    FXL_LOG(ERROR) << "Invalid smc irq";
+    return ZX_ERR_INVALID_ARGS;
+  }
 
-  // Validate device tree.
-  void* dtb = guest.phys_mem().as<void>(dtb_offset, dtb_size);
-
-  int ret = fdt_open_into(dtb, dtb, dtb_size);
-  if (ret < 0) {
+  void* dtb = open_dtb(guest, cfg);
+  if (dtb == nullptr) {
     FXL_LOG(ERROR) << "Invalid device tree";
     return ZX_ERR_IO_DATA_INTEGRITY;
   }
@@ -556,7 +577,7 @@ static zx_status_t create_smc_irq_node(const machina::Guest& guest,
   int irq_offset = fdt_add_subnode(dtb, root_offset, "nebula_smc");
   check_status(irq_offset, "nebula_smc");
 
-  ret = fdt_setprop_string(dtb, irq_offset, "compatible", "grt,nebula_smc");
+  int ret = fdt_setprop_string(dtb, irq_offset, "compatible", "grt,nebula_smc");
   check_status(ret, "compatible");
 
   std::vector<uint32_t> props;
@@ -569,6 +590,50 @@ static zx_status_t create_smc_irq_node(const machina::Guest& guest,
   ret = fdt_setprop(dtb, irq_offset, "interrupts", props.data(),
                     props.size() * sizeof(uint32_t));
   check_status(ret, "interrupts");
+
+  fdt_pack(dtb);
+
+  return ZX_OK;
+}
+
+static zx_status_t create_cvm_lock_node(const machina::Guest& guest,
+                                        GuestConfig& cfg,
+                                        uint64_t mem_gpaddr,
+                                        size_t mem_size) {
+  if (cfg.cvm_lock_irq() <= 32U) {
+    FXL_LOG(ERROR) << "Invalid cvm_lock irq";
+    return ZX_ERR_INVALID_ARGS;
+  }
+
+  void* dtb = open_dtb(guest, cfg);
+  if (dtb == nullptr) {
+    FXL_LOG(ERROR) << "Invalid device tree";
+    return ZX_ERR_IO_DATA_INTEGRITY;
+  }
+
+  int root_offset = fdt_path_offset(dtb, "/");
+  check_status(root_offset, "root");
+
+  int cvm_lock_offset = fdt_add_subnode(dtb, root_offset, "cross_vm_lock");
+  check_status(cvm_lock_offset, "cross_vm_lock");
+
+  int ret = fdt_setprop_string(dtb, cvm_lock_offset, "compatible", "grt,cross_vm_lock");
+  check_status(ret, "compatible");
+
+  std::vector<uint32_t> props;
+  props.push_back(cpu_to_fdt32(GIC_FDT_IRQ_TYPE_SPI));
+  props.push_back(cpu_to_fdt32(cfg.cvm_lock_irq() - 32));
+  props.push_back(cpu_to_fdt32(GIC_FDT_IRQ_FLAGS_LEVEL_HI));
+  if (!is_qemu_platform())
+    props.push_back(0);
+
+  ret = fdt_setprop(dtb, cvm_lock_offset, "interrupts", props.data(),
+                    props.size() * sizeof(uint32_t));
+  check_status(ret, "interrupts");
+
+  ret = fdt_setprop_cells_u64(dtb, cvm_lock_offset, "reg", 2,
+                              mem_gpaddr, mem_size);
+  check_status(ret, "reg");
 
   fdt_pack(dtb);
 
@@ -833,6 +898,61 @@ pci@fde000000 {
   return ZX_OK;
 }
 
+static zx_status_t create_pvblk_node(const machina::Guest& guest,
+                                     GuestConfig& cfg,
+                                     uint64_t mmio_base,
+                                     uint32_t irq,
+                                     uint32_t index) {
+  void* dtb = open_dtb(guest, cfg);
+  if (dtb == nullptr) {
+    FXL_LOG(ERROR) << "Invalid device tree";
+    return ZX_ERR_IO_DATA_INTEGRITY;
+  }
+
+  int root_offset = fdt_path_offset(dtb, "/");
+  check_status(root_offset, "root");
+
+  uint32_t cells_size = 3;
+  guest.GetGICInterruptCellSize(dtb, cells_size);
+
+  char node_name[64];
+  snprintf(node_name, sizeof(node_name), "pvblk@%lx", mmio_base);
+  int node_offset = fdt_add_subnode(dtb, root_offset, node_name);
+  if (node_offset == -FDT_ERR_EXISTS) {
+    node_offset = fdt_path_offset(dtb, (std::string("/") + node_name).c_str());
+  }
+  check_status(node_offset, node_name);
+
+  int ret = fdt_setprop_string(dtb, node_offset, "compatible",
+                               "grt,mtk-pvblk");
+  check_status(ret, "compatible");
+  ret = fdt_setprop_cells_u64(dtb, node_offset, "reg", 2, mmio_base,
+                              static_cast<uint64_t>(PVBLK_MMIO_SIZE));
+  check_status(ret, "reg");
+
+  uint32_t props[] = {
+      cpu_to_fdt32(GIC_FDT_IRQ_TYPE_SPI),
+      cpu_to_fdt32(irq - 32),
+      cpu_to_fdt32(GIC_FDT_IRQ_FLAGS_EDGE_LO_HI),
+      cpu_to_fdt32(0),
+  };
+  ret = fdt_setprop(dtb, node_offset, "interrupts", props,
+                    cells_size * sizeof(uint32_t));
+  check_status(ret, "interrupts");
+
+  ret = fdt_setprop_cell(dtb, node_offset, "queue-count",
+                         machina::kPvBlockQueueCount);
+  check_status(ret, "queue-count");
+  ret = fdt_setprop_cell(dtb, node_offset, "queue-depth",
+                         machina::kPvBlockQueueDepth);
+  check_status(ret, "queue-depth");
+  ret = fdt_setprop_cell(dtb, node_offset, "disk-index", index);
+  check_status(ret, "disk-index");
+
+  fdt_pack(dtb);
+  return ZX_OK;
+}
+
 // TODO: read vmlog mblock table from sos.json config file
 // format: {mblock_name, log_prefix}
 static std::map<std::string, std::string> vmlog_mblocks = {
@@ -1060,91 +1180,224 @@ Vmm::Vmm(component::ApplicationContext* app_context)
       gic_its_(&guest_, &interrupt_controller_),
       bus_(&guest_, &interrupt_controller_, &gic_its_),
       mmio_bus_(&guest_, &interrupt_controller_, kMmioIrqVector),
-      cluster_(guest_.phys_mem()),
-      spi_(guest_.phys_mem()),
-      i2c_(guest_.phys_mem()),
-      eint_(guest_.phys_mem()),
-      rtc_(guest_.phys_mem()) {}
+      spi_client_(std::make_unique<SpiTransportClient>()),
+      cluster_(std::make_unique<machina::VirtioCluster>(guest_.phys_mem())),
+      spi_(std::make_unique<machina::VirtioSPI>(guest_.phys_mem())),
+      i2c_(std::make_unique<machina::VirtioI2C>(guest_.phys_mem())),
+      eint_(std::make_unique<machina::VirtioEINT>(guest_.phys_mem())),
+      rtc_(std::make_unique<machina::VirtioRTC>(guest_.phys_mem())) {}
 
 Vmm::~Vmm() {
-  vsock_->Stop();
+  FXL_DCHECK(!nested_environment_created_ || shutdown_started_);
+  if (vsock_) {
+    vsock_->Stop();
+  }
+  pv_blocks_.clear();
+  interrupt_controller_.Shutdown();
   guest_.Join();
-  block_.reset();
-  fdio_block_.reset();
+  vsmmus_.clear();
+  pci_blocks_.clear();
+  mmio_blocks_.clear();
+  rtc_.reset();
+  eint_.reset();
+  i2c_.reset();
+  spi_.reset();
+  cluster_.reset();
+  spi_client_.reset();
+  rpmb_.reset();
+  console_.reset();
+  vsock_.reset();
+  guest_.ShutdownAsyncLoops();
   guest_.TeeVmDestroy(guest_.vmid());
-  vmlog_sink_->Shutdown();
-  log_store_->Shutdown();
+  if (vmlog_sink_) {
+    vmlog_sink_->Shutdown();
+  }
+  if (log_store_) {
+    log_store_->Shutdown();
+  }
   FXL_LOG(INFO) << "VMM gracefully terminated";
 }
 
-zx_status_t Vmm::InitializeVirtioBlock() {
-  char const *blk_backend_name = "/dev/class/block/002";
+void Vmm::Shutdown(fbl::Closure callback) {
+  if (shutdown_started_ || !nested_environment_created_) {
+    if (callback) {
+      callback();
+    }
+    return;
+  }
+  shutdown_started_ = true;
+  service_provider_bridge_.Shutdown(std::move(callback));
+}
 
-  fbl::unique_ptr<machina::BlockDispatcher> dispatcher;
-  machina::BlockDispatcher::DispatcherOptions fdio_opts = {
-      .mode = machina::BlockDispatcher::Mode::RW,
-      .data_plane = machina::BlockDispatcher::DataPlane::DIRECTIO,
+zx_status_t Vmm::InitializeBlockDevices() {
+  struct BlockBackendConfig {
+    const char* path;
+    bool shared;
+    bool pvblk;
   };
-  auto status = machina::BlockDispatcher::CreateFromPath(
-      blk_backend_name, fdio_opts, guest_.phys_mem(), &dispatcher);
-  if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "failed to create direct-IO block_dispatcher" << status;
-    return status;
-  }
-
-  fdio_block_ = std::make_unique<machina::VirtioBlock>(guest_.phys_mem());
-  status = fdio_block_->SetDispatcher(fbl::move(dispatcher));
-  if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "failed to create virtio_block" << status;
-    return status;
-  }
-
-  status = mmio_bus_.Connect(fdio_block_->mmio_device());
-  if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "mmio device connect bus failed " << status;
-    return status;
-  }
-
-  fbl::unique_ptr<machina::BlockDispatcher> fifo_dispatcher;
-  machina::BlockDispatcher::DispatcherOptions fifo_opts = {
-      .mode = machina::BlockDispatcher::Mode::RW,
-      .data_plane = machina::BlockDispatcher::DataPlane::FIFO,
-      .vmid = guest_.vmid(),
+  static const BlockBackendConfig kBlockBackends[] = {
+      {"/dev/class/block/002", true, true},
+      {"/dev/class/block/003", true, true},
+      {"/dev/class/block/004", false, true},
   };
-  status = machina::BlockDispatcher::CreateFromPath(
-      blk_backend_name, fifo_opts, guest_.phys_mem(), &fifo_dispatcher);
-  if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "failed to create fifo block_dispatcher " << status;
-    return status;
-  }
 
-  block_ = fbl::make_unique<machina::VirtioBlock>(
-          guest_.phys_mem(), machina::VirtioBlock::Transport::PCI);
-  if (!block_) {
-    return ZX_ERR_NO_MEMORY;
-  }
-  block_->SetDispatcher(fbl::move(fifo_dispatcher));
+  const bool use_pvblk_for_guest =
+      should_use_pvblk_for_guest(cfg_, guest_.vmid());
+  FXL_LOG(INFO) << "InitializeBlockDevices guest=" << guest_.vmid()
+                << " pvblk_config=" << cfg_.pvblk_enabled()
+                << " pvblk_transport=" << use_pvblk_for_guest;
+  for (uint32_t backend_index = 0;
+       backend_index < sizeof(kBlockBackends) / sizeof(kBlockBackends[0]);
+       ++backend_index) {
+    const auto& backend = kBlockBackends[backend_index];
+    const char* const block_path = backend.path;
+    const bool visible_backend =
+        !backend.shared ||
+        pvblk_backend_visible_to_guest(guest_.vmid(), backend_index);
+    const bool use_pvblk =
+        use_pvblk_for_guest && backend.pvblk && visible_backend;
+    const bool add_mmio = !backend.shared;
+    const bool add_pci = visible_backend &&
+                         (!backend.shared ||
+                          (backend.shared && machina::IsSosVmid(guest_.vmid())));
+    zx_status_t status;
 
-  status = block_->Start();
-  if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "VirtioBlock start failed " << status;
-    return status;
-  }
+    if (!visible_backend) {
+      FXL_LOG(INFO) << "Skip block backend " << block_path
+                    << " for guest=" << guest_.vmid();
+      continue;
+    }
 
-  status = bus_.Connect(block_->pci_device());
-  if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "devices connect bus failed " << status;
-    return status;
+    FXL_LOG(INFO) << "InitializeBlockDevices: " << block_path;
+
+    if (use_pvblk) {
+      status = InitializePvBlock(block_path, backend_index);
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "failed to initialize pvblk backend for "
+                       << block_path << ": " << status;
+        return status;
+      }
+      FXL_LOG(INFO)
+          << "PVBlock backend ready, legacy virtio block disabled for "
+          << block_path;
+      continue;
+    }
+
+    if (add_mmio) {
+      fbl::unique_ptr<machina::BlockDispatcher> dispatcher;
+      machina::BlockDispatcher::DispatcherOptions fdio_opts = {
+          .mode = machina::BlockDispatcher::Mode::RW,
+          .data_plane = machina::BlockDispatcher::DataPlane::DIRECTIO,
+          .vmid = guest_.vmid(),
+      };
+      status = machina::BlockDispatcher::CreateFromPath(
+          block_path, fdio_opts, guest_.phys_mem(), &dispatcher);
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "failed to create direct-IO block_dispatcher for "
+                       << block_path << ": " << status;
+        return status;
+      }
+
+      FXL_LOG(INFO) << "InitializeLegacyVirtioBlock MMIO backend " << block_path
+                    << " size: " << dispatcher->size()
+                    << " block_size: " << dispatcher->blk_size();
+
+      auto fdio_block =
+          fbl::make_unique<machina::VirtioBlock>(guest_.phys_mem());
+      if (!fdio_block) {
+        return ZX_ERR_NO_MEMORY;
+      }
+      status = fdio_block->SetDispatcher(fbl::move(dispatcher));
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "failed to set direct-IO virtio_block dispatcher for "
+                       << block_path << ": " << status;
+        return status;
+      }
+
+      status = mmio_bus_.Connect(fdio_block->mmio_device());
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "mmio block device connect bus failed for "
+                       << block_path << ": " << status;
+        return status;
+      }
+      mmio_blocks_.push_back(fbl::move(fdio_block));
+    }
+
+    if (!add_pci) {
+      continue;
+    }
+
+    fbl::unique_ptr<machina::BlockDispatcher> fifo_dispatcher;
+    machina::BlockDispatcher::DispatcherOptions fifo_opts = {
+        .mode = machina::BlockDispatcher::Mode::RW,
+        .data_plane = machina::BlockDispatcher::DataPlane::FIFO,
+        .vmid = guest_.vmid(),
+    };
+    status = machina::BlockDispatcher::CreateFromPath(
+        block_path, fifo_opts, guest_.phys_mem(), &fifo_dispatcher);
+    if (status != ZX_OK) {
+      FXL_LOG(ERROR) << "failed to create fifo block_dispatcher for "
+                     << block_path << ": " << status;
+      return status;
+    }
+
+    FXL_LOG(INFO) << "InitializeLegacyVirtioBlock PCI backend " << block_path
+                  << " size: " << fifo_dispatcher->size()
+                  << " block_size: " << fifo_dispatcher->blk_size();
+
+    auto block = fbl::make_unique<machina::VirtioBlock>(
+        guest_.phys_mem(), machina::VirtioBlock::Transport::PCI);
+    if (!block) {
+      return ZX_ERR_NO_MEMORY;
+    }
+    status = block->SetDispatcher(fbl::move(fifo_dispatcher));
+    if (status != ZX_OK) {
+      FXL_LOG(ERROR) << "failed to set fifo virtio_block dispatcher for "
+                     << block_path << ": " << status;
+      return status;
+    }
+
+    status = block->Start();
+    if (status != ZX_OK) {
+      FXL_LOG(ERROR) << "VirtioBlock start failed for " << block_path << ": "
+                     << status;
+      return status;
+    }
+
+    status = bus_.Connect(block->pci_device());
+    if (status != ZX_OK) {
+      FXL_LOG(ERROR) << "pci block device connect bus failed for "
+                     << block_path << ": " << status;
+      return status;
+    }
+    pci_blocks_.push_back(fbl::move(block));
   }
 
   return ZX_OK;
 }
 
+zx_status_t Vmm::InitializePvBlock(const char* block_path, uint32_t index) {
+  uint64_t mmio_base =
+      machina::kPvBlockMmioBase + index * static_cast<uint64_t>(PVBLK_MMIO_SIZE);
+  uint32_t irq = machina::kPvBlockIrqBase + index;
+
+  fbl::unique_ptr<machina::PvBlockDevice> pvblk;
+  zx_status_t status = machina::PvBlockDevice::Create(
+      block_path, &guest_, &interrupt_controller_, mmio_base, irq, &pvblk);
+  if (status != ZX_OK) {
+    return status;
+  }
+
+  pv_blocks_.push_back(fbl::move(pvblk));
+  return ZX_OK;
+}
+
 zx_status_t Vmm::InitializeVirtioRpmb() {
   int const guest_vmid = guest_.vmid();
-  int const rpmb_vmid = guest_vmid + 1;
+  int const rpmb_vmid = machina::GuestVmidToBlockBackendVmid(guest_vmid);
 
-  if (rpmb_vmid < 0 || rpmb_vmid >= UFS_VIRTIO_RPMB_MAX_GUESTS) {
+  if (rpmb_vmid < machina::kBlockSosBackendVmid ||
+      rpmb_vmid >= UFS_VIRTIO_RPMB_MAX_GUESTS) {
     FXL_LOG(ERROR) << "invalid rpmb backend vmid: guest_vmid=" << guest_vmid
                    << " rpmb_vmid=" << rpmb_vmid;
     return ZX_ERR_INVALID_ARGS;
@@ -1292,9 +1545,15 @@ zx_status_t Vmm::PatchDeviceTree(uint64_t dtb_base, uint64_t size) {
   }
 
   status = create_smc_irq_node(guest_, cfg_);
-  FXL_CHECK(status == ZX_OK) << "Failed to create smc_irq node" << status;
   if (status != ZX_OK) {
-    return status;
+    FXL_LOG(ERROR) << "Failed to create smc_irq node: " << status;
+  }
+
+  status = create_cvm_lock_node(guest_, cfg_,
+                                cvm_lock_gm_client_->mem_gpaddr(),
+                                cvm_lock_gm_client_->mem_size());
+  if (status != ZX_OK) {
+    FXL_LOG(ERROR) << "Failed to create cvm_lock_irq node: " << status;
   }
 
   if (cfg_.vhm_irq()) {
@@ -1333,6 +1592,28 @@ zx_status_t Vmm::PatchDeviceTree(uint64_t dtb_base, uint64_t size) {
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to create virtio pci nodes: " << status;
     return status;
+  }
+
+  if (should_use_pvblk_for_guest(cfg_, guest_.vmid())) {
+    for (uint32_t i = 0; i < machina::kPvBlockDeviceCount; ++i) {
+      if (!pvblk_backend_visible_to_guest(guest_.vmid(), i)) {
+        continue;
+      }
+      status = create_pvblk_node(
+          guest_, cfg_,
+          machina::kPvBlockMmioBase +
+              i * static_cast<uint64_t>(PVBLK_MMIO_SIZE),
+          machina::kPvBlockIrqBase + i,
+          pvblk_guest_disk_index(guest_.vmid(), i));
+      if (status != ZX_OK) {
+        FXL_LOG(ERROR) << "Failed to create pvblk node " << i << ": "
+                       << status;
+        return status;
+      }
+    }
+  } else if (cfg_.pvblk_enabled()) {
+    FXL_LOG(INFO) << "Skip pvblk nodes for guest=" << guest_.vmid()
+                  << " by V6 transport policy";
   }
 
   status = add_pmu_irq_node(guest_, cfg_);
@@ -1382,7 +1663,11 @@ zx_status_t Vmm::PatchDeviceTree(uint64_t dtb_base, uint64_t size) {
 }
 
 zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
-  FXL_LOG(INFO) << "Vmm::Initialize";
+  FXL_LOG(INFO) << "event=vmm_initialize_begin vmid=" << vmm_cfg.vmid
+                << " memory=" << (vmm_cfg.memory ? *vmm_cfg.memory : "")
+                << " memory_path="
+                << (vmm_cfg.memory_path ? *vmm_cfg.memory_path : "")
+                << " bootloader=" << (vmm_cfg.bootloader ? *vmm_cfg.bootloader : "");
   zx_status_t status = read_product_cfg("/system/data/product.lua", &cfg_);
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to read product config " << status;
@@ -1452,13 +1737,16 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
   }
 
   guest_.SetVmid((int32_t)vmm_cfg.vmid);
+  FXL_LOG(INFO) << "event=vmm_initialize_guest_memory_ready vmid="
+                << vmm_cfg.vmid << " vmem_count=" << cfg_.vmem().size();
   status = guest_.Init(cfg_.vmem());
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to init guest memory " << status;
     return status;
   }
 
-  FXL_LOG(INFO) << "Vmm::Initialize for vmid: " << (int32_t)vmm_cfg.vmid;
+  FXL_LOG(INFO) << "event=vmm_initialize_guest_ready vmid="
+                << (int32_t)vmm_cfg.vmid;
 
   guest_.SetUserVmid(vmm_cfg.vmid);
   status = guest_.TeeVmCreate(vmm_cfg.vmid);
@@ -1505,6 +1793,7 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
   }
 
   guest_.SetSmcIRQ(cfg_.smc_irq());
+  guest_.SetCvmLockIRQ(cfg_.cvm_lock_irq());
 
   // Setup interrupt controller.
   interrupt_controller_.SetSPIVcpuMask(0xFF);
@@ -1531,17 +1820,17 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
   }
 
   // Setup cluster device.
-  component::ConnectToEnvironmentService(spi_client_.NewRequest());
-  status = spi_client_.Init();
+  component::ConnectToEnvironmentService(spi_client_->NewRequest());
+  status = spi_client_->Init();
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to init spi client " << status;
   }
-  status = cluster_.Init(guest_.device_async(), &spi_client_);
+  status = cluster_->Init(guest_.device_async(), spi_client_.get());
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "Failed to create cluster device";
     return status;
   }
-  status = bus_.Connect(cluster_.pci_device());
+  status = bus_.Connect(cluster_->pci_device());
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "devices connect bus failed " << status;
     return status;
@@ -1549,8 +1838,8 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
 
   //Setup eint BE
   FXL_LOG(INFO) << "eint be create.";
-  eint_.SetVmid(guest_.vmid());
-  status = bus_.Connect(eint_.pci_device());
+  eint_->SetVmid(guest_.vmid());
+  status = bus_.Connect(eint_->pci_device());
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "eint devices connect bus failed " << status;
     return status;
@@ -1559,18 +1848,18 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
   //Setup rtc BE
   FXL_LOG(INFO) << "rtc be create.";
   if (!is_qemu_platform()) {
-    status = rtc_.Init(guest_.vmid());
+    status = rtc_->Init(guest_.vmid());
     if (status != ZX_OK) {
       FXL_LOG(ERROR) << "Failed to init RTC with vmid: " << status;
       return status;
     }
-    status = bus_.Connect(rtc_.pci_device());
+    status = bus_.Connect(rtc_->pci_device());
     if (status != ZX_OK) {
       FXL_LOG(ERROR) << "rtc device connect bus failed " << status;
       return status;
     }
   }
-  FXL_LOG(INFO) << "rtc device connect pci bus successed. device id: " << rtc_.device_id();
+  FXL_LOG(INFO) << "rtc device connect pci bus successed. device id: " << rtc_->device_id();
 
   // Setup virtio-console
   FXL_LOG(INFO) << "virtio-console BE ";
@@ -1602,9 +1891,9 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
   }
 
   if (!is_qemu_platform()) {
-    status = InitializeVirtioBlock();
+    status = InitializeBlockDevices();
     if (status != ZX_OK) {
-      FXL_LOG(ERROR) << "Failed to initialize virtio block device: " << status;
+      FXL_LOG(ERROR) << "Failed to initialize block devices: " << status;
       return status;
     }
 
@@ -1667,14 +1956,14 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
   }
 
   //Setup spi BE
-  status = bus_.Connect(spi_.pci_device());
+  status = bus_.Connect(spi_->pci_device());
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "devices connect bus failed " << status;
     return status;
   }
 
   //Setup i2c BE
-  status = bus_.Connect(i2c_.pci_device());
+  status = bus_.Connect(i2c_->pci_device());
   if (status != ZX_OK) {
     FXL_LOG(ERROR) << "devices connect bus failed " << status;
     return status;
@@ -1727,39 +2016,50 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
       return ZX_ERR_NO_MEMORY;
     }
     guest_.RegisterVhmRequestHandler(vhm_svc_.get());
+  }
 
-    // Config each vcpu status(RT, spinlock, IRQ) priority.
-    uint32_t vcpu_status = 0;
-    auto sched_priority = cfg_.sched_priority();
-    for (auto priority : sched_priority) {
-      struct sched_param_req req;
-      req.type = SCHED_PARAM_TYPE_PRIORITY;
-      req.priority_info.vcpu_status = vcpu_status++;
-      req.priority_info.priority = priority;
-      _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
-    }
+  // Config each vcpu status(RT, spinlock, IRQ) priority.
+  uint32_t vcpu_status = 0;
+  auto sched_priority = cfg_.sched_priority();
+  for (auto priority : sched_priority) {
+    struct sched_param_req req;
+    req.type = SCHED_PARAM_TYPE_PRIORITY;
+    req.priority_info.vcpu_status = vcpu_status++;
+    req.priority_info.priority = priority;
+    _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
+  }
 
-    // Config each vcpu status(RT, spinlock, IRQ) time slice.
-    vcpu_status = 0;
-    auto sched_timeslice = cfg_.sched_timeslice();
-    for (auto timeslice : sched_timeslice) {
-      struct sched_param_req req;
-      req.type = SCHED_PARAM_TYPE_TIMESLICE;
-      req.timeslice_info.vcpu_status = vcpu_status++;
-      req.timeslice_info.timeslice = timeslice;
-      _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
-    }
+  // Config each vcpu status(RT, spinlock, IRQ) time slice.
+  vcpu_status = 0;
+  auto sched_timeslice = cfg_.sched_timeslice();
+  for (auto timeslice : sched_timeslice) {
+    struct sched_param_req req;
+    req.type = SCHED_PARAM_TYPE_TIMESLICE;
+    req.timeslice_info.vcpu_status = vcpu_status++;
+    req.timeslice_info.timeslice = timeslice;
+    _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
+  }
 
-    // Config each vcpu group scheduler period.
-    uint32_t group = 0;
-    auto periods = cfg_.periods();
-    for (auto period : periods) {
-      struct sched_param_req req;
-      req.type = SCHED_PARAM_TYPE_PERIOD;
-      req.period_info.group = group++;
-      req.period_info.period = period;
-      _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
-    }
+  // Config each vcpu group scheduler period.
+  uint32_t group = 0;
+  auto periods = cfg_.periods();
+  for (auto period : periods) {
+    struct sched_param_req req;
+    req.type = SCHED_PARAM_TYPE_PERIOD;
+    req.period_info.group = group++;
+    req.period_info.period = period;
+    _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*)&req);
+  }
+
+  // Config each cpu sched policy.
+  group = 0;
+  auto policies = cfg_.sched_policy();
+  for (auto policy : policies) {
+    struct sched_param_req req;
+    req.type = SCHED_PARAM_TYPE_POLICY;
+    req.policy_info.group = group++;
+    req.policy_info.policy = policy;
+    _trusty_ioctl(SYS_PLATFORM_FD, SYS_PLATFORM_SET_SCHED_PARAM, (void*) &req);
   }
 
   auto mbox_spec = cfg_.ipc_mbox();
@@ -1785,6 +2085,21 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
     return ZX_ERR_NO_MEMORY;
   }
 
+  cvm_lock_gm_client_ = std::make_unique<machina::CrossVMLockGMClient>(&guest_);
+  component::ConnectToEnvironmentService(cvm_lock_gm_client_->NewRequest());
+  cvm_lock_gm_client_->MapVmo();
+
+  zx::vmo sos_vmo;
+  status = cvm_lock_gm_client_->GetVmo().duplicate(ZX_RIGHT_SAME_RIGHTS, &sos_vmo);
+  FXL_CHECK(status == ZX_OK);
+  cvm_lock_sos_svc_ = std::make_unique<machina::CrossVMLockSOSServiceImpl>(
+      &service_provider_bridge_, std::move(sos_vmo));
+
+  zx::vmo dup_vmo;
+  status = cvm_lock_gm_client_->GetVmo().duplicate(ZX_RIGHT_SAME_RIGHTS, &dup_vmo);
+  FXL_CHECK(status == ZX_OK);
+  guest_.SetCvmLockVMO(dup_vmo.get());
+
   if (cfg_.tipc_vq_notifier_irq()) {
     // for yocto vmlog sink driver
     vqueue_notifier_ =
@@ -1793,7 +2108,7 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
       FXL_LOG(ERROR) << "Failed to create vqueue notifier,vmid: "<< guest_.vmid();
       return ZX_ERR_NO_MEMORY;
     }
-  } else if (guest_.vmid() == 1) {
+  } else if (machina::IsTboxVmid(guest_.vmid())) {
     // for tbox vmlog sink driver
     vqueue_notifier_ =
         std::make_unique<TipcVqueueNotifier>(UINT32_MAX, guest_.vmid());
@@ -1839,6 +2154,7 @@ zx_status_t Vmm::Initialize(virtualization::Config vmm_cfg) {
 
 zx_status_t Vmm::StartPrimaryVcpu(
     std::function<void(zx_status_t)> stop_callback) {
+  FXL_LOG(INFO) << "event=vmm_start_primary_vcpu_begin vmid=" << guest_.vmid();
   auto initialize_vcpu = [this](machina::Guest* guest, uintptr_t guest_ip,
                                 uint64_t id, machina::Vcpu* vcpu) {
     zx_status_t status =
@@ -1887,17 +2203,30 @@ zx_status_t Vmm::StartPrimaryVcpu(
       vcpu->SetBudget(budgets[id]);
     }
 
+    // Set VCPU Thread priority
+    auto vcpus_priority = cfg_.vcpus_priority();
+    if (id < vcpus_priority.size()) {
+      vcpu->SetPriority(vcpus_priority[id]);
+    }
+
     // Begin VCPU execution.
     return vcpu->Start(&vcpu_state);
   };
 
   guest_.set_stop_callback(std::move(stop_callback));
+  FXL_LOG(INFO) << "event=vmm_stop_callback_registered vmid="
+                << guest_.vmid();
   guest_.RegisterVcpuFactory(initialize_vcpu);
+  FXL_LOG(INFO) << "event=vmm_vcpu_factory_registered vmid="
+                << guest_.vmid();
   auto status = guest_.StartVcpu(guest_ip_, 0 /* id */);
   if (status != ZX_OK) {
-    FXL_LOG(ERROR) << "Failed to start VCPU-0 " << status;
+    FXL_LOG(ERROR) << "event=vmm_start_primary_vcpu_failed vmid="
+                   << guest_.vmid() << " zx_status=" << status;
     return status;
   }
+  FXL_LOG(INFO) << "event=vmm_start_primary_vcpu_succeeded vmid="
+                << guest_.vmid();
 #if 0
   FXL_LOG(INFO) << "Disable output logs to UART";
   if (_trusty_ioctl(NEBULA_GENERIC_FD,
@@ -1905,30 +2234,23 @@ zx_status_t Vmm::StartPrimaryVcpu(
     FXL_LOG(WARNING) << "platform do not support disable uart action, skip";
   }
 #endif
-  guest_.create_wdt_fd();
-  FXL_LOG(INFO) << "vmid " << guest_.vmid() << " watchdog created";
-  wdt_.ReigsterDumpStateCallback([this](uint32_t reason) {
-    std::vector<std::string> vcpu_states;
-    guest_.Dump(vcpu_states);
-    FXL_LOG(INFO) << "Dumping VCPU states:";
-    nbl_vmm::Response resp;
-    auto guest_state = resp.mutable_guest_state();
-    for (auto& state : vcpu_states) {
-      auto vcpu_state = guest_state->add_vcpus();
-      auto success =
-          google::protobuf::TextFormat::ParseFromString(state, vcpu_state);
-      FXL_CHECK(success);
-    }
-    if (guest_.get_wdt_fd() > 0) {
-      FXL_LOG(INFO) << "set wdt rst status before dump state. ";
-      ioctl_grt_wdt_set_rst_status(guest_.get_wdt_fd());
-    }
-    bootloader_->DumpStateHandler(resp.guest_state(), reason);
-  });
-  wdt_.ReigsterStopCallback([this]() { guest_.Stop(ZX_ERR_CANCELED); });
-  wdt_.init(guest_.vmid());
-  guest_.regerister_watchdog(&wdt_);
-  return 0;
+  FXL_LOG(INFO) << "event=vmm_watchdog_bootstrap_begin vmid="
+                << guest_.vmid();
+  status = guest_watchdog::BootstrapGuestWatchdog(
+      &guest_, &wdt_,
+      [this](const nbl_vmm::GuestDumpState& guest_state, uint32_t reason) {
+        bootloader_->DumpStateHandler(guest_state, reason);
+      },
+      [this]() { guest_.Stop(ZX_ERR_CANCELED); });
+  if (status != ZX_OK) {
+    FXL_LOG(ERROR) << "event=vmm_watchdog_bootstrap_failed vmid="
+                   << guest_.vmid() << " zx_status=" << status;
+    return status;
+  }
+
+  FXL_LOG(INFO) << "event=vmm_watchdog_bootstrap_complete vmid="
+                << guest_.vmid();
+  return ZX_OK;
 }
 
 void Vmm::GetConsole(GetConsoleCallback callback) {
@@ -1952,6 +2274,7 @@ void Vmm::CreateNestedEnvironment() {
       service_provider_bridge_.OpenAsDirectory(), env_.NewRequest(),
       env_controller_.NewRequest(), "nested_vmm");
   env_->GetApplicationLauncher(env_launcher_.NewRequest());
+  nested_environment_created_ = true;
 
   zx::channel h1, h2;
   if (zx::channel::create(0, &h1, &h2) < 0)
