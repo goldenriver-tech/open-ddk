@@ -23,6 +23,7 @@
 /third_party/gtest/
 /third_party/hee-trusty/
 /third_party/iperf-vsock/
+/third_party/littlefs/
 /third_party/mako/
 /third_party/openssl/
 /third_party/protobuf/

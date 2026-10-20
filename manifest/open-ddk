@@ -113,6 +113,11 @@
              remote="https://github.com/OpenTrustGroup/iperf-vsock"
              remotebranch="nebula"
              revision="remotes/origin/nebula"/>
+    <project name="littlefs"
+             path="third_party/littlefs"
+             remote="https://github.com/OpenTrustGroup/littlefs"
+             remotebranch="nebula"
+             revision="remotes/origin/nebula"/>
     <project name="mako"
              path="third_party/mako"
              remote="https://github.com/sqlalchemy/mako"
