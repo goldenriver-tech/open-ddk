@@ -147,6 +147,11 @@
              remote="https://github.com/OpenTrustGroup/nebula-ree"
              remotebranch="nebula"
              revision="remotes/origin/nebula"/>
+    <project name="libfuse"
+             path="third_party/ree-trusty/fuse"
+             remote="https://github.com/OpenTrustGroup/libfuse"
+             remotebranch="nebula"
+             revision="remotes/origin/nebula"/>
     <project name="soc_term"
              path="third_party/soc_term"
              remote="https://github.com/OpenTrustGroup/soc_term"
